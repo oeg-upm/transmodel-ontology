@@ -1,5 +1,6 @@
-## Wiki del vocabulario de Censo de locales y licencias de apertura
+# Transmodel Ontology Wiki
 
-Dentro de la actuación sobre datos abiertos del proyecto "Plataforma de Gobierno Abierto, Colaborativa e Interoperable" se ha desplegado este espacio de trabajo con la finalidad de exponer el trabajo realizado durante todas las etapas involucradas en el desarrollo del vocabulario. 
+The decisions made regarding the development of this vocabulary will be agreed upon within the Working Group
+formed by the organizations involved in the project. However, the feedback
+provided by those interested in collaborating in this development will be taken into account.
 
-Las decisiones que se tomen en cuanto al desarrollo de este vocabulario serán consensuadas dentro del Grupo de Trabajo conformado por los miembros de los ayuntamientos de las ciudades involucradas en el proyecto. Sin embargo, se tendrá en cuenta el feedback que sea proporcionado por aquellos interesados en colaborar en este desarrollo.

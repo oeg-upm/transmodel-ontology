@@ -1,7 +1,7 @@
-# Historia de Usuario
+# User Story
 
-*Edita el texto de la historia de usuario que sugieres modificar. Recuerda seguir la estructura "Como (actor) quiero (algo) para obtener (beneficio)".*
+*Edit the text of the user story that you suggest to modify. Remember to follow the structure "As (actor) I want (something) to obtain (benefit).*
 
-## Justificación
+## Justification
 
-*Provee la razón por la que sugieres modificar esta historia de usuario*
+*Provide the reason why you suggest modifying this user story.*
