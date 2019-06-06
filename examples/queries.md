@@ -1,0 +1,3 @@
+# Ejemplos de consultas
+
+A continuación se presentan algunos ejemplos de consultas, utilizando como referencia un extracto de los conjuntos de datos proporcionados por...
