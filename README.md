@@ -1,6 +1,6 @@
 # Transmodel Ontology
 
-A TransModel Ontology focused on Paradas (Topography) and Scheduling
+A TransModel Ontology focused on Stops (Topography) and Scheduling
 
 
 # Purpose and scope of the vocabulary
