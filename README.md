@@ -1,18 +1,31 @@
-# Título del proyecto
+# Transmodel Ontology
 
-Párrafo descriptivo del proyecto. Puedes utilizar enlaces a [OEG-UPM](http://www.oeg-upm.net)
+A TransModel Ontology focused on Paradas (Topography) and Scheduling
 
-## Propósito y alcance del vocabulario
 
-Descripción del propósito y alcance de este vocabulario.
+# Purpose and scope of the vocabulary
 
-## Desarrollo del vocabulario
+With the ultimate goal of enabling the provision of multimodal transportation services, the EU Regulation
+2017/1926 is requiring transport stakeholders to allow access to their data in specific data formats (i.e.,
+NeTEx, SIRI).
 
-El material generado en las diferentes actividades ejecutadas durante el desarrollo del vocabulario, casos de uso, historias de usuario, glosario de términos, etc., se encuentra disponible en la [Wiki del Vocabulario](https://github.com/)
+Currently, the requested data formats are rarely used, thus a data conversion is needed.   The
+snap solution supports data conversion, decreasing the time required to perform it and hiding its
+complexity. With snap transportation data will be compliant with the EU Regulation in a [snap](https://www.snap-project.eu).
 
-## Mantenimiento
+# Development phases
 
-Para gestionar aquellas incidencias o mejoras sugeridas con respecto al vocabulario te recomendamos seguir las guías proporcionadas en [Gestión de Issues](https://github.com/nombre-repositorio/wiki/gestion-issues)
+The material generated in the different activities carried out during the development of the vocabulary, use
+cases, user stories, glossary of terms, etc., will be available in the [Vocabulary Wiki](#)
 
-## Ejemplos
-Algunas [consultas](https://github.com/nombre-repositorio/blob/master/examples/queries.md) a realizar en un SPARQL endpoint de pruebas se han habilitado para ejemplificar su funcionamiento.
+# Project maintenance
+
+To manage those incidents or suggested improvements with respect to the vocabulary, we recommend you to follow
+the guides provided in [Issues Management](https://github.com/nombre-repositorio/wiki/issues-management) to
+generate an issue (work in progress)
+
+# Examples
+
+Some [queries](https://github.com/repository-name/blob/master/examples/queries.md) will be performed in a
+SPARQL endpoint to test and exemplify its operability.
+
