@@ -13,6 +13,8 @@ Currently, the requested data formats are rarely used, thus a data conversion is
 snap solution supports data conversion, decreasing the time required to perform it and hiding its
 complexity. With snap transportation data will be compliant with the EU Regulation in a [snap](https://www.snap-project.eu).
 
+At the same time, the base URI https://w3id.org/transmodel/terms# is already reserved by Pieter Colpaert, in the context of work in a CEN Transmodel working group.
+
 # Development phases
 
 The material generated in the different activities carried out during the development of the vocabulary, use
