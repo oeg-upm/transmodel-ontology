@@ -1,0 +1,16 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; ":ControlCenter" ":ManagementAgent" ":Department" ":Organization" ":Authority" ":TravelAgent" ":Zone" ":ServicedOrganisation" ":OrganisationUnit" ":AdministrativeZone" ":OrganisationPart" ":Operator" ":OtherOrganization" ; /*classes style*/
+	":ServicedOrganisation" -> ":Organization" [ label = "rdfs:subClassOf" ];
+	":ManagementAgent" -> ":OtherOrganization" [ label = "rdfs:subClassOf" ];
+	":OtherOrganization" -> ":Organization" [ label = "rdfs:subClassOf" ];
+	":ControlCenter" -> ":OrganisationPart" [ label = "rdfs:subClassOf" ];
+	":AdministrativeZone" -> ":Zone" [ label = "rdfs:subClassOf" ];
+	":TravelAgent" -> ":OtherOrganization" [ label = "rdfs:subClassOf" ];
+	":Department" -> ":OrganisationPart" [ label = "rdfs:subClassOf" ];
+	":OrganisationUnit" -> ":OrganisationPart" [ label = "rdfs:subClassOf" ];
+	":Authority" -> ":Organization" [ label = "rdfs:subClassOf" ];
+	":Operator" -> ":Organization" [ label = "rdfs:subClassOf" ];
+
+}

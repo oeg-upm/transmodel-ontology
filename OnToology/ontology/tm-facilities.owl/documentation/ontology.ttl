@@ -1,0 +1,799 @@
+@prefix : <https://w3id.org/transmodel/facilities#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/transmodel/facilities#> .
+
+<https://w3id.org/transmodel/facilities#> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/transmodel/facilities#canBeLocatedIn
+:canBeLocatedIn rdf:type owl:ObjectProperty ;
+                rdfs:domain :Facility ;
+                rdfs:range :Site ;
+                rdfs:label "canBeLocatedIn"@en .
+
+
+###  https://w3id.org/transmodel/facilities#containsEquipment
+:containsEquipment rdf:type owl:ObjectProperty ;
+                   rdfs:domain :EquipmentPlace ;
+                   rdfs:range :Facility .
+
+
+###  https://w3id.org/transmodel/facilities#facilityRequirement
+:facilityRequirement rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Vehicle ;
+                     rdfs:range :Facility ;
+                     rdfs:comment "A classification of public transport Vehicles according to the facilities available on the Vehicle"@en ;
+                     rdfs:label "facilityRequirement"@en .
+
+
+###  https://w3id.org/transmodel/facilities#facilitySet
+:facilitySet rdf:type owl:ObjectProperty ;
+             rdfs:range :Facility ;
+             rdfs:comment "Set of Facilities available for a ServiceJourney or a JourneyPart. The set may be available only for a specific VehicleType within the service (e.g. carriage equipped with low floor)"@en ;
+             rdfs:label "facilitySet"@en .
+
+
+###  https://w3id.org/transmodel/facilities#isUsedBy
+:isUsedBy rdf:type owl:ObjectProperty ;
+          rdfs:domain :Facility ;
+          rdfs:range :Passenger ;
+          rdfs:label "isUsedBy"@en .
+
+
+###  https://w3id.org/transmodel/facilities#typeOfCateringService
+:typeOfCateringService rdf:type owl:ObjectProperty ;
+                       rdfs:domain :CateringService ;
+                       rdfs:range :TypeOfCateringService ;
+                       rdfs:label "typeOfCateringService"@en .
+
+
+###  https://w3id.org/transmodel/facilities#typeOfCycleEquipment
+:typeOfCycleEquipment rdf:type owl:ObjectProperty ;
+                      rdfs:domain :CycleOperatingEquipment ;
+                      rdfs:range :TypeOfCycleEquipment ;
+                      rdfs:label "typeOfCycleEquipment" .
+
+
+###  https://w3id.org/transmodel/facilities#typeOfEmergencyService
+:typeOfEmergencyService rdf:type owl:ObjectProperty ;
+                        rdfs:domain :EmergencyService ;
+                        rdfs:range :TypeOfEmergencyService ;
+                        rdfs:label "typeOfEmergencyService"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/transmodel/facilities#available
+:available rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Facility ;
+           rdfs:range xsd:boolean ;
+           rdfs:label "facilityAvailability" .
+
+
+###  https://w3id.org/transmodel/facilities#description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:domain :MeetingPointService ;
+             rdfs:range rdfs:Literal ;
+             rdfs:comment "description for MeetingPointServices"@en ;
+             rdfs:label "description"@en .
+
+
+###  https://w3id.org/transmodel/facilities#facilityLocation
+:facilityLocation rdf:type owl:DatatypeProperty ;
+                  rdfs:label "facilityLocation" .
+
+
+###  https://w3id.org/transmodel/facilities#freeToUse
+:freeToUse rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Service ;
+           rdfs:range xsd:boolean ;
+           rdfs:comment "Characteristic of a Service that is free to use it"@en ;
+           rdfs:label "freeToUse"@en .
+
+
+###  https://w3id.org/transmodel/facilities#label
+:label rdf:type owl:DatatypeProperty ;
+       rdfs:domain :MeetingPointService ;
+       rdfs:range rdfs:Literal ;
+       rdfs:comment "labels for MeetingPointServices"@en ;
+       rdfs:label "label"@en .
+
+
+###  https://w3id.org/transmodel/facilities#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Facility ;
+      rdfs:range rdfs:Literal ;
+      rdfs:comment "The name of a facility"@en ;
+      rdfs:label "facilityName"@en .
+
+
+###  https://w3id.org/transmodel/facilities#siteName
+:siteName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Site ;
+          rdfs:range rdfs:Literal ;
+          rdfs:label "siteName" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/transmodel/authorities#TypeOfCateringService
+<https://w3id.org/transmodel/authorities#TypeOfCateringService> rdf:type owl:Class .
+
+
+###  https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment
+<https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment> rdf:type owl:Class .
+
+
+###  https://w3id.org/transmodel/authorities#TypeOfEmergencyService
+<https://w3id.org/transmodel/authorities#TypeOfEmergencyService> rdf:type owl:Class .
+
+
+###  https://w3id.org/transmodel/facilities#AccessAreaDimensions
+:AccessAreaDimensions rdf:type owl:Class ;
+                      rdfs:subClassOf :VehicleAccessEquipment ;
+                      rdfs:comment "Specialisation of VehicleAccessEquipment dedicated to VehicleAccessAreaDimmension"@en ;
+                      rdfs:label "VehicleAccessAreaDimension"@en .
+
+
+###  https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers
+:AssistanceForDissabledUsers rdf:type owl:Class ;
+                             rdfs:subClassOf :AssistanceService ;
+                             rdfs:comment "Assistance Services for dissabled users of the Public Transport Network"@en ;
+                             rdfs:label "AssistanceForDissabledUsers"@en .
+
+
+###  https://w3id.org/transmodel/facilities#AssistanceService
+:AssistanceService rdf:type owl:Class ;
+                   rdfs:subClassOf :Service ;
+                   rdfs:comment "Specialisation of LocalService for Assistance providing information like language, accessibility trained staff, etc."@en ;
+                   rdfs:label "AssistanceService"@en .
+
+
+###  https://w3id.org/transmodel/facilities#BabyChange
+:BabyChange rdf:type owl:Class ;
+            rdfs:subClassOf :SanitaryEquipment .
+
+
+###  https://w3id.org/transmodel/facilities#CateringService
+:CateringService rdf:type owl:Class ;
+                 rdfs:subClassOf :Service ;
+                 rdfs:comment "Specialisation of LocalService for CateringService"@en ;
+                 rdfs:label "CateringService"@en .
+
+
+###  https://w3id.org/transmodel/facilities#CommunicationService
+:CommunicationService rdf:type owl:Class ;
+                      rdfs:subClassOf :Service ;
+                      rdfs:comment "Specialisation of LocalService dedicated to communication services"@en ;
+                      rdfs:label "CommunicationService"@en .
+
+
+###  https://w3id.org/transmodel/facilities#Component
+:Component rdf:type owl:Class ;
+           rdfs:comment "Component of a Site or a Place"@en ;
+           rdfs:label "Component"@en .
+
+
+###  https://w3id.org/transmodel/facilities#CrossingEquipment
+:CrossingEquipment rdf:type owl:Class ;
+                   rdfs:subClassOf :PlaceAccessEquipment ;
+                   rdfs:comment """Specialisation of PlaceAccessEquipment for CrossingEquipment
+
+- Zebra"""@en ;
+                   rdfs:label "CrossingEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#CrossingEquipmentLights
+:CrossingEquipmentLights rdf:type owl:Class ;
+                         rdfs:subClassOf :CrossingEquipment .
+
+
+###  https://w3id.org/transmodel/facilities#CrossingEquipmentPedestrian
+:CrossingEquipmentPedestrian rdf:type owl:Class ;
+                             rdfs:subClassOf :CrossingEquipment .
+
+
+###  https://w3id.org/transmodel/facilities#CrossingEquipmentTactileGuideStrip
+:CrossingEquipmentTactileGuideStrip rdf:type owl:Class ;
+                                    rdfs:subClassOf :CrossingEquipment .
+
+
+###  https://w3id.org/transmodel/facilities#CrossingEquipmentZebra
+:CrossingEquipmentZebra rdf:type owl:Class ;
+                        rdfs:subClassOf :CrossingEquipment .
+
+
+###  https://w3id.org/transmodel/facilities#CustomerService
+:CustomerService rdf:type owl:Class ;
+                 rdfs:subClassOf :Service ;
+                 rdfs:comment "Generic specialisation of LocalService for CustomerServices (LostProperties, MeetingPoint, Complaiants, etc.)"@en ;
+                 rdfs:label "CustomerService"@en .
+
+
+###  https://w3id.org/transmodel/facilities#CycleOperatingEquipment
+:CycleOperatingEquipment rdf:type owl:Class ;
+                         rdfs:subClassOf :PlaceEquipment ;
+                         rdfs:label "CycleOperatingEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#EmergencyService
+:EmergencyService rdf:type owl:Class ;
+                  rdfs:subClassOf :Service ;
+                  rdfs:label "EmergencyService"@en .
+
+
+###  https://w3id.org/transmodel/facilities#EntraceEquipment
+:EntraceEquipment rdf:type owl:Class ;
+                  rdfs:subClassOf :PlaceAccessEquipment .
+
+
+###  https://w3id.org/transmodel/facilities#EntranceEquipmentBarrier
+:EntranceEquipmentBarrier rdf:type owl:Class ;
+                          rdfs:subClassOf :EntraceEquipment .
+
+
+###  https://w3id.org/transmodel/facilities#EntranceEquipmentDoor
+:EntranceEquipmentDoor rdf:type owl:Class ;
+                       rdfs:subClassOf :EntraceEquipment .
+
+
+###  https://w3id.org/transmodel/facilities#EntranceEquipmentRevolvingDoor
+:EntranceEquipmentRevolvingDoor rdf:type owl:Class ;
+                                rdfs:subClassOf :EntraceEquipment .
+
+
+###  https://w3id.org/transmodel/facilities#Entrances
+:Entrances rdf:type owl:Class ;
+           rdfs:subClassOf :PlaceAccessEquipment ;
+           rdfs:comment "Specialisation of PlaceAccessEquipment dedicated to PlaceAccessEntrance"@en ;
+           rdfs:label "PlaceEntrance"@en .
+
+
+###  https://w3id.org/transmodel/facilities#Equipment
+:Equipment rdf:type owl:Class ;
+           rdfs:subClassOf :Facility ;
+           rdfs:comment """Physical equipments installed either fixed (PlaceEquipment), on-board (VehicleEquipment) ot mixed (some equipments as rubish, sanitary or ticketing).
+
+A service (LocalService) is considered as immaterial Equipment as well."""@en ;
+           rdfs:label "Equipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#EquipmentPlace
+:EquipmentPlace rdf:type owl:Class ;
+                rdfs:subClassOf :SiteComponent ;
+                rdfs:comment "An EquipmentPlace is a SiteComponent containing Equipment" ;
+                rdfs:label "EquipmentPlace" .
+
+
+###  https://w3id.org/transmodel/facilities#Facility
+:Facility rdf:type owl:Class ;
+          rdfs:comment """A named amenity available to the public at a Site or on a Service.
+
+A Facility has no further properties than a name.
+
+An Equipment or LocalService is used to describe the further properties provided as part of a particular Facility"""@en ;
+          rdfs:label "Facility"@en .
+
+
+###  https://w3id.org/transmodel/facilities#Garage
+:Garage rdf:type owl:Class ;
+        rdfs:subClassOf :PlaceEquipment ;
+        rdfs:comment """A Facility of PlaceEquipment used for parking and maintaining
+	vehicles. Parking Point in a Garage are called GaragePoint."""@en ;
+        rdfs:label "Garage"@en .
+
+
+###  https://w3id.org/transmodel/facilities#HeadingSign
+:HeadingSign rdf:type owl:Class ;
+             rdfs:subClassOf :SignEquipment .
+
+
+###  https://w3id.org/transmodel/facilities#InformationBooklet
+:InformationBooklet rdf:type owl:Class ;
+                    rdfs:subClassOf :PassengerInformationPrintedMaterial ;
+                    rdfs:comment "Information Booklet is public transport piece of Equipment dedicated to inform"@en ;
+                    rdfs:label "InformationBooklet"@en .
+
+
+###  https://w3id.org/transmodel/facilities#InformationDesk
+:InformationDesk rdf:type owl:Class ;
+                 rdfs:subClassOf :PassengerInformationTerminal ;
+                 rdfs:comment "A public transport information piece of Equipment"@en ;
+                 rdfs:label "InformationDesk"@en .
+
+
+###  https://w3id.org/transmodel/facilities#InformationLeaflet
+:InformationLeaflet rdf:type owl:Class ;
+                    rdfs:subClassOf :PassengerInformationPrintedMaterial ;
+                    rdfs:comment "A public transport information piece of Equipment"@en ;
+                    rdfs:label "InformationLeaflet"@en .
+
+
+###  https://w3id.org/transmodel/facilities#InformationTerminal
+:InformationTerminal rdf:type owl:Class ;
+                     rdfs:subClassOf :PassengerInformationTerminal ;
+                     rdfs:comment "A public transport information piece of Equipment in the street"@en ;
+                     rdfs:label "InformationStand"@en .
+
+
+###  https://w3id.org/transmodel/facilities#Lifts
+:Lifts rdf:type owl:Class ;
+       rdfs:subClassOf :PlaceAccessEquipment ;
+       rdfs:comment "Specialisation of PlaceAccessEquipment dedicated to PlaceAccessLift"@en ;
+       rdfs:label "PlaceAccessLift"@en .
+
+
+###  https://w3id.org/transmodel/facilities#LostProperties
+:LostProperties rdf:type owl:Class ;
+                rdfs:subClassOf :CustomerService ;
+                rdfs:comment "Specialisation of CustomerService for LostProperties"@en ;
+                rdfs:label "LostProperties"@en .
+
+
+###  https://w3id.org/transmodel/facilities#LowFloor
+:LowFloor rdf:type owl:Class ;
+          rdfs:subClassOf :VehicleAccessEquipment ;
+          rdfs:comment "Specialisation of VehicleAccessEquipment dedicated to LowFloor"@en ;
+          rdfs:label "LowFloor"@en .
+
+
+###  https://w3id.org/transmodel/facilities#LuggageLocker
+:LuggageLocker rdf:type owl:Class ;
+               rdfs:subClassOf :SiteEquipment ;
+               rdfs:label "LuggageLocker" .
+
+
+###  https://w3id.org/transmodel/facilities#LuggageLockerEquipment
+:LuggageLockerEquipment rdf:type owl:Class ;
+                        rdfs:subClassOf :StopPlaceEquipment ;
+                        rdfs:comment "Specialisation of LuggageLockerEquipment for StopPlaceEquipment"@en ;
+                        rdfs:label "LuggageLockerEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#LuggageService
+:LuggageService rdf:type owl:Class ;
+                rdfs:subClassOf :CustomerService ;
+                rdfs:comment """Specialisation of CustomerServices for LuggageServices.
+
+Provides facilities as LuggageTrolley, FreeToUse, etc."""@en ;
+                rdfs:label "LuggageService"@en .
+
+
+###  https://w3id.org/transmodel/facilities#LuggageTrolley
+:LuggageTrolley rdf:type owl:Class ;
+                rdfs:subClassOf :LuggageService ;
+                rdfs:label "LuggageTrolley"@en ,
+                           "Specialisation of LuggageTrolley for LuggageServices"@en .
+
+
+###  https://w3id.org/transmodel/facilities#MeetingPointService
+:MeetingPointService rdf:type owl:Class ;
+                     rdfs:subClassOf :CustomerService ;
+                     rdfs:comment "Specialisation of CustomerService for meeting points (provides characteristics like description, labels...)"@en ;
+                     rdfs:label "MeetingPointService"@en .
+
+
+###  https://w3id.org/transmodel/facilities#MoneyService
+:MoneyService rdf:type owl:Class ;
+              rdfs:subClassOf :Service ;
+              rdfs:label "MoneyService"@en .
+
+
+###  https://w3id.org/transmodel/facilities#Passenger
+:Passenger rdf:type owl:Class ;
+           rdfs:comment "The Person who uses Public Transport Services"@en ;
+           rdfs:label "Passenger"@en .
+
+
+###  https://w3id.org/transmodel/facilities#PassengerEquipment
+:PassengerEquipment rdf:type owl:Class ;
+                    rdfs:subClassOf :Equipment ;
+                    rdfs:comment "An item of Equipment of a particular type actually available at a location within a Place or a Vehicle"@en ;
+                    rdfs:label "PassengerEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#PassengerInformationEquipment
+:PassengerInformationEquipment rdf:type owl:Class ;
+                               rdfs:subClassOf :PassengerEquipment ;
+                               rdfs:comment "A public transport information piece of Equipment, as for instance terminals (on street, at information desks, telematic,...) or printed material (leaflets displayed at Stops, booklets, ...)"@en ;
+                               rdfs:label "PassengerInformationEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#PassengerInformationPrintedMaterial
+:PassengerInformationPrintedMaterial rdf:type owl:Class ;
+                                     rdfs:subClassOf :PassengerInformationEquipment ;
+                                     rdfs:comment "A public transport information piece of Equipment which is printed material (leaflets displayed at Stops, booklets, ...)"@en ;
+                                     rdfs:label "PassengerInformationPrintedMaterial"@en .
+
+
+###  https://w3id.org/transmodel/facilities#PassengerInformationTerminal
+:PassengerInformationTerminal rdf:type owl:Class ;
+                              rdfs:subClassOf :PassengerInformationEquipment ;
+                              rdfs:comment "A public transport information piece of equipment such as street stands, information desks or telematic services"@en ;
+                              rdfs:label "PassengerInformationDesk"@en .
+
+
+###  https://w3id.org/transmodel/facilities#PassengerSafetyEquipment
+:PassengerSafetyEquipment rdf:type owl:Class ;
+                          rdfs:subClassOf :PassengerEquipment .
+
+
+###  https://w3id.org/transmodel/facilities#PlaceAccessEquipment
+:PlaceAccessEquipment rdf:type owl:Class ;
+                      rdfs:subClassOf :PlaceEquipment ;
+                      rdfs:comment "Specialisation of PlaceEquipment dedicated to access (e.g. lifts, entrances, stairs, ramps, etc.)"@en ;
+                      rdfs:label "PlaceAccessEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#PlaceAccessStairEscalator
+:PlaceAccessStairEscalator rdf:type owl:Class ;
+                           rdfs:subClassOf :Stairs ;
+                           rdfs:comment "Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairEscalator" ;
+                           rdfs:label "PlaceAccessStairEscalator" .
+
+
+###  https://w3id.org/transmodel/facilities#PlaceAccessStairStair
+:PlaceAccessStairStair rdf:type owl:Class ;
+                       rdfs:subClassOf :Stairs ;
+                       rdfs:comment "Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStair" ;
+                       rdfs:label "PlaceAccessStairStair" .
+
+
+###  https://w3id.org/transmodel/facilities#PlaceAccessStairStaircase
+:PlaceAccessStairStaircase rdf:type owl:Class ;
+                           rdfs:subClassOf :Stairs ;
+                           rdfs:comment "Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStaircase" ;
+                           rdfs:label "PlaceAccessStairStaircase" .
+
+
+###  https://w3id.org/transmodel/facilities#PlaceEquipment
+:PlaceEquipment rdf:type owl:Class ;
+                rdfs:subClassOf :Equipment ;
+                rdfs:comment "An item of Equipment of a particular type actually available at a location within a Place"@en ;
+                rdfs:label "PlaceEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#Porterage
+:Porterage rdf:type owl:Class ;
+           rdfs:subClassOf :Service ;
+           rdfs:comment "Porterage"@en ,
+                        "PorterageService"@en .
+
+
+###  https://w3id.org/transmodel/facilities#QueuingEquipment
+:QueuingEquipment rdf:type owl:Class ;
+                  rdfs:subClassOf :PlaceAccessEquipment ;
+                  rdfs:label "QueingEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#Ramp
+:Ramp rdf:type owl:Class ;
+      rdfs:subClassOf :VehicleAccessEquipment ;
+      rdfs:comment "Specialisation of VehicleAccessEquipment dedicated to VehicleRamp"@en ;
+      rdfs:label "VehicleRamp"@en .
+
+
+###  https://w3id.org/transmodel/facilities#Ramps
+:Ramps rdf:type owl:Class ;
+       rdfs:subClassOf :PlaceAccessEquipment ;
+       rdfs:comment "Specialisation of PlaceEquipment dedicated to access"@en ;
+       rdfs:label "PlaceAccessRamp"@en .
+
+
+###  https://w3id.org/transmodel/facilities#RetailService
+:RetailService rdf:type owl:Class ;
+               rdfs:subClassOf :Service ;
+               rdfs:comment "Specialisation of LocalService dedicated to retail services"@en ;
+               rdfs:label "RetailService"@en .
+
+
+###  https://w3id.org/transmodel/facilities#RoughSurface
+:RoughSurface rdf:type owl:Class ;
+              rdfs:subClassOf :PlaceEquipment ;
+              rdfs:label "RoughSurface"@en .
+
+
+###  https://w3id.org/transmodel/facilities#RubishDisposal
+:RubishDisposal rdf:type owl:Class ;
+                rdfs:subClassOf :Equipment ;
+                rdfs:comment "Specialisation of Passenger Equipment for Rubish Disposal"@en ;
+                rdfs:label "RubishDisposal"@en .
+
+
+###  https://w3id.org/transmodel/facilities#SanitaryEquipment
+:SanitaryEquipment rdf:type owl:Class ;
+                   rdfs:subClassOf :PassengerEquipment ;
+                   rdfs:comment "Specialisation of Passenger Equipment for Sanitary Equipment"@en ;
+                   rdfs:label "SanitaryEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#SeatingEquipment
+:SeatingEquipment rdf:type owl:Class ;
+                  rdfs:subClassOf :PlaceEquipment ;
+                  rdfs:label "SeatingEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#Service
+:Service rdf:type owl:Class ;
+         rdfs:subClassOf :Facility ;
+         rdfs:comment """A Service (LocalService such as LeftLuggage, TicketingService) is considered as immaterial Equipment as well.
+
+A named Service relating to the use of the Site or transport Services at a particular location, for example Porterage, AssistanceForDissabledUsers, BookingOffices, etc. The Service may have a validityCondition associated with it."""@en ;
+         rdfs:label "Service"@en .
+
+
+###  https://w3id.org/transmodel/facilities#Shelter
+:Shelter rdf:type owl:Class ;
+         rdfs:subClassOf :WaitingEquipment ;
+         rdfs:comment "A building or other structure constructed at a Bus Stop"@en ;
+         rdfs:label "Shelter"@en .
+
+
+###  https://w3id.org/transmodel/facilities#Shower
+:Shower rdf:type owl:Class ;
+        rdfs:subClassOf :SanitaryEquipment ;
+        rdfs:comment "Specialisation of SanitaryEquipment for showers"@en ;
+        rdfs:label "Shower"@en .
+
+
+###  https://w3id.org/transmodel/facilities#SignEquipment
+:SignEquipment rdf:type owl:Class ;
+               rdfs:subClassOf :PlaceEquipment ;
+               rdfs:comment "Specialisation of PlaceEquipment for Signs"@en ;
+               rdfs:label "SignEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#Site
+:Site rdf:type owl:Class ;
+      rdfs:comment "A well known Place to which Passengers may refer to indicate the origin or a destination of a Trip"@en ;
+      rdfs:label "Site"@en .
+
+
+###  https://w3id.org/transmodel/facilities#SiteComponent
+:SiteComponent rdf:type owl:Class ;
+               rdfs:subClassOf :Component ;
+               rdfs:comment "An element of a Site descibing a part of its structure. SiteComponent share common properties for data management, accessibility and other features"@en ;
+               rdfs:label "SiteComponent"@en .
+
+
+###  https://w3id.org/transmodel/facilities#SiteEquipment
+:SiteEquipment rdf:type owl:Class ;
+               rdfs:subClassOf :PlaceEquipment ;
+               rdfs:comment "Specialisation of PlaceEquipment for Site" ;
+               rdfs:label "SiteEquipment" .
+
+
+###  https://w3id.org/transmodel/facilities#Stairs
+:Stairs rdf:type owl:Class ;
+        rdfs:subClassOf :PlaceAccessEquipment ;
+        rdfs:comment "Specialisation of PlaceAccessEquipment dedicated to PlaceAccessStair"@en ;
+        rdfs:label "PlaceAccessStair"@en .
+
+
+###  https://w3id.org/transmodel/facilities#StopPlaceEquipment
+:StopPlaceEquipment rdf:type owl:Class ;
+                    rdfs:subClassOf :PlaceEquipment ;
+                    rdfs:comment "Specialisation of Equipment for StopPlaceEquipment"@en ;
+                    rdfs:label "StopPlaceEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#TelematicInformationService
+:TelematicInformationService rdf:type owl:Class ;
+                             rdfs:subClassOf :PassengerInformationTerminal ;
+                             rdfs:comment "A public transport information piece of Equipment by telematic means"@en ;
+                             rdfs:label "TelematicInformationService"@en .
+
+
+###  https://w3id.org/transmodel/facilities#TicketingEquipment
+:TicketingEquipment rdf:type owl:Class ;
+                    rdfs:subClassOf :PassengerEquipment ;
+                    rdfs:comment "Specialisation of Passenter Equipment for Ticketing Equipment"@en ;
+                    rdfs:label "TicketingEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#TicketingService
+:TicketingService rdf:type owl:Class ;
+                  rdfs:subClassOf :Service ;
+                  rdfs:label "TicketingService"@en .
+
+
+###  https://w3id.org/transmodel/facilities#TicketingValidatorEquipment
+:TicketingValidatorEquipment rdf:type owl:Class ;
+                             rdfs:subClassOf :PassengerEquipment ;
+                             rdfs:comment "Specialisation of Passenger Equipment for Ticket Validator Equipment"@en ;
+                             rdfs:label "TicketValidatorEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#Toilet
+:Toilet rdf:type owl:Class ;
+        rdfs:subClassOf :SanitaryEquipment ;
+        rdfs:label "Toilet"@en .
+
+
+###  https://w3id.org/transmodel/facilities#TrolleyStand
+:TrolleyStand rdf:type owl:Class ;
+              rdfs:subClassOf :SiteEquipment ;
+              rdfs:comment "Is the specialisation of SiteEquipment for TrolleyStand"@en ;
+              rdfs:label "TrolleyStand"@en .
+
+
+###  https://w3id.org/transmodel/facilities#TrolleyStandEquipment
+:TrolleyStandEquipment rdf:type owl:Class ;
+                       rdfs:subClassOf :StopPlaceEquipment ;
+                       rdfs:comment "Specialisation of StopPlaceEquipment for trolley stands"@en ;
+                       rdfs:label "TrolleyStandEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#TypeOfCateringService
+:TypeOfCateringService rdf:type owl:Class ;
+                       rdfs:comment "A classification of CateringService"@en ;
+                       rdfs:label "TypeOfCateringService"@en .
+
+
+###  https://w3id.org/transmodel/facilities#TypeOfCycleEquipment
+:TypeOfCycleEquipment rdf:type owl:Class .
+
+
+###  https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment
+:TypeOfCycleStorageEquipment rdf:type owl:Class ;
+                             rdfs:comment "A classification of Cycle Storage Equipment: racks, bars, railings, etc."@en ;
+                             rdfs:label "TypeOfCycleStorageEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#TypeOfEmergencyService
+:TypeOfEmergencyService rdf:type owl:Class ;
+                        rdfs:comment "A typology of emergency services: police, first aid, sos point..."@en ;
+                        rdfs:label "TypeOfEmergencyService"@en .
+
+
+###  https://w3id.org/transmodel/facilities#Vehicle
+:Vehicle rdf:type owl:Class ;
+         rdfs:comment "A PublicTransportVehicle used for carrying Passenger"@en ;
+         rdfs:label "Vehicle"@en .
+
+
+###  https://w3id.org/transmodel/facilities#VehicleAccessEquipment
+:VehicleAccessEquipment rdf:type owl:Class ;
+                        rdfs:subClassOf :VehicleEquipment ;
+                        rdfs:comment "Specialisation of VehicleEquipment dedicated to access Vehicles providing information such as low floor, ramp, access area dimensions, etc."@en ;
+                        rdfs:label "VehicleAccessEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#VehicleChargingEquipment
+:VehicleChargingEquipment rdf:type owl:Class ;
+                          rdfs:subClassOf :PlaceEquipment ;
+                          rdfs:comment "Specialisation of PlaceEquipment for Vehicle charging"@en ;
+                          rdfs:label "VehicleChargingEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#VehicleEquipment
+:VehicleEquipment rdf:type owl:Class ;
+                  rdfs:subClassOf :Equipment ;
+                  rdfs:comment "Equipment for Vehicles"@en ;
+                  rdfs:label "VehicleEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#VehicleMode
+:VehicleMode rdf:type owl:Class ;
+             rdfs:subClassOf :Vehicle ;
+             rdfs:comment "A classification of Public Transport Vehicles of the same Vehicle Type, e.g. according to Equipment specifications or model generation."@en ;
+             rdfs:label "VehicleModel"@en .
+
+
+###  https://w3id.org/transmodel/facilities#WaitingEquipment
+:WaitingEquipment rdf:type owl:Class ;
+                  rdfs:subClassOf :StopPlaceEquipment ;
+                  rdfs:comment "Specialisation of StopPlaceEquipment for WaitingEquipment (shelter, waiting room, etc.)"@en ;
+                  rdfs:label "WaitingEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#WaitingRoom
+:WaitingRoom rdf:type owl:Class ;
+             rdfs:subClassOf :WaitingEquipment ;
+             rdfs:comment "A Waiting Room"@en ;
+             rdfs:label "WaitingRoom"@en .
+
+
+###  https://w3id.org/transmodel/facilities#WaitingRoomEquipment
+:WaitingRoomEquipment rdf:type owl:Class ;
+                      rdfs:subClassOf :WaitingRoom ;
+                      rdfs:comment "Specialisation of WaitingEquipment for WaitingRoom, classified by TypeOfWaitingRoom"@en ;
+                      rdfs:label "WaitingRoomEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#WheelchairAccessToilet
+:WheelchairAccessToilet rdf:type owl:Class ;
+                        rdfs:subClassOf :SanitaryEquipment .
+
+
+###  https://w3id.org/transmodel/facilities#WheelchairBabyChange
+:WheelchairBabyChange rdf:type owl:Class ;
+                      rdfs:subClassOf :SanitaryEquipment .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/transmodel/authorities#beverageVendingMachine
+<https://w3id.org/transmodel/authorities#beverageVendingMachine> rdf:type owl:NamedIndividual ,
+                                                                          <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+
+
+###  https://w3id.org/transmodel/authorities#buffet
+<https://w3id.org/transmodel/authorities#buffet> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+
+
+###  https://w3id.org/transmodel/authorities#cateringTrolleyService
+<https://w3id.org/transmodel/authorities#cateringTrolleyService> rdf:type owl:NamedIndividual ,
+                                                                          <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+
+
+###  https://w3id.org/transmodel/authorities#cycleStorageEquipmentBars
+<https://w3id.org/transmodel/authorities#cycleStorageEquipmentBars> rdf:type owl:NamedIndividual ,
+                                                                             <https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment> .
+
+
+###  https://w3id.org/transmodel/authorities#cycleStorageEquipmentRacks
+<https://w3id.org/transmodel/authorities#cycleStorageEquipmentRacks> rdf:type owl:NamedIndividual ,
+                                                                              <https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment> .
+
+
+###  https://w3id.org/transmodel/authorities#cycleStorageEquipmentRailings
+<https://w3id.org/transmodel/authorities#cycleStorageEquipmentRailings> rdf:type owl:NamedIndividual ,
+                                                                                 <https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment> .
+
+
+###  https://w3id.org/transmodel/authorities#emergencyServiceFirstAid
+<https://w3id.org/transmodel/authorities#emergencyServiceFirstAid> rdf:type owl:NamedIndividual ,
+                                                                            <https://w3id.org/transmodel/authorities#TypeOfEmergencyService> .
+
+
+###  https://w3id.org/transmodel/authorities#emergencyServicePolice
+<https://w3id.org/transmodel/authorities#emergencyServicePolice> rdf:type owl:NamedIndividual ,
+                                                                          <https://w3id.org/transmodel/authorities#TypeOfEmergencyService> .
+
+
+###  https://w3id.org/transmodel/authorities#emergencyServiceSOSPoint
+<https://w3id.org/transmodel/authorities#emergencyServiceSOSPoint> rdf:type owl:NamedIndividual ,
+                                                                            <https://w3id.org/transmodel/authorities#TypeOfEmergencyService> .
+
+
+###  https://w3id.org/transmodel/authorities#emergencyServiceServiceCCTV
+<https://w3id.org/transmodel/authorities#emergencyServiceServiceCCTV> rdf:type owl:NamedIndividual ,
+                                                                               <https://w3id.org/transmodel/authorities#TypeOfEmergencyService> .
+
+
+###  https://w3id.org/transmodel/authorities#foodVendingMachine
+<https://w3id.org/transmodel/authorities#foodVendingMachine> rdf:type owl:NamedIndividual ,
+                                                                      <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+
+
+###  https://w3id.org/transmodel/authorities#noBeveragesAvailable
+<https://w3id.org/transmodel/authorities#noBeveragesAvailable> rdf:type owl:NamedIndividual ,
+                                                                        <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+
+
+###  https://w3id.org/transmodel/authorities#noFoodAvailable
+<https://w3id.org/transmodel/authorities#noFoodAvailable> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+
+
+###  https://w3id.org/transmodel/authorities#snacks
+<https://w3id.org/transmodel/authorities#snacks> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

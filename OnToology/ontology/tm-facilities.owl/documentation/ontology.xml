@@ -1,0 +1,1312 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/transmodel/facilities#"
+     xml:base="https://w3id.org/transmodel/facilities"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/transmodel/facilities#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#canBeLocatedIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#canBeLocatedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#Facility"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#Site"/>
+        <rdfs:label xml:lang="en">canBeLocatedIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#containsEquipment -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#containsEquipment">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#EquipmentPlace"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#Facility"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#facilityRequirement -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#facilityRequirement">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#Vehicle"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#Facility"/>
+        <rdfs:comment xml:lang="en">A classification of public transport Vehicles according to the facilities available on the Vehicle</rdfs:comment>
+        <rdfs:label xml:lang="en">facilityRequirement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#facilitySet -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#facilitySet">
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#Facility"/>
+        <rdfs:comment xml:lang="en">Set of Facilities available for a ServiceJourney or a JourneyPart. The set may be available only for a specific VehicleType within the service (e.g. carriage equipped with low floor)</rdfs:comment>
+        <rdfs:label xml:lang="en">facilitySet</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#isUsedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#isUsedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#Facility"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#Passenger"/>
+        <rdfs:label xml:lang="en">isUsedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#typeOfCateringService -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#typeOfCateringService">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#CateringService"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#TypeOfCateringService"/>
+        <rdfs:label xml:lang="en">typeOfCateringService</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#typeOfCycleEquipment -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#typeOfCycleEquipment">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#CycleOperatingEquipment"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#TypeOfCycleEquipment"/>
+        <rdfs:label>typeOfCycleEquipment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#typeOfEmergencyService -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#typeOfEmergencyService">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#EmergencyService"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#TypeOfEmergencyService"/>
+        <rdfs:label xml:lang="en">typeOfEmergencyService</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#available -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#available">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#Facility"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label>facilityAvailability</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#description -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#description">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#MeetingPointService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">description for MeetingPointServices</rdfs:comment>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#facilityLocation -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#facilityLocation">
+        <rdfs:label>facilityLocation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#freeToUse -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#freeToUse">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Characteristic of a Service that is free to use it</rdfs:comment>
+        <rdfs:label xml:lang="en">freeToUse</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#label -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#label">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#MeetingPointService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">labels for MeetingPointServices</rdfs:comment>
+        <rdfs:label xml:lang="en">label</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#name -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#name">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#Facility"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The name of a facility</rdfs:comment>
+        <rdfs:label xml:lang="en">facilityName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#siteName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#siteName">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#Site"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>siteName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#TypeOfCateringService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#TypeOfCateringService"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#TypeOfEmergencyService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#TypeOfEmergencyService"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#AccessAreaDimensions -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#AccessAreaDimensions">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#VehicleAccessEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of VehicleAccessEquipment dedicated to VehicleAccessAreaDimmension</rdfs:comment>
+        <rdfs:label xml:lang="en">VehicleAccessAreaDimension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#AssistanceService"/>
+        <rdfs:comment xml:lang="en">Assistance Services for dissabled users of the Public Transport Network</rdfs:comment>
+        <rdfs:label xml:lang="en">AssistanceForDissabledUsers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#AssistanceService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#AssistanceService">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Service"/>
+        <rdfs:comment xml:lang="en">Specialisation of LocalService for Assistance providing information like language, accessibility trained staff, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">AssistanceService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#BabyChange -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#BabyChange">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#SanitaryEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#CateringService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#CateringService">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Service"/>
+        <rdfs:comment xml:lang="en">Specialisation of LocalService for CateringService</rdfs:comment>
+        <rdfs:label xml:lang="en">CateringService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#CommunicationService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#CommunicationService">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Service"/>
+        <rdfs:comment xml:lang="en">Specialisation of LocalService dedicated to communication services</rdfs:comment>
+        <rdfs:label xml:lang="en">CommunicationService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Component -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Component">
+        <rdfs:comment xml:lang="en">Component of a Site or a Place</rdfs:comment>
+        <rdfs:label xml:lang="en">Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#CrossingEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#CrossingEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceAccessEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of PlaceAccessEquipment for CrossingEquipment
+
+- Zebra</rdfs:comment>
+        <rdfs:label xml:lang="en">CrossingEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#CrossingEquipmentLights -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#CrossingEquipmentLights">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#CrossingEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#CrossingEquipmentPedestrian -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#CrossingEquipmentPedestrian">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#CrossingEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#CrossingEquipmentTactileGuideStrip -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#CrossingEquipmentTactileGuideStrip">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#CrossingEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#CrossingEquipmentZebra -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#CrossingEquipmentZebra">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#CrossingEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#CustomerService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#CustomerService">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Service"/>
+        <rdfs:comment xml:lang="en">Generic specialisation of LocalService for CustomerServices (LostProperties, MeetingPoint, Complaiants, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">CustomerService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#CycleOperatingEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#CycleOperatingEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceEquipment"/>
+        <rdfs:label xml:lang="en">CycleOperatingEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#EmergencyService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#EmergencyService">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Service"/>
+        <rdfs:label xml:lang="en">EmergencyService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#EntraceEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#EntraceEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceAccessEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#EntranceEquipmentBarrier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#EntranceEquipmentBarrier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#EntraceEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#EntranceEquipmentDoor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#EntranceEquipmentDoor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#EntraceEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#EntranceEquipmentRevolvingDoor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#EntranceEquipmentRevolvingDoor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#EntraceEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Entrances -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Entrances">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceAccessEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of PlaceAccessEquipment dedicated to PlaceAccessEntrance</rdfs:comment>
+        <rdfs:label xml:lang="en">PlaceEntrance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Equipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Equipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Facility"/>
+        <rdfs:comment xml:lang="en">Physical equipments installed either fixed (PlaceEquipment), on-board (VehicleEquipment) ot mixed (some equipments as rubish, sanitary or ticketing).
+
+A service (LocalService) is considered as immaterial Equipment as well.</rdfs:comment>
+        <rdfs:label xml:lang="en">Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#EquipmentPlace -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#EquipmentPlace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#SiteComponent"/>
+        <rdfs:comment>An EquipmentPlace is a SiteComponent containing Equipment</rdfs:comment>
+        <rdfs:label>EquipmentPlace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Facility -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Facility">
+        <rdfs:comment xml:lang="en">A named amenity available to the public at a Site or on a Service.
+
+A Facility has no further properties than a name.
+
+An Equipment or LocalService is used to describe the further properties provided as part of a particular Facility</rdfs:comment>
+        <rdfs:label xml:lang="en">Facility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Garage -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Garage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceEquipment"/>
+        <rdfs:comment xml:lang="en">A Facility of PlaceEquipment used for parking and maintaining
+	vehicles. Parking Point in a Garage are called GaragePoint.</rdfs:comment>
+        <rdfs:label xml:lang="en">Garage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#HeadingSign -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#HeadingSign">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#SignEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#InformationBooklet -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#InformationBooklet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerInformationPrintedMaterial"/>
+        <rdfs:comment xml:lang="en">Information Booklet is public transport piece of Equipment dedicated to inform</rdfs:comment>
+        <rdfs:label xml:lang="en">InformationBooklet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#InformationDesk -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#InformationDesk">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerInformationTerminal"/>
+        <rdfs:comment xml:lang="en">A public transport information piece of Equipment</rdfs:comment>
+        <rdfs:label xml:lang="en">InformationDesk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#InformationLeaflet -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#InformationLeaflet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerInformationPrintedMaterial"/>
+        <rdfs:comment xml:lang="en">A public transport information piece of Equipment</rdfs:comment>
+        <rdfs:label xml:lang="en">InformationLeaflet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#InformationTerminal -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#InformationTerminal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerInformationTerminal"/>
+        <rdfs:comment xml:lang="en">A public transport information piece of Equipment in the street</rdfs:comment>
+        <rdfs:label xml:lang="en">InformationStand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Lifts -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Lifts">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceAccessEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of PlaceAccessEquipment dedicated to PlaceAccessLift</rdfs:comment>
+        <rdfs:label xml:lang="en">PlaceAccessLift</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#LostProperties -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#LostProperties">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#CustomerService"/>
+        <rdfs:comment xml:lang="en">Specialisation of CustomerService for LostProperties</rdfs:comment>
+        <rdfs:label xml:lang="en">LostProperties</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#LowFloor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#LowFloor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#VehicleAccessEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of VehicleAccessEquipment dedicated to LowFloor</rdfs:comment>
+        <rdfs:label xml:lang="en">LowFloor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#LuggageLocker -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#LuggageLocker">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#SiteEquipment"/>
+        <rdfs:label>LuggageLocker</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#LuggageLockerEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#LuggageLockerEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#StopPlaceEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of LuggageLockerEquipment for StopPlaceEquipment</rdfs:comment>
+        <rdfs:label xml:lang="en">LuggageLockerEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#LuggageService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#LuggageService">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#CustomerService"/>
+        <rdfs:comment xml:lang="en">Specialisation of CustomerServices for LuggageServices.
+
+Provides facilities as LuggageTrolley, FreeToUse, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">LuggageService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#LuggageTrolley -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#LuggageTrolley">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#LuggageService"/>
+        <rdfs:label xml:lang="en">LuggageTrolley</rdfs:label>
+        <rdfs:label xml:lang="en">Specialisation of LuggageTrolley for LuggageServices</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#MeetingPointService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#MeetingPointService">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#CustomerService"/>
+        <rdfs:comment xml:lang="en">Specialisation of CustomerService for meeting points (provides characteristics like description, labels...)</rdfs:comment>
+        <rdfs:label xml:lang="en">MeetingPointService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#MoneyService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#MoneyService">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Service"/>
+        <rdfs:label xml:lang="en">MoneyService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Passenger -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Passenger">
+        <rdfs:comment xml:lang="en">The Person who uses Public Transport Services</rdfs:comment>
+        <rdfs:label xml:lang="en">Passenger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#PassengerEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#PassengerEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Equipment"/>
+        <rdfs:comment xml:lang="en">An item of Equipment of a particular type actually available at a location within a Place or a Vehicle</rdfs:comment>
+        <rdfs:label xml:lang="en">PassengerEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#PassengerInformationEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#PassengerInformationEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerEquipment"/>
+        <rdfs:comment xml:lang="en">A public transport information piece of Equipment, as for instance terminals (on street, at information desks, telematic,...) or printed material (leaflets displayed at Stops, booklets, ...)</rdfs:comment>
+        <rdfs:label xml:lang="en">PassengerInformationEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#PassengerInformationPrintedMaterial -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#PassengerInformationPrintedMaterial">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerInformationEquipment"/>
+        <rdfs:comment xml:lang="en">A public transport information piece of Equipment which is printed material (leaflets displayed at Stops, booklets, ...)</rdfs:comment>
+        <rdfs:label xml:lang="en">PassengerInformationPrintedMaterial</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#PassengerInformationTerminal -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#PassengerInformationTerminal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerInformationEquipment"/>
+        <rdfs:comment xml:lang="en">A public transport information piece of equipment such as street stands, information desks or telematic services</rdfs:comment>
+        <rdfs:label xml:lang="en">PassengerInformationDesk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#PassengerSafetyEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#PassengerSafetyEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#PlaceAccessEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#PlaceAccessEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of PlaceEquipment dedicated to access (e.g. lifts, entrances, stairs, ramps, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">PlaceAccessEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#PlaceAccessStairEscalator -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#PlaceAccessStairEscalator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Stairs"/>
+        <rdfs:comment>Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairEscalator</rdfs:comment>
+        <rdfs:label>PlaceAccessStairEscalator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#PlaceAccessStairStair -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#PlaceAccessStairStair">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Stairs"/>
+        <rdfs:comment>Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStair</rdfs:comment>
+        <rdfs:label>PlaceAccessStairStair</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#PlaceAccessStairStaircase -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#PlaceAccessStairStaircase">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Stairs"/>
+        <rdfs:comment>Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStaircase</rdfs:comment>
+        <rdfs:label>PlaceAccessStairStaircase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#PlaceEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#PlaceEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Equipment"/>
+        <rdfs:comment xml:lang="en">An item of Equipment of a particular type actually available at a location within a Place</rdfs:comment>
+        <rdfs:label xml:lang="en">PlaceEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Porterage -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Porterage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Service"/>
+        <rdfs:comment xml:lang="en">Porterage</rdfs:comment>
+        <rdfs:comment xml:lang="en">PorterageService</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#QueuingEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#QueuingEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceAccessEquipment"/>
+        <rdfs:label xml:lang="en">QueingEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Ramp -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Ramp">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#VehicleAccessEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of VehicleAccessEquipment dedicated to VehicleRamp</rdfs:comment>
+        <rdfs:label xml:lang="en">VehicleRamp</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Ramps -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Ramps">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceAccessEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of PlaceEquipment dedicated to access</rdfs:comment>
+        <rdfs:label xml:lang="en">PlaceAccessRamp</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#RetailService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#RetailService">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Service"/>
+        <rdfs:comment xml:lang="en">Specialisation of LocalService dedicated to retail services</rdfs:comment>
+        <rdfs:label xml:lang="en">RetailService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#RoughSurface -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#RoughSurface">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceEquipment"/>
+        <rdfs:label xml:lang="en">RoughSurface</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#RubishDisposal -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#RubishDisposal">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Equipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of Passenger Equipment for Rubish Disposal</rdfs:comment>
+        <rdfs:label xml:lang="en">RubishDisposal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#SanitaryEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#SanitaryEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of Passenger Equipment for Sanitary Equipment</rdfs:comment>
+        <rdfs:label xml:lang="en">SanitaryEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#SeatingEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#SeatingEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceEquipment"/>
+        <rdfs:label xml:lang="en">SeatingEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Service -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Service">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Facility"/>
+        <rdfs:comment xml:lang="en">A Service (LocalService such as LeftLuggage, TicketingService) is considered as immaterial Equipment as well.
+
+A named Service relating to the use of the Site or transport Services at a particular location, for example Porterage, AssistanceForDissabledUsers, BookingOffices, etc. The Service may have a validityCondition associated with it.</rdfs:comment>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Shelter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Shelter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#WaitingEquipment"/>
+        <rdfs:comment xml:lang="en">A building or other structure constructed at a Bus Stop</rdfs:comment>
+        <rdfs:label xml:lang="en">Shelter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Shower -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Shower">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#SanitaryEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of SanitaryEquipment for showers</rdfs:comment>
+        <rdfs:label xml:lang="en">Shower</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#SignEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#SignEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of PlaceEquipment for Signs</rdfs:comment>
+        <rdfs:label xml:lang="en">SignEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Site -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Site">
+        <rdfs:comment xml:lang="en">A well known Place to which Passengers may refer to indicate the origin or a destination of a Trip</rdfs:comment>
+        <rdfs:label xml:lang="en">Site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#SiteComponent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#SiteComponent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Component"/>
+        <rdfs:comment xml:lang="en">An element of a Site descibing a part of its structure. SiteComponent share common properties for data management, accessibility and other features</rdfs:comment>
+        <rdfs:label xml:lang="en">SiteComponent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#SiteEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#SiteEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceEquipment"/>
+        <rdfs:comment>Specialisation of PlaceEquipment for Site</rdfs:comment>
+        <rdfs:label>SiteEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Stairs -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Stairs">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceAccessEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of PlaceAccessEquipment dedicated to PlaceAccessStair</rdfs:comment>
+        <rdfs:label xml:lang="en">PlaceAccessStair</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#StopPlaceEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#StopPlaceEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of Equipment for StopPlaceEquipment</rdfs:comment>
+        <rdfs:label xml:lang="en">StopPlaceEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#TelematicInformationService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#TelematicInformationService">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerInformationTerminal"/>
+        <rdfs:comment xml:lang="en">A public transport information piece of Equipment by telematic means</rdfs:comment>
+        <rdfs:label xml:lang="en">TelematicInformationService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#TicketingEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#TicketingEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of Passenter Equipment for Ticketing Equipment</rdfs:comment>
+        <rdfs:label xml:lang="en">TicketingEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#TicketingService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#TicketingService">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Service"/>
+        <rdfs:label xml:lang="en">TicketingService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#TicketingValidatorEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#TicketingValidatorEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of Passenger Equipment for Ticket Validator Equipment</rdfs:comment>
+        <rdfs:label xml:lang="en">TicketValidatorEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Toilet -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Toilet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#SanitaryEquipment"/>
+        <rdfs:label xml:lang="en">Toilet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#TrolleyStand -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#TrolleyStand">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#SiteEquipment"/>
+        <rdfs:comment xml:lang="en">Is the specialisation of SiteEquipment for TrolleyStand</rdfs:comment>
+        <rdfs:label xml:lang="en">TrolleyStand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#TrolleyStandEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#TrolleyStandEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#StopPlaceEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of StopPlaceEquipment for trolley stands</rdfs:comment>
+        <rdfs:label xml:lang="en">TrolleyStandEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#TypeOfCateringService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#TypeOfCateringService">
+        <rdfs:comment xml:lang="en">A classification of CateringService</rdfs:comment>
+        <rdfs:label xml:lang="en">TypeOfCateringService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#TypeOfCycleEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#TypeOfCycleEquipment"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment">
+        <rdfs:comment xml:lang="en">A classification of Cycle Storage Equipment: racks, bars, railings, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">TypeOfCycleStorageEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#TypeOfEmergencyService -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#TypeOfEmergencyService">
+        <rdfs:comment xml:lang="en">A typology of emergency services: police, first aid, sos point...</rdfs:comment>
+        <rdfs:label xml:lang="en">TypeOfEmergencyService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Vehicle -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Vehicle">
+        <rdfs:comment xml:lang="en">A PublicTransportVehicle used for carrying Passenger</rdfs:comment>
+        <rdfs:label xml:lang="en">Vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#VehicleAccessEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#VehicleAccessEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#VehicleEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of VehicleEquipment dedicated to access Vehicles providing information such as low floor, ramp, access area dimensions, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">VehicleAccessEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#VehicleChargingEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#VehicleChargingEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of PlaceEquipment for Vehicle charging</rdfs:comment>
+        <rdfs:label xml:lang="en">VehicleChargingEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#VehicleEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#VehicleEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Equipment"/>
+        <rdfs:comment xml:lang="en">Equipment for Vehicles</rdfs:comment>
+        <rdfs:label xml:lang="en">VehicleEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#VehicleMode -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#VehicleMode">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Vehicle"/>
+        <rdfs:comment xml:lang="en">A classification of Public Transport Vehicles of the same Vehicle Type, e.g. according to Equipment specifications or model generation.</rdfs:comment>
+        <rdfs:label xml:lang="en">VehicleModel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#WaitingEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#WaitingEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#StopPlaceEquipment"/>
+        <rdfs:comment xml:lang="en">Specialisation of StopPlaceEquipment for WaitingEquipment (shelter, waiting room, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">WaitingEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#WaitingRoom -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#WaitingRoom">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#WaitingEquipment"/>
+        <rdfs:comment xml:lang="en">A Waiting Room</rdfs:comment>
+        <rdfs:label xml:lang="en">WaitingRoom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#WaitingRoomEquipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#WaitingRoomEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#WaitingRoom"/>
+        <rdfs:comment xml:lang="en">Specialisation of WaitingEquipment for WaitingRoom, classified by TypeOfWaitingRoom</rdfs:comment>
+        <rdfs:label xml:lang="en">WaitingRoomEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#WheelchairAccessToilet -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#WheelchairAccessToilet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#SanitaryEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#WheelchairBabyChange -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#WheelchairBabyChange">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#SanitaryEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#beverageVendingMachine -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#beverageVendingMachine">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfCateringService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#buffet -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#buffet">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfCateringService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#cateringTrolleyService -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#cateringTrolleyService">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfCateringService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#cycleStorageEquipmentBars -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#cycleStorageEquipmentBars">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#cycleStorageEquipmentRacks -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#cycleStorageEquipmentRacks">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#cycleStorageEquipmentRailings -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#cycleStorageEquipmentRailings">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#emergencyServiceFirstAid -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#emergencyServiceFirstAid">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfEmergencyService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#emergencyServicePolice -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#emergencyServicePolice">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfEmergencyService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#emergencyServiceSOSPoint -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#emergencyServiceSOSPoint">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfEmergencyService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#emergencyServiceServiceCCTV -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#emergencyServiceServiceCCTV">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfEmergencyService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#foodVendingMachine -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#foodVendingMachine">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfCateringService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#noBeveragesAvailable -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#noBeveragesAvailable">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfCateringService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#noFoodAvailable -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#noFoodAvailable">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfCateringService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#snacks -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#snacks">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfCateringService"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+
+

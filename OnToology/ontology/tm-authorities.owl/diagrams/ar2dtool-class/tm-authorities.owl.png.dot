@@ -1,0 +1,13 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; ":Responsability" ":ServiceArea" ":Organization" ":AdministrativeZone" ":OrganisationPart" ":GroupOfOperators" ":Operator" ; /*classes style*/
+	":Operator" -> ":AdministrativeZone" [ label = ":operatesInAdministrativeZone" ];
+	":Organization" -> ":ServiceArea" [ label = ":providesService" ];
+	":Operator" -> "xsd:boolean" [ label = ":ownership" ];
+	":Responsability" -> ":DataOperation" [ label = ":hasAResponsabilityRole" ];
+	":Organization" -> ":OrganisationPart" [ label = ":isPartOf" ];
+	":GroupOfOperators" -> ":Operator" [ label = ":isGroupOfOperators" ];
+	":Organization" -> ":Responsability" [ label = "http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability" ];
+
+}
