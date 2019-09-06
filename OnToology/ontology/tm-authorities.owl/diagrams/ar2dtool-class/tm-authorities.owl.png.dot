@@ -5,9 +5,9 @@ node [shape = rectangle, color="orange"]; ":Responsability" ":ServiceArea" ":Org
 	":Operator" -> ":AdministrativeZone" [ label = ":operatesInAdministrativeZone" ];
 	":Organization" -> ":ServiceArea" [ label = ":providesService" ];
 	":Operator" -> "xsd:boolean" [ label = ":ownership" ];
+	":Organization" -> ":Responsability" [ label = ":hasAResponsability" ];
 	":Responsability" -> ":DataOperation" [ label = ":hasAResponsabilityRole" ];
 	":Organization" -> ":OrganisationPart" [ label = ":isPartOf" ];
 	":GroupOfOperators" -> ":Operator" [ label = ":isGroupOfOperators" ];
-	":Organization" -> ":Responsability" [ label = "http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability" ];
 
 }

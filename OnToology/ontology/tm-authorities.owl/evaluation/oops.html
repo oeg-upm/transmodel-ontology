@@ -117,12 +117,12 @@ table.tablesorter thead tr .headerSortDown {
     <div class="panel-heading">
     <h4 class="panel-title">
     <a data-toggle="collapse" href="#collapse0">
-    "P10". "Missing disjointness"<span style="float: right;">"1" cases detected. <span class="label label-warning">"Important"</span></span></a>
+    "P21". "Using a miscellaneous class"<span style="float: right;">"1" cases detected. <span class="label label-minor">"Minor"</span></span></a>
     </h4>
     </div>
     <div id="collapse0" class="panel-collapse collapse">
     <div class="panel-body">
-    <p>"The ontology lacks disjoint axioms between classes or between properties that should be defined as disjoint. This pitfall is related with the guidelines provided in [6], [2] and [7].\t"</p>
+    <p>"This pitfall refers to the creation of a class with the only goal of classifying the instances that do not belong to any of its sibling classes (classes with which the miscellaneous problematic class shares a common direct ancestor).\t"</p>
     </div>
     </div>
     </div>
@@ -145,38 +145,10 @@ table.tablesorter thead tr .headerSortDown {
     <div class="panel-heading">
     <h4 class="panel-title">
     <a data-toggle="collapse" href="#collapse2">
-    "P19". "Defining multiple domains or ranges in properties"<span style="float: right;">"3" cases detected. <span class="label label-danger">"Critical"</span></span></a>
-    </h4>
-    </div>
-    <div id="collapse2" class="panel-collapse collapse">
-    <div class="panel-body">
-    <p>"The domain or range (or both) of a property (relationships and attributes) is defined by stating more than one rdfs:domain or rdfs:range statements. In OWL multiple rdfs:domain or rdfs:range axioms are allowed, but they are interpreted as conjunction, being, therefore, equivalent to the construct owl:intersectionOf. This pitfall is related to the common error that appears when defining domains and ranges described in [7].\t"</p>
-    </div>
-    </div>
-    </div>
-    
-    <div class="panel panel-default">
-    <div class="panel-heading">
-    <h4 class="panel-title">
-    <a data-toggle="collapse" href="#collapse3">
-    "P21". "Using a miscellaneous class"<span style="float: right;">"1" cases detected. <span class="label label-minor">"Minor"</span></span></a>
-    </h4>
-    </div>
-    <div id="collapse3" class="panel-collapse collapse">
-    <div class="panel-body">
-    <p>"This pitfall refers to the creation of a class with the only goal of classifying the instances that do not belong to any of its sibling classes (classes with which the miscellaneous problematic class shares a common direct ancestor).\t"</p>
-    </div>
-    </div>
-    </div>
-    
-    <div class="panel panel-default">
-    <div class="panel-heading">
-    <h4 class="panel-title">
-    <a data-toggle="collapse" href="#collapse4">
     "P13". "Inverse relationships not explicitly declared"<span style="float: right;">"6" cases detected. <span class="label label-minor">"Minor"</span></span></a>
     </h4>
     </div>
-    <div id="collapse4" class="panel-collapse collapse">
+    <div id="collapse2" class="panel-collapse collapse">
     <div class="panel-body">
     <p>"This pitfall appears when any relationship (except for those that are defined as symmetric properties using owl:SymmetricProperty) does not have an inverse relationship (owl:inverseOf) defined within the ontology.\t"</p>
     </div>
@@ -186,13 +158,41 @@ table.tablesorter thead tr .headerSortDown {
     <div class="panel panel-default">
     <div class="panel-heading">
     <h4 class="panel-title">
-    <a data-toggle="collapse" href="#collapse5">
+    <a data-toggle="collapse" href="#collapse3">
     "P08". "Missing annotations"<span style="float: right;">"5" cases detected. <span class="label label-minor">"Minor"</span></span></a>
+    </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+    <div class="panel-body">
+    <p>"This pitfall consists in creating an ontology element and failing to provide human readable annotations attached to it. Consequently, ontology elements lack annotation properties that label them (e.g. rdfs:label, lemon:LexicalEntry, skos:prefLabel or skos:altLabel) or that define them (e.g. rdfs:comment or dc:description). This pitfall is related to the guidelines provided in [5].\t"</p>
+    </div>
+    </div>
+    </div>
+    
+    <div class="panel panel-default">
+    <div class="panel-heading">
+    <h4 class="panel-title">
+    <a data-toggle="collapse" href="#collapse4">
+    "P19". "Defining multiple domains or ranges in properties"<span style="float: right;">"3" cases detected. <span class="label label-danger">"Critical"</span></span></a>
+    </h4>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse">
+    <div class="panel-body">
+    <p>"The domain or range (or both) of a property (relationships and attributes) is defined by stating more than one rdfs:domain or rdfs:range statements. In OWL multiple rdfs:domain or rdfs:range axioms are allowed, but they are interpreted as conjunction, being, therefore, equivalent to the construct owl:intersectionOf. This pitfall is related to the common error that appears when defining domains and ranges described in [7].\t"</p>
+    </div>
+    </div>
+    </div>
+    
+    <div class="panel panel-default">
+    <div class="panel-heading">
+    <h4 class="panel-title">
+    <a data-toggle="collapse" href="#collapse5">
+    "P10". "Missing disjointness"<span style="float: right;">"1" cases detected. <span class="label label-warning">"Important"</span></span></a>
     </h4>
     </div>
     <div id="collapse5" class="panel-collapse collapse">
     <div class="panel-body">
-    <p>"This pitfall consists in creating an ontology element and failing to provide human readable annotations attached to it. Consequently, ontology elements lack annotation properties that label them (e.g. rdfs:label, lemon:LexicalEntry, skos:prefLabel or skos:altLabel) or that define them (e.g. rdfs:comment or dc:description). This pitfall is related to the guidelines provided in [5].\t"</p>
+    <p>"The ontology lacks disjoint axioms between classes or between properties that should be defined as disjoint. This pitfall is related with the guidelines provided in [6], [2] and [7].\t"</p>
     </div>
     </div>
     </div>
