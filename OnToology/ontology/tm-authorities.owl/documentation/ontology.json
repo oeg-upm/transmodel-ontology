@@ -1,0 +1,368 @@
+[ {
+  "@id" : "http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, data aggreggation, data distribution, planning, operation, control, ownership, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasAResponsability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#Responsability"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#AdministrativeZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The area of a district, a region, a city, a municipality or other area with which an Organization has a responsability role."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "AdministrativeZone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#Zone"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#Authority",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Public Transport Authority, the organization under which the responsability of organising the TransportService in a certain area (AdministrativeZone) is placed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Authority"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#Organization"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#ControlCenter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An OrganisationPart for an operational team who are responsible for issuing commands to control the services"
+  }, {
+    "@language" : "en",
+    "@value" : "ControlCentre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#OrganisationPart"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#DataAggregation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/authorities#TypeOfResponsability" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#DataAugmentation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/authorities#TypeOfResponsability" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#DataControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/authorities#TypeOfResponsability" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#DataDistribution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/authorities#TypeOfResponsability" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#DataOperation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/authorities#TypeOfResponsability" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#DataOrigination",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/authorities#TypeOfResponsability" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#DataOwnership",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/authorities#TypeOfResponsability" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#DataPlanning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/authorities#TypeOfResponsability" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#DataUpdate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/authorities#TypeOfResponsability" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#Department",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An OrganisationPart specific to a purpose and/or organisational structure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Department"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#OrganisationPart"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#GroupOfOperators",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A group of Operator having for instance common schemes for fare collection of passenger information"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "GroupOfOperators"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#ManagementAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specialisation of TransportAgent for ManagementAgent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ManagementAgent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#OtherOrganization"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#Operator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A company providing Public Transport Services.\n\nA TransitAgency in GTFS"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Operator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#Organization"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#OrganisationPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A part of an organisation to which a set of responsabilities upon the data and data management may be assigned"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "OrganisationPart"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#OrganisationUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An OrganisationPart to which a set of responsabilities in an organisation for planning and control is assigned"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "OrganisationalUnit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#OrganisationPart"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A legally incorporated body associated with any aspect of the transport system"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Organization"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#OtherOrganization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The defined \"Generic organization\" in Transmodel, is an organization which deals with Public Transport Services"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "TransportAgent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#Organization"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#Private",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/authorities#Operator", "https://w3id.org/transmodel/authorities#ServicedOrganisation" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#Public",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/authorities#Operator", "https://w3id.org/transmodel/authorities#ServicedOrganisation" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#Responsability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Responsability (Role) is a particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "TypeOfResponsability"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#ServiceArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Service Area is where the Public Transport Operator operates"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ServiceArea"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#ServicedOrganisation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A public or private organisation (Operator) for which public transport services are provided on specific day (DayType), e.g., a school, university or works"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ServicedOperator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#Organization"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#TravelAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specialisation of TransportAgent for TravelAgent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "TravelAgent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#OtherOrganization"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#TypeOfResponsability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#Zone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A two dimmensional Place within the ServiceArea of an Operator or ServicedOperator. It can be:\n\n- AdministrativeZone\n- TariffZone\n- AccessZone\n- ..."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Zone"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#hasAResponsabilityRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The assignment of one or more roles to an Organization or an OrganizationPart as regards the responsability it will have as regards specific data (e.g. ownership, planning, etc.) and the management of this data (e.g. distribution, updates, etc.)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#Responsability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasAResponsabilityRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#DataAggregation"
+  }, {
+    "@id" : "https://w3id.org/transmodel/authorities#DataAugmentation"
+  }, {
+    "@id" : "https://w3id.org/transmodel/authorities#DataControl"
+  }, {
+    "@id" : "https://w3id.org/transmodel/authorities#DataDistribution"
+  }, {
+    "@id" : "https://w3id.org/transmodel/authorities#DataOperation"
+  }, {
+    "@id" : "https://w3id.org/transmodel/authorities#DataOrigination"
+  }, {
+    "@id" : "https://w3id.org/transmodel/authorities#DataOwnership"
+  }, {
+    "@id" : "https://w3id.org/transmodel/authorities#DataPlanning"
+  }, {
+    "@id" : "https://w3id.org/transmodel/authorities#DataUpdate"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#isGroupOfOperators",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#GroupOfOperators"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "isGroupOfOperators"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#Operator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#isPartOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "isPartOf"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#OrganisationPart"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#operatesInAdministrativeZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#Operator"
+  }, {
+    "@id" : "https://w3id.org/transmodel/authorities#ServicedOrganisation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "operatesInAdministrativeZone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#AdministrativeZone"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#ownership",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "publicOwnership means at least 51% of the participation of the company"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#Operator"
+  }, {
+    "@id" : "https://w3id.org/transmodel/authorities#ServicedOrganisation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "publicOwnership"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#providesService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "providesService"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#ServiceArea"
+  } ]
+} ]

@@ -1,0 +1,502 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/transmodel/authorities#"
+     xml:base="https://w3id.org/transmodel/authorities"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/transmodel/authorities#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#Organization"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#Responsability"/>
+        <rdfs:comment xml:lang="en">A particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, data aggreggation, data distribution, planning, operation, control, ownership, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasAResponsability</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#hasAResponsabilityRole -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/authorities#hasAResponsabilityRole">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#Responsability"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataAggregation"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataAugmentation"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataControl"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataDistribution"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataOperation"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataOrigination"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataOwnership"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataPlanning"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataUpdate"/>
+        <rdfs:comment xml:lang="en">The assignment of one or more roles to an Organization or an OrganizationPart as regards the responsability it will have as regards specific data (e.g. ownership, planning, etc.) and the management of this data (e.g. distribution, updates, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">hasAResponsabilityRole</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#isGroupOfOperators -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/authorities#isGroupOfOperators">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#GroupOfOperators"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#Operator"/>
+        <rdfs:label xml:lang="en">isGroupOfOperators</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#isPartOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/authorities#isPartOf">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#Organization"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#OrganisationPart"/>
+        <rdfs:label xml:lang="en">isPartOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#operatesInAdministrativeZone -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/authorities#operatesInAdministrativeZone">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#Operator"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#ServicedOrganisation"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#AdministrativeZone"/>
+        <rdfs:label xml:lang="en">operatesInAdministrativeZone</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#providesService -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/authorities#providesService">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#Organization"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#ServiceArea"/>
+        <rdfs:label xml:lang="en">providesService</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#ownership -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/authorities#ownership">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#Operator"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#ServicedOrganisation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">publicOwnership means at least 51% of the participation of the company</rdfs:comment>
+        <rdfs:label xml:lang="en">publicOwnership</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#AdministrativeZone -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#AdministrativeZone">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#Zone"/>
+        <rdfs:comment xml:lang="en">The area of a district, a region, a city, a municipality or other area with which an Organization has a responsability role.</rdfs:comment>
+        <rdfs:label xml:lang="en">AdministrativeZone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#Authority -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Authority">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#Organization"/>
+        <rdfs:comment xml:lang="en">Public Transport Authority, the organization under which the responsability of organising the TransportService in a certain area (AdministrativeZone) is placed</rdfs:comment>
+        <rdfs:label xml:lang="en">Authority</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#ControlCenter -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ControlCenter">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#OrganisationPart"/>
+        <rdfs:comment xml:lang="en">An OrganisationPart for an operational team who are responsible for issuing commands to control the services</rdfs:comment>
+        <rdfs:comment xml:lang="en">ControlCentre</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataAggregation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataAggregation"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataAugmentation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataAugmentation"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataControl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataControl"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataDistribution -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataDistribution"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataOperation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataOperation"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataOrigination -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataOrigination"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataOwnership -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataOwnership"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataPlanning -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataPlanning"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataUpdate -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataUpdate"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#Department -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Department">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#OrganisationPart"/>
+        <rdfs:comment xml:lang="en">An OrganisationPart specific to a purpose and/or organisational structure</rdfs:comment>
+        <rdfs:label xml:lang="en">Department</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#GroupOfOperators -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#GroupOfOperators">
+        <rdfs:comment xml:lang="en">A group of Operator having for instance common schemes for fare collection of passenger information</rdfs:comment>
+        <rdfs:label xml:lang="en">GroupOfOperators</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#ManagementAgent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ManagementAgent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#OtherOrganization"/>
+        <rdfs:comment xml:lang="en">Specialisation of TransportAgent for ManagementAgent</rdfs:comment>
+        <rdfs:label xml:lang="en">ManagementAgent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#Operator -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Operator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#Organization"/>
+        <rdfs:comment xml:lang="en">A company providing Public Transport Services.
+
+A TransitAgency in GTFS</rdfs:comment>
+        <rdfs:label xml:lang="en">Operator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#OrganisationPart -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#OrganisationPart">
+        <rdfs:comment xml:lang="en">A part of an organisation to which a set of responsabilities upon the data and data management may be assigned</rdfs:comment>
+        <rdfs:label xml:lang="en">OrganisationPart</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#OrganisationUnit -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#OrganisationUnit">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#OrganisationPart"/>
+        <rdfs:comment xml:lang="en">An OrganisationPart to which a set of responsabilities in an organisation for planning and control is assigned</rdfs:comment>
+        <rdfs:label xml:lang="en">OrganisationalUnit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#Organization -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Organization">
+        <rdfs:comment xml:lang="en">A legally incorporated body associated with any aspect of the transport system</rdfs:comment>
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#OtherOrganization -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#OtherOrganization">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#Organization"/>
+        <rdfs:comment xml:lang="en">The defined &quot;Generic organization&quot; in Transmodel, is an organization which deals with Public Transport Services</rdfs:comment>
+        <rdfs:label xml:lang="en">TransportAgent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#Responsability -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Responsability">
+        <rdfs:comment xml:lang="en">Responsability (Role) is a particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">TypeOfResponsability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#ServiceArea -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ServiceArea">
+        <rdfs:comment xml:lang="en">Service Area is where the Public Transport Operator operates</rdfs:comment>
+        <rdfs:label xml:lang="en">ServiceArea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#ServicedOrganisation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ServicedOrganisation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#Organization"/>
+        <rdfs:comment xml:lang="en">A public or private organisation (Operator) for which public transport services are provided on specific day (DayType), e.g., a school, university or works</rdfs:comment>
+        <rdfs:label xml:lang="en">ServicedOperator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#TravelAgent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#TravelAgent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#OtherOrganization"/>
+        <rdfs:comment xml:lang="en">Specialisation of TransportAgent for TravelAgent</rdfs:comment>
+        <rdfs:label xml:lang="en">TravelAgent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#TypeOfResponsability -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#Zone -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Zone">
+        <rdfs:comment xml:lang="en">A two dimmensional Place within the ServiceArea of an Operator or ServicedOperator. It can be:
+
+- AdministrativeZone
+- TariffZone
+- AccessZone
+- ...</rdfs:comment>
+        <rdfs:label xml:lang="en">Zone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataAggregation -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataAggregation">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataAugmentation -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataAugmentation">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataControl -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataControl">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataDistribution -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataDistribution">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataOperation -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataOperation">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataOrigination -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataOrigination">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataOwnership -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataOwnership">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataPlanning -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataPlanning">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataUpdate -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataUpdate">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#Private -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#Private">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#Operator"/>
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#ServicedOrganisation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#Public -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#Public">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#Operator"/>
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#ServicedOrganisation"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+
+

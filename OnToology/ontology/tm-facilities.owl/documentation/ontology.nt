@@ -1,0 +1,677 @@
+<https://w3id.org/transmodel/facilities#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/transmodel/facilities#canBeLocatedIn
+<https://w3id.org/transmodel/facilities#canBeLocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/facilities#canBeLocatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#Facility> .
+<https://w3id.org/transmodel/facilities#canBeLocatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/facilities#Site> .
+<https://w3id.org/transmodel/facilities#canBeLocatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "canBeLocatedIn"@en .
+# 
+# https://w3id.org/transmodel/facilities#containsEquipment
+<https://w3id.org/transmodel/facilities#containsEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/facilities#containsEquipment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#EquipmentPlace> .
+<https://w3id.org/transmodel/facilities#containsEquipment> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/facilities#Facility> .
+# 
+# https://w3id.org/transmodel/facilities#facilityRequirement
+<https://w3id.org/transmodel/facilities#facilityRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/facilities#facilityRequirement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#Vehicle> .
+<https://w3id.org/transmodel/facilities#facilityRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/facilities#Facility> .
+<https://w3id.org/transmodel/facilities#facilityRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "A classification of public transport Vehicles according to the facilities available on the Vehicle"@en .
+<https://w3id.org/transmodel/facilities#facilityRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "facilityRequirement"@en .
+# 
+# https://w3id.org/transmodel/facilities#facilitySet
+<https://w3id.org/transmodel/facilities#facilitySet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/facilities#facilitySet> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/facilities#Facility> .
+<https://w3id.org/transmodel/facilities#facilitySet> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of Facilities available for a ServiceJourney or a JourneyPart. The set may be available only for a specific VehicleType within the service (e.g. carriage equipped with low floor)"@en .
+<https://w3id.org/transmodel/facilities#facilitySet> <http://www.w3.org/2000/01/rdf-schema#label> "facilitySet"@en .
+# 
+# https://w3id.org/transmodel/facilities#isUsedBy
+<https://w3id.org/transmodel/facilities#isUsedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/facilities#isUsedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#Facility> .
+<https://w3id.org/transmodel/facilities#isUsedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/facilities#Passenger> .
+<https://w3id.org/transmodel/facilities#isUsedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isUsedBy"@en .
+# 
+# https://w3id.org/transmodel/facilities#typeOfCateringService
+<https://w3id.org/transmodel/facilities#typeOfCateringService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/facilities#typeOfCateringService> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#CateringService> .
+<https://w3id.org/transmodel/facilities#typeOfCateringService> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/facilities#TypeOfCateringService> .
+<https://w3id.org/transmodel/facilities#typeOfCateringService> <http://www.w3.org/2000/01/rdf-schema#label> "typeOfCateringService"@en .
+# 
+# https://w3id.org/transmodel/facilities#typeOfCycleEquipment
+<https://w3id.org/transmodel/facilities#typeOfCycleEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/facilities#typeOfCycleEquipment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#CycleOperatingEquipment> .
+<https://w3id.org/transmodel/facilities#typeOfCycleEquipment> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/facilities#TypeOfCycleEquipment> .
+<https://w3id.org/transmodel/facilities#TypeOfCycleEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#typeOfCycleEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "typeOfCycleEquipment" .
+# 
+# https://w3id.org/transmodel/facilities#typeOfEmergencyService
+<https://w3id.org/transmodel/facilities#typeOfEmergencyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/facilities#typeOfEmergencyService> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#EmergencyService> .
+<https://w3id.org/transmodel/facilities#typeOfEmergencyService> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/facilities#TypeOfEmergencyService> .
+<https://w3id.org/transmodel/facilities#typeOfEmergencyService> <http://www.w3.org/2000/01/rdf-schema#label> "typeOfEmergencyService"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/transmodel/facilities#available
+<https://w3id.org/transmodel/facilities#available> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/facilities#available> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#Facility> .
+<https://w3id.org/transmodel/facilities#available> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/transmodel/facilities#available> <http://www.w3.org/2000/01/rdf-schema#label> "facilityAvailability" .
+# 
+# https://w3id.org/transmodel/facilities#description
+<https://w3id.org/transmodel/facilities#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/facilities#description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#MeetingPointService> .
+<https://w3id.org/transmodel/facilities#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/transmodel/facilities#description> <http://www.w3.org/2000/01/rdf-schema#comment> "description for MeetingPointServices"@en .
+<https://w3id.org/transmodel/facilities#description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en .
+# 
+# https://w3id.org/transmodel/facilities#facilityLocation
+<https://w3id.org/transmodel/facilities#facilityLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/facilities#facilityLocation> <http://www.w3.org/2000/01/rdf-schema#label> "facilityLocation" .
+# 
+# https://w3id.org/transmodel/facilities#freeToUse
+<https://w3id.org/transmodel/facilities#freeToUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/facilities#freeToUse> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#Service> .
+<https://w3id.org/transmodel/facilities#freeToUse> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/transmodel/facilities#freeToUse> <http://www.w3.org/2000/01/rdf-schema#comment> "Characteristic of a Service that is free to use it"@en .
+<https://w3id.org/transmodel/facilities#freeToUse> <http://www.w3.org/2000/01/rdf-schema#label> "freeToUse"@en .
+# 
+# https://w3id.org/transmodel/facilities#label
+<https://w3id.org/transmodel/facilities#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/facilities#label> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#MeetingPointService> .
+<https://w3id.org/transmodel/facilities#label> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/transmodel/facilities#label> <http://www.w3.org/2000/01/rdf-schema#comment> "labels for MeetingPointServices"@en .
+<https://w3id.org/transmodel/facilities#label> <http://www.w3.org/2000/01/rdf-schema#label> "label"@en .
+# 
+# https://w3id.org/transmodel/facilities#name
+<https://w3id.org/transmodel/facilities#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/facilities#name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#Facility> .
+<https://w3id.org/transmodel/facilities#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/transmodel/facilities#name> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of a facility"@en .
+<https://w3id.org/transmodel/facilities#name> <http://www.w3.org/2000/01/rdf-schema#label> "facilityName"@en .
+# 
+# https://w3id.org/transmodel/facilities#siteName
+<https://w3id.org/transmodel/facilities#siteName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/facilities#siteName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#Site> .
+<https://w3id.org/transmodel/facilities#siteName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/transmodel/facilities#siteName> <http://www.w3.org/2000/01/rdf-schema#label> "siteName" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/transmodel/authorities#TypeOfCateringService
+<https://w3id.org/transmodel/authorities#TypeOfCateringService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment
+<https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/transmodel/authorities#TypeOfEmergencyService
+<https://w3id.org/transmodel/authorities#TypeOfEmergencyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/transmodel/facilities#AccessAreaDimensions
+<https://w3id.org/transmodel/facilities#AccessAreaDimensions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#AccessAreaDimensions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#VehicleAccessEquipment> .
+<https://w3id.org/transmodel/facilities#AccessAreaDimensions> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of VehicleAccessEquipment dedicated to VehicleAccessAreaDimmension"@en .
+<https://w3id.org/transmodel/facilities#AccessAreaDimensions> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleAccessAreaDimension"@en .
+# 
+# https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers
+<https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#AssistanceService> .
+<https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers> <http://www.w3.org/2000/01/rdf-schema#comment> "Assistance Services for dissabled users of the Public Transport Network"@en .
+<https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers> <http://www.w3.org/2000/01/rdf-schema#label> "AssistanceForDissabledUsers"@en .
+# 
+# https://w3id.org/transmodel/facilities#AssistanceService
+<https://w3id.org/transmodel/facilities#AssistanceService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#AssistanceService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Service> .
+<https://w3id.org/transmodel/facilities#AssistanceService> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of LocalService for Assistance providing information like language, accessibility trained staff, etc."@en .
+<https://w3id.org/transmodel/facilities#AssistanceService> <http://www.w3.org/2000/01/rdf-schema#label> "AssistanceService"@en .
+# 
+# https://w3id.org/transmodel/facilities#BabyChange
+<https://w3id.org/transmodel/facilities#BabyChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#BabyChange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#SanitaryEquipment> .
+# 
+# https://w3id.org/transmodel/facilities#CateringService
+<https://w3id.org/transmodel/facilities#CateringService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#CateringService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Service> .
+<https://w3id.org/transmodel/facilities#CateringService> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of LocalService for CateringService"@en .
+<https://w3id.org/transmodel/facilities#CateringService> <http://www.w3.org/2000/01/rdf-schema#label> "CateringService"@en .
+# 
+# https://w3id.org/transmodel/facilities#CommunicationService
+<https://w3id.org/transmodel/facilities#CommunicationService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#CommunicationService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Service> .
+<https://w3id.org/transmodel/facilities#CommunicationService> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of LocalService dedicated to communication services"@en .
+<https://w3id.org/transmodel/facilities#CommunicationService> <http://www.w3.org/2000/01/rdf-schema#label> "CommunicationService"@en .
+# 
+# https://w3id.org/transmodel/facilities#Component
+<https://w3id.org/transmodel/facilities#Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Component> <http://www.w3.org/2000/01/rdf-schema#comment> "Component of a Site or a Place"@en .
+<https://w3id.org/transmodel/facilities#Component> <http://www.w3.org/2000/01/rdf-schema#label> "Component"@en .
+# 
+# https://w3id.org/transmodel/facilities#CrossingEquipment
+<https://w3id.org/transmodel/facilities#CrossingEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#CrossingEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceAccessEquipment> .
+<https://w3id.org/transmodel/facilities#CrossingEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of PlaceAccessEquipment for CrossingEquipment\n\n- Zebra"@en .
+<https://w3id.org/transmodel/facilities#CrossingEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "CrossingEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#CrossingEquipmentLights
+<https://w3id.org/transmodel/facilities#CrossingEquipmentLights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#CrossingEquipmentLights> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#CrossingEquipment> .
+# 
+# https://w3id.org/transmodel/facilities#CrossingEquipmentPedestrian
+<https://w3id.org/transmodel/facilities#CrossingEquipmentPedestrian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#CrossingEquipmentPedestrian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#CrossingEquipment> .
+# 
+# https://w3id.org/transmodel/facilities#CrossingEquipmentTactileGuideStrip
+<https://w3id.org/transmodel/facilities#CrossingEquipmentTactileGuideStrip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#CrossingEquipmentTactileGuideStrip> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#CrossingEquipment> .
+# 
+# https://w3id.org/transmodel/facilities#CrossingEquipmentZebra
+<https://w3id.org/transmodel/facilities#CrossingEquipmentZebra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#CrossingEquipmentZebra> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#CrossingEquipment> .
+# 
+# https://w3id.org/transmodel/facilities#CustomerService
+<https://w3id.org/transmodel/facilities#CustomerService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#CustomerService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Service> .
+<https://w3id.org/transmodel/facilities#CustomerService> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic specialisation of LocalService for CustomerServices (LostProperties, MeetingPoint, Complaiants, etc.)"@en .
+<https://w3id.org/transmodel/facilities#CustomerService> <http://www.w3.org/2000/01/rdf-schema#label> "CustomerService"@en .
+# 
+# https://w3id.org/transmodel/facilities#CycleOperatingEquipment
+<https://w3id.org/transmodel/facilities#CycleOperatingEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#CycleOperatingEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceEquipment> .
+<https://w3id.org/transmodel/facilities#CycleOperatingEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "CycleOperatingEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#EmergencyService
+<https://w3id.org/transmodel/facilities#EmergencyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#EmergencyService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Service> .
+<https://w3id.org/transmodel/facilities#EmergencyService> <http://www.w3.org/2000/01/rdf-schema#label> "EmergencyService"@en .
+# 
+# https://w3id.org/transmodel/facilities#EntraceEquipment
+<https://w3id.org/transmodel/facilities#EntraceEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#EntraceEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceAccessEquipment> .
+# 
+# https://w3id.org/transmodel/facilities#EntranceEquipmentBarrier
+<https://w3id.org/transmodel/facilities#EntranceEquipmentBarrier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#EntranceEquipmentBarrier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#EntraceEquipment> .
+# 
+# https://w3id.org/transmodel/facilities#EntranceEquipmentDoor
+<https://w3id.org/transmodel/facilities#EntranceEquipmentDoor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#EntranceEquipmentDoor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#EntraceEquipment> .
+# 
+# https://w3id.org/transmodel/facilities#EntranceEquipmentRevolvingDoor
+<https://w3id.org/transmodel/facilities#EntranceEquipmentRevolvingDoor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#EntranceEquipmentRevolvingDoor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#EntraceEquipment> .
+# 
+# https://w3id.org/transmodel/facilities#Entrances
+<https://w3id.org/transmodel/facilities#Entrances> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Entrances> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceAccessEquipment> .
+<https://w3id.org/transmodel/facilities#Entrances> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of PlaceAccessEquipment dedicated to PlaceAccessEntrance"@en .
+<https://w3id.org/transmodel/facilities#Entrances> <http://www.w3.org/2000/01/rdf-schema#label> "PlaceEntrance"@en .
+# 
+# https://w3id.org/transmodel/facilities#Equipment
+<https://w3id.org/transmodel/facilities#Equipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Equipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Facility> .
+<https://w3id.org/transmodel/facilities#Equipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Physical equipments installed either fixed (PlaceEquipment), on-board (VehicleEquipment) ot mixed (some equipments as rubish, sanitary or ticketing).\n\nA service (LocalService) is considered as immaterial Equipment as well."@en .
+<https://w3id.org/transmodel/facilities#Equipment> <http://www.w3.org/2000/01/rdf-schema#label> "Equipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#EquipmentPlace
+<https://w3id.org/transmodel/facilities#EquipmentPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#EquipmentPlace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#SiteComponent> .
+<https://w3id.org/transmodel/facilities#EquipmentPlace> <http://www.w3.org/2000/01/rdf-schema#comment> "An EquipmentPlace is a SiteComponent containing Equipment" .
+<https://w3id.org/transmodel/facilities#EquipmentPlace> <http://www.w3.org/2000/01/rdf-schema#label> "EquipmentPlace" .
+# 
+# https://w3id.org/transmodel/facilities#Facility
+<https://w3id.org/transmodel/facilities#Facility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Facility> <http://www.w3.org/2000/01/rdf-schema#comment> "A named amenity available to the public at a Site or on a Service.\n\nA Facility has no further properties than a name.\n\nAn Equipment or LocalService is used to describe the further properties provided as part of a particular Facility"@en .
+<https://w3id.org/transmodel/facilities#Facility> <http://www.w3.org/2000/01/rdf-schema#label> "Facility"@en .
+# 
+# https://w3id.org/transmodel/facilities#Garage
+<https://w3id.org/transmodel/facilities#Garage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Garage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceEquipment> .
+<https://w3id.org/transmodel/facilities#Garage> <http://www.w3.org/2000/01/rdf-schema#comment> "A Facility of PlaceEquipment used for parking and maintaining\n\tvehicles. Parking Point in a Garage are called GaragePoint."@en .
+<https://w3id.org/transmodel/facilities#Garage> <http://www.w3.org/2000/01/rdf-schema#label> "Garage"@en .
+# 
+# https://w3id.org/transmodel/facilities#HeadingSign
+<https://w3id.org/transmodel/facilities#HeadingSign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#HeadingSign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#SignEquipment> .
+# 
+# https://w3id.org/transmodel/facilities#InformationBooklet
+<https://w3id.org/transmodel/facilities#InformationBooklet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#InformationBooklet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PassengerInformationPrintedMaterial> .
+<https://w3id.org/transmodel/facilities#InformationBooklet> <http://www.w3.org/2000/01/rdf-schema#comment> "Information Booklet is public transport piece of Equipment dedicated to inform"@en .
+<https://w3id.org/transmodel/facilities#InformationBooklet> <http://www.w3.org/2000/01/rdf-schema#label> "InformationBooklet"@en .
+# 
+# https://w3id.org/transmodel/facilities#InformationDesk
+<https://w3id.org/transmodel/facilities#InformationDesk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#InformationDesk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PassengerInformationTerminal> .
+<https://w3id.org/transmodel/facilities#InformationDesk> <http://www.w3.org/2000/01/rdf-schema#comment> "A public transport information piece of Equipment"@en .
+<https://w3id.org/transmodel/facilities#InformationDesk> <http://www.w3.org/2000/01/rdf-schema#label> "InformationDesk"@en .
+# 
+# https://w3id.org/transmodel/facilities#InformationLeaflet
+<https://w3id.org/transmodel/facilities#InformationLeaflet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#InformationLeaflet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PassengerInformationPrintedMaterial> .
+<https://w3id.org/transmodel/facilities#InformationLeaflet> <http://www.w3.org/2000/01/rdf-schema#comment> "A public transport information piece of Equipment"@en .
+<https://w3id.org/transmodel/facilities#InformationLeaflet> <http://www.w3.org/2000/01/rdf-schema#label> "InformationLeaflet"@en .
+# 
+# https://w3id.org/transmodel/facilities#InformationTerminal
+<https://w3id.org/transmodel/facilities#InformationTerminal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#InformationTerminal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PassengerInformationTerminal> .
+<https://w3id.org/transmodel/facilities#InformationTerminal> <http://www.w3.org/2000/01/rdf-schema#comment> "A public transport information piece of Equipment in the street"@en .
+<https://w3id.org/transmodel/facilities#InformationTerminal> <http://www.w3.org/2000/01/rdf-schema#label> "InformationStand"@en .
+# 
+# https://w3id.org/transmodel/facilities#Lifts
+<https://w3id.org/transmodel/facilities#Lifts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Lifts> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceAccessEquipment> .
+<https://w3id.org/transmodel/facilities#Lifts> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of PlaceAccessEquipment dedicated to PlaceAccessLift"@en .
+<https://w3id.org/transmodel/facilities#Lifts> <http://www.w3.org/2000/01/rdf-schema#label> "PlaceAccessLift"@en .
+# 
+# https://w3id.org/transmodel/facilities#LostProperties
+<https://w3id.org/transmodel/facilities#LostProperties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#LostProperties> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#CustomerService> .
+<https://w3id.org/transmodel/facilities#LostProperties> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of CustomerService for LostProperties"@en .
+<https://w3id.org/transmodel/facilities#LostProperties> <http://www.w3.org/2000/01/rdf-schema#label> "LostProperties"@en .
+# 
+# https://w3id.org/transmodel/facilities#LowFloor
+<https://w3id.org/transmodel/facilities#LowFloor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#LowFloor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#VehicleAccessEquipment> .
+<https://w3id.org/transmodel/facilities#LowFloor> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of VehicleAccessEquipment dedicated to LowFloor"@en .
+<https://w3id.org/transmodel/facilities#LowFloor> <http://www.w3.org/2000/01/rdf-schema#label> "LowFloor"@en .
+# 
+# https://w3id.org/transmodel/facilities#LuggageLocker
+<https://w3id.org/transmodel/facilities#LuggageLocker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#LuggageLocker> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#SiteEquipment> .
+<https://w3id.org/transmodel/facilities#LuggageLocker> <http://www.w3.org/2000/01/rdf-schema#label> "LuggageLocker" .
+# 
+# https://w3id.org/transmodel/facilities#LuggageLockerEquipment
+<https://w3id.org/transmodel/facilities#LuggageLockerEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#LuggageLockerEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#StopPlaceEquipment> .
+<https://w3id.org/transmodel/facilities#LuggageLockerEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of LuggageLockerEquipment for StopPlaceEquipment"@en .
+<https://w3id.org/transmodel/facilities#LuggageLockerEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "LuggageLockerEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#LuggageService
+<https://w3id.org/transmodel/facilities#LuggageService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#LuggageService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#CustomerService> .
+<https://w3id.org/transmodel/facilities#LuggageService> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of CustomerServices for LuggageServices.\n\nProvides facilities as LuggageTrolley, FreeToUse, etc."@en .
+<https://w3id.org/transmodel/facilities#LuggageService> <http://www.w3.org/2000/01/rdf-schema#label> "LuggageService"@en .
+# 
+# https://w3id.org/transmodel/facilities#LuggageTrolley
+<https://w3id.org/transmodel/facilities#LuggageTrolley> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#LuggageTrolley> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#LuggageService> .
+<https://w3id.org/transmodel/facilities#LuggageTrolley> <http://www.w3.org/2000/01/rdf-schema#label> "LuggageTrolley"@en .
+<https://w3id.org/transmodel/facilities#LuggageTrolley> <http://www.w3.org/2000/01/rdf-schema#label> "Specialisation of LuggageTrolley for LuggageServices"@en .
+# 
+# https://w3id.org/transmodel/facilities#MeetingPointService
+<https://w3id.org/transmodel/facilities#MeetingPointService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#MeetingPointService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#CustomerService> .
+<https://w3id.org/transmodel/facilities#MeetingPointService> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of CustomerService for meeting points (provides characteristics like description, labels...)"@en .
+<https://w3id.org/transmodel/facilities#MeetingPointService> <http://www.w3.org/2000/01/rdf-schema#label> "MeetingPointService"@en .
+# 
+# https://w3id.org/transmodel/facilities#MoneyService
+<https://w3id.org/transmodel/facilities#MoneyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#MoneyService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Service> .
+<https://w3id.org/transmodel/facilities#MoneyService> <http://www.w3.org/2000/01/rdf-schema#label> "MoneyService"@en .
+# 
+# https://w3id.org/transmodel/facilities#Passenger
+<https://w3id.org/transmodel/facilities#Passenger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Passenger> <http://www.w3.org/2000/01/rdf-schema#comment> "The Person who uses Public Transport Services"@en .
+<https://w3id.org/transmodel/facilities#Passenger> <http://www.w3.org/2000/01/rdf-schema#label> "Passenger"@en .
+# 
+# https://w3id.org/transmodel/facilities#PassengerEquipment
+<https://w3id.org/transmodel/facilities#PassengerEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#PassengerEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Equipment> .
+<https://w3id.org/transmodel/facilities#PassengerEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "An item of Equipment of a particular type actually available at a location within a Place or a Vehicle"@en .
+<https://w3id.org/transmodel/facilities#PassengerEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "PassengerEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#PassengerInformationEquipment
+<https://w3id.org/transmodel/facilities#PassengerInformationEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#PassengerInformationEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PassengerEquipment> .
+<https://w3id.org/transmodel/facilities#PassengerInformationEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "A public transport information piece of Equipment, as for instance terminals (on street, at information desks, telematic,...) or printed material (leaflets displayed at Stops, booklets, ...)"@en .
+<https://w3id.org/transmodel/facilities#PassengerInformationEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "PassengerInformationEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#PassengerInformationPrintedMaterial
+<https://w3id.org/transmodel/facilities#PassengerInformationPrintedMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#PassengerInformationPrintedMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PassengerInformationEquipment> .
+<https://w3id.org/transmodel/facilities#PassengerInformationPrintedMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "A public transport information piece of Equipment which is printed material (leaflets displayed at Stops, booklets, ...)"@en .
+<https://w3id.org/transmodel/facilities#PassengerInformationPrintedMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "PassengerInformationPrintedMaterial"@en .
+# 
+# https://w3id.org/transmodel/facilities#PassengerInformationTerminal
+<https://w3id.org/transmodel/facilities#PassengerInformationTerminal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#PassengerInformationTerminal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PassengerInformationEquipment> .
+<https://w3id.org/transmodel/facilities#PassengerInformationTerminal> <http://www.w3.org/2000/01/rdf-schema#comment> "A public transport information piece of equipment such as street stands, information desks or telematic services"@en .
+<https://w3id.org/transmodel/facilities#PassengerInformationTerminal> <http://www.w3.org/2000/01/rdf-schema#label> "PassengerInformationDesk"@en .
+# 
+# https://w3id.org/transmodel/facilities#PassengerSafetyEquipment
+<https://w3id.org/transmodel/facilities#PassengerSafetyEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#PassengerSafetyEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PassengerEquipment> .
+# 
+# https://w3id.org/transmodel/facilities#PlaceAccessEquipment
+<https://w3id.org/transmodel/facilities#PlaceAccessEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#PlaceAccessEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceEquipment> .
+<https://w3id.org/transmodel/facilities#PlaceAccessEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of PlaceEquipment dedicated to access (e.g. lifts, entrances, stairs, ramps, etc.)"@en .
+<https://w3id.org/transmodel/facilities#PlaceAccessEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "PlaceAccessEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#PlaceAccessStairEscalator
+<https://w3id.org/transmodel/facilities#PlaceAccessStairEscalator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#PlaceAccessStairEscalator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Stairs> .
+<https://w3id.org/transmodel/facilities#PlaceAccessStairEscalator> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairEscalator" .
+<https://w3id.org/transmodel/facilities#PlaceAccessStairEscalator> <http://www.w3.org/2000/01/rdf-schema#label> "PlaceAccessStairEscalator" .
+# 
+# https://w3id.org/transmodel/facilities#PlaceAccessStairStair
+<https://w3id.org/transmodel/facilities#PlaceAccessStairStair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#PlaceAccessStairStair> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Stairs> .
+<https://w3id.org/transmodel/facilities#PlaceAccessStairStair> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStair" .
+<https://w3id.org/transmodel/facilities#PlaceAccessStairStair> <http://www.w3.org/2000/01/rdf-schema#label> "PlaceAccessStairStair" .
+# 
+# https://w3id.org/transmodel/facilities#PlaceAccessStairStaircase
+<https://w3id.org/transmodel/facilities#PlaceAccessStairStaircase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#PlaceAccessStairStaircase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Stairs> .
+<https://w3id.org/transmodel/facilities#PlaceAccessStairStaircase> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStaircase" .
+<https://w3id.org/transmodel/facilities#PlaceAccessStairStaircase> <http://www.w3.org/2000/01/rdf-schema#label> "PlaceAccessStairStaircase" .
+# 
+# https://w3id.org/transmodel/facilities#PlaceEquipment
+<https://w3id.org/transmodel/facilities#PlaceEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#PlaceEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Equipment> .
+<https://w3id.org/transmodel/facilities#PlaceEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "An item of Equipment of a particular type actually available at a location within a Place"@en .
+<https://w3id.org/transmodel/facilities#PlaceEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "PlaceEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#Porterage
+<https://w3id.org/transmodel/facilities#Porterage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Porterage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Service> .
+<https://w3id.org/transmodel/facilities#Porterage> <http://www.w3.org/2000/01/rdf-schema#comment> "Porterage"@en .
+<https://w3id.org/transmodel/facilities#Porterage> <http://www.w3.org/2000/01/rdf-schema#comment> "PorterageService"@en .
+# 
+# https://w3id.org/transmodel/facilities#QueuingEquipment
+<https://w3id.org/transmodel/facilities#QueuingEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#QueuingEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceAccessEquipment> .
+<https://w3id.org/transmodel/facilities#QueuingEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "QueingEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#Ramp
+<https://w3id.org/transmodel/facilities#Ramp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Ramp> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#VehicleAccessEquipment> .
+<https://w3id.org/transmodel/facilities#Ramp> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of VehicleAccessEquipment dedicated to VehicleRamp"@en .
+<https://w3id.org/transmodel/facilities#Ramp> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleRamp"@en .
+# 
+# https://w3id.org/transmodel/facilities#Ramps
+<https://w3id.org/transmodel/facilities#Ramps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Ramps> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceAccessEquipment> .
+<https://w3id.org/transmodel/facilities#Ramps> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of PlaceEquipment dedicated to access"@en .
+<https://w3id.org/transmodel/facilities#Ramps> <http://www.w3.org/2000/01/rdf-schema#label> "PlaceAccessRamp"@en .
+# 
+# https://w3id.org/transmodel/facilities#RetailService
+<https://w3id.org/transmodel/facilities#RetailService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#RetailService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Service> .
+<https://w3id.org/transmodel/facilities#RetailService> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of LocalService dedicated to retail services"@en .
+<https://w3id.org/transmodel/facilities#RetailService> <http://www.w3.org/2000/01/rdf-schema#label> "RetailService"@en .
+# 
+# https://w3id.org/transmodel/facilities#RoughSurface
+<https://w3id.org/transmodel/facilities#RoughSurface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#RoughSurface> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceEquipment> .
+<https://w3id.org/transmodel/facilities#RoughSurface> <http://www.w3.org/2000/01/rdf-schema#label> "RoughSurface"@en .
+# 
+# https://w3id.org/transmodel/facilities#RubishDisposal
+<https://w3id.org/transmodel/facilities#RubishDisposal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#RubishDisposal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Equipment> .
+<https://w3id.org/transmodel/facilities#RubishDisposal> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of Passenger Equipment for Rubish Disposal"@en .
+<https://w3id.org/transmodel/facilities#RubishDisposal> <http://www.w3.org/2000/01/rdf-schema#label> "RubishDisposal"@en .
+# 
+# https://w3id.org/transmodel/facilities#SanitaryEquipment
+<https://w3id.org/transmodel/facilities#SanitaryEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#SanitaryEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PassengerEquipment> .
+<https://w3id.org/transmodel/facilities#SanitaryEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of Passenger Equipment for Sanitary Equipment"@en .
+<https://w3id.org/transmodel/facilities#SanitaryEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "SanitaryEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#SeatingEquipment
+<https://w3id.org/transmodel/facilities#SeatingEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#SeatingEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceEquipment> .
+<https://w3id.org/transmodel/facilities#SeatingEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "SeatingEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#Service
+<https://w3id.org/transmodel/facilities#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Facility> .
+<https://w3id.org/transmodel/facilities#Service> <http://www.w3.org/2000/01/rdf-schema#comment> "A Service (LocalService such as LeftLuggage, TicketingService) is considered as immaterial Equipment as well.\n\nA named Service relating to the use of the Site or transport Services at a particular location, for example Porterage, AssistanceForDissabledUsers, BookingOffices, etc. The Service may have a validityCondition associated with it."@en .
+<https://w3id.org/transmodel/facilities#Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en .
+# 
+# https://w3id.org/transmodel/facilities#Shelter
+<https://w3id.org/transmodel/facilities#Shelter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Shelter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#WaitingEquipment> .
+<https://w3id.org/transmodel/facilities#Shelter> <http://www.w3.org/2000/01/rdf-schema#comment> "A building or other structure constructed at a Bus Stop"@en .
+<https://w3id.org/transmodel/facilities#Shelter> <http://www.w3.org/2000/01/rdf-schema#label> "Shelter"@en .
+# 
+# https://w3id.org/transmodel/facilities#Shower
+<https://w3id.org/transmodel/facilities#Shower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Shower> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#SanitaryEquipment> .
+<https://w3id.org/transmodel/facilities#Shower> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of SanitaryEquipment for showers"@en .
+<https://w3id.org/transmodel/facilities#Shower> <http://www.w3.org/2000/01/rdf-schema#label> "Shower"@en .
+# 
+# https://w3id.org/transmodel/facilities#SignEquipment
+<https://w3id.org/transmodel/facilities#SignEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#SignEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceEquipment> .
+<https://w3id.org/transmodel/facilities#SignEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of PlaceEquipment for Signs"@en .
+<https://w3id.org/transmodel/facilities#SignEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "SignEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#Site
+<https://w3id.org/transmodel/facilities#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Site> <http://www.w3.org/2000/01/rdf-schema#comment> "A well known Place to which Passengers may refer to indicate the origin or a destination of a Trip"@en .
+<https://w3id.org/transmodel/facilities#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site"@en .
+# 
+# https://w3id.org/transmodel/facilities#SiteComponent
+<https://w3id.org/transmodel/facilities#SiteComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#SiteComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Component> .
+<https://w3id.org/transmodel/facilities#SiteComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "An element of a Site descibing a part of its structure. SiteComponent share common properties for data management, accessibility and other features"@en .
+<https://w3id.org/transmodel/facilities#SiteComponent> <http://www.w3.org/2000/01/rdf-schema#label> "SiteComponent"@en .
+# 
+# https://w3id.org/transmodel/facilities#SiteEquipment
+<https://w3id.org/transmodel/facilities#SiteEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#SiteEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceEquipment> .
+<https://w3id.org/transmodel/facilities#SiteEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of PlaceEquipment for Site" .
+<https://w3id.org/transmodel/facilities#SiteEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "SiteEquipment" .
+# 
+# https://w3id.org/transmodel/facilities#Stairs
+<https://w3id.org/transmodel/facilities#Stairs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Stairs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceAccessEquipment> .
+<https://w3id.org/transmodel/facilities#Stairs> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of PlaceAccessEquipment dedicated to PlaceAccessStair"@en .
+<https://w3id.org/transmodel/facilities#Stairs> <http://www.w3.org/2000/01/rdf-schema#label> "PlaceAccessStair"@en .
+# 
+# https://w3id.org/transmodel/facilities#StopPlaceEquipment
+<https://w3id.org/transmodel/facilities#StopPlaceEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#StopPlaceEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceEquipment> .
+<https://w3id.org/transmodel/facilities#StopPlaceEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of Equipment for StopPlaceEquipment"@en .
+<https://w3id.org/transmodel/facilities#StopPlaceEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "StopPlaceEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#TelematicInformationService
+<https://w3id.org/transmodel/facilities#TelematicInformationService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#TelematicInformationService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PassengerInformationTerminal> .
+<https://w3id.org/transmodel/facilities#TelematicInformationService> <http://www.w3.org/2000/01/rdf-schema#comment> "A public transport information piece of Equipment by telematic means"@en .
+<https://w3id.org/transmodel/facilities#TelematicInformationService> <http://www.w3.org/2000/01/rdf-schema#label> "TelematicInformationService"@en .
+# 
+# https://w3id.org/transmodel/facilities#TicketingEquipment
+<https://w3id.org/transmodel/facilities#TicketingEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#TicketingEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PassengerEquipment> .
+<https://w3id.org/transmodel/facilities#TicketingEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of Passenter Equipment for Ticketing Equipment"@en .
+<https://w3id.org/transmodel/facilities#TicketingEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "TicketingEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#TicketingService
+<https://w3id.org/transmodel/facilities#TicketingService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#TicketingService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Service> .
+<https://w3id.org/transmodel/facilities#TicketingService> <http://www.w3.org/2000/01/rdf-schema#label> "TicketingService"@en .
+# 
+# https://w3id.org/transmodel/facilities#TicketingValidatorEquipment
+<https://w3id.org/transmodel/facilities#TicketingValidatorEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#TicketingValidatorEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PassengerEquipment> .
+<https://w3id.org/transmodel/facilities#TicketingValidatorEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of Passenger Equipment for Ticket Validator Equipment"@en .
+<https://w3id.org/transmodel/facilities#TicketingValidatorEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "TicketValidatorEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#Toilet
+<https://w3id.org/transmodel/facilities#Toilet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Toilet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#SanitaryEquipment> .
+<https://w3id.org/transmodel/facilities#Toilet> <http://www.w3.org/2000/01/rdf-schema#label> "Toilet"@en .
+# 
+# https://w3id.org/transmodel/facilities#TrolleyStand
+<https://w3id.org/transmodel/facilities#TrolleyStand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#TrolleyStand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#SiteEquipment> .
+<https://w3id.org/transmodel/facilities#TrolleyStand> <http://www.w3.org/2000/01/rdf-schema#comment> "Is the specialisation of SiteEquipment for TrolleyStand"@en .
+<https://w3id.org/transmodel/facilities#TrolleyStand> <http://www.w3.org/2000/01/rdf-schema#label> "TrolleyStand"@en .
+# 
+# https://w3id.org/transmodel/facilities#TrolleyStandEquipment
+<https://w3id.org/transmodel/facilities#TrolleyStandEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#TrolleyStandEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#StopPlaceEquipment> .
+<https://w3id.org/transmodel/facilities#TrolleyStandEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of StopPlaceEquipment for trolley stands"@en .
+<https://w3id.org/transmodel/facilities#TrolleyStandEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "TrolleyStandEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#TypeOfCateringService
+<https://w3id.org/transmodel/facilities#TypeOfCateringService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#TypeOfCateringService> <http://www.w3.org/2000/01/rdf-schema#comment> "A classification of CateringService"@en .
+<https://w3id.org/transmodel/facilities#TypeOfCateringService> <http://www.w3.org/2000/01/rdf-schema#label> "TypeOfCateringService"@en .
+# 
+# https://w3id.org/transmodel/facilities#TypeOfCycleEquipment
+# 
+# https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment
+<https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "A classification of Cycle Storage Equipment: racks, bars, railings, etc."@en .
+<https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "TypeOfCycleStorageEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#TypeOfEmergencyService
+<https://w3id.org/transmodel/facilities#TypeOfEmergencyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#TypeOfEmergencyService> <http://www.w3.org/2000/01/rdf-schema#comment> "A typology of emergency services: police, first aid, sos point..."@en .
+<https://w3id.org/transmodel/facilities#TypeOfEmergencyService> <http://www.w3.org/2000/01/rdf-schema#label> "TypeOfEmergencyService"@en .
+# 
+# https://w3id.org/transmodel/facilities#Vehicle
+<https://w3id.org/transmodel/facilities#Vehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Vehicle> <http://www.w3.org/2000/01/rdf-schema#comment> "A PublicTransportVehicle used for carrying Passenger"@en .
+<https://w3id.org/transmodel/facilities#Vehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle"@en .
+# 
+# https://w3id.org/transmodel/facilities#VehicleAccessEquipment
+<https://w3id.org/transmodel/facilities#VehicleAccessEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#VehicleAccessEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#VehicleEquipment> .
+<https://w3id.org/transmodel/facilities#VehicleAccessEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of VehicleEquipment dedicated to access Vehicles providing information such as low floor, ramp, access area dimensions, etc."@en .
+<https://w3id.org/transmodel/facilities#VehicleAccessEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleAccessEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#VehicleChargingEquipment
+<https://w3id.org/transmodel/facilities#VehicleChargingEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#VehicleChargingEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceEquipment> .
+<https://w3id.org/transmodel/facilities#VehicleChargingEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of PlaceEquipment for Vehicle charging"@en .
+<https://w3id.org/transmodel/facilities#VehicleChargingEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleChargingEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#VehicleEquipment
+<https://w3id.org/transmodel/facilities#VehicleEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#VehicleEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Equipment> .
+<https://w3id.org/transmodel/facilities#VehicleEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipment for Vehicles"@en .
+<https://w3id.org/transmodel/facilities#VehicleEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#VehicleMode
+<https://w3id.org/transmodel/facilities#VehicleMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#VehicleMode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Vehicle> .
+<https://w3id.org/transmodel/facilities#VehicleMode> <http://www.w3.org/2000/01/rdf-schema#comment> "A classification of Public Transport Vehicles of the same Vehicle Type, e.g. according to Equipment specifications or model generation."@en .
+<https://w3id.org/transmodel/facilities#VehicleMode> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleModel"@en .
+# 
+# https://w3id.org/transmodel/facilities#WaitingEquipment
+<https://w3id.org/transmodel/facilities#WaitingEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#WaitingEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#StopPlaceEquipment> .
+<https://w3id.org/transmodel/facilities#WaitingEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of StopPlaceEquipment for WaitingEquipment (shelter, waiting room, etc.)"@en .
+<https://w3id.org/transmodel/facilities#WaitingEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "WaitingEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#WaitingRoom
+<https://w3id.org/transmodel/facilities#WaitingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#WaitingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#WaitingEquipment> .
+<https://w3id.org/transmodel/facilities#WaitingRoom> <http://www.w3.org/2000/01/rdf-schema#comment> "A Waiting Room"@en .
+<https://w3id.org/transmodel/facilities#WaitingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "WaitingRoom"@en .
+# 
+# https://w3id.org/transmodel/facilities#WaitingRoomEquipment
+<https://w3id.org/transmodel/facilities#WaitingRoomEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#WaitingRoomEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#WaitingRoom> .
+<https://w3id.org/transmodel/facilities#WaitingRoomEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of WaitingEquipment for WaitingRoom, classified by TypeOfWaitingRoom"@en .
+<https://w3id.org/transmodel/facilities#WaitingRoomEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "WaitingRoomEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#WheelchairAccessToilet
+<https://w3id.org/transmodel/facilities#WheelchairAccessToilet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#WheelchairAccessToilet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#SanitaryEquipment> .
+# 
+# https://w3id.org/transmodel/facilities#WheelchairBabyChange
+<https://w3id.org/transmodel/facilities#WheelchairBabyChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#WheelchairBabyChange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#SanitaryEquipment> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/transmodel/authorities#beverageVendingMachine
+<https://w3id.org/transmodel/authorities#beverageVendingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/authorities#beverageVendingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+# 
+# https://w3id.org/transmodel/authorities#buffet
+<https://w3id.org/transmodel/authorities#buffet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/authorities#buffet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+# 
+# https://w3id.org/transmodel/authorities#cateringTrolleyService
+<https://w3id.org/transmodel/authorities#cateringTrolleyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/authorities#cateringTrolleyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+# 
+# https://w3id.org/transmodel/authorities#cycleStorageEquipmentBars
+<https://w3id.org/transmodel/authorities#cycleStorageEquipmentBars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/authorities#cycleStorageEquipmentBars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment> .
+# 
+# https://w3id.org/transmodel/authorities#cycleStorageEquipmentRacks
+<https://w3id.org/transmodel/authorities#cycleStorageEquipmentRacks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/authorities#cycleStorageEquipmentRacks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment> .
+# 
+# https://w3id.org/transmodel/authorities#cycleStorageEquipmentRailings
+<https://w3id.org/transmodel/authorities#cycleStorageEquipmentRailings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/authorities#cycleStorageEquipmentRailings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment> .
+# 
+# https://w3id.org/transmodel/authorities#emergencyServiceFirstAid
+<https://w3id.org/transmodel/authorities#emergencyServiceFirstAid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/authorities#emergencyServiceFirstAid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfEmergencyService> .
+# 
+# https://w3id.org/transmodel/authorities#emergencyServicePolice
+<https://w3id.org/transmodel/authorities#emergencyServicePolice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/authorities#emergencyServicePolice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfEmergencyService> .
+# 
+# https://w3id.org/transmodel/authorities#emergencyServiceSOSPoint
+<https://w3id.org/transmodel/authorities#emergencyServiceSOSPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/authorities#emergencyServiceSOSPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfEmergencyService> .
+# 
+# https://w3id.org/transmodel/authorities#emergencyServiceServiceCCTV
+<https://w3id.org/transmodel/authorities#emergencyServiceServiceCCTV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/authorities#emergencyServiceServiceCCTV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfEmergencyService> .
+# 
+# https://w3id.org/transmodel/authorities#foodVendingMachine
+<https://w3id.org/transmodel/authorities#foodVendingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/authorities#foodVendingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+# 
+# https://w3id.org/transmodel/authorities#noBeveragesAvailable
+<https://w3id.org/transmodel/authorities#noBeveragesAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/authorities#noBeveragesAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+# 
+# https://w3id.org/transmodel/authorities#noFoodAvailable
+<https://w3id.org/transmodel/authorities#noFoodAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/authorities#noFoodAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+# 
+# https://w3id.org/transmodel/authorities#snacks
+<https://w3id.org/transmodel/authorities#snacks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/authorities#snacks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+# 
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
