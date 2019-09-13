@@ -1,0 +1,1229 @@
+<html><h2 id="crossreference" class="list">Cross reference for TransmodelOntologyJourneys classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by TransmodelOntologyJourneys.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#TimingLink" title="https://w3id.org/transmodel/journeys#TimingLink">A TimingLink is an ordered pair of TimingPoint for which run times
+may be recorded.</a>
+      </li>
+      <li>
+         <a href="#DayType" title="https://w3id.org/transmodel/journeys#DayType">DayType</a>
+      </li>
+      <li>
+         <a href="#HeadingInterval"
+            title="https://w3id.org/transmodel/journeys#HeadingInterval">HeadwayInterval</a>
+      </li>
+      <li>
+         <a href="#JourneyPattern"
+            title="https://w3id.org/transmodel/journeys#JourneyPattern">JourneyPattern</a>
+      </li>
+      <li>
+         <a href="#JourneyPatternLayover"
+            title="https://w3id.org/transmodel/journeys#JourneyPatternLayover">JourneyPatternLayover</a>
+      </li>
+      <li>
+         <a href="#Line" title="https://w3id.org/transmodel/journeys#Line">Line</a>
+      </li>
+      <li>
+         <a href="#Passenger" title="https://w3id.org/transmodel/journeys#Passenger">Passenger</a>
+      </li>
+      <li>
+         <a href="#Point" title="https://w3id.org/transmodel/journeys#Point">Point</a>
+      </li>
+      <li>
+         <a href="#Route" title="https://w3id.org/transmodel/journeys#Route">Route</a>
+      </li>
+      <li>
+         <a href="#ScheduledStopPoint"
+            title="https://w3id.org/transmodel/journeys#ScheduledStopPoint">ScheduledStopPoint</a>
+      </li>
+      <li>
+         <a href="#Service" title="https://w3id.org/transmodel/journeys#Service">ServiceJourney</a>
+      </li>
+      <li>
+         <a href="#ServiceJourneyPattern"
+            title="https://w3id.org/transmodel/journeys#ServiceJourneyPattern">ServiceJourneyPattern</a>
+      </li>
+      <li>
+         <a href="#VehicleJourney"
+            title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+      </li>
+      <li>
+         <a href="#TimingLinkInJourneyPattern"
+            title="https://w3id.org/transmodel/journeys#TimingLinkInJourneyPattern">TimingLinkInJourneyPattern</a>
+      </li>
+      <li>
+         <a href="#TimingPoint" title="https://w3id.org/transmodel/journeys#TimingPoint">TimingPoint</a>
+      </li>
+      <li>
+         <a href="#Vehicle" title="https://w3id.org/transmodel/journeys#Vehicle">Vehicle</a>
+      </li>
+      <li>
+         <a href="#VehicleJourneyLayover"
+            title="https://w3id.org/transmodel/journeys#VehicleJourneyLayover">VehicleJourneyLayover</a>
+      </li>
+   </ul>
+   <div class="entity" id="TimingLink">
+      <h3>A TimingLink is an ordered pair of TimingPoint for which run times
+may be recorded.<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#TimingLink</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#timingLink" title="https://w3id.org/transmodel/journeys#timingLink">timingLinkPoint</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DayType">
+      <h3>DayType<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#DayType</p>
+      <div class="comment">
+         <span class="markdown">A DayType is a type of day characterised by one or more properties which affect public transport operation</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#vehicleJourneyDayType"
+               title="https://w3id.org/transmodel/journeys#vehicleJourneyDayType">vehicleJourneyDayType</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HeadingInterval">
+      <h3>HeadwayInterval<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#HeadingInterval</p>
+      <div class="comment">
+         <span class="markdown">A time interval or a duration defining a headway period and characterizing HeadwayJourneyGroup</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#startTime" title="https://w3id.org/transmodel/journeys#startTime">startTime</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="JourneyPattern">
+      <h3>JourneyPattern<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#JourneyPattern</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ServiceJourneyPattern"
+               title="https://w3id.org/transmodel/journeys#ServiceJourneyPattern">ServiceJourneyPattern</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#headway" title="https://w3id.org/transmodel/journeys#headway">headway</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#journeyPatternPoint"
+               title="https://w3id.org/transmodel/journeys#journeyPatternPoint">journeyPatternPoint</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#layover" title="https://w3id.org/transmodel/journeys#layover">layover</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#runtime" title="https://w3id.org/transmodel/journeys#runtime">runtime</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#timingLinkInJourneyPattern"
+               title="https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern">timingLinkInJourneyPattern</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#waitTime" title="https://w3id.org/transmodel/journeys#waitTime">waitTime</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#followsJourneyPattern"
+               title="https://w3id.org/transmodel/journeys#followsJourneyPattern">followsJourneyPattern</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="JourneyPatternLayover">
+      <h3>JourneyPatternLayover<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#JourneyPatternLayover</p>
+      <div class="comment">
+         <span class="markdown">A JourneyPatternLayover is the time allowance at the end of each journey on a specified JourneyPattern to allow for delays and for other purposes. This layover supersedes any global layover and may be superseded by a specific VehicleJourneyLayover</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#time" title="https://w3id.org/transmodel/journeys#time">time</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Line">
+      <h3>Line<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Line</p>
+      <div class="comment">
+         <span class="markdown">A Line is a group of Route which is generally known to the public by a similar name or number.</span>
+      </div>
+   </div>
+   <div class="entity" id="Passenger">
+      <h3>Passenger<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Passenger</p>
+      <div class="comment">
+         <span class="markdown">A Passenger is someone who makes a Trip</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#canAlight" title="https://w3id.org/transmodel/journeys#canAlight">canAlight</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#canBoard" title="https://w3id.org/transmodel/journeys#canBoard">canBoard</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#makesAServiceJourney"
+               title="https://w3id.org/transmodel/journeys#makesAServiceJourney">serviceJourney</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Point">
+      <h3>Point<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Point</p>
+      <div class="comment">
+         <span class="markdown">A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ScheduledStopPoint"
+               title="https://w3id.org/transmodel/journeys#ScheduledStopPoint">ScheduledStopPoint</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimingPoint" title="https://w3id.org/transmodel/journeys#TimingPoint">TimingPoint</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#latitude" title="https://w3id.org/transmodel/journeys#latitude">latitude</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#longitude" title="https://w3id.org/transmodel/journeys#longitude">longitude</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#journeyPatternPoint"
+               title="https://w3id.org/transmodel/journeys#journeyPatternPoint">journeyPatternPoint</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Route">
+      <h3>Route<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Route</p>
+      <div class="comment">
+         <span class="markdown">A Route is and ordered list of located Point defining one single path through the road (or rail) network.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#scheduledStopPoint"
+               title="https://w3id.org/transmodel/journeys#scheduledStopPoint">scheduledStopPoint</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#route" title="https://w3id.org/transmodel/journeys#route">route</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#vehicleJourneyRoute"
+               title="https://w3id.org/transmodel/journeys#vehicleJourneyRoute">vehicleJourneyRoute</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ScheduledStopPoint">
+      <h3>ScheduledStopPoint<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#ScheduledStopPoint</p>
+      <div class="comment">
+         <span class="markdown">A ScheduledStopPoint is a Point where a Passenger can board or alight from a Vehicle.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Point" title="https://w3id.org/transmodel/journeys#Point">Point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#pointSequence"
+               title="https://w3id.org/transmodel/journeys#pointSequence">stopSequence</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#canAlight" title="https://w3id.org/transmodel/journeys#canAlight">canAlight</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#canBoard" title="https://w3id.org/transmodel/journeys#canBoard">canBoard</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#destinationStop"
+               title="https://w3id.org/transmodel/journeys#destinationStop">destinationStop</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#originStop" title="https://w3id.org/transmodel/journeys#originStop">originStop</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#scheduledStopPoint"
+               title="https://w3id.org/transmodel/journeys#scheduledStopPoint">scheduledStopPoint</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#stopsAt" title="https://w3id.org/transmodel/journeys#stopsAt">stopsAt</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Service">
+      <h3>ServiceJourney<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Service</p>
+      <div class="comment">
+         <span class="markdown">A ServiceJourney is a Passenger carrying VehicleJourney for one
+specified DayType. The pattern of working is in principle defined
+by a ServiceJourneyPattern.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasAServiceJourneyPattern"
+               title="https://w3id.org/transmodel/journeys#hasAServiceJourneyPattern">serviceJourneyPattern</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#makesAServiceJourney"
+               title="https://w3id.org/transmodel/journeys#makesAServiceJourney">serviceJourney</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ServiceJourneyPattern">
+      <h3>ServiceJourneyPattern<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#ServiceJourneyPattern</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#JourneyPattern"
+               title="https://w3id.org/transmodel/journeys#JourneyPattern">JourneyPattern</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasAServiceJourneyPattern"
+               title="https://w3id.org/transmodel/journeys#hasAServiceJourneyPattern">serviceJourneyPattern</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VehicleJourney">
+      <h3>The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#VehicleJourney</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#followsJourneyPattern"
+               title="https://w3id.org/transmodel/journeys#followsJourneyPattern">followsJourneyPattern</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#headway" title="https://w3id.org/transmodel/journeys#headway">headway</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#layover" title="https://w3id.org/transmodel/journeys#layover">layover</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#runtime" title="https://w3id.org/transmodel/journeys#runtime">runtime</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#vehicleJourneyDayType"
+               title="https://w3id.org/transmodel/journeys#vehicleJourneyDayType">vehicleJourneyDayType</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#vehicleJourneyRoute"
+               title="https://w3id.org/transmodel/journeys#vehicleJourneyRoute">vehicleJourneyRoute</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#waitTime" title="https://w3id.org/transmodel/journeys#waitTime">waitTime</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#vehicleJourney"
+               title="https://w3id.org/transmodel/journeys#vehicleJourney">vehicleJourney</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TimingLinkInJourneyPattern">
+      <h3>TimingLinkInJourneyPattern<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#TimingLinkInJourneyPattern</p>
+      <div class="comment">
+         <span class="markdown">A TimingLinkInJourneyPattern is the position of a TimingLink in a
+JourneyPattern. This entity is needed if a TimingLink is repeated
+in the same JourneyPattern, and separate information is to be stored
+about each iteration of the TimingLink</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#timingLinkInJourneyPattern"
+               title="https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern">timingLinkInJourneyPattern</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TimingPoint">
+      <h3>TimingPoint<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#TimingPoint</p>
+      <div class="comment">
+         <span class="markdown">A TimingPoint is a Point against which the timing information necessary to build schedules may be
+recorded. It's the same as TimingPointInJourneyPattern</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Point" title="https://w3id.org/transmodel/journeys#Point">Point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#arrivalTime" title="https://w3id.org/transmodel/journeys#arrivalTime">arrivalTime</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#time" title="https://w3id.org/transmodel/journeys#time">time</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#timeLink" title="https://w3id.org/transmodel/journeys#timeLink">timeLink</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#timingLinkPointSequence"
+               title="https://w3id.org/transmodel/journeys#timingLinkPointSequence">timing link point sequence</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#timingLink" title="https://w3id.org/transmodel/journeys#timingLink">timingLinkPoint</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Vehicle">
+      <h3>Vehicle<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Vehicle</p>
+      <div class="comment">
+         <span class="markdown">A PublicTransportVehicle used for carrying Passengers</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#stopsAt" title="https://w3id.org/transmodel/journeys#stopsAt">stopsAt</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#vehicleJourney"
+               title="https://w3id.org/transmodel/journeys#vehicleJourney">vehicleJourney</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VehicleJourneyLayover">
+      <h3>VehicleJourneyLayover<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#VehicleJourneyLayover</p>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#time" title="https://w3id.org/transmodel/journeys#time">time</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#canAlight" title="https://w3id.org/transmodel/journeys#canAlight">canAlight</a>
+      </li>
+      <li>
+         <a href="#canBoard" title="https://w3id.org/transmodel/journeys#canBoard">canBoard</a>
+      </li>
+      <li>
+         <a href="#destinationStop"
+            title="https://w3id.org/transmodel/journeys#destinationStop">destinationStop</a>
+      </li>
+      <li>
+         <a href="#followsJourneyPattern"
+            title="https://w3id.org/transmodel/journeys#followsJourneyPattern">followsJourneyPattern</a>
+      </li>
+      <li>
+         <a href="#journeyPatternPoint"
+            title="https://w3id.org/transmodel/journeys#journeyPatternPoint">journeyPatternPoint</a>
+      </li>
+      <li>
+         <a href="#originStop" title="https://w3id.org/transmodel/journeys#originStop">originStop</a>
+      </li>
+      <li>
+         <a href="#route" title="https://w3id.org/transmodel/journeys#route">route</a>
+      </li>
+      <li>
+         <a href="#scheduledStopPoint"
+            title="https://w3id.org/transmodel/journeys#scheduledStopPoint">scheduledStopPoint</a>
+      </li>
+      <li>
+         <a href="#makesAServiceJourney"
+            title="https://w3id.org/transmodel/journeys#makesAServiceJourney">serviceJourney</a>
+      </li>
+      <li>
+         <a href="#hasAServiceJourneyPattern"
+            title="https://w3id.org/transmodel/journeys#hasAServiceJourneyPattern">serviceJourneyPattern</a>
+      </li>
+      <li>
+         <a href="#stopsAt" title="https://w3id.org/transmodel/journeys#stopsAt">stopsAt</a>
+      </li>
+      <li>
+         <a href="#timingLinkInJourneyPattern"
+            title="https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern">
+            <span>timingLinkInJourneyPattern</span>
+         </a>
+      </li>
+      <li>
+         <a href="#timingLink" title="https://w3id.org/transmodel/journeys#timingLink">timingLinkPoint</a>
+      </li>
+      <li>
+         <a href="#vehicleJourney"
+            title="https://w3id.org/transmodel/journeys#vehicleJourney">vehicleJourney</a>
+      </li>
+      <li>
+         <a href="#vehicleJourneyDayType"
+            title="https://w3id.org/transmodel/journeys#vehicleJourneyDayType">vehicleJourneyDayType</a>
+      </li>
+      <li>
+         <a href="#vehicleJourneyRoute"
+            title="https://w3id.org/transmodel/journeys#vehicleJourneyRoute">vehicleJourneyRoute</a>
+      </li>
+   </ul>
+   <div class="entity" id="canAlight">
+      <h3>canAlight<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#canAlight</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Passenger" title="https://w3id.org/transmodel/journeys#Passenger">Passenger</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ScheduledStopPoint"
+                  title="https://w3id.org/transmodel/journeys#ScheduledStopPoint">ScheduledStopPoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="canBoard">
+      <h3>canBoard<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#canBoard</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Passenger" title="https://w3id.org/transmodel/journeys#Passenger">Passenger</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ScheduledStopPoint"
+                  title="https://w3id.org/transmodel/journeys#ScheduledStopPoint">ScheduledStopPoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="destinationStop">
+      <h3>destinationStop<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#destinationStop</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ScheduledStopPoint"
+                  title="https://w3id.org/transmodel/journeys#ScheduledStopPoint">ScheduledStopPoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="followsJourneyPattern">
+      <h3>followsJourneyPattern<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#followsJourneyPattern</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#VehicleJourney"
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#JourneyPattern"
+                  title="https://w3id.org/transmodel/journeys#JourneyPattern">JourneyPattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="journeyPatternPoint">
+      <h3>journeyPatternPoint<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#journeyPatternPoint</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#JourneyPattern"
+                  title="https://w3id.org/transmodel/journeys#JourneyPattern">JourneyPattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Point" title="https://w3id.org/transmodel/journeys#Point">Point</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="originStop">
+      <h3>originStop<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#originStop</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ScheduledStopPoint"
+                  title="https://w3id.org/transmodel/journeys#ScheduledStopPoint">ScheduledStopPoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="route">
+      <h3>route<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#route</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Route" title="https://w3id.org/transmodel/journeys#Route">Route</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="scheduledStopPoint">
+      <h3>scheduledStopPoint<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#scheduledStopPoint</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Route" title="https://w3id.org/transmodel/journeys#Route">Route</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ScheduledStopPoint"
+                  title="https://w3id.org/transmodel/journeys#ScheduledStopPoint">ScheduledStopPoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="makesAServiceJourney">
+      <h3>serviceJourney<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#makesAServiceJourney</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Passenger" title="https://w3id.org/transmodel/journeys#Passenger">Passenger</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Service" title="https://w3id.org/transmodel/journeys#Service">ServiceJourney</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasAServiceJourneyPattern">
+      <h3>serviceJourneyPattern<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#hasAServiceJourneyPattern</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Service" title="https://w3id.org/transmodel/journeys#Service">ServiceJourney</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ServiceJourneyPattern"
+                  title="https://w3id.org/transmodel/journeys#ServiceJourneyPattern">ServiceJourneyPattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="stopsAt">
+      <h3>stopsAt<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#stopsAt</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Vehicle" title="https://w3id.org/transmodel/journeys#Vehicle">Vehicle</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ScheduledStopPoint"
+                  title="https://w3id.org/transmodel/journeys#ScheduledStopPoint">ScheduledStopPoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="timingLinkInJourneyPattern">
+      <h3>timingLinkInJourneyPattern<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#JourneyPattern"
+                  title="https://w3id.org/transmodel/journeys#JourneyPattern">JourneyPattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#TimingLinkInJourneyPattern"
+                  title="https://w3id.org/transmodel/journeys#TimingLinkInJourneyPattern">TimingLinkInJourneyPattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>data property</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="timingLink">
+      <h3>timingLinkPoint<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#timingLink</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#TimingLink" title="https://w3id.org/transmodel/journeys#TimingLink">A TimingLink is an ordered pair of TimingPoint for which run times
+may be recorded.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#TimingPoint" title="https://w3id.org/transmodel/journeys#TimingPoint">TimingPoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="vehicleJourney">
+      <h3>vehicleJourney<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#vehicleJourney</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Vehicle" title="https://w3id.org/transmodel/journeys#Vehicle">Vehicle</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#VehicleJourney"
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="vehicleJourneyDayType">
+      <h3>vehicleJourneyDayType<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#vehicleJourneyDayType</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#VehicleJourney"
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#DayType" title="https://w3id.org/transmodel/journeys#DayType">DayType</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="vehicleJourneyRoute">
+      <h3>vehicleJourneyRoute<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#vehicleJourneyRoute</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#VehicleJourney"
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Route" title="https://w3id.org/transmodel/journeys#Route">Route</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#arrivalTime" title="https://w3id.org/transmodel/journeys#arrivalTime">arrivalTime</a>
+      </li>
+      <li>
+         <a href="#headway" title="https://w3id.org/transmodel/journeys#headway">headway</a>
+      </li>
+      <li>
+         <a href="#latitude" title="https://w3id.org/transmodel/journeys#latitude">latitude</a>
+      </li>
+      <li>
+         <a href="#layover" title="https://w3id.org/transmodel/journeys#layover">layover</a>
+      </li>
+      <li>
+         <a href="#longitude" title="https://w3id.org/transmodel/journeys#longitude">longitude</a>
+      </li>
+      <li>
+         <a href="#runtime" title="https://w3id.org/transmodel/journeys#runtime">runtime</a>
+      </li>
+      <li>
+         <a href="#startTime" title="https://w3id.org/transmodel/journeys#startTime">startTime</a>
+      </li>
+      <li>
+         <a href="#pointSequence"
+            title="https://w3id.org/transmodel/journeys#pointSequence">stopSequence</a>
+      </li>
+      <li>
+         <a href="#time" title="https://w3id.org/transmodel/journeys#time">time</a>
+      </li>
+      <li>
+         <a href="#timeLink" title="https://w3id.org/transmodel/journeys#timeLink">timeLink</a>
+      </li>
+      <li>
+         <a href="#timingLinkPointSequence"
+            title="https://w3id.org/transmodel/journeys#timingLinkPointSequence">
+            <span>timing link point sequence</span>
+         </a>
+      </li>
+      <li>
+         <a href="#waitTime" title="https://w3id.org/transmodel/journeys#waitTime">waitTime</a>
+      </li>
+   </ul>
+   <div class="entity" id="arrivalTime">
+      <h3>arrivalTime<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#arrivalTime</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#TimingPoint" title="https://w3id.org/transmodel/journeys#TimingPoint">TimingPoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="headway">
+      <h3>headway<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#headway</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#JourneyPattern"
+                  title="https://w3id.org/transmodel/journeys#JourneyPattern">JourneyPattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#VehicleJourney"
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="latitude">
+      <h3>latitude<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#latitude</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Point" title="https://w3id.org/transmodel/journeys#Point">Point</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="layover">
+      <h3>layover<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#layover</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#JourneyPattern"
+                  title="https://w3id.org/transmodel/journeys#JourneyPattern">JourneyPattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#VehicleJourney"
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="longitude">
+      <h3>longitude<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#longitude</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Point" title="https://w3id.org/transmodel/journeys#Point">Point</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="runtime">
+      <h3>runtime<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#runtime</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#JourneyPattern"
+                  title="https://w3id.org/transmodel/journeys#JourneyPattern">JourneyPattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#VehicleJourney"
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">non negative integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="startTime">
+      <h3>startTime<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#startTime</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#HeadingInterval"
+                  title="https://w3id.org/transmodel/journeys#HeadingInterval">HeadwayInterval</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="pointSequence">
+      <h3>stopSequence<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#pointSequence</p>
+      <div class="comment">
+         <span class="markdown">Sequences of ScheduledStopPoint</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ScheduledStopPoint"
+                  title="https://w3id.org/transmodel/journeys#ScheduledStopPoint">ScheduledStopPoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">non negative integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="time">
+      <h3>time<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#time</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#JourneyPatternLayover"
+                  title="https://w3id.org/transmodel/journeys#JourneyPatternLayover">JourneyPatternLayover</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#TimingPoint" title="https://w3id.org/transmodel/journeys#TimingPoint">TimingPoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#VehicleJourneyLayover"
+                  title="https://w3id.org/transmodel/journeys#VehicleJourneyLayover">VehicleJourneyLayover</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="timeLink">
+      <h3>timeLink<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#timeLink</p>
+      <div class="comment">
+         <span class="markdown">Sequences of TimePoints</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#TimingPoint" title="https://w3id.org/transmodel/journeys#TimingPoint">TimingPoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">non negative integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="timingLinkPointSequence">
+      <h3>timing link point sequence<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#timingLinkPointSequence</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#TimingPoint" title="https://w3id.org/transmodel/journeys#TimingPoint">TimingPoint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">non negative integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="waitTime">
+      <h3>waitTime<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#waitTime</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#JourneyPattern"
+                  title="https://w3id.org/transmodel/journeys#JourneyPattern">JourneyPattern</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#VehicleJourney"
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</html>

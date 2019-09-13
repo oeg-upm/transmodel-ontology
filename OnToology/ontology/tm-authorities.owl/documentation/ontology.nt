@@ -1,4 +1,37 @@
 <https://w3id.org/transmodel/authorities#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/transmodel/authorities#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/transmodel/authorities/1.0> .
+<https://w3id.org/transmodel/authorities#> <http://www.w3.org/2000/01/rdf-schema#comment> "Module of the Transmodel Ontology focused on Authorities"@en .
+<https://w3id.org/transmodel/authorities#> <http://www.w3.org/2000/01/rdf-schema#label> "TransmodelOntologyAuthorities"@en .
+<https://w3id.org/transmodel/authorities#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://github.com/oeg-upm/transmodel-ontology"@en .
+<https://w3id.org/transmodel/authorities#> <https://w3id.org/transmodel/authorities#author> _:genid1 .
+_:genid1 <https://w3id.org/transmodel/authorities#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid1 <https://w3id.org/transmodel/authorities#name> "Adolfo Anton-Bravo"@en .
+<https://w3id.org/transmodel/authorities#> <https://w3id.org/transmodel/authorities#author> ""@en .
+<https://w3id.org/transmodel/authorities#> <https://w3id.org/transmodel/authorities#description> "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/transmodel/authorities#author
+<https://w3id.org/transmodel/authorities#author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/transmodel/authorities#creator
+<https://w3id.org/transmodel/authorities#creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/transmodel/authorities#description
+<https://w3id.org/transmodel/authorities#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/transmodel/authorities#mbox
+<https://w3id.org/transmodel/authorities#mbox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/transmodel/authorities#name
+<https://w3id.org/transmodel/authorities#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # 
 # 
 # #################################################################
@@ -8,34 +41,25 @@
 # #################################################################
 # 
 # 
-# http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability
-<http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/authorities#Organization> .
-<http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/authorities#Responsability> .
-<http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability> <http://www.w3.org/2000/01/rdf-schema#comment> "A particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, data aggreggation, data distribution, planning, operation, control, ownership, etc."@en .
-<http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability> <http://www.w3.org/2000/01/rdf-schema#label> "hasAResponsability"@en .
+# https://w3id.org/transmodel/authorities#hasAResponsability
+<https://w3id.org/transmodel/authorities#hasAResponsability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/authorities#hasAResponsability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/authorities#Organization> .
+<https://w3id.org/transmodel/authorities#hasAResponsability> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/authorities#Responsability> .
+<https://w3id.org/transmodel/authorities#hasAResponsability> <http://www.w3.org/2000/01/rdf-schema#comment> "A particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, data aggreggation, data distribution, planning, operation, control, ownership, etc."@en .
+<https://w3id.org/transmodel/authorities#hasAResponsability> <http://www.w3.org/2000/01/rdf-schema#label> "hasAResponsability"@en .
 # 
 # https://w3id.org/transmodel/authorities#hasAResponsabilityRole
 <https://w3id.org/transmodel/authorities#hasAResponsabilityRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/transmodel/authorities#hasAResponsabilityRole> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/authorities#Responsability> .
 <https://w3id.org/transmodel/authorities#hasAResponsabilityRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/authorities#DataAggregation> .
-<https://w3id.org/transmodel/authorities#DataAggregation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/authorities#hasAResponsabilityRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/authorities#DataAugmentation> .
-<https://w3id.org/transmodel/authorities#DataAugmentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/authorities#hasAResponsabilityRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/authorities#DataControl> .
-<https://w3id.org/transmodel/authorities#DataControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/authorities#hasAResponsabilityRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/authorities#DataDistribution> .
-<https://w3id.org/transmodel/authorities#DataDistribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/authorities#hasAResponsabilityRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/authorities#DataOperation> .
-<https://w3id.org/transmodel/authorities#DataOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/authorities#hasAResponsabilityRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/authorities#DataOrigination> .
-<https://w3id.org/transmodel/authorities#DataOrigination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/authorities#hasAResponsabilityRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/authorities#DataOwnership> .
-<https://w3id.org/transmodel/authorities#DataOwnership> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/authorities#hasAResponsabilityRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/authorities#DataPlanning> .
-<https://w3id.org/transmodel/authorities#DataPlanning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/authorities#hasAResponsabilityRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/authorities#DataUpdate> .
-<https://w3id.org/transmodel/authorities#DataUpdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/authorities#hasAResponsabilityRole> <http://www.w3.org/2000/01/rdf-schema#comment> "The assignment of one or more roles to an Organization or an OrganizationPart as regards the responsability it will have as regards specific data (e.g. ownership, planning, etc.) and the management of this data (e.g. distribution, updates, etc.)"@en .
 <https://w3id.org/transmodel/authorities#hasAResponsabilityRole> <http://www.w3.org/2000/01/rdf-schema#label> "hasAResponsabilityRole"@en .
 # 
@@ -109,22 +133,31 @@
 <https://w3id.org/transmodel/authorities#ControlCenter> <http://www.w3.org/2000/01/rdf-schema#comment> "ControlCentre"@en .
 # 
 # https://w3id.org/transmodel/authorities#DataAggregation
+<https://w3id.org/transmodel/authorities#DataAggregation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/transmodel/authorities#DataAugmentation
+<https://w3id.org/transmodel/authorities#DataAugmentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/transmodel/authorities#DataControl
+<https://w3id.org/transmodel/authorities#DataControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/transmodel/authorities#DataDistribution
+<https://w3id.org/transmodel/authorities#DataDistribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/transmodel/authorities#DataOperation
+<https://w3id.org/transmodel/authorities#DataOperation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/transmodel/authorities#DataOrigination
+<https://w3id.org/transmodel/authorities#DataOrigination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/transmodel/authorities#DataOwnership
+<https://w3id.org/transmodel/authorities#DataOwnership> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/transmodel/authorities#DataPlanning
+<https://w3id.org/transmodel/authorities#DataPlanning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/transmodel/authorities#DataUpdate
+<https://w3id.org/transmodel/authorities#DataUpdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/transmodel/authorities#Department
 <https://w3id.org/transmodel/authorities#Department> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -256,4 +289,6 @@
 <https://w3id.org/transmodel/authorities#Public> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#Operator> .
 <https://w3id.org/transmodel/authorities#Public> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#ServicedOrganisation> .
 # 
+_:genid2 <https://w3id.org/transmodel/authorities#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid2 <https://w3id.org/transmodel/authorities#name> "Adolfo Anton-Bravo"@en .
 # Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

@@ -1,11 +1,13 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "base:EmergencyService" "base:Vehicle" "base:Facility" "base:CateringService" "base:TypeOfEmergencyService" "base:Site" "base:Service" "base:TypeOfCateringService" "base:Passenger" "base:CycleOperatingEquipment" "base:EquipmentPlace" "base:MeetingPointService" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "base:EmergencyService" "base:Vehicle" "base:Facility" "base:CateringService" "base:TypeOfEmergencyService" "base:Site" "base:Service" "base:TypeOfCateringService" "base:Passenger" "base:CycleOperatingEquipment" "base:TypeOfCycleEquipment" "base:EquipmentPlace" "base:MeetingPointService" ; /*classes style*/
+	"base:" -> "-31a768e3:16d2b660171:-7ffc" [ label = "base:author" ];
+	"base:" -> "https://w3id.org/transmodel/facilities/1.0" [ label = "owl:versionIRI" ];
 	"base:Service" -> "xsd:boolean" [ label = "base:freeToUse" ];
 	"owl:Thing" -> "base:Facility" [ label = "base:facilitySet" ];
 	"base:EmergencyService" -> "base:TypeOfEmergencyService" [ label = "base:typeOfEmergencyService" ];
-	"base:Facility" -> "rdfs:Literal" [ label = "base:name" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "base:name" ];
 	"base:Facility" -> "base:Passenger" [ label = "base:isUsedBy" ];
 	"base:Facility" -> "xsd:boolean" [ label = "base:available" ];
 	"base:CycleOperatingEquipment" -> "base:TypeOfCycleEquipment" [ label = "base:typeOfCycleEquipment" ];
@@ -15,6 +17,7 @@ node [shape = rectangle, color="orange"]; "base:EmergencyService" "base:Vehicle"
 	"base:Vehicle" -> "base:Facility" [ label = "base:facilityRequirement" ];
 	"base:MeetingPointService" -> "rdfs:Literal" [ label = "base:label" ];
 	"base:Site" -> "rdfs:Literal" [ label = "base:siteName" ];
+	"base:Facility" -> "rdfs:Literal" [ label = "base:facilityName" ];
 	"base:EquipmentPlace" -> "base:Facility" [ label = "base:containsEquipment" ];
 
 }

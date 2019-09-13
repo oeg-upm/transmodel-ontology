@@ -1,23 +1,51 @@
 [ {
-  "@id" : "http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "@id" : "_:genid1",
+  "https://w3id.org/transmodel/authorities#mbox" : [ {
     "@language" : "en",
-    "@value" : "A particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, data aggreggation, data distribution, planning, operation, control, ownership, etc."
+    "@value" : "adolfo.anton.bravo@upm.es"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#Organization"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "https://w3id.org/transmodel/authorities#name" : [ {
     "@language" : "en",
-    "@value" : "hasAResponsability"
+    "@value" : "Adolfo Anton-Bravo"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "https://w3id.org/transmodel/authorities#mbox" : [ {
+    "@language" : "en",
+    "@value" : "adolfo.anton.bravo@upm.es"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#Responsability"
+  "https://w3id.org/transmodel/authorities#name" : [ {
+    "@language" : "en",
+    "@value" : "Adolfo Anton-Bravo"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/authorities#",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Module of the Transmodel Ontology focused on Authorities"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "TransmodelOntologyAuthorities"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "https://github.com/oeg-upm/transmodel-ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities/1.0"
+  } ],
+  "https://w3id.org/transmodel/authorities#author" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@language" : "en",
+    "@value" : ""
+  } ],
+  "https://w3id.org/transmodel/authorities#description" : [ {
+    "@language" : "en",
+    "@value" : "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
+  } ]
 }, {
   "@id" : "https://w3id.org/transmodel/authorities#AdministrativeZone",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -260,6 +288,32 @@
     "@value" : "Zone"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/authorities#author",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#hasAResponsability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, data aggreggation, data distribution, planning, operation, control, ownership, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasAResponsability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#Responsability"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/authorities#hasAResponsabilityRole",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -318,6 +372,12 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/authorities#OrganisationPart"
   } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#mbox",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/authorities#name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://w3id.org/transmodel/authorities#operatesInAdministrativeZone",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
