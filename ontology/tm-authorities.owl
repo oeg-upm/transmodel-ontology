@@ -1,13 +1,67 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/transmodel/terms#"
-     xml:base="https://w3id.org/transmodel/terms"
+<rdf:RDF xmlns="https://w3id.org/transmodel/authorities#"
+     xml:base="https://w3id.org/transmodel/authorities"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:obda="https://w3id.org/obda/vocabulary#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/transmodel/authorities#"/>
+    <owl:Ontology rdf:about="https://w3id.org/transmodel/authorities#">
+        <owl:versionIRI rdf:resource="https://w3id.org/transmodel/authorities/1.0"/>
+        <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on Authorities</rdfs:comment>
+        <rdfs:label xml:lang="en">TransmodelOntologyAuthorities</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://github.com/oeg-upm/transmodel-ontology</rdfs:seeAlso>
+        <author>
+            <rdf:Description>
+                <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
+                <name xml:lang="en">Adolfo Anton-Bravo</name>
+            </rdf:Description>
+        </author>
+        <author xml:lang="en"></author>
+        <description xml:lang="en">Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</description>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#author -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/authorities#author"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#creator -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/authorities#creator"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#description -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/authorities#description"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#mbox -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/authorities#mbox"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#name -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/authorities#name"/>
     
 
 
@@ -157,6 +211,59 @@
     
 
 
+    <!-- https://w3id.org/transmodel/authorities#DataAggregation -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataAggregation"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataAugmentation -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataAugmentation"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataControl -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataControl"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataDistribution -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataDistribution"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataOperation -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataOperation"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataOrigination -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataOrigination"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataOwnership -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataOwnership"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataPlanning -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataPlanning"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#DataUpdate -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataUpdate"/>
+    
+
 
     <!-- https://w3id.org/transmodel/authorities#Department -->
 
@@ -275,6 +382,12 @@ A TransitAgency in GTFS</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/transmodel/authorities#TypeOfResponsability -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+    
+
+
     <!-- https://w3id.org/transmodel/authorities#Zone -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Zone">
@@ -298,68 +411,78 @@ A TransitAgency in GTFS</rdfs:comment>
      -->
 
     
+
+
     <!-- https://w3id.org/transmodel/authorities#DataAggregation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataAggregation">
-      <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
     </owl:NamedIndividual>
-
     
+
+
     <!-- https://w3id.org/transmodel/authorities#DataAugmentation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataAugmentation">
-      <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
     </owl:NamedIndividual>
-
     
+
+
     <!-- https://w3id.org/transmodel/authorities#DataControl -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataControl">
-      <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
     </owl:NamedIndividual>
-
     
+
+
     <!-- https://w3id.org/transmodel/authorities#DataDistribution -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataDistribution">
-      <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
     </owl:NamedIndividual>
-
     
+
+
     <!-- https://w3id.org/transmodel/authorities#DataOperation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataOperation">
-      <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
     </owl:NamedIndividual>
-
     
+
+
     <!-- https://w3id.org/transmodel/authorities#DataOrigination -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataOrigination">
-      <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
     </owl:NamedIndividual>
-
     
+
+
     <!-- https://w3id.org/transmodel/authorities#DataOwnership -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataOwnership">
-      <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
     </owl:NamedIndividual>
-
     
+
+
     <!-- https://w3id.org/transmodel/authorities#DataPlanning -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataPlanning">
-      <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
     </owl:NamedIndividual>
-
     
+
+
     <!-- https://w3id.org/transmodel/authorities#DataUpdate -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/authorities#DataUpdate">
-      <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+        <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- https://w3id.org/transmodel/authorities#Private -->
@@ -377,8 +500,10 @@ A TransitAgency in GTFS</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#Operator"/>
         <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#ServicedOrganisation"/>
     </owl:NamedIndividual>
-    
-
+    <rdf:Description>
+        <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
+        <name xml:lang="en">Adolfo Anton-Bravo</name>
+    </rdf:Description>
 </rdf:RDF>
 
 
