@@ -510,10 +510,22 @@ about each iteration of the TimingLink</rdfs:comment>
     <!-- https://w3id.org/transmodel/journeys#TimingPoint -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimingPoint">
+        <owl:equivalentClass rdf:resource="https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
-        <rdfs:comment xml:lang="en">A TimingPoint is a Point against which the timing information necessary to build schedules may be
-recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
+        <rdfs:comment xml:lang="en">A TimingPoint is a Point against which the timing information necessary to build schedules may be recorded.
+
+It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
         <rdfs:label xml:lang="en">TimingPoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:comment xml:lang="en">A Point in a JourneyPattern which is a TimingPoint</rdfs:comment>
+        <rdfs:label xml:lang="en">TimingPointInJourneyPattern</rdfs:label>
     </owl:Class>
     
 
@@ -547,6 +559,10 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#VehicleJourneyLayover">
         <rdfs:label xml:lang="en">VehicleJourneyLayover</rdfs:label>
     </owl:Class>
+    <rdf:Description>
+        <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
+        <name xml:lang="en">Adolfo Anton-Bravo</name>
+    </rdf:Description>
     <rdf:Description>
         <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
         <name xml:lang="en">Adolfo Anton-Bravo</name>
