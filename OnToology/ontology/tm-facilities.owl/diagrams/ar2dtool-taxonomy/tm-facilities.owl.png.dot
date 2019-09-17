@@ -1,10 +1,9 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "base:InformationLeaflet" "base:CrossingEquipmentTactileGuideStrip" "base:PassengerInformationPrintedMaterial" "base:SiteComponent" "base:CrossingEquipmentLights" "base:QueuingEquipment" "base:LowFloor" "base:TicketingValidatorEquipment" "base:SiteEquipment" "base:PassengerSafetyEquipment" "base:EmergencyService" "base:Vehicle" "base:CrossingEquipmentPedestrian" "base:EntranceEquipmentRevolvingDoor" "base:WheelchairBabyChange" "base:WheelchairAccessToilet" "base:PlaceAccessStairEscalator" "base:Facility" "base:Garage" "base:LostProperties" "base:TicketingEquipment" "base:EntranceEquipmentBarrier" "base:AssistanceService" "base:TrolleyStandEquipment" "base:PlaceAccessEquipment" "base:CateringService" "base:EntraceEquipment" "base:RetailService" "base:Equipment" "base:Toilet" "base:VehicleMode" "base:SeatingEquipment" "base:RubishDisposal" "base:CrossingEquipmentZebra" "base:CommunicationService" "base:Entrances" "base:Service" "base:Porterage" "base:Ramps" "base:Lifts" "base:RoughSurface" "base:LuggageTrolley" "base:HeadingSign" "base:WaitingRoomEquipment" "base:TicketingService" "base:InformationDesk" "base:TelematicInformationService" "base:StopPlaceEquipment" "base:LuggageService" "base:Shower" "base:AssistanceForDissabledUsers" "base:PassengerInformationEquipment" "base:TrolleyStand" "base:LuggageLocker" "base:CrossingEquipment" "base:EntranceEquipmentDoor" "base:Stairs" "base:WaitingRoom" "base:MoneyService" "base:CycleOperatingEquipment" "base:VehicleChargingEquipment" "base:Shelter" "base:AccessAreaDimensions" "base:VehicleAccessEquipment" "base:LuggageLockerEquipment" "base:PlaceAccessStairStaircase" "base:VehicleEquipment" "base:CustomerService" "base:SanitaryEquipment" "base:PlaceAccessStairStair" "base:PassengerInformationTerminal" "base:InformationTerminal" "base:EquipmentPlace" "base:Ramp" "base:WaitingEquipment" "base:Component" "base:PlaceEquipment" "base:MeetingPointService" "base:InformationBooklet" "base:BabyChange" "base:SignEquipment" "base:PassengerEquipment" ; /*classes style*/
+node [shape = rectangle, color="black"]; "base:InformationLeaflet" "base:CrossingEquipmentTactileGuideStrip" "base:PassengerInformationPrintedMaterial" "base:SiteComponent" "base:CrossingEquipmentLights" "base:QueuingEquipment" "base:LowFloor" "base:SiteEquipment" "base:PassengerSafetyEquipment" "base:EmergencyService" "base:Vehicle" "base:CrossingEquipmentPedestrian" "base:EntranceEquipmentRevolvingDoor" "base:WheelchairBabyChange" "base:WheelchairAccessToilet" "base:PlaceAccessStairEscalator" "base:Facility" "base:Garage" "base:LostProperties" "base:TicketingEquipment" "base:EntranceEquipmentBarrier" "base:AssistanceService" "base:TrolleyStandEquipment" "base:PlaceAccessEquipment" "base:CateringService" "base:EntraceEquipment" "base:RetailService" "base:Equipment" "base:Toilet" "base:VehicleMode" "base:SeatingEquipment" "base:RubishDisposal" "base:CrossingEquipmentZebra" "base:CommunicationService" "base:Entrances" "base:Service" "base:Porterage" "base:Ramps" "base:LeftLuggageService" "base:Lifts" "base:RoughSurface" "base:LuggageTrolley" "base:HeadingSign" "base:WaitingRoomEquipment" "base:TicketingService" "base:InformationDesk" "base:TelematicInformationService" "base:StopPlaceEquipment" "base:LuggageService" "base:Shower" "base:AssistanceForDissabledUsers" "base:PassengerInformationEquipment" "base:TrolleyStand" "base:LuggageLocker" "base:TicketValidatorEquipment" "base:CrossingEquipment" "base:EntranceEquipmentDoor" "base:Stairs" "base:WaitingRoom" "base:MoneyService" "base:CycleOperatingEquipment" "base:VehicleChargingEquipment" "base:Shelter" "base:AccessAreaDimensions" "base:VehicleAccessEquipment" "base:LuggageLockerEquipment" "base:PlaceAccessStairStaircase" "base:VehicleEquipment" "base:SanitaryEquipment" "base:CustomerService" "base:ComplaintsService" "base:PlaceAccessStairStair" "base:PassengerInformationTerminal" "base:InformationTerminal" "base:EquipmentPlace" "base:Ramp" "base:WaitingEquipment" "base:Component" "base:PlaceEquipment" "base:MeetingPointService" "base:InformationBooklet" "base:BabyChange" "base:SignEquipment" "base:PassengerEquipment" ; /*classes style*/
 	"base:Ramps" -> "base:PlaceAccessEquipment" [ label = "rdfs:subClassOf" ];
 	"base:LostProperties" -> "base:CustomerService" [ label = "rdfs:subClassOf" ];
-	"base:TicketingValidatorEquipment" -> "base:PassengerEquipment" [ label = "rdfs:subClassOf" ];
 	"base:RetailService" -> "base:Service" [ label = "rdfs:subClassOf" ];
 	"base:StopPlaceEquipment" -> "base:PlaceEquipment" [ label = "rdfs:subClassOf" ];
 	"base:SeatingEquipment" -> "base:PlaceEquipment" [ label = "rdfs:subClassOf" ];
@@ -12,6 +11,7 @@ node [shape = rectangle, color="black"]; "base:InformationLeaflet" "base:Crossin
 	"base:CycleOperatingEquipment" -> "base:PlaceEquipment" [ label = "rdfs:subClassOf" ];
 	"base:VehicleMode" -> "base:Vehicle" [ label = "rdfs:subClassOf" ];
 	"base:Service" -> "base:Facility" [ label = "rdfs:subClassOf" ];
+	"base:ComplaintsService" -> "base:CustomerService" [ label = "rdfs:subClassOf" ];
 	"base:SiteComponent" -> "base:Component" [ label = "rdfs:subClassOf" ];
 	"base:SanitaryEquipment" -> "base:PassengerEquipment" [ label = "rdfs:subClassOf" ];
 	"base:SiteEquipment" -> "base:PlaceEquipment" [ label = "rdfs:subClassOf" ];
@@ -21,6 +21,7 @@ node [shape = rectangle, color="black"]; "base:InformationLeaflet" "base:Crossin
 	"base:AssistanceService" -> "base:Service" [ label = "rdfs:subClassOf" ];
 	"base:CateringService" -> "base:Service" [ label = "rdfs:subClassOf" ];
 	"base:InformationBooklet" -> "base:PassengerInformationPrintedMaterial" [ label = "rdfs:subClassOf" ];
+	"base:TicketValidatorEquipment" -> "base:PassengerEquipment" [ label = "rdfs:subClassOf" ];
 	"base:TicketingService" -> "base:Service" [ label = "rdfs:subClassOf" ];
 	"base:LowFloor" -> "base:VehicleAccessEquipment" [ label = "rdfs:subClassOf" ];
 	"base:RubishDisposal" -> "base:Equipment" [ label = "rdfs:subClassOf" ];
@@ -80,6 +81,7 @@ node [shape = rectangle, color="black"]; "base:InformationLeaflet" "base:Crossin
 	"base:PlaceAccessStairEscalator" -> "base:Stairs" [ label = "rdfs:subClassOf" ];
 	"base:EquipmentPlace" -> "base:SiteComponent" [ label = "rdfs:subClassOf" ];
 	"base:AssistanceForDissabledUsers" -> "base:AssistanceService" [ label = "rdfs:subClassOf" ];
+	"base:LeftLuggageService" -> "base:LuggageService" [ label = "rdfs:subClassOf" ];
 	"base:TrolleyStandEquipment" -> "base:StopPlaceEquipment" [ label = "rdfs:subClassOf" ];
 
 }
