@@ -6,7 +6,40 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://w3id.org/transmodel/facilities#> .
 
-<https://w3id.org/transmodel/facilities#> rdf:type owl:Ontology .
+<https://w3id.org/transmodel/facilities#> rdf:type owl:Ontology ;
+                                           owl:versionIRI <https://w3id.org/transmodel/facilities/1.0> ;
+                                           rdfs:comment "Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en ;
+                                           rdfs:label "TransmodelOntologyFacilities"@en ;
+                                           rdfs:seeAlso "https://github.com/oeg-upm/transmodel-ontology"@en ;
+                                           :author [ ] ;
+:description "Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NetEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://w3id.org/transmodel/facilities#author
+:author rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/transmodel/facilities#creator
+:creator rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/transmodel/facilities#description
+:description rdf:type owl:AnnotationProperty ;
+             rdfs:range rdfs:Literal ;
+             rdfs:domain :MeetingPointService .
+
+
+###  https://w3id.org/transmodel/facilities#mbox
+:mbox rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/transmodel/facilities#name
+:name rdf:type owl:AnnotationProperty ;
+      rdfs:range rdfs:Literal .
+
 
 #################################################################
 #    Object Properties
@@ -68,6 +101,13 @@
                         rdfs:label "typeOfEmergencyService"@en .
 
 
+###  https://w3id.org/transmodel/facilities#typeOfWaitingRoom
+:typeOfWaitingRoom rdf:type owl:ObjectProperty ;
+                   rdfs:domain :WaitingRoom ;
+                   rdfs:range :TypeOfWaitingRoom ;
+                   rdfs:label "typeOfWaitingRoomEquipment"@en .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -80,16 +120,20 @@
 
 
 ###  https://w3id.org/transmodel/facilities#description
-:description rdf:type owl:DatatypeProperty ;
-             rdfs:domain :MeetingPointService ;
-             rdfs:range rdfs:Literal ;
-             rdfs:comment "description for MeetingPointServices"@en ;
-             rdfs:label "description"@en .
+:description rdf:type owl:DatatypeProperty .
 
 
 ###  https://w3id.org/transmodel/facilities#facilityLocation
 :facilityLocation rdf:type owl:DatatypeProperty ;
                   rdfs:label "facilityLocation" .
+
+
+###  https://w3id.org/transmodel/facilities#facilityName
+:facilityName rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Facility ;
+              rdfs:range rdfs:Literal ;
+              rdfs:comment "The name of the facility"@en ;
+              rdfs:label "facilityName"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#freeToUse
@@ -109,11 +153,7 @@
 
 
 ###  https://w3id.org/transmodel/facilities#name
-:name rdf:type owl:DatatypeProperty ;
-      rdfs:domain :Facility ;
-      rdfs:range rdfs:Literal ;
-      rdfs:comment "The name of a facility"@en ;
-      rdfs:label "facilityName"@en .
+:name rdf:type owl:DatatypeProperty .
 
 
 ###  https://w3id.org/transmodel/facilities#siteName
@@ -126,18 +166,6 @@
 #################################################################
 #    Classes
 #################################################################
-
-###  https://w3id.org/transmodel/authorities#TypeOfCateringService
-<https://w3id.org/transmodel/authorities#TypeOfCateringService> rdf:type owl:Class .
-
-
-###  https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment
-<https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment> rdf:type owl:Class .
-
-
-###  https://w3id.org/transmodel/authorities#TypeOfEmergencyService
-<https://w3id.org/transmodel/authorities#TypeOfEmergencyService> rdf:type owl:Class .
-
 
 ###  https://w3id.org/transmodel/facilities#AccessAreaDimensions
 :AccessAreaDimensions rdf:type owl:Class ;
@@ -177,6 +205,13 @@
                       rdfs:subClassOf :Service ;
                       rdfs:comment "Specialisation of LocalService dedicated to communication services"@en ;
                       rdfs:label "CommunicationService"@en .
+
+
+###  https://w3id.org/transmodel/facilities#ComplaintsService
+:ComplaintsService rdf:type owl:Class ;
+                   rdfs:subClassOf :CustomerService ;
+                   rdfs:comment "Specialisation of CustomerService for Complaints Services"@en ;
+                   rdfs:label "ComplaintsService"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#Component
@@ -327,6 +362,13 @@ An Equipment or LocalService is used to describe the further properties provided
                      rdfs:label "InformationStand"@en .
 
 
+###  https://w3id.org/transmodel/facilities#LeftLuggageService
+:LeftLuggageService rdf:type owl:Class ;
+                    rdfs:subClassOf :LuggageService ;
+                    rdfs:comment "LeftLuggageService is the implementation of LuggageService for LeftLuggageService"@en ;
+                    rdfs:label "LeftLuggageService"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#Lifts
 :Lifts rdf:type owl:Class ;
        rdfs:subClassOf :PlaceAccessEquipment ;
@@ -374,7 +416,7 @@ Provides facilities as LuggageTrolley, FreeToUse, etc."""@en ;
 :LuggageTrolley rdf:type owl:Class ;
                 rdfs:subClassOf :LuggageService ;
                 rdfs:label "LuggageTrolley"@en ,
-                           "Specialisation of LuggageTrolley for LuggageServices"@en .
+                           "Specialisation of LuggageServices for LuggageTrolleyServices"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#MeetingPointService
@@ -595,6 +637,13 @@ A named Service relating to the use of the Site or transport Services at a parti
                              rdfs:label "TelematicInformationService"@en .
 
 
+###  https://w3id.org/transmodel/facilities#TicketValidatorEquipment
+:TicketValidatorEquipment rdf:type owl:Class ;
+                          rdfs:subClassOf :PassengerEquipment ;
+                          rdfs:comment "Specialisation of Passenger Equipment for Ticket Validator Equipment"@en ;
+                          rdfs:label "TicketValidatorEquipment"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#TicketingEquipment
 :TicketingEquipment rdf:type owl:Class ;
                     rdfs:subClassOf :PassengerEquipment ;
@@ -606,13 +655,6 @@ A named Service relating to the use of the Site or transport Services at a parti
 :TicketingService rdf:type owl:Class ;
                   rdfs:subClassOf :Service ;
                   rdfs:label "TicketingService"@en .
-
-
-###  https://w3id.org/transmodel/facilities#TicketingValidatorEquipment
-:TicketingValidatorEquipment rdf:type owl:Class ;
-                             rdfs:subClassOf :PassengerEquipment ;
-                             rdfs:comment "Specialisation of Passenger Equipment for Ticket Validator Equipment"@en ;
-                             rdfs:label "TicketValidatorEquipment"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#Toilet
@@ -655,6 +697,12 @@ A named Service relating to the use of the Site or transport Services at a parti
 :TypeOfEmergencyService rdf:type owl:Class ;
                         rdfs:comment "A typology of emergency services: police, first aid, sos point..."@en ;
                         rdfs:label "TypeOfEmergencyService"@en .
+
+
+###  https://w3id.org/transmodel/facilities#TypeOfWaitingRoom
+:TypeOfWaitingRoom rdf:type owl:Class ;
+                   rdfs:comment "A classification of waiting room equipment"@en ;
+                   rdfs:label "TypeOfWaitingRoom"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#Vehicle
@@ -726,74 +774,95 @@ A named Service relating to the use of the Site or transport Services at a parti
 #    Individuals
 #################################################################
 
-###  https://w3id.org/transmodel/authorities#beverageVendingMachine
-<https://w3id.org/transmodel/authorities#beverageVendingMachine> rdf:type owl:NamedIndividual ,
-                                                                          <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+###  https://w3id.org/transmodel/facilities#beverageVendingMachine
+:beverageVendingMachine rdf:type owl:NamedIndividual ,
+                                 :TypeOfCateringService .
 
 
-###  https://w3id.org/transmodel/authorities#buffet
-<https://w3id.org/transmodel/authorities#buffet> rdf:type owl:NamedIndividual ,
-                                                          <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+###  https://w3id.org/transmodel/facilities#buffet
+:buffet rdf:type owl:NamedIndividual ,
+                 :TypeOfCateringService .
 
 
-###  https://w3id.org/transmodel/authorities#cateringTrolleyService
-<https://w3id.org/transmodel/authorities#cateringTrolleyService> rdf:type owl:NamedIndividual ,
-                                                                          <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+###  https://w3id.org/transmodel/facilities#cateringTrolleyService
+:cateringTrolleyService rdf:type owl:NamedIndividual ,
+                                 :TypeOfCateringService .
 
 
-###  https://w3id.org/transmodel/authorities#cycleStorageEquipmentBars
-<https://w3id.org/transmodel/authorities#cycleStorageEquipmentBars> rdf:type owl:NamedIndividual ,
-                                                                             <https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment> .
+###  https://w3id.org/transmodel/facilities#cycleStorageEquipmentBars
+:cycleStorageEquipmentBars rdf:type owl:NamedIndividual ,
+                                    :TypeOfCycleStorageEquipment .
 
 
-###  https://w3id.org/transmodel/authorities#cycleStorageEquipmentRacks
-<https://w3id.org/transmodel/authorities#cycleStorageEquipmentRacks> rdf:type owl:NamedIndividual ,
-                                                                              <https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment> .
+###  https://w3id.org/transmodel/facilities#cycleStorageEquipmentRacks
+:cycleStorageEquipmentRacks rdf:type owl:NamedIndividual ,
+                                     :TypeOfCycleStorageEquipment .
 
 
-###  https://w3id.org/transmodel/authorities#cycleStorageEquipmentRailings
-<https://w3id.org/transmodel/authorities#cycleStorageEquipmentRailings> rdf:type owl:NamedIndividual ,
-                                                                                 <https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment> .
+###  https://w3id.org/transmodel/facilities#cycleStorageEquipmentRailings
+:cycleStorageEquipmentRailings rdf:type owl:NamedIndividual ,
+                                        :TypeOfCycleStorageEquipment .
 
 
-###  https://w3id.org/transmodel/authorities#emergencyServiceFirstAid
-<https://w3id.org/transmodel/authorities#emergencyServiceFirstAid> rdf:type owl:NamedIndividual ,
-                                                                            <https://w3id.org/transmodel/authorities#TypeOfEmergencyService> .
+###  https://w3id.org/transmodel/facilities#emergencyServiceFirstAid
+:emergencyServiceFirstAid rdf:type owl:NamedIndividual ,
+                                   :TypeOfEmergencyService .
 
 
-###  https://w3id.org/transmodel/authorities#emergencyServicePolice
-<https://w3id.org/transmodel/authorities#emergencyServicePolice> rdf:type owl:NamedIndividual ,
-                                                                          <https://w3id.org/transmodel/authorities#TypeOfEmergencyService> .
+###  https://w3id.org/transmodel/facilities#emergencyServicePolice
+:emergencyServicePolice rdf:type owl:NamedIndividual ,
+                                 :TypeOfEmergencyService .
 
 
-###  https://w3id.org/transmodel/authorities#emergencyServiceSOSPoint
-<https://w3id.org/transmodel/authorities#emergencyServiceSOSPoint> rdf:type owl:NamedIndividual ,
-                                                                            <https://w3id.org/transmodel/authorities#TypeOfEmergencyService> .
+###  https://w3id.org/transmodel/facilities#emergencyServiceSOSPoint
+:emergencyServiceSOSPoint rdf:type owl:NamedIndividual ,
+                                   :TypeOfEmergencyService .
 
 
-###  https://w3id.org/transmodel/authorities#emergencyServiceServiceCCTV
-<https://w3id.org/transmodel/authorities#emergencyServiceServiceCCTV> rdf:type owl:NamedIndividual ,
-                                                                               <https://w3id.org/transmodel/authorities#TypeOfEmergencyService> .
+###  https://w3id.org/transmodel/facilities#emergencyServiceServiceCCTV
+:emergencyServiceServiceCCTV rdf:type owl:NamedIndividual ,
+                                      :TypeOfEmergencyService .
 
 
-###  https://w3id.org/transmodel/authorities#foodVendingMachine
-<https://w3id.org/transmodel/authorities#foodVendingMachine> rdf:type owl:NamedIndividual ,
-                                                                      <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+###  https://w3id.org/transmodel/facilities#foodVendingMachine
+:foodVendingMachine rdf:type owl:NamedIndividual ,
+                             :TypeOfCateringService .
 
 
-###  https://w3id.org/transmodel/authorities#noBeveragesAvailable
-<https://w3id.org/transmodel/authorities#noBeveragesAvailable> rdf:type owl:NamedIndividual ,
-                                                                        <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+###  https://w3id.org/transmodel/facilities#noBeveragesAvailable
+:noBeveragesAvailable rdf:type owl:NamedIndividual ,
+                               :TypeOfCateringService .
 
 
-###  https://w3id.org/transmodel/authorities#noFoodAvailable
-<https://w3id.org/transmodel/authorities#noFoodAvailable> rdf:type owl:NamedIndividual ,
-                                                                   <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+###  https://w3id.org/transmodel/facilities#noFoodAvailable
+:noFoodAvailable rdf:type owl:NamedIndividual ,
+                          :TypeOfCateringService .
 
 
-###  https://w3id.org/transmodel/authorities#snacks
-<https://w3id.org/transmodel/authorities#snacks> rdf:type owl:NamedIndividual ,
-                                                          <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+###  https://w3id.org/transmodel/facilities#snacks
+:snacks rdf:type owl:NamedIndividual ,
+                 :TypeOfCateringService .
+
+
+_:genid2 :mbox "adolfo.anton.bravo@upm.es"@en ;
+         :name "Adolfo Anton-Bravo"@en .
+
+_:genid3 :mbox "adolfo.anton.bravo@upm.es"@en ;
+          :name "Adolfo Anton-Bravo"@en .
+
+_:genid4 :mbox "adolfo.anton.bravo@upm.es"@en ;
+          :name "Adolfo Anton-Bravo"@en .
+
+#################################################################
+#    Annotations
+#################################################################
+
+:description rdfs:comment "description for MeetingPointServices"@en ;
+              rdfs:label "description"@en .
+
+
+:name rdfs:comment "The name of the author"@en ;
+      rdfs:label "name"@en .
 
 
 ###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

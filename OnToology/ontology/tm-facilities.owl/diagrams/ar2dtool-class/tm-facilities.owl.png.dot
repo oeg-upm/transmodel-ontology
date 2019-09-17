@@ -1,12 +1,15 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "base:EmergencyService" "base:Vehicle" "base:Facility" "base:CateringService" "base:TypeOfEmergencyService" "base:Site" "base:Service" "base:TypeOfCateringService" "base:Passenger" "base:CycleOperatingEquipment" "base:EquipmentPlace" "base:MeetingPointService" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "base:EmergencyService" "base:Vehicle" "base:Facility" "base:CateringService" "base:TypeOfEmergencyService" "base:Site" "base:Service" "base:TypeOfCateringService" "base:TypeOfWaitingRoom" "base:Passenger" "base:WaitingRoom" "base:CycleOperatingEquipment" "base:TypeOfCycleEquipment" "base:EquipmentPlace" "base:MeetingPointService" ; /*classes style*/
+	"base:" -> "34ff59ea:16d3eba8431:-7ffc" [ label = "base:author" ];
+	"base:" -> "https://w3id.org/transmodel/facilities/1.0" [ label = "owl:versionIRI" ];
 	"base:Service" -> "xsd:boolean" [ label = "base:freeToUse" ];
 	"owl:Thing" -> "base:Facility" [ label = "base:facilitySet" ];
 	"base:EmergencyService" -> "base:TypeOfEmergencyService" [ label = "base:typeOfEmergencyService" ];
-	"base:Facility" -> "rdfs:Literal" [ label = "base:name" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "base:name" ];
 	"base:Facility" -> "base:Passenger" [ label = "base:isUsedBy" ];
+	"base:WaitingRoom" -> "base:TypeOfWaitingRoom" [ label = "base:typeOfWaitingRoom" ];
 	"base:Facility" -> "xsd:boolean" [ label = "base:available" ];
 	"base:CycleOperatingEquipment" -> "base:TypeOfCycleEquipment" [ label = "base:typeOfCycleEquipment" ];
 	"base:CateringService" -> "base:TypeOfCateringService" [ label = "base:typeOfCateringService" ];
@@ -15,6 +18,7 @@ node [shape = rectangle, color="orange"]; "base:EmergencyService" "base:Vehicle"
 	"base:Vehicle" -> "base:Facility" [ label = "base:facilityRequirement" ];
 	"base:MeetingPointService" -> "rdfs:Literal" [ label = "base:label" ];
 	"base:Site" -> "rdfs:Literal" [ label = "base:siteName" ];
+	"base:Facility" -> "rdfs:Literal" [ label = "base:facilityName" ];
 	"base:EquipmentPlace" -> "base:Facility" [ label = "base:containsEquipment" ];
 
 }

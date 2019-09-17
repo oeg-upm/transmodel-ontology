@@ -1,4 +1,37 @@
 <https://w3id.org/transmodel/facilities#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/transmodel/facilities#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/transmodel/facilities/1.0> .
+<https://w3id.org/transmodel/facilities#> <http://www.w3.org/2000/01/rdf-schema#comment> "Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en .
+<https://w3id.org/transmodel/facilities#> <http://www.w3.org/2000/01/rdf-schema#label> "TransmodelOntologyFacilities"@en .
+<https://w3id.org/transmodel/facilities#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://github.com/oeg-upm/transmodel-ontology"@en .
+<https://w3id.org/transmodel/facilities#> <https://w3id.org/transmodel/facilities#author> _:genid1 .
+<https://w3id.org/transmodel/facilities#> <https://w3id.org/transmodel/facilities#description> "Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NetEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/transmodel/facilities#author
+<https://w3id.org/transmodel/facilities#author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/transmodel/facilities#creator
+<https://w3id.org/transmodel/facilities#creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/transmodel/facilities#description
+<https://w3id.org/transmodel/facilities#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/transmodel/facilities#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/transmodel/facilities#description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#MeetingPointService> .
+# 
+# https://w3id.org/transmodel/facilities#mbox
+<https://w3id.org/transmodel/facilities#mbox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/transmodel/facilities#name
+<https://w3id.org/transmodel/facilities#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/transmodel/facilities#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
 # 
 # 
 # #################################################################
@@ -48,7 +81,6 @@
 <https://w3id.org/transmodel/facilities#typeOfCycleEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/transmodel/facilities#typeOfCycleEquipment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#CycleOperatingEquipment> .
 <https://w3id.org/transmodel/facilities#typeOfCycleEquipment> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/facilities#TypeOfCycleEquipment> .
-<https://w3id.org/transmodel/facilities#TypeOfCycleEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/facilities#typeOfCycleEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "typeOfCycleEquipment" .
 # 
 # https://w3id.org/transmodel/facilities#typeOfEmergencyService
@@ -56,6 +88,12 @@
 <https://w3id.org/transmodel/facilities#typeOfEmergencyService> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#EmergencyService> .
 <https://w3id.org/transmodel/facilities#typeOfEmergencyService> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/facilities#TypeOfEmergencyService> .
 <https://w3id.org/transmodel/facilities#typeOfEmergencyService> <http://www.w3.org/2000/01/rdf-schema#label> "typeOfEmergencyService"@en .
+# 
+# https://w3id.org/transmodel/facilities#typeOfWaitingRoom
+<https://w3id.org/transmodel/facilities#typeOfWaitingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/facilities#typeOfWaitingRoom> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#WaitingRoom> .
+<https://w3id.org/transmodel/facilities#typeOfWaitingRoom> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/facilities#TypeOfWaitingRoom> .
+<https://w3id.org/transmodel/facilities#typeOfWaitingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "typeOfWaitingRoomEquipment"@en .
 # 
 # 
 # 
@@ -74,14 +112,17 @@
 # 
 # https://w3id.org/transmodel/facilities#description
 <https://w3id.org/transmodel/facilities#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/transmodel/facilities#description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#MeetingPointService> .
-<https://w3id.org/transmodel/facilities#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/transmodel/facilities#description> <http://www.w3.org/2000/01/rdf-schema#comment> "description for MeetingPointServices"@en .
-<https://w3id.org/transmodel/facilities#description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en .
 # 
 # https://w3id.org/transmodel/facilities#facilityLocation
 <https://w3id.org/transmodel/facilities#facilityLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/transmodel/facilities#facilityLocation> <http://www.w3.org/2000/01/rdf-schema#label> "facilityLocation" .
+# 
+# https://w3id.org/transmodel/facilities#facilityName
+<https://w3id.org/transmodel/facilities#facilityName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/facilities#facilityName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#Facility> .
+<https://w3id.org/transmodel/facilities#facilityName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/transmodel/facilities#facilityName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the facility"@en .
+<https://w3id.org/transmodel/facilities#facilityName> <http://www.w3.org/2000/01/rdf-schema#label> "facilityName"@en .
 # 
 # https://w3id.org/transmodel/facilities#freeToUse
 <https://w3id.org/transmodel/facilities#freeToUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -99,10 +140,6 @@
 # 
 # https://w3id.org/transmodel/facilities#name
 <https://w3id.org/transmodel/facilities#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/transmodel/facilities#name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#Facility> .
-<https://w3id.org/transmodel/facilities#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<https://w3id.org/transmodel/facilities#name> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of a facility"@en .
-<https://w3id.org/transmodel/facilities#name> <http://www.w3.org/2000/01/rdf-schema#label> "facilityName"@en .
 # 
 # https://w3id.org/transmodel/facilities#siteName
 <https://w3id.org/transmodel/facilities#siteName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -118,15 +155,6 @@
 # #
 # #################################################################
 # 
-# 
-# https://w3id.org/transmodel/authorities#TypeOfCateringService
-<https://w3id.org/transmodel/authorities#TypeOfCateringService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment
-<https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# https://w3id.org/transmodel/authorities#TypeOfEmergencyService
-<https://w3id.org/transmodel/authorities#TypeOfEmergencyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/transmodel/facilities#AccessAreaDimensions
 <https://w3id.org/transmodel/facilities#AccessAreaDimensions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -161,6 +189,12 @@
 <https://w3id.org/transmodel/facilities#CommunicationService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Service> .
 <https://w3id.org/transmodel/facilities#CommunicationService> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of LocalService dedicated to communication services"@en .
 <https://w3id.org/transmodel/facilities#CommunicationService> <http://www.w3.org/2000/01/rdf-schema#label> "CommunicationService"@en .
+# 
+# https://w3id.org/transmodel/facilities#ComplaintsService
+<https://w3id.org/transmodel/facilities#ComplaintsService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#ComplaintsService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#CustomerService> .
+<https://w3id.org/transmodel/facilities#ComplaintsService> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of CustomerService for Complaints Services"@en .
+<https://w3id.org/transmodel/facilities#ComplaintsService> <http://www.w3.org/2000/01/rdf-schema#label> "ComplaintsService"@en .
 # 
 # https://w3id.org/transmodel/facilities#Component
 <https://w3id.org/transmodel/facilities#Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -278,6 +312,12 @@
 <https://w3id.org/transmodel/facilities#InformationTerminal> <http://www.w3.org/2000/01/rdf-schema#comment> "A public transport information piece of Equipment in the street"@en .
 <https://w3id.org/transmodel/facilities#InformationTerminal> <http://www.w3.org/2000/01/rdf-schema#label> "InformationStand"@en .
 # 
+# https://w3id.org/transmodel/facilities#LeftLuggageService
+<https://w3id.org/transmodel/facilities#LeftLuggageService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#LeftLuggageService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#LuggageService> .
+<https://w3id.org/transmodel/facilities#LeftLuggageService> <http://www.w3.org/2000/01/rdf-schema#comment> "LeftLuggageService is the implementation of LuggageService for LeftLuggageService"@en .
+<https://w3id.org/transmodel/facilities#LeftLuggageService> <http://www.w3.org/2000/01/rdf-schema#label> "LeftLuggageService"@en .
+# 
 # https://w3id.org/transmodel/facilities#Lifts
 <https://w3id.org/transmodel/facilities#Lifts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/facilities#Lifts> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceAccessEquipment> .
@@ -317,7 +357,7 @@
 <https://w3id.org/transmodel/facilities#LuggageTrolley> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/facilities#LuggageTrolley> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#LuggageService> .
 <https://w3id.org/transmodel/facilities#LuggageTrolley> <http://www.w3.org/2000/01/rdf-schema#label> "LuggageTrolley"@en .
-<https://w3id.org/transmodel/facilities#LuggageTrolley> <http://www.w3.org/2000/01/rdf-schema#label> "Specialisation of LuggageTrolley for LuggageServices"@en .
+<https://w3id.org/transmodel/facilities#LuggageTrolley> <http://www.w3.org/2000/01/rdf-schema#label> "Specialisation of LuggageServices for LuggageTrolleyServices"@en .
 # 
 # https://w3id.org/transmodel/facilities#MeetingPointService
 <https://w3id.org/transmodel/facilities#MeetingPointService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -503,6 +543,12 @@
 <https://w3id.org/transmodel/facilities#TelematicInformationService> <http://www.w3.org/2000/01/rdf-schema#comment> "A public transport information piece of Equipment by telematic means"@en .
 <https://w3id.org/transmodel/facilities#TelematicInformationService> <http://www.w3.org/2000/01/rdf-schema#label> "TelematicInformationService"@en .
 # 
+# https://w3id.org/transmodel/facilities#TicketValidatorEquipment
+<https://w3id.org/transmodel/facilities#TicketValidatorEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#TicketValidatorEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PassengerEquipment> .
+<https://w3id.org/transmodel/facilities#TicketValidatorEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of Passenger Equipment for Ticket Validator Equipment"@en .
+<https://w3id.org/transmodel/facilities#TicketValidatorEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "TicketValidatorEquipment"@en .
+# 
 # https://w3id.org/transmodel/facilities#TicketingEquipment
 <https://w3id.org/transmodel/facilities#TicketingEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/facilities#TicketingEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PassengerEquipment> .
@@ -513,12 +559,6 @@
 <https://w3id.org/transmodel/facilities#TicketingService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/facilities#TicketingService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Service> .
 <https://w3id.org/transmodel/facilities#TicketingService> <http://www.w3.org/2000/01/rdf-schema#label> "TicketingService"@en .
-# 
-# https://w3id.org/transmodel/facilities#TicketingValidatorEquipment
-<https://w3id.org/transmodel/facilities#TicketingValidatorEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/facilities#TicketingValidatorEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PassengerEquipment> .
-<https://w3id.org/transmodel/facilities#TicketingValidatorEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of Passenger Equipment for Ticket Validator Equipment"@en .
-<https://w3id.org/transmodel/facilities#TicketingValidatorEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "TicketValidatorEquipment"@en .
 # 
 # https://w3id.org/transmodel/facilities#Toilet
 <https://w3id.org/transmodel/facilities#Toilet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -543,6 +583,7 @@
 <https://w3id.org/transmodel/facilities#TypeOfCateringService> <http://www.w3.org/2000/01/rdf-schema#label> "TypeOfCateringService"@en .
 # 
 # https://w3id.org/transmodel/facilities#TypeOfCycleEquipment
+<https://w3id.org/transmodel/facilities#TypeOfCycleEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment
 <https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -553,6 +594,11 @@
 <https://w3id.org/transmodel/facilities#TypeOfEmergencyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/facilities#TypeOfEmergencyService> <http://www.w3.org/2000/01/rdf-schema#comment> "A typology of emergency services: police, first aid, sos point..."@en .
 <https://w3id.org/transmodel/facilities#TypeOfEmergencyService> <http://www.w3.org/2000/01/rdf-schema#label> "TypeOfEmergencyService"@en .
+# 
+# https://w3id.org/transmodel/facilities#TypeOfWaitingRoom
+<https://w3id.org/transmodel/facilities#TypeOfWaitingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#TypeOfWaitingRoom> <http://www.w3.org/2000/01/rdf-schema#comment> "A classification of waiting room equipment"@en .
+<https://w3id.org/transmodel/facilities#TypeOfWaitingRoom> <http://www.w3.org/2000/01/rdf-schema#label> "TypeOfWaitingRoom"@en .
 # 
 # https://w3id.org/transmodel/facilities#Vehicle
 <https://w3id.org/transmodel/facilities#Vehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -618,60 +664,81 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/transmodel/authorities#beverageVendingMachine
-<https://w3id.org/transmodel/authorities#beverageVendingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/authorities#beverageVendingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+# https://w3id.org/transmodel/facilities#beverageVendingMachine
+<https://w3id.org/transmodel/facilities#beverageVendingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/facilities#beverageVendingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#TypeOfCateringService> .
 # 
-# https://w3id.org/transmodel/authorities#buffet
-<https://w3id.org/transmodel/authorities#buffet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/authorities#buffet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+# https://w3id.org/transmodel/facilities#buffet
+<https://w3id.org/transmodel/facilities#buffet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/facilities#buffet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#TypeOfCateringService> .
 # 
-# https://w3id.org/transmodel/authorities#cateringTrolleyService
-<https://w3id.org/transmodel/authorities#cateringTrolleyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/authorities#cateringTrolleyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+# https://w3id.org/transmodel/facilities#cateringTrolleyService
+<https://w3id.org/transmodel/facilities#cateringTrolleyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/facilities#cateringTrolleyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#TypeOfCateringService> .
 # 
-# https://w3id.org/transmodel/authorities#cycleStorageEquipmentBars
-<https://w3id.org/transmodel/authorities#cycleStorageEquipmentBars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/authorities#cycleStorageEquipmentBars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment> .
+# https://w3id.org/transmodel/facilities#cycleStorageEquipmentBars
+<https://w3id.org/transmodel/facilities#cycleStorageEquipmentBars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/facilities#cycleStorageEquipmentBars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment> .
 # 
-# https://w3id.org/transmodel/authorities#cycleStorageEquipmentRacks
-<https://w3id.org/transmodel/authorities#cycleStorageEquipmentRacks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/authorities#cycleStorageEquipmentRacks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment> .
+# https://w3id.org/transmodel/facilities#cycleStorageEquipmentRacks
+<https://w3id.org/transmodel/facilities#cycleStorageEquipmentRacks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/facilities#cycleStorageEquipmentRacks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment> .
 # 
-# https://w3id.org/transmodel/authorities#cycleStorageEquipmentRailings
-<https://w3id.org/transmodel/authorities#cycleStorageEquipmentRailings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/authorities#cycleStorageEquipmentRailings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCycleStorageEquipment> .
+# https://w3id.org/transmodel/facilities#cycleStorageEquipmentRailings
+<https://w3id.org/transmodel/facilities#cycleStorageEquipmentRailings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/facilities#cycleStorageEquipmentRailings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment> .
 # 
-# https://w3id.org/transmodel/authorities#emergencyServiceFirstAid
-<https://w3id.org/transmodel/authorities#emergencyServiceFirstAid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/authorities#emergencyServiceFirstAid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfEmergencyService> .
+# https://w3id.org/transmodel/facilities#emergencyServiceFirstAid
+<https://w3id.org/transmodel/facilities#emergencyServiceFirstAid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/facilities#emergencyServiceFirstAid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#TypeOfEmergencyService> .
 # 
-# https://w3id.org/transmodel/authorities#emergencyServicePolice
-<https://w3id.org/transmodel/authorities#emergencyServicePolice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/authorities#emergencyServicePolice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfEmergencyService> .
+# https://w3id.org/transmodel/facilities#emergencyServicePolice
+<https://w3id.org/transmodel/facilities#emergencyServicePolice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/facilities#emergencyServicePolice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#TypeOfEmergencyService> .
 # 
-# https://w3id.org/transmodel/authorities#emergencyServiceSOSPoint
-<https://w3id.org/transmodel/authorities#emergencyServiceSOSPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/authorities#emergencyServiceSOSPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfEmergencyService> .
+# https://w3id.org/transmodel/facilities#emergencyServiceSOSPoint
+<https://w3id.org/transmodel/facilities#emergencyServiceSOSPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/facilities#emergencyServiceSOSPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#TypeOfEmergencyService> .
 # 
-# https://w3id.org/transmodel/authorities#emergencyServiceServiceCCTV
-<https://w3id.org/transmodel/authorities#emergencyServiceServiceCCTV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/authorities#emergencyServiceServiceCCTV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfEmergencyService> .
+# https://w3id.org/transmodel/facilities#emergencyServiceServiceCCTV
+<https://w3id.org/transmodel/facilities#emergencyServiceServiceCCTV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/facilities#emergencyServiceServiceCCTV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#TypeOfEmergencyService> .
 # 
-# https://w3id.org/transmodel/authorities#foodVendingMachine
-<https://w3id.org/transmodel/authorities#foodVendingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/authorities#foodVendingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+# https://w3id.org/transmodel/facilities#foodVendingMachine
+<https://w3id.org/transmodel/facilities#foodVendingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/facilities#foodVendingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#TypeOfCateringService> .
 # 
-# https://w3id.org/transmodel/authorities#noBeveragesAvailable
-<https://w3id.org/transmodel/authorities#noBeveragesAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/authorities#noBeveragesAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+# https://w3id.org/transmodel/facilities#noBeveragesAvailable
+<https://w3id.org/transmodel/facilities#noBeveragesAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/facilities#noBeveragesAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#TypeOfCateringService> .
 # 
-# https://w3id.org/transmodel/authorities#noFoodAvailable
-<https://w3id.org/transmodel/authorities#noFoodAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/authorities#noFoodAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+# https://w3id.org/transmodel/facilities#noFoodAvailable
+<https://w3id.org/transmodel/facilities#noFoodAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/facilities#noFoodAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#TypeOfCateringService> .
 # 
-# https://w3id.org/transmodel/authorities#snacks
-<https://w3id.org/transmodel/authorities#snacks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/authorities#snacks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#TypeOfCateringService> .
+# https://w3id.org/transmodel/facilities#snacks
+<https://w3id.org/transmodel/facilities#snacks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/facilities#snacks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#TypeOfCateringService> .
+# 
+_:genid2 <https://w3id.org/transmodel/facilities#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid2 <https://w3id.org/transmodel/facilities#name> "Adolfo Anton-Bravo"@en .
+_:genid3 <https://w3id.org/transmodel/facilities#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid3 <https://w3id.org/transmodel/facilities#name> "Adolfo Anton-Bravo"@en .
+_:genid4 <https://w3id.org/transmodel/facilities#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid4 <https://w3id.org/transmodel/facilities#name> "Adolfo Anton-Bravo"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://w3id.org/transmodel/facilities#description> <http://www.w3.org/2000/01/rdf-schema#comment> "description for MeetingPointServices"@en .
+<https://w3id.org/transmodel/facilities#description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en .
+# 
+<https://w3id.org/transmodel/facilities#name> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the author"@en .
+<https://w3id.org/transmodel/facilities#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
 # 
 # Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

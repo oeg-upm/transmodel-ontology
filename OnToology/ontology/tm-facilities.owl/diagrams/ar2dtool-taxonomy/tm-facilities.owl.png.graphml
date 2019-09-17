@@ -5,7 +5,7 @@
    <key for="edge" id="d2" yfiles.type="edgegraphics" />
    <key attr.name="description" attr.type="string" for="edge" id="d3" />
    <key for="graphml" id="d4" yfiles.type="resources" />
-   <graph edgedefault="directed" id="G" parse.edges="79" parse.nodes="82" parse.order="free">
+   <graph edgedefault="directed" id="G" parse.edges="81" parse.nodes="84" parse.order="free">
       <node id="nid_base:Ramps">
          <data key="d0">
             <y:ShapeNode>
@@ -76,41 +76,6 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_base:TicketingValidatorEquipment">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="320.0" x="0.0" y="0.0" />
-               <y:Fill color="#000000" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">base:TicketingValidatorEquipment</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-      <node id="nid_base:PassengerEquipment">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="230.0" x="0.0" y="0.0" />
-               <y:Fill color="#000000" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">base:PassengerEquipment</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_rdfs:subClassOf2" source="nid_base:TicketingValidatorEquipment" target="nid_base:PassengerEquipment">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
       <node id="nid_base:RetailService">
          <data key="d0">
             <y:ShapeNode>
@@ -135,7 +100,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf3" source="nid_base:RetailService" target="nid_base:Service">
+    <edge id="eid_rdfs:subClassOf2" source="nid_base:RetailService" target="nid_base:Service">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -170,7 +135,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf4" source="nid_base:StopPlaceEquipment" target="nid_base:PlaceEquipment">
+    <edge id="eid_rdfs:subClassOf3" source="nid_base:StopPlaceEquipment" target="nid_base:PlaceEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -193,7 +158,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf5" source="nid_base:SeatingEquipment" target="nid_base:PlaceEquipment">
+    <edge id="eid_rdfs:subClassOf4" source="nid_base:SeatingEquipment" target="nid_base:PlaceEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -216,7 +181,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf6" source="nid_base:Porterage" target="nid_base:Service">
+    <edge id="eid_rdfs:subClassOf5" source="nid_base:Porterage" target="nid_base:Service">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -239,7 +204,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf7" source="nid_base:CycleOperatingEquipment" target="nid_base:PlaceEquipment">
+    <edge id="eid_rdfs:subClassOf6" source="nid_base:CycleOperatingEquipment" target="nid_base:PlaceEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -274,7 +239,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf8" source="nid_base:VehicleMode" target="nid_base:Vehicle">
+    <edge id="eid_rdfs:subClassOf7" source="nid_base:VehicleMode" target="nid_base:Vehicle">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -297,7 +262,30 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf9" source="nid_base:Service" target="nid_base:Facility">
+    <edge id="eid_rdfs:subClassOf8" source="nid_base:Service" target="nid_base:Facility">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_base:ComplaintsService">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="220.0" x="0.0" y="0.0" />
+               <y:Fill color="#000000" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">base:ComplaintsService</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_rdfs:subClassOf9" source="nid_base:ComplaintsService" target="nid_base:CustomerService">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -350,6 +338,18 @@
                <y:Fill color="#000000" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
                <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">base:SanitaryEquipment</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+      <node id="nid_base:PassengerEquipment">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="230.0" x="0.0" y="0.0" />
+               <y:Fill color="#000000" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">base:PassengerEquipment</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
@@ -563,6 +563,29 @@
          </data>
          <data key="d3" />
       </edge>
+      <node id="nid_base:TicketValidatorEquipment">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="290.0" x="0.0" y="0.0" />
+               <y:Fill color="#000000" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">base:TicketValidatorEquipment</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_rdfs:subClassOf19" source="nid_base:TicketValidatorEquipment" target="nid_base:PassengerEquipment">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
       <node id="nid_base:TicketingService">
          <data key="d0">
             <y:ShapeNode>
@@ -575,7 +598,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf19" source="nid_base:TicketingService" target="nid_base:Service">
+    <edge id="eid_rdfs:subClassOf20" source="nid_base:TicketingService" target="nid_base:Service">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -610,7 +633,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf20" source="nid_base:LowFloor" target="nid_base:VehicleAccessEquipment">
+    <edge id="eid_rdfs:subClassOf21" source="nid_base:LowFloor" target="nid_base:VehicleAccessEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -645,7 +668,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf21" source="nid_base:RubishDisposal" target="nid_base:Equipment">
+    <edge id="eid_rdfs:subClassOf22" source="nid_base:RubishDisposal" target="nid_base:Equipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -656,7 +679,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf22" source="nid_base:Equipment" target="nid_base:Facility">
+    <edge id="eid_rdfs:subClassOf23" source="nid_base:Equipment" target="nid_base:Facility">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -679,7 +702,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf23" source="nid_base:PassengerInformationEquipment" target="nid_base:PassengerEquipment">
+    <edge id="eid_rdfs:subClassOf24" source="nid_base:PassengerInformationEquipment" target="nid_base:PassengerEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -702,7 +725,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf24" source="nid_base:Ramp" target="nid_base:VehicleAccessEquipment">
+    <edge id="eid_rdfs:subClassOf25" source="nid_base:Ramp" target="nid_base:VehicleAccessEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -725,7 +748,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf25" source="nid_base:LuggageLocker" target="nid_base:SiteEquipment">
+    <edge id="eid_rdfs:subClassOf26" source="nid_base:LuggageLocker" target="nid_base:SiteEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -736,7 +759,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf26" source="nid_base:PassengerEquipment" target="nid_base:Equipment">
+    <edge id="eid_rdfs:subClassOf27" source="nid_base:PassengerEquipment" target="nid_base:Equipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -747,7 +770,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf27" source="nid_base:PassengerInformationPrintedMaterial" target="nid_base:PassengerInformationEquipment">
+    <edge id="eid_rdfs:subClassOf28" source="nid_base:PassengerInformationPrintedMaterial" target="nid_base:PassengerInformationEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -782,7 +805,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf28" source="nid_base:CrossingEquipmentTactileGuideStrip" target="nid_base:CrossingEquipment">
+    <edge id="eid_rdfs:subClassOf29" source="nid_base:CrossingEquipmentTactileGuideStrip" target="nid_base:CrossingEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -805,7 +828,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf29" source="nid_base:MoneyService" target="nid_base:Service">
+    <edge id="eid_rdfs:subClassOf30" source="nid_base:MoneyService" target="nid_base:Service">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -828,7 +851,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf30" source="nid_base:AccessAreaDimensions" target="nid_base:VehicleAccessEquipment">
+    <edge id="eid_rdfs:subClassOf31" source="nid_base:AccessAreaDimensions" target="nid_base:VehicleAccessEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -863,7 +886,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf31" source="nid_base:HeadingSign" target="nid_base:SignEquipment">
+    <edge id="eid_rdfs:subClassOf32" source="nid_base:HeadingSign" target="nid_base:SignEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -886,7 +909,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf32" source="nid_base:Shelter" target="nid_base:WaitingEquipment">
+    <edge id="eid_rdfs:subClassOf33" source="nid_base:Shelter" target="nid_base:WaitingEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -909,7 +932,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf33" source="nid_base:Stairs" target="nid_base:PlaceAccessEquipment">
+    <edge id="eid_rdfs:subClassOf34" source="nid_base:Stairs" target="nid_base:PlaceAccessEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -944,7 +967,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf34" source="nid_base:InformationTerminal" target="nid_base:PassengerInformationTerminal">
+    <edge id="eid_rdfs:subClassOf35" source="nid_base:InformationTerminal" target="nid_base:PassengerInformationTerminal">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -967,7 +990,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf35" source="nid_base:LuggageLockerEquipment" target="nid_base:StopPlaceEquipment">
+    <edge id="eid_rdfs:subClassOf36" source="nid_base:LuggageLockerEquipment" target="nid_base:StopPlaceEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -990,7 +1013,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf36" source="nid_base:Toilet" target="nid_base:SanitaryEquipment">
+    <edge id="eid_rdfs:subClassOf37" source="nid_base:Toilet" target="nid_base:SanitaryEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1025,7 +1048,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf37" source="nid_base:LuggageTrolley" target="nid_base:LuggageService">
+    <edge id="eid_rdfs:subClassOf38" source="nid_base:LuggageTrolley" target="nid_base:LuggageService">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1036,7 +1059,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf38" source="nid_base:PlaceAccessEquipment" target="nid_base:PlaceEquipment">
+    <edge id="eid_rdfs:subClassOf39" source="nid_base:PlaceAccessEquipment" target="nid_base:PlaceEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1047,7 +1070,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf39" source="nid_base:EntraceEquipment" target="nid_base:PlaceAccessEquipment">
+    <edge id="eid_rdfs:subClassOf40" source="nid_base:EntraceEquipment" target="nid_base:PlaceAccessEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1070,7 +1093,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf40" source="nid_base:PlaceAccessStairStair" target="nid_base:Stairs">
+    <edge id="eid_rdfs:subClassOf41" source="nid_base:PlaceAccessStairStair" target="nid_base:Stairs">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1081,7 +1104,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf41" source="nid_base:SignEquipment" target="nid_base:PlaceEquipment">
+    <edge id="eid_rdfs:subClassOf42" source="nid_base:SignEquipment" target="nid_base:PlaceEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1104,7 +1127,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf42" source="nid_base:TelematicInformationService" target="nid_base:PassengerInformationTerminal">
+    <edge id="eid_rdfs:subClassOf43" source="nid_base:TelematicInformationService" target="nid_base:PassengerInformationTerminal">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1127,7 +1150,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf43" source="nid_base:Lifts" target="nid_base:PlaceAccessEquipment">
+    <edge id="eid_rdfs:subClassOf44" source="nid_base:Lifts" target="nid_base:PlaceAccessEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1150,7 +1173,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf44" source="nid_base:TicketingEquipment" target="nid_base:PassengerEquipment">
+    <edge id="eid_rdfs:subClassOf45" source="nid_base:TicketingEquipment" target="nid_base:PassengerEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1173,7 +1196,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf45" source="nid_base:PassengerSafetyEquipment" target="nid_base:PassengerEquipment">
+    <edge id="eid_rdfs:subClassOf46" source="nid_base:PassengerSafetyEquipment" target="nid_base:PassengerEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1196,7 +1219,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf46" source="nid_base:WheelchairAccessToilet" target="nid_base:SanitaryEquipment">
+    <edge id="eid_rdfs:subClassOf47" source="nid_base:WheelchairAccessToilet" target="nid_base:SanitaryEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1207,7 +1230,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf47" source="nid_base:CustomerService" target="nid_base:Service">
+    <edge id="eid_rdfs:subClassOf48" source="nid_base:CustomerService" target="nid_base:Service">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1230,7 +1253,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf48" source="nid_base:Garage" target="nid_base:PlaceEquipment">
+    <edge id="eid_rdfs:subClassOf49" source="nid_base:Garage" target="nid_base:PlaceEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1241,7 +1264,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf49" source="nid_base:WaitingEquipment" target="nid_base:StopPlaceEquipment">
+    <edge id="eid_rdfs:subClassOf50" source="nid_base:WaitingEquipment" target="nid_base:StopPlaceEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1252,7 +1275,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf50" source="nid_base:PassengerInformationTerminal" target="nid_base:PassengerInformationEquipment">
+    <edge id="eid_rdfs:subClassOf51" source="nid_base:PassengerInformationTerminal" target="nid_base:PassengerInformationEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1263,7 +1286,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf51" source="nid_base:PlaceEquipment" target="nid_base:Equipment">
+    <edge id="eid_rdfs:subClassOf52" source="nid_base:PlaceEquipment" target="nid_base:Equipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1286,7 +1309,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf52" source="nid_base:InformationLeaflet" target="nid_base:PassengerInformationPrintedMaterial">
+    <edge id="eid_rdfs:subClassOf53" source="nid_base:InformationLeaflet" target="nid_base:PassengerInformationPrintedMaterial">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1309,7 +1332,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf53" source="nid_base:RoughSurface" target="nid_base:PlaceEquipment">
+    <edge id="eid_rdfs:subClassOf54" source="nid_base:RoughSurface" target="nid_base:PlaceEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1320,7 +1343,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf54" source="nid_base:LuggageService" target="nid_base:CustomerService">
+    <edge id="eid_rdfs:subClassOf55" source="nid_base:LuggageService" target="nid_base:CustomerService">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1343,7 +1366,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf55" source="nid_base:EntranceEquipmentRevolvingDoor" target="nid_base:EntraceEquipment">
+    <edge id="eid_rdfs:subClassOf56" source="nid_base:EntranceEquipmentRevolvingDoor" target="nid_base:EntraceEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1366,7 +1389,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf56" source="nid_base:QueuingEquipment" target="nid_base:PlaceAccessEquipment">
+    <edge id="eid_rdfs:subClassOf57" source="nid_base:QueuingEquipment" target="nid_base:PlaceAccessEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1389,7 +1412,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf57" source="nid_base:CommunicationService" target="nid_base:Service">
+    <edge id="eid_rdfs:subClassOf58" source="nid_base:CommunicationService" target="nid_base:Service">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1412,7 +1435,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf58" source="nid_base:InformationDesk" target="nid_base:PassengerInformationTerminal">
+    <edge id="eid_rdfs:subClassOf59" source="nid_base:InformationDesk" target="nid_base:PassengerInformationTerminal">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1435,7 +1458,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf59" source="nid_base:BabyChange" target="nid_base:SanitaryEquipment">
+    <edge id="eid_rdfs:subClassOf60" source="nid_base:BabyChange" target="nid_base:SanitaryEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1458,7 +1481,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf60" source="nid_base:VehicleAccessEquipment" target="nid_base:VehicleEquipment">
+    <edge id="eid_rdfs:subClassOf61" source="nid_base:VehicleAccessEquipment" target="nid_base:VehicleEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1481,7 +1504,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf61" source="nid_base:EmergencyService" target="nid_base:Service">
+    <edge id="eid_rdfs:subClassOf62" source="nid_base:EmergencyService" target="nid_base:Service">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1504,7 +1527,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf62" source="nid_base:Shower" target="nid_base:SanitaryEquipment">
+    <edge id="eid_rdfs:subClassOf63" source="nid_base:Shower" target="nid_base:SanitaryEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1527,7 +1550,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf63" source="nid_base:CrossingEquipmentZebra" target="nid_base:CrossingEquipment">
+    <edge id="eid_rdfs:subClassOf64" source="nid_base:CrossingEquipmentZebra" target="nid_base:CrossingEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1550,7 +1573,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf64" source="nid_base:PlaceAccessStairStaircase" target="nid_base:Stairs">
+    <edge id="eid_rdfs:subClassOf65" source="nid_base:PlaceAccessStairStaircase" target="nid_base:Stairs">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1573,7 +1596,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf65" source="nid_base:EntranceEquipmentDoor" target="nid_base:EntraceEquipment">
+    <edge id="eid_rdfs:subClassOf66" source="nid_base:EntranceEquipmentDoor" target="nid_base:EntraceEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1584,7 +1607,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf66" source="nid_base:CrossingEquipment" target="nid_base:PlaceAccessEquipment">
+    <edge id="eid_rdfs:subClassOf67" source="nid_base:CrossingEquipment" target="nid_base:PlaceAccessEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1607,7 +1630,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf67" source="nid_base:CrossingEquipmentLights" target="nid_base:CrossingEquipment">
+    <edge id="eid_rdfs:subClassOf68" source="nid_base:CrossingEquipmentLights" target="nid_base:CrossingEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1630,7 +1653,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf68" source="nid_base:TrolleyStand" target="nid_base:SiteEquipment">
+    <edge id="eid_rdfs:subClassOf69" source="nid_base:TrolleyStand" target="nid_base:SiteEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1653,7 +1676,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf69" source="nid_base:MeetingPointService" target="nid_base:CustomerService">
+    <edge id="eid_rdfs:subClassOf70" source="nid_base:MeetingPointService" target="nid_base:CustomerService">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1676,7 +1699,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf70" source="nid_base:WheelchairBabyChange" target="nid_base:SanitaryEquipment">
+    <edge id="eid_rdfs:subClassOf71" source="nid_base:WheelchairBabyChange" target="nid_base:SanitaryEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1699,7 +1722,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf71" source="nid_base:VehicleChargingEquipment" target="nid_base:PlaceEquipment">
+    <edge id="eid_rdfs:subClassOf72" source="nid_base:VehicleChargingEquipment" target="nid_base:PlaceEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1722,7 +1745,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf72" source="nid_base:WaitingRoomEquipment" target="nid_base:WaitingRoom">
+    <edge id="eid_rdfs:subClassOf73" source="nid_base:WaitingRoomEquipment" target="nid_base:WaitingRoom">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1733,7 +1756,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf73" source="nid_base:VehicleEquipment" target="nid_base:Equipment">
+    <edge id="eid_rdfs:subClassOf74" source="nid_base:VehicleEquipment" target="nid_base:Equipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1756,7 +1779,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf74" source="nid_base:CrossingEquipmentPedestrian" target="nid_base:CrossingEquipment">
+    <edge id="eid_rdfs:subClassOf75" source="nid_base:CrossingEquipmentPedestrian" target="nid_base:CrossingEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1779,7 +1802,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf75" source="nid_base:PlaceAccessStairEscalator" target="nid_base:Stairs">
+    <edge id="eid_rdfs:subClassOf76" source="nid_base:PlaceAccessStairEscalator" target="nid_base:Stairs">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1802,7 +1825,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf76" source="nid_base:EquipmentPlace" target="nid_base:SiteComponent">
+    <edge id="eid_rdfs:subClassOf77" source="nid_base:EquipmentPlace" target="nid_base:SiteComponent">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1825,7 +1848,30 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf77" source="nid_base:AssistanceForDissabledUsers" target="nid_base:AssistanceService">
+    <edge id="eid_rdfs:subClassOf78" source="nid_base:AssistanceForDissabledUsers" target="nid_base:AssistanceService">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_base:LeftLuggageService">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="230.0" x="0.0" y="0.0" />
+               <y:Fill color="#000000" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">base:LeftLuggageService</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_rdfs:subClassOf79" source="nid_base:LeftLuggageService" target="nid_base:LuggageService">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1848,7 +1894,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf78" source="nid_base:TrolleyStandEquipment" target="nid_base:StopPlaceEquipment">
+    <edge id="eid_rdfs:subClassOf80" source="nid_base:TrolleyStandEquipment" target="nid_base:StopPlaceEquipment">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
