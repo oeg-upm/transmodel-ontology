@@ -45,6 +45,44 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
 #    Object Properties
 #################################################################
 
+###  https://w3id.org/transmodel/journeys#access
+:access rdf:type owl:ObjectProperty ;
+        rdfs:domain :Passenger ;
+        rdfs:range :Access ;
+        rdfs:comment """The physical spatial possibility for a passenger to access or leave the Public Transport System. The link may be used during a Trip for :
+- The walking movement of the Passenger from a Place (Origin of the Trip) to a ScheduledStopPoint (origin of the Public Transport Trip) or;
+- The walking movement of the Passenger from a Scheduled Stop Point (destination of the Public Transport Trip) to a Place (destination of the Trip)"""@en ;
+        rdfs:label "accessPTS"@en .
+
+
+###  https://w3id.org/transmodel/journeys#accessMode
+:accessMode rdf:type owl:ObjectProperty ;
+            rdfs:domain :Passenger ;
+            rdfs:range :AccessMode ;
+            rdfs:label "accessMode"@en .
+
+
+###  https://w3id.org/transmodel/journeys#allowedLineDirections
+:allowedLineDirections rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Route ;
+                       rdfs:range :AllowedLineDirections ;
+                       rdfs:label "allowedLineDirections"@en .
+
+
+###  https://w3id.org/transmodel/journeys#blockPart
+:blockPart rdf:type owl:ObjectProperty ;
+           rdfs:domain :JourneyPart ;
+           rdfs:range :BlockPart ;
+           rdfs:label "blockPart"@en .
+
+
+###  https://w3id.org/transmodel/journeys#boardingPositionInQuay
+:boardingPositionInQuay rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Quay ;
+                        rdfs:range :BoardingPosition ;
+                        rdfs:label "boardingPositionInQuay"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#canAlight
 :canAlight rdf:type owl:ObjectProperty ;
            rdfs:domain :Passenger ;
@@ -93,6 +131,12 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
                       rdfs:label "serviceJourney"@en .
 
 
+###  https://w3id.org/transmodel/journeys#modeOfTransport
+:modeOfTransport rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Route ;
+                 rdfs:range :MeanOfTransport .
+
+
 ###  https://w3id.org/transmodel/journeys#originStop
 :originStop rdf:type owl:ObjectProperty ;
             rdfs:range :ScheduledStopPoint ;
@@ -110,6 +154,14 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
                     rdfs:domain :Route ;
                     rdfs:range :ScheduledStopPoint ;
                     rdfs:label "scheduledStopPoint"@en .
+
+
+###  https://w3id.org/transmodel/journeys#stopPlaceAssignment
+:stopPlaceAssignment rdf:type owl:ObjectProperty ;
+                     rdfs:domain :StopPlace ;
+                     rdfs:range :ScheduledStopPoint ;
+                     rdfs:comment "The allocation of a ScheduledStopPoint (i.e. a ScheduledStopPoint of a ServicePattern or JourneyPattern) to a specific StopPlace, for either a ServiceJourney or VehicleService"@en ;
+                     rdfs:label "stopAssignment"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#stopsAt
@@ -132,6 +184,13 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
                             rdfs:range :TimingLinkInJourneyPattern .
 
 
+###  https://w3id.org/transmodel/journeys#typeOfFlexibleService
+:typeOfFlexibleService rdf:type owl:ObjectProperty ;
+                       rdfs:domain :FlexibleLine ;
+                       rdfs:range :TypeOfFlexibleService ;
+                       rdfs:label "typeOfFlexibleService" .
+
+
 ###  https://w3id.org/transmodel/journeys#vehicleJourney
 :vehicleJourney rdf:type owl:ObjectProperty ;
                 rdfs:domain :Vehicle ;
@@ -144,6 +203,13 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
                        rdfs:domain :VehicleJourney ;
                        rdfs:range :DayType ;
                        rdfs:label "vehicleJourneyDayType"@en .
+
+
+###  https://w3id.org/transmodel/journeys#vehicleJourneyPart
+:vehicleJourneyPart rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Vehicle ;
+                    rdfs:range :JourneyPart ;
+                    rdfs:label "vehicleJourneyPart"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#vehicleJourneyRoute
@@ -162,6 +228,13 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
              rdfs:domain :TimingPoint ;
              rdfs:range xsd:dateTimeStamp ;
              rdfs:label "arrivalTime"@en .
+
+
+###  https://w3id.org/transmodel/journeys#buildingidentifier
+:buildingidentifier rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :PostalAddress ;
+                    rdfs:range xsd:nonNegativeInteger ;
+                    rdfs:comment "buildingIdentifier"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#headway
@@ -186,6 +259,20 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
          rdfs:label "layover"@en .
 
 
+###  https://w3id.org/transmodel/journeys#lineName
+:lineName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Line ;
+          rdfs:range rdfs:Literal ;
+          rdfs:label "lineName"@en .
+
+
+###  https://w3id.org/transmodel/journeys#lineNumber
+:lineNumber rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Line ;
+            rdfs:range xsd:nonNegativeInteger ;
+            rdfs:label "lineNumber"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#longitude
 :longitude rdf:type owl:DatatypeProperty ;
            rdfs:domain :Point ;
@@ -198,6 +285,27 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
                rdfs:range xsd:nonNegativeInteger ;
                rdfs:comment "Sequences of ScheduledStopPoint"@en ;
                rdfs:label "stopSequence"@en .
+
+
+###  https://w3id.org/transmodel/journeys#postCode
+:postCode rdf:type owl:DatatypeProperty ;
+          rdfs:domain :PostalAddress ;
+          rdfs:range xsd:nonNegativeInteger ;
+          rdfs:label "postCode"@en .
+
+
+###  https://w3id.org/transmodel/journeys#roadName
+:roadName rdf:type owl:DatatypeProperty ;
+          rdfs:domain :RoadAddress ;
+          rdfs:range rdfs:Literal ;
+          rdfs:label "roadName"@en .
+
+
+###  https://w3id.org/transmodel/journeys#roadNumber
+:roadNumber rdf:type owl:DatatypeProperty ;
+            rdfs:domain :RoadAddress ;
+            rdfs:range xsd:nonNegativeInteger ;
+            rdfs:label "roadNumber"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#runtime
@@ -213,6 +321,20 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
            rdfs:domain :HeadingInterval ;
            rdfs:range xsd:string ;
            rdfs:label "startTime"@en .
+
+
+###  https://w3id.org/transmodel/journeys#stopPlaceNumber
+:stopPlaceNumber rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :StopPlace ;
+                 rdfs:range rdfs:Literal ;
+                 rdfs:label "stopPlaceName"@en .
+
+
+###  https://w3id.org/transmodel/journeys#streetName
+:streetName rdf:type owl:DatatypeProperty ;
+            rdfs:domain :PostalAddress ;
+            rdfs:range rdfs:Literal ;
+            rdfs:label "streetName"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#time
@@ -254,10 +376,108 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
 #    Classes
 #################################################################
 
+###  https://w3id.org/transmodel/journeys#Access
+:Access rdf:type owl:Class ;
+        rdfs:comment """The physical spatial possibility for a passenger to access or leave the public transport system. The link may be used during a Trip for:
+
+- The walking movement of the Passenger from a Place (Origin of the Trip) to a ScheduledStopPoint (origin of the Public Transport Trip).
+- The walking movement of the Passenger from a Scheduled Stop Point (destination of the Public Transport Trip) to a Place (destination of the Trip)"""@en ;
+        rdfs:label "TypeOfAccess"@en .
+
+
+###  https://w3id.org/transmodel/journeys#AccessMode
+:AccessMode rdf:type owl:Class ;
+            rdfs:comment "A characterisation of the passenger movement according to the means of transport different from public transport: walking, own bike,"@en ;
+            rdfs:label "AccessMode"@en .
+
+
+###  https://w3id.org/transmodel/journeys#AccessZone
+:AccessZone rdf:type owl:Class ;
+            rdfs:comment "A Zone for which the duration to cover any Access link to a particular ScheduledStopPoint is the same"@en ;
+            rdfs:label "AccessZone"@en .
+
+
+###  https://w3id.org/transmodel/journeys#Address
+:Address rdf:type owl:Class ;
+         rdfs:comment "The descriptive data associated with a Place that can be used to describe the unique geographical context of a Place for the purposes of identifying. May be refined as either a Road Address, a Postal Address or both."@en ;
+         rdfs:label "Address"@en .
+
+
+###  https://w3id.org/transmodel/journeys#AllowedLineDirections
+:AllowedLineDirections rdf:type owl:Class ;
+                       rdfs:comment "An allowed direction that can be used on a given Route. This can be used to validate the selection of allowed values"@en ;
+                       rdfs:label "AllowedLineDirections"@en .
+
+
+###  https://w3id.org/transmodel/journeys#BeaconPoint
+:BeaconPoint rdf:type owl:Class ;
+             rdfs:subClassOf :Point ;
+             rdfs:comment "A Point where a beacon or similar device to support the automatic detection of vehicles passing by is located"@en ;
+             rdfs:label "BeaconPoint"@en .
+
+
+###  https://w3id.org/transmodel/journeys#Block
+:Block rdf:type owl:Class ;
+       rdfs:comment "The work of a vehicle from the time it leaves a ParkingPoint after parking until its next retrun to park at a ParkingPoint. Any subsequent departure form a ParkingPoint after parking marks the start of a new Block. The period of a Block must be covered by Duties."@en ;
+       rdfs:label "Block"@en .
+
+
+###  https://w3id.org/transmodel/journeys#BlockPart
+:BlockPart rdf:type owl:Class ;
+           rdfs:comment "Part of a Block corresponding to the different JourneyPart of the VehicleJourney in a Block"@en ;
+           rdfs:label "BlockPart"@en .
+
+
+###  https://w3id.org/transmodel/journeys#BoardingPosition
+:BoardingPosition rdf:type owl:Class ;
+                  rdfs:comment "A location within a Quay from which Passenger may directly board, or onto which passengers may directly alight from a Vehicle"@en ;
+                  rdfs:label "BoardingPosition"@en .
+
+
+###  https://w3id.org/transmodel/journeys#CompoundBlock
+:CompoundBlock rdf:type owl:Class ;
+               rdfs:comment "The work of a vehicle during the time it is coupled to anohter vehicle"@en ;
+               rdfs:label "CompoundBlock"@en .
+
+
+###  https://w3id.org/transmodel/journeys#CoupledJourney
+:CoupledJourney rdf:type owl:Class ;
+                owl:equivalentClass :VehicleJourney ;
+                rdfs:comment "A complete journey operated by a coupled train, composed of two or more Vehicle Journeys remaining coupled together all along a Journey Pattern. A Coupled Journey may be viewed as a single VehicleJourney."@en ;
+                rdfs:label "CoupledJourney"@en .
+
+
+###  https://w3id.org/transmodel/journeys#CourseOfJourneys
+:CourseOfJourneys rdf:type owl:Class ;
+                  rdfs:comment "A part of a Block composed of consecutive VehicleJourneys defined for the same DayType, all operated on the same Line."@en ;
+                  rdfs:label "CourseOfJourneys"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#DayType
 :DayType rdf:type owl:Class ;
          rdfs:comment "A DayType is a type of day characterised by one or more properties which affect public transport operation"@en ;
          rdfs:label "DayType"@en .
+
+
+###  https://w3id.org/transmodel/journeys#FlexibleLine
+:FlexibleLine rdf:type owl:Class ;
+              rdfs:subClassOf :Line ;
+              rdfs:comment "Specialisation of Line for flexible service. As all the service on a Line may not ve flexible, flexibility itself is described at JourneyPattern level, meaning that a separate JourneyPattern is needed for each type of flexibility available for the line"@en ;
+              rdfs:label "FlexibleLine"@en .
+
+
+###  https://w3id.org/transmodel/journeys#FlexiblePoint
+:FlexiblePoint rdf:type owl:Class ;
+               rdfs:subClassOf :Point ;
+               rdfs:comment "A specialisation of Point for FlexibleService"@en ;
+               rdfs:label "FlexiblePoint"@en .
+
+
+###  https://w3id.org/transmodel/journeys#FlexibleRoute
+:FlexibleRoute rdf:type owl:Class ;
+               rdfs:subClassOf :Route ;
+               rdfs:comment "Specialisation of Route for FlexibleService. May include both Point and Zonal areas and ordered and unordered sections."@en ;
+               rdfs:label "FlexibleRoute"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#HeadingInterval
@@ -266,8 +486,21 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
                  rdfs:label "HeadwayInterval"@en .
 
 
+###  https://w3id.org/transmodel/journeys#JourneyPart
+:JourneyPart rdf:type owl:Class ;
+             rdfs:comment "A part of a VehicleJourney created according to a specific functional purpose, for instance in situations when Vehicle coupling or separating occurrs"@en ;
+             rdfs:label "JourneyPart"@en .
+
+
+###  https://w3id.org/transmodel/journeys#JourneyPartCouple
+:JourneyPartCouple rdf:type owl:Class ;
+                   rdfs:comment "Two JourneyParts of different VehicleJourneys served simultaneously by a train set up by coupling their single Vehicles"@en ;
+                   rdfs:label "JourneyPartCouple"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#JourneyPattern
 :JourneyPattern rdf:type owl:Class ;
+                rdfs:comment "An ordered list of Scheduled Stop Points and Timing Point on a single Route, describing the pattern of working for public transport vehicles. A Journey Pattern may pass through the same Point more than once. The first point of a JourneyPattern is the origin. The last point is the destination."@en ;
                 rdfs:label "JourneyPattern"@en .
 
 
@@ -283,6 +516,25 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
       rdfs:label "Line"@en .
 
 
+###  https://w3id.org/transmodel/journeys#MeanOfTransport
+:MeanOfTransport rdf:type owl:Class ;
+                 rdfs:comment "Any Mode of Transport"@en ;
+                 rdfs:label "ModeOfTransport"@en .
+
+
+###  https://w3id.org/transmodel/journeys#OperatingDay
+:OperatingDay rdf:type owl:Class ;
+              rdfs:comment "A day of public transport operation of which the characteristics are defined within in a specific ServiceCalendar. An OperatingDay may last more than 24 hours."@en ;
+              rdfs:label "OperatingDay"@en .
+
+
+###  https://w3id.org/transmodel/journeys#ParkingPoint
+:ParkingPoint rdf:type owl:Class ;
+              rdfs:subClassOf :TimingPoint ;
+              rdfs:comment "A ParkingPoint where vehicles may stay unattended for a long time. A vehicle's return to the ParkingPoint marks the end of a Block"@en ;
+              rdfs:label "ParkingPoint"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#Passenger
 :Passenger rdf:type owl:Class ;
            rdfs:comment "A Passenger is someone who makes a Trip"@en ;
@@ -295,6 +547,28 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
        rdfs:label "Point"@en .
 
 
+###  https://w3id.org/transmodel/journeys#PostalAddress
+:PostalAddress rdf:type owl:Class ;
+               rdfs:subClassOf :Address ;
+               rdfs:comment "A specification of Address refining it by using the attributes used for conventional identification for mail. Comprises variously a building identifier, Streeet name, Post Code and other descriptions."@en ,
+                            "PostalAddress"@en .
+
+
+###  https://w3id.org/transmodel/journeys#Quay
+:Quay rdf:type owl:Class ;
+      rdfs:comment """A place where Passenger have access to Vehicles, taxi, cars or other means of transportation. A Quay may serve one or more VehicleStoppingPlace and be associated with one or more ScheduledStopPoints.
+
+A Quay may contain a subquay."""@en ;
+      rdfs:label "Quay"@en .
+
+
+###  https://w3id.org/transmodel/journeys#RoadAddress
+:RoadAddress rdf:type owl:Class ;
+             rdfs:subClassOf :Address ;
+             rdfs:comment "Specialisation of Address refining it by using the characteristics such as road number and mname use for conventional inidentification of along a road"@en ;
+             rdfs:label "RoadAddress"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#Route
 :Route rdf:type owl:Class ;
        rdfs:comment "A Route is and ordered list of located Point defining one single path through the road (or rail) network."@en ;
@@ -303,6 +577,7 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
 
 ###  https://w3id.org/transmodel/journeys#ScheduledStopPoint
 :ScheduledStopPoint rdf:type owl:Class ;
+                    owl:equivalentClass :StopPointInJourneyPattern ;
                     rdfs:subClassOf :Point ;
                     rdfs:comment "A ScheduledStopPoint is a Point where a Passenger can board or alight from a Vehicle."@en ;
                     rdfs:label "ScheduledStopPoint"@en .
@@ -316,10 +591,28 @@ by a ServiceJourneyPattern."""@en ;
          rdfs:label "ServiceJourney"@en .
 
 
+###  https://w3id.org/transmodel/journeys#ServiceCalendar
+:ServiceCalendar rdf:type owl:Class .
+
+
 ###  https://w3id.org/transmodel/journeys#ServiceJourneyPattern
 :ServiceJourneyPattern rdf:type owl:Class ;
                        rdfs:subClassOf :JourneyPattern ;
+                       rdfs:comment "The Journey Pattern for a passenger carrying Service Journey"@en ;
                        rdfs:label "ServiceJourneyPattern"@en .
+
+
+###  https://w3id.org/transmodel/journeys#StopPlace
+:StopPlace rdf:type owl:Class ;
+           rdfs:comment "A place comprising one or more locations where Vehicles may stop and where passengers may board or leave Vehicles or prepare their Trip. A StopPlace will usually have one or more wellknown names."@en ;
+           rdfs:label "StopPlace"@en .
+
+
+###  https://w3id.org/transmodel/journeys#StopPointInJourneyPattern
+:StopPointInJourneyPattern rdf:type owl:Class ;
+                           rdfs:subClassOf :Point ;
+                           rdfs:comment "A Point in Journey Pattern that is a ScheduledStopPoint"@en ;
+                           rdfs:label "StopPointInJourneyPattern"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#TimingLink
@@ -356,7 +649,22 @@ It's the same as TimingPointInJourneyPattern"""@en ;
 
 
 ###  https://w3id.org/transmodel/journeys#Trip
-:Trip rdf:type owl:Class .
+:Trip rdf:type owl:Class ;
+      rdfs:comment "The physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip."@en ;
+      rdfs:label "Trip"@en .
+
+
+###  https://w3id.org/transmodel/journeys#TypeOfFlexibleService
+:TypeOfFlexibleService rdf:type owl:Class ;
+                       rdfs:comment """TypeOfFlexibleService are:
+-. Veritual line service
+- Flexible service with main route
+- Corridor service
+- Fixed stop area-wide flexible service
+- Free area-wide flexible service
+- Mixed types of flexible service
+- Mixed type of flexible and regular service"""@en ;
+                       rdfs:label "TypeOfFlexibleService"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#Vehicle
@@ -376,6 +684,148 @@ It's the same as TimingPointInJourneyPattern"""@en ;
                        rdfs:label "VehicleJourneyLayover"@en .
 
 
+###  https://w3id.org/transmodel/journeys#VehicleStoppingPlace
+:VehicleStoppingPlace rdf:type owl:Class ;
+                      rdfs:comment """A place on the vehicle track where vehicles stop in order for passengers to board or alight from a vehicle.
+
+A vehicle track is located on the respective infrastructure link for the mode (railway element of railway network, road element of road network, etc.).
+
+A vehicle stopping place may be served by one or more quays."""@en ;
+                      rdfs:label "VehicleStoppingPlace"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/transmodel/journeys#BothDirections
+:BothDirections rdf:type owl:NamedIndividual ,
+                         :AllowedLineDirections ;
+                rdfs:label "BothDirections"@en .
+
+
+###  https://w3id.org/transmodel/journeys#Bus
+:Bus rdf:type owl:NamedIndividual ,
+              :MeanOfTransport ;
+     rdfs:label "Bus"@en .
+
+
+###  https://w3id.org/transmodel/journeys#CableCar
+:CableCar rdf:type owl:NamedIndividual ,
+                   :MeanOfTransport ;
+          rdfs:label "CableCar"@en .
+
+
+###  https://w3id.org/transmodel/journeys#CorridorService
+:CorridorService rdf:type owl:NamedIndividual ,
+                          :TypeOfFlexibleService ;
+                 rdfs:label "CorridorService"@en .
+
+
+###  https://w3id.org/transmodel/journeys#Ferry
+:Ferry rdf:type owl:NamedIndividual ,
+                :MeanOfTransport ;
+       rdfs:label "Ferry"@en .
+
+
+###  https://w3id.org/transmodel/journeys#FixedStopAreaWideFlexibleService
+:FixedStopAreaWideFlexibleService rdf:type owl:NamedIndividual ,
+                                           :TypeOfFlexibleService ;
+                                  rdfs:label "FixedStopAreaWideFlexibleService"@en .
+
+
+###  https://w3id.org/transmodel/journeys#FlexibleServiceWithMainRoute
+:FlexibleServiceWithMainRoute rdf:type owl:NamedIndividual ,
+                                       :TypeOfFlexibleService ;
+                              rdfs:label "FlexibleServiceWithMainRoute"@en .
+
+
+###  https://w3id.org/transmodel/journeys#FreeAreaWideFlexibleService
+:FreeAreaWideFlexibleService rdf:type owl:NamedIndividual ,
+                                      :TypeOfFlexibleService ;
+                             rdfs:label "FreeAreaWideFlexibleService"@en .
+
+
+###  https://w3id.org/transmodel/journeys#FromOriginToSSP
+:FromOriginToSSP rdf:type owl:NamedIndividual ,
+                          :Access .
+
+
+###  https://w3id.org/transmodel/journeys#FromSSPtoDestination
+:FromSSPtoDestination rdf:type owl:NamedIndividual ,
+                               :Access .
+
+
+###  https://w3id.org/transmodel/journeys#Funicular
+:Funicular rdf:type owl:NamedIndividual ,
+                    :MeanOfTransport ;
+           rdfs:label "Funicular"@en .
+
+
+###  https://w3id.org/transmodel/journeys#Gondola
+:Gondola rdf:type owl:NamedIndividual ,
+                  :MeanOfTransport ;
+         rdfs:label "Gondola"@en .
+
+
+###  https://w3id.org/transmodel/journeys#Metro
+:Metro rdf:type owl:NamedIndividual ,
+                :MeanOfTransport ;
+       rdfs:label "Metro"@en .
+
+
+###  https://w3id.org/transmodel/journeys#MixedTypeOfFlexibleAndRegularServices
+:MixedTypeOfFlexibleAndRegularServices rdf:type owl:NamedIndividual ,
+                                                :TypeOfFlexibleService ;
+                                       rdfs:label "MixedTypeOfFlexibleAndRegularServices"@en .
+
+
+###  https://w3id.org/transmodel/journeys#MixedTypesOfFlexibleService
+:MixedTypesOfFlexibleService rdf:type owl:NamedIndividual ,
+                                      :TypeOfFlexibleService ;
+                             rdfs:label "MixedTypesOfFlexibleService"@en .
+
+
+###  https://w3id.org/transmodel/journeys#OneDirection
+:OneDirection rdf:type owl:NamedIndividual ,
+                       :AllowedLineDirections ;
+              rdfs:label "OneDirection"@en .
+
+
+###  https://w3id.org/transmodel/journeys#OtherDirections
+:OtherDirections rdf:type owl:NamedIndividual ,
+                          :AllowedLineDirections ;
+                 rdfs:label "OtherDirections"@en .
+
+
+###  https://w3id.org/transmodel/journeys#PrivateBike
+:PrivateBike rdf:type owl:NamedIndividual ,
+                      :AccessMode .
+
+
+###  https://w3id.org/transmodel/journeys#Rail
+:Rail rdf:type owl:NamedIndividual ,
+               :MeanOfTransport ;
+      rdfs:label "Rail"@en .
+
+
+###  https://w3id.org/transmodel/journeys#Tram
+:Tram rdf:type owl:NamedIndividual ,
+               :MeanOfTransport ;
+      rdfs:label "Tram"@en .
+
+
+###  https://w3id.org/transmodel/journeys#Walking
+:Walking rdf:type owl:NamedIndividual ,
+                  :AccessMode .
+
+
+###  https://w3id.org/transmodel/journeys#virtualLineService
+:virtualLineService rdf:type owl:NamedIndividual ,
+                             :TypeOfFlexibleService ;
+                    rdfs:label "VirtualLineService"@en .
+
+
 _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
          :name "Adolfo Anton-Bravo"@en .
 
@@ -383,6 +833,18 @@ _:genid2 :mbox "adolfo.anton.bravo@upm.es"@en ;
           :name "Adolfo Anton-Bravo"@en .
 
 _:genid3 :mbox "adolfo.anton.bravo@upm.es"@en ;
+          :name "Adolfo Anton-Bravo"@en .
+
+_:genid4 :mbox "adolfo.anton.bravo@upm.es"@en ;
+          :name "Adolfo Anton-Bravo"@en .
+
+_:genid5 :mbox "adolfo.anton.bravo@upm.es"@en ;
+          :name "Adolfo Anton-Bravo"@en .
+
+_:genid6 :mbox "adolfo.anton.bravo@upm.es"@en ;
+          :name "Adolfo Anton-Bravo"@en .
+
+_:genid7 :mbox "adolfo.anton.bravo@upm.es"@en ;
           :name "Adolfo Anton-Bravo"@en .
 
 #################################################################

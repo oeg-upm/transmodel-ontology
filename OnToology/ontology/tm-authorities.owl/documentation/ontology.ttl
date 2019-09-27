@@ -6,34 +6,52 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://w3id.org/transmodel/authorities#> .
 
-<https://w3id.org/transmodel/authorities#> rdf:type owl:Ontology .
+<https://w3id.org/transmodel/authorities#> rdf:type owl:Ontology ;
+                                            owl:versionIRI <https://w3id.org/transmodel/authorities/1.0> ;
+                                            rdfs:comment "Module of the Transmodel Ontology focused on Authorities"@en ;
+                                            rdfs:label "TransmodelOntologyAuthorities"@en ;
+                                            rdfs:seeAlso "https://github.com/oeg-upm/transmodel-ontology"@en ;
+                                            :author _:genid1 ,
+                                                    ""@en ;
+                                            :description "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en .
+
+_:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
+          :name "Adolfo Anton-Bravo"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://w3id.org/transmodel/authorities#author
+:author rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/transmodel/authorities#creator
+:creator rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/transmodel/authorities#description
+:description rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/transmodel/authorities#mbox
+:mbox rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/transmodel/authorities#name
+:name rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability
-<http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability> rdf:type owl:ObjectProperty ;
-                                                                                              rdfs:domain :Organization ;
-                                                                                              rdfs:range :Responsability ;
-                                                                                              rdfs:comment "A particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, data aggreggation, data distribution, planning, operation, control, ownership, etc."@en ;
-                                                                                              rdfs:label "hasAResponsability"@en .
-
-
-###  https://w3id.org/transmodel/authorities#hasAResponsabilityRole
-:hasAResponsabilityRole rdf:type owl:ObjectProperty ;
-                        rdfs:domain :Responsability ;
-                        rdfs:range :DataAggregation ,
-                                   :DataAugmentation ,
-                                   :DataControl ,
-                                   :DataDistribution ,
-                                   :DataOperation ,
-                                   :DataOrigination ,
-                                   :DataOwnership ,
-                                   :DataPlanning ,
-                                   :DataUpdate ;
-                        rdfs:comment "The assignment of one or more roles to an Organization or an OrganizationPart as regards the responsability it will have as regards specific data (e.g. ownership, planning, etc.) and the management of this data (e.g. distribution, updates, etc.)"@en ;
-                        rdfs:label "hasAResponsabilityRole"@en .
+###  https://w3id.org/transmodel/authorities#hasAResponsability
+:hasAResponsability rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Organization ;
+                    rdfs:range :TypeOfResponsability ;
+                    rdfs:comment "A particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, data aggreggation, data distribution, planning, operation, control, ownership, etc."@en ;
+                    rdfs:label "hasAResponsabilityRole"@en .
 
 
 ###  https://w3id.org/transmodel/authorities#isGroupOfOperators
@@ -69,6 +87,12 @@
 #    Data properties
 #################################################################
 
+###  https://w3id.org/transmodel/authorities#contactDetails
+:contactDetails rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Organization ;
+                rdfs:label "contactDetails"@en .
+
+
 ###  https://w3id.org/transmodel/authorities#ownership
 :ownership rdf:type owl:DatatypeProperty ;
            rdfs:domain :Operator ,
@@ -76,6 +100,13 @@
            rdfs:range xsd:boolean ;
            rdfs:comment "publicOwnership means at least 51% of the participation of the company"@en ;
            rdfs:label "publicOwnership"@en .
+
+
+###  https://w3id.org/transmodel/authorities#parkingCapacity
+:parkingCapacity rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Parking ;
+                 rdfs:range xsd:nonNegativeInteger ;
+                 rdfs:label "parkingCapacity"@en .
 
 
 #################################################################
@@ -99,44 +130,14 @@
 ###  https://w3id.org/transmodel/authorities#ControlCenter
 :ControlCenter rdf:type owl:Class ;
                rdfs:subClassOf :OrganisationPart ;
-               rdfs:comment "An OrganisationPart for an operational team who are responsible for issuing commands to control the services"@en ,
-                            "ControlCentre"@en .
+               rdfs:comment "An OrganisationPart for an operational team who are responsible for issuing commands to control the services"@en ;
+               rdfs:label "ControlCentre"@en .
 
 
-###  https://w3id.org/transmodel/authorities#DataAggregation
-:DataAggregation rdf:type owl:Class .
-
-
-###  https://w3id.org/transmodel/authorities#DataAugmentation
-:DataAugmentation rdf:type owl:Class .
-
-
-###  https://w3id.org/transmodel/authorities#DataControl
-:DataControl rdf:type owl:Class .
-
-
-###  https://w3id.org/transmodel/authorities#DataDistribution
-:DataDistribution rdf:type owl:Class .
-
-
-###  https://w3id.org/transmodel/authorities#DataOperation
-:DataOperation rdf:type owl:Class .
-
-
-###  https://w3id.org/transmodel/authorities#DataOrigination
-:DataOrigination rdf:type owl:Class .
-
-
-###  https://w3id.org/transmodel/authorities#DataOwnership
-:DataOwnership rdf:type owl:Class .
-
-
-###  https://w3id.org/transmodel/authorities#DataPlanning
-:DataPlanning rdf:type owl:Class .
-
-
-###  https://w3id.org/transmodel/authorities#DataUpdate
-:DataUpdate rdf:type owl:Class .
+###  https://w3id.org/transmodel/authorities#CrewBase
+:CrewBase rdf:type owl:Class ;
+          rdfs:comment "A place where operating employees (e.g. drivers) report on and register their work"@en ;
+          rdfs:label "CrewBase"@en .
 
 
 ###  https://w3id.org/transmodel/authorities#Department
@@ -144,6 +145,11 @@
             rdfs:subClassOf :OrganisationPart ;
             rdfs:comment "An OrganisationPart specific to a purpose and/or organisational structure"@en ;
             rdfs:label "Department"@en .
+
+
+###  https://w3id.org/transmodel/authorities#Employee
+:Employee rdf:type owl:Class ;
+          rdfs:label "Employee"@en .
 
 
 ###  https://w3id.org/transmodel/authorities#GroupOfOperators
@@ -194,10 +200,50 @@ A TransitAgency in GTFS"""@en ;
                    rdfs:label "TransportAgent"@en .
 
 
-###  https://w3id.org/transmodel/authorities#Responsability
-:Responsability rdf:type owl:Class ;
-                rdfs:comment "Responsability (Role) is a particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, etc."@en ;
-                rdfs:label "TypeOfResponsability"@en .
+###  https://w3id.org/transmodel/authorities#Parking
+:Parking rdf:type owl:Class ;
+         rdfs:comment "Designated locations for leaving vehicles such as cars, motorcycles and bicycles."@en ;
+         rdfs:label "Parking"@en .
+
+
+###  https://w3id.org/transmodel/authorities#ParkingArea
+:ParkingArea rdf:type owl:Class ;
+             rdfs:subClassOf :ParkingComponent ;
+             rdfs:comment "A marked zone within a Parking containing ParkingBays"@en ;
+             rdfs:label "ParkingArea"@en .
+
+
+###  https://w3id.org/transmodel/authorities#ParkingBay
+:ParkingBay rdf:type owl:Class ;
+            rdfs:subClassOf :ParkingComponent ;
+            rdfs:comment "A place to park an individual vehicle"@en ;
+            rdfs:label "ParkingBay"@en .
+
+
+###  https://w3id.org/transmodel/authorities#ParkingComponent
+:ParkingComponent rdf:type owl:Class ;
+                  rdfs:comment "Generic component of a parking"@en ;
+                  rdfs:label "ParkingComponent"@en .
+
+
+###  https://w3id.org/transmodel/authorities#ParkingEntrance
+:ParkingEntrance rdf:type owl:Class ;
+                 rdfs:comment "An entrance to the Parking"@en ;
+                 rdfs:label "ParkingEntrance"@en .
+
+
+###  https://w3id.org/transmodel/authorities#ParkingEntranceForPassengers
+:ParkingEntranceForPassengers rdf:type owl:Class ;
+                              rdfs:subClassOf :ParkingEntrance ;
+                              rdfs:comment "An entrance to the Parking on foot of other out-of-vehicle mode such as a wheelchair"@en ;
+                              rdfs:label "ParkingEntranceForPassengers"@en .
+
+
+###  https://w3id.org/transmodel/authorities#ParkingEntranceForVehicles
+:ParkingEntranceForVehicles rdf:type owl:Class ;
+                            rdfs:subClassOf :ParkingEntrance ;
+                            rdfs:comment "An entrance from the road to the Parking for Vehicle"@en ;
+                            rdfs:label "ParkingEntranceForVehicles"@en .
 
 
 ###  https://w3id.org/transmodel/authorities#ServiceArea
@@ -221,7 +267,9 @@ A TransitAgency in GTFS"""@en ;
 
 
 ###  https://w3id.org/transmodel/authorities#TypeOfResponsability
-:TypeOfResponsability rdf:type owl:Class .
+:TypeOfResponsability rdf:type owl:Class ;
+                      rdfs:comment "Responsability (Role) is a particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, etc."@en ;
+                      rdfs:label "TypeOfResponsability"@en .
 
 
 ###  https://w3id.org/transmodel/authorities#Zone
@@ -233,6 +281,12 @@ A TransitAgency in GTFS"""@en ;
 - AccessZone
 - ..."""@en ;
       rdfs:label "Zone"@en .
+
+
+###  https://w3id.org/transmodel/facilities#Vehicle
+<https://w3id.org/transmodel/facilities#Vehicle> rdf:type owl:Class ;
+                                                 rdfs:comment "A PublicTransportVehicle used for carrying Passenger"@en ;
+                                                 rdfs:label "Vehicle"@en .
 
 
 #################################################################
@@ -295,5 +349,17 @@ A TransitAgency in GTFS"""@en ;
                  :Operator ,
                  :ServicedOrganisation .
 
+
+_:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
+         :name "Adolfo Anton-Bravo"@en .
+
+_:genid2 :mbox "adolfo.anton.bravo@upm.es"@en ;
+          :name "Adolfo Anton-Bravo"@en .
+
+_:genid3 :mbox "adolfo.anton.bravo@upm.es"@en ;
+          :name "Adolfo Anton-Bravo"@en .
+
+_:genid4 :mbox "adolfo.anton.bravo@upm.es"@en ;
+          :name "Adolfo Anton-Bravo"@en .
 
 ###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

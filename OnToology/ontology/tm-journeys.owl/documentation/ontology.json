@@ -29,6 +29,46 @@
     "@value" : "Adolfo Anton-Bravo"
   } ]
 }, {
+  "@id" : "_:genid4",
+  "https://w3id.org/transmodel/journeys#mbox" : [ {
+    "@language" : "en",
+    "@value" : "adolfo.anton.bravo@upm.es"
+  } ],
+  "https://w3id.org/transmodel/journeys#name" : [ {
+    "@language" : "en",
+    "@value" : "Adolfo Anton-Bravo"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "https://w3id.org/transmodel/journeys#mbox" : [ {
+    "@language" : "en",
+    "@value" : "adolfo.anton.bravo@upm.es"
+  } ],
+  "https://w3id.org/transmodel/journeys#name" : [ {
+    "@language" : "en",
+    "@value" : "Adolfo Anton-Bravo"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "https://w3id.org/transmodel/journeys#mbox" : [ {
+    "@language" : "en",
+    "@value" : "adolfo.anton.bravo@upm.es"
+  } ],
+  "https://w3id.org/transmodel/journeys#name" : [ {
+    "@language" : "en",
+    "@value" : "Adolfo Anton-Bravo"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "https://w3id.org/transmodel/journeys#mbox" : [ {
+    "@language" : "en",
+    "@value" : "adolfo.anton.bravo@upm.es"
+  } ],
+  "https://w3id.org/transmodel/journeys#name" : [ {
+    "@language" : "en",
+    "@value" : "Adolfo Anton-Bravo"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -54,6 +94,172 @@
     "@value" : "Module of the Transmodel Ontology focused on journeys. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#Access",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The physical spatial possibility for a passenger to access or leave the public transport system. The link may be used during a Trip for:\n\n- The walking movement of the Passenger from a Place (Origin of the Trip) to a ScheduledStopPoint (origin of the Public Transport Trip).\n- The walking movement of the Passenger from a Scheduled Stop Point (destination of the Public Transport Trip) to a Place (destination of the Trip)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "TypeOfAccess"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#AccessMode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A characterisation of the passenger movement according to the means of transport different from public transport: walking, own bike,"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "AccessMode"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#AccessZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Zone for which the duration to cover any Access link to a particular ScheduledStopPoint is the same"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "AccessZone"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Address",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The descriptive data associated with a Place that can be used to describe the unique geographical context of a Place for the purposes of identifying. May be refined as either a Road Address, a Postal Address or both."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Address"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#AllowedLineDirections",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An allowed direction that can be used on a given Route. This can be used to validate the selection of allowed values"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "AllowedLineDirections"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#BeaconPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Point where a beacon or similar device to support the automatic detection of vehicles passing by is located"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "BeaconPoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Block",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The work of a vehicle from the time it leaves a ParkingPoint after parking until its next retrun to park at a ParkingPoint. Any subsequent departure form a ParkingPoint after parking marks the start of a new Block. The period of a Block must be covered by Duties."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Block"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#BlockPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Part of a Block corresponding to the different JourneyPart of the VehicleJourney in a Block"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "BlockPart"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#BoardingPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A location within a Quay from which Passenger may directly board, or onto which passengers may directly alight from a Vehicle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "BoardingPosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#BothDirections",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#AllowedLineDirections" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "BothDirections"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Bus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#MeanOfTransport" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bus"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#CableCar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#MeanOfTransport" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "CableCar"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#CompoundBlock",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The work of a vehicle during the time it is coupled to anohter vehicle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "CompoundBlock"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#CorridorService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#TypeOfFlexibleService" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "CorridorService"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#CoupledJourney",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A complete journey operated by a coupled train, composed of two or more Vehicle Journeys remaining coupled together all along a Journey Pattern. A Coupled Journey may be viewed as a single VehicleJourney."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "CoupledJourney"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#CourseOfJourneys",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A part of a Block composed of consecutive VehicleJourneys defined for the same DayType, all operated on the same Line."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "CourseOfJourneys"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#DayType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -63,6 +269,96 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "DayType"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Ferry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#MeanOfTransport" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ferry"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#FixedStopAreaWideFlexibleService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#TypeOfFlexibleService" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "FixedStopAreaWideFlexibleService"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#FlexibleLine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specialisation of Line for flexible service. As all the service on a Line may not ve flexible, flexibility itself is described at JourneyPattern level, meaning that a separate JourneyPattern is needed for each type of flexibility available for the line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "FlexibleLine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Line"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#FlexiblePoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A specialisation of Point for FlexibleService"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "FlexiblePoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#FlexibleRoute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specialisation of Route for FlexibleService. May include both Point and Zonal areas and ordered and unordered sections."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "FlexibleRoute"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Route"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#FlexibleServiceWithMainRoute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#TypeOfFlexibleService" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "FlexibleServiceWithMainRoute"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#FreeAreaWideFlexibleService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#TypeOfFlexibleService" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "FreeAreaWideFlexibleService"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#FromOriginToSSP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#Access" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#FromSSPtoDestination",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#Access" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Funicular",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#MeanOfTransport" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Funicular"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Gondola",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#MeanOfTransport" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Gondola"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#HeadingInterval",
@@ -76,8 +372,34 @@
     "@value" : "HeadwayInterval"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#JourneyPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A part of a VehicleJourney created according to a specific functional purpose, for instance in situations when Vehicle coupling or separating occurrs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "JourneyPart"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#JourneyPartCouple",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Two JourneyParts of different VehicleJourneys served simultaneously by a train set up by coupling their single Vehicles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "JourneyPartCouple"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#JourneyPattern",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An ordered list of Scheduled Stop Points and Timing Point on a single Route, describing the pattern of working for public transport vehicles. A Journey Pattern may pass through the same Point more than once. The first point of a JourneyPattern is the origin. The last point is the destination."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "JourneyPattern"
@@ -105,6 +427,77 @@
     "@value" : "Line"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#MeanOfTransport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Any Mode of Transport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ModeOfTransport"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Metro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#MeanOfTransport" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Metro"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#MixedTypeOfFlexibleAndRegularServices",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#TypeOfFlexibleService" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MixedTypeOfFlexibleAndRegularServices"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#MixedTypesOfFlexibleService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#TypeOfFlexibleService" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MixedTypesOfFlexibleService"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#OneDirection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#AllowedLineDirections" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "OneDirection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#OperatingDay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A day of public transport operation of which the characteristics are defined within in a specific ServiceCalendar. An OperatingDay may last more than 24 hours."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "OperatingDay"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#OtherDirections",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#AllowedLineDirections" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "OtherDirections"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#ParkingPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A ParkingPoint where vehicles may stay unattended for a long time. A vehicle's return to the ParkingPoint marks the end of a Block"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ParkingPoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#TimingPoint"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#Passenger",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -125,6 +518,54 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#PostalAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A specification of Address refining it by using the attributes used for conventional identification for mail. Comprises variously a building identifier, Streeet name, Post Code and other descriptions."
+  }, {
+    "@language" : "en",
+    "@value" : "PostalAddress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Address"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#PrivateBike",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#AccessMode" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Quay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A place where Passenger have access to Vehicles, taxi, cars or other means of transportation. A Quay may serve one or more VehicleStoppingPlace and be associated with one or more ScheduledStopPoints.\n\nA Quay may contain a subquay."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Quay"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Rail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#MeanOfTransport" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Rail"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#RoadAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specialisation of Address refining it by using the characteristics such as road number and mname use for conventional inidentification of along a road"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "RoadAddress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Address"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#Route",
@@ -150,6 +591,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Point"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#StopPointInJourneyPattern"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#Service",
@@ -163,14 +607,46 @@
     "@value" : "ServiceJourney"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#ServiceCalendar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#ServiceJourneyPattern",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Journey Pattern for a passenger carrying Service Journey"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "ServiceJourneyPattern"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#JourneyPattern"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#StopPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A place comprising one or more locations where Vehicles may stop and where passengers may board or leave Vehicles or prepare their Trip. A StopPlace will usually have one or more wellknown names."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "StopPlace"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#StopPointInJourneyPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Point in Journey Pattern that is a ScheduledStopPoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "StopPointInJourneyPattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Point"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#TimingLink",
@@ -225,8 +701,34 @@
     "@id" : "https://w3id.org/transmodel/journeys#Point"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#Tram",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#MeanOfTransport" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tram"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#Trip",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Trip"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#TypeOfFlexibleService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "TypeOfFlexibleService are:\n-. Veritual line service\n- Flexible service with main route\n- Corridor service\n- Fixed stop area-wide flexible service\n- Free area-wide flexible service\n- Mixed types of flexible service\n- Mixed type of flexible and regular service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "TypeOfFlexibleService"
+  } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#Vehicle",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -256,6 +758,63 @@
     "@value" : "VehicleJourneyLayover"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#VehicleStoppingPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A place on the vehicle track where vehicles stop in order for passengers to board or alight from a vehicle.\n\nA vehicle track is located on the respective infrastructure link for the mode (railway element of railway network, road element of road network, etc.).\n\nA vehicle stopping place may be served by one or more quays."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "VehicleStoppingPlace"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Walking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#AccessMode" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#access",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The physical spatial possibility for a passenger to access or leave the Public Transport System. The link may be used during a Trip for :\n- The walking movement of the Passenger from a Place (Origin of the Trip) to a ScheduledStopPoint (origin of the Public Transport Trip) or;\n- The walking movement of the Passenger from a Scheduled Stop Point (destination of the Public Transport Trip) to a Place (destination of the Trip)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Passenger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "accessPTS"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Access"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#accessMode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Passenger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "accessMode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#AccessMode"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#allowedLineDirections",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Route"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "allowedLineDirections"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#AllowedLineDirections"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#arrivalTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -271,6 +830,45 @@
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#author",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#blockPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#JourneyPart"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "blockPart"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#BlockPart"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#boardingPositionInQuay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Quay"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "boardingPositionInQuay"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#BoardingPosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#buildingidentifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "buildingIdentifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#PostalAddress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#canAlight",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -393,6 +991,32 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#lineName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "lineName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#lineNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "lineNumber"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#longitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -419,6 +1043,15 @@
   "@id" : "https://w3id.org/transmodel/journeys#mbox",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#modeOfTransport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Route"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#MeanOfTransport"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#name",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -444,6 +1077,45 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "stopSequence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#postCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#PostalAddress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "postCode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#roadName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#RoadAddress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "roadName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#roadNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#RoadAddress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "roadNumber"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
@@ -500,6 +1172,36 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#stopPlaceAssignment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The allocation of a ScheduledStopPoint (i.e. a ScheduledStopPoint of a ServicePattern or JourneyPattern) to a specific StopPlace, for either a ServiceJourney or VehicleService"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#StopPlace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "stopAssignment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#ScheduledStopPoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#stopPlaceNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#StopPlace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "stopPlaceName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#stopsAt",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -511,6 +1213,19 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#ScheduledStopPoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#streetName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#PostalAddress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "streetName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#time",
@@ -582,6 +1297,18 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#typeOfFlexibleService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#FlexibleLine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "typeOfFlexibleService"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#TypeOfFlexibleService"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#vehicleJourney",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -608,6 +1335,19 @@
     "@id" : "https://w3id.org/transmodel/journeys#DayType"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#vehicleJourneyPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Vehicle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "vehicleJourneyPart"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#JourneyPart"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#vehicleJourneyRoute",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -619,6 +1359,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Route"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#virtualLineService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#TypeOfFlexibleService" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "VirtualLineService"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#waitTime",

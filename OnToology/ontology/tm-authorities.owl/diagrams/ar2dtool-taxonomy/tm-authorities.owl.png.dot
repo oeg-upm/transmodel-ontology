@@ -1,16 +1,20 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; ":ControlCenter" ":ManagementAgent" ":Department" ":Organization" ":Authority" ":TravelAgent" ":Zone" ":ServicedOrganisation" ":OrganisationUnit" ":AdministrativeZone" ":OrganisationPart" ":Operator" ":OtherOrganization" ; /*classes style*/
-	":ServicedOrganisation" -> ":Organization" [ label = "rdfs:subClassOf" ];
-	":ManagementAgent" -> ":OtherOrganization" [ label = "rdfs:subClassOf" ];
-	":OtherOrganization" -> ":Organization" [ label = "rdfs:subClassOf" ];
-	":ControlCenter" -> ":OrganisationPart" [ label = "rdfs:subClassOf" ];
-	":AdministrativeZone" -> ":Zone" [ label = "rdfs:subClassOf" ];
-	":TravelAgent" -> ":OtherOrganization" [ label = "rdfs:subClassOf" ];
-	":Department" -> ":OrganisationPart" [ label = "rdfs:subClassOf" ];
-	":OrganisationUnit" -> ":OrganisationPart" [ label = "rdfs:subClassOf" ];
-	":Authority" -> ":Organization" [ label = "rdfs:subClassOf" ];
-	":Operator" -> ":Organization" [ label = "rdfs:subClassOf" ];
+node [shape = rectangle, color="black"]; "base:ParkingEntranceForVehicles" "base:ControlCenter" "base:ManagementAgent" "base:Department" "base:ParkingArea" "base:Organization" "base:Authority" "base:ParkingComponent" "base:ParkingBay" "base:TravelAgent" "base:Zone" "base:ServicedOrganisation" "base:ParkingEntranceForPassengers" "base:OrganisationUnit" "base:AdministrativeZone" "base:OrganisationPart" "base:ParkingEntrance" "base:Operator" "base:OtherOrganization" ; /*classes style*/
+	"base:OtherOrganization" -> "base:Organization" [ label = "rdfs:subClassOf" ];
+	"base:ServicedOrganisation" -> "base:Organization" [ label = "rdfs:subClassOf" ];
+	"base:ManagementAgent" -> "base:OtherOrganization" [ label = "rdfs:subClassOf" ];
+	"base:ControlCenter" -> "base:OrganisationPart" [ label = "rdfs:subClassOf" ];
+	"base:ParkingArea" -> "base:ParkingComponent" [ label = "rdfs:subClassOf" ];
+	"base:ParkingEntranceForVehicles" -> "base:ParkingEntrance" [ label = "rdfs:subClassOf" ];
+	"base:TravelAgent" -> "base:OtherOrganization" [ label = "rdfs:subClassOf" ];
+	"base:AdministrativeZone" -> "base:Zone" [ label = "rdfs:subClassOf" ];
+	"base:Department" -> "base:OrganisationPart" [ label = "rdfs:subClassOf" ];
+	"base:OrganisationUnit" -> "base:OrganisationPart" [ label = "rdfs:subClassOf" ];
+	"base:Authority" -> "base:Organization" [ label = "rdfs:subClassOf" ];
+	"base:Operator" -> "base:Organization" [ label = "rdfs:subClassOf" ];
+	"base:ParkingBay" -> "base:ParkingComponent" [ label = "rdfs:subClassOf" ];
+	"base:ParkingEntranceForPassengers" -> "base:ParkingEntrance" [ label = "rdfs:subClassOf" ];
 
 }

@@ -1,16 +1,16 @@
 {
   "@context" : {
+    "ParkingComponent" : {
+      "@id" : "https://w3id.org/transmodel/authorities#ParkingComponent"
+    },
     "TypeOfResponsability" : {
       "@id" : "https://w3id.org/transmodel/authorities#TypeOfResponsability"
     },
+    "ParkingEntrance" : {
+      "@id" : "https://w3id.org/transmodel/authorities#ParkingEntrance"
+    },
     "OtherOrganization" : {
       "@id" : "https://w3id.org/transmodel/authorities#OtherOrganization"
-    },
-    "DataUpdate" : {
-      "@id" : "https://w3id.org/transmodel/authorities#DataUpdate"
-    },
-    "Responsability" : {
-      "@id" : "https://w3id.org/transmodel/authorities#Responsability"
     },
     "Organization" : {
       "@id" : "https://w3id.org/transmodel/authorities#Organization"
@@ -18,9 +18,6 @@
     "operatesInAdministrativeZone" : {
       "@id" : "https://w3id.org/transmodel/authorities#operatesInAdministrativeZone",
       "@type" : "@id"
-    },
-    "DataOwnership" : {
-      "@id" : "https://w3id.org/transmodel/authorities#DataOwnership"
     },
     "Department" : {
       "@id" : "https://w3id.org/transmodel/authorities#Department"
@@ -34,6 +31,9 @@
     "OrganisationUnit" : {
       "@id" : "https://w3id.org/transmodel/authorities#OrganisationUnit"
     },
+    "author" : {
+      "@id" : "https://w3id.org/transmodel/authorities#author"
+    },
     "ControlCenter" : {
       "@id" : "https://w3id.org/transmodel/authorities#ControlCenter"
     },
@@ -41,28 +41,35 @@
       "@id" : "https://w3id.org/transmodel/authorities#isPartOf",
       "@type" : "@id"
     },
+    "mbox" : {
+      "@id" : "https://w3id.org/transmodel/authorities#mbox"
+    },
+    "parkingCapacity" : {
+      "@id" : "https://w3id.org/transmodel/authorities#parkingCapacity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
     "GroupOfOperators" : {
       "@id" : "https://w3id.org/transmodel/authorities#GroupOfOperators"
-    },
-    "DataAugmentation" : {
-      "@id" : "https://w3id.org/transmodel/authorities#DataAugmentation"
     },
     "providesService" : {
       "@id" : "https://w3id.org/transmodel/authorities#providesService",
       "@type" : "@id"
     },
-    "DataPlanning" : {
-      "@id" : "https://w3id.org/transmodel/authorities#DataPlanning"
-    },
     "hasAResponsability" : {
-      "@id" : "http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability",
+      "@id" : "https://w3id.org/transmodel/authorities#hasAResponsability",
       "@type" : "@id"
     },
-    "DataOperation" : {
-      "@id" : "https://w3id.org/transmodel/authorities#DataOperation"
+    "creator" : {
+      "@id" : "https://w3id.org/transmodel/authorities#creator"
     },
-    "DataOrigination" : {
-      "@id" : "https://w3id.org/transmodel/authorities#DataOrigination"
+    "name" : {
+      "@id" : "https://w3id.org/transmodel/authorities#name"
+    },
+    "contactDetails" : {
+      "@id" : "https://w3id.org/transmodel/authorities#contactDetails"
+    },
+    "ParkingBay" : {
+      "@id" : "https://w3id.org/transmodel/authorities#ParkingBay"
     },
     "Zone" : {
       "@id" : "https://w3id.org/transmodel/authorities#Zone"
@@ -80,15 +87,26 @@
     "AdministrativeZone" : {
       "@id" : "https://w3id.org/transmodel/authorities#AdministrativeZone"
     },
-    "hasAResponsabilityRole" : {
-      "@id" : "https://w3id.org/transmodel/authorities#hasAResponsabilityRole",
-      "@type" : "@id"
+    "ParkingArea" : {
+      "@id" : "https://w3id.org/transmodel/authorities#ParkingArea"
+    },
+    "ParkingEntranceForPassengers" : {
+      "@id" : "https://w3id.org/transmodel/authorities#ParkingEntranceForPassengers"
+    },
+    "Parking" : {
+      "@id" : "https://w3id.org/transmodel/authorities#Parking"
     },
     "Operator" : {
       "@id" : "https://w3id.org/transmodel/authorities#Operator"
     },
-    "DataAggregation" : {
-      "@id" : "https://w3id.org/transmodel/authorities#DataAggregation"
+    "Employee" : {
+      "@id" : "https://w3id.org/transmodel/authorities#Employee"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "CrewBase" : {
+      "@id" : "https://w3id.org/transmodel/authorities#CrewBase"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
@@ -97,17 +115,20 @@
       "@id" : "https://w3id.org/transmodel/authorities#ownership",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
+    "ParkingEntranceForVehicles" : {
+      "@id" : "https://w3id.org/transmodel/authorities#ParkingEntranceForVehicles"
+    },
     "OrganisationPart" : {
       "@id" : "https://w3id.org/transmodel/authorities#OrganisationPart"
+    },
+    "Vehicle" : {
+      "@id" : "https://w3id.org/transmodel/facilities#Vehicle"
     },
     "ServiceArea" : {
       "@id" : "https://w3id.org/transmodel/authorities#ServiceArea"
     },
-    "DataDistribution" : {
-      "@id" : "https://w3id.org/transmodel/authorities#DataDistribution"
-    },
-    "DataControl" : {
-      "@id" : "https://w3id.org/transmodel/authorities#DataControl"
+    "description" : {
+      "@id" : "https://w3id.org/transmodel/authorities#description"
     },
     "TravelAgent" : {
       "@id" : "https://w3id.org/transmodel/authorities#TravelAgent"

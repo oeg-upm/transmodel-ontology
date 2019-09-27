@@ -14,12 +14,19 @@
     "PlaceEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#PlaceEquipment"
     },
+    "wheelchairAreas" : {
+      "@id" : "https://w3id.org/transmodel/facilities#wheelchairAreas",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "isUsedBy" : {
       "@id" : "https://w3id.org/transmodel/facilities#isUsedBy",
       "@type" : "@id"
     },
     "Garage" : {
       "@id" : "https://w3id.org/transmodel/facilities#Garage"
+    },
+    "TypeOfPlaceAccessStair" : {
+      "@id" : "https://w3id.org/transmodel/facilities#TypeOfPlaceAccessStair"
     },
     "EmergencyService" : {
       "@id" : "https://w3id.org/transmodel/facilities#EmergencyService"
@@ -33,32 +40,83 @@
     "SanitaryEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#SanitaryEquipment"
     },
+    "TypeOfCongestion" : {
+      "@id" : "https://w3id.org/transmodel/facilities#TypeOfCongestion"
+    },
+    "VehicleType" : {
+      "@id" : "https://w3id.org/transmodel/facilities#VehicleType"
+    },
+    "checkConstraint" : {
+      "@id" : "https://w3id.org/transmodel/facilities#checkConstraint",
+      "@type" : "@id"
+    },
     "WaitingRoomEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#WaitingRoomEquipment"
     },
     "InformationLeaflet" : {
       "@id" : "https://w3id.org/transmodel/facilities#InformationLeaflet"
     },
-    "InformationTerminal" : {
-      "@id" : "https://w3id.org/transmodel/facilities#InformationTerminal"
+    "Screening" : {
+      "@id" : "https://w3id.org/transmodel/facilities#Screening"
+    },
+    "PassengerArea" : {
+      "@id" : "https://w3id.org/transmodel/facilities#PassengerArea"
+    },
+    "StopPlace" : {
+      "@id" : "https://w3id.org/transmodel/facilities#StopPlace"
+    },
+    "typeOfEquipment" : {
+      "@id" : "https://w3id.org/transmodel/facilities#typeOfEquipment",
+      "@type" : "@id"
     },
     "Equipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#Equipment"
     },
-    "EntranceEquipmentRevolvingDoor" : {
-      "@id" : "https://w3id.org/transmodel/facilities#EntranceEquipmentRevolvingDoor"
+    "ConstraintDelay" : {
+      "@id" : "https://w3id.org/transmodel/facilities#ConstraintDelay"
+    },
+    "typeOfSanitaryEquipment" : {
+      "@id" : "https://w3id.org/transmodel/facilities#typeOfSanitaryEquipment",
+      "@type" : "@id"
+    },
+    "typeOfVehicle" : {
+      "@id" : "https://w3id.org/transmodel/facilities#typeOfVehicle",
+      "@type" : "@id"
+    },
+    "typeOfEntranceEquipment" : {
+      "@id" : "https://w3id.org/transmodel/facilities#typeOfEntranceEquipment",
+      "@type" : "@id"
+    },
+    "HiringService" : {
+      "@id" : "https://w3id.org/transmodel/facilities#HiringService"
     },
     "RubishDisposal" : {
       "@id" : "https://w3id.org/transmodel/facilities#RubishDisposal"
     },
+    "activatedEquipment" : {
+      "@id" : "https://w3id.org/transmodel/facilities#activatedEquipment",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "SiteComponent" : {
       "@id" : "https://w3id.org/transmodel/facilities#SiteComponent"
+    },
+    "siteComponentTimePenalty" : {
+      "@id" : "https://w3id.org/transmodel/facilities#siteComponentTimePenalty",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "makesAServiceJourney" : {
+      "@id" : "https://w3id.org/transmodel/journeys#makesAServiceJourney",
+      "@type" : "@id"
     },
     "MeetingPointService" : {
       "@id" : "https://w3id.org/transmodel/facilities#MeetingPointService"
     },
     "CrossingEquipmentLights" : {
       "@id" : "https://w3id.org/transmodel/facilities#CrossingEquipmentLights"
+    },
+    "accessibilityAssessment" : {
+      "@id" : "https://w3id.org/transmodel/facilities#accessibilityAssessment",
+      "@type" : "@id"
     },
     "typeOfCycleEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#typeOfCycleEquipment",
@@ -74,8 +132,22 @@
     "author" : {
       "@id" : "https://w3id.org/transmodel/facilities#author"
     },
+    "StopPlaceComponent" : {
+      "@id" : "https://w3id.org/transmodel/facilities#StopPlaceComponent"
+    },
+    "typeOfPlaceAccessStair" : {
+      "@id" : "https://w3id.org/transmodel/facilities#typeOfPlaceAccessStair",
+      "@type" : "@id"
+    },
+    "BookingOffice" : {
+      "@id" : "https://w3id.org/transmodel/facilities#BookingOffice"
+    },
     "mbox" : {
       "@id" : "https://w3id.org/transmodel/facilities#mbox"
+    },
+    "longitude" : {
+      "@id" : "https://w3id.org/transmodel/facilities#longitude",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "LeftLuggageService" : {
       "@id" : "https://w3id.org/transmodel/facilities#LeftLuggageService"
@@ -83,8 +155,8 @@
     "facilityLocation" : {
       "@id" : "https://w3id.org/transmodel/facilities#facilityLocation"
     },
-    "TypeOfCycleEquipment" : {
-      "@id" : "https://w3id.org/transmodel/facilities#TypeOfCycleEquipment"
+    "TypeOfAccessibilityTools" : {
+      "@id" : "https://w3id.org/transmodel/facilities#TypeOfAccessibilityTools"
     },
     "CycleOperatingEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#CycleOperatingEquipment"
@@ -96,6 +168,10 @@
     "CrossingEquipmentZebra" : {
       "@id" : "https://w3id.org/transmodel/facilities#CrossingEquipmentZebra"
     },
+    "typeOfCheckConstraint" : {
+      "@id" : "https://w3id.org/transmodel/facilities#typeOfCheckConstraint",
+      "@type" : "@id"
+    },
     "typeOfEmergencyService" : {
       "@id" : "https://w3id.org/transmodel/facilities#typeOfEmergencyService",
       "@type" : "@id"
@@ -103,11 +179,18 @@
     "PassengerInformationPrintedMaterial" : {
       "@id" : "https://w3id.org/transmodel/facilities#PassengerInformationPrintedMaterial"
     },
+    "TypeOfSanitaryEquipment" : {
+      "@id" : "https://w3id.org/transmodel/facilities#TypeOfSanitaryEquipment"
+    },
+    "typeOfAccessFeature" : {
+      "@id" : "https://w3id.org/transmodel/facilities#typeOfAccessFeature",
+      "@type" : "@id"
+    },
     "WaitingRoom" : {
       "@id" : "https://w3id.org/transmodel/facilities#WaitingRoom"
     },
-    "PlaceAccessStairEscalator" : {
-      "@id" : "https://w3id.org/transmodel/facilities#PlaceAccessStairEscalator"
+    "WheelchairVehicleEquipment" : {
+      "@id" : "https://w3id.org/transmodel/facilities#WheelchairVehicleEquipment"
     },
     "TypeOfWaitingRoom" : {
       "@id" : "https://w3id.org/transmodel/facilities#TypeOfWaitingRoom"
@@ -115,8 +198,15 @@
     "CustomerService" : {
       "@id" : "https://w3id.org/transmodel/facilities#CustomerService"
     },
+    "TypeOfCheckConstraint" : {
+      "@id" : "https://w3id.org/transmodel/facilities#TypeOfCheckConstraint"
+    },
     "AssistanceForDissabledUsers" : {
       "@id" : "https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers"
+    },
+    "latitude" : {
+      "@id" : "https://w3id.org/transmodel/facilities#latitude",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "AssistanceService" : {
       "@id" : "https://w3id.org/transmodel/facilities#AssistanceService"
@@ -131,8 +221,15 @@
     "LuggageLocker" : {
       "@id" : "https://w3id.org/transmodel/facilities#LuggageLocker"
     },
+    "accessDimensions" : {
+      "@id" : "https://w3id.org/transmodel/facilities#accessDimensions",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
     "PassengerEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#PassengerEquipment"
+    },
+    "TypeOfGenderLimitation" : {
+      "@id" : "https://w3id.org/transmodel/facilities#TypeOfGenderLimitation"
     },
     "creator" : {
       "@id" : "https://w3id.org/transmodel/facilities#creator"
@@ -140,6 +237,13 @@
     "name" : {
       "@id" : "https://w3id.org/transmodel/facilities#name",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Constraint" : {
+      "@id" : "https://w3id.org/transmodel/facilities#Constraint"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
     },
     "facilityRequirement" : {
       "@id" : "https://w3id.org/transmodel/facilities#facilityRequirement",
@@ -149,11 +253,9 @@
       "@id" : "https://w3id.org/transmodel/facilities#facilityName",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
-    "TelematicInformationService" : {
-      "@id" : "https://w3id.org/transmodel/facilities#TelematicInformationService"
-    },
-    "InformationDesk" : {
-      "@id" : "https://w3id.org/transmodel/facilities#InformationDesk"
+    "accomodation" : {
+      "@id" : "https://w3id.org/transmodel/facilities#accomodation",
+      "@type" : "@id"
     },
     "Facility" : {
       "@id" : "https://w3id.org/transmodel/facilities#Facility"
@@ -164,6 +266,10 @@
     "LuggageService" : {
       "@id" : "https://w3id.org/transmodel/facilities#LuggageService"
     },
+    "typeOfCongestion" : {
+      "@id" : "https://w3id.org/transmodel/facilities#typeOfCongestion",
+      "@type" : "@id"
+    },
     "TypeOfEmergencyService" : {
       "@id" : "https://w3id.org/transmodel/facilities#TypeOfEmergencyService"
     },
@@ -173,6 +279,13 @@
     "Passenger" : {
       "@id" : "https://w3id.org/transmodel/facilities#Passenger"
     },
+    "hasAServiceJourneyPattern" : {
+      "@id" : "https://w3id.org/transmodel/journeys#hasAServiceJourneyPattern",
+      "@type" : "@id"
+    },
+    "AccessSpace" : {
+      "@id" : "https://w3id.org/transmodel/facilities#AccessSpace"
+    },
     "QueuingEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#QueuingEquipment"
     },
@@ -181,6 +294,9 @@
     },
     "CommunicationService" : {
       "@id" : "https://w3id.org/transmodel/facilities#CommunicationService"
+    },
+    "Immigration" : {
+      "@id" : "https://w3id.org/transmodel/facilities#Immigration"
     },
     "SignEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#SignEquipment"
@@ -197,8 +313,17 @@
     "RetailService" : {
       "@id" : "https://w3id.org/transmodel/facilities#RetailService"
     },
+    "TypeOfHandrail" : {
+      "@id" : "https://w3id.org/transmodel/facilities#TypeOfHandrail"
+    },
     "ComplaintsService" : {
       "@id" : "https://w3id.org/transmodel/facilities#ComplaintsService"
+    },
+    "FreeWifi" : {
+      "@id" : "https://w3id.org/transmodel/facilities#FreeWifi"
+    },
+    "TicketControl" : {
+      "@id" : "https://w3id.org/transmodel/facilities#TicketControl"
     },
     "AccessAreaDimensions" : {
       "@id" : "https://w3id.org/transmodel/facilities#AccessAreaDimensions"
@@ -209,11 +334,18 @@
     "LuggageLockerEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#LuggageLockerEquipment"
     },
+    "accessibilityLimitation" : {
+      "@id" : "https://w3id.org/transmodel/facilities#accessibilityLimitation",
+      "@type" : "@id"
+    },
     "Lifts" : {
       "@id" : "https://w3id.org/transmodel/facilities#Lifts"
     },
     "HeadingSign" : {
       "@id" : "https://w3id.org/transmodel/facilities#HeadingSign"
+    },
+    "BeaconPoint" : {
+      "@id" : "https://w3id.org/transmodel/journeys#BeaconPoint"
     },
     "LuggageTrolley" : {
       "@id" : "https://w3id.org/transmodel/facilities#LuggageTrolley"
@@ -221,26 +353,49 @@
     "Porterage" : {
       "@id" : "https://w3id.org/transmodel/facilities#Porterage"
     },
+    "Point" : {
+      "@id" : "https://w3id.org/transmodel/journeys#Point"
+    },
+    "PostOfficeService" : {
+      "@id" : "https://w3id.org/transmodel/facilities#PostOfficeService"
+    },
     "PlaceAccessEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#PlaceAccessEquipment"
-    },
-    "EntranceEquipmentBarrier" : {
-      "@id" : "https://w3id.org/transmodel/facilities#EntranceEquipmentBarrier"
     },
     "MoneyService" : {
       "@id" : "https://w3id.org/transmodel/facilities#MoneyService"
     },
+    "TypeOfEntranceEquipment" : {
+      "@id" : "https://w3id.org/transmodel/facilities#TypeOfEntranceEquipment"
+    },
     "TrolleyStandEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#TrolleyStandEquipment"
+    },
+    "TypeOfEquipment" : {
+      "@id" : "https://w3id.org/transmodel/facilities#TypeOfEquipment"
     },
     "PassengerSafetyEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#PassengerSafetyEquipment"
     },
+    "typeOfHandrail" : {
+      "@id" : "https://w3id.org/transmodel/facilities#typeOfHandrail",
+      "@type" : "@id"
+    },
     "SeatingEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#SeatingEquipment"
     },
+    "ActivationLink" : {
+      "@id" : "https://w3id.org/transmodel/facilities#ActivationLink"
+    },
     "WaitingEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#WaitingEquipment"
+    },
+    "ConstraintThroughput" : {
+      "@id" : "https://w3id.org/transmodel/facilities#ConstraintThroughput"
+    },
+    "typeOfAccessibilityTools" : {
+      "@id" : "https://w3id.org/transmodel/facilities#typeOfAccessibilityTools",
+      "@type" : "@id"
     },
     "StopPlaceEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#StopPlaceEquipment"
@@ -248,23 +403,40 @@
     "PassengerInformationEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#PassengerInformationEquipment"
     },
+    "CommercialService" : {
+      "@id" : "https://w3id.org/transmodel/facilities#CommercialService"
+    },
+    "ConstraintOfAccess" : {
+      "@id" : "https://w3id.org/transmodel/facilities#ConstraintOfAccess"
+    },
+    "TypeOfAccessFeature" : {
+      "@id" : "https://w3id.org/transmodel/facilities#TypeOfAccessFeature"
+    },
+    "StatusOfEquipment" : {
+      "@id" : "https://w3id.org/transmodel/facilities#StatusOfEquipment"
+    },
+    "activateEquipment" : {
+      "@id" : "https://w3id.org/transmodel/facilities#activateEquipment",
+      "@type" : "@id"
+    },
     "Site" : {
       "@id" : "https://w3id.org/transmodel/facilities#Site"
     },
+    "activationAssignment" : {
+      "@id" : "https://w3id.org/transmodel/facilities#activationAssignment",
+      "@type" : "@id"
+    },
     "PassengerInformationTerminal" : {
       "@id" : "https://w3id.org/transmodel/facilities#PassengerInformationTerminal"
+    },
+    "AccessibilityLimitation" : {
+      "@id" : "https://w3id.org/transmodel/facilities#AccessibilityLimitation"
     },
     "Entrances" : {
       "@id" : "https://w3id.org/transmodel/facilities#Entrances"
     },
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
-    },
-    "Component" : {
-      "@id" : "https://w3id.org/transmodel/facilities#Component"
-    },
-    "PlaceAccessStairStair" : {
-      "@id" : "https://w3id.org/transmodel/facilities#PlaceAccessStairStair"
     },
     "TicketingService" : {
       "@id" : "https://w3id.org/transmodel/facilities#TicketingService"
@@ -278,12 +450,13 @@
     "RoughSurface" : {
       "@id" : "https://w3id.org/transmodel/facilities#RoughSurface"
     },
+    "typeOfPassengerInformationDesk" : {
+      "@id" : "https://w3id.org/transmodel/facilities#typeOfPassengerInformationDesk",
+      "@type" : "@id"
+    },
     "typeOfCateringService" : {
       "@id" : "https://w3id.org/transmodel/facilities#typeOfCateringService",
       "@type" : "@id"
-    },
-    "PlaceAccessStairStaircase" : {
-      "@id" : "https://w3id.org/transmodel/facilities#PlaceAccessStairStaircase"
     },
     "EquipmentPlace" : {
       "@id" : "https://w3id.org/transmodel/facilities#EquipmentPlace"
@@ -306,6 +479,13 @@
     "CrossingEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#CrossingEquipment"
     },
+    "AccessibilityAssessment" : {
+      "@id" : "https://w3id.org/transmodel/facilities#AccessibilityAssessment"
+    },
+    "typeOfGenderLimitation" : {
+      "@id" : "https://w3id.org/transmodel/facilities#typeOfGenderLimitation",
+      "@type" : "@id"
+    },
     "VehicleMode" : {
       "@id" : "https://w3id.org/transmodel/facilities#VehicleMode"
     },
@@ -316,11 +496,22 @@
     "CrossingEquipmentPedestrian" : {
       "@id" : "https://w3id.org/transmodel/facilities#CrossingEquipmentPedestrian"
     },
+    "TypeOfAccommodation" : {
+      "@id" : "https://w3id.org/transmodel/facilities#TypeOfAccommodation"
+    },
     "Stairs" : {
       "@id" : "https://w3id.org/transmodel/facilities#Stairs"
     },
     "Vehicle" : {
       "@id" : "https://w3id.org/transmodel/facilities#Vehicle"
+    },
+    "constraintThroughput" : {
+      "@id" : "https://w3id.org/transmodel/facilities#constraintThroughput",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "stopPlaceEntrance" : {
+      "@id" : "https://w3id.org/transmodel/facilities#stopPlaceEntrance",
+      "@type" : "@id"
     },
     "siteName" : {
       "@id" : "https://w3id.org/transmodel/facilities#siteName",
@@ -333,6 +524,9 @@
     "WheelchairAccessToilet" : {
       "@id" : "https://w3id.org/transmodel/facilities#WheelchairAccessToilet"
     },
+    "TypeOfInformationDesk" : {
+      "@id" : "https://w3id.org/transmodel/facilities#TypeOfInformationDesk"
+    },
     "VehicleChargingEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#VehicleChargingEquipment"
     },
@@ -340,8 +534,18 @@
       "@id" : "https://w3id.org/transmodel/facilities#description",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
+    "CheckIn" : {
+      "@id" : "https://w3id.org/transmodel/facilities#CheckIn"
+    },
     "Ramp" : {
       "@id" : "https://w3id.org/transmodel/facilities#Ramp"
+    },
+    "stopPlaceComponent" : {
+      "@id" : "https://w3id.org/transmodel/facilities#stopPlaceComponent",
+      "@type" : "@id"
+    },
+    "ActivationPoint" : {
+      "@id" : "https://w3id.org/transmodel/facilities#ActivationPoint"
     },
     "TicketValidatorEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#TicketValidatorEquipment"
@@ -351,9 +555,6 @@
     },
     "LostProperties" : {
       "@id" : "https://w3id.org/transmodel/facilities#LostProperties"
-    },
-    "EntranceEquipmentDoor" : {
-      "@id" : "https://w3id.org/transmodel/facilities#EntranceEquipmentDoor"
     }
   }
 }

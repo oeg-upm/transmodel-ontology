@@ -1,16 +1,24 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "base:HeadingInterval" "base:DayType" "base:ServiceJourneyPattern" "base:Service" "base:TimingPoint" "base:ScheduledStopPoint" "base:TimingLinkInJourneyPattern" "base:Route" "base:Vehicle" "base:TimingPointInJourneyPattern" "base:Passenger" "base:JourneyPattern" "base:JourneyPatternLayover" "base:Point" "base:TimingLink" "base:VehicleJourney" ; /*classes style*/
-	"base:" -> "954997d:16d3fa32c6d:-7ffc" [ label = "base:author" ];
-	"base:" -> "https://w3id.org/transmodel/journeys/1.0" [ label = "owl:versionIRI" ];
+node [shape = rectangle, color="orange"]; "base:JourneyPatternLayover" "base:PostalAddress" "base:HeadingInterval" "base:MeanOfTransport" "base:JourneyPart" "base:TypeOfFlexibleService" "base:Point" "base:TimingPointInJourneyPattern" "base:VehicleJourney" "base:StopPointInJourneyPattern" "base:BoardingPosition" "base:FlexibleLine" "base:TimingPoint" "base:DayType" "base:JourneyPattern" "base:Route" "base:Quay" "base:ServiceJourneyPattern" "base:AllowedLineDirections" "base:AccessMode" "base:TimingLink" "base:Access" "base:Vehicle" "base:ScheduledStopPoint" "base:StopPlace" "base:TimingLinkInJourneyPattern" "base:BlockPart" "base:Line" "base:Passenger" "base:CoupledJourney" "base:Service" "base:RoadAddress" ; /*classes style*/
+	"base:ScheduledStopPoint" -> "base:StopPointInJourneyPattern" [ label = "owl:equivalentClass" ];
 	"base:TimingPoint" -> "base:TimingPointInJourneyPattern" [ label = "owl:equivalentClass" ];
+	"base:" -> "2d17aa99:16d71a9f4f4:-7ffc" [ label = "base:author" ];
+	"base:" -> "https://w3id.org/transmodel/journeys/1.0" [ label = "owl:versionIRI" ];
+	"base:CoupledJourney" -> "base:VehicleJourney" [ label = "owl:equivalentClass" ];
+	"base:StopPlace" -> "rdfs:Literal" [ label = "base:stopPlaceNumber" ];
+	"base:Passenger" -> "base:AccessMode" [ label = "base:accessMode" ];
 	"base:Passenger" -> "base:ScheduledStopPoint" [ label = "base:canAlight" ];
-	"base:Point" -> "owl:Thing" [ label = "base:longitude" ];
+	"base:Line" -> "xsd:nonNegativeInteger" [ label = "base:lineNumber" ];
 	"base:TimingLink" -> "base:TimingPoint" [ label = "base:timingLink" ];
+	"base:Point" -> "owl:Thing" [ label = "base:longitude" ];
 	"base:Passenger" -> "base:ScheduledStopPoint" [ label = "base:canBoard" ];
 	"base:JourneyPattern" -> "xsd:dateTimeStamp" [ label = "base:layover" ];
 	"base:VehicleJourney" -> "base:JourneyPattern" [ label = "base:followsJourneyPattern" ];
+	"base:Line" -> "rdfs:Literal" [ label = "base:lineName" ];
+	"base:PostalAddress" -> "rdfs:Literal" [ label = "base:streetName" ];
+	"base:RoadAddress" -> "rdfs:Literal" [ label = "base:roadName" ];
 	"base:VehicleJourney" -> "base:Route" [ label = "base:vehicleJourneyRoute" ];
 	"base:Passenger" -> "base:Service" [ label = "base:makesAServiceJourney" ];
 	"owl:Thing" -> "base:Route" [ label = "base:route" ];
@@ -18,20 +26,31 @@ node [shape = rectangle, color="orange"]; "base:HeadingInterval" "base:DayType" 
 	"owl:Thing" -> "base:ScheduledStopPoint" [ label = "base:destinationStop" ];
 	"base:JourneyPattern" -> "xsd:nonNegativeInteger" [ label = "base:runtime" ];
 	"base:TimingPoint" -> "xsd:dateTimeStamp" [ label = "base:arrivalTime" ];
+	"base:Passenger" -> "base:Access" [ label = "base:access" ];
 	"base:Vehicle" -> "base:VehicleJourney" [ label = "base:vehicleJourney" ];
+	"base:Vehicle" -> "base:JourneyPart" [ label = "base:vehicleJourneyPart" ];
+	"base:PostalAddress" -> "xsd:nonNegativeInteger" [ label = "base:buildingidentifier" ];
 	"base:JourneyPatternLayover" -> "xsd:dateTimeStamp" [ label = "base:time" ];
 	"owl:Thing" -> "base:ScheduledStopPoint" [ label = "base:originStop" ];
+	"base:JourneyPart" -> "base:BlockPart" [ label = "base:blockPart" ];
+	"base:StopPlace" -> "base:ScheduledStopPoint" [ label = "base:stopPlaceAssignment" ];
 	"base:JourneyPattern" -> "base:Point" [ label = "base:journeyPatternPoint" ];
+	"base:Route" -> "base:MeanOfTransport" [ label = "base:modeOfTransport" ];
 	"base:VehicleJourney" -> "base:DayType" [ label = "base:vehicleJourneyDayType" ];
-	"base:ScheduledStopPoint" -> "xsd:nonNegativeInteger" [ label = "base:pointSequence" ];
 	"base:TimingPoint" -> "xsd:nonNegativeInteger" [ label = "base:timingLinkPointSequence" ];
+	"base:ScheduledStopPoint" -> "xsd:nonNegativeInteger" [ label = "base:pointSequence" ];
+	"base:Route" -> "base:AllowedLineDirections" [ label = "base:allowedLineDirections" ];
+	"base:Quay" -> "base:BoardingPosition" [ label = "base:boardingPositionInQuay" ];
 	"base:Route" -> "base:ScheduledStopPoint" [ label = "base:scheduledStopPoint" ];
 	"base:TimingPoint" -> "xsd:nonNegativeInteger" [ label = "base:timeLink" ];
+	"base:RoadAddress" -> "xsd:nonNegativeInteger" [ label = "base:roadNumber" ];
 	"base:JourneyPattern" -> "base:TimingLinkInJourneyPattern" [ label = "base:timingLinkInJourneyPattern" ];
 	"base:JourneyPattern" -> "xsd:string" [ label = "base:waitTime" ];
 	"base:Service" -> "base:ServiceJourneyPattern" [ label = "base:hasAServiceJourneyPattern" ];
 	"base:JourneyPattern" -> "xsd:dateTimeStamp" [ label = "base:headway" ];
 	"base:HeadingInterval" -> "xsd:string" [ label = "base:startTime" ];
 	"base:Vehicle" -> "base:ScheduledStopPoint" [ label = "base:stopsAt" ];
+	"base:FlexibleLine" -> "base:TypeOfFlexibleService" [ label = "base:typeOfFlexibleService" ];
+	"base:PostalAddress" -> "xsd:nonNegativeInteger" [ label = "base:postCode" ];
 
 }

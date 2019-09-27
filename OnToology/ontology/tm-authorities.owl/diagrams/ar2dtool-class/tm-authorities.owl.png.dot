@@ -1,13 +1,16 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; ":Responsability" ":ServiceArea" ":Organization" ":AdministrativeZone" ":OrganisationPart" ":GroupOfOperators" ":Operator" ; /*classes style*/
-	":Operator" -> ":AdministrativeZone" [ label = ":operatesInAdministrativeZone" ];
-	":Organization" -> ":ServiceArea" [ label = ":providesService" ];
-	":Operator" -> "xsd:boolean" [ label = ":ownership" ];
-	":Responsability" -> ":DataOperation" [ label = ":hasAResponsabilityRole" ];
-	":Organization" -> ":OrganisationPart" [ label = ":isPartOf" ];
-	":GroupOfOperators" -> ":Operator" [ label = ":isGroupOfOperators" ];
-	":Organization" -> ":Responsability" [ label = "http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability" ];
+node [shape = rectangle, color="orange"]; "base:TypeOfResponsability" "base:ServiceArea" "base:Organization" "base:AdministrativeZone" "base:OrganisationPart" "base:GroupOfOperators" "base:Operator" "base:Parking" ; /*classes style*/
+	"base:" -> "-75a0ffd2:16d71a9919e:-7ffc" [ label = "base:author" ];
+	"base:" -> "https://w3id.org/transmodel/authorities/1.0" [ label = "owl:versionIRI" ];
+	"base:Organization" -> "owl:Thing" [ label = "base:contactDetails" ];
+	"base:Parking" -> "xsd:nonNegativeInteger" [ label = "base:parkingCapacity" ];
+	"base:Operator" -> "base:AdministrativeZone" [ label = "base:operatesInAdministrativeZone" ];
+	"base:Organization" -> "base:ServiceArea" [ label = "base:providesService" ];
+	"base:Operator" -> "xsd:boolean" [ label = "base:ownership" ];
+	"base:Organization" -> "base:TypeOfResponsability" [ label = "base:hasAResponsability" ];
+	"base:Organization" -> "base:OrganisationPart" [ label = "base:isPartOf" ];
+	"base:GroupOfOperators" -> "base:Operator" [ label = "base:isGroupOfOperators" ];
 
 }
