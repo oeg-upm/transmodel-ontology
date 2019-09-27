@@ -80,27 +80,8 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/authorities#hasAResponsability">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#Organization"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#Responsability"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
         <rdfs:comment xml:lang="en">A particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, data aggreggation, data distribution, planning, operation, control, ownership, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">hasAResponsability</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#hasAResponsabilityRole -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/authorities#hasAResponsabilityRole">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#Responsability"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataAggregation"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataAugmentation"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataControl"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataDistribution"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataOperation"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataOrigination"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataOwnership"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataPlanning"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#DataUpdate"/>
-        <rdfs:comment xml:lang="en">The assignment of one or more roles to an Organization or an OrganizationPart as regards the responsability it will have as regards specific data (e.g. ownership, planning, etc.) and the management of this data (e.g. distribution, updates, etc.)</rdfs:comment>
         <rdfs:label xml:lang="en">hasAResponsabilityRole</rdfs:label>
     </owl:ObjectProperty>
     
@@ -158,6 +139,15 @@
     
 
 
+    <!-- https://w3id.org/transmodel/authorities#contactDetails -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/authorities#contactDetails">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#Organization"/>
+        <rdfs:label xml:lang="en">contactDetails</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/authorities#ownership -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/authorities#ownership">
@@ -166,6 +156,16 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">publicOwnership means at least 51% of the participation of the company</rdfs:comment>
         <rdfs:label xml:lang="en">publicOwnership</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#parkingCapacity -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/authorities#parkingCapacity">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#Parking"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:label xml:lang="en">parkingCapacity</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -206,62 +206,17 @@
     <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ControlCenter">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#OrganisationPart"/>
         <rdfs:comment xml:lang="en">An OrganisationPart for an operational team who are responsible for issuing commands to control the services</rdfs:comment>
-        <rdfs:comment xml:lang="en">ControlCentre</rdfs:comment>
+        <rdfs:label xml:lang="en">ControlCentre</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/transmodel/authorities#DataAggregation -->
+    <!-- https://w3id.org/transmodel/authorities#CrewBase -->
 
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataAggregation"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#DataAugmentation -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataAugmentation"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#DataControl -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataControl"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#DataDistribution -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataDistribution"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#DataOperation -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataOperation"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#DataOrigination -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataOrigination"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#DataOwnership -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataOwnership"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#DataPlanning -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataPlanning"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#DataUpdate -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DataUpdate"/>
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#CrewBase">
+        <rdfs:comment xml:lang="en">A place where operating employees (e.g. drivers) report on and register their work</rdfs:comment>
+        <rdfs:label xml:lang="en">CrewBase</rdfs:label>
+    </owl:Class>
     
 
 
@@ -271,6 +226,14 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#OrganisationPart"/>
         <rdfs:comment xml:lang="en">An OrganisationPart specific to a purpose and/or organisational structure</rdfs:comment>
         <rdfs:label xml:lang="en">Department</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#Employee -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Employee">
+        <rdfs:label xml:lang="en">Employee</rdfs:label>
     </owl:Class>
     
 
@@ -344,11 +307,69 @@ A TransitAgency in GTFS</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/transmodel/authorities#Responsability -->
+    <!-- https://w3id.org/transmodel/authorities#Parking -->
 
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Responsability">
-        <rdfs:comment xml:lang="en">Responsability (Role) is a particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">TypeOfResponsability</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Parking">
+        <rdfs:comment xml:lang="en">Designated locations for leaving vehicles such as cars, motorcycles and bicycles.</rdfs:comment>
+        <rdfs:label xml:lang="en">Parking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#ParkingArea -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ParkingArea">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#ParkingComponent"/>
+        <rdfs:comment xml:lang="en">A marked zone within a Parking containing ParkingBays</rdfs:comment>
+        <rdfs:label xml:lang="en">ParkingArea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#ParkingBay -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ParkingBay">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#ParkingComponent"/>
+        <rdfs:comment xml:lang="en">A place to park an individual vehicle</rdfs:comment>
+        <rdfs:label xml:lang="en">ParkingBay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#ParkingComponent -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ParkingComponent">
+        <rdfs:comment xml:lang="en">Generic component of a parking</rdfs:comment>
+        <rdfs:label xml:lang="en">ParkingComponent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#ParkingEntrance -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ParkingEntrance">
+        <rdfs:comment xml:lang="en">An entrance to the Parking</rdfs:comment>
+        <rdfs:label xml:lang="en">ParkingEntrance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#ParkingEntranceForPassengers -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ParkingEntranceForPassengers">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#ParkingEntrance"/>
+        <rdfs:comment xml:lang="en">An entrance to the Parking on foot of other out-of-vehicle mode such as a wheelchair</rdfs:comment>
+        <rdfs:label xml:lang="en">ParkingEntranceForPassengers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#ParkingEntranceForVehicles -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ParkingEntranceForVehicles">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#ParkingEntrance"/>
+        <rdfs:comment xml:lang="en">An entrance from the road to the Parking for Vehicle</rdfs:comment>
+        <rdfs:label xml:lang="en">ParkingEntranceForVehicles</rdfs:label>
     </owl:Class>
     
 
@@ -384,7 +405,10 @@ A TransitAgency in GTFS</rdfs:comment>
 
     <!-- https://w3id.org/transmodel/authorities#TypeOfResponsability -->
 
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#TypeOfResponsability"/>
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#TypeOfResponsability">
+        <rdfs:comment xml:lang="en">Responsability (Role) is a particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">TypeOfResponsability</rdfs:label>
+    </owl:Class>
     
 
 
@@ -398,6 +422,15 @@ A TransitAgency in GTFS</rdfs:comment>
 - AccessZone
 - ...</rdfs:comment>
         <rdfs:label xml:lang="en">Zone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Vehicle -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Vehicle">
+        <rdfs:comment xml:lang="en">A PublicTransportVehicle used for carrying Passenger</rdfs:comment>
+        <rdfs:label xml:lang="en">Vehicle</rdfs:label>
     </owl:Class>
     
 
@@ -500,6 +533,14 @@ A TransitAgency in GTFS</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#Operator"/>
         <rdf:type rdf:resource="https://w3id.org/transmodel/authorities#ServicedOrganisation"/>
     </owl:NamedIndividual>
+    <rdf:Description>
+        <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
+        <name xml:lang="en">Adolfo Anton-Bravo</name>
+    </rdf:Description>
+    <rdf:Description>
+        <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
+        <name xml:lang="en">Adolfo Anton-Bravo</name>
+    </rdf:Description>
     <rdf:Description>
         <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
         <name xml:lang="en">Adolfo Anton-Bravo</name>
