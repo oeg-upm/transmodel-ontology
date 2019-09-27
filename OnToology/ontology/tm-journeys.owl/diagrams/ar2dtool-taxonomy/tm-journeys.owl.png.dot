@@ -1,10 +1,18 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "base:ServiceJourneyPattern" "base:TimingPoint" "base:ScheduledStopPoint" "base:TimingPointInJourneyPattern" "base:JourneyPattern" "base:Point" ; /*classes style*/
+node [shape = rectangle, color="black"]; "base:PostalAddress" "base:Address" "base:ParkingPoint" "base:Point" "base:TimingPointInJourneyPattern" "base:BeaconPoint" "base:StopPointInJourneyPattern" "base:FlexibleRoute" "base:FlexibleLine" "base:TimingPoint" "base:JourneyPattern" "base:Route" "base:ServiceJourneyPattern" "base:ScheduledStopPoint" "base:FlexiblePoint" "base:Line" "base:RoadAddress" ; /*classes style*/
 	"base:ScheduledStopPoint" -> "base:Point" [ label = "rdfs:subClassOf" ];
-	"base:ServiceJourneyPattern" -> "base:JourneyPattern" [ label = "rdfs:subClassOf" ];
+	"base:PostalAddress" -> "base:Address" [ label = "rdfs:subClassOf" ];
 	"base:TimingPointInJourneyPattern" -> "base:Point" [ label = "rdfs:subClassOf" ];
+	"base:FlexibleLine" -> "base:Line" [ label = "rdfs:subClassOf" ];
 	"base:TimingPoint" -> "base:Point" [ label = "rdfs:subClassOf" ];
+	"base:FlexibleRoute" -> "base:Route" [ label = "rdfs:subClassOf" ];
+	"base:FlexiblePoint" -> "base:Point" [ label = "rdfs:subClassOf" ];
+	"base:BeaconPoint" -> "base:Point" [ label = "rdfs:subClassOf" ];
+	"base:ParkingPoint" -> "base:TimingPoint" [ label = "rdfs:subClassOf" ];
+	"base:StopPointInJourneyPattern" -> "base:Point" [ label = "rdfs:subClassOf" ];
+	"base:ServiceJourneyPattern" -> "base:JourneyPattern" [ label = "rdfs:subClassOf" ];
+	"base:RoadAddress" -> "base:Address" [ label = "rdfs:subClassOf" ];
 
 }

@@ -13,13 +13,17 @@ This section provides details for each class and property defined by [Ontology N
       </li>
       <li>
          <a href="#ControlCenter"
-            title="https://w3id.org/transmodel/authorities#ControlCenter">
-            <span>control center</span>
-         </a>
+            title="https://w3id.org/transmodel/authorities#ControlCenter">ControlCentre</a>
+      </li>
+      <li>
+         <a href="#CrewBase" title="https://w3id.org/transmodel/authorities#CrewBase">CrewBase</a>
       </li>
       <li>
          <a href="#Department"
             title="https://w3id.org/transmodel/authorities#Department">Department</a>
+      </li>
+      <li>
+         <a href="#Employee" title="https://w3id.org/transmodel/authorities#Employee">Employee</a>
       </li>
       <li>
          <a href="#GroupOfOperators"
@@ -45,6 +49,33 @@ This section provides details for each class and property defined by [Ontology N
             title="https://w3id.org/transmodel/authorities#Organization">Organization</a>
       </li>
       <li>
+         <a href="#Parking" title="https://w3id.org/transmodel/authorities#Parking">Parking</a>
+      </li>
+      <li>
+         <a href="#ParkingArea"
+            title="https://w3id.org/transmodel/authorities#ParkingArea">ParkingArea</a>
+      </li>
+      <li>
+         <a href="#ParkingBay"
+            title="https://w3id.org/transmodel/authorities#ParkingBay">ParkingBay</a>
+      </li>
+      <li>
+         <a href="#ParkingComponent"
+            title="https://w3id.org/transmodel/authorities#ParkingComponent">ParkingComponent</a>
+      </li>
+      <li>
+         <a href="#ParkingEntrance"
+            title="https://w3id.org/transmodel/authorities#ParkingEntrance">ParkingEntrance</a>
+      </li>
+      <li>
+         <a href="#ParkingEntranceForPassengers"
+            title="https://w3id.org/transmodel/authorities#ParkingEntranceForPassengers">ParkingEntranceForPassengers</a>
+      </li>
+      <li>
+         <a href="#ParkingEntranceForVehicles"
+            title="https://w3id.org/transmodel/authorities#ParkingEntranceForVehicles">ParkingEntranceForVehicles</a>
+      </li>
+      <li>
          <a href="#ServiceArea"
             title="https://w3id.org/transmodel/authorities#ServiceArea">ServiceArea</a>
       </li>
@@ -61,8 +92,11 @@ This section provides details for each class and property defined by [Ontology N
             title="https://w3id.org/transmodel/authorities#TravelAgent">TravelAgent</a>
       </li>
       <li>
-         <a href="#Responsability"
-            title="https://w3id.org/transmodel/authorities#Responsability">TypeOfResponsability</a>
+         <a href="#TypeOfResponsability"
+            title="https://w3id.org/transmodel/authorities#TypeOfResponsability">TypeOfResponsability</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/facilities#Vehicle" title="https://w3id.org/transmodel/facilities#Vehicle">Vehicle</a>
       </li>
       <li>
          <a href="#Zone" title="https://w3id.org/transmodel/authorities#Zone">Zone</a>
@@ -112,7 +146,7 @@ This section provides details for each class and property defined by [Ontology N
       </dl>
    </div>
    <div class="entity" id="ControlCenter">
-      <h3>control center<sup class="type-c" title="class">c</sup>
+      <h3>ControlCentre<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -129,6 +163,17 @@ This section provides details for each class and property defined by [Ontology N
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
+   </div>
+   <div class="entity" id="CrewBase">
+      <h3>CrewBase<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/authorities#CrewBase</p>
+      <div class="comment">
+         <span class="markdown">A place where operating employees (e.g. drivers) report on and register their work</span>
+      </div>
    </div>
    <div class="entity" id="Department">
       <h3>Department<sup class="type-c" title="class">c</sup>
@@ -148,6 +193,14 @@ This section provides details for each class and property defined by [Ontology N
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
+   </div>
+   <div class="entity" id="Employee">
+      <h3>Employee<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/authorities#Employee</p>
    </div>
    <div class="entity" id="GroupOfOperators">
       <h3>GroupOfOperators<sup class="type-c" title="class">c</sup>
@@ -260,12 +313,12 @@ A TransitAgency in GTFS</span>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#Department"
+            <a href="#ControlCenter"
+               title="https://w3id.org/transmodel/authorities#ControlCenter">ControlCentre</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Department"
                title="https://w3id.org/transmodel/authorities#Department">Department</a>
             <sup class="type-c" title="class">c</sup>, <a href="#OrganisationUnit"
                title="https://w3id.org/transmodel/authorities#OrganisationUnit">OrganisationalUnit</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ControlCenter"
-               title="https://w3id.org/transmodel/authorities#ControlCenter">control center</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in range of</dt>
@@ -299,12 +352,151 @@ A TransitAgency in GTFS</span>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability"
-               title="http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability">hasAResponsability</a>
+            <a href="#contactDetails"
+               title="https://w3id.org/transmodel/authorities#contactDetails">contactDetails</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasAResponsability"
+               title="https://w3id.org/transmodel/authorities#hasAResponsability">hasAResponsabilityRole</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isPartOf" title="https://w3id.org/transmodel/authorities#isPartOf">isPartOf</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#providesService"
                title="https://w3id.org/transmodel/authorities#providesService">providesService</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Parking">
+      <h3>Parking<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/authorities#Parking</p>
+      <div class="comment">
+         <span class="markdown">Designated locations for leaving vehicles such as cars, motorcycles and bicycles.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#parkingCapacity"
+               title="https://w3id.org/transmodel/authorities#parkingCapacity">parkingCapacity</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ParkingArea">
+      <h3>ParkingArea<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/authorities#ParkingArea</p>
+      <div class="comment">
+         <span class="markdown">A marked zone within a Parking containing ParkingBays</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ParkingComponent"
+               title="https://w3id.org/transmodel/authorities#ParkingComponent">ParkingComponent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ParkingBay">
+      <h3>ParkingBay<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/authorities#ParkingBay</p>
+      <div class="comment">
+         <span class="markdown">A place to park an individual vehicle</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ParkingComponent"
+               title="https://w3id.org/transmodel/authorities#ParkingComponent">ParkingComponent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ParkingComponent">
+      <h3>ParkingComponent<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/authorities#ParkingComponent</p>
+      <div class="comment">
+         <span class="markdown">Generic component of a parking</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ParkingArea"
+               title="https://w3id.org/transmodel/authorities#ParkingArea">ParkingArea</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ParkingBay"
+               title="https://w3id.org/transmodel/authorities#ParkingBay">ParkingBay</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ParkingEntrance">
+      <h3>ParkingEntrance<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/authorities#ParkingEntrance</p>
+      <div class="comment">
+         <span class="markdown">An entrance to the Parking</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ParkingEntranceForPassengers"
+               title="https://w3id.org/transmodel/authorities#ParkingEntranceForPassengers">ParkingEntranceForPassengers</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ParkingEntranceForVehicles"
+               title="https://w3id.org/transmodel/authorities#ParkingEntranceForVehicles">ParkingEntranceForVehicles</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ParkingEntranceForPassengers">
+      <h3>ParkingEntranceForPassengers<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/authorities#ParkingEntranceForPassengers</p>
+      <div class="comment">
+         <span class="markdown">An entrance to the Parking on foot of other out-of-vehicle mode such as a wheelchair</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ParkingEntrance"
+               title="https://w3id.org/transmodel/authorities#ParkingEntrance">ParkingEntrance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ParkingEntranceForVehicles">
+      <h3>ParkingEntranceForVehicles<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/authorities#ParkingEntranceForVehicles</p>
+      <div class="comment">
+         <span class="markdown">An entrance from the road to the Parking for Vehicle</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ParkingEntrance"
+               title="https://w3id.org/transmodel/authorities#ParkingEntrance">ParkingEntrance</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -406,30 +598,57 @@ A TransitAgency in GTFS</span>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Responsability">
+   <div class="entity" id="TypeOfResponsability">
       <h3>TypeOfResponsability<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/authorities#Responsability</p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/authorities#TypeOfResponsability</p>
       <div class="comment">
          <span class="markdown">Responsability (Role) is a particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, etc.</span>
       </div>
       <dl class="description">
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hasAResponsabilityRole"
-               title="https://w3id.org/transmodel/authorities#hasAResponsabilityRole">hasAResponsabilityRole</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability"
-               title="http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability">hasAResponsability</a>
+            <a href="#hasAResponsability"
+               title="https://w3id.org/transmodel/authorities#hasAResponsability">hasAResponsabilityRole</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#DataAggregation"
+               title="https://w3id.org/transmodel/authorities#DataAggregation">data aggregation</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataAugmentation"
+               title="https://w3id.org/transmodel/authorities#DataAugmentation">data augmentation</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataControl"
+               title="https://w3id.org/transmodel/authorities#DataControl">data control</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataDistribution"
+               title="https://w3id.org/transmodel/authorities#DataDistribution">data distribution</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataOperation"
+               title="https://w3id.org/transmodel/authorities#DataOperation">data operation</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataOrigination"
+               title="https://w3id.org/transmodel/authorities#DataOrigination">data origination</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataOwnership"
+               title="https://w3id.org/transmodel/authorities#DataOwnership">data ownership</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataPlanning"
+               title="https://w3id.org/transmodel/authorities#DataPlanning">data planning</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataUpdate"
+               title="https://w3id.org/transmodel/authorities#DataUpdate">data update</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
       </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/facilities#Vehicle">
+      <h3>Vehicle<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#Vehicle</p>
+      <div class="comment">
+         <span class="markdown">A PublicTransportVehicle used for carrying Passenger</span>
+      </div>
    </div>
    <div class="entity" id="Zone">
       <h3>Zone<sup class="type-c" title="class">c</sup>
@@ -459,12 +678,8 @@ A TransitAgency in GTFS</span>
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability"
-            title="http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability">hasAResponsability</a>
-      </li>
-      <li>
-         <a href="#hasAResponsabilityRole"
-            title="https://w3id.org/transmodel/authorities#hasAResponsabilityRole">hasAResponsabilityRole</a>
+         <a href="#hasAResponsability"
+            title="https://w3id.org/transmodel/authorities#hasAResponsability">hasAResponsabilityRole</a>
       </li>
       <li>
          <a href="#isGroupOfOperators"
@@ -482,13 +697,13 @@ A TransitAgency in GTFS</span>
             title="https://w3id.org/transmodel/authorities#providesService">providesService</a>
       </li>
    </ul>
-   <div class="entity" id="http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability">
-      <h3>hasAResponsability<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasAResponsability">
+      <h3>hasAResponsabilityRole<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.semanticweb.org/aanton/ontologies/2019/7/untitled-ontology-14#hasAResponsability</p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/authorities#hasAResponsability</p>
       <div class="comment">
          <span class="markdown">A particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, data aggreggation, data distribution, planning, operation, control, ownership, etc.</span>
       </div>
@@ -502,75 +717,8 @@ A TransitAgency in GTFS</span>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Responsability"
-                  title="https://w3id.org/transmodel/authorities#Responsability">TypeOfResponsability</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasAResponsabilityRole">
-      <h3>hasAResponsabilityRole<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/authorities#hasAResponsabilityRole</p>
-      <div class="comment">
-         <span class="markdown">The assignment of one or more roles to an Organization or an OrganizationPart as regards the responsability it will have as regards specific data (e.g. ownership, planning, etc.) and the management of this data (e.g. distribution, updates, etc.)</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Responsability"
-                  title="https://w3id.org/transmodel/authorities#Responsability">TypeOfResponsability</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/authorities#DataAggregation">data aggregation</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/authorities#DataAugmentation">data augmentation</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/authorities#DataControl">data control</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/authorities#DataDistribution">data distribution</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/authorities#DataOperation">data operation</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/authorities#DataOrigination">data origination</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/authorities#DataOwnership">data ownership</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/authorities#DataPlanning">data planning</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/authorities#DataUpdate">data update</span>
+               <a href="#TypeOfResponsability"
+                  title="https://w3id.org/transmodel/authorities#TypeOfResponsability">TypeOfResponsability</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -679,10 +827,58 @@ A TransitAgency in GTFS</span>
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
+         <a href="#contactDetails"
+            title="https://w3id.org/transmodel/authorities#contactDetails">contactDetails</a>
+      </li>
+      <li>
+         <a href="#parkingCapacity"
+            title="https://w3id.org/transmodel/authorities#parkingCapacity">parkingCapacity</a>
+      </li>
+      <li>
          <a href="#ownership"
             title="https://w3id.org/transmodel/authorities#ownership">publicOwnership</a>
       </li>
    </ul>
+   <div class="entity" id="contactDetails">
+      <h3>contactDetails<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/authorities#contactDetails</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Organization"
+                  title="https://w3id.org/transmodel/authorities#Organization">Organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="parkingCapacity">
+      <h3>parkingCapacity<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/authorities#parkingCapacity</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Parking" title="https://w3id.org/transmodel/authorities#Parking">Parking</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">non negative integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="ownership">
       <h3>publicOwnership<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -790,12 +986,10 @@ A TransitAgency in GTFS</span>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/transmodel/authorities#TypeOfResponsability">type of responsability</span>
+            <a href="#TypeOfResponsability"
+               title="https://w3id.org/transmodel/authorities#TypeOfResponsability">TypeOfResponsability</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is also defined as</dt>
-         <dd>class</dd>
       </dl>
    </div>
    <div class="entity" id="DataAugmentation">
@@ -808,12 +1002,10 @@ A TransitAgency in GTFS</span>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/transmodel/authorities#TypeOfResponsability">type of responsability</span>
+            <a href="#TypeOfResponsability"
+               title="https://w3id.org/transmodel/authorities#TypeOfResponsability">TypeOfResponsability</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is also defined as</dt>
-         <dd>class</dd>
       </dl>
    </div>
    <div class="entity" id="DataControl">
@@ -826,12 +1018,10 @@ A TransitAgency in GTFS</span>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/transmodel/authorities#TypeOfResponsability">type of responsability</span>
+            <a href="#TypeOfResponsability"
+               title="https://w3id.org/transmodel/authorities#TypeOfResponsability">TypeOfResponsability</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is also defined as</dt>
-         <dd>class</dd>
       </dl>
    </div>
    <div class="entity" id="DataDistribution">
@@ -844,12 +1034,10 @@ A TransitAgency in GTFS</span>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/transmodel/authorities#TypeOfResponsability">type of responsability</span>
+            <a href="#TypeOfResponsability"
+               title="https://w3id.org/transmodel/authorities#TypeOfResponsability">TypeOfResponsability</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is also defined as</dt>
-         <dd>class</dd>
       </dl>
    </div>
    <div class="entity" id="DataOperation">
@@ -862,12 +1050,10 @@ A TransitAgency in GTFS</span>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/transmodel/authorities#TypeOfResponsability">type of responsability</span>
+            <a href="#TypeOfResponsability"
+               title="https://w3id.org/transmodel/authorities#TypeOfResponsability">TypeOfResponsability</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is also defined as</dt>
-         <dd>class</dd>
       </dl>
    </div>
    <div class="entity" id="DataOrigination">
@@ -880,12 +1066,10 @@ A TransitAgency in GTFS</span>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/transmodel/authorities#TypeOfResponsability">type of responsability</span>
+            <a href="#TypeOfResponsability"
+               title="https://w3id.org/transmodel/authorities#TypeOfResponsability">TypeOfResponsability</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is also defined as</dt>
-         <dd>class</dd>
       </dl>
    </div>
    <div class="entity" id="DataOwnership">
@@ -898,12 +1082,10 @@ A TransitAgency in GTFS</span>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/transmodel/authorities#TypeOfResponsability">type of responsability</span>
+            <a href="#TypeOfResponsability"
+               title="https://w3id.org/transmodel/authorities#TypeOfResponsability">TypeOfResponsability</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is also defined as</dt>
-         <dd>class</dd>
       </dl>
    </div>
    <div class="entity" id="DataPlanning">
@@ -916,12 +1098,10 @@ A TransitAgency in GTFS</span>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/transmodel/authorities#TypeOfResponsability">type of responsability</span>
+            <a href="#TypeOfResponsability"
+               title="https://w3id.org/transmodel/authorities#TypeOfResponsability">TypeOfResponsability</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is also defined as</dt>
-         <dd>class</dd>
       </dl>
    </div>
    <div class="entity" id="DataUpdate">
@@ -934,12 +1114,10 @@ A TransitAgency in GTFS</span>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/transmodel/authorities#TypeOfResponsability">type of responsability</span>
+            <a href="#TypeOfResponsability"
+               title="https://w3id.org/transmodel/authorities#TypeOfResponsability">TypeOfResponsability</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is also defined as</dt>
-         <dd>class</dd>
       </dl>
    </div>
    <div class="entity" id="Private">
