@@ -607,6 +607,15 @@
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#AddressablePlace -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#AddressablePlace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Place"/>
+        <rdfs:label xml:lang="en">AddressablePlace</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers">
@@ -794,6 +803,35 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceEquipment"/>
         <rdfs:comment xml:lang="en">A specialisation of PlaceEquipment describing cycle parking equipment</rdfs:comment>
         <rdfs:label xml:lang="en">CycleStorageEquipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#DeliveryVariant -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#DeliveryVariant">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Notice"/>
+        <rdfs:comment xml:lang="en">A variant text of a Notice for use in a specific media or delivery channel (voice, printed, material, etc.)</rdfs:comment>
+        <rdfs:label xml:lang="en">DeliveryVariant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#DestinationDisplay -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#DestinationDisplay">
+        <rdfs:comment xml:lang="en">An advertised destination of a specific JourneyPattern, usually displayed on a headsign or at other on-board locations</rdfs:comment>
+        <rdfs:label xml:lang="en">DestinationDisplay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#DestinationDisplayVariant -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#DestinationDisplayVariant">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#DestinationDisplay"/>
+        <rdfs:comment xml:lang="en">An advertised destination of a specific JourneyPattern, usually displayed on a hadsign or at other on-board locations</rdfs:comment>
+        <rdfs:label xml:lang="en">DestinationDisplayVariant</rdfs:label>
     </owl:Class>
     
 
@@ -1030,6 +1068,15 @@ Provides facilities as LuggageTrolley, FreeToUse, etc.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#Notice -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Notice">
+        <rdfs:comment xml:lang="en">A text for informational purposes on exceptions in a Line,  JourneyPattern, etc. The information may be usable for Passenger or driver information</rdfs:comment>
+        <rdfs:label xml:lang="en">Notice</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#Passenger -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Passenger">
@@ -1098,6 +1145,14 @@ Accessible by Passenger but without direct access to Vehicles</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#PassengerSafetyEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#Place -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Place">
+        <rdfs:label xml:lang="en">Place</rdfs:label>
     </owl:Class>
     
 
@@ -1284,6 +1339,16 @@ A named Service relating to the use of the Site or transport Services at a parti
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#SiteComponent">
         <rdfs:comment xml:lang="en">An element of a Site descibing a part of its structure. SiteComponent share common properties for data management, accessibility and other features</rdfs:comment>
         <rdfs:label xml:lang="en">SiteComponent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#SiteElement -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#SiteElement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#AddressablePlace"/>
+        <rdfs:comment xml:lang="en">A type of AddressablePlace specifying common properties of a Site or a SiteComponent to describe it, including accessibility.</rdfs:comment>
+        <rdfs:label xml:lang="en">SiteElement</rdfs:label>
     </owl:Class>
     
 
@@ -2078,6 +2143,16 @@ RevolvingDoor</rdfs:label>
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#material -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/facilities#material">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/facilities#DeliveryVariant"/>
+        <rdfs:comment xml:lang="en">material, a DeliveryVariant</rdfs:comment>
+        <rdfs:label xml:lang="en">material</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#narrowEntrance -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/facilities#narrowEntrance">
@@ -2156,6 +2231,16 @@ RevolvingDoor</rdfs:label>
         <rdf:type rdf:resource="https://w3id.org/transmodel/facilities#TypeOfPlaceAccessStair"/>
         <rdfs:comment xml:lang="en">Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStaircase</rdfs:comment>
         <rdfs:label xml:lang="en">placeAccessStairStaircase</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#printed -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/facilities#printed">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/facilities#DeliveryVariant"/>
+        <rdfs:comment xml:lang="en">Printed, a delivery variant</rdfs:comment>
+        <rdfs:label xml:lang="en">printed</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2283,6 +2368,16 @@ RevolvingDoor</rdfs:label>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/facilities#visualNavigator">
         <rdf:type rdf:resource="https://w3id.org/transmodel/facilities#TypeOfAccessibilityTools"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#voice -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/facilities#voice">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/facilities#DeliveryVariant"/>
+        <rdfs:comment xml:lang="en">voice, a delivery variant</rdfs:comment>
+        <rdfs:label xml:lang="en">voice</rdfs:label>
     </owl:NamedIndividual>
     
 
