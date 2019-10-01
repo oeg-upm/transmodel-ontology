@@ -407,6 +407,12 @@
                  rdfs:label "ActivationPoint"@en .
 
 
+###  https://w3id.org/transmodel/facilities#AddressablePlace
+:AddressablePlace rdf:type owl:Class ;
+                  rdfs:subClassOf :Place ;
+                  rdfs:label "AddressablePlace"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers
 :AssistanceForDissabledUsers rdf:type owl:Class ;
                              rdfs:subClassOf :AssistanceService ;
@@ -536,6 +542,26 @@
                          rdfs:subClassOf :PlaceEquipment ;
                          rdfs:comment "A specialisation of PlaceEquipment describing cycle parking equipment"@en ;
                          rdfs:label "CycleStorageEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#DeliveryVariant
+:DeliveryVariant rdf:type owl:Class ;
+                 rdfs:subClassOf :Notice ;
+                 rdfs:comment "A variant text of a Notice for use in a specific media or delivery channel (voice, printed, material, etc.)"@en ;
+                 rdfs:label "DeliveryVariant"@en .
+
+
+###  https://w3id.org/transmodel/facilities#DestinationDisplay
+:DestinationDisplay rdf:type owl:Class ;
+                    rdfs:comment "An advertised destination of a specific JourneyPattern, usually displayed on a headsign or at other on-board locations"@en ;
+                    rdfs:label "DestinationDisplay"@en .
+
+
+###  https://w3id.org/transmodel/facilities#DestinationDisplayVariant
+:DestinationDisplayVariant rdf:type owl:Class ;
+                           rdfs:subClassOf :DestinationDisplay ;
+                           rdfs:comment "An advertised destination of a specific JourneyPattern, usually displayed on a hadsign or at other on-board locations"@en ;
+                           rdfs:label "DestinationDisplayVariant"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#EmergencyService
@@ -701,6 +727,12 @@ Provides facilities as LuggageTrolley, FreeToUse, etc."""@en ;
               rdfs:label "MoneyService"@en .
 
 
+###  https://w3id.org/transmodel/facilities#Notice
+:Notice rdf:type owl:Class ;
+        rdfs:comment "A text for informational purposes on exceptions in a Line,  JourneyPattern, etc. The information may be usable for Passenger or driver information"@en ;
+        rdfs:label "Notice"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#Passenger
 :Passenger rdf:type owl:Class ;
            rdfs:comment "The Person who uses Public Transport Services"@en ;
@@ -750,6 +782,11 @@ Accessible by Passenger but without direct access to Vehicles"""@en ;
 ###  https://w3id.org/transmodel/facilities#PassengerSafetyEquipment
 :PassengerSafetyEquipment rdf:type owl:Class ;
                           rdfs:subClassOf :PassengerEquipment .
+
+
+###  https://w3id.org/transmodel/facilities#Place
+:Place rdf:type owl:Class ;
+       rdfs:label "Place"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#PlaceAccessEquipment
@@ -879,6 +916,13 @@ A named Service relating to the use of the Site or transport Services at a parti
 :SiteComponent rdf:type owl:Class ;
                rdfs:comment "An element of a Site descibing a part of its structure. SiteComponent share common properties for data management, accessibility and other features"@en ;
                rdfs:label "SiteComponent"@en .
+
+
+###  https://w3id.org/transmodel/facilities#SiteElement
+:SiteElement rdf:type owl:Class ;
+             rdfs:subClassOf :AddressablePlace ;
+             rdfs:comment "A type of AddressablePlace specifying common properties of a Site or a SiteComponent to describe it, including accessibility."@en ;
+             rdfs:label "SiteElement"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#SiteEquipment
@@ -1401,6 +1445,13 @@ RevolvingDoor"""@en .
 :lowFloor rdf:type owl:NamedIndividual .
 
 
+###  https://w3id.org/transmodel/facilities#material
+:material rdf:type owl:NamedIndividual ,
+                   :DeliveryVariant ;
+          rdfs:comment "material, a DeliveryVariant"@en ;
+          rdfs:label "material"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#narrowEntrance
 :narrowEntrance rdf:type owl:NamedIndividual ,
                          :TypeOfAccessFeature ;
@@ -1454,6 +1505,13 @@ RevolvingDoor"""@en .
                                     :TypeOfPlaceAccessStair ;
                            rdfs:comment "Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStaircase"@en ;
                            rdfs:label "placeAccessStairStaircase"@en .
+
+
+###  https://w3id.org/transmodel/facilities#printed
+:printed rdf:type owl:NamedIndividual ,
+                  :DeliveryVariant ;
+         rdfs:comment "Printed, a delivery variant"@en ;
+         rdfs:label "printed"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#queue
@@ -1536,6 +1594,13 @@ RevolvingDoor"""@en .
 ###  https://w3id.org/transmodel/facilities#visualNavigator
 :visualNavigator rdf:type owl:NamedIndividual ,
                           :TypeOfAccessibilityTools .
+
+
+###  https://w3id.org/transmodel/facilities#voice
+:voice rdf:type owl:NamedIndividual ,
+                :DeliveryVariant ;
+       rdfs:comment "voice, a delivery variant"@en ;
+       rdfs:label "voice"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#walkingStick

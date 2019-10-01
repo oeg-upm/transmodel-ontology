@@ -1,0 +1,10 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:ServiceJourneyPattern" "base:Point" "base:TimingPoint" "base:JourneyPattern" "base:ActivationPoint" "base:ScheduledStopPoint" ; /*classes style*/
+	"base:ScheduledStopPoint" -> "base:Point" [ label = "rdfs:subClassOf" ];
+	"base:ActivationPoint" -> "base:Point" [ label = "rdfs:subClassOf" ];
+	"base:ServiceJourneyPattern" -> "base:JourneyPattern" [ label = "rdfs:subClassOf" ];
+	"base:TimingPoint" -> "base:Point" [ label = "rdfs:subClassOf" ];
+
+}
