@@ -125,6 +125,16 @@
     "@id" : "https://w3id.org/transmodel/journeys#Point"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/facilities#AddressablePlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "AddressablePlace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#Place"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -359,6 +369,45 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#PlaceEquipment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#DeliveryVariant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A variant text of a Notice for use in a specific media or delivery channel (voice, printed, material, etc.)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DeliveryVariant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#Notice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#DestinationDisplay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An advertised destination of a specific JourneyPattern, usually displayed on a headsign or at other on-board locations"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DestinationDisplay"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#DestinationDisplayVariant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An advertised destination of a specific JourneyPattern, usually displayed on a hadsign or at other on-board locations"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DestinationDisplayVariant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#DestinationDisplay"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#EmergencyService",
@@ -652,6 +701,17 @@
     "@id" : "https://w3id.org/transmodel/facilities#CommercialService"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/facilities#Notice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A text for informational purposes on exceptions in a Line,  JourneyPattern, etc. The information may be usable for Passenger or driver information"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Notice"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/facilities#Passenger",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -734,6 +794,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#PassengerEquipment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#Place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Place"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#PlaceAccessEquipment",
@@ -978,6 +1045,20 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "SiteComponent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#SiteElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A type of AddressablePlace specifying common properties of a Site or a SiteComponent to describe it, including accessibility."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SiteElement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#AddressablePlace"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#SiteEquipment",
@@ -1964,6 +2045,17 @@
   "@id" : "https://w3id.org/transmodel/facilities#lowFloor",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
+  "@id" : "https://w3id.org/transmodel/facilities#material",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#DeliveryVariant" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "material, a DeliveryVariant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "material"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/facilities#mbox",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -2044,6 +2136,17 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "placeAccessStairStaircase"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#printed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#DeliveryVariant" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Printed, a delivery variant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "printed"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#queue",
@@ -2378,6 +2481,17 @@
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#visualNavigator",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfAccessibilityTools" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#voice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#DeliveryVariant" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "voice, a delivery variant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "voice"
+  } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#walkingStick",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfAccessibilityTools" ]

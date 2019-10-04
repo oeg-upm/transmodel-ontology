@@ -1,0 +1,353 @@
+<https://w3id.org/transmodel/common#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/transmodel/common#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/transmodel/common/1.0> .
+<https://w3id.org/transmodel/common#> <http://www.w3.org/2000/01/rdf-schema#comment> "Module of the Transmodel Ontology focused on common concepts"@en .
+<https://w3id.org/transmodel/common#> <http://www.w3.org/2000/01/rdf-schema#label> "TransmodelOntologyCommon"@en .
+<https://w3id.org/transmodel/common#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://github.com/oeg-upm/transmodel-ontology"@en .
+<https://w3id.org/transmodel/common#> <https://w3id.org/transmodel/common#author> _:genid1 .
+_:genid1 <https://w3id.org/transmodel/common#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid1 <https://w3id.org/transmodel/common#name> "Adolfo Anton-Bravo"@en .
+<https://w3id.org/transmodel/common#> <https://w3id.org/transmodel/common#description> "Module of the Transmodel Ontology focused on common terms.\n\nThis ontology provides support to the NeTEx model.\n\nVisit https://github.com/oeg-upm/transmodel-ontology"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/transmodel/common#author
+<https://w3id.org/transmodel/common#author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/transmodel/common#creator
+<https://w3id.org/transmodel/common#creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/transmodel/common#description
+<https://w3id.org/transmodel/common#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/transmodel/common#mbox
+<https://w3id.org/transmodel/common#mbox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/transmodel/common#name
+<https://w3id.org/transmodel/common#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/transmodel/common#canAlight
+<https://w3id.org/transmodel/common#canAlight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/common#canAlight> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#Passenger> .
+<https://w3id.org/transmodel/common#canAlight> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/common#ScheduledStopPoint> .
+<https://w3id.org/transmodel/common#canAlight> <http://www.w3.org/2000/01/rdf-schema#label> "canAlight"@en .
+# 
+# https://w3id.org/transmodel/common#canBoard
+<https://w3id.org/transmodel/common#canBoard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/common#canBoard> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#Passenger> .
+<https://w3id.org/transmodel/common#canBoard> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/common#ScheduledStopPoint> .
+<https://w3id.org/transmodel/common#canBoard> <http://www.w3.org/2000/01/rdf-schema#label> "canBoard"@en .
+# 
+# https://w3id.org/transmodel/common#destinationStop
+<https://w3id.org/transmodel/common#destinationStop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/common#destinationStop> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/common#ScheduledStopPoint> .
+<https://w3id.org/transmodel/common#destinationStop> <http://www.w3.org/2000/01/rdf-schema#label> "destinationStop"@en .
+# 
+# https://w3id.org/transmodel/common#followsJourneyPattern
+<https://w3id.org/transmodel/common#followsJourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/common#followsJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#VehicleJourney> .
+<https://w3id.org/transmodel/common#followsJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/common#JourneyPattern> .
+<https://w3id.org/transmodel/common#followsJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "followsJourneyPattern"@en .
+# 
+# https://w3id.org/transmodel/common#hasAServiceJourneyPattern
+<https://w3id.org/transmodel/common#hasAServiceJourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/common#hasAServiceJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#Service> .
+<https://w3id.org/transmodel/common#hasAServiceJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/common#ServiceJourneyPattern> .
+<https://w3id.org/transmodel/common#hasAServiceJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "serviceJourneyPattern"@en .
+# 
+# https://w3id.org/transmodel/common#journeyPatternPoint
+<https://w3id.org/transmodel/common#journeyPatternPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/common#journeyPatternPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#JourneyPattern> .
+<https://w3id.org/transmodel/common#journeyPatternPoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/common#Point> .
+<https://w3id.org/transmodel/common#journeyPatternPoint> <http://www.w3.org/2000/01/rdf-schema#label> "journeyPatternPoint"@en .
+# 
+# https://w3id.org/transmodel/common#makesAServiceJourney
+<https://w3id.org/transmodel/common#makesAServiceJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/common#makesAServiceJourney> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#Passenger> .
+<https://w3id.org/transmodel/common#makesAServiceJourney> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/common#Service> .
+<https://w3id.org/transmodel/common#makesAServiceJourney> <http://www.w3.org/2000/01/rdf-schema#label> "serviceJourney"@en .
+# 
+# https://w3id.org/transmodel/common#originStop
+<https://w3id.org/transmodel/common#originStop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/common#originStop> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/common#ScheduledStopPoint> .
+<https://w3id.org/transmodel/common#originStop> <http://www.w3.org/2000/01/rdf-schema#label> "originStop"@en .
+# 
+# https://w3id.org/transmodel/common#route
+<https://w3id.org/transmodel/common#route> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/common#route> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/common#Route> .
+<https://w3id.org/transmodel/common#route> <http://www.w3.org/2000/01/rdf-schema#label> "route"@en .
+# 
+# https://w3id.org/transmodel/common#scheduledStopPoint
+<https://w3id.org/transmodel/common#scheduledStopPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/common#scheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#Route> .
+<https://w3id.org/transmodel/common#scheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/common#ScheduledStopPoint> .
+<https://w3id.org/transmodel/common#scheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#label> "scheduledStopPoint"@en .
+# 
+# https://w3id.org/transmodel/common#stopsAt
+<https://w3id.org/transmodel/common#stopsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/common#stopsAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#Vehicle> .
+<https://w3id.org/transmodel/common#stopsAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/common#ScheduledStopPoint> .
+<https://w3id.org/transmodel/common#stopsAt> <http://www.w3.org/2000/01/rdf-schema#label> "stopsAt"@en .
+# 
+# https://w3id.org/transmodel/common#timingLink
+<https://w3id.org/transmodel/common#timingLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/common#timingLink> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#TimingLink> .
+<https://w3id.org/transmodel/common#timingLink> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/common#TimingPoint> .
+<https://w3id.org/transmodel/common#timingLink> <http://www.w3.org/2000/01/rdf-schema#label> "timingLinkPoint"@en .
+# 
+# https://w3id.org/transmodel/common#timingLinkInJourneyPattern
+<https://w3id.org/transmodel/common#timingLinkInJourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/common#timingLinkInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#JourneyPattern> .
+<https://w3id.org/transmodel/common#timingLinkInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/common#TimingLinkInJourneyPattern> .
+# 
+# https://w3id.org/transmodel/common#vehicleJourney
+<https://w3id.org/transmodel/common#vehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/common#vehicleJourney> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#Vehicle> .
+<https://w3id.org/transmodel/common#vehicleJourney> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/common#VehicleJourney> .
+<https://w3id.org/transmodel/common#vehicleJourney> <http://www.w3.org/2000/01/rdf-schema#label> "vehicleJourney"@en .
+# 
+# https://w3id.org/transmodel/common#vehicleJourneyDayType
+<https://w3id.org/transmodel/common#vehicleJourneyDayType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/common#vehicleJourneyDayType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#VehicleJourney> .
+<https://w3id.org/transmodel/common#vehicleJourneyDayType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/common#DayType> .
+<https://w3id.org/transmodel/common#vehicleJourneyDayType> <http://www.w3.org/2000/01/rdf-schema#label> "vehicleJourneyDayType"@en .
+# 
+# https://w3id.org/transmodel/common#vehicleJourneyRoute
+<https://w3id.org/transmodel/common#vehicleJourneyRoute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/common#vehicleJourneyRoute> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#VehicleJourney> .
+<https://w3id.org/transmodel/common#vehicleJourneyRoute> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/common#Route> .
+<https://w3id.org/transmodel/common#vehicleJourneyRoute> <http://www.w3.org/2000/01/rdf-schema#label> "vehicleJourneyRoute"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/transmodel/common#arrivalTime
+<https://w3id.org/transmodel/common#arrivalTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/common#arrivalTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#TimingPoint> .
+<https://w3id.org/transmodel/common#arrivalTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<https://w3id.org/transmodel/common#arrivalTime> <http://www.w3.org/2000/01/rdf-schema#label> "arrivalTime"@en .
+# 
+# https://w3id.org/transmodel/common#headway
+<https://w3id.org/transmodel/common#headway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/common#headway> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#JourneyPattern> .
+<https://w3id.org/transmodel/common#headway> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#VehicleJourney> .
+<https://w3id.org/transmodel/common#headway> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<https://w3id.org/transmodel/common#headway> <http://www.w3.org/2000/01/rdf-schema#label> "headway"@en .
+# 
+# https://w3id.org/transmodel/common#latitude
+<https://w3id.org/transmodel/common#latitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/common#latitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#Point> .
+<https://w3id.org/transmodel/common#latitude> <http://www.w3.org/2000/01/rdf-schema#label> "latitude"@en .
+# 
+# https://w3id.org/transmodel/common#layover
+<https://w3id.org/transmodel/common#layover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/common#layover> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#JourneyPattern> .
+<https://w3id.org/transmodel/common#layover> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#VehicleJourney> .
+<https://w3id.org/transmodel/common#layover> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<https://w3id.org/transmodel/common#layover> <http://www.w3.org/2000/01/rdf-schema#label> "layover"@en .
+# 
+# https://w3id.org/transmodel/common#longitude
+<https://w3id.org/transmodel/common#longitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/common#longitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#Point> .
+<https://w3id.org/transmodel/common#longitude> <http://www.w3.org/2000/01/rdf-schema#label> "longitude"@en .
+# 
+# https://w3id.org/transmodel/common#pointSequence
+<https://w3id.org/transmodel/common#pointSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/common#pointSequence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#ScheduledStopPoint> .
+<https://w3id.org/transmodel/common#pointSequence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/transmodel/common#pointSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "Sequences of ScheduledStopPoint"@en .
+<https://w3id.org/transmodel/common#pointSequence> <http://www.w3.org/2000/01/rdf-schema#label> "stopSequence"@en .
+# 
+# https://w3id.org/transmodel/common#runtime
+<https://w3id.org/transmodel/common#runtime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/common#runtime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#JourneyPattern> .
+<https://w3id.org/transmodel/common#runtime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#VehicleJourney> .
+<https://w3id.org/transmodel/common#runtime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/transmodel/common#runtime> <http://www.w3.org/2000/01/rdf-schema#label> "runtime"@en .
+# 
+# https://w3id.org/transmodel/common#startTime
+<https://w3id.org/transmodel/common#startTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/common#startTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#HeadingInterval> .
+<https://w3id.org/transmodel/common#startTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/transmodel/common#startTime> <http://www.w3.org/2000/01/rdf-schema#label> "startTime"@en .
+# 
+# https://w3id.org/transmodel/common#time
+<https://w3id.org/transmodel/common#time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/common#time> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#JourneyPatternLayover> .
+<https://w3id.org/transmodel/common#time> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#TimingPoint> .
+<https://w3id.org/transmodel/common#time> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#VehicleJourneyLayover> .
+<https://w3id.org/transmodel/common#time> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<https://w3id.org/transmodel/common#time> <http://www.w3.org/2000/01/rdf-schema#label> "time"@en .
+# 
+# https://w3id.org/transmodel/common#timeLink
+<https://w3id.org/transmodel/common#timeLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/common#timeLink> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#TimingPoint> .
+<https://w3id.org/transmodel/common#timeLink> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/transmodel/common#timeLink> <http://www.w3.org/2000/01/rdf-schema#comment> "Sequences of TimePoints"@en .
+<https://w3id.org/transmodel/common#timeLink> <http://www.w3.org/2000/01/rdf-schema#label> "timeLink"@en .
+# 
+# https://w3id.org/transmodel/common#timingLinkInJourneyPattern
+<https://w3id.org/transmodel/common#timingLinkInJourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://w3id.org/transmodel/common#timingLinkPointSequence
+<https://w3id.org/transmodel/common#timingLinkPointSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/common#timingLinkPointSequence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#TimingPoint> .
+<https://w3id.org/transmodel/common#timingLinkPointSequence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+# 
+# https://w3id.org/transmodel/common#waitTime
+<https://w3id.org/transmodel/common#waitTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/common#waitTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#JourneyPattern> .
+<https://w3id.org/transmodel/common#waitTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/common#VehicleJourney> .
+<https://w3id.org/transmodel/common#waitTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/transmodel/common#waitTime> <http://www.w3.org/2000/01/rdf-schema#label> "waitTime"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/transmodel/common#ActivationLink
+<https://w3id.org/transmodel/common#ActivationLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#ActivationLink> <http://www.w3.org/2000/01/rdf-schema#comment> "A Link where a control process is activated when a vehicle passes it"@en .
+<https://w3id.org/transmodel/common#ActivationLink> <http://www.w3.org/2000/01/rdf-schema#label> "ActivationLink"@en .
+# 
+# https://w3id.org/transmodel/common#ActivationPoint
+<https://w3id.org/transmodel/common#ActivationPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#ActivationPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/common#Point> .
+<https://w3id.org/transmodel/common#ActivationPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A Point where a control process is activated when a vehicle passes it. Equipment may be needed for activation" .
+<https://w3id.org/transmodel/common#ActivationPoint> <http://www.w3.org/2000/01/rdf-schema#label> "ActivationPoint"@en .
+# 
+# https://w3id.org/transmodel/common#DayType
+<https://w3id.org/transmodel/common#DayType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#DayType> <http://www.w3.org/2000/01/rdf-schema#comment> "A DayType is a type of day characterised by one or more properties which affect public transport operation"@en .
+<https://w3id.org/transmodel/common#DayType> <http://www.w3.org/2000/01/rdf-schema#label> "DayType"@en .
+# 
+# https://w3id.org/transmodel/common#HeadingInterval
+<https://w3id.org/transmodel/common#HeadingInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#HeadingInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "A time interval or a duration defining a headway period and characterizing HeadwayJourneyGroup"@en .
+<https://w3id.org/transmodel/common#HeadingInterval> <http://www.w3.org/2000/01/rdf-schema#label> "HeadwayInterval"@en .
+# 
+# https://w3id.org/transmodel/common#JourneyPattern
+<https://w3id.org/transmodel/common#JourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#JourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "JourneyPattern"@en .
+# 
+# https://w3id.org/transmodel/common#JourneyPatternLayover
+<https://w3id.org/transmodel/common#JourneyPatternLayover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#JourneyPatternLayover> <http://www.w3.org/2000/01/rdf-schema#comment> "A JourneyPatternLayover is the time allowance at the end of each journey on a specified JourneyPattern to allow for delays and for other purposes. This layover supersedes any global layover and may be superseded by a specific VehicleJourneyLayover"@en .
+<https://w3id.org/transmodel/common#JourneyPatternLayover> <http://www.w3.org/2000/01/rdf-schema#label> "JourneyPatternLayover"@en .
+# 
+# https://w3id.org/transmodel/common#Line
+<https://w3id.org/transmodel/common#Line> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#Line> <http://www.w3.org/2000/01/rdf-schema#comment> "A Line is a group of Route which is generally known to the public by a similar name or number."@en .
+<https://w3id.org/transmodel/common#Line> <http://www.w3.org/2000/01/rdf-schema#label> "Line"@en .
+# 
+# https://w3id.org/transmodel/common#Passenger
+<https://w3id.org/transmodel/common#Passenger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#Passenger> <http://www.w3.org/2000/01/rdf-schema#comment> "A Passenger is someone who makes a Trip"@en .
+<https://w3id.org/transmodel/common#Passenger> <http://www.w3.org/2000/01/rdf-schema#label> "Passenger"@en .
+# 
+# https://w3id.org/transmodel/common#Point
+<https://w3id.org/transmodel/common#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location"@en .
+<https://w3id.org/transmodel/common#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point"@en .
+# 
+# https://w3id.org/transmodel/common#Route
+<https://w3id.org/transmodel/common#Route> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#Route> <http://www.w3.org/2000/01/rdf-schema#comment> "A Route is and ordered list of located Point defining one single path through the road (or rail) network."@en .
+<https://w3id.org/transmodel/common#Route> <http://www.w3.org/2000/01/rdf-schema#label> "Route"@en .
+# 
+# https://w3id.org/transmodel/common#ScheduledStopPoint
+<https://w3id.org/transmodel/common#ScheduledStopPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#ScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/common#Point> .
+<https://w3id.org/transmodel/common#ScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A ScheduledStopPoint is a Point where a Passenger can board or alight from a Vehicle."@en .
+<https://w3id.org/transmodel/common#ScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#label> "ScheduledStopPoint"@en .
+# 
+# https://w3id.org/transmodel/common#Service
+<https://w3id.org/transmodel/common#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#Service> <http://www.w3.org/2000/01/rdf-schema#comment> "A ServiceJourney is a Passenger carrying VehicleJourney for one\nspecified DayType. The pattern of working is in principle defined\nby a ServiceJourneyPattern."@en .
+<https://w3id.org/transmodel/common#Service> <http://www.w3.org/2000/01/rdf-schema#label> "ServiceJourney"@en .
+# 
+# https://w3id.org/transmodel/common#ServiceJourneyPattern
+<https://w3id.org/transmodel/common#ServiceJourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#ServiceJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/common#JourneyPattern> .
+<https://w3id.org/transmodel/common#ServiceJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "ServiceJourneyPattern"@en .
+# 
+# https://w3id.org/transmodel/common#TimingLink
+<https://w3id.org/transmodel/common#TimingLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#TimingLink> <http://www.w3.org/2000/01/rdf-schema#label> "A TimingLink is an ordered pair of TimingPoint for which run times\nmay be recorded."@en .
+<https://w3id.org/transmodel/common#TimingLink> <http://www.w3.org/2000/01/rdf-schema#label> "TimingLink"@en .
+# 
+# https://w3id.org/transmodel/common#TimingLinkInJourneyPattern
+<https://w3id.org/transmodel/common#TimingLinkInJourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#TimingLinkInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "A TimingLinkInJourneyPattern is the position of a TimingLink in a\nJourneyPattern. This entity is needed if a TimingLink is repeated\nin the same JourneyPattern, and separate information is to be stored\nabout each iteration of the TimingLink"@en .
+<https://w3id.org/transmodel/common#TimingLinkInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "TimingLinkInJourneyPattern"@en .
+# 
+# https://w3id.org/transmodel/common#TimingPoint
+<https://w3id.org/transmodel/common#TimingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#TimingPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/common#Point> .
+<https://w3id.org/transmodel/common#TimingPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A TimingPoint is a Point against which the timing information necessary to build schedules may be\nrecorded. It's the same as TimingPointInJourneyPattern"@en .
+<https://w3id.org/transmodel/common#TimingPoint> <http://www.w3.org/2000/01/rdf-schema#label> "TimingPoint"@en .
+# 
+# https://w3id.org/transmodel/common#Trip
+<https://w3id.org/transmodel/common#Trip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#Trip> <http://www.w3.org/2000/01/rdf-schema#comment> "The physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip."@en .
+<https://w3id.org/transmodel/common#Trip> <http://www.w3.org/2000/01/rdf-schema#label> "Trip"@en .
+# 
+# https://w3id.org/transmodel/common#Vehicle
+<https://w3id.org/transmodel/common#Vehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#Vehicle> <http://www.w3.org/2000/01/rdf-schema#comment> "A PublicTransportVehicle used for carrying Passengers"@en .
+<https://w3id.org/transmodel/common#Vehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle"@en .
+# 
+# https://w3id.org/transmodel/common#VehicleJourney
+<https://w3id.org/transmodel/common#VehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route."@en .
+<https://w3id.org/transmodel/common#VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleJourney"@en .
+# 
+# https://w3id.org/transmodel/common#VehicleJourneyLayover
+<https://w3id.org/transmodel/common#VehicleJourneyLayover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#VehicleJourneyLayover> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleJourneyLayover"@en .
+# 
+_:genid2 <https://w3id.org/transmodel/common#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid2 <https://w3id.org/transmodel/common#name> "Adolfo Anton-Bravo"@en .
+_:genid3 <https://w3id.org/transmodel/common#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid3 <https://w3id.org/transmodel/common#name> "Adolfo Anton-Bravo"@en .
+_:genid4 <https://w3id.org/transmodel/common#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid4 <https://w3id.org/transmodel/common#name> "Adolfo Anton-Bravo"@en .
+_:genid5 <https://w3id.org/transmodel/common#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid5 <https://w3id.org/transmodel/common#name> "Adolfo Anton-Bravo"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://w3id.org/transmodel/common#timingLinkInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "timingLinkInJourneyPattern"@en .
+# 
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

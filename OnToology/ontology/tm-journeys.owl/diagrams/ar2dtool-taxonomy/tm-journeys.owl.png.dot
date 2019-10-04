@@ -1,18 +1,26 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "base:PostalAddress" "base:Address" "base:ParkingPoint" "base:Point" "base:TimingPointInJourneyPattern" "base:BeaconPoint" "base:StopPointInJourneyPattern" "base:FlexibleRoute" "base:FlexibleLine" "base:TimingPoint" "base:JourneyPattern" "base:Route" "base:ServiceJourneyPattern" "base:ScheduledStopPoint" "base:FlexiblePoint" "base:Line" "base:RoadAddress" ; /*classes style*/
-	"base:ScheduledStopPoint" -> "base:Point" [ label = "rdfs:subClassOf" ];
-	"base:PostalAddress" -> "base:Address" [ label = "rdfs:subClassOf" ];
-	"base:TimingPointInJourneyPattern" -> "base:Point" [ label = "rdfs:subClassOf" ];
-	"base:FlexibleLine" -> "base:Line" [ label = "rdfs:subClassOf" ];
-	"base:TimingPoint" -> "base:Point" [ label = "rdfs:subClassOf" ];
+node [shape = rectangle, color="black"]; "base:PostalAddress" "base:Address" "base:ParkingPoint" "base:Connection" "base:Point" "base:TimingPointInJourneyPattern" "base:BeaconPoint" "base:PassingTime" "base:VehicleJourney" "base:StopPointInJourneyPattern" "base:DeadRunPattern" "base:FlexibleRoute" "base:FlexibleLine" "base:TimingPoint" "base:Route" "base:DefaultConnection" "base:JourneyPattern" "base:ServiceJourneyPattern" "base:AddressablePlace" "base:ScheduledStopPoint" "base:DatedVehicleJourney" "base:DatedBlock" "base:DeadRun" "base:FlexiblePoint" "base:Line" "base:Place" "base:TopographicPlace" "base:Block" "base:DatedPassingTime" "base:RoadAddress" ; /*classes style*/
+	"base:TopographicPlace" -> "base:Place" [ label = "rdfs:subClassOf" ];
 	"base:FlexibleRoute" -> "base:Route" [ label = "rdfs:subClassOf" ];
-	"base:FlexiblePoint" -> "base:Point" [ label = "rdfs:subClassOf" ];
-	"base:BeaconPoint" -> "base:Point" [ label = "rdfs:subClassOf" ];
-	"base:ParkingPoint" -> "base:TimingPoint" [ label = "rdfs:subClassOf" ];
-	"base:StopPointInJourneyPattern" -> "base:Point" [ label = "rdfs:subClassOf" ];
 	"base:ServiceJourneyPattern" -> "base:JourneyPattern" [ label = "rdfs:subClassOf" ];
+	"base:TimingPoint" -> "base:Point" [ label = "rdfs:subClassOf" ];
+	"base:FlexibleLine" -> "base:Line" [ label = "rdfs:subClassOf" ];
+	"base:DatedVehicleJourney" -> "base:VehicleJourney" [ label = "rdfs:subClassOf" ];
+	"base:DeadRunPattern" -> "base:JourneyPattern" [ label = "rdfs:subClassOf" ];
+	"base:StopPointInJourneyPattern" -> "base:Point" [ label = "rdfs:subClassOf" ];
+	"base:DeadRun" -> "base:VehicleJourney" [ label = "rdfs:subClassOf" ];
+	"base:DatedBlock" -> "base:Block" [ label = "rdfs:subClassOf" ];
+	"base:DatedPassingTime" -> "base:PassingTime" [ label = "rdfs:subClassOf" ];
+	"base:AddressablePlace" -> "base:Place" [ label = "rdfs:subClassOf" ];
+	"base:TimingPointInJourneyPattern" -> "base:Point" [ label = "rdfs:subClassOf" ];
+	"base:BeaconPoint" -> "base:Point" [ label = "rdfs:subClassOf" ];
 	"base:RoadAddress" -> "base:Address" [ label = "rdfs:subClassOf" ];
+	"base:ParkingPoint" -> "base:TimingPoint" [ label = "rdfs:subClassOf" ];
+	"base:FlexiblePoint" -> "base:Point" [ label = "rdfs:subClassOf" ];
+	"base:DefaultConnection" -> "base:Connection" [ label = "rdfs:subClassOf" ];
+	"base:PostalAddress" -> "base:Address" [ label = "rdfs:subClassOf" ];
+	"base:ScheduledStopPoint" -> "base:Point" [ label = "rdfs:subClassOf" ];
 
 }

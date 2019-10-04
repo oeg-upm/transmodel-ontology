@@ -9,6 +9,26 @@
     "@value" : "Adolfo Anton-Bravo"
   } ]
 }, {
+  "@id" : "_:genid10",
+  "https://w3id.org/transmodel/journeys#mbox" : [ {
+    "@language" : "en",
+    "@value" : "adolfo.anton.bravo@upm.es"
+  } ],
+  "https://w3id.org/transmodel/journeys#name" : [ {
+    "@language" : "en",
+    "@value" : "Adolfo Anton-Bravo"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "https://w3id.org/transmodel/journeys#mbox" : [ {
+    "@language" : "en",
+    "@value" : "adolfo.anton.bravo@upm.es"
+  } ],
+  "https://w3id.org/transmodel/journeys#name" : [ {
+    "@language" : "en",
+    "@value" : "Adolfo Anton-Bravo"
+  } ]
+}, {
   "@id" : "_:genid2",
   "https://w3id.org/transmodel/journeys#mbox" : [ {
     "@language" : "en",
@@ -60,6 +80,26 @@
   } ]
 }, {
   "@id" : "_:genid7",
+  "https://w3id.org/transmodel/journeys#mbox" : [ {
+    "@language" : "en",
+    "@value" : "adolfo.anton.bravo@upm.es"
+  } ],
+  "https://w3id.org/transmodel/journeys#name" : [ {
+    "@language" : "en",
+    "@value" : "Adolfo Anton-Bravo"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "https://w3id.org/transmodel/journeys#mbox" : [ {
+    "@language" : "en",
+    "@value" : "adolfo.anton.bravo@upm.es"
+  } ],
+  "https://w3id.org/transmodel/journeys#name" : [ {
+    "@language" : "en",
+    "@value" : "Adolfo Anton-Bravo"
+  } ]
+}, {
+  "@id" : "_:genid9",
   "https://w3id.org/transmodel/journeys#mbox" : [ {
     "@language" : "en",
     "@value" : "adolfo.anton.bravo@upm.es"
@@ -138,6 +178,20 @@
     "@value" : "Address"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#AddressablePlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A type of Place to which Passengers may refer to indicate the origin or a destination of a trip and that is so specific that it has an Address."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "AddressablePlace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Place"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#AllowedLineDirections",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -147,6 +201,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "AllowedLineDirections"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#ArrivalTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#PassingTime" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ArrivalTime"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#BeaconPoint",
@@ -228,6 +289,17 @@
     "@value" : "CompoundBlock"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#Connection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The physical (spatial) possibility for a Passenger to change from one public transport vehicle to another to continue the trip, determined by two ScheduledStopPoint. Different times may be necessary to cover the link between these points, depending the kind of Passenger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Connection"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#CorridorService",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#TypeOfFlexibleService" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -260,6 +332,59 @@
     "@value" : "CourseOfJourneys"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#DatedBlock",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The work of a Vehicle on a particular OperatingDay from the time it leaves a ParkingPoint after parking until its next return to park at a ParkingPoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DatedBlock"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Block"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#DatedPassingTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A PassingTime on a particular OperatingDay"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DatedPassingTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#PassingTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#DatedVehicleJourney",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A particular Journey of a Vehicle on a particular OperatingDay including all modifications possibly decided by the control staff"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DatedVehicleJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#DayOfWeek",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A particular week day, from Monday to Sunday"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DayOfWeek"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#DayType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -269,6 +394,109 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "DayType"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#DeadRun",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A non-service VehicleJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DeadRun"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#DeadRunPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A JourneyPattern to be used for DeadRun"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DeadRunPattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#JourneyPattern"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#DefaultConnection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The physical (spatial) possibility for a Passenger to change from one public transport Vehicle to another to continue the Trip. It specifies default times to be used to change from one mode of transport to another at an area or national level as specified by a TopographicPlace, Stop Area or SiteElement. It may be restricted to a specific Mode or Operator oe only apply in a particular direction of transfer, e.g. bus to rail may have a different time for rail to bus."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DefaultConnection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Connection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#DefaultDeadRunRunTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DefaultDeadRunRunTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#DefaultInterchange",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A quality parameter fixing the acceptable duration (standard and maximum) for an Interchage to be planned between two ScheduledStopPoint. this parameter will be used to control whether any two VehicleJourney serving those Points may be in connection."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DefaultInterchange"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#DefaultInterchangeMaximum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#DefaultInterchange" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DefaultInterchangeStandard"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#DefaultInterchangeStandard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#DefaultInterchange" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DefaultInterchangeMaximum"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#DefaultServiceJourneyRunTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The default time taken by a Vehicle to traverse a TimingLink during a ServiceJourney, for a specified TimeDemandType. This time may be superseded by the JourneyPatternRunTime or VehicleJourneyRunTime if these exist"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DefaultServiceJourneyRunTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#DepartureTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#PassingTime" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DepartureTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Direction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A classification for the general orientation of Routes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Direction"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#Ferry",
@@ -341,6 +569,13 @@
     "@value" : "FreeAreaWideFlexibleService"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#Friday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#DayOfWeek" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Friday"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#FromOriginToSSP",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#Access" ]
 }, {
@@ -359,6 +594,17 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Gondola"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#GroupOfTimingLinks",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A set of TimingLinks grouped together according to the similarity of TimeBand which are relevant to them. There may be a GroupOfTimingLinks which covers all TimingLinks, for use when different GroupOfTimingLinks are not needed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "GroupOfTimingLink"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#HeadingInterval",
@@ -416,6 +662,27 @@
     "@value" : "JourneyPatternLayover"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#JourneyPatternRunTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "JourneyPatternRunTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#JourneyRunTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#JourneyRunTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The time taken to traverse a TimingLink in a particular JourneyPattern, for a specified TimeDemandType. If it exists, it will override the DefaultServiceJourneyRunTime and DefaultDeadRunRunTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "JourneyRunTime"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#Line",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -459,6 +726,13 @@
     "@value" : "MixedTypesOfFlexibleService"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#Monday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#DayOfWeek" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Monday"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#OneDirection",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#AllowedLineDirections" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -484,6 +758,13 @@
     "@value" : "OtherDirections"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#OutboundRoute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#Direction" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Outbound"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#ParkingPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -507,6 +788,28 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Passenger"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#PassingTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Time data concerning public transport vehicles passing a particular Point, e.g. arrival time, departure time, waiting time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "PassingTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A geographic Place of any type which may be specified as the origin or destination of a Trip. A Place may be represented as a Point (dimension 0), a Road section (dimension 1) or a Zone (dimension 2)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Place"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#Point",
@@ -554,6 +857,13 @@
     "@value" : "Rail"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#ReturnRoute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#Direction" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ReturnRoute"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#RoadAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -568,6 +878,13 @@
     "@id" : "https://w3id.org/transmodel/journeys#Address"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#RoundTrip",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#Direction" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "RoundTrip"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#Route",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -577,6 +894,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Route"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Saturday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#DayOfWeek" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Saturday"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#ScheduledStopPoint",
@@ -608,7 +932,11 @@
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#ServiceCalendar",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ServiceCalendar"
+  } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#ServiceJourneyPattern",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -622,6 +950,17 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#JourneyPattern"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#StopArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A group of ScheduledStopPoint close to each other"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "StopArea"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#StopPlace",
@@ -647,6 +986,42 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Sunday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#DayOfWeek" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sunday"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Thursday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#DayOfWeek" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Thursday"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#TimeBand",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A period in a day, significant for some aspect of public transport, e.g. similar traffic conditions or fare category"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "TimeBand"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#TimeDemandType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An indicator of traffic conditions or other factors which may affect Vehicle Run or Wait times. It may be entered directly by the scheduler or defined by the use of TimeBands."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "TimeDemandType"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#TimingLink",
@@ -701,6 +1076,20 @@
     "@id" : "https://w3id.org/transmodel/journeys#Point"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#TopographicPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A type of Place providing the topographical context when searching for or presenting travel information, for example as the origin or destination of a trip. It may be of any size (e.g. County, City, Town, Village) and of different specificity (e.g. Greater London, London, West End, Westimenster, St James)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "TopographicPlace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Place"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#Tram",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#MeanOfTransport" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -717,6 +1106,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Trip"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Tuesday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#DayOfWeek" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tuesday"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#TypeOfFlexibleService",
@@ -758,6 +1154,17 @@
     "@value" : "VehicleJourneyLayover"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#VehicleJourneyRunTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The time taken to traverse a specified TimingLinkInJourneyPattern on a specified VehicleJourney. This gives the most detailed control over times and overrides the DefaultServiceJourneyRunTime and JourneyPatternRunTime and the DefaultDeadRunRunTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "VehicleJourneyRunTime"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#VehicleStoppingPlace",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -769,8 +1176,29 @@
     "@value" : "VehicleStoppingPlace"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#WaitingTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#PassingTime" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "WaitingTime"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#Walking",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#AccessMode" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Wednesday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#DayOfWeek" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Wednesday"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#WeekdayInSchoolHolidays",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#DayType" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "WeekdayInSchoolHolidays"
+  } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#access",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -830,6 +1258,19 @@
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#author",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#beginsConnection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Connection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "beginsConnection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#ScheduledStopPoint"
+  } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#blockPart",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -899,6 +1340,49 @@
   "@id" : "https://w3id.org/transmodel/journeys#creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#dayTypeAssignment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The assignment of operational characteristics, expressed by DayType, to a particular OperatingDay within a ServiceCalendar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#OperatingDay"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "dayTypeAssignment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#DayType"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#defaultDeadRunRunTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#DeadRun"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "defaultDeadRunRunTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#TimingLink"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#defaultInterchange",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#ScheduledStopPoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "defaultInterchange"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#DefaultInterchange"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -910,6 +1394,64 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#ScheduledStopPoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#direction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Route"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "direction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Direction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#endsConnection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Connection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Connection End, one end of a connection in Transmodel v6.0"
+  }, {
+    "@language" : "en",
+    "@value" : "endsConnection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#ScheduledStopPoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#endsConnectionDefault",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#DefaultConnection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "endsConnectionDefault"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#ScheduledStopPoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#endsConnection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#followsDeadRunTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "followsDeadRunPattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#DeadRunPattern"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#followsJourneyPattern",
@@ -964,6 +1506,29 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#journeyPatternRunTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "journeyPatternRunTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#journeyRunTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#journeyRunTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#JourneyPattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "journeyRunTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#TimingLink"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#latitude",
@@ -1065,6 +1630,31 @@
     "@id" : "https://w3id.org/transmodel/journeys#ScheduledStopPoint"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#passengerConnection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Passenger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "passengerConnection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Connection"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#passingTimeTimingPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#PassingTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "passingTimeTimingPoint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#TimingPoint"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#pointSequence",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1129,6 +1719,21 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Route"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#runTimeOverrides",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#JourneyRunTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "journeyRunTimeOverrides"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#DefaultDeadRunRunTime"
+  }, {
+    "@id" : "https://w3id.org/transmodel/journeys#DefaultServiceJourneyRunTime"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#runtime",
@@ -1359,6 +1964,38 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Route"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#VehicleJourneyRunTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "vehicleJourneyRunTimeOverrides"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#DefaultDeadRunRunTime"
+  }, {
+    "@id" : "https://w3id.org/transmodel/journeys#DefaultServiceJourneyRunTime"
+  }, {
+    "@id" : "https://w3id.org/transmodel/journeys#JourneyPatternRunTime"
+  }, {
+    "@id" : "https://w3id.org/transmodel/journeys#JourneyRunTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#vehiclePassingTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Vehicle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "vehiclePassingTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#PassingTime"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#virtualLineService",

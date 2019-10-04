@@ -59,6 +59,12 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#allowedLineDirections> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#AllowedLineDirections> .
 <https://w3id.org/transmodel/journeys#allowedLineDirections> <http://www.w3.org/2000/01/rdf-schema#label> "allowedLineDirections"@en .
 # 
+# https://w3id.org/transmodel/journeys#beginsConnection
+<https://w3id.org/transmodel/journeys#beginsConnection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#beginsConnection> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Connection> .
+<https://w3id.org/transmodel/journeys#beginsConnection> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
+<https://w3id.org/transmodel/journeys#beginsConnection> <http://www.w3.org/2000/01/rdf-schema#label> "beginsConnection"@en .
+# 
 # https://w3id.org/transmodel/journeys#blockPart
 <https://w3id.org/transmodel/journeys#blockPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/transmodel/journeys#blockPart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#JourneyPart> .
@@ -83,10 +89,55 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#canBoard> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
 <https://w3id.org/transmodel/journeys#canBoard> <http://www.w3.org/2000/01/rdf-schema#label> "canBoard"@en .
 # 
+# https://w3id.org/transmodel/journeys#dayTypeAssignment
+<https://w3id.org/transmodel/journeys#dayTypeAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#dayTypeAssignment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#OperatingDay> .
+<https://w3id.org/transmodel/journeys#dayTypeAssignment> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DayType> .
+<https://w3id.org/transmodel/journeys#dayTypeAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "The assignment of operational characteristics, expressed by DayType, to a particular OperatingDay within a ServiceCalendar"@en .
+<https://w3id.org/transmodel/journeys#dayTypeAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "dayTypeAssignment"@en .
+# 
+# https://w3id.org/transmodel/journeys#defaultDeadRunRunTime
+<https://w3id.org/transmodel/journeys#defaultDeadRunRunTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#defaultDeadRunRunTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#DeadRun> .
+<https://w3id.org/transmodel/journeys#defaultDeadRunRunTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#TimingLink> .
+<https://w3id.org/transmodel/journeys#defaultDeadRunRunTime> <http://www.w3.org/2000/01/rdf-schema#label> "defaultDeadRunRunTime"@en .
+# 
+# https://w3id.org/transmodel/journeys#defaultInterchange
+<https://w3id.org/transmodel/journeys#defaultInterchange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#defaultInterchange> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
+<https://w3id.org/transmodel/journeys#defaultInterchange> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DefaultInterchange> .
+<https://w3id.org/transmodel/journeys#defaultInterchange> <http://www.w3.org/2000/01/rdf-schema#label> "defaultInterchange"@en .
+# 
 # https://w3id.org/transmodel/journeys#destinationStop
 <https://w3id.org/transmodel/journeys#destinationStop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/transmodel/journeys#destinationStop> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
 <https://w3id.org/transmodel/journeys#destinationStop> <http://www.w3.org/2000/01/rdf-schema#label> "destinationStop"@en .
+# 
+# https://w3id.org/transmodel/journeys#direction
+<https://w3id.org/transmodel/journeys#direction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#direction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Route> .
+<https://w3id.org/transmodel/journeys#direction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Direction> .
+<https://w3id.org/transmodel/journeys#direction> <http://www.w3.org/2000/01/rdf-schema#label> "direction"@en .
+# 
+# https://w3id.org/transmodel/journeys#endsConnection
+<https://w3id.org/transmodel/journeys#endsConnection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#endsConnection> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Connection> .
+<https://w3id.org/transmodel/journeys#endsConnection> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
+<https://w3id.org/transmodel/journeys#endsConnection> <http://www.w3.org/2000/01/rdf-schema#label> "Connection End, one end of a connection in Transmodel v6.0"@en .
+<https://w3id.org/transmodel/journeys#endsConnection> <http://www.w3.org/2000/01/rdf-schema#label> "endsConnection"@en .
+# 
+# https://w3id.org/transmodel/journeys#endsConnectionDefault
+<https://w3id.org/transmodel/journeys#endsConnectionDefault> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#endsConnectionDefault> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#endsConnection> .
+<https://w3id.org/transmodel/journeys#endsConnectionDefault> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#DefaultConnection> .
+<https://w3id.org/transmodel/journeys#endsConnectionDefault> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
+<https://w3id.org/transmodel/journeys#endsConnectionDefault> <http://www.w3.org/2000/01/rdf-schema#label> "endsConnectionDefault"@en .
+# 
+# https://w3id.org/transmodel/journeys#followsDeadRunTime
+<https://w3id.org/transmodel/journeys#followsDeadRunTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#followsDeadRunTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#VehicleJourney> .
+<https://w3id.org/transmodel/journeys#followsDeadRunTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DeadRunPattern> .
+<https://w3id.org/transmodel/journeys#followsDeadRunTime> <http://www.w3.org/2000/01/rdf-schema#label> "followsDeadRunPattern"@en .
 # 
 # https://w3id.org/transmodel/journeys#followsJourneyPattern
 <https://w3id.org/transmodel/journeys#followsJourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -106,6 +157,17 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#journeyPatternPoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Point> .
 <https://w3id.org/transmodel/journeys#journeyPatternPoint> <http://www.w3.org/2000/01/rdf-schema#label> "journeyPatternPoint"@en .
 # 
+# https://w3id.org/transmodel/journeys#journeyPatternRunTime
+<https://w3id.org/transmodel/journeys#journeyPatternRunTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#journeyPatternRunTime> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://w3id.org/transmodel/journeys#journeyRunTime> .
+<https://w3id.org/transmodel/journeys#journeyPatternRunTime> <http://www.w3.org/2000/01/rdf-schema#label> "journeyPatternRunTime"@en .
+# 
+# https://w3id.org/transmodel/journeys#journeyRunTime
+<https://w3id.org/transmodel/journeys#journeyRunTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#journeyRunTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#JourneyPattern> .
+<https://w3id.org/transmodel/journeys#journeyRunTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#TimingLink> .
+<https://w3id.org/transmodel/journeys#journeyRunTime> <http://www.w3.org/2000/01/rdf-schema#label> "journeyRunTime"@en .
+# 
 # https://w3id.org/transmodel/journeys#makesAServiceJourney
 <https://w3id.org/transmodel/journeys#makesAServiceJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/transmodel/journeys#makesAServiceJourney> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Passenger> .
@@ -122,10 +184,29 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#originStop> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
 <https://w3id.org/transmodel/journeys#originStop> <http://www.w3.org/2000/01/rdf-schema#label> "originStop"@en .
 # 
+# https://w3id.org/transmodel/journeys#passengerConnection
+<https://w3id.org/transmodel/journeys#passengerConnection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#passengerConnection> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Passenger> .
+<https://w3id.org/transmodel/journeys#passengerConnection> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Connection> .
+<https://w3id.org/transmodel/journeys#passengerConnection> <http://www.w3.org/2000/01/rdf-schema#label> "passengerConnection"@en .
+# 
+# https://w3id.org/transmodel/journeys#passingTimeTimingPoint
+<https://w3id.org/transmodel/journeys#passingTimeTimingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#passingTimeTimingPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#PassingTime> .
+<https://w3id.org/transmodel/journeys#passingTimeTimingPoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#TimingPoint> .
+<https://w3id.org/transmodel/journeys#passingTimeTimingPoint> <http://www.w3.org/2000/01/rdf-schema#label> "passingTimeTimingPoint" .
+# 
 # https://w3id.org/transmodel/journeys#route
 <https://w3id.org/transmodel/journeys#route> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/transmodel/journeys#route> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Route> .
 <https://w3id.org/transmodel/journeys#route> <http://www.w3.org/2000/01/rdf-schema#label> "route"@en .
+# 
+# https://w3id.org/transmodel/journeys#runTimeOverrides
+<https://w3id.org/transmodel/journeys#runTimeOverrides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#runTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#JourneyRunTime> .
+<https://w3id.org/transmodel/journeys#runTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DefaultDeadRunRunTime> .
+<https://w3id.org/transmodel/journeys#runTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DefaultServiceJourneyRunTime> .
+<https://w3id.org/transmodel/journeys#runTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#label> "journeyRunTimeOverrides"@en .
 # 
 # https://w3id.org/transmodel/journeys#scheduledStopPoint
 <https://w3id.org/transmodel/journeys#scheduledStopPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -186,6 +267,21 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#vehicleJourneyRoute> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#VehicleJourney> .
 <https://w3id.org/transmodel/journeys#vehicleJourneyRoute> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Route> .
 <https://w3id.org/transmodel/journeys#vehicleJourneyRoute> <http://www.w3.org/2000/01/rdf-schema#label> "vehicleJourneyRoute"@en .
+# 
+# https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides
+<https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#VehicleJourneyRunTime> .
+<https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DefaultDeadRunRunTime> .
+<https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DefaultServiceJourneyRunTime> .
+<https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#JourneyPatternRunTime> .
+<https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#JourneyRunTime> .
+<https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#label> "vehicleJourneyRunTimeOverrides"@en .
+# 
+# https://w3id.org/transmodel/journeys#vehiclePassingTime
+<https://w3id.org/transmodel/journeys#vehiclePassingTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#vehiclePassingTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Vehicle> .
+<https://w3id.org/transmodel/journeys#vehiclePassingTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#PassingTime> .
+<https://w3id.org/transmodel/journeys#vehiclePassingTime> <http://www.w3.org/2000/01/rdf-schema#label> "vehiclePassingTime"@en .
 # 
 # 
 # 
@@ -353,6 +449,12 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#Address> <http://www.w3.org/2000/01/rdf-schema#comment> "The descriptive data associated with a Place that can be used to describe the unique geographical context of a Place for the purposes of identifying. May be refined as either a Road Address, a Postal Address or both."@en .
 <https://w3id.org/transmodel/journeys#Address> <http://www.w3.org/2000/01/rdf-schema#label> "Address"@en .
 # 
+# https://w3id.org/transmodel/journeys#AddressablePlace
+<https://w3id.org/transmodel/journeys#AddressablePlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#AddressablePlace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Place> .
+<https://w3id.org/transmodel/journeys#AddressablePlace> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of Place to which Passengers may refer to indicate the origin or a destination of a trip and that is so specific that it has an Address."@en .
+<https://w3id.org/transmodel/journeys#AddressablePlace> <http://www.w3.org/2000/01/rdf-schema#label> "AddressablePlace"@en .
+# 
 # https://w3id.org/transmodel/journeys#AllowedLineDirections
 <https://w3id.org/transmodel/journeys#AllowedLineDirections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#AllowedLineDirections> <http://www.w3.org/2000/01/rdf-schema#comment> "An allowed direction that can be used on a given Route. This can be used to validate the selection of allowed values"@en .
@@ -384,6 +486,11 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#CompoundBlock> <http://www.w3.org/2000/01/rdf-schema#comment> "The work of a vehicle during the time it is coupled to anohter vehicle"@en .
 <https://w3id.org/transmodel/journeys#CompoundBlock> <http://www.w3.org/2000/01/rdf-schema#label> "CompoundBlock"@en .
 # 
+# https://w3id.org/transmodel/journeys#Connection
+<https://w3id.org/transmodel/journeys#Connection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#Connection> <http://www.w3.org/2000/01/rdf-schema#comment> "The physical (spatial) possibility for a Passenger to change from one public transport vehicle to another to continue the trip, determined by two ScheduledStopPoint. Different times may be necessary to cover the link between these points, depending the kind of Passenger"@en .
+<https://w3id.org/transmodel/journeys#Connection> <http://www.w3.org/2000/01/rdf-schema#label> "Connection"@en .
+# 
 # https://w3id.org/transmodel/journeys#CoupledJourney
 <https://w3id.org/transmodel/journeys#CoupledJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#CoupledJourney> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/transmodel/journeys#VehicleJourney> .
@@ -395,10 +502,70 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#CourseOfJourneys> <http://www.w3.org/2000/01/rdf-schema#comment> "A part of a Block composed of consecutive VehicleJourneys defined for the same DayType, all operated on the same Line."@en .
 <https://w3id.org/transmodel/journeys#CourseOfJourneys> <http://www.w3.org/2000/01/rdf-schema#label> "CourseOfJourneys"@en .
 # 
+# https://w3id.org/transmodel/journeys#DatedBlock
+<https://w3id.org/transmodel/journeys#DatedBlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#DatedBlock> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Block> .
+<https://w3id.org/transmodel/journeys#DatedBlock> <http://www.w3.org/2000/01/rdf-schema#comment> "The work of a Vehicle on a particular OperatingDay from the time it leaves a ParkingPoint after parking until its next return to park at a ParkingPoint"@en .
+<https://w3id.org/transmodel/journeys#DatedBlock> <http://www.w3.org/2000/01/rdf-schema#label> "DatedBlock"@en .
+# 
+# https://w3id.org/transmodel/journeys#DatedPassingTime
+<https://w3id.org/transmodel/journeys#DatedPassingTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#DatedPassingTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#PassingTime> .
+<https://w3id.org/transmodel/journeys#DatedPassingTime> <http://www.w3.org/2000/01/rdf-schema#comment> "A PassingTime on a particular OperatingDay"@en .
+<https://w3id.org/transmodel/journeys#DatedPassingTime> <http://www.w3.org/2000/01/rdf-schema#label> "DatedPassingTime"@en .
+# 
+# https://w3id.org/transmodel/journeys#DatedVehicleJourney
+<https://w3id.org/transmodel/journeys#DatedVehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#DatedVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#VehicleJourney> .
+<https://w3id.org/transmodel/journeys#DatedVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "A particular Journey of a Vehicle on a particular OperatingDay including all modifications possibly decided by the control staff"@en .
+<https://w3id.org/transmodel/journeys#DatedVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#label> "DatedVehicleJourney"@en .
+# 
+# https://w3id.org/transmodel/journeys#DayOfWeek
+<https://w3id.org/transmodel/journeys#DayOfWeek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#DayOfWeek> <http://www.w3.org/2000/01/rdf-schema#comment> "A particular week day, from Monday to Sunday"@en .
+<https://w3id.org/transmodel/journeys#DayOfWeek> <http://www.w3.org/2000/01/rdf-schema#label> "DayOfWeek"@en .
+# 
 # https://w3id.org/transmodel/journeys#DayType
 <https://w3id.org/transmodel/journeys#DayType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#DayType> <http://www.w3.org/2000/01/rdf-schema#comment> "A DayType is a type of day characterised by one or more properties which affect public transport operation"@en .
 <https://w3id.org/transmodel/journeys#DayType> <http://www.w3.org/2000/01/rdf-schema#label> "DayType"@en .
+# 
+# https://w3id.org/transmodel/journeys#DeadRun
+<https://w3id.org/transmodel/journeys#DeadRun> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#DeadRun> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#VehicleJourney> .
+<https://w3id.org/transmodel/journeys#DeadRun> <http://www.w3.org/2000/01/rdf-schema#comment> "A non-service VehicleJourney"@en .
+<https://w3id.org/transmodel/journeys#DeadRun> <http://www.w3.org/2000/01/rdf-schema#label> "DeadRun"@en .
+# 
+# https://w3id.org/transmodel/journeys#DeadRunPattern
+<https://w3id.org/transmodel/journeys#DeadRunPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#DeadRunPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#JourneyPattern> .
+<https://w3id.org/transmodel/journeys#DeadRunPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "A JourneyPattern to be used for DeadRun"@en .
+<https://w3id.org/transmodel/journeys#DeadRunPattern> <http://www.w3.org/2000/01/rdf-schema#label> "DeadRunPattern"@en .
+# 
+# https://w3id.org/transmodel/journeys#DefaultConnection
+<https://w3id.org/transmodel/journeys#DefaultConnection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#DefaultConnection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Connection> .
+<https://w3id.org/transmodel/journeys#DefaultConnection> <http://www.w3.org/2000/01/rdf-schema#comment> "The physical (spatial) possibility for a Passenger to change from one public transport Vehicle to another to continue the Trip. It specifies default times to be used to change from one mode of transport to another at an area or national level as specified by a TopographicPlace, Stop Area or SiteElement. It may be restricted to a specific Mode or Operator oe only apply in a particular direction of transfer, e.g. bus to rail may have a different time for rail to bus."@en .
+<https://w3id.org/transmodel/journeys#DefaultConnection> <http://www.w3.org/2000/01/rdf-schema#label> "DefaultConnection"@en .
+# 
+# https://w3id.org/transmodel/journeys#DefaultDeadRunRunTime
+<https://w3id.org/transmodel/journeys#DefaultDeadRunRunTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#DefaultDeadRunRunTime> <http://www.w3.org/2000/01/rdf-schema#label> "DefaultDeadRunRunTime"@en .
+# 
+# https://w3id.org/transmodel/journeys#DefaultInterchange
+<https://w3id.org/transmodel/journeys#DefaultInterchange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#DefaultInterchange> <http://www.w3.org/2000/01/rdf-schema#comment> "A quality parameter fixing the acceptable duration (standard and maximum) for an Interchage to be planned between two ScheduledStopPoint. this parameter will be used to control whether any two VehicleJourney serving those Points may be in connection."@en .
+<https://w3id.org/transmodel/journeys#DefaultInterchange> <http://www.w3.org/2000/01/rdf-schema#label> "DefaultInterchange"@en .
+# 
+# https://w3id.org/transmodel/journeys#DefaultServiceJourneyRunTime
+<https://w3id.org/transmodel/journeys#DefaultServiceJourneyRunTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#DefaultServiceJourneyRunTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The default time taken by a Vehicle to traverse a TimingLink during a ServiceJourney, for a specified TimeDemandType. This time may be superseded by the JourneyPatternRunTime or VehicleJourneyRunTime if these exist"@en .
+<https://w3id.org/transmodel/journeys#DefaultServiceJourneyRunTime> <http://www.w3.org/2000/01/rdf-schema#label> "DefaultServiceJourneyRunTime"@en .
+# 
+# https://w3id.org/transmodel/journeys#Direction
+<https://w3id.org/transmodel/journeys#Direction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#Direction> <http://www.w3.org/2000/01/rdf-schema#comment> "A classification for the general orientation of Routes"@en .
+<https://w3id.org/transmodel/journeys#Direction> <http://www.w3.org/2000/01/rdf-schema#label> "Direction"@en .
 # 
 # https://w3id.org/transmodel/journeys#FlexibleLine
 <https://w3id.org/transmodel/journeys#FlexibleLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -417,6 +584,11 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#FlexibleRoute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Route> .
 <https://w3id.org/transmodel/journeys#FlexibleRoute> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of Route for FlexibleService. May include both Point and Zonal areas and ordered and unordered sections."@en .
 <https://w3id.org/transmodel/journeys#FlexibleRoute> <http://www.w3.org/2000/01/rdf-schema#label> "FlexibleRoute"@en .
+# 
+# https://w3id.org/transmodel/journeys#GroupOfTimingLinks
+<https://w3id.org/transmodel/journeys#GroupOfTimingLinks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#GroupOfTimingLinks> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of TimingLinks grouped together according to the similarity of TimeBand which are relevant to them. There may be a GroupOfTimingLinks which covers all TimingLinks, for use when different GroupOfTimingLinks are not needed"@en .
+<https://w3id.org/transmodel/journeys#GroupOfTimingLinks> <http://www.w3.org/2000/01/rdf-schema#label> "GroupOfTimingLink"@en .
 # 
 # https://w3id.org/transmodel/journeys#HeadingInterval
 <https://w3id.org/transmodel/journeys#HeadingInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -443,6 +615,16 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#JourneyPatternLayover> <http://www.w3.org/2000/01/rdf-schema#comment> "A JourneyPatternLayover is the time allowance at the end of each journey on a specified JourneyPattern to allow for delays and for other purposes. This layover supersedes any global layover and may be superseded by a specific VehicleJourneyLayover"@en .
 <https://w3id.org/transmodel/journeys#JourneyPatternLayover> <http://www.w3.org/2000/01/rdf-schema#label> "JourneyPatternLayover"@en .
 # 
+# https://w3id.org/transmodel/journeys#JourneyPatternRunTime
+<https://w3id.org/transmodel/journeys#JourneyPatternRunTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#JourneyPatternRunTime> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/transmodel/journeys#JourneyRunTime> .
+<https://w3id.org/transmodel/journeys#JourneyPatternRunTime> <http://www.w3.org/2000/01/rdf-schema#label> "JourneyPatternRunTime"@en .
+# 
+# https://w3id.org/transmodel/journeys#JourneyRunTime
+<https://w3id.org/transmodel/journeys#JourneyRunTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#JourneyRunTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time taken to traverse a TimingLink in a particular JourneyPattern, for a specified TimeDemandType. If it exists, it will override the DefaultServiceJourneyRunTime and DefaultDeadRunRunTime"@en .
+<https://w3id.org/transmodel/journeys#JourneyRunTime> <http://www.w3.org/2000/01/rdf-schema#label> "JourneyRunTime"@en .
+# 
 # https://w3id.org/transmodel/journeys#Line
 <https://w3id.org/transmodel/journeys#Line> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#Line> <http://www.w3.org/2000/01/rdf-schema#comment> "A Line is a group of Route which is generally known to the public by a similar name or number."@en .
@@ -468,6 +650,16 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#Passenger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#Passenger> <http://www.w3.org/2000/01/rdf-schema#comment> "A Passenger is someone who makes a Trip"@en .
 <https://w3id.org/transmodel/journeys#Passenger> <http://www.w3.org/2000/01/rdf-schema#label> "Passenger"@en .
+# 
+# https://w3id.org/transmodel/journeys#PassingTime
+<https://w3id.org/transmodel/journeys#PassingTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#PassingTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Time data concerning public transport vehicles passing a particular Point, e.g. arrival time, departure time, waiting time"@en .
+<https://w3id.org/transmodel/journeys#PassingTime> <http://www.w3.org/2000/01/rdf-schema#label> "PassingTime"@en .
+# 
+# https://w3id.org/transmodel/journeys#Place
+<https://w3id.org/transmodel/journeys#Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#Place> <http://www.w3.org/2000/01/rdf-schema#comment> "A geographic Place of any type which may be specified as the origin or destination of a Trip. A Place may be represented as a Point (dimension 0), a Road section (dimension 1) or a Zone (dimension 2)"@en .
+<https://w3id.org/transmodel/journeys#Place> <http://www.w3.org/2000/01/rdf-schema#label> "Place"@en .
 # 
 # https://w3id.org/transmodel/journeys#Point
 <https://w3id.org/transmodel/journeys#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -510,12 +702,18 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 # 
 # https://w3id.org/transmodel/journeys#ServiceCalendar
 <https://w3id.org/transmodel/journeys#ServiceCalendar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#ServiceCalendar> <http://www.w3.org/2000/01/rdf-schema#label> "ServiceCalendar"@en .
 # 
 # https://w3id.org/transmodel/journeys#ServiceJourneyPattern
 <https://w3id.org/transmodel/journeys#ServiceJourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#ServiceJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#JourneyPattern> .
 <https://w3id.org/transmodel/journeys#ServiceJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "The Journey Pattern for a passenger carrying Service Journey"@en .
 <https://w3id.org/transmodel/journeys#ServiceJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "ServiceJourneyPattern"@en .
+# 
+# https://w3id.org/transmodel/journeys#StopArea
+<https://w3id.org/transmodel/journeys#StopArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#StopArea> <http://www.w3.org/2000/01/rdf-schema#comment> "A group of ScheduledStopPoint close to each other"@en .
+<https://w3id.org/transmodel/journeys#StopArea> <http://www.w3.org/2000/01/rdf-schema#label> "StopArea"@en .
 # 
 # https://w3id.org/transmodel/journeys#StopPlace
 <https://w3id.org/transmodel/journeys#StopPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -527,6 +725,16 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Point> .
 <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "A Point in Journey Pattern that is a ScheduledStopPoint"@en .
 <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "StopPointInJourneyPattern"@en .
+# 
+# https://w3id.org/transmodel/journeys#TimeBand
+<https://w3id.org/transmodel/journeys#TimeBand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#TimeBand> <http://www.w3.org/2000/01/rdf-schema#comment> "A period in a day, significant for some aspect of public transport, e.g. similar traffic conditions or fare category"@en .
+<https://w3id.org/transmodel/journeys#TimeBand> <http://www.w3.org/2000/01/rdf-schema#label> "TimeBand"@en .
+# 
+# https://w3id.org/transmodel/journeys#TimeDemandType
+<https://w3id.org/transmodel/journeys#TimeDemandType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#TimeDemandType> <http://www.w3.org/2000/01/rdf-schema#comment> "An indicator of traffic conditions or other factors which may affect Vehicle Run or Wait times. It may be entered directly by the scheduler or defined by the use of TimeBands."@en .
+<https://w3id.org/transmodel/journeys#TimeDemandType> <http://www.w3.org/2000/01/rdf-schema#label> "TimeDemandType"@en .
 # 
 # https://w3id.org/transmodel/journeys#TimingLink
 <https://w3id.org/transmodel/journeys#TimingLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -550,6 +758,12 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Point> .
 <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "A Point in a JourneyPattern which is a TimingPoint"@en .
 <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "TimingPointInJourneyPattern"@en .
+# 
+# https://w3id.org/transmodel/journeys#TopographicPlace
+<https://w3id.org/transmodel/journeys#TopographicPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#TopographicPlace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Place> .
+<https://w3id.org/transmodel/journeys#TopographicPlace> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of Place providing the topographical context when searching for or presenting travel information, for example as the origin or destination of a trip. It may be of any size (e.g. County, City, Town, Village) and of different specificity (e.g. Greater London, London, West End, Westimenster, St James)"@en .
+<https://w3id.org/transmodel/journeys#TopographicPlace> <http://www.w3.org/2000/01/rdf-schema#label> "TopographicPlace"@en .
 # 
 # https://w3id.org/transmodel/journeys#Trip
 <https://w3id.org/transmodel/journeys#Trip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -575,6 +789,11 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#VehicleJourneyLayover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#VehicleJourneyLayover> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleJourneyLayover"@en .
 # 
+# https://w3id.org/transmodel/journeys#VehicleJourneyRunTime
+<https://w3id.org/transmodel/journeys#VehicleJourneyRunTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#VehicleJourneyRunTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time taken to traverse a specified TimingLinkInJourneyPattern on a specified VehicleJourney. This gives the most detailed control over times and overrides the DefaultServiceJourneyRunTime and JourneyPatternRunTime and the DefaultDeadRunRunTime"@en .
+<https://w3id.org/transmodel/journeys#VehicleJourneyRunTime> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleJourneyRunTime"@en .
+# 
 # https://w3id.org/transmodel/journeys#VehicleStoppingPlace
 <https://w3id.org/transmodel/journeys#VehicleStoppingPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#VehicleStoppingPlace> <http://www.w3.org/2000/01/rdf-schema#comment> "A place on the vehicle track where vehicles stop in order for passengers to board or alight from a vehicle.\n\nA vehicle track is located on the respective infrastructure link for the mode (railway element of railway network, road element of road network, etc.).\n\nA vehicle stopping place may be served by one or more quays."@en .
@@ -588,6 +807,11 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 # #
 # #################################################################
 # 
+# 
+# https://w3id.org/transmodel/journeys#ArrivalTime
+<https://w3id.org/transmodel/journeys#ArrivalTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#ArrivalTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#PassingTime> .
+<https://w3id.org/transmodel/journeys#ArrivalTime> <http://www.w3.org/2000/01/rdf-schema#label> "ArrivalTime"@en .
 # 
 # https://w3id.org/transmodel/journeys#BothDirections
 <https://w3id.org/transmodel/journeys#BothDirections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -609,6 +833,21 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#CorridorService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#TypeOfFlexibleService> .
 <https://w3id.org/transmodel/journeys#CorridorService> <http://www.w3.org/2000/01/rdf-schema#label> "CorridorService"@en .
 # 
+# https://w3id.org/transmodel/journeys#DefaultInterchangeMaximum
+<https://w3id.org/transmodel/journeys#DefaultInterchangeMaximum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#DefaultInterchangeMaximum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DefaultInterchange> .
+<https://w3id.org/transmodel/journeys#DefaultInterchangeMaximum> <http://www.w3.org/2000/01/rdf-schema#label> "DefaultInterchangeStandard"@en .
+# 
+# https://w3id.org/transmodel/journeys#DefaultInterchangeStandard
+<https://w3id.org/transmodel/journeys#DefaultInterchangeStandard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#DefaultInterchangeStandard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DefaultInterchange> .
+<https://w3id.org/transmodel/journeys#DefaultInterchangeStandard> <http://www.w3.org/2000/01/rdf-schema#label> "DefaultInterchangeMaximum"@en .
+# 
+# https://w3id.org/transmodel/journeys#DepartureTime
+<https://w3id.org/transmodel/journeys#DepartureTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#DepartureTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#PassingTime> .
+<https://w3id.org/transmodel/journeys#DepartureTime> <http://www.w3.org/2000/01/rdf-schema#label> "DepartureTime"@en .
+# 
 # https://w3id.org/transmodel/journeys#Ferry
 <https://w3id.org/transmodel/journeys#Ferry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/transmodel/journeys#Ferry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#MeanOfTransport> .
@@ -628,6 +867,11 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#FreeAreaWideFlexibleService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/transmodel/journeys#FreeAreaWideFlexibleService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#TypeOfFlexibleService> .
 <https://w3id.org/transmodel/journeys#FreeAreaWideFlexibleService> <http://www.w3.org/2000/01/rdf-schema#label> "FreeAreaWideFlexibleService"@en .
+# 
+# https://w3id.org/transmodel/journeys#Friday
+<https://w3id.org/transmodel/journeys#Friday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#Friday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DayOfWeek> .
+<https://w3id.org/transmodel/journeys#Friday> <http://www.w3.org/2000/01/rdf-schema#label> "Friday"@en .
 # 
 # https://w3id.org/transmodel/journeys#FromOriginToSSP
 <https://w3id.org/transmodel/journeys#FromOriginToSSP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -662,6 +906,11 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#MixedTypesOfFlexibleService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#TypeOfFlexibleService> .
 <https://w3id.org/transmodel/journeys#MixedTypesOfFlexibleService> <http://www.w3.org/2000/01/rdf-schema#label> "MixedTypesOfFlexibleService"@en .
 # 
+# https://w3id.org/transmodel/journeys#Monday
+<https://w3id.org/transmodel/journeys#Monday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#Monday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DayOfWeek> .
+<https://w3id.org/transmodel/journeys#Monday> <http://www.w3.org/2000/01/rdf-schema#label> "Monday"@en .
+# 
 # https://w3id.org/transmodel/journeys#OneDirection
 <https://w3id.org/transmodel/journeys#OneDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/transmodel/journeys#OneDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#AllowedLineDirections> .
@@ -672,6 +921,11 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#OtherDirections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#AllowedLineDirections> .
 <https://w3id.org/transmodel/journeys#OtherDirections> <http://www.w3.org/2000/01/rdf-schema#label> "OtherDirections"@en .
 # 
+# https://w3id.org/transmodel/journeys#OutboundRoute
+<https://w3id.org/transmodel/journeys#OutboundRoute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#OutboundRoute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#Direction> .
+<https://w3id.org/transmodel/journeys#OutboundRoute> <http://www.w3.org/2000/01/rdf-schema#label> "Outbound"@en .
+# 
 # https://w3id.org/transmodel/journeys#PrivateBike
 <https://w3id.org/transmodel/journeys#PrivateBike> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/transmodel/journeys#PrivateBike> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#AccessMode> .
@@ -681,14 +935,59 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#Rail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#MeanOfTransport> .
 <https://w3id.org/transmodel/journeys#Rail> <http://www.w3.org/2000/01/rdf-schema#label> "Rail"@en .
 # 
+# https://w3id.org/transmodel/journeys#ReturnRoute
+<https://w3id.org/transmodel/journeys#ReturnRoute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#ReturnRoute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#Direction> .
+<https://w3id.org/transmodel/journeys#ReturnRoute> <http://www.w3.org/2000/01/rdf-schema#label> "ReturnRoute"@en .
+# 
+# https://w3id.org/transmodel/journeys#RoundTrip
+<https://w3id.org/transmodel/journeys#RoundTrip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#RoundTrip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#Direction> .
+<https://w3id.org/transmodel/journeys#RoundTrip> <http://www.w3.org/2000/01/rdf-schema#label> "RoundTrip"@en .
+# 
+# https://w3id.org/transmodel/journeys#Saturday
+<https://w3id.org/transmodel/journeys#Saturday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#Saturday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DayOfWeek> .
+<https://w3id.org/transmodel/journeys#Saturday> <http://www.w3.org/2000/01/rdf-schema#label> "Saturday"@en .
+# 
+# https://w3id.org/transmodel/journeys#Sunday
+<https://w3id.org/transmodel/journeys#Sunday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#Sunday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DayOfWeek> .
+<https://w3id.org/transmodel/journeys#Sunday> <http://www.w3.org/2000/01/rdf-schema#label> "Sunday"@en .
+# 
+# https://w3id.org/transmodel/journeys#Thursday
+<https://w3id.org/transmodel/journeys#Thursday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#Thursday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DayOfWeek> .
+<https://w3id.org/transmodel/journeys#Thursday> <http://www.w3.org/2000/01/rdf-schema#label> "Thursday"@en .
+# 
 # https://w3id.org/transmodel/journeys#Tram
 <https://w3id.org/transmodel/journeys#Tram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/transmodel/journeys#Tram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#MeanOfTransport> .
 <https://w3id.org/transmodel/journeys#Tram> <http://www.w3.org/2000/01/rdf-schema#label> "Tram"@en .
 # 
+# https://w3id.org/transmodel/journeys#Tuesday
+<https://w3id.org/transmodel/journeys#Tuesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#Tuesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DayOfWeek> .
+<https://w3id.org/transmodel/journeys#Tuesday> <http://www.w3.org/2000/01/rdf-schema#label> "Tuesday"@en .
+# 
+# https://w3id.org/transmodel/journeys#WaitingTime
+<https://w3id.org/transmodel/journeys#WaitingTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#WaitingTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#PassingTime> .
+<https://w3id.org/transmodel/journeys#WaitingTime> <http://www.w3.org/2000/01/rdf-schema#label> "WaitingTime"@en .
+# 
 # https://w3id.org/transmodel/journeys#Walking
 <https://w3id.org/transmodel/journeys#Walking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/transmodel/journeys#Walking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#AccessMode> .
+# 
+# https://w3id.org/transmodel/journeys#Wednesday
+<https://w3id.org/transmodel/journeys#Wednesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#Wednesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DayOfWeek> .
+<https://w3id.org/transmodel/journeys#Wednesday> <http://www.w3.org/2000/01/rdf-schema#label> "Wednesday"@en .
+# 
+# https://w3id.org/transmodel/journeys#WeekdayInSchoolHolidays
+<https://w3id.org/transmodel/journeys#WeekdayInSchoolHolidays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/journeys#WeekdayInSchoolHolidays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DayType> .
+<https://w3id.org/transmodel/journeys#WeekdayInSchoolHolidays> <http://www.w3.org/2000/01/rdf-schema#label> "WeekdayInSchoolHolidays"@en .
 # 
 # https://w3id.org/transmodel/journeys#virtualLineService
 <https://w3id.org/transmodel/journeys#virtualLineService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -707,6 +1006,14 @@ _:genid6 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"
 _:genid6 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 _:genid7 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
 _:genid7 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
+_:genid8 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid8 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
+_:genid9 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid9 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
+_:genid10 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid10 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
+_:genid11 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid11 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 # 
 # 
 # #################################################################

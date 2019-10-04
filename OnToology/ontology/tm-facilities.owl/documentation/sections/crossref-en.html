@@ -24,6 +24,10 @@ This section provides details for each class and property defined by [Ontology N
             title="https://w3id.org/transmodel/facilities#ActivationPoint">ActivationPoint</a>
       </li>
       <li>
+         <a href="#AddressablePlace"
+            title="https://w3id.org/transmodel/facilities#AddressablePlace">AddressablePlace</a>
+      </li>
+      <li>
          <a href="#AssistanceForDissabledUsers"
             title="https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers">AssistanceForDissabledUsers</a>
       </li>
@@ -119,6 +123,18 @@ This section provides details for each class and property defined by [Ontology N
             title="https://w3id.org/transmodel/facilities#CycleOperatingEquipment">CycleStorageEquipment</a>
       </li>
       <li>
+         <a href="#DeliveryVariant"
+            title="https://w3id.org/transmodel/facilities#DeliveryVariant">DeliveryVariant</a>
+      </li>
+      <li>
+         <a href="#DestinationDisplay"
+            title="https://w3id.org/transmodel/facilities#DestinationDisplay">DestinationDisplay</a>
+      </li>
+      <li>
+         <a href="#DestinationDisplayVariant"
+            title="https://w3id.org/transmodel/facilities#DestinationDisplayVariant">DestinationDisplayVariant</a>
+      </li>
+      <li>
          <a href="#EmergencyService"
             title="https://w3id.org/transmodel/facilities#EmergencyService">EmergencyService</a>
       </li>
@@ -129,7 +145,8 @@ This section provides details for each class and property defined by [Ontology N
          </a>
       </li>
       <li>
-         <a href="#Equipment" title="https://w3id.org/transmodel/facilities#Equipment">Equipment</a>
+         <a href="#Equipment"
+            title="https://w3id.org/transmodel/facilities#Equipment">Equipment</a>
       </li>
       <li>
          <a href="#EquipmentPlace"
@@ -202,6 +219,9 @@ This section provides details for each class and property defined by [Ontology N
             title="https://w3id.org/transmodel/facilities#MoneyService">MoneyService</a>
       </li>
       <li>
+         <a href="#Notice" title="https://w3id.org/transmodel/facilities#Notice">Notice</a>
+      </li>
+      <li>
          <a href="#Passenger"
             title="https://w3id.org/transmodel/facilities#Passenger">Passenger</a>
       </li>
@@ -230,6 +250,9 @@ This section provides details for each class and property defined by [Ontology N
       <li>
          <a href="#PassengerInformationPrintedMaterial"
             title="https://w3id.org/transmodel/facilities#PassengerInformationPrintedMaterial">PassengerInformationPrintedMaterial</a>
+      </li>
+      <li>
+         <a href="#Place" title="https://w3id.org/transmodel/facilities#Place">Place</a>
       </li>
       <li>
          <a href="#PlaceAccessEquipment"
@@ -314,6 +337,10 @@ This section provides details for each class and property defined by [Ontology N
       <li>
          <a href="#SiteComponent"
             title="https://w3id.org/transmodel/facilities#SiteComponent">SiteComponent</a>
+      </li>
+      <li>
+         <a href="#SiteElement"
+            title="https://w3id.org/transmodel/facilities#SiteElement">SiteElement</a>
       </li>
       <li>
          <a href="#SiteEquipment"
@@ -580,6 +607,27 @@ This section provides details for each class and property defined by [Ontology N
          <dt>has super-classes</dt>
          <dd>
             <a href="#https://w3id.org/transmodel/journeys#Point" title="https://w3id.org/transmodel/journeys#Point">Point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AddressablePlace">
+      <h3>AddressablePlace<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#AddressablePlace</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Place" title="https://w3id.org/transmodel/facilities#Place">Place</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#SiteElement"
+               title="https://w3id.org/transmodel/facilities#SiteElement">SiteElement</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1071,6 +1119,69 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
       </dl>
    </div>
+   <div class="entity" id="DeliveryVariant">
+      <h3>DeliveryVariant<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#DeliveryVariant</p>
+      <div class="comment">
+         <span class="markdown">A variant text of a Notice for use in a specific media or delivery channel (voice, printed, material, etc.)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Notice" title="https://w3id.org/transmodel/facilities#Notice">Notice</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#material" title="https://w3id.org/transmodel/facilities#material">material</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#printed" title="https://w3id.org/transmodel/facilities#printed">printed</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#voice" title="https://w3id.org/transmodel/facilities#voice">voice</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DestinationDisplay">
+      <h3>DestinationDisplay<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#DestinationDisplay</p>
+      <div class="comment">
+         <span class="markdown">An advertised destination of a specific JourneyPattern, usually displayed on a headsign or at other on-board locations</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#DestinationDisplayVariant"
+               title="https://w3id.org/transmodel/facilities#DestinationDisplayVariant">DestinationDisplayVariant</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DestinationDisplayVariant">
+      <h3>DestinationDisplayVariant<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#DestinationDisplayVariant</p>
+      <div class="comment">
+         <span class="markdown">An advertised destination of a specific JourneyPattern, usually displayed on a hadsign or at other on-board locations</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DestinationDisplay"
+               title="https://w3id.org/transmodel/facilities#DestinationDisplay">DestinationDisplay</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="EmergencyService">
       <h3>EmergencyService<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1205,7 +1316,8 @@ An Equipment or LocalService is used to describe the further properties provided
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#Equipment" title="https://w3id.org/transmodel/facilities#Equipment">Equipment</a>
+            <a href="#Equipment"
+               title="https://w3id.org/transmodel/facilities#Equipment">Equipment</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Service" title="https://w3id.org/transmodel/facilities#Service">Service</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -1554,6 +1666,25 @@ Provides facilities as LuggageTrolley, FreeToUse, etc.</span>
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Notice">
+      <h3>Notice<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#Notice</p>
+      <div class="comment">
+         <span class="markdown">A text for informational purposes on exceptions in a Line,  JourneyPattern, etc. The information may be usable for Passenger or driver information</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#DeliveryVariant"
+               title="https://w3id.org/transmodel/facilities#DeliveryVariant">DeliveryVariant</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Passenger">
       <h3>Passenger<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1643,7 +1774,8 @@ Accessible by Passenger but without direct access to Vehicles</span>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Equipment" title="https://w3id.org/transmodel/facilities#Equipment">Equipment</a>
+            <a href="#Equipment"
+               title="https://w3id.org/transmodel/facilities#Equipment">Equipment</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -1737,6 +1869,22 @@ Accessible by Passenger but without direct access to Vehicles</span>
                title="https://w3id.org/transmodel/facilities#InformationBooklet">InformationBooklet</a>
             <sup class="type-c" title="class">c</sup>, <a href="#InformationLeaflet"
                title="https://w3id.org/transmodel/facilities#InformationLeaflet">InformationLeaflet</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Place">
+      <h3>Place<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#Place</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AddressablePlace"
+               title="https://w3id.org/transmodel/facilities#AddressablePlace">AddressablePlace</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1877,7 +2025,8 @@ Accessible by Passenger but without direct access to Vehicles</span>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Equipment" title="https://w3id.org/transmodel/facilities#Equipment">Equipment</a>
+            <a href="#Equipment"
+               title="https://w3id.org/transmodel/facilities#Equipment">Equipment</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -2028,7 +2177,8 @@ Accessible by Passenger but without direct access to Vehicles</span>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Equipment" title="https://w3id.org/transmodel/facilities#Equipment">Equipment</a>
+            <a href="#Equipment"
+               title="https://w3id.org/transmodel/facilities#Equipment">Equipment</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2272,6 +2422,25 @@ by a ServiceJourneyPattern.</span>
             <a href="#checkConstraint"
                title="https://w3id.org/transmodel/facilities#checkConstraint">siteComponentCheckConstraint</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SiteElement">
+      <h3>SiteElement<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#SiteElement</p>
+      <div class="comment">
+         <span class="markdown">A type of AddressablePlace specifying common properties of a Site or a SiteComponent to describe it, including accessibility.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#AddressablePlace"
+               title="https://w3id.org/transmodel/facilities#AddressablePlace">AddressablePlace</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -3103,7 +3272,8 @@ RevolvingDoor</a>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Equipment" title="https://w3id.org/transmodel/facilities#Equipment">Equipment</a>
+            <a href="#Equipment"
+               title="https://w3id.org/transmodel/facilities#Equipment">Equipment</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -3544,7 +3714,8 @@ RevolvingDoor</a>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Equipment" title="https://w3id.org/transmodel/facilities#Equipment">Equipment</a>
+               <a href="#Equipment"
+                  title="https://w3id.org/transmodel/facilities#Equipment">Equipment</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -4752,6 +4923,9 @@ RevolvingDoor</a>
          </a>
       </li>
       <li>
+         <a href="#material" title="https://w3id.org/transmodel/facilities#material">material</a>
+      </li>
+      <li>
          <a href="#narrowEntrance"
             title="https://w3id.org/transmodel/facilities#narrowEntrance">narrowEntrance</a>
       </li>
@@ -4784,6 +4958,9 @@ RevolvingDoor</a>
       <li>
          <a href="#placeAccessStairStaircase"
             title="https://w3id.org/transmodel/facilities#placeAccessStairStaircase">placeAccessStairStaircase</a>
+      </li>
+      <li>
+         <a href="#printed" title="https://w3id.org/transmodel/facilities#printed">printed</a>
       </li>
       <li>
          <a href="#queue" title="https://w3id.org/transmodel/facilities#queue">
@@ -4860,6 +5037,9 @@ RevolvingDoor</a>
             title="https://w3id.org/transmodel/facilities#visualNavigator">
             <span>visual navigator</span>
          </a>
+      </li>
+      <li>
+         <a href="#voice" title="https://w3id.org/transmodel/facilities#voice">voice</a>
       </li>
       <li>
          <a href="#walkingStick"
@@ -5617,6 +5797,25 @@ RevolvingDoor<sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
+   <div class="entity" id="material">
+      <h3>material<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#material</p>
+      <div class="comment">
+         <span class="markdown">material, a DeliveryVariant</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#DeliveryVariant"
+               title="https://w3id.org/transmodel/facilities#DeliveryVariant">DeliveryVariant</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="narrowEntrance">
       <h3>narrowEntrance<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -5734,6 +5933,25 @@ RevolvingDoor<sup class="type-ni" title="named individual">ni</sup>
          <dd>
             <a href="#TypeOfPlaceAccessStair"
                title="https://w3id.org/transmodel/facilities#TypeOfPlaceAccessStair">TypeOfPlaceAccessStair</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="printed">
+      <h3>printed<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#printed</p>
+      <div class="comment">
+         <span class="markdown">Printed, a delivery variant</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#DeliveryVariant"
+               title="https://w3id.org/transmodel/facilities#DeliveryVariant">DeliveryVariant</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -5987,6 +6205,25 @@ RevolvingDoor<sup class="type-ni" title="named individual">ni</sup>
          <dd>
             <a href="#TypeOfAccessibilityTools"
                title="https://w3id.org/transmodel/facilities#TypeOfAccessibilityTools">TypeOfAccessibilityTools</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="voice">
+      <h3>voice<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#voice</p>
+      <div class="comment">
+         <span class="markdown">voice, a delivery variant</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#DeliveryVariant"
+               title="https://w3id.org/transmodel/facilities#DeliveryVariant">DeliveryVariant</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>

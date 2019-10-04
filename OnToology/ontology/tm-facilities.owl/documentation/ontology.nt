@@ -361,6 +361,11 @@
 <https://w3id.org/transmodel/facilities#ActivationPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A Point where a control process is activated when a vehicle passes it. equipment may be needed for activation."@en .
 <https://w3id.org/transmodel/facilities#ActivationPoint> <http://www.w3.org/2000/01/rdf-schema#label> "ActivationPoint"@en .
 # 
+# https://w3id.org/transmodel/facilities#AddressablePlace
+<https://w3id.org/transmodel/facilities#AddressablePlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#AddressablePlace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Place> .
+<https://w3id.org/transmodel/facilities#AddressablePlace> <http://www.w3.org/2000/01/rdf-schema#label> "AddressablePlace"@en .
+# 
 # https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers
 <https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#AssistanceService> .
@@ -469,6 +474,23 @@
 <https://w3id.org/transmodel/facilities#CycleOperatingEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PlaceEquipment> .
 <https://w3id.org/transmodel/facilities#CycleOperatingEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "A specialisation of PlaceEquipment describing cycle parking equipment"@en .
 <https://w3id.org/transmodel/facilities#CycleOperatingEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "CycleStorageEquipment"@en .
+# 
+# https://w3id.org/transmodel/facilities#DeliveryVariant
+<https://w3id.org/transmodel/facilities#DeliveryVariant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#DeliveryVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#Notice> .
+<https://w3id.org/transmodel/facilities#DeliveryVariant> <http://www.w3.org/2000/01/rdf-schema#comment> "A variant text of a Notice for use in a specific media or delivery channel (voice, printed, material, etc.)"@en .
+<https://w3id.org/transmodel/facilities#DeliveryVariant> <http://www.w3.org/2000/01/rdf-schema#label> "DeliveryVariant"@en .
+# 
+# https://w3id.org/transmodel/facilities#DestinationDisplay
+<https://w3id.org/transmodel/facilities#DestinationDisplay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#DestinationDisplay> <http://www.w3.org/2000/01/rdf-schema#comment> "An advertised destination of a specific JourneyPattern, usually displayed on a headsign or at other on-board locations"@en .
+<https://w3id.org/transmodel/facilities#DestinationDisplay> <http://www.w3.org/2000/01/rdf-schema#label> "DestinationDisplay"@en .
+# 
+# https://w3id.org/transmodel/facilities#DestinationDisplayVariant
+<https://w3id.org/transmodel/facilities#DestinationDisplayVariant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#DestinationDisplayVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#DestinationDisplay> .
+<https://w3id.org/transmodel/facilities#DestinationDisplayVariant> <http://www.w3.org/2000/01/rdf-schema#comment> "An advertised destination of a specific JourneyPattern, usually displayed on a hadsign or at other on-board locations"@en .
+<https://w3id.org/transmodel/facilities#DestinationDisplayVariant> <http://www.w3.org/2000/01/rdf-schema#label> "DestinationDisplayVariant"@en .
 # 
 # https://w3id.org/transmodel/facilities#EmergencyService
 <https://w3id.org/transmodel/facilities#EmergencyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -601,6 +623,11 @@
 <https://w3id.org/transmodel/facilities#MoneyService> <http://www.w3.org/2000/01/rdf-schema#comment> "MoneyService is the specialisation of Commercial services for money services. Provides information about money services."@en .
 <https://w3id.org/transmodel/facilities#MoneyService> <http://www.w3.org/2000/01/rdf-schema#label> "MoneyService"@en .
 # 
+# https://w3id.org/transmodel/facilities#Notice
+<https://w3id.org/transmodel/facilities#Notice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Notice> <http://www.w3.org/2000/01/rdf-schema#comment> "A text for informational purposes on exceptions in a Line,  JourneyPattern, etc. The information may be usable for Passenger or driver information"@en .
+<https://w3id.org/transmodel/facilities#Notice> <http://www.w3.org/2000/01/rdf-schema#label> "Notice"@en .
+# 
 # https://w3id.org/transmodel/facilities#Passenger
 <https://w3id.org/transmodel/facilities#Passenger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/facilities#Passenger> <http://www.w3.org/2000/01/rdf-schema#comment> "The Person who uses Public Transport Services"@en .
@@ -638,6 +665,10 @@
 # https://w3id.org/transmodel/facilities#PassengerSafetyEquipment
 <https://w3id.org/transmodel/facilities#PassengerSafetyEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/facilities#PassengerSafetyEquipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#PassengerEquipment> .
+# 
+# https://w3id.org/transmodel/facilities#Place
+<https://w3id.org/transmodel/facilities#Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#Place> <http://www.w3.org/2000/01/rdf-schema#label> "Place"@en .
 # 
 # https://w3id.org/transmodel/facilities#PlaceAccessEquipment
 <https://w3id.org/transmodel/facilities#PlaceAccessEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -746,6 +777,12 @@
 <https://w3id.org/transmodel/facilities#SiteComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/facilities#SiteComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "An element of a Site descibing a part of its structure. SiteComponent share common properties for data management, accessibility and other features"@en .
 <https://w3id.org/transmodel/facilities#SiteComponent> <http://www.w3.org/2000/01/rdf-schema#label> "SiteComponent"@en .
+# 
+# https://w3id.org/transmodel/facilities#SiteElement
+<https://w3id.org/transmodel/facilities#SiteElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/facilities#SiteElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#AddressablePlace> .
+<https://w3id.org/transmodel/facilities#SiteElement> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of AddressablePlace specifying common properties of a Site or a SiteComponent to describe it, including accessibility."@en .
+<https://w3id.org/transmodel/facilities#SiteElement> <http://www.w3.org/2000/01/rdf-schema#label> "SiteElement"@en .
 # 
 # https://w3id.org/transmodel/facilities#SiteEquipment
 <https://w3id.org/transmodel/facilities#SiteEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1181,6 +1218,12 @@
 # https://w3id.org/transmodel/facilities#lowFloor
 <https://w3id.org/transmodel/facilities#lowFloor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
+# https://w3id.org/transmodel/facilities#material
+<https://w3id.org/transmodel/facilities#material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/facilities#material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#DeliveryVariant> .
+<https://w3id.org/transmodel/facilities#material> <http://www.w3.org/2000/01/rdf-schema#comment> "material, a DeliveryVariant"@en .
+<https://w3id.org/transmodel/facilities#material> <http://www.w3.org/2000/01/rdf-schema#label> "material"@en .
+# 
 # https://w3id.org/transmodel/facilities#narrowEntrance
 <https://w3id.org/transmodel/facilities#narrowEntrance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/transmodel/facilities#narrowEntrance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#TypeOfAccessFeature> .
@@ -1226,6 +1269,12 @@
 <https://w3id.org/transmodel/facilities#placeAccessStairStaircase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#TypeOfPlaceAccessStair> .
 <https://w3id.org/transmodel/facilities#placeAccessStairStaircase> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStaircase"@en .
 <https://w3id.org/transmodel/facilities#placeAccessStairStaircase> <http://www.w3.org/2000/01/rdf-schema#label> "placeAccessStairStaircase"@en .
+# 
+# https://w3id.org/transmodel/facilities#printed
+<https://w3id.org/transmodel/facilities#printed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/facilities#printed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#DeliveryVariant> .
+<https://w3id.org/transmodel/facilities#printed> <http://www.w3.org/2000/01/rdf-schema#comment> "Printed, a delivery variant"@en .
+<https://w3id.org/transmodel/facilities#printed> <http://www.w3.org/2000/01/rdf-schema#label> "printed"@en .
 # 
 # https://w3id.org/transmodel/facilities#queue
 <https://w3id.org/transmodel/facilities#queue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1293,6 +1342,12 @@
 # https://w3id.org/transmodel/facilities#visualNavigator
 <https://w3id.org/transmodel/facilities#visualNavigator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/transmodel/facilities#visualNavigator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#TypeOfAccessibilityTools> .
+# 
+# https://w3id.org/transmodel/facilities#voice
+<https://w3id.org/transmodel/facilities#voice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/facilities#voice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/facilities#DeliveryVariant> .
+<https://w3id.org/transmodel/facilities#voice> <http://www.w3.org/2000/01/rdf-schema#comment> "voice, a delivery variant"@en .
+<https://w3id.org/transmodel/facilities#voice> <http://www.w3.org/2000/01/rdf-schema#label> "voice"@en .
 # 
 # https://w3id.org/transmodel/facilities#walkingStick
 <https://w3id.org/transmodel/facilities#walkingStick> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
