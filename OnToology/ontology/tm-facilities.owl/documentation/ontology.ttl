@@ -42,11 +42,32 @@
 
 
 #################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#string
+xsd:string owl:equivalentClass xsd:duration .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW
+:OBJECTPROPERTIESTOREVIEW rdf:type owl:ObjectProperty .
+
+
 ###  https://w3id.org/transmodel/facilities#accessibilityAssessment
 :accessibilityAssessment rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                          rdfs:domain :Facility ;
                          rdfs:range :AccessibilityAssessment ;
                          rdfs:label "accessibilityAssessment"@en .
@@ -54,21 +75,39 @@
 
 ###  https://w3id.org/transmodel/facilities#accessibilityLimitation
 :accessibilityLimitation rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                          rdfs:domain :Facility ;
                          rdfs:range :AccessibilityLimitation ;
                          rdfs:label "accessibilityLimitation"@en .
 
 
+###  https://w3id.org/transmodel/facilities#accommodationFacility
+:accommodationFacility rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :facilityType ;
+                       rdfs:domain :Accommodation ;
+                       rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                           owl:hasValue <https://w3id.org/transmodel/kos/facilities/FacilityType>
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+                       rdfs:comment "TODO: the range of this property may be further restricted to those SKOS concepts that also comply with skos:broader tmkosfacility:FacilityType/AccomodationFacilityType"@en ,
+                                    "This property restricts the type of facility to one specific for accommodation from the SKOS codelist for types of facilities, including, for example, values like seating, sleeper, couchette, special seating, reclining seats, standing, etc."@en ;
+                       rdfs:label "accommodation facility"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#accomodation
 :accomodation rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
               rdfs:domain <https://w3id.org/transmodel/journeys#Service> ;
-              rdfs:range :TypeOfAccommodation ;
               rdfs:label "accomodation"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#activateEquipment
 :activateEquipment rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                    rdfs:domain :Passenger ;
                    rdfs:range :Equipment ;
                    rdfs:label "activateEquipment"@en .
@@ -76,33 +115,109 @@
 
 ###  https://w3id.org/transmodel/facilities#activationAssignment
 :activationAssignment rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                       rdfs:label "activationAssignment"@en .
 
 
-###  https://w3id.org/transmodel/facilities#canBeLocatedIn
-:canBeLocatedIn rdf:type owl:ObjectProperty ;
-                rdfs:domain :Facility ;
-                rdfs:range :Site ;
-                rdfs:label "canBeLocatedIn"@en .
+###  https://w3id.org/transmodel/facilities#availableAt
+:availableAt rdf:type owl:ObjectProperty ;
+             rdfs:domain :SiteFacilitySet ;
+             rdfs:range :Site ;
+             rdfs:comment "TODO: Check whether this property is also applicable to other things beyond Site Facility Sets"@en ,
+                          "This property relates a Site Facility Set with a Site"@en ;
+             rdfs:label "available at"@en .
+
+
+###  https://w3id.org/transmodel/facilities#boardingPermission
+:boardingPermission rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :facilityType ;
+                    rdfs:domain :OnboardStay ;
+                    rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                        owl:hasValue <https://w3id.org/transmodel/kos/facilities/FacilityType>
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+                    rdfs:comment "TODO: the range of this property may be further restricted to those SKOS concepts that also comply with skos:broader tmkosfacility:FacilityType/BoardingPermissionType"@en ,
+                                 "This property describes the types of boarding permissions allowed for an Onboard Stay from the SKOS codelist for types of facilities, including normal, early boarding, late alighting, etc."@en ;
+                    rdfs:label "boarding permission"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#checkConstraint
 :checkConstraint rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                  rdfs:domain :SiteComponent ;
                  rdfs:range :Constraint ;
                  rdfs:label "siteComponentCheckConstraint"@en .
 
 
-###  https://w3id.org/transmodel/facilities#containsEquipment
-:containsEquipment rdf:type owl:ObjectProperty ;
-                   rdfs:domain :EquipmentPlace ;
+###  https://w3id.org/transmodel/facilities#comprises
+:comprises rdf:type owl:ObjectProperty ;
+           rdfs:comment "General property for all types of containment and aggregation"@en ;
+           rdfs:label "comprises"@en .
+
+
+###  https://w3id.org/transmodel/facilities#comprisesEquipment
+:comprisesEquipment rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :comprises ;
+                    rdfs:domain :FacilitySet ;
+                    rdfs:range :Equipment ;
+                    rdfs:comment "TODO: Check carefully whether the range should be Equipment or, instead, something more general like Facility, since the differentiation between Facility and Equipment is sometimes unclear"@en ,
+                                 """This property is used to aggregate other types of facilities from a Facility Set, normally focused on those that are user defined and not from the predefined list.
+In the Transmodel UML model this is represented as TypeOfEquipment, and in the Netex implementation the term otherFacilities is used."""@en ;
+                    rdfs:label "comprises equipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#comprisesFacility
+:comprisesFacility rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :comprises ;
+                   rdfs:domain :FacilitySet ;
                    rdfs:range :Facility ;
-                   rdfs:comment "containsEquipment"@en .
+                   rdfs:comment """This property is used to aggregate all the facilities that a facility set contains
+In Netex, this is expressed with the element TypeOfFacilityRef, which is used to refer to facilities, and in the Transmodel UML ontology this is simply expressed as 'facility'"""@en ;
+                   rdfs:label "comprises facility"@en .
+
+
+###  https://w3id.org/transmodel/facilities#couchetteFacility
+:couchetteFacility rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :facilityType ;
+                   rdfs:domain :Accommodation ;
+                   rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                       owl:hasValue <https://w3id.org/transmodel/kos/facilities/FacilityType>
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] ;
+                   rdfs:comment "TODO: the range of this property may be further restricted to those SKOS concepts that also comply with skos:broader tmkosfacility:FacilityType/CouchetteFacilityType"@en ,
+                                "This property restricts the type of facility to one specific for couchette from the SKOS codelist for types of facilities, including, for example, values like T2, T3, C1, C2, etc."@en ;
+                   rdfs:label "couchette facility"@en .
+
+
+###  https://w3id.org/transmodel/facilities#destinationDisplay
+:destinationDisplay rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
+                    rdfs:domain :DestinationDisplay ;
+                    rdfs:range :PassengerInformationEquipment ;
+                    rdfs:comment ""@en ;
+                    rdfs:label "destinationDisplay"@en .
+
+
+###  https://w3id.org/transmodel/facilities#displayAssignment
+:displayAssignment rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
+                   rdfs:domain :JourneyPattern ;
+                   rdfs:range :DestinationDisplay ;
+                   rdfs:comment "The assignment of one ScheduledStopPoint and one JourneyPattern to a PassengerInformationEquipment specifying that information on the ScheduledStopPoint and the JourneyPattern will be provided (e.g. displayed, printed)"@en ;
+                   rdfs:label "displayAssignment"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#facilityRequirement
 :facilityRequirement rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                      rdfs:domain :Vehicle ;
                      rdfs:range :Facility ;
                      rdfs:comment "A classification of public transport Vehicles according to the facilities available on the Vehicle"@en ;
@@ -111,20 +226,99 @@
 
 ###  https://w3id.org/transmodel/facilities#facilitySet
 :facilitySet rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
+             rdfs:domain :VehicleType ;
              rdfs:range :Facility ;
              rdfs:comment "Set of Facilities available for a ServiceJourney or a JourneyPart. The set may be available only for a specific VehicleType within the service (e.g. carriage equipped with low floor)"@en ;
              rdfs:label "facilitySet"@en .
 
 
+###  https://w3id.org/transmodel/facilities#facilityType
+:facilityType rdf:type owl:ObjectProperty ;
+              rdfs:domain :Facility ;
+              rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                  owl:hasValue <https://w3id.org/transmodel/kos/facilities/FacilityType>
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] .
+
+
+###  https://w3id.org/transmodel/facilities#fareClass
+:fareClass rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :facilityType ;
+           rdfs:domain :ServiceFacilitySet ;
+           rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                               owl:hasValue <https://w3id.org/transmodel/kos/facilities/FacilityType>
+                                             ]
+                                           ) ;
+                        rdf:type owl:Class
+                      ] ;
+           rdfs:comment "TODO: create the list of allowed values for fare classes, and check whether including it as a facility type, as included in the TransModel model"@en ,
+                        "This property relates an Onboard Stay or an Accommodation, among others, with a class of fares, whose allowed values are defined in the TransModel Common Facility Values (Figure 290, page 454)"@en ;
+           rdfs:label "fare class"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#isUsedBy
 :isUsedBy rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
           rdfs:domain :Facility ;
           rdfs:range :Passenger ;
           rdfs:label "isUsedBy"@en .
 
 
+###  https://w3id.org/transmodel/facilities#noticeAssignment
+:noticeAssignment rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
+                  rdfs:domain :JourneyPattern ;
+                  rdfs:range :Notice ;
+                  rdfs:comment "The assignment of a Notice showing an exception in a JourneyPattern, a CommonSection or a VehicleJourney, possibly specifying at which PointInJourneyPattern the validity of the Notice starts and ends respectively"@en ;
+                  rdfs:label "noticeAssignment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#presentAt
+:presentAt rdf:type owl:ObjectProperty ;
+           rdfs:domain :ServiceFacilitySet ;
+           rdfs:range :VehicleType ;
+           rdfs:comment "This property relates a Service Facility Set with a Vehicle Type, indicating that the set of service facilities comprised by the set are provided at that type of vehicle"@en ;
+           rdfs:label "present at"@en .
+
+
+###  https://w3id.org/transmodel/facilities#providedBy
+:providedBy rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :FacilitySet ;
+            rdfs:comment """TODO: Add org:Organization as range for this property
+TODO: Check whether the domain should be generalised (applicable not only to facility set but also to facility, site, equipment, etc.)"""@es ,
+                         """This property is used to refer to the provider of a facility set
+In the TransModel UML model and in the Netex implementation this is expressed as ProvidedByRef"""@es ;
+            rdfs:label "provided by"@es .
+
+
+###  https://w3id.org/transmodel/facilities#showerFacility
+:showerFacility rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :facilityType ;
+                rdfs:domain :Accommodation ;
+                rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                    owl:hasValue <https://w3id.org/transmodel/kos/facilities/FacilityType>
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+                rdfs:comment "TODO: the range of this property may be further restricted to those SKOS concepts that also comply with skos:broader tmkosfacility:FacilityType/XXX, where XXX refers to the shower facilities"@en ,
+                             "This property restricts the type of facility to one specific for shower from the SKOS codelist for types of facilities. However, there is no specific part of the codelist reserved yet for shower facilities."@en ;
+                rdfs:label "shower facility"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#stopPlaceComponent
 :stopPlaceComponent rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                     rdfs:domain :StopPlace ;
                     rdfs:range :StopPlaceComponent ;
                     rdfs:label "stopPlaceComponent"@en .
@@ -132,34 +326,54 @@
 
 ###  https://w3id.org/transmodel/facilities#stopPlaceEntrance
 :stopPlaceEntrance rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                    rdfs:domain :StopPlace ;
                    rdfs:range :PlaceAccessEquipment ;
                    rdfs:comment "A physical entrance or exit to/from a StopPlace for a Passenger. May be a door, barrier, gate other recognizable point of access"@en ,
                                 "stopPlaceEntrance"@en .
 
 
+###  https://w3id.org/transmodel/facilities#toiletFacility
+:toiletFacility rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :facilityType ;
+                rdfs:domain :Accommodation ;
+                rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                    owl:hasValue <https://w3id.org/transmodel/kos/facilities/FacilityType>
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+                rdfs:comment "TODO: the range of this property may be further restricted to those SKOS concepts that also comply with skos:broader tmkosfacility:FacilityType/XXX, where XXX refers to the toilet facilities"@en ,
+                             "This property restricts the type of facility to one specific for toilets from the SKOS codelist for types of facilities. However, there is no specific part of the codelist reserved yet for toilet facilities (also known as sanitary facilities)."@en ;
+                rdfs:label "toilet facility"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#typeOfAccessFeature
 :typeOfAccessFeature rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                      rdfs:domain :ConstraintOfAccess ;
                      rdfs:range :TypeOfAccessFeature .
 
 
 ###  https://w3id.org/transmodel/facilities#typeOfAccessibilityTools
 :typeOfAccessibilityTools rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                           rdfs:domain :AssistanceService ;
-                          rdfs:range :TypeOfAccessibilityTools ;
                           rdfs:label "typeOfAccessibilityTools"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#typeOfCateringService
 :typeOfCateringService rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                        rdfs:domain :CateringService ;
-                       rdfs:range :TypeOfCateringService ;
                        rdfs:label "typeOfCateringService"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#typeOfCheckConstraint
 :typeOfCheckConstraint rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                        rdfs:domain :Constraint ;
                        rdfs:range :TypeOfCheckConstraint ;
                        rdfs:label "typeOfCheckConstraint"@en .
@@ -167,6 +381,7 @@
 
 ###  https://w3id.org/transmodel/facilities#typeOfCongestion
 :typeOfCongestion rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                   rdfs:domain :TypeOfCheckConstraint ;
                   rdfs:range :TypeOfCongestion ;
                   rdfs:label "typeOfCongestion"@en .
@@ -174,6 +389,7 @@
 
 ###  https://w3id.org/transmodel/facilities#typeOfCycleEquipment
 :typeOfCycleEquipment rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                       rdfs:domain :CycleOperatingEquipment ;
                       rdfs:range :TypeOfCycleStorageEquipment ;
                       rdfs:label "typeOfCycleStorageEquipment" .
@@ -181,13 +397,14 @@
 
 ###  https://w3id.org/transmodel/facilities#typeOfEmergencyService
 :typeOfEmergencyService rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                         rdfs:domain :EmergencyService ;
-                        rdfs:range :TypeOfEmergencyService ;
                         rdfs:label "typeOfEmergencyService"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#typeOfEntranceEquipment
 :typeOfEntranceEquipment rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                          rdfs:domain :EntraceEquipment ;
                          rdfs:range :TypeOfEntranceEquipment ;
                          rdfs:comment "Classification of the Entrance Equipment"@en ;
@@ -196,13 +413,16 @@
 
 ###  https://w3id.org/transmodel/facilities#typeOfEquipment
 :typeOfEquipment rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
                  rdfs:domain :Facility ;
                  rdfs:range :TypeOfEquipment ;
+                 rdfs:comment "TODO: Check whether this should actually be a SKOS codelist instead of something connected to a class TypeOfEquipment"@en ;
                  rdfs:label "typeOfEquipment"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#typeOfGenderLimitation
 :typeOfGenderLimitation rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                         rdfs:domain :SanitaryEquipment ;
                         rdfs:range :TypeOfGenderLimitation ;
                         rdfs:label "typeOfGenderLimitation"@en .
@@ -210,6 +430,7 @@
 
 ###  https://w3id.org/transmodel/facilities#typeOfHandrail
 :typeOfHandrail rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                 rdfs:domain :Stairs ;
                 rdfs:range :TypeOfHandrail ;
                 rdfs:comment "types of handrails" ;
@@ -218,6 +439,7 @@
 
 ###  https://w3id.org/transmodel/facilities#typeOfPassengerInformationDesk
 :typeOfPassengerInformationDesk rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                                 rdfs:domain :PassengerInformationEquipment ;
                                 rdfs:range :TypeOfInformationDesk ;
                                 rdfs:comment "The relationship between the PassengerInformationDesk with the typeOfInformationDesk"@en ;
@@ -226,6 +448,7 @@
 
 ###  https://w3id.org/transmodel/facilities#typeOfPlaceAccessStair
 :typeOfPlaceAccessStair rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                         rdfs:domain :Stairs ;
                         rdfs:range :TypeOfPlaceAccessStair ;
                         rdfs:label "typeOfPlaceAccessStairs"@en .
@@ -233,6 +456,7 @@
 
 ###  https://w3id.org/transmodel/facilities#typeOfSanitaryEquipment
 :typeOfSanitaryEquipment rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                          rdfs:domain :TypeOfSanitaryEquipment ;
                          rdfs:range :SanitaryEquipment ;
                          rdfs:label "typeOfSanitaryEquipment"@en .
@@ -240,6 +464,7 @@
 
 ###  https://w3id.org/transmodel/facilities#typeOfVehicle
 :typeOfVehicle rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                rdfs:domain :Vehicle ;
                rdfs:range :VehicleType ;
                rdfs:label "typeOfVehicle"@en .
@@ -247,18 +472,37 @@
 
 ###  https://w3id.org/transmodel/facilities#typeOfWaitingRoom
 :typeOfWaitingRoom rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                    rdfs:domain :WaitingRoom ;
                    rdfs:range :TypeOfWaitingRoom ;
                    rdfs:label "typeOfWaitingRoomEquipment"@en .
 
 
+###  https://w3id.org/transmodel/facilities#userNeedSuitability
+:userNeedSuitability rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
+                     rdfs:domain :UserNeed ;
+                     rdfs:range :Suitability ;
+                     rdfs:label "userNeedSuitability"@en .
+
+
+###  https://w3id.org/transmodel/facilities#validityConditionDefines
+:validityConditionDefines rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
+                          rdfs:domain :ValidityCondition ;
+                          rdfs:range :ValidityTrigger ;
+                          rdfs:label "validityConditionDefines"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#hasAServiceJourneyPattern
 <https://w3id.org/transmodel/journeys#hasAServiceJourneyPattern> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                                                                  rdfs:domain <https://w3id.org/transmodel/journeys#Service> .
 
 
 ###  https://w3id.org/transmodel/journeys#makesAServiceJourney
 <https://w3id.org/transmodel/journeys#makesAServiceJourney> rdf:type owl:ObjectProperty ;
+                                                            rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                                                             rdfs:range <https://w3id.org/transmodel/journeys#Service> .
 
 
@@ -266,69 +510,60 @@
 #    Data properties
 #################################################################
 
+###  https://w3id.org/transmodel/facilities#DATAPROPERTIESTOREVIEW
+:DATAPROPERTIESTOREVIEW rdf:type owl:DatatypeProperty .
+
+
 ###  https://w3id.org/transmodel/facilities#accessDimensions
 :accessDimensions rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :DATAPROPERTIESTOREVIEW ;
                   rdfs:domain :WheelchairVehicleEquipment ;
                   rdfs:range rdfs:Literal .
 
 
 ###  https://w3id.org/transmodel/facilities#activatedEquipment
 :activatedEquipment rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :DATAPROPERTIESTOREVIEW ;
                     rdfs:domain :Facility ;
                     rdfs:range xsd:boolean ;
                     rdfs:label "activatedEquipment"@en .
 
 
-###  https://w3id.org/transmodel/facilities#available
-:available rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Facility ;
-           rdfs:range xsd:boolean ;
-           rdfs:label "facilityAvailability" .
-
-
 ###  https://w3id.org/transmodel/facilities#constraintThroughput
 :constraintThroughput rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :DATAPROPERTIESTOREVIEW ;
                       rdfs:domain :ConstraintThroughput ;
                       rdfs:range xsd:integer ;
                       rdfs:label "constraintThroughtput"@en .
 
 
-###  https://w3id.org/transmodel/facilities#description
-:description rdf:type owl:DatatypeProperty .
+###  https://w3id.org/transmodel/facilities#duration
+:duration rdf:type owl:DatatypeProperty ;
+          rdfs:domain :OnboardStay ;
+          rdfs:range xsd:duration ;
+          rdfs:label "This property relates an Onboard Stay with a duration"@en ,
+                     "duration"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#facilityLocation
 :facilityLocation rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :DATAPROPERTIESTOREVIEW ;
                   rdfs:domain :Facility ;
                   rdfs:label "facilityLocation" .
 
 
-###  https://w3id.org/transmodel/facilities#facilityName
-:facilityName rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Facility ;
-              rdfs:range rdfs:Literal ;
-              rdfs:comment "The name of the facility"@en ;
-              rdfs:label "facilityName"@en .
-
-
 ###  https://w3id.org/transmodel/facilities#freeToUse
 :freeToUse rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :DATAPROPERTIESTOREVIEW ;
            rdfs:domain :Service ;
            rdfs:range xsd:boolean ;
            rdfs:comment "Characteristic of a Service that is free to use it"@en ;
            rdfs:label "freeToUse"@en .
 
 
-###  https://w3id.org/transmodel/facilities#label
-:label rdf:type owl:DatatypeProperty ;
-       rdfs:domain :MeetingPointService ;
-       rdfs:range rdfs:Literal ;
-       rdfs:comment "labels for MeetingPointServices"@en ;
-       rdfs:label "label"@en .
-
-
 ###  https://w3id.org/transmodel/facilities#latitude
 :latitude rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :DATAPROPERTIESTOREVIEW ;
           rdfs:domain <https://w3id.org/transmodel/journeys#Point> ;
           rdfs:range rdfs:Literal ;
           rdfs:label "latitude"@en .
@@ -336,31 +571,23 @@
 
 ###  https://w3id.org/transmodel/facilities#longitude
 :longitude rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :DATAPROPERTIESTOREVIEW ;
            rdfs:domain <https://w3id.org/transmodel/journeys#Point> ;
            rdfs:range rdfs:Literal ;
            rdfs:label "longitude"@en .
 
 
-###  https://w3id.org/transmodel/facilities#name
-:name rdf:type owl:DatatypeProperty .
-
-
 ###  https://w3id.org/transmodel/facilities#siteComponentTimePenalty
 :siteComponentTimePenalty rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :DATAPROPERTIESTOREVIEW ;
                           rdfs:domain :ConstraintDelay ;
                           rdfs:range xsd:dateTime ;
                           rdfs:label "constraintDelayInterval"@en .
 
 
-###  https://w3id.org/transmodel/facilities#siteName
-:siteName rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Site ;
-          rdfs:range rdfs:Literal ;
-          rdfs:label "siteName" .
-
-
 ###  https://w3id.org/transmodel/facilities#wheelchairAreas
 :wheelchairAreas rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :DATAPROPERTIESTOREVIEW ;
                  rdfs:domain :WheelchairVehicleEquipment ;
                  rdfs:range xsd:integer .
 
@@ -368,6 +595,14 @@
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
 
 ###  https://w3id.org/transmodel/facilities#AccessAreaDimensions
 :AccessAreaDimensions rdf:type owl:Class ;
@@ -379,23 +614,94 @@
 ###  https://w3id.org/transmodel/facilities#AccessSpace
 :AccessSpace rdf:type owl:Class ;
              owl:equivalentClass :PassengerArea ;
+             rdfs:subClassOf :THINGSTOREVIEW ;
              rdfs:label "AccessSpace"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#AccessibilityAssessment
 :AccessibilityAssessment rdf:type owl:Class ;
+                         rdfs:subClassOf :THINGSTOREVIEW ;
                          rdfs:comment "The accessibility characteristics of an Entity (facility)  used by Passenger such as a Stop Place or a Stop Place Component. Described by AccessibilityLimitations and/or a set of Suitabilities"@en ;
                          rdfs:label "AccessibilityAssessment"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#AccessibilityLimitation
 :AccessibilityLimitation rdf:type owl:Class ;
+                         rdfs:subClassOf :THINGSTOREVIEW ;
                          rdfs:comment "A categorisation of the accessibility characteristics of a site"@en ;
                          rdfs:label "AccessibilityLimitation"@en .
 
 
+###  https://w3id.org/transmodel/facilities#Accommodation
+:Accommodation rdf:type owl:Class ;
+               rdfs:subClassOf :Facility ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :accommodationFacility ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                      owl:hasValue <https://w3id.org/transmodel/kos/facilities/FacilityType>
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :couchetteFacility ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                      owl:hasValue <https://w3id.org/transmodel/kos/facilities/FacilityType>
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :fareClass ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                      owl:hasValue <https://w3id.org/transmodel/kos/facilities/FacilityType>
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :showerFacility ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                      owl:hasValue <https://w3id.org/transmodel/kos/facilities/FacilityType>
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :toiletFacility ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                      owl:hasValue <https://w3id.org/transmodel/kos/facilities/FacilityType>
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
+                               ] ;
+               rdfs:comment "This is a subclass of Service Facility Set to refer to types of accommodations, according to the Facility Conceptual Model (figure 287, page 450) of TransModel"@en ;
+               rdfs:label "Accommodation"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#ActivationLink
 :ActivationLink rdf:type owl:Class ;
+                rdfs:subClassOf :THINGSTOREVIEW ;
                 rdfs:comment "A Link where a control process is acivated when a vehicle passes it."@en ;
                 rdfs:label "ActivationLink"@en .
 
@@ -405,12 +711,6 @@
                  rdfs:subClassOf <https://w3id.org/transmodel/journeys#Point> ;
                  rdfs:comment "A Point where a control process is activated when a vehicle passes it. equipment may be needed for activation."@en ;
                  rdfs:label "ActivationPoint"@en .
-
-
-###  https://w3id.org/transmodel/facilities#AddressablePlace
-:AddressablePlace rdf:type owl:Class ;
-                  rdfs:subClassOf :Place ;
-                  rdfs:label "AddressablePlace"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers
@@ -476,6 +776,7 @@
 
 ###  https://w3id.org/transmodel/facilities#Constraint
 :Constraint rdf:type owl:Class ;
+            rdfs:subClassOf :THINGSTOREVIEW ;
             rdfs:comment "A constraint that can take place at a SiteComponent that may potentially incur a time penalty that should be allowed for when journey planning"@en ,
                          "Constraint"@en .
 
@@ -544,23 +845,17 @@
                          rdfs:label "CycleStorageEquipment"@en .
 
 
-###  https://w3id.org/transmodel/facilities#DeliveryVariant
-:DeliveryVariant rdf:type owl:Class ;
-                 rdfs:subClassOf :Notice ;
-                 rdfs:comment "A variant text of a Notice for use in a specific media or delivery channel (voice, printed, material, etc.)"@en ;
-                 rdfs:label "DeliveryVariant"@en .
-
-
 ###  https://w3id.org/transmodel/facilities#DestinationDisplay
 :DestinationDisplay rdf:type owl:Class ;
-                    rdfs:comment "An advertised destination of a specific JourneyPattern, usually displayed on a headsign or at other on-board locations"@en ;
+                    rdfs:subClassOf :THINGSTOREVIEW ;
+                    rdfs:comment "An advertised destination of a specific JourneyPattern usually displayed on a headsign or other on-board locations"@en ;
                     rdfs:label "DestinationDisplay"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#DestinationDisplayVariant
 :DestinationDisplayVariant rdf:type owl:Class ;
                            rdfs:subClassOf :DestinationDisplay ;
-                           rdfs:comment "An advertised destination of a specific JourneyPattern, usually displayed on a hadsign or at other on-board locations"@en ;
+                           rdfs:comment "An advertised destination of a specific JourneyPattern, usually displayed on a headsign (HeadingSign) or at other on-board locations"@en ;
                            rdfs:label "DestinationDisplayVariant"@en .
 
 
@@ -570,9 +865,18 @@
                   rdfs:label "EmergencyService"@en .
 
 
+###  https://w3id.org/transmodel/facilities#EncumbranceNeed
+:EncumbranceNeed rdf:type owl:Class ;
+                 rdfs:subClassOf :UserNeed ;
+                 rdfs:comment "A specific UserNeed, i.e. a requirement of a Passenger travelling with luggage, animal or any other object requiring special arrangements to access PublicTransport"@en ;
+                 rdfs:label "EncumbranceNeed"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#EntraceEquipment
 :EntraceEquipment rdf:type owl:Class ;
-                  rdfs:subClassOf :PlaceAccessEquipment .
+                  rdfs:subClassOf :PlaceAccessEquipment ;
+                  rdfs:comment "Specialisation of PlaceAccessEquipment for Entrances (door, barrier, gate or other recognizable point of access)"@en ;
+                  rdfs:label "EntranceEquipment"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#Entrances
@@ -584,10 +888,16 @@
 
 ###  https://w3id.org/transmodel/facilities#Equipment
 :Equipment rdf:type owl:Class ;
-           rdfs:subClassOf :Facility ;
-           rdfs:comment """Physical equipments installed either fixed (PlaceEquipment), on-board (VehicleEquipment) ot mixed (some equipments as rubish, sanitary or ticketing).
+           rdfs:comment """Equipment which may be located on a Vehicle, Site, etc. There are many different types of Equipment, each of which may have specific properties. 
 
-A service (LocalService) is considered as immaterial Equipment as well."""@en ;
+These are classified under two main specialisations;
+- INSTALLED EQUIPMENT, Fixed EQUIPMENT that may be installed on a SITE, such as a door, lift, gate etc. or a VEHICLE Its exact location may be specified by an EQUIPMENT PLACE. Physical equipments installed either fixed (PlaceEquipment), on-board (VehicleEquipment) or mixed (some equipments as rubish, sanitary or ticketing).
+
+This is further characterised into:
+-- PLACE EQUIPMENT: Equipment which may be located only on a SITE, such as a barrier, bench, Lift
+-- PASSENGER EQUIPMENT; Equipment which may be located on either a Vehicle or a SITE, such as a display terminal, ticket validator or WC.
+
+- LOCAL SERVICE – an intangible service that is provided at a site such selling tickets, porterage, etc."""@en ;
            rdfs:label "Equipment"@en .
 
 
@@ -598,14 +908,49 @@ A service (LocalService) is considered as immaterial Equipment as well."""@en ;
                 rdfs:label "EquipmentPlace" .
 
 
+###  https://w3id.org/transmodel/facilities#EscalatorEquipment
+:EscalatorEquipment rdf:type owl:Class ;
+                    rdfs:subClassOf :Stairs ;
+                    rdfs:comment "Specialisation of StairEquipment for Escalator Equipment"@en ;
+                    rdfs:label "EscalatorEquipment"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#Facility
 :Facility rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :facilityType ;
+                            owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                       owl:hasValue <https://w3id.org/transmodel/kos/facilities/FacilityType>
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ]
+                          ] ;
           rdfs:comment """A named amenity available to the public at a Site or on a Service.
 
-A Facility has no further properties than a name.
+A Facility has a type that determines the type of facility that it refers to, available in the SKOS codelist https://w3id.org/transmodel/kos/facilities/facilityType (in Netex this is represented as a set of enumerations)
 
-An Equipment or LocalService is used to describe the further properties provided as part of a particular Facility"""@en ;
+A Facility has no further properties than a name. An Equipment or LocalService is used to describe the further properties provided as part of a particular Facility"""@en ;
           rdfs:label "Facility"@en .
+
+
+###  https://w3id.org/transmodel/facilities#FacilitySet
+:FacilitySet rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :comprisesEquipment ;
+                               owl:allValuesFrom :Equipment
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :comprisesFacility ;
+                               owl:allValuesFrom :Facility
+                             ] ;
+             rdfs:comment """A facility set is an aggregation of facilities. In Netex this is represented as a set of enumerated facility values (names based on TPEG classifications, augmented with UIC etc.).
+The terms used for relating a facility set to the facilities and equipment are CommonFacilityGroup and otherFacilities. We have preferred using comprisesFacility and comprisesEquipment to simplify the terminology that is being used."""@en ,
+                          "TODO: Add a restriction in subclassof for :providedBy only org:Organization"@en ,
+                          "TODO: Transmodel also identifies as a potential restriction the assignment of 0 to N validity conditions to the Facility Set, but this has not been yet modelled"@en ;
+             rdfs:label "Facility Set"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#FreeWifi
@@ -623,9 +968,18 @@ An Equipment or LocalService is used to describe the further properties provided
         rdfs:label "Garage"@en .
 
 
+###  https://w3id.org/transmodel/facilities#GeneralSign
+:GeneralSign rdf:type owl:Class ;
+             rdfs:subClassOf :SignEquipment ;
+             rdfs:comment "Specialisation of SignEquipment which are not HeadingSign nor PlaceSign"@en ;
+             rdfs:label "GeneralSign"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#HeadingSign
 :HeadingSign rdf:type owl:Class ;
-             rdfs:subClassOf :SignEquipment .
+             rdfs:subClassOf :SignEquipment ;
+             rdfs:comment "Specialisation of SignEquipment for headings providing information like direction name, line name, etc."@en ;
+             rdfs:label "HeadingSign"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#HiringService
@@ -654,6 +1008,17 @@ An Equipment or LocalService is used to describe the further properties provided
                     rdfs:subClassOf :PassengerInformationPrintedMaterial ;
                     rdfs:comment "A public transport information piece of Equipment"@en ;
                     rdfs:label "InformationLeaflet"@en .
+
+
+###  https://w3id.org/transmodel/facilities#InstalledEquipment
+:InstalledEquipment rdf:type owl:Class ;
+                    rdfs:subClassOf :Equipment .
+
+
+###  https://w3id.org/transmodel/facilities#JourneyPattern
+:JourneyPattern rdf:type owl:Class ;
+                rdfs:subClassOf :THINGSTOREVIEW ;
+                rdfs:label "JourneyPattern"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#LeftLuggageService
@@ -729,18 +1094,57 @@ Provides facilities as LuggageTrolley, FreeToUse, etc."""@en ;
 
 ###  https://w3id.org/transmodel/facilities#Notice
 :Notice rdf:type owl:Class ;
-        rdfs:comment "A text for informational purposes on exceptions in a Line,  JourneyPattern, etc. The information may be usable for Passenger or driver information"@en ;
+        rdfs:subClassOf :THINGSTOREVIEW ;
+        rdfs:comment "A text for informational purposes on exceptions in a Line, a Journey Pattern, etc. The information may be usable for Passenger or driver information"@en ;
         rdfs:label "Notice"@en .
+
+
+###  https://w3id.org/transmodel/facilities#OnboardStay
+:OnboardStay rdf:type owl:Class ;
+             rdfs:subClassOf :Facility ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :boardingPermission ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                    owl:hasValue <https://w3id.org/transmodel/kos/facilities/FacilityType>
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :fareClass ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                    owl:hasValue <https://w3id.org/transmodel/kos/facilities/FacilityType>
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :duration ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:duration
+                             ] ;
+             rdfs:comment "This is a type of Service Facility Set, according to the Facility Conceptual Model (figure 287, page 450) of TransModel"@en ;
+             rdfs:label "Onboard Stay"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#Passenger
 :Passenger rdf:type owl:Class ;
+           rdfs:subClassOf :THINGSTOREVIEW ;
            rdfs:comment "The Person who uses Public Transport Services"@en ;
            rdfs:label "Passenger"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#PassengerArea
 :PassengerArea rdf:type owl:Class ;
+               rdfs:subClassOf :THINGSTOREVIEW ;
                rdfs:comment """A Passenger Area within a StopPlace such as:
 - Concourse
 - Booking Hall
@@ -753,7 +1157,7 @@ Accessible by Passenger but without direct access to Vehicles"""@en ;
 
 ###  https://w3id.org/transmodel/facilities#PassengerEquipment
 :PassengerEquipment rdf:type owl:Class ;
-                    rdfs:subClassOf :Equipment ;
+                    rdfs:subClassOf :InstalledEquipment ;
                     rdfs:comment "An item of Equipment of a particular type actually available at a location within a Place or a Vehicle"@en ;
                     rdfs:label "PassengerEquipment"@en .
 
@@ -781,12 +1185,8 @@ Accessible by Passenger but without direct access to Vehicles"""@en ;
 
 ###  https://w3id.org/transmodel/facilities#PassengerSafetyEquipment
 :PassengerSafetyEquipment rdf:type owl:Class ;
-                          rdfs:subClassOf :PassengerEquipment .
-
-
-###  https://w3id.org/transmodel/facilities#Place
-:Place rdf:type owl:Class ;
-       rdfs:label "Place"@en .
+                          rdfs:subClassOf :PassengerEquipment ;
+                          rdfs:label "PassengerSafetyEquipment"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#PlaceAccessEquipment
@@ -798,9 +1198,16 @@ Accessible by Passenger but without direct access to Vehicles"""@en ;
 
 ###  https://w3id.org/transmodel/facilities#PlaceEquipment
 :PlaceEquipment rdf:type owl:Class ;
-                rdfs:subClassOf :Equipment ;
+                rdfs:subClassOf :InstalledEquipment ;
                 rdfs:comment "An item of Equipment of a particular type actually available at a location within a Place"@en ;
                 rdfs:label "PlaceEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#PlaceSign
+:PlaceSign rdf:type owl:Class ;
+           rdfs:subClassOf :SignEquipment ;
+           rdfs:comment "SignEquipment withe the name of a Place on it"@en ;
+           rdfs:label "PlaceSign"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#Porterage
@@ -859,6 +1266,7 @@ Accessible by Passenger but without direct access to Vehicles"""@en ;
 
 ###  https://w3id.org/transmodel/facilities#SanitaryEquipment
 :SanitaryEquipment rdf:type owl:Class ;
+                   rdfs:subClassOf :Equipment ;
                    rdfs:comment "Specialisation of Passenger Equipment for Sanitary Equipment"@en ;
                    rdfs:label "TypeOfSanitaryEquipment"@en .
 
@@ -878,11 +1286,35 @@ Accessible by Passenger but without direct access to Vehicles"""@en ;
 
 ###  https://w3id.org/transmodel/facilities#Service
 :Service rdf:type owl:Class ;
-         rdfs:subClassOf :Facility ;
+         rdfs:subClassOf :Equipment ;
          rdfs:comment """A Service (LocalService such as LeftLuggage, TicketingService) is considered as immaterial Equipment as well.
 
 A named Service relating to the use of the Site or transport Services at a particular location, for example Porterage, AssistanceForDissabledUsers, BookingOffices, etc. The Service may have a validityCondition associated with it."""@en ;
          rdfs:label "Service"@en .
+
+
+###  https://w3id.org/transmodel/facilities#ServiceFacilitySet
+:ServiceFacilitySet rdf:type owl:Class ;
+                    rdfs:subClassOf :FacilitySet ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :presentAt ;
+                                      owl:allValuesFrom :VehicleType
+                                    ] ;
+                    rdfs:comment """A service facility set contains a set of facilities available for a service journey or a journey part. The set may be availabe only for a specific vehicle type within the service (e.g., carriage equipped with low floor). 
+It can also include information about the accommodation on board, which can be related to the Accommodation or OnboardStay concepts, which are subclasses of Facility, via the comprisesFacility object property. These two concepts are further refined since they may have additional attributes beyond the indication of the corresponding SKOS concepts, as in the other cases."""@en ,
+                                 """TODO: Other class restrictions that may be added may include:
+- for (inverse of made using), for Vehicle Journey and Coupled Journey (see figure 287, Facility conceptual Model)"""@en ;
+                    rdfs:label "Service Facility Set"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :ServiceFacilitySet ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget [ rdf:type owl:Restriction ;
+                         owl:onProperty :presentAt ;
+                         owl:allValuesFrom :VehicleType
+                       ] ;
+   rdfs:comment "See figure 287, Facility conceptual Model"
+ ] .
 
 
 ###  https://w3id.org/transmodel/facilities#Shelter
@@ -908,21 +1340,16 @@ A named Service relating to the use of the Site or transport Services at a parti
 
 ###  https://w3id.org/transmodel/facilities#Site
 :Site rdf:type owl:Class ;
+      rdfs:subClassOf :THINGSTOREVIEW ;
       rdfs:comment "A well known Place to which Passengers may refer to indicate the origin or a destination of a Trip"@en ;
       rdfs:label "Site"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#SiteComponent
 :SiteComponent rdf:type owl:Class ;
+               rdfs:subClassOf :THINGSTOREVIEW ;
                rdfs:comment "An element of a Site descibing a part of its structure. SiteComponent share common properties for data management, accessibility and other features"@en ;
                rdfs:label "SiteComponent"@en .
-
-
-###  https://w3id.org/transmodel/facilities#SiteElement
-:SiteElement rdf:type owl:Class ;
-             rdfs:subClassOf :AddressablePlace ;
-             rdfs:comment "A type of AddressablePlace specifying common properties of a Site or a SiteComponent to describe it, including accessibility."@en ;
-             rdfs:label "SiteElement"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#SiteEquipment
@@ -932,26 +1359,58 @@ A named Service relating to the use of the Site or transport Services at a parti
                rdfs:label "SiteEquipment" .
 
 
+###  https://w3id.org/transmodel/facilities#SiteFacilitySet
+:SiteFacilitySet rdf:type owl:Class ;
+                 rdfs:subClassOf :FacilitySet ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :availableAt ;
+                                   owl:allValuesFrom :Site
+                                 ] ;
+                 rdfs:comment "A site facility set contains a set of facilities available at a site"@en ;
+                 rdfs:label "Site Facility Set"@en .
+
+
+###  https://w3id.org/transmodel/facilities#StairCaseEquipment
+:StairCaseEquipment rdf:type owl:Class ;
+                    rdfs:subClassOf :Stairs ;
+                    rdfs:comment "Specialisation of PlaceAccessStair for StairCaseEquipment"@en ;
+                    rdfs:label "StairCaseEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#StairEquipment
+:StairEquipment rdf:type owl:Class ;
+                owl:equivalentClass :Stairs ;
+                rdfs:subClassOf :PlaceAccessEquipment ;
+                rdfs:label "StairEquipment"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#Stairs
 :Stairs rdf:type owl:Class ;
-        rdfs:subClassOf :PlaceAccessEquipment ;
-        rdfs:comment "Specialisation of PlaceAccessEquipment dedicated to PlaceAccessStair"@en ;
+        rdfs:subClassOf :PlaceAccessEquipment ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :typeOfPlaceAccessStair ;
+                          owl:allValuesFrom :TypeOfPlaceAccessStair
+                        ] ;
+        rdfs:comment "Specialisation of PlaceAccessEquipment dedicated to PlaceAccessStair (stair, escalator, staircase, etc.)"@en ;
         rdfs:label "PlaceAccessStair"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#StatusOfEquipment
 :StatusOfEquipment rdf:type owl:Class ;
+                   rdfs:subClassOf :THINGSTOREVIEW ;
                    rdfs:label "StatusOfEquipment"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#StopPlace
 :StopPlace rdf:type owl:Class ;
+           rdfs:subClassOf :Site ;
            rdfs:comment "A place comprising one or more locations where Vehicles may stop and where passengers may board or leave Vehicles or prepare their Trip. A StopPlace will usually have one or more wellknown names."@en ;
            rdfs:label "StopPlace"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#StopPlaceComponent
 :StopPlaceComponent rdf:type owl:Class ;
+                    rdfs:subClassOf :THINGSTOREVIEW ;
                     rdfs:comment "An element of a StopPlace describing part of its structure. StopPlaceComponent share common properties for data management, accessibility and other features"@en ;
                     rdfs:label "StopPlaceComponent"@en .
 
@@ -961,6 +1420,24 @@ A named Service relating to the use of the Site or transport Services at a parti
                     rdfs:subClassOf :PlaceEquipment ;
                     rdfs:comment "Specialisation of Equipment for StopPlaceEquipment"@en ;
                     rdfs:label "StopPlaceEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#StopPlaceSpace
+:StopPlaceSpace rdf:type owl:Class ;
+                rdfs:subClassOf :THINGSTOREVIEW ;
+                rdfs:comment "A physical area within a StopPlace, for example, a Quay, BoardingPosition, AccessSpace or EquipmentPlace"@en ;
+                rdfs:label "StopPlaceSpace"@en .
+
+
+###  https://w3id.org/transmodel/facilities#Suitability
+:Suitability rdf:type owl:Class ;
+             rdfs:subClassOf :THINGSTOREVIEW ;
+             rdfs:comment "A statement of whether a particular UserNeed can be met. It can be used to state whether a Site can accessed by a Passenger with a particular UserNeed."@en ;
+             rdfs:label "Suitability"@en .
+
+
+###  https://w3id.org/transmodel/facilities#THINGSTOREVIEW
+:THINGSTOREVIEW rdf:type owl:Class .
 
 
 ###  https://w3id.org/transmodel/facilities#TicketControl
@@ -1012,83 +1489,69 @@ A named Service relating to the use of the Site or transport Services at a parti
 
 ###  https://w3id.org/transmodel/facilities#TypeOfAccessFeature
 :TypeOfAccessFeature rdf:type owl:Class ;
+                     rdfs:subClassOf :THINGSTOREVIEW ;
                      rdfs:comment "A classification of AccessFeature for CheckConstraint"@en ;
                      rdfs:label "TypeOfAccessFeature"@en .
 
 
-###  https://w3id.org/transmodel/facilities#TypeOfAccessibilityTools
-:TypeOfAccessibilityTools rdf:type owl:Class ;
-                          rdfs:comment "A classification for accessibility tools used by or available from Assistance Service, e.g. wheelchair, walking stick, audio navigator, visual navigator, etc."@en ;
-                          rdfs:label "TypeOfAccessibilityTools"@en .
-
-
-###  https://w3id.org/transmodel/facilities#TypeOfAccommodation
-:TypeOfAccommodation rdf:type owl:Class ;
-                     rdfs:comment "A combination of accommodation characteristics available on a service"@en ;
-                     rdfs:label "TypeOfAccomodation"@en .
-
-
-###  https://w3id.org/transmodel/facilities#TypeOfCateringService
-:TypeOfCateringService rdf:type owl:Class ;
-                       rdfs:comment "A classification of CateringService"@en ;
-                       rdfs:label "TypeOfCateringService"@en .
-
-
 ###  https://w3id.org/transmodel/facilities#TypeOfCheckConstraint
 :TypeOfCheckConstraint rdf:type owl:Class ;
+                       rdfs:subClassOf :THINGSTOREVIEW ;
                        rdfs:label "TypeOfCheckConstraint"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#TypeOfCongestion
 :TypeOfCongestion rdf:type owl:Class ;
+                  rdfs:subClassOf :THINGSTOREVIEW ;
                   rdfs:comment "A typology of congestions resulting from CheckConstraint"@en ;
                   rdfs:label "TypeOfCongestion"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment
 :TypeOfCycleStorageEquipment rdf:type owl:Class ;
+                             rdfs:subClassOf :THINGSTOREVIEW ;
                              rdfs:comment "A classification of Cycle Storage Equipment: racks, bars, railings, etc."@en ;
                              rdfs:label "TypeOfCycleStorageEquipment"@en .
 
 
-###  https://w3id.org/transmodel/facilities#TypeOfEmergencyService
-:TypeOfEmergencyService rdf:type owl:Class ;
-                        rdfs:comment "A typology of emergency services: police, first aid, sos point..."@en ;
-                        rdfs:label "TypeOfEmergencyService"@en .
-
-
 ###  https://w3id.org/transmodel/facilities#TypeOfEntranceEquipment
 :TypeOfEntranceEquipment rdf:type owl:Class ;
+                         rdfs:subClassOf :THINGSTOREVIEW ;
                          rdfs:comment "Classification of Entrance Equipment"@en ;
                          rdfs:label "TypeOfEntranceEquipment"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#TypeOfEquipment
 :TypeOfEquipment rdf:type owl:Class ;
+                 rdfs:subClassOf :THINGSTOREVIEW ;
                  rdfs:comment "A classification of equipment item to be installed at stop point or onboard vehicles, for instance"@en ;
                  rdfs:label "TypeOfEquipment"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#TypeOfGenderLimitation
 :TypeOfGenderLimitation rdf:type owl:Class ;
+                        rdfs:subClassOf :THINGSTOREVIEW ;
                         rdfs:comment "A classification of Gender limitations (mainly for Sanitary Equipment, e.g., male only; famale only...)"@en ;
                         rdfs:label "TypeOfGenderLimitation"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#TypeOfHandrail
 :TypeOfHandrail rdf:type owl:Class ;
+                rdfs:subClassOf :THINGSTOREVIEW ;
                 rdfs:comment "A classification of handrails: one side, two sides, etc."@en ;
                 rdfs:label "TypeOfHandrail"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#TypeOfInformationDesk
 :TypeOfInformationDesk rdf:type owl:Class ;
+                       rdfs:subClassOf :THINGSTOREVIEW ;
                        rdfs:comment "A classification of Passenger Information Desks"@en ;
                        rdfs:label "TypeOfPassengerInformationDesk"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#TypeOfPlaceAccessStair
 :TypeOfPlaceAccessStair rdf:type owl:Class ;
+                        rdfs:subClassOf :THINGSTOREVIEW ;
                         rdfs:comment "Classification of PlaceAccessEquipment dedicated to PlaceAccessStair"@en ;
                         rdfs:label "TypeOfPlaceAccessStair"@en .
 
@@ -1102,12 +1565,42 @@ A named Service relating to the use of the Site or transport Services at a parti
 
 ###  https://w3id.org/transmodel/facilities#TypeOfWaitingRoom
 :TypeOfWaitingRoom rdf:type owl:Class ;
+                   rdfs:subClassOf :THINGSTOREVIEW ;
                    rdfs:comment "A classification of waiting room equipment"@en ;
                    rdfs:label "TypeOfWaitingRoom"@en .
 
 
+###  https://w3id.org/transmodel/facilities#UserNeed
+:UserNeed rdf:type owl:Class ;
+          rdfs:subClassOf :THINGSTOREVIEW ;
+          rdfs:comment "A users's need for a particular Suitability"@en ;
+          rdfs:label "UserNeed"@en .
+
+
+###  https://w3id.org/transmodel/facilities#ValidityCondition
+:ValidityCondition rdf:type owl:Class ;
+                   rdfs:subClassOf :THINGSTOREVIEW ;
+                   rdfs:comment "Condition used in order to characterise a given Version of a VersionFrame. A ValidityCondition consists of a parameter (e.g. date, triggering event, etc.) and its type of application (e.g. for, from, until, etc.)"@en ;
+                   rdfs:label "ValidityCondition"@en .
+
+
+###  https://w3id.org/transmodel/facilities#ValidityRuleParameter
+:ValidityRuleParameter rdf:type owl:Class ;
+                       rdfs:subClassOf :ValidityCondition ;
+                       rdfs:comment "A user defined ValidityCondition used by a rule for selecting versions. E.g. river level > 1.5 m. and bad weather"@en ;
+                       rdfs:label "ValidityRuleParameter"@en .
+
+
+###  https://w3id.org/transmodel/facilities#ValidityTrigger
+:ValidityTrigger rdf:type owl:Class ;
+                 rdfs:subClassOf :THINGSTOREVIEW ;
+                 rdfs:comment "External event defining a ValidityCondition. T. g. exceptional flow of a river, bad weather, road closure for works"@en ;
+                 rdfs:label "ValidityTrigger"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#Vehicle
 :Vehicle rdf:type owl:Class ;
+         rdfs:subClassOf :THINGSTOREVIEW ;
          rdfs:comment "A PublicTransportVehicle used for carrying Passenger"@en ;
          rdfs:label "Vehicle"@en .
 
@@ -1126,9 +1619,15 @@ A named Service relating to the use of the Site or transport Services at a parti
                           rdfs:label "VehicleChargingEquipment"@en .
 
 
+###  https://w3id.org/transmodel/facilities#VehicleDisplayEquipment
+:VehicleDisplayEquipment rdf:type owl:Class ;
+                         rdfs:subClassOf :PassengerInformationEquipment ;
+                         rdfs:label "PassengerInformationOnBoard"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#VehicleEquipment
 :VehicleEquipment rdf:type owl:Class ;
-                  rdfs:subClassOf :Equipment ;
+                  rdfs:subClassOf :InstalledEquipment ;
                   rdfs:comment "Equipment for Vehicles"@en ;
                   rdfs:label "VehicleEquipment"@en .
 
@@ -1142,6 +1641,7 @@ A named Service relating to the use of the Site or transport Services at a parti
 
 ###  https://w3id.org/transmodel/facilities#VehicleType
 :VehicleType rdf:type owl:Class ;
+             rdfs:subClassOf :THINGSTOREVIEW ;
              rdfs:comment "A classification of public transport vehicles according to the vehicle scheduling requirements in mode and capacity"@en ;
              rdfs:label "VehicleType"@en .
 
@@ -1193,14 +1693,14 @@ A named Service relating to the use of the Site or transport Services at a parti
 
 ###  https://w3id.org/transmodel/journeys#Point
 <https://w3id.org/transmodel/journeys#Point> rdf:type owl:Class ;
+                                             rdfs:subClassOf :THINGSTOREVIEW ;
                                              rdfs:label "Point"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#Service
 <https://w3id.org/transmodel/journeys#Service> rdf:type owl:Class ;
-                                               rdfs:comment """A ServiceJourney is a Passenger carrying VehicleJourney for one
-specified DayType. The pattern of working is in principle defined
-by a ServiceJourneyPattern."""@en ;
+                                               rdfs:subClassOf :THINGSTOREVIEW ;
+                                               rdfs:comment "A ServiceJourney is a Passenger carrying VehicleJourney for one specified DayType. The pattern of working is in principle defined by a ServiceJourneyPattern."@en ;
                                                rdfs:label "ServiceJourney"@en .
 
 
@@ -1214,8 +1714,7 @@ by a ServiceJourneyPattern."""@en ;
 
 
 ###  https://w3id.org/transmodel/facilities#audioNavigator
-:audioNavigator rdf:type owl:NamedIndividual ,
-                         :TypeOfAccessibilityTools .
+:audioNavigator rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#babychange
@@ -1236,8 +1735,7 @@ by a ServiceJourneyPattern."""@en ;
 
 
 ###  https://w3id.org/transmodel/facilities#beverageVendingMachine
-:beverageVendingMachine rdf:type owl:NamedIndividual ,
-                                 :TypeOfCateringService .
+:beverageVendingMachine rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#bookingHall
@@ -1252,18 +1750,15 @@ by a ServiceJourneyPattern."""@en ;
 
 
 ###  https://w3id.org/transmodel/facilities#buffet
-:buffet rdf:type owl:NamedIndividual ,
-                 :TypeOfCateringService .
+:buffet rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#bunk
-:bunk rdf:type owl:NamedIndividual ,
-               :TypeOfAccommodation .
+:bunk rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#cateringTrolleyService
-:cateringTrolleyService rdf:type owl:NamedIndividual ,
-                                 :TypeOfCateringService .
+:cateringTrolleyService rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#compoundTrain
@@ -1290,8 +1785,7 @@ by a ServiceJourneyPattern."""@en ;
 
 
 ###  https://w3id.org/transmodel/facilities#couchette
-:couchette rdf:type owl:NamedIndividual ,
-                    :TypeOfAccommodation .
+:couchette rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#crowding
@@ -1314,6 +1808,12 @@ by a ServiceJourneyPattern."""@en ;
                                         :TypeOfCycleStorageEquipment .
 
 
+###  https://w3id.org/transmodel/facilities#directionName
+:directionName rdf:type owl:NamedIndividual ,
+                        :HeadingSign ;
+               rdfs:label "directionName"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#doubleDeck
 :doubleDeck rdf:type owl:NamedIndividual ,
                      :VehicleType ;
@@ -1321,23 +1821,19 @@ by a ServiceJourneyPattern."""@en ;
 
 
 ###  https://w3id.org/transmodel/facilities#emergencyServiceFirstAid
-:emergencyServiceFirstAid rdf:type owl:NamedIndividual ,
-                                   :TypeOfEmergencyService .
+:emergencyServiceFirstAid rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#emergencyServicePolice
-:emergencyServicePolice rdf:type owl:NamedIndividual ,
-                                 :TypeOfEmergencyService .
+:emergencyServicePolice rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#emergencyServiceSOSPoint
-:emergencyServiceSOSPoint rdf:type owl:NamedIndividual ,
-                                   :TypeOfEmergencyService .
+:emergencyServiceSOSPoint rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#emergencyServiceServiceCCTV
-:emergencyServiceServiceCCTV rdf:type owl:NamedIndividual ,
-                                      :TypeOfEmergencyService .
+:emergencyServiceServiceCCTV rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#entranceEquipmentBarrier
@@ -1354,8 +1850,7 @@ by a ServiceJourneyPattern."""@en ;
 ###  https://w3id.org/transmodel/facilities#entranceEquipmentRevolvingDoor
 :entranceEquipmentRevolvingDoor rdf:type owl:NamedIndividual ,
                                          :TypeOfEntranceEquipment ;
-                                rdfs:label """entranceEquipment
-RevolvingDoor"""@en .
+                                rdfs:label "entranceEquipmentRevolvingDoor"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#equipmentActivated
@@ -1382,13 +1877,11 @@ RevolvingDoor"""@en .
 
 
 ###  https://w3id.org/transmodel/facilities#firstClass
-:firstClass rdf:type owl:NamedIndividual ,
-                     :TypeOfAccommodation .
+:firstClass rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#foodVendingMachine
-:foodVendingMachine rdf:type owl:NamedIndividual ,
-                             :TypeOfCateringService .
+:foodVendingMachine rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#full
@@ -1441,15 +1934,16 @@ RevolvingDoor"""@en .
                :AccessibilityAssessment .
 
 
+###  https://w3id.org/transmodel/facilities#lineName
+:lineName rdf:type owl:NamedIndividual ,
+                   :HeadingSign ;
+          rdfs:label "lineName"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#lowFloor
-:lowFloor rdf:type owl:NamedIndividual .
-
-
-###  https://w3id.org/transmodel/facilities#material
-:material rdf:type owl:NamedIndividual ,
-                   :DeliveryVariant ;
-          rdfs:comment "material, a DeliveryVariant"@en ;
-          rdfs:label "material"@en .
+:lowFloor rdf:type owl:NamedIndividual ,
+                   :AccessibilityAssessment ;
+          rdfs:label "lowFloor"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#narrowEntrance
@@ -1459,15 +1953,13 @@ RevolvingDoor"""@en .
 
 
 ###  https://w3id.org/transmodel/facilities#noBeveragesAvailable
-:noBeveragesAvailable rdf:type owl:NamedIndividual ,
-                               :TypeOfCateringService ;
+:noBeveragesAvailable rdf:type owl:NamedIndividual ;
                       rdfs:label ""@en ,
                                  "beverages" .
 
 
 ###  https://w3id.org/transmodel/facilities#noFoodAvailable
-:noFoodAvailable rdf:type owl:NamedIndividual ,
-                          :TypeOfCateringService ;
+:noFoodAvailable rdf:type owl:NamedIndividual ;
                  rdfs:label "food"@en .
 
 
@@ -1507,13 +1999,6 @@ RevolvingDoor"""@en .
                            rdfs:label "placeAccessStairStaircase"@en .
 
 
-###  https://w3id.org/transmodel/facilities#printed
-:printed rdf:type owl:NamedIndividual ,
-                  :DeliveryVariant ;
-         rdfs:comment "Printed, a delivery variant"@en ;
-         rdfs:label "printed"@en .
-
-
 ###  https://w3id.org/transmodel/facilities#queue
 :queue rdf:type owl:NamedIndividual ,
                 :TypeOfCongestion .
@@ -1524,14 +2009,25 @@ RevolvingDoor"""@en .
                           :TypeOfAccessFeature .
 
 
+###  https://w3id.org/transmodel/facilities#riverFlow
+:riverFlow rdf:type owl:NamedIndividual ,
+                    :ValidityTrigger ;
+           rdfs:label "riverFlow"@en .
+
+
+###  https://w3id.org/transmodel/facilities#roadClosure
+:roadClosure rdf:type owl:NamedIndividual ,
+                      :ValidityTrigger ;
+             rdfs:label "roadClosure"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#room
 :room rdf:type owl:NamedIndividual ,
                :PassengerArea .
 
 
 ###  https://w3id.org/transmodel/facilities#secondClass
-:secondClass rdf:type owl:NamedIndividual ,
-                      :TypeOfAccommodation .
+:secondClass rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#securityArea
@@ -1542,13 +2038,11 @@ RevolvingDoor"""@en .
 
 ###  https://w3id.org/transmodel/facilities#shower
 :shower rdf:type owl:NamedIndividual ,
-                 :SanitaryEquipment ,
-                 :TypeOfAccommodation .
+                 :SanitaryEquipment .
 
 
 ###  https://w3id.org/transmodel/facilities#snacks
-:snacks rdf:type owl:NamedIndividual ,
-                 :TypeOfCateringService .
+:snacks rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#standardBus
@@ -1559,8 +2053,7 @@ RevolvingDoor"""@en .
 
 ###  https://w3id.org/transmodel/facilities#stepFree
 :stepFree rdf:type owl:NamedIndividual ,
-                   :AccessibilityAssessment ,
-                   :TypeOfAccessibilityTools ;
+                   :AccessibilityAssessment ;
           rdfs:label "stepFree"@en .
 
 
@@ -1592,26 +2085,22 @@ RevolvingDoor"""@en .
 
 
 ###  https://w3id.org/transmodel/facilities#visualNavigator
-:visualNavigator rdf:type owl:NamedIndividual ,
-                          :TypeOfAccessibilityTools .
-
-
-###  https://w3id.org/transmodel/facilities#voice
-:voice rdf:type owl:NamedIndividual ,
-                :DeliveryVariant ;
-       rdfs:comment "voice, a delivery variant"@en ;
-       rdfs:label "voice"@en .
+:visualNavigator rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#walkingStick
-:walkingStick rdf:type owl:NamedIndividual ,
-                       :TypeOfAccessibilityTools .
+:walkingStick rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/facilities#weatherConditions
+:weatherConditions rdf:type owl:NamedIndividual ,
+                            :ValidityTrigger ;
+                   rdfs:label "weatherConditions"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#wheelchair
 :wheelchair rdf:type owl:NamedIndividual ,
-                     :AccessibilityAssessment ,
-                     :TypeOfAccessibilityTools .
+                     :AccessibilityAssessment .
 
 
 ###  https://w3id.org/transmodel/facilities#wheelchairAccessToilet
@@ -1624,25 +2113,31 @@ RevolvingDoor"""@en .
                                :SanitaryEquipment .
 
 
-_:genid2 :mbox "adolfo.anton.bravo@upm.es"@en ;
-         :name "Adolfo Anton-Bravo"@en .
+###  https://w3id.org/transmodel/kos/facilities/FacilityType
+<https://w3id.org/transmodel/kos/facilities/FacilityType> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                          rdfs:comment "Concept scheme where all the codelists for the types of facilities that are included in the Transmodel ontology are included"@es .
 
-_:genid3 :mbox "adolfo.anton.bravo@upm.es"@en ;
+
+_:genid77 :mbox "adolfo.anton.bravo@upm.es"@en ;
           :name "Adolfo Anton-Bravo"@en .
 
-_:genid4 :mbox "adolfo.anton.bravo@upm.es"@en ;
-          :name "Adolfo Anton-Bravo"@en .
+_:genid78 :mbox "adolfo.anton.bravo@upm.es"@en ;
+           :name "Adolfo Anton-Bravo"@en .
+
+_:genid79 :mbox "adolfo.anton.bravo@upm.es"@en ;
+           :name "Adolfo Anton-Bravo"@en .
 
 #################################################################
-#    Annotations
+#    General axioms
 #################################################################
 
-:description rdfs:comment "description for MeetingPointServices"@en ;
-              rdfs:label "meetingPointDescription"@en .
-
-
-:name rdfs:comment "The name of the author"@en ;
-      rdfs:label "name"@en .
+[ rdf:type owl:AllDisjointClasses ;
+   owl:members ( :GeneralSign
+                 :HeadingSign
+                 :PlaceSign
+               )
+ ] .
 
 
 ###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
