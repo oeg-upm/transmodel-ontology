@@ -1,6 +1,6 @@
 # Transmodel Ontology
 
-A TransModel Ontology focused on Stops (Topography), Scheduling and Fares (at least).
+A TransModel Ontology focused on Stops (Topography), Facilities, Scheduling and Fares (at least).
 
 
 # Purpose and scope of the vocabulary
