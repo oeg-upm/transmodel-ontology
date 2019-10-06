@@ -1,21 +1,30 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/transmodel/facilities#"
      xml:base="https://w3id.org/transmodel/facilities"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:facilities="https://w3id.org/transmodel/facilities#">
     <owl:Ontology rdf:about="https://w3id.org/transmodel/facilities#">
-        <owl:versionIRI rdf:resource="https://w3id.org/transmodel/facilities/1.0"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/transmodel/facilities/0.2"/>
+        <ns:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dc:creator>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:date>2019-10-06</dc:date>
+        <dc:description xml:lang="en">Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NetEx model. Visit https://github.com/oeg-upm/transmodel-ontology</dc:description>
+        <dc:identifier>https://w3id.org/transmodel/facilities</dc:identifier>
+        <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
+        <dc:title xml:lang="en">Transmodel Ontology - Facilities</dc:title>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/facilities#"/>
         <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
-        <rdfs:label xml:lang="en">TransmodelOntologyFacilities</rdfs:label>
+        <rdfs:label xml:lang="en">Transmodel Ontology - Facilities</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://github.com/oeg-upm/transmodel-ontology</rdfs:seeAlso>
-        <author>
-            <rdf:Description/>
-        </author>
-        <description xml:lang="en">Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NetEx model. Visit https://github.com/oeg-upm/transmodel-ontology</description>
+        <owl:versionInfo xml:lang="en">This is the initial version of the module on Facilities, after considering the UML models and XSD descriptions of Transmodel and NeTEx</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -29,6 +38,62 @@
      -->
 
 
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
     
 
 
@@ -1382,7 +1447,7 @@ In the TransModel UML model and in the Netex implementation this is expressed as
 
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Equipment">
-        <rdfs:comment xml:lang="en">Equipment which may be located on a Vehicle, Site, etc. There are many different types of Equipment, each of which may have specific properties. 
+        <rdfs:comment xml:lang="en">Equipment which may be located on a Vehicle, Site, etc. There are many different types of Equipment, each of which may have specific properties.
 
 These are classified under two main specialisations;
 - INSTALLED EQUIPMENT, Fixed EQUIPMENT that may be installed on a SITE, such as a door, lift, gate etc. or a VEHICLE Its exact location may be specified by an EQUIPMENT PLACE. Physical equipments installed either fixed (PlaceEquipment), on-board (VehicleEquipment) or mixed (some equipments as rubish, sanitary or ticketing).
@@ -2013,7 +2078,7 @@ A named Service relating to the use of the Site or transport Services at a parti
                 <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/facilities#VehicleType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A service facility set contains a set of facilities available for a service journey or a journey part. The set may be availabe only for a specific vehicle type within the service (e.g., carriage equipped with low floor). 
+        <rdfs:comment xml:lang="en">A service facility set contains a set of facilities available for a service journey or a journey part. The set may be availabe only for a specific vehicle type within the service (e.g., carriage equipped with low floor).
 It can also include information about the accommodation on board, which can be related to the Accommodation or OnboardStay concepts, which are subclasses of Facility, via the comprisesFacility object property. These two concepts are further refined since they may have additional attributes beyond the indication of the corresponding SKOS concepts, as in the other cases.</rdfs:comment>
         <rdfs:comment xml:lang="en">TODO: Other class restrictions that may be added may include:
 - for (inverse of made using), for Vehicle Journey and Coupled Journey (see figure 287, Facility conceptual Model)</rdfs:comment>
@@ -3363,15 +3428,15 @@ It can also include information about the accommodation on board, which can be r
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:comment xml:lang="es">Concept scheme where all the codelists for the types of facilities that are included in the Transmodel ontology are included</rdfs:comment>
     </owl:NamedIndividual>
+    <rdf:Description rdf:nodeID="genid76">
+        <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
+        <name xml:lang="en">Adolfo Anton-Bravo</name>
+    </rdf:Description>
     <rdf:Description rdf:nodeID="genid77">
         <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
         <name xml:lang="en">Adolfo Anton-Bravo</name>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid78">
-        <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
-        <name xml:lang="en">Adolfo Anton-Bravo</name>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="genid79">
         <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
         <name xml:lang="en">Adolfo Anton-Bravo</name>
     </rdf:Description>
