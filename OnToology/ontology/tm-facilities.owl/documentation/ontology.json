@@ -9,6 +9,98 @@
     } ]
   } ]
 }, {
+  "@id" : "_:genid100",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "See figure 287, Facility conceptual Model"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#ServiceFacilitySet"
+  } ],
+  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
+    "@id" : "_:genid99"
+  } ]
+}, {
+  "@id" : "_:genid101",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#AccessibilityAssessment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#accessibilityAssessment"
+  } ]
+}, {
+  "@id" : "_:genid102",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#Site"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#availableAt"
+  } ]
+}, {
+  "@id" : "_:genid103",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#Vehicle"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#locatedIn"
+  } ]
+}, {
+  "@id" : "_:genid104",
+  "https://w3id.org/transmodel/facilities#mbox" : [ {
+    "@language" : "en",
+    "@value" : "adolfo.anton.bravo@upm.es"
+  } ],
+  "https://w3id.org/transmodel/facilities#name" : [ {
+    "@language" : "en",
+    "@value" : "Adolfo Anton-Bravo"
+  } ]
+}, {
+  "@id" : "_:genid105",
+  "https://w3id.org/transmodel/facilities#mbox" : [ {
+    "@language" : "en",
+    "@value" : "adolfo.anton.bravo@upm.es"
+  } ],
+  "https://w3id.org/transmodel/facilities#name" : [ {
+    "@language" : "en",
+    "@value" : "Adolfo Anton-Bravo"
+  } ]
+}, {
+  "@id" : "_:genid106",
+  "https://w3id.org/transmodel/facilities#mbox" : [ {
+    "@language" : "en",
+    "@value" : "adolfo.anton.bravo@upm.es"
+  } ],
+  "https://w3id.org/transmodel/facilities#name" : [ {
+    "@language" : "en",
+    "@value" : "Adolfo Anton-Bravo"
+  } ]
+}, {
+  "@id" : "_:genid107",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/transmodel/facilities#HeadingSign"
+    }, {
+      "@id" : "https://w3id.org/transmodel/facilities#OtherSign"
+    }, {
+      "@id" : "https://w3id.org/transmodel/facilities#PlaceSign"
+    } ]
+  } ]
+}, {
   "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
@@ -31,7 +123,7 @@
   "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
+    "@id" : "https://w3id.org/transmodel/kos/facilities/EquipmentType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -77,34 +169,22 @@
 }, {
   "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/transmodel/facilities#EquipmentPlace"
+    }, {
+      "@id" : "https://w3id.org/transmodel/facilities#PlaceEquipment"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "_:genid27"
+      "@id" : "_:genid30"
     } ]
-  } ]
-}, {
-  "@id" : "_:genid27",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid29",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "_:genid30"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#accommodationFacility"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -117,16 +197,6 @@
   } ]
 }, {
   "@id" : "_:genid30",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "@id" : "_:genid32"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid32",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
@@ -135,30 +205,81 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid34"
+    } ]
+  } ]
+}, {
   "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "_:genid35"
+    "@id" : "_:genid37"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#accommodationFacility"
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid39"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "_:genid42"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#couchetteFacility"
   } ]
 }, {
-  "@id" : "_:genid35",
+  "@id" : "_:genid42",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "_:genid37"
+      "@id" : "_:genid44"
     } ]
   } ]
 }, {
-  "@id" : "_:genid37",
+  "@id" : "_:genid44",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
@@ -167,81 +288,36 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid39",
+  "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "_:genid40"
+    "@id" : "_:genid47"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#fareClass"
   } ]
 }, {
-  "@id" : "_:genid40",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "@id" : "_:genid42"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid42",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid44",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "_:genid45"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#showerFacility"
-  } ]
-}, {
-  "@id" : "_:genid45",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "@id" : "_:genid47"
-    } ]
-  } ]
-}, {
   "@id" : "_:genid47",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid49"
+    } ]
   } ]
 }, {
   "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "_:genid50"
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#toiletFacility"
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
   "@id" : "_:genid5",
@@ -254,82 +330,77 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid50",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "@id" : "_:genid52"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid52",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid54",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid55"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#facilityType"
-  } ]
-}, {
-  "@id" : "_:genid55",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "@id" : "_:genid57"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid57",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid59",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Equipment"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#comprisesEquipment"
-  } ]
-}, {
-  "@id" : "_:genid60",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Facility"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#comprisesFacility"
-  } ]
-}, {
-  "@id" : "_:genid61",
+  "@id" : "_:genid51",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "_:genid52"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#showerFacility"
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid54"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid54",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid56",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "_:genid57"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#toiletFacility"
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid59"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid59",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid61",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "_:genid62"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#boardingPermission"
+    "@id" : "https://w3id.org/transmodel/facilities#equipmentType"
   } ]
 }, {
   "@id" : "_:genid62",
@@ -345,7 +416,7 @@
   "@id" : "_:genid64",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
+    "@id" : "https://w3id.org/transmodel/kos/facilities/EquipmentType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -358,29 +429,41 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "_:genid67"
+    "@id" : "https://w3id.org/transmodel/facilities#EquipmentPlace"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#fareClass"
+    "@id" : "https://w3id.org/transmodel/facilities#locatedIn"
   } ]
 }, {
   "@id" : "_:genid67",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "@id" : "_:genid69"
-    } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#outOfService"
+  } ]
+}, {
+  "@id" : "_:genid68",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#Equipment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#equippedWith"
   } ]
 }, {
   "@id" : "_:genid69",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#EquipmentPosition"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+    "@id" : "https://w3id.org/transmodel/facilities#position"
   } ]
 }, {
   "@id" : "_:genid7",
@@ -392,7 +475,117 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
+  "@id" : "_:genid70",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid71"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#facilityType"
+  } ]
+}, {
   "@id" : "_:genid71",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid73"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid73",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid75",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#Equipment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#comprisesEquipment"
+  } ]
+}, {
+  "@id" : "_:genid76",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#Facility"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#comprisesFacility"
+  } ]
+}, {
+  "@id" : "_:genid77",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "_:genid78"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#boardingPermission"
+  } ]
+}, {
+  "@id" : "_:genid78",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid80"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid80",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid82",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "_:genid83"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#fareClass"
+  } ]
+}, {
+  "@id" : "_:genid83",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid85"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid85",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid87",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -405,87 +598,26 @@
     "@id" : "https://w3id.org/transmodel/facilities#duration"
   } ]
 }, {
-  "@id" : "_:genid72",
+  "@id" : "_:genid88",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#VehicleType"
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "_:genid89"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#presentAt"
+    "@id" : "https://w3id.org/transmodel/facilities#locatedIn"
   } ]
 }, {
-  "@id" : "_:genid73",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "See figure 287, Facility conceptual Model"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedProperty" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedSource" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#ServiceFacilitySet"
-  } ],
-  "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "_:genid72"
-  } ]
-}, {
-  "@id" : "_:genid74",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Site"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#availableAt"
-  } ]
-}, {
-  "@id" : "_:genid75",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#TypeOfPlaceAccessStair"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#typeOfPlaceAccessStair"
-  } ]
-}, {
-  "@id" : "_:genid76",
-  "https://w3id.org/transmodel/facilities#mbox" : [ {
-    "@language" : "en",
-    "@value" : "adolfo.anton.bravo@upm.es"
-  } ],
-  "https://w3id.org/transmodel/facilities#name" : [ {
-    "@language" : "en",
-    "@value" : "Adolfo Anton-Bravo"
-  } ]
-}, {
-  "@id" : "_:genid77",
-  "https://w3id.org/transmodel/facilities#mbox" : [ {
-    "@language" : "en",
-    "@value" : "adolfo.anton.bravo@upm.es"
-  } ],
-  "https://w3id.org/transmodel/facilities#name" : [ {
-    "@language" : "en",
-    "@value" : "Adolfo Anton-Bravo"
-  } ]
-}, {
-  "@id" : "_:genid78",
-  "https://w3id.org/transmodel/facilities#mbox" : [ {
-    "@language" : "en",
-    "@value" : "adolfo.anton.bravo@upm.es"
-  } ],
-  "https://w3id.org/transmodel/facilities#name" : [ {
-    "@language" : "en",
-    "@value" : "Adolfo Anton-Bravo"
-  } ]
-}, {
-  "@id" : "_:genid79",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
-  "http://www.w3.org/2002/07/owl#members" : [ {
+  "@id" : "_:genid89",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/transmodel/facilities#GeneralSign"
+      "@id" : "https://w3id.org/transmodel/facilities#EquipmentPlace"
     }, {
-      "@id" : "https://w3id.org/transmodel/facilities#HeadingSign"
-    }, {
-      "@id" : "https://w3id.org/transmodel/facilities#PlaceSign"
+      "@id" : "https://w3id.org/transmodel/facilities#Vehicle"
     } ]
   } ]
 }, {
@@ -497,6 +629,70 @@
     }, {
       "@id" : "_:genid11"
     } ]
+  } ]
+}, {
+  "@id" : "_:genid92",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#fixed"
+  } ]
+}, {
+  "@id" : "_:genid93",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid97"
+    }, {
+      "@id" : "_:genid95"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid95",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#EquipmentPosition"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#position"
+  } ]
+}, {
+  "@id" : "_:genid97",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#position"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#EquipmentPosition"
+  } ]
+}, {
+  "@id" : "_:genid98",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#fixed"
+  } ]
+}, {
+  "@id" : "_:genid99",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#VehicleType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#presentAt"
   } ]
 }, {
   "@id" : "http://creativecommons.org/ns#license",
@@ -595,6 +791,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Specialisation of VehicleAccessEquipment dedicated to VehicleAccessAreaDimmension"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -602,6 +801,20 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#VehicleAccessEquipment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#AccessEquipment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specialisation of Place Equipment dedicated to access (e.g. lifts, entrances, stairs, ramps, etc.)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Access Equipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#PlaceEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#AccessSpace",
@@ -621,14 +834,14 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
+    "@value" : "TODO: Determine whether this concept should be moved to another module of the Transmodel ontology"
+  }, {
+    "@language" : "en",
     "@value" : "The accessibility characteristics of an Entity (facility)  used by Passenger such as a Stop Place or a Stop Place Component. Described by AccessibilityLimitations and/or a set of Suitabilities"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "AccessibilityAssessment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#AccessibilityLimitation",
@@ -658,15 +871,15 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#Facility"
   }, {
-    "@id" : "_:genid29"
+    "@id" : "_:genid36"
   }, {
-    "@id" : "_:genid34"
+    "@id" : "_:genid41"
   }, {
-    "@id" : "_:genid39"
+    "@id" : "_:genid46"
   }, {
-    "@id" : "_:genid44"
+    "@id" : "_:genid51"
   }, {
-    "@id" : "_:genid49"
+    "@id" : "_:genid56"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#ActivationLink",
@@ -702,6 +915,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Assistance Services for dissabled users of the Public Transport Network"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -722,11 +938,15 @@
     "@value" : "AssistanceService"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Service"
+    "@id" : "https://w3id.org/transmodel/facilities#LocalService"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#BabyChange",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#SanitaryEquipment"
   } ]
@@ -736,6 +956,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A specialisation of Customer Services for booking services"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -764,6 +987,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "One specialisation of SiteComponent for Check in services"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check whether this has to be maintained, as it does not seem to appear clearly in any of the conceptual or implementation models of Transmodel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -778,13 +1004,16 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "CommercialService is the specialisation of services for commercial purposes"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained as a classification or only keep them in a flat list, as it is proposed in the Equipment Overview Physical Model of Transmodel (figure 247)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "CommercialService"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Service"
+    "@id" : "https://w3id.org/transmodel/facilities#LocalService"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#CommunicationService",
@@ -881,29 +1110,45 @@
     "@value" : "CrossingEquipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#PlaceAccessEquipment"
+    "@id" : "https://w3id.org/transmodel/facilities#AccessEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#CrossingEquipmentLights",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#CrossingEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#CrossingEquipmentPedestrian",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#CrossingEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#CrossingEquipmentTactileGuideStrip",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#CrossingEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#CrossingEquipmentZebra",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#CrossingEquipment"
   } ]
@@ -919,7 +1164,7 @@
     "@value" : "CustomerService"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Service"
+    "@id" : "https://w3id.org/transmodel/facilities#LocalService"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#CycleOperatingEquipment",
@@ -927,6 +1172,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A specialisation of PlaceEquipment describing cycle parking equipment"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -969,12 +1217,16 @@
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#EmergencyService",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "EmergencyService"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Service"
+    "@id" : "https://w3id.org/transmodel/facilities#LocalService"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#EncumbranceNeed",
@@ -991,7 +1243,7 @@
     "@id" : "https://w3id.org/transmodel/facilities#UserNeed"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/facilities#EntraceEquipment",
+  "@id" : "https://w3id.org/transmodel/facilities#EntranceEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1002,44 +1254,55 @@
     "@value" : "EntranceEquipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#PlaceAccessEquipment"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#Entrances",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Specialisation of PlaceAccessEquipment dedicated to PlaceAccessEntrance"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "PlaceEntrance"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#PlaceAccessEquipment"
+    "@id" : "https://w3id.org/transmodel/facilities#AccessEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#Equipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Equipment which may be located on a Vehicle, Site, etc. There are many different types of Equipment, each of which may have specific properties.\n\nThese are classified under two main specialisations;\n- INSTALLED EQUIPMENT, Fixed EQUIPMENT that may be installed on a SITE, such as a door, lift, gate etc. or a VEHICLE Its exact location may be specified by an EQUIPMENT PLACE. Physical equipments installed either fixed (PlaceEquipment), on-board (VehicleEquipment) or mixed (some equipments as rubish, sanitary or ticketing).\n\nThis is further characterised into:\n-- PLACE EQUIPMENT: Equipment which may be located only on a SITE, such as a barrier, bench, Lift\n-- PASSENGER EQUIPMENT; Equipment which may be located on either a Vehicle or a SITE, such as a display terminal, ticket validator or WC.\n\n- LOCAL SERVICE – an intangible service that is provided at a site such selling tickets, porterage, etc."
+    "@value" : "An equipment that may be located on a Vehicle, Site, etc. There are many different types of equipment, each of which may have specific properties (hence a large classification of concepts is provided as subclasses of this class).\nThe two main specialisations are Local Service and Installed Equipment. A Local Service is an intangible service that is provided at a site, such as selling tickets, porterage, etc. An Installed Equipment is the fixed equipment that may be installed fixed on a site (Place Equipment - e.g., door, lift, gate, etc.) or a vehicle (Vehicel Equipment), or mixed (e.g., rubish bins, sanitary equipment or ticketing equipments). These are further characterised as Place Equipment (equipment which may be located only on a SITE, such as a barrier, bench, lift) and Passenger Equipment (equipment which may be located on either a Vehicle or a Site, such as a display terminal, ticket validator or WC)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Equipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid61"
+  }, {
+    "@id" : "_:genid66"
+  }, {
+    "@id" : "_:genid67"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#EquipmentPlace",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An EquipmentPlace is a SiteComponent containing Equipment"
+    "@value" : "An Equipment Place is a Site Component containing Equipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "EquipmentPlace"
+    "@value" : "Equipment Place"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#SiteComponent"
+  }, {
+    "@id" : "_:genid68"
+  }, {
+    "@id" : "_:genid69"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#EquipmentPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "TODO: Add a geolocation property for the position (most probably it will be a GeoSPARQL property, or a relationship to geo:Point)"
+  }, {
+    "@language" : "en",
+    "@value" : "The position that an equipment has, which comes with geospatial information and a description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Equipment Position"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#EscalatorEquipment",
@@ -1053,7 +1316,7 @@
     "@value" : "EscalatorEquipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Stairs"
+    "@id" : "https://w3id.org/transmodel/facilities#StairEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#Facility",
@@ -1067,7 +1330,7 @@
     "@value" : "Facility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid54"
+    "@id" : "_:genid70"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#FacilitySet",
@@ -1087,9 +1350,9 @@
     "@value" : "Facility Set"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid59"
+    "@id" : "_:genid75"
   }, {
-    "@id" : "_:genid60"
+    "@id" : "_:genid76"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#FreeWifi",
@@ -1097,6 +1360,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A private WiFi network that is available under certain characteristics"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1111,6 +1377,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A Facility of PlaceEquipment used for parking and maintaining\n\tvehicles. Parking Point in a Garage are called GaragePoint."
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1118,20 +1387,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#PlaceEquipment"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#GeneralSign",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Specialisation of SignEquipment which are not HeadingSign nor PlaceSign"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "GeneralSign"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#SignEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#HeadingSign",
@@ -1167,6 +1422,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "One specialisation of SiteComponent for Migration affaires"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check whether this has to be maintained, as it does not seem to appear clearly in any of the conceptual or implementation models of Transmodel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1181,6 +1439,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Information Booklet is public transport piece of Equipment dedicated to inform"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1195,6 +1456,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A public transport information piece of Equipment"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1206,6 +1470,14 @@
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#InstalledEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An Installed Equipment is a fixed equipment that may be installed on a site (such as a door, lift, gate, etc.) or a vehicle. Its exact location may be specified by an Equipment Place. \nPhysical equipments installed either fixed (PlaceEquipment), on-board (VehicleEquipment) or mixed (some equipments as rubish, sanitary or ticketing)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Installed Equipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#Equipment"
   } ]
@@ -1234,7 +1506,7 @@
     "@id" : "https://w3id.org/transmodel/facilities#LuggageService"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/facilities#Lifts",
+  "@id" : "https://w3id.org/transmodel/facilities#LiftEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1245,10 +1517,24 @@
     "@value" : "PlaceAccessLift"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#PlaceAccessEquipment"
+    "@id" : "https://w3id.org/transmodel/facilities#AccessEquipment"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/facilities#LostProperties",
+  "@id" : "https://w3id.org/transmodel/facilities#LocalService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Service (LocalService such as LeftLuggage, TicketingService) is considered as immaterial Equipment as well.\n\nA named Service relating to the use of the Site or transport Services at a particular location, for example Porterage, AssistanceForDissabledUsers, BookingOffices, etc. The Service may have a validityCondition associated with it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#Equipment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#LostPropertieService",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1267,6 +1553,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Specialisation of VehicleAccessEquipment dedicated to LowFloor"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1274,15 +1563,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#VehicleAccessEquipment"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#LuggageLocker",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "LuggageLocker"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#SiteEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#LuggageLockerEquipment",
@@ -1296,7 +1576,7 @@
     "@value" : "LuggageLockerEquipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#StopPlaceEquipment"
+    "@id" : "https://w3id.org/transmodel/facilities#SiteEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#LuggageService",
@@ -1304,6 +1584,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Specialisation of CustomerServices for LuggageServices.\n\nProvides facilities as LuggageTrolley, FreeToUse, etc."
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained or moved to LocalService, as it is  present elsehwere in the Equipment Overview Physical Model of Transmodel (figure 247)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1313,8 +1596,12 @@
     "@id" : "https://w3id.org/transmodel/facilities#CustomerService"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/facilities#LuggageTrolley",
+  "@id" : "https://w3id.org/transmodel/facilities#LuggageTrolleyService",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "LuggageTrolley"
@@ -1384,11 +1671,25 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#Facility"
   }, {
-    "@id" : "_:genid61"
+    "@id" : "_:genid77"
   }, {
-    "@id" : "_:genid66"
+    "@id" : "_:genid82"
   }, {
-    "@id" : "_:genid71"
+    "@id" : "_:genid87"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#OtherSign",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specialisation of SignEquipment which are not HeadingSign nor PlaceSign"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Other Sign"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#SignEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#Passenger",
@@ -1423,7 +1724,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An item of Equipment of a particular type actually available at a location within a Place or a Vehicle"
+    "@value" : "An item of equipment of a particular type actually available at a location within a Place (fixed) or a Vehicle (onboard)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1431,6 +1732,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#InstalledEquipment"
+  }, {
+    "@id" : "_:genid88"
+  }, {
+    "@id" : "_:genid92"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#PassengerInformationEquipment",
@@ -1452,6 +1757,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A public transport information piece of Equipment which is printed material (leaflets displayed at Stops, booklets, ...)"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1466,6 +1774,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A public transport information piece of equipment such as street stands, information desks or telematic services"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1485,25 +1796,11 @@
     "@id" : "https://w3id.org/transmodel/facilities#PassengerEquipment"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/facilities#PlaceAccessEquipment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Specialisation of PlaceEquipment dedicated to access (e.g. lifts, entrances, stairs, ramps, etc.)"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "PlaceAccessEquipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#PlaceEquipment"
-  } ]
-}, {
   "@id" : "https://w3id.org/transmodel/facilities#PlaceEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An item of Equipment of a particular type actually available at a location within a Place"
+    "@value" : "An item of Equipment of a particular type actually available at a location within a Place. It can only have one position"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1511,6 +1808,20 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#InstalledEquipment"
+  }, {
+    "@id" : "_:genid93"
+  }, {
+    "@id" : "_:genid98"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#PlaceLighting",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Place Lighting"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#PlaceEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#PlaceSign",
@@ -1535,9 +1846,12 @@
   }, {
     "@language" : "en",
     "@value" : "PorterageService"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Service"
+    "@id" : "https://w3id.org/transmodel/facilities#LocalService"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#PostOfficeService",
@@ -1545,6 +1859,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A PostOfficeService is the specialisation of CommunicationService for post mail services"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1561,7 +1878,7 @@
     "@value" : "QueingEquipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#PlaceAccessEquipment"
+    "@id" : "https://w3id.org/transmodel/facilities#AccessEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#Ramp",
@@ -1569,6 +1886,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Specialisation of VehicleAccessEquipment dedicated to VehicleRamp"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1578,7 +1898,7 @@
     "@id" : "https://w3id.org/transmodel/facilities#VehicleAccessEquipment"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/facilities#Ramps",
+  "@id" : "https://w3id.org/transmodel/facilities#RampEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1589,7 +1909,7 @@
     "@value" : "PlaceAccessRamp"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#PlaceAccessEquipment"
+    "@id" : "https://w3id.org/transmodel/facilities#AccessEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#RetailService",
@@ -1610,13 +1930,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "RoughSurface"
+    "@value" : "Rough Surface"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#PlaceEquipment"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/facilities#RubishDisposal",
+  "@id" : "https://w3id.org/transmodel/facilities#RubishDisposalEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1627,7 +1947,7 @@
     "@value" : "RubishDisposal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Equipment"
+    "@id" : "https://w3id.org/transmodel/facilities#PassengerEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#SanitaryEquipment",
@@ -1641,7 +1961,7 @@
     "@value" : "TypeOfSanitaryEquipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Equipment"
+    "@id" : "https://w3id.org/transmodel/facilities#PassengerEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#Screening",
@@ -1649,6 +1969,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "One specialisation of SiteComponent for Security Screening"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check whether this has to be maintained, as it does not seem to appear clearly in any of the conceptual or implementation models of Transmodel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1665,21 +1988,7 @@
     "@value" : "SeatingEquipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#PlaceEquipment"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#Service",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A Service (LocalService such as LeftLuggage, TicketingService) is considered as immaterial Equipment as well.\n\nA named Service relating to the use of the Site or transport Services at a particular location, for example Porterage, AssistanceForDissabledUsers, BookingOffices, etc. The Service may have a validityCondition associated with it."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Service"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Equipment"
+    "@id" : "https://w3id.org/transmodel/facilities#WaitingEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#ServiceFacilitySet",
@@ -1698,10 +2007,10 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#FacilitySet"
   }, {
-    "@id" : "_:genid72"
+    "@id" : "_:genid99"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/facilities#Shelter",
+  "@id" : "https://w3id.org/transmodel/facilities#ShelterEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1720,6 +2029,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Specialisation of SanitaryEquipment for showers"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1748,27 +2060,47 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A well known Place to which Passengers may refer to indicate the origin or a destination of a Trip"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check whether we should move this one to another module"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Site"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#SiteComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "An element of a Site descibing a part of its structure. SiteComponent share common properties for data management, accessibility and other features"
+    "@value" : "An element of a Site descibing a part of its structure. Site Components share common properties for data management, accessibility and other features"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "SiteComponent"
+    "@value" : "Site Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
+    "@id" : "https://w3id.org/transmodel/facilities#SiteElement"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#SiteElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A place"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Although the Transmodel conceptual model on Site Equipment specifies that a Site Element can only have one accessibility assessment, this may need to be relaxed to allow for more values to be included."
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check whether this should be related to a more general concept defining a place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Site Element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid101"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#SiteEquipment",
@@ -1796,7 +2128,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#FacilitySet"
   }, {
-    "@id" : "_:genid74"
+    "@id" : "_:genid102"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#StairCaseEquipment",
@@ -1810,23 +2142,10 @@
     "@value" : "StairCaseEquipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Stairs"
+    "@id" : "https://w3id.org/transmodel/facilities#StairEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#StairEquipment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "StairEquipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#PlaceAccessEquipment"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Stairs"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#Stairs",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1837,9 +2156,7 @@
     "@value" : "PlaceAccessStair"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#PlaceAccessEquipment"
-  }, {
-    "@id" : "_:genid75"
+    "@id" : "https://w3id.org/transmodel/facilities#AccessEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#StatusOfEquipment",
@@ -1863,7 +2180,7 @@
     "@value" : "StopPlace"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Site"
+    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#StopPlaceComponent",
@@ -1878,20 +2195,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#StopPlaceEquipment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Specialisation of Equipment for StopPlaceEquipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "StopPlaceEquipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#PlaceEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#StopPlaceSpace",
@@ -1930,6 +2233,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "One specialisation of SiteComponent for Ticket control"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Check whether this has to be maintained, as it does not seem to appear clearly in any of the conceptual or implementation models of Transmodel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1974,11 +2280,15 @@
     "@value" : "TicketingService"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Service"
+    "@id" : "https://w3id.org/transmodel/facilities#LocalService"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#Toilet",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Toilet"
@@ -1987,18 +2297,10 @@
     "@id" : "https://w3id.org/transmodel/facilities#SanitaryEquipment"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/facilities#TrolleyStand",
+  "@id" : "https://w3id.org/transmodel/facilities#TravelatorEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Is the specialisation of SiteEquipment for TrolleyStand"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "TrolleyStand"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#SiteEquipment"
+    "@id" : "https://w3id.org/transmodel/facilities#AccessEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#TrolleyStandEquipment",
@@ -2012,171 +2314,7 @@
     "@value" : "TrolleyStandEquipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#StopPlaceEquipment"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#TypeOfAccessFeature",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A classification of AccessFeature for CheckConstraint"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "TypeOfAccessFeature"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#TypeOfCheckConstraint",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "TypeOfCheckConstraint"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#TypeOfCongestion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A typology of congestions resulting from CheckConstraint"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "TypeOfCongestion"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A classification of Cycle Storage Equipment: racks, bars, railings, etc."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "TypeOfCycleStorageEquipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#TypeOfEntranceEquipment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Classification of Entrance Equipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "TypeOfEntranceEquipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#TypeOfEquipment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A classification of equipment item to be installed at stop point or onboard vehicles, for instance"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "TypeOfEquipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#TypeOfGenderLimitation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A classification of Gender limitations (mainly for Sanitary Equipment, e.g., male only; famale only...)"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "TypeOfGenderLimitation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#TypeOfHandrail",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A classification of handrails: one side, two sides, etc."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "TypeOfHandrail"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#TypeOfInformationDesk",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A classification of Passenger Information Desks"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "TypeOfPassengerInformationDesk"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#TypeOfPlaceAccessStair",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Classification of PlaceAccessEquipment dedicated to PlaceAccessStair"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "TypeOfPlaceAccessStair"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#TypeOfSanitaryEquipment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Specialisation of Passenger Equipment for Sanitary Equipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "SanitaryEquipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#PassengerEquipment"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#TypeOfWaitingRoom",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A classification of waiting room equipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "TypeOfWaitingRoom"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
+    "@id" : "https://w3id.org/transmodel/facilities#SiteEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#UserNeed",
@@ -2279,6 +2417,10 @@
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#VehicleDisplayEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "PassengerInformationOnBoard"
@@ -2291,14 +2433,19 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Equipment for Vehicles"
+    "@value" : "A fixed equipment installed on a vehice. In Transmodel, this concept is called Actual Vehicle Equipment"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: check whether the range of the property locatedIn should go into the concept Vehicle from a different module of the ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "VehicleEquipment"
+    "@value" : "Vehicle Equipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#InstalledEquipment"
+  }, {
+    "@id" : "_:genid103"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#VehicleMode",
@@ -2340,45 +2487,47 @@
     "@value" : "WaitingEquipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#StopPlaceEquipment"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#WaitingRoom",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A Waiting Room"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "WaitingRoom"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#WaitingEquipment"
+    "@id" : "https://w3id.org/transmodel/facilities#SiteEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#WaitingRoomEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
+    "@value" : "A Waiting Room"
+  }, {
+    "@language" : "en",
     "@value" : "Specialisation of WaitingEquipment for WaitingRoom, classified by TypeOfWaitingRoom"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
+    "@value" : "WaitingRoom"
+  }, {
+    "@language" : "en",
     "@value" : "WaitingRoomEquipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#WaitingRoom"
+    "@id" : "https://w3id.org/transmodel/facilities#WaitingEquipment"
+  }, {
+    "@id" : "https://w3id.org/transmodel/facilities#WaitingRoomEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#WheelchairAccessToilet",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#SanitaryEquipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#WheelchairBabyChange",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#SanitaryEquipment"
   } ]
@@ -2411,18 +2560,22 @@
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#accessibilityAssessment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Facility"
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "TODO: Determine whether this should be moved to another module if the concept AccessibilityAssessment is moved as well"
+  }, {
+    "@language" : "en",
+    "@value" : "This property is used to relate a site element, a facility, etc., with a specific accessibility assessment. In some of the UML models of Transmodel this property is name as characerisedBy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "accessibilityAssessment"
+    "@value" : "accessibility assessment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#AccessibilityAssessment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#accessibilityLimitation",
@@ -2556,10 +2709,10 @@
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#baggageCheckin",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfCheckConstraint" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#barrier",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfAccessFeature" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "barrierEntrance"
@@ -2699,7 +2852,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#confinedSpace",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfAccessFeature" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#constraintThroughput",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
@@ -2750,16 +2903,16 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#crowding",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfCongestion" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#cycleStorageEquipmentBars",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#cycleStorageEquipmentRacks",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#cycleStorageEquipmentRailings",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
@@ -2853,17 +3006,17 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#entranceEquipmentBarrier",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfEntranceEquipment" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#entranceEquipmentDoor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfEntranceEquipment" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "entranceEquipmentDoor"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#entranceEquipmentRevolvingDoor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfEntranceEquipment" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "entranceEquipmentRevolvingDoor"
@@ -2877,20 +3030,60 @@
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#equipmentAtStopPoint",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfEquipment" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "equipmentAtStopPoint"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#equipmentOnBoard",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfEquipment" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#equipmentType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property is used to link an equipment with the types of equipments available in the SKOS concept scheme of types of equipments"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#Equipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "equipment type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#equipmentdesactvated",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#StatusOfEquipment" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "equipmentDesactivated"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#equippedWith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "TODO: relate it to a more general property for containment and partOf"
+  }, {
+    "@language" : "en",
+    "@value" : "This property is used to define the equipments that are available in an equipment place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#EquipmentPlace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "equippedWith"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#Equipment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#facilityLocation",
@@ -2947,11 +3140,18 @@
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#facilityType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property is used to link a facility with the types of facilities available in the SKOS concept scheme of types of facilities"
+  }, {
+    "@language" : "en",
+    "@value" : "facility type"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#Facility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid13"
+    "@id" : "_:genid17"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#fareClass",
@@ -2971,7 +3171,7 @@
     "@value" : "fare class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid17"
+    "@id" : "_:genid21"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#facilityType"
@@ -2979,6 +3179,23 @@
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#firstClass",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#fixed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property is used to determine whether an equipment is fixed in a place or not."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#Equipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "fixed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#foodVendingMachine",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
@@ -2990,7 +3207,7 @@
     "@value" : "Characteristic of a Service that is free to use it"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Service"
+    "@id" : "https://w3id.org/transmodel/facilities#LocalService"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3004,16 +3221,16 @@
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#full",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfCongestion" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#hall",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#PassengerArea" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#handrailOneSide",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfHandrail" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#handrailTwoSides",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfHandrail" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#immigrationHall",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#PassengerArea" ],
@@ -3023,10 +3240,10 @@
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#incomingCustoms",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfCheckConstraint" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#informationDesk",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfInformationDesk" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A public transport information piece of Equipment indoors"
@@ -3037,7 +3254,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#informationStand",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfInformationDesk" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A public transport information piece of Equipment outdoors"
@@ -3089,6 +3306,26 @@
     "@value" : "lineName"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/facilities#locatedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "TODO: find a more general property (probably similar to contains/containedIn) and think about whether it should be replaced by this more general property, or at least created as a subProperty of that one."
+  }, {
+    "@language" : "en",
+    "@value" : "This property is used to relate an equipment with the equipment place where it is located"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#Equipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "located in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#EquipmentPlace"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/facilities#longitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -3122,7 +3359,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#narrowEntrance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfAccessFeature" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "narrowEntrance"
@@ -3145,7 +3382,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#noWaiting",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfCongestion" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#nonAccessible",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#AccessibilityLimitation" ]
@@ -3170,11 +3407,28 @@
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/facilities#outOfService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property allows specifying whether the equipment is out of service or not"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#Equipment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "out of service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/facilities#outgoingCustoms",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfCheckConstraint" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#placeAccessStairScalator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfPlaceAccessStair" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairEscalator"
@@ -3185,7 +3439,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#placeAccessStairStair",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfPlaceAccessStair" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStair"
@@ -3196,7 +3450,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#placeAccessStairStaircase",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfPlaceAccessStair" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStaircase"
@@ -3204,6 +3458,23 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "placeAccessStairStaircase"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#position",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property is used to relate an equipment place (a collection of equipments) or a specific place equipment with the different equipment positions that they may have"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid25"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#EquipmentPosition"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#presentAt",
@@ -3244,10 +3515,10 @@
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#queue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfCongestion" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#queueManagement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfAccessFeature" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#riverFlow",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#ValidityTrigger" ],
@@ -3296,7 +3567,7 @@
     "@value" : "shower facility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid21"
+    "@id" : "_:genid28"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#facilityType"
@@ -3364,17 +3635,17 @@
     "@id" : "https://w3id.org/transmodel/facilities#StopPlace"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#PlaceAccessEquipment"
+    "@id" : "https://w3id.org/transmodel/facilities#AccessEquipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#taxRefunds",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfCheckConstraint" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#telematicInformationCenter",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfInformationDesk" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A public transport information piece of Equipment online"
@@ -3385,10 +3656,10 @@
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#ticketCollection",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfCheckConstraint" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#ticketPurchase",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#TypeOfCheckConstraint" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#toilet",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#SanitaryEquipment" ]
@@ -3410,7 +3681,7 @@
     "@value" : "toilet facility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid25"
+    "@id" : "_:genid32"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#facilityType"
@@ -3420,9 +3691,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#ConstraintOfAccess"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#TypeOfAccessFeature"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
@@ -3463,24 +3731,15 @@
     "@language" : "en",
     "@value" : "typeOfCheckConstraint"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#TypeOfCheckConstraint"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#typeOfCongestion",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#TypeOfCheckConstraint"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "typeOfCongestion"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#TypeOfCongestion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
@@ -3493,9 +3752,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "typeOfCycleStorageEquipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#TypeOfCycleStorageEquipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
@@ -3521,37 +3777,14 @@
     "@value" : "Classification of the Entrance Equipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#EntraceEquipment"
+    "@id" : "https://w3id.org/transmodel/facilities#EntranceEquipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "typeOfEntranceEquipment"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#TypeOfEntranceEquipment"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#typeOfEquipment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "TODO: Check whether this should actually be a SKOS codelist instead of something connected to a class TypeOfEquipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Facility"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "typeOfEquipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#TypeOfEquipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#typeOfGenderLimitation",
@@ -3563,9 +3796,6 @@
     "@language" : "en",
     "@value" : "typeOfGenderLimitation"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#TypeOfGenderLimitation"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
   } ]
@@ -3576,14 +3806,11 @@
     "@value" : "types of handrails"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Stairs"
+    "@id" : "https://w3id.org/transmodel/facilities#StairEquipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "typeOfHandrail"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#TypeOfHandrail"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
@@ -3602,9 +3829,6 @@
     "@language" : "en",
     "@value" : "typeOfPassengerInformationDesk"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#TypeOfInformationDesk"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
   } ]
@@ -3612,14 +3836,11 @@
   "@id" : "https://w3id.org/transmodel/facilities#typeOfPlaceAccessStair",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Stairs"
+    "@id" : "https://w3id.org/transmodel/facilities#StairEquipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "typeOfPlaceAccessStairs"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#TypeOfPlaceAccessStair"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
@@ -3627,9 +3848,6 @@
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#typeOfSanitaryEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#TypeOfSanitaryEquipment"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "typeOfSanitaryEquipment"
@@ -3660,14 +3878,11 @@
   "@id" : "https://w3id.org/transmodel/facilities#typeOfWaitingRoom",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#WaitingRoom"
+    "@id" : "https://w3id.org/transmodel/facilities#WaitingRoomEquipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "typeOfWaitingRoomEquipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#TypeOfWaitingRoom"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
@@ -3793,6 +4008,12 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/facilities/EquipmentType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Concept scheme where all the codelists for the types of equipment that are included in the Transmodel ontology are included"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType",
