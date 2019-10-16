@@ -1345,7 +1345,14 @@ This section provides details for each class and property defined by Transmodel 
          <strong>IRI:</strong> https://w3id.org/transmodel/facilities#Equipment</p>
       <div class="comment">
          <span class="markdown">An equipment that may be located on a Vehicle, Site, etc. There are many different types of equipment, each of which may have specific properties (hence a large classification of concepts is provided as subclasses of this class).
-The two main specialisations are Local Service and Installed Equipment. A Local Service is an intangible service that is provided at a site, such as selling tickets, porterage, etc. An Installed Equipment is the fixed equipment that may be installed fixed on a site (Place Equipment - e.g., door, lift, gate, etc.) or a vehicle (Vehicel Equipment), or mixed (e.g., rubish bins, sanitary equipment or ticketing equipments). These are further characterised as Place Equipment (equipment which may be located only on a SITE, such as a barrier, bench, lift) and Passenger Equipment (equipment which may be located on either a Vehicle or a Site, such as a display terminal, ticket validator or WC)</span>
+
+The two main specialisations are Local Service and Installed Equipment.
+
+A Local Service is an intangible service that is provided at a site, such as selling tickets, porterage, etc.
+
+An Installed Equipment is the fixed equipment that may be installed fixed on a site (Place Equipment - e.g., door, lift, gate, etc.) or a vehicle (Vehicle Equipment), or mixed (e.g., rubish bins, sanitary equipment or ticketing equipments).
+
+These are further characterised as Place Equipment (equipment which may be located only on a SITE, such as a barrier, bench, lift) and Passenger Equipment (equipment which may be located on either a Vehicle or a Site, such as a display terminal, ticket validator or WC)</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -1955,10 +1962,10 @@ Provides facilities as LuggageTrolley, FreeToUse, etc.</span>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#duration" title="https://w3id.org/transmodel/facilities#duration">This property relates an Onboard Stay with a duration</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#boardingPermission"
+            <a href="#boardingPermission"
                title="https://w3id.org/transmodel/facilities#boardingPermission">boarding permission</a>
-            <sup class="type-op" title="object property">op</sup>
+            <sup class="type-op" title="object property">op</sup>, <a href="#duration" title="https://w3id.org/transmodel/facilities#duration">duration</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -5267,6 +5274,9 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
             title="https://w3id.org/transmodel/facilities#constraintThroughput">constraintThroughtput</a>
       </li>
       <li>
+         <a href="#duration" title="https://w3id.org/transmodel/facilities#duration">duration</a>
+      </li>
+      <li>
          <a href="#facilityLocation"
             title="https://w3id.org/transmodel/facilities#facilityLocation">facilityLocation</a>
       </li>
@@ -5287,9 +5297,6 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
       <li>
          <a href="#outOfService"
             title="https://w3id.org/transmodel/facilities#outOfService">out of service</a>
-      </li>
-      <li>
-         <a href="#duration" title="https://w3id.org/transmodel/facilities#duration">This property relates an Onboard Stay with a duration</a>
       </li>
       <li>
          <a href="#wheelchairAreas"
@@ -5405,6 +5412,31 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="duration">
+      <h3>duration<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#duration</p>
+      <div class="comment">
+         <span class="markdown">This property relates an Onboard Stay with a duration</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#OnboardStay"
+                  title="https://w3id.org/transmodel/facilities#OnboardStay">Onboard Stay</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#duration">duration</span>
             </dd>
          </dl>
       </div>
@@ -5563,28 +5595,6 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="duration">
-      <h3>This property relates an Onboard Stay with a duration<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#duration</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#OnboardStay"
-                  title="https://w3id.org/transmodel/facilities#OnboardStay">Onboard Stay</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#duration">duration</span>
             </dd>
          </dl>
       </div>

@@ -947,7 +947,7 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#duration">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#OnboardStay"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
-        <rdfs:label xml:lang="en">This property relates an Onboard Stay with a duration</rdfs:label>
+        <rdfs:comment xml:lang="en">This property relates an Onboard Stay with a duration</rdfs:comment>
         <rdfs:label xml:lang="en">duration</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1560,7 +1560,14 @@ In the TransModel UML model and in the Netex implementation this is expressed as
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An equipment that may be located on a Vehicle, Site, etc. There are many different types of equipment, each of which may have specific properties (hence a large classification of concepts is provided as subclasses of this class).
-The two main specialisations are Local Service and Installed Equipment. A Local Service is an intangible service that is provided at a site, such as selling tickets, porterage, etc. An Installed Equipment is the fixed equipment that may be installed fixed on a site (Place Equipment - e.g., door, lift, gate, etc.) or a vehicle (Vehicel Equipment), or mixed (e.g., rubish bins, sanitary equipment or ticketing equipments). These are further characterised as Place Equipment (equipment which may be located only on a SITE, such as a barrier, bench, lift) and Passenger Equipment (equipment which may be located on either a Vehicle or a Site, such as a display terminal, ticket validator or WC)</rdfs:comment>
+
+The two main specialisations are Local Service and Installed Equipment.
+
+A Local Service is an intangible service that is provided at a site, such as selling tickets, porterage, etc.
+
+An Installed Equipment is the fixed equipment that may be installed fixed on a site (Place Equipment - e.g., door, lift, gate, etc.) or a vehicle (Vehicle Equipment), or mixed (e.g., rubish bins, sanitary equipment or ticketing equipments).
+
+These are further characterised as Place Equipment (equipment which may be located only on a SITE, such as a barrier, bench, lift) and Passenger Equipment (equipment which may be located on either a Vehicle or a Site, such as a display terminal, ticket validator or WC)</rdfs:comment>
         <rdfs:label xml:lang="en">Equipment</rdfs:label>
     </owl:Class>
     
