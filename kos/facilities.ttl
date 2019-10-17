@@ -56,10 +56,7 @@ skos:ConceptScheme rdf:type owl:Class .
 #################################################################
 
 ###  https://w3id.org/transmodel/kos/facilities/FacilityType
-<https://w3id.org/transmodel/kos/facilities/FacilityType> rdf:type owl:NamedIndividual ,
-                                                                   skos:ConceptScheme ;
-                                                          dc:title "Codelist of types of facilities"@en ;
-                                                          skos:hasTopConcept <https://w3id.org/transmodel/kos/facilities/FacilityType/AccessFacilityType> ,
+<https://w3id.org/transmodel/kos/facilities/FacilityType> rdf:type owl:NamedIndividual , skos:ConceptScheme ; dc:title "Codelist of types of facilities"@en ; skos:hasTopConcept <https://w3id.org/transmodel/kos/facilities/FacilityType/AccessFacilityType> ,
                                                                              <https://w3id.org/transmodel/kos/facilities/FacilityType/AccessibilityInfoFacilityType> ,
                                                                              <https://w3id.org/transmodel/kos/facilities/FacilityType/AccessibilityToolType> ,
                                                                              <https://w3id.org/transmodel/kos/facilities/FacilityType/AccommodationAccessType> ,
@@ -119,10 +116,10 @@ skos:ConceptScheme rdf:type owl:Class .
 
 ###  https://w3id.org/transmodel/kos/facilities/FacilityType/AccessibilityInfoFacilityType
 <https://w3id.org/transmodel/kos/facilities/FacilityType/AccessibilityInfoFacilityType> rdf:type owl:NamedIndividual ,
-                                                                                                 skos:Concept ;
-                                                                                        rdfs:comment "Allowed values for Accessibility Info."@en ;
-                                                                                        skos:inScheme <https://w3id.org/transmodel/kos/facilities/FacilityType> ;
-                                                                                        skos:narrower <https://w3id.org/transmodel/kos/facilities/FacilityType/AccessibilityInfoFacilityType/audioForHearingImpaired> ,
+        skos:Concept ;
+    rdfs:comment "Allowed values for Accessibility Info."@en ;
+    skos:inScheme <https://w3id.org/transmodel/kos/facilities/FacilityType> ;
+    skos:narrower <https://w3id.org/transmodel/kos/facilities/FacilityType/AccessibilityInfoFacilityType/audioForHearingImpaired> ,
                                                                                                       <https://w3id.org/transmodel/kos/facilities/FacilityType/AccessibilityInfoFacilityType/audioInformation> ,
                                                                                                       <https://w3id.org/transmodel/kos/facilities/FacilityType/AccessibilityInfoFacilityType/displaysForVisuallyImpaired> ,
                                                                                                       <https://w3id.org/transmodel/kos/facilities/FacilityType/AccessibilityInfoFacilityType/largePrintTimetables> ,
