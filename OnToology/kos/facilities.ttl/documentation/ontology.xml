@@ -433,6 +433,28 @@
     
 
 
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">Allowd values for Fare Class</rdfs:comment>
+        <rdfs:comment xml:lang="en">FareClassEnum as detailed in Figure 290 Common Facility Value, Physical Model (UML) NeTEx</rdfs:comment>
+        <skos:inScheme rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/any"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/businessClass"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/economyClass"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/firstClass"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/preferente"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/premiumClass"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/secondClass"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/standardClass"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/thirdClass"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/unknown"/>
+    </NamedIndividual>
+    
+
+
     <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/GenderType -->
 
 
@@ -774,6 +796,27 @@
     
 
 
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">Allowed values for Sanitary facility</rdfs:comment>
+        <skos:inScheme rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/babyChange"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/none"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/other"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/shoeShiner"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/shower"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/toilet"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/washingAndChange"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/wheelchairAccessToilet"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/wheelchairBabyChange"/>
+        <skos:notation xml:lang="en">SanitaryFacilityType</skos:notation>
+    </NamedIndividual>
+    
+
+
     <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/ScopeOfTicketType -->
 
 
@@ -818,6 +861,27 @@
         <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingFacilityType/ticketOnDemandMachines"/>
         <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingFacilityType/unknown"/>
         <skos:notation>TicketingFacilityEnumeration</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">Allowd values for Ticketing Service Facilities</rdfs:comment>
+        <skos:inScheme rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/all"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/cardTopUp"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/collection"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/exchange"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/other"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/purchase"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/refund"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/renewal"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/reservations"/>
+        <skos:notation xml:lang="en">TicketingServiceFacilityType</skos:notation>
     </NamedIndividual>
     
 
@@ -2105,6 +2169,115 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FamilyFacilityType"/>
         <skos:notation>servicesForChildren</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/any -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/any">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType"/>
+        <skos:notation xml:lang="en">any</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/businessClass -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/businessClass">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/economyClass -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/economyClass">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/firstClass -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/firstClass">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/preferente -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/preferente">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/premiumClass -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/premiumClass">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/secondClass -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/secondClass">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/standardClass -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/standardClass">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/thirdClass -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/thirdClass">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/turista -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/turista"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/unknown -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/unknown">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType"/>
+        <skos:notation xml:lang="en">unknown</skos:notation>
     </NamedIndividual>
     
 
@@ -3494,6 +3667,105 @@
     
 
 
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/babyChange -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/babyChange">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType"/>
+        <skos:notation xml:lang="en">babyChange</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/none -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/none">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType"/>
+        <skos:notation xml:lang="en">none</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/other -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/other">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType"/>
+        <skos:notation xml:lang="en">other</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/shoeShiner -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/shoeShiner">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType"/>
+        <skos:notation xml:lang="en">shoeShiner</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/shower -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/shower">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType"/>
+        <skos:notation xml:lang="en">shower</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/toilet -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/toilet">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType"/>
+        <skos:notation xml:lang="en">toilet</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/washingAndChange -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/washingAndChange">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType"/>
+        <skos:notation xml:lang="en">washingAndChange</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/wheelchairAccessToilet -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/wheelchairAccessToilet">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType"/>
+        <skos:notation xml:lang="en">wheelchairAccessToilet</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/wheelchairBabyChange -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/wheelchairBabyChange">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType"/>
+        <skos:notation xml:lang="en">wheelchairBabyChange</skos:notation>
+    </NamedIndividual>
+    
+
+
     <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/ScopeOfTicketType/internationalTicket -->
 
 
@@ -3622,6 +3894,116 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingFacilityType"/>
         <skos:notation>unknown</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/all -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/all">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType"/>
+        <skos:notation xml:lang="en">all</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/cardTopUp -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/cardTopUp">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType"/>
+        <skos:notation xml:lang="en">cardTopUp</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/collection -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/collection">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType"/>
+        <skos:notation xml:lang="en">collection</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/excessFares -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/excessFares">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType"/>
+        <skos:notation xml:lang="en">excessFares</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/exchange -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/exchange">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType"/>
+        <skos:notation xml:lang="en">exchange</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/other -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/other">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType"/>
+        <skos:notation xml:lang="en">other</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/purchase -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/purchase">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType"/>
+        <skos:notation xml:lang="en">purchase</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/refund -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/refund">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType"/>
+        <skos:notation xml:lang="en">refund</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/renewal -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/renewal">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType"/>
+        <skos:notation xml:lang="en">renewal</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/reservations -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/reservations">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType"/>
+        <skos:notation xml:lang="en">reservations</skos:notation>
     </NamedIndividual>
     
 

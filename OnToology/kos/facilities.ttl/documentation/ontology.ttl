@@ -321,6 +321,24 @@
                                                                              <http://www.w3.org/2004/02/skos/core#notation> "FamilyFacilityEnumeration" .
 
 
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType
+<https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                        rdfs:comment "Allowd values for Fare Class"@en ,
+                                                                                     "FareClassEnum as detailed in Figure 290 Common Facility Value, Physical Model (UML) NeTEx"@en ;
+                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/facilities/FacilityType> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/any> ,
+                                                                                                                       <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/businessClass> ,
+                                                                                                                       <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/economyClass> ,
+                                                                                                                       <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/firstClass> ,
+                                                                                                                       <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/preferente> ,
+                                                                                                                       <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/premiumClass> ,
+                                                                                                                       <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/secondClass> ,
+                                                                                                                       <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/standardClass> ,
+                                                                                                                       <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/thirdClass> ,
+                                                                                                                       <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/unknown> .
+
+
 ###  https://w3id.org/transmodel/kos/facilities/FacilityType/GenderType
 <https://w3id.org/transmodel/kos/facilities/FacilityType/GenderType> rdf:type owl:NamedIndividual ,
                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -590,6 +608,23 @@
                                                                              <http://www.w3.org/2004/02/skos/core#notation> "SafetyFacilityEnumeration" .
 
 
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType
+<https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                               rdfs:comment "Allowed values for Sanitary facility"@en ;
+                                                                               <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/facilities/FacilityType> ;
+                                                                               <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/babyChange> ,
+                                                                                                                              <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/none> ,
+                                                                                                                              <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/other> ,
+                                                                                                                              <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/shoeShiner> ,
+                                                                                                                              <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/shower> ,
+                                                                                                                              <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/toilet> ,
+                                                                                                                              <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/washingAndChange> ,
+                                                                                                                              <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/wheelchairAccessToilet> ,
+                                                                                                                              <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/wheelchairBabyChange> ;
+                                                                               <http://www.w3.org/2004/02/skos/core#notation> "SanitaryFacilityType"@en .
+
+
 ###  https://w3id.org/transmodel/kos/facilities/FacilityType/ScopeOfTicketType
 <https://w3id.org/transmodel/kos/facilities/FacilityType/ScopeOfTicketType> rdf:type owl:NamedIndividual ,
                                                                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -624,6 +659,23 @@
                                                                                                                                <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingFacilityType/ticketOnDemandMachines> ,
                                                                                                                                <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingFacilityType/unknown> ;
                                                                                 <http://www.w3.org/2004/02/skos/core#notation> "TicketingFacilityEnumeration" .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType
+<https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                       rdfs:comment "Allowd values for Ticketing Service Facilities"@en ;
+                                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/facilities/FacilityType> ;
+                                                                                       <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/all> ,
+                                                                                                                                      <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/cardTopUp> ,
+                                                                                                                                      <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/collection> ,
+                                                                                                                                      <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/exchange> ,
+                                                                                                                                      <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/other> ,
+                                                                                                                                      <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/purchase> ,
+                                                                                                                                      <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/refund> ,
+                                                                                                                                      <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/renewal> ,
+                                                                                                                                      <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/reservations> ;
+                                                                                       <http://www.w3.org/2004/02/skos/core#notation> "TicketingServiceFacilityType"@en .
 
 
 ###  https://w3id.org/transmodel/kos/facilities/FacilityType/VehicleLoadingType
@@ -1451,6 +1503,72 @@
                                                                                                           <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                                                  <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/FamilyFacilityType> ;
                                                                                                  <http://www.w3.org/2004/02/skos/core#notation> "servicesForChildren" .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/any
+<https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/any> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                            <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType> ;
+                                                                            <http://www.w3.org/2004/02/skos/core#notation> "any"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/businessClass
+<https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/businessClass> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                      <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType> .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/economyClass
+<https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/economyClass> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                     <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType> .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/firstClass
+<https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/firstClass> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                   <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType> .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/preferente
+<https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/preferente> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                   <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType> .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/premiumClass
+<https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/premiumClass> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                     <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType> .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/secondClass
+<https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/secondClass> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                    <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType> .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/standardClass
+<https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/standardClass> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                      <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType> .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/thirdClass
+<https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/thirdClass> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                   <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType> .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/turista
+<https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/turista> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/unknown
+<https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType/unknown> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/FareClassType> ;
+                                                                                <http://www.w3.org/2004/02/skos/core#notation> "unknown"@en .
 
 
 ###  https://w3id.org/transmodel/kos/facilities/FacilityType/GenderType/female
@@ -2338,6 +2456,69 @@
                                                                                      <http://www.w3.org/2004/02/skos/core#notation> "staffed" .
 
 
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/babyChange
+<https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/babyChange> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                          <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType> ;
+                                                                                          <http://www.w3.org/2004/02/skos/core#notation> "babyChange"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/none
+<https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/none> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                    <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType> ;
+                                                                                    <http://www.w3.org/2004/02/skos/core#notation> "none"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/other
+<https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/other> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                     <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType> ;
+                                                                                     <http://www.w3.org/2004/02/skos/core#notation> "other"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/shoeShiner
+<https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/shoeShiner> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                          <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType> ;
+                                                                                          <http://www.w3.org/2004/02/skos/core#notation> "shoeShiner"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/shower
+<https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/shower> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                      <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType> ;
+                                                                                      <http://www.w3.org/2004/02/skos/core#notation> "shower"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/toilet
+<https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/toilet> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                      <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType> ;
+                                                                                      <http://www.w3.org/2004/02/skos/core#notation> "toilet"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/washingAndChange
+<https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/washingAndChange> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                                <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType> ;
+                                                                                                <http://www.w3.org/2004/02/skos/core#notation> "washingAndChange"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/wheelchairAccessToilet
+<https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/wheelchairAccessToilet> rdf:type owl:NamedIndividual ,
+                                                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                                      <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType> ;
+                                                                                                      <http://www.w3.org/2004/02/skos/core#notation> "wheelchairAccessToilet"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/wheelchairBabyChange
+<https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType/wheelchairBabyChange> rdf:type owl:NamedIndividual ,
+                                                                                                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                                    <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/SanitaryFacilityType> ;
+                                                                                                    <http://www.w3.org/2004/02/skos/core#notation> "wheelchairBabyChange"@en .
+
+
 ###  https://w3id.org/transmodel/kos/facilities/FacilityType/ScopeOfTicketType/internationalTicket
 <https://w3id.org/transmodel/kos/facilities/FacilityType/ScopeOfTicketType/internationalTicket> rdf:type owl:NamedIndividual ,
                                                                                                          <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -2420,6 +2601,76 @@
                                                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                                         <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingFacilityType> ;
                                                                                         <http://www.w3.org/2004/02/skos/core#notation> "unknown" .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/all
+<https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/all> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                           <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType> ;
+                                                                                           <http://www.w3.org/2004/02/skos/core#notation> "all"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/cardTopUp
+<https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/cardTopUp> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                                 <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType> ;
+                                                                                                 <http://www.w3.org/2004/02/skos/core#notation> "cardTopUp"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/collection
+<https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/collection> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                                  <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType> ;
+                                                                                                  <http://www.w3.org/2004/02/skos/core#notation> "collection"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/excessFares
+<https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/excessFares> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                                   <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType> ;
+                                                                                                   <http://www.w3.org/2004/02/skos/core#notation> "excessFares"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/exchange
+<https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/exchange> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                                <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType> ;
+                                                                                                <http://www.w3.org/2004/02/skos/core#notation> "exchange"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/other
+<https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/other> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                             <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType> ;
+                                                                                             <http://www.w3.org/2004/02/skos/core#notation> "other"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/purchase
+<https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/purchase> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                                <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType> ;
+                                                                                                <http://www.w3.org/2004/02/skos/core#notation> "purchase"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/refund
+<https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/refund> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                              <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType> ;
+                                                                                              <http://www.w3.org/2004/02/skos/core#notation> "refund"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/renewal
+<https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/renewal> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                               <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType> ;
+                                                                                               <http://www.w3.org/2004/02/skos/core#notation> "renewal"@en .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/reservations
+<https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType/reservations> rdf:type owl:NamedIndividual ,
+                                                                                                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                                    <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/facilities/FacilityType/TicketingServiceFacilityType> ;
+                                                                                                    <http://www.w3.org/2004/02/skos/core#notation> "reservations"@en .
 
 
 ###  https://w3id.org/transmodel/kos/facilities/FacilityType/VehicleLoadingType/additionaUnloading
