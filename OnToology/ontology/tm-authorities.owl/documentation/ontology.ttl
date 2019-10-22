@@ -7,20 +7,56 @@
 @base <https://w3id.org/transmodel/authorities#> .
 
 <https://w3id.org/transmodel/authorities#> rdf:type owl:Ontology ;
-                                            owl:versionIRI <https://w3id.org/transmodel/authorities/1.0> ;
-                                            rdfs:comment "Module of the Transmodel Ontology focused on Authorities"@en ;
-                                            rdfs:label "TransmodelOntologyAuthorities"@en ;
+                                            owl:versionIRI <https://w3id.org/transmodel/authorities/0.2> ;
+                                            <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> ;
+                                            <http://purl.org/dc/elements/1.1/creator> "Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                      "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-10-06" ;
+                                            <http://purl.org/dc/elements/1.1/description> "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en ;
+                                            <http://purl.org/dc/elements/1.1/identifier> "https://w3id.org/transmodel/authorities" ;
+                                            <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)" ;
+                                            <http://purl.org/dc/elements/1.1/title> "Transmodel Ontology - Authorities"@en ;
+                                            <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/transmodel/facilities#> ;
+                                            rdfs:comment "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en ;
+                                            rdfs:label "Transmodel Ontology - Authorities"@en ;
                                             rdfs:seeAlso "https://github.com/oeg-upm/transmodel-ontology"@en ;
-                                            :author _:genid1 ,
-                                                    ""@en ;
-                                            :description "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en .
-
-_:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
-          :name "Adolfo Anton-Bravo"@en .
+                                            owl:versionInfo "This is the initial version of the module on Authorities, after considering the UML models and XSD descriptions of Transmodel and NeTEx"@en .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
 
 ###  https://w3id.org/transmodel/authorities#author
 :author rdf:type owl:AnnotationProperty .
@@ -31,7 +67,9 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
 
 
 ###  https://w3id.org/transmodel/authorities#description
-:description rdf:type owl:AnnotationProperty .
+:description rdf:type owl:AnnotationProperty ;
+             rdfs:range rdfs:Literal ;
+             rdfs:domain :MeetingPointService .
 
 
 ###  https://w3id.org/transmodel/authorities#mbox
@@ -39,7 +77,8 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
 
 
 ###  https://w3id.org/transmodel/authorities#name
-:name rdf:type owl:AnnotationProperty .
+:name rdf:type owl:AnnotationProperty ;
+      rdfs:range rdfs:Literal .
 
 
 #################################################################
@@ -112,6 +151,14 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
 
 ###  https://w3id.org/transmodel/authorities#AdministrativeZone
 :AdministrativeZone rdf:type owl:Class ;
@@ -283,12 +330,6 @@ A TransitAgency in GTFS"""@en ;
       rdfs:label "Zone"@en .
 
 
-###  https://w3id.org/transmodel/facilities#Vehicle
-<https://w3id.org/transmodel/facilities#Vehicle> rdf:type owl:Class ;
-                                                 rdfs:comment "A PublicTransportVehicle used for carrying Passenger"@en ;
-                                                 rdfs:label "Vehicle"@en .
-
-
 #################################################################
 #    Individuals
 #################################################################
@@ -350,16 +391,13 @@ A TransitAgency in GTFS"""@en ;
                  :ServicedOrganisation .
 
 
+###  https://w3id.org/transmodel/kos/authorities/AuthorityType
+<https://w3id.org/transmodel/kos/authorities/AuthorityType> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                            rdfs:comment "Concept scheme where all the codelists for the types of authorities that are included in the Transmodel ontology"@en .
+
+
 _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
          :name "Adolfo Anton-Bravo"@en .
-
-_:genid2 :mbox "adolfo.anton.bravo@upm.es"@en ;
-          :name "Adolfo Anton-Bravo"@en .
-
-_:genid3 :mbox "adolfo.anton.bravo@upm.es"@en ;
-          :name "Adolfo Anton-Bravo"@en .
-
-_:genid4 :mbox "adolfo.anton.bravo@upm.es"@en ;
-          :name "Adolfo Anton-Bravo"@en .
 
 ###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

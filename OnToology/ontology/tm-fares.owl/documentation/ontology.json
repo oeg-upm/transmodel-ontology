@@ -1,6 +1,90 @@
 [ {
+  "@id" : "_:genid1",
+  "https://w3id.org/transmodel/fares#mbox" : [ {
+    "@language" : "en",
+    "@value" : "adolfo.anton.bravo@upm.es"
+  } ],
+  "https://w3id.org/transmodel/fares#name" : [ {
+    "@language" : "en",
+    "@value" : "Adolfo Anton-Bravo"
+  } ]
+}, {
+  "@id" : "http://creativecommons.org/ns#license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/rights",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "https://w3id.org/transmodel/fares#",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://creativecommons.org/ns#license" : [ {
+    "@id" : "http://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)"
+  }, {
+    "@value" : "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2019-10-21"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "Module of the Transmodel Ontology focused on fares. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
+  } ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "https://w3id.org/transmodel/fares"
+  } ],
+  "http://purl.org/dc/elements/1.1/rights" : [ {
+    "@value" : "Creative Commons Attribution 4.0 International (CC BY 4.0)"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@language" : "en",
+    "@value" : "Transmodel Ontology - Fares"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Transmodel Ontology - Fares"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "https://github.com/oeg-upm/transmodel-ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://w3id.org/transmodel/fares/0.2"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@language" : "en",
+    "@value" : "This is the initial version of the module on Fares, after considering the UML models and XSD descriptions of Transmodel and NeTEx"
+  } ]
 }, {
   "@id" : "https://w3id.org/transmodel/fares#BookingArrangements",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -24,6 +108,30 @@
     "@value" : "ClassOfUse"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/fares#author",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/fares#creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/fares#description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/fares#MeetingPointService"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/fares#mbox",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/fares#name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#FlexibleLine",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -43,5 +151,12 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Line"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/FareType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Concept scheme where all the codelists for the types of fares that are included in the Transmodel ontology"
   } ]
 } ]

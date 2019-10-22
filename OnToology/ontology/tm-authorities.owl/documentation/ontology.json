@@ -9,62 +9,84 @@
     "@value" : "Adolfo Anton-Bravo"
   } ]
 }, {
-  "@id" : "_:genid2",
-  "https://w3id.org/transmodel/authorities#mbox" : [ {
-    "@language" : "en",
-    "@value" : "adolfo.anton.bravo@upm.es"
-  } ],
-  "https://w3id.org/transmodel/authorities#name" : [ {
-    "@language" : "en",
-    "@value" : "Adolfo Anton-Bravo"
-  } ]
+  "@id" : "http://creativecommons.org/ns#license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "_:genid3",
-  "https://w3id.org/transmodel/authorities#mbox" : [ {
-    "@language" : "en",
-    "@value" : "adolfo.anton.bravo@upm.es"
-  } ],
-  "https://w3id.org/transmodel/authorities#name" : [ {
-    "@language" : "en",
-    "@value" : "Adolfo Anton-Bravo"
-  } ]
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "_:genid4",
-  "https://w3id.org/transmodel/authorities#mbox" : [ {
-    "@language" : "en",
-    "@value" : "adolfo.anton.bravo@upm.es"
-  } ],
-  "https://w3id.org/transmodel/authorities#name" : [ {
-    "@language" : "en",
-    "@value" : "Adolfo Anton-Bravo"
-  } ]
+  "@id" : "http://purl.org/dc/elements/1.1/date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/rights",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/transmodel/authorities#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://creativecommons.org/ns#license" : [ {
+    "@id" : "http://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)"
+  }, {
+    "@value" : "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2019-10-06"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
+  } ],
+  "http://purl.org/dc/elements/1.1/identifier" : [ {
+    "@value" : "https://w3id.org/transmodel/authorities"
+  } ],
+  "http://purl.org/dc/elements/1.1/rights" : [ {
+    "@value" : "Creative Commons Attribution 4.0 International (CC BY 4.0)"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@language" : "en",
+    "@value" : "Transmodel Ontology - Authorities"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Module of the Transmodel Ontology focused on Authorities"
+    "@value" : "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "TransmodelOntologyAuthorities"
+    "@value" : "Transmodel Ontology - Authorities"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@language" : "en",
     "@value" : "https://github.com/oeg-upm/transmodel-ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities/1.0"
+    "@id" : "https://w3id.org/transmodel/authorities/0.2"
   } ],
-  "https://w3id.org/transmodel/authorities#author" : [ {
-    "@id" : "_:genid1"
-  }, {
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : ""
-  } ],
-  "https://w3id.org/transmodel/authorities#description" : [ {
-    "@language" : "en",
-    "@value" : "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
+    "@value" : "This is the initial version of the module on Authorities, after considering the UML models and XSD descriptions of Transmodel and NeTEx"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/authorities#AdministrativeZone",
@@ -430,7 +452,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://w3id.org/transmodel/authorities#description",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#MeetingPointService"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
 }, {
   "@id" : "https://w3id.org/transmodel/authorities#hasAResponsability",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -479,7 +507,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://w3id.org/transmodel/authorities#name",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
 }, {
   "@id" : "https://w3id.org/transmodel/authorities#operatesInAdministrativeZone",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -541,14 +572,10 @@
     "@id" : "https://w3id.org/transmodel/authorities#ServiceArea"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/facilities#Vehicle",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://w3id.org/transmodel/kos/authorities/AuthorityType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A PublicTransportVehicle used for carrying Passenger"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Vehicle"
+    "@value" : "Concept scheme where all the codelists for the types of authorities that are included in the Transmodel ontology"
   } ]
 } ]

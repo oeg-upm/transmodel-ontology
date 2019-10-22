@@ -7,19 +7,56 @@
 @base <https://w3id.org/transmodel/journeys#> .
 
 <https://w3id.org/transmodel/journeys#> rdf:type owl:Ontology ;
-                                         owl:versionIRI <https://w3id.org/transmodel/journeys/1.0> ;
-                                         rdfs:comment "Module of the Transmodel Ontology focused on Journeys"@en ;
-                                         rdfs:label "TransmodelOntologyJourneys"@en ;
+                                         owl:versionIRI <https://w3id.org/transmodel/journeys/0.2> ;
+                                         <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> ;
+                                         <http://purl.org/dc/elements/1.1/creator> "Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
+                                                                                   "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
+                                         <http://purl.org/dc/elements/1.1/date> "2019-10-22" ;
+                                         <http://purl.org/dc/elements/1.1/description> "Module of the Transmodel Ontology focused on journeys. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en ;
+                                         <http://purl.org/dc/elements/1.1/identifier> "https://w3id.org/transmodel/journies" ;
+                                         <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)" ;
+                                         <http://purl.org/dc/elements/1.1/title> "Transmodel Ontology - Journeys"@en ;
+                                         <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/transmodel/facilities#> ;
+                                         rdfs:comment "Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en ;
+                                         rdfs:label "Transmodel Ontology - Journeys"@en ;
                                          rdfs:seeAlso "https://github.com/oeg-upm/transmodel-ontology"@en ;
-                                         :author _:genid1 ;
-                                         :description "Module of the Transmodel Ontology focused on journeys. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en .
-
-_:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
-          :name "Adolfo Anton-Bravo"@en .
+                                         owl:versionInfo "This is the initial version of the module on Journeys, after considering the UML models and XSD descriptions of Transmodel and NeTEx"@en .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
 
 ###  https://w3id.org/transmodel/journeys#author
 :author rdf:type owl:AnnotationProperty .
@@ -30,7 +67,9 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
 
 
 ###  https://w3id.org/transmodel/journeys#description
-:description rdf:type owl:AnnotationProperty .
+:description rdf:type owl:AnnotationProperty ;
+             rdfs:range rdfs:Literal ;
+             rdfs:domain :MeetingPointService .
 
 
 ###  https://w3id.org/transmodel/journeys#mbox
@@ -38,7 +77,8 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
 
 
 ###  https://w3id.org/transmodel/journeys#name
-:name rdf:type owl:AnnotationProperty .
+:name rdf:type owl:AnnotationProperty ;
+      rdfs:range rdfs:Literal .
 
 
 #################################################################
@@ -486,6 +526,10 @@ _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
 
 ###  https://w3id.org/transmodel/journeys#Access
 :Access rdf:type owl:Class ;
@@ -1179,38 +1223,14 @@ A vehicle stopping place may be served by one or more quays."""@en ;
                     rdfs:label "VirtualLineService"@en .
 
 
+###  https://w3id.org/transmodel/kos/journeys/JourneyType
+<https://w3id.org/transmodel/kos/journeys/JourneyType> rdf:type owl:NamedIndividual ,
+                                                                <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                       rdfs:comment "Concept scheme where all the codelists for the types of journeys that are included in the Transmodel ontology"@en .
+
+
 _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
          :name "Adolfo Anton-Bravo"@en .
-
-_:genid2 :mbox "adolfo.anton.bravo@upm.es"@en ;
-          :name "Adolfo Anton-Bravo"@en .
-
-_:genid3 :mbox "adolfo.anton.bravo@upm.es"@en ;
-          :name "Adolfo Anton-Bravo"@en .
-
-_:genid4 :mbox "adolfo.anton.bravo@upm.es"@en ;
-          :name "Adolfo Anton-Bravo"@en .
-
-_:genid5 :mbox "adolfo.anton.bravo@upm.es"@en ;
-          :name "Adolfo Anton-Bravo"@en .
-
-_:genid6 :mbox "adolfo.anton.bravo@upm.es"@en ;
-          :name "Adolfo Anton-Bravo"@en .
-
-_:genid7 :mbox "adolfo.anton.bravo@upm.es"@en ;
-          :name "Adolfo Anton-Bravo"@en .
-
-_:genid8 :mbox "adolfo.anton.bravo@upm.es"@en ;
-          :name "Adolfo Anton-Bravo"@en .
-
-_:genid9 :mbox "adolfo.anton.bravo@upm.es"@en ;
-          :name "Adolfo Anton-Bravo"@en .
-
-_:genid10 :mbox "adolfo.anton.bravo@upm.es"@en ;
-           :name "Adolfo Anton-Bravo"@en .
-
-_:genid11 :mbox "adolfo.anton.bravo@upm.es"@en ;
-           :name "Adolfo Anton-Bravo"@en .
 
 #################################################################
 #    Annotations

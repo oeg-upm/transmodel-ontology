@@ -1,13 +1,18 @@
 <https://w3id.org/transmodel/authorities#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/transmodel/authorities#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/transmodel/authorities/1.0> .
-<https://w3id.org/transmodel/authorities#> <http://www.w3.org/2000/01/rdf-schema#comment> "Module of the Transmodel Ontology focused on Authorities"@en .
-<https://w3id.org/transmodel/authorities#> <http://www.w3.org/2000/01/rdf-schema#label> "TransmodelOntologyAuthorities"@en .
+<https://w3id.org/transmodel/authorities#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/transmodel/authorities/0.2> .
+<https://w3id.org/transmodel/authorities#> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/transmodel/authorities#> <http://purl.org/dc/elements/1.1/creator> "Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<https://w3id.org/transmodel/authorities#> <http://purl.org/dc/elements/1.1/creator> "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<https://w3id.org/transmodel/authorities#> <http://purl.org/dc/elements/1.1/date> "2019-10-06" .
+<https://w3id.org/transmodel/authorities#> <http://purl.org/dc/elements/1.1/description> "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en .
+<https://w3id.org/transmodel/authorities#> <http://purl.org/dc/elements/1.1/identifier> "https://w3id.org/transmodel/authorities" .
+<https://w3id.org/transmodel/authorities#> <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)" .
+<https://w3id.org/transmodel/authorities#> <http://purl.org/dc/elements/1.1/title> "Transmodel Ontology - Authorities"@en .
+<https://w3id.org/transmodel/authorities#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/transmodel/facilities#> .
+<https://w3id.org/transmodel/authorities#> <http://www.w3.org/2000/01/rdf-schema#comment> "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en .
+<https://w3id.org/transmodel/authorities#> <http://www.w3.org/2000/01/rdf-schema#label> "Transmodel Ontology - Authorities"@en .
 <https://w3id.org/transmodel/authorities#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://github.com/oeg-upm/transmodel-ontology"@en .
-<https://w3id.org/transmodel/authorities#> <https://w3id.org/transmodel/authorities#author> _:genid1 .
-_:genid1 <https://w3id.org/transmodel/authorities#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid1 <https://w3id.org/transmodel/authorities#name> "Adolfo Anton-Bravo"@en .
-<https://w3id.org/transmodel/authorities#> <https://w3id.org/transmodel/authorities#author> ""@en .
-<https://w3id.org/transmodel/authorities#> <https://w3id.org/transmodel/authorities#description> "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en .
+<https://w3id.org/transmodel/authorities#> <http://www.w3.org/2002/07/owl#versionInfo> "This is the initial version of the module on Authorities, after considering the UML models and XSD descriptions of Transmodel and NeTEx"@en .
 # 
 # 
 # #################################################################
@@ -17,6 +22,30 @@ _:genid1 <https://w3id.org/transmodel/authorities#name> "Adolfo Anton-Bravo"@en 
 # #################################################################
 # 
 # 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # https://w3id.org/transmodel/authorities#author
 <https://w3id.org/transmodel/authorities#author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -25,12 +54,15 @@ _:genid1 <https://w3id.org/transmodel/authorities#name> "Adolfo Anton-Bravo"@en 
 # 
 # https://w3id.org/transmodel/authorities#description
 <https://w3id.org/transmodel/authorities#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/transmodel/authorities#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/transmodel/authorities#description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/authorities#MeetingPointService> .
 # 
 # https://w3id.org/transmodel/authorities#mbox
 <https://w3id.org/transmodel/authorities#mbox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # https://w3id.org/transmodel/authorities#name
 <https://w3id.org/transmodel/authorities#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/transmodel/authorities#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 # 
 # 
 # 
@@ -109,6 +141,12 @@ _:genid1 <https://w3id.org/transmodel/authorities#name> "Adolfo Anton-Bravo"@en 
 # #
 # #################################################################
 # 
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/transmodel/authorities#AdministrativeZone
 <https://w3id.org/transmodel/authorities#AdministrativeZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -248,11 +286,6 @@ _:genid1 <https://w3id.org/transmodel/authorities#name> "Adolfo Anton-Bravo"@en 
 <https://w3id.org/transmodel/authorities#Zone> <http://www.w3.org/2000/01/rdf-schema#comment> "A two dimmensional Place within the ServiceArea of an Operator or ServicedOperator. It can be:\n\n- AdministrativeZone\n- TariffZone\n- AccessZone\n- ..."@en .
 <https://w3id.org/transmodel/authorities#Zone> <http://www.w3.org/2000/01/rdf-schema#label> "Zone"@en .
 # 
-# https://w3id.org/transmodel/facilities#Vehicle
-<https://w3id.org/transmodel/facilities#Vehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/facilities#Vehicle> <http://www.w3.org/2000/01/rdf-schema#comment> "A PublicTransportVehicle used for carrying Passenger"@en .
-<https://w3id.org/transmodel/facilities#Vehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle"@en .
-# 
 # 
 # 
 # #################################################################
@@ -308,10 +341,11 @@ _:genid1 <https://w3id.org/transmodel/authorities#name> "Adolfo Anton-Bravo"@en 
 <https://w3id.org/transmodel/authorities#Public> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#Operator> .
 <https://w3id.org/transmodel/authorities#Public> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/authorities#ServicedOrganisation> .
 # 
-_:genid2 <https://w3id.org/transmodel/authorities#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid2 <https://w3id.org/transmodel/authorities#name> "Adolfo Anton-Bravo"@en .
-_:genid3 <https://w3id.org/transmodel/authorities#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid3 <https://w3id.org/transmodel/authorities#name> "Adolfo Anton-Bravo"@en .
-_:genid4 <https://w3id.org/transmodel/authorities#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid4 <https://w3id.org/transmodel/authorities#name> "Adolfo Anton-Bravo"@en .
+# https://w3id.org/transmodel/kos/authorities/AuthorityType
+<https://w3id.org/transmodel/kos/authorities/AuthorityType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/authorities/AuthorityType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/transmodel/kos/authorities/AuthorityType> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme where all the codelists for the types of authorities that are included in the Transmodel ontology"@en .
+# 
+_:genid1 <https://w3id.org/transmodel/authorities#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid1 <https://w3id.org/transmodel/authorities#name> "Adolfo Anton-Bravo"@en .
 # Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

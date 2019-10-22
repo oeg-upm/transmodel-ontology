@@ -1,0 +1,10 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "https://w3id.org/transmodel/common#ServiceJourneyPattern" "https://w3id.org/transmodel/common#Point" "https://w3id.org/transmodel/common#TimingPoint" "https://w3id.org/transmodel/common#JourneyPattern" "https://w3id.org/transmodel/common#ActivationPoint" "https://w3id.org/transmodel/common#ScheduledStopPoint" ; /*classes style*/
+	"https://w3id.org/transmodel/common#ScheduledStopPoint" -> "https://w3id.org/transmodel/common#Point" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/transmodel/common#ActivationPoint" -> "https://w3id.org/transmodel/common#Point" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/transmodel/common#ServiceJourneyPattern" -> "https://w3id.org/transmodel/common#JourneyPattern" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/transmodel/common#TimingPoint" -> "https://w3id.org/transmodel/common#Point" [ label = "rdfs:subClassOf" ];
+
+}
