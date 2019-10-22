@@ -1,0 +1,735 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+skos:broader rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+skos:hasTopConcept rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+skos:narrower rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+skos:ConceptScheme rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+### https://w3id.org/transmodel/kos/fares/FareType
+<https://w3id.org/transmodel/kos/fares/FareType> rdf:type owl:NamedIndividual , skos:ConceptScheme ; dc:title "Codelist
+    of types of fares"@en ; skos:hasTopConcept
+        <https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/TicketType> ;
+	skos:notation "FaresEnumeration" .
+    
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType
+<https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType>
+    rdf:type owl:NamedIndividual , skos:Concept ; rdfs:comment "Allowed values for Booking Access."@en ;
+    skos:inScheme
+    <https://w3id.org/transmodel/kos/fares/FaresType> ;
+    skos:narrower
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType/authorisedPublic> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType/other> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType/public> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType/staff> ;
+    skos:notation "BookingAccessEnumeration" .
+    
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType
+<https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType>
+    rdf:type owl:NamedIndividual , skos:Concept ;
+    rdfs:comment "Allowed values for Booking Method."@en ;
+    skos:inScheme
+    <https://w3id.org/transmodel/kos/fares/FaresType> ;
+    skos:narrower
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/callDriver> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/callOffice> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/none> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/online> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/other> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/phoneAtStop> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/text> ;
+    skos:notation "BookingMethodEnumeration" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType
+<https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType>
+    rdf:type owl:NamedIndividual , skos:Concept ;
+    rdfs:comment "Allowed values for Booking Process."@en ;
+    skos:inScheme
+    <https://w3id.org/transmodel/kos/fares/FaresType> ;
+    skos:narrower
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/bookableManually> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/bookableThroughInternationalSystem> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/bookableThroughNationalSystem> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/other> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/productNotAvailable> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/productNotBookable> ;
+    skos:notation "BookingProcessEnumeration" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/FareClassType
+<https://w3id.org/transmodel/kos/fares/FaresType/FareClassType>
+    rdf:type owl:NamedIndividual , skos:Concept ;
+    rdfs:comment "Allowed values for Fare Class."@en ;
+    skos:inScheme
+    <https://w3id.org/transmodel/kos/fares/FaresType> ;
+    skos:narrower
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/any> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/businessClass> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/economyClass> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/firstClass> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/preferente> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/premiumClass> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/secondClass> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/standardClass> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/thirdClass> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/turista> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/unknown> ;
+    skos:notation "FareClassEnumeration" .
+    
+
+### https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType
+<https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType>
+    rdf:type owl:NamedIndividual , skos:Concept ;
+    rdfs:comment "Allowed values for Group Booking."@en ;
+    skos:inScheme
+    <https://w3id.org/transmodel/kos/fares/FaresType> ;
+    skos:narrower
+    <https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType/groupBookingsRestricted> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType/groupsAllowed> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType/groupsAllowedWithReservation> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType/groupsNotAllowed> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType/unknown> ;
+    skos:notation "GroupBookingEnumeration" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType
+<https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    rdf:type owl:NamedIndividual , skos:Concept ;
+    rdfs:comment "Allowed values for Payment Method."@en ;
+    skos:inScheme <https://w3id.org/transmodel/kos/fares/FaresType> ;
+    skos:narrower <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/bankNote> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/cardsOnly> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/cash> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/cashAndCar> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/cheque> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/coin> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/companyCheque> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/contactlessPaymentCard> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/contactlessTravelCard> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/creditCard> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/debitCard> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/mobilePhone> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/other> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/postalOrder> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/voucher> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/sms> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/travelCard> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/travellersCard> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/token> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/warrant> ;
+    skos:notation "PaymentMethodEnumeration" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType
+<https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType>
+    rdf:type owl:NamedIndividual , skos:Concept ;
+    rdfs:comment "Allowed values for Purchase Moment."@en ;
+    skos:inScheme <https://w3id.org/transmodel/kos/fares/FaresType/> ;
+    skos:narrower
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/afterBoarding> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/beforeBoarding> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/onBoarding> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/onCheckOut> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/onReservation> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/other> ;
+    skos:notation "PurchaseMomentEnumeration" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType
+<https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType>
+    rdf:type owl:NamedIndividual , skos:Concept ;
+    rdfs:comment "Allowed values for Purchase When."@en ;
+    skos:inScheme <https://w3id.org/transmodel/kos/fares/FaresType/> ;
+    skos:narrower
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType/advanceAndDayOfTravel> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType/advanceOnly> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType/dayOfTravelOnly> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType/timeOfTravelOnly> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType/untilPreviousDay> ;
+    skos:notation "PurchaseWhenEnumeration" .
+
+
+### https://w3id.org/transmodel/kos/fares/FaresType/ReservationType
+<https://w3id.org/transmodel/kos/fares/FaresType/ReservationType>
+    rdf:type owl:NamedIndividual , skos:Concept ;
+    rdfs:comment "Allowed values for Purchase Moment."@en ;
+    skos:inScheme <https://w3id.org/transmodel/kos/fares/FaresType/> ;
+    skos:narrower
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/bicycleReservationsCompulsory> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/groupBookingRestricted> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/noGroupsAllowed> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/noReservationsPossible> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsCompulsory> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsCompulsoryForFirstClass> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsCompulsoryForGroups> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsCompulsoryFromOriginStation> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsRecommended> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsPossible> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsPossibleForCertainClasses> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsPossibleOnlyInFirstClass> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsPossibleOnlyInSecondClass> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsSupplementCharged> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/unknown> ,
+        <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/wheelchairOnlyReservations> ;
+    skos:notation "ReservationEnumeration" .
+
+### DEF
+
+### BookingAccessType
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType/authorisedPublic
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType/authorisedPublic>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType>
+    ; skos:notation "authorisedPublic" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType/other
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType/other>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType>
+    ; skos:notation "other" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType/public
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType/public>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType>
+    ; skos:notation "public" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType/staff
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType/staff>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingAccessType>
+    ; skos:notation "staff" .
+
+### BookingMethodType
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/callDriver
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/callDriver>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType>
+    ; skos:notation "callDriver" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/callOffice
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/callOffice>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType>
+    ; skos:notation "callOffice" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/none
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/none>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType>
+    ; skos:notation "none" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/online
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/online>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType>
+    ; skos:notation "online" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/other
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/other>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType>
+    ; skos:notation "other" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/phoneAtStop
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/phoneAtStop>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType>
+    ; skos:notation "phoneAtStop" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/text
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType/text>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingMethodType>
+    ; skos:notation "text" .
+
+### BookingProcessType
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/bookableManually
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/bookableManually>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType>
+    ; skos:notation "bookableManually" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/bookableThroughInternationalSystem
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/bookableThroughInternationalSystem>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType>
+    ; skos:notation "bookableThroughInternationalSystem" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/bookableThroughNationalSystem
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/bookableThroughNationalSystem>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType>
+    ; skos:notation "bookableThroughNationalSystem" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/other
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/other>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType>
+    ; skos:notation "other" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/productNotAvailable
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/productNotAvailable>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType>
+    ; skos:notation "productNotAvailable" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/productNotBookable
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType/productNotBookable>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/BookingProcessType>
+    ; skos:notation "productNotBookable" .
+
+### FareClassType
+
+### https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/any
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/any>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType>
+    ; skos:notation "any" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/businessClass
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/businessClass>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType>
+    ; skos:notation "businessClass" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/economyClass
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/economyClass>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType>
+    ; skos:notation "economyClass" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/firstclass
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/firstClass>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType>
+    ; skos:notation "firstClass" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/preferente
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/preferente>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType>
+    ; skos:notation "preferente" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/premiumClass
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/premiumClass>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType>
+    ; skos:notation "premiumClass" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/secondClass
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/secondClass>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType>
+    ; skos:notation "secondClass" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/standardClass
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/standardClass>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType>
+    ; skos:notation "standardClass" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/thirdClass
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/thirdClass>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType>
+    ; skos:notation "thirdClass" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/turista
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/turista>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType>
+    ; skos:notation "turista" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/unknown
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType/unknown>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/FareClassType>
+    ; skos:notation "unknown" .
+
+### GroupBookingType
+
+### https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType/groupBookingsRestricted
+    <https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType/groupBookingsRestricted>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType>
+    ; skos:notation "groupBookingsRestricted" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType/groupsAllowed
+    <https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType/groupsAllowed>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType>
+    ; skos:notation "groupsAllowed" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType/groupsAllowedWithReservation
+    <https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType/groupsAllowedWithReservation>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType>
+    ; skos:notation "groupsAllowedWithReservation" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType/groupsNotAllowed
+    <https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType/groupsNotAllowed>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType>
+    ; skos:notation "groupsNotAllowed" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType/unknown
+    <https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType/unknown>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/GroupBookingType>
+    ; skos:notation "unknown" .
+
+### PaymentMethodType
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/bankNote
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/bankNote>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "bankNote" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/cardsOnly
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/cardsOnly>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "cardsOnly" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/cash
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/cash>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "cash" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/cashAndCar
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/cashAndCar>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "cashAndCar" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/cheque
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/cheque>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "cheque" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/coin
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/coin>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "coin" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/companyCheque
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/companyCheque>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "companyCheque" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/contactlessPaymentCard
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/contactlessPaymentCard>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "contactlessPaymentCard" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/contactlessTravelCard
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/contactlessTravelCard>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "contactlessTravelCard" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/creditCard
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/creditCard>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "creditCard" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/debitCard
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/debitCard>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "debitCard" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/mobilePhone
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/mobilePhone>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "mobilePhone" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/other
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/other>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "other" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/postalOrder
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/postalOrder>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "postalOrder" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/voucher
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/voucher>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "voucher" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/sms
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/sms>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "sms" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/travelCard
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/travelCard>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "travelCard" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/travellersCard
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/travellersCard>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "travellersCard" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/token
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/token>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "token" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/warrant
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType/warrant>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PaymentMethodType>
+    ; skos:notation "warrant" .
+
+### PurchaseMomentType
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/afterBoarding
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/afterBoarding>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType>
+    ; skos:notation "afterBoarding" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/beforeBoarding
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/beforeBoarding>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType>
+    ; skos:notation "beforeBoarding" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/onBoarding
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/onBoarding>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType>
+    ; skos:notation "onBoarding" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/onCheckOut
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/onCheckOut>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType>
+    ; skos:notation "onCheckout" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/onReservation
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/onReservation>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType>
+    ; skos:notation "onReservation" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/other
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType/other>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseMomentType>
+    ; skos:notation "other" .
+
+### PurchaseWhenType
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType/advanceAndDayOfTravel
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType/advanceAndDayOfTravel>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType>
+    ; skos:notation "advanceAndDayOfTravel" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType/advanceOnly
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType/advanceOnly>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType>
+    ; skos:notation "advanceOnly" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType/dayOfTravelOnly
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType/dayOfTravelOnly>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType>
+    ; skos:notation "dayOfTravelOnly" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType/timeOfTravelOnly
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType/timeOfTravelOnly>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType>
+    ; skos:notation "timeOfTravelOnly" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType/untilPreviousDay
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType/untilPreviousDay>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/PurchaseWhenType>
+    ; skos:notation "untilPreviousDay" .
+
+
+### ReservationType
+
+### https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/bicycleReservationsCompulsory
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/bicycleReservationsCompulsory>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType>
+    ; skos:notation "bicycleReservationsCompulsory" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/groupBookingRestricted
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/groupBookingRestricted>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType>
+    ; skos:notation "groupBookingRestricted" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/noGroupsAllowed
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/noGroupsAllowed>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType>
+    ; skos:notation "noGroupsAllowed" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/noReservationsPossible
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/noReservationsPossible>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType>
+    ; skos:notation "noReservationPossible" .
+
+
+### https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsCompulsory
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsCompulsory>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType>
+    ; skos:notation "reservationsCompulsory" .
+
+
+### https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsCompulsoryForFirstClass
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsCompulsoryForFirstClass>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType>
+    ; skos:notation "reservationsCompulsoryForFirstClass" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsCompulsoryForGroups
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsCompulsoryForGroups
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType>
+    ; skos:notation "reservationsCompulsoryForGroups" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsCompulsoryFromOriginStation
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsCompulsoryFromOriginStation>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType>
+    ; skos:notation "reservationsCompulsoryFromOriginStation" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsRecommended
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsRecommended>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType>
+    ; skos:notation "reservationsRecommended" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsPossible
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsPossible>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType>
+    ; skos:notation "reservationsPossible" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsPossibleForCertainClasses
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsPossibleForCertainClasses>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType>
+    ; skos:notation "reservationsPossibleForCertainClasses" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsPossibleOnlyInFirstClass
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsPossibleOnlyInFirstClass>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType>
+    ; skos:notation "reservationsPossibleOnlyInFirstClass" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsPossibleOnlyInSecondClass
+<https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsPossibleOnlyInSeconClass>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType>
+    ; skos:notation "reservationsPossibleOnlyInSecondClass" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsSupplementCharged
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/reservationsSupplementCharged>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType>
+    ; skos:notation "reservationsSupplementCharged" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/unknown
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/unknown>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType>
+    ; skos:notation "unknown" .
+
+### https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/wheelchairOnlyReservations
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType/wheelchairOnlyReservations>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/fares/FaresType/ReservationType>
+    ; skos:notation "wheelchairOnlyReservations" .
+
+
+
+###  Generated by GNU Emacs 26.1 (build 2, x86_64-pc-linux-gnu, GTK+ Version 3.24.5) of 2019-09-23, modified by Debian, N3/Turtle mode

@@ -1,0 +1,270 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+skos:broader rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+skos:hasTopConcept rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+skos:narrower rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+skos:ConceptScheme rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType
+<https://w3id.org/transmodel/kos/commons/commonTypeAuthoritiesType> rdf:type owl:NamedIndividual , skos:ConceptScheme ; dc:title "Codelist
+    of types of authorities"@en ; skos:hasTopConcept
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType> ,
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType> ;
+	skos:notation "AuthoritiesType" .
+
+### Individuals    
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType
+<https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType>
+    rdf:type owl:NamedIndividual , skos:Concept ; rdfs:comment "Allowed values for Organisation."@en ;
+    skos:inScheme
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType> ;
+    skos:narrower
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/authority> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/facilityOperator> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/other> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/retailConsortium> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/railOperator> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/railFreightOperator> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/servicedOrganisation> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/statutoryBody> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/travelAgent> ; skos:notation "OrganisationTypeEnumeration" .
+    
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType
+<https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType>
+    rdf:type owl:NamedIndividual , skos:Concept ;
+    rdfs:comment "Allowed values for Responsability Role."@en ;
+    skos:inScheme
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType> ;
+    skos:narrower
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/dataOrigination> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/dataAugmentation> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/dataAggregation> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/dataDistribution> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/planning> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/operation> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/controlCentre> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/monitorCentre> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/dataIprOwnership> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/entityLegalOwnership> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/scheduler> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/stopPointManager> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/roadManager> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/roadDisplayManager> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/subContractor> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/travelInformationServiceProvider> ,
+        <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/other> ;
+    skos:notation "ResponsabilityRolEnumeration" .
+
+### DEF
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/authority
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/authority>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType>
+    ; skos:notation "authority" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/controlCentre
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/controlCentre>
+    rdf:type owl:NamedIndividual , skos:Concept ;
+     rdfs:comment "directive pt-management centre"@en ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType>
+    ; skos:notation "controlCentre" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/dataAggregation
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/dataAggregation>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType>
+    ; skos:notation "dataAggregation" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/dataAugmentation
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/dataAugmentation>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType>
+    ; skos:notation "dataAugmentation" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/dataDistribution
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/dataDistribution>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType>
+    ; skos:notation "dataDistribution" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/dataIprOwnership
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/dataIprOwnership>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType>
+    ; skos:notation "dataIprOwnership" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/dataOrigination
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/dataOrigination>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType>
+    ; skos:notation "dataOrigination" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/entityLegalOwnership
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/entityLegalOwnership>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType>
+    ; skos:notation "entityLegalOwnership" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/facilityOperator
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/facilityOperator>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType>
+    ; skos:notation "facilityOperator" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/monitorCentre
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/monitorCentre>
+    rdf:type owl:NamedIndividual , skos:Concept ;
+     rdfs:comment "only receiving and collecting data"@en ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType>
+    ; skos:notation "monitorCentre" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/operation
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/operation>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType>
+    ; skos:notation "operation" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/other
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/other>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType>
+    ; skos:notation "other" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/other
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/other>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType>
+    ; skos:notation "other" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/planning
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/planning>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType>
+    ; skos:notation "planning" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/retailConsortium
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/retailConsortium>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType>
+    ; skos:notation "retailConsortium" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/railFreightOperator
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/railFreightOperator>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType>
+    ; skos:notation "railFreightOperator" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/railOperator
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/railOperator>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType>
+    ; skos:notation "railOperator" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/roadDisplayManager
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/roadDisplayManager>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType>
+    ; skos:notation "roadDisplayManager" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/roadManager
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/roadManager>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType>
+    ; skos:notation "roadManager" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/servicedOrganisation
+<https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/servicedOrganisation>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType>
+    ; skos:notation "servicedOrganisation" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/scheduler
+<https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/schedules>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType>
+    ; skos:notation "scheduler" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/stopPointManager
+  <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/stopPointManager>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType>
+    ; skos:notation "stopPointManager" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/subContractor
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/subContractor>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType>
+    ; skos:notation "subContractor" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/statutoryBody
+<https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/statutoryBody>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType>
+    ; skos:notation "stutatoryBody" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/travelAgency
+<https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType/travelAgency>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/OrganisationType>
+    ; skos:notation "travelAgency" .
+
+### https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/travelInformationServiceProvider
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType/travelInformationServiceProvider>
+    rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
+    <https://w3id.org/transmodel/kos/authorities/AuthoritiesType/ResponsabilityRoleType>
+    ; skos:notation "travelInformationServiceProvider" .
+
+
+###  Generated by GNU Emacs 26.1 (build 2, x86_64-pc-linux-gnu, GTK+ Version 3.24.5) of 2019-09-23, modified by Debian, N3/Turtle mode
