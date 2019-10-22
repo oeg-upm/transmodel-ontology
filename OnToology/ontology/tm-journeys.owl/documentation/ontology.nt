@@ -1,12 +1,18 @@
 <https://w3id.org/transmodel/journeys#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/transmodel/journeys#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/transmodel/journeys/1.0> .
-<https://w3id.org/transmodel/journeys#> <http://www.w3.org/2000/01/rdf-schema#comment> "Module of the Transmodel Ontology focused on Journeys"@en .
-<https://w3id.org/transmodel/journeys#> <http://www.w3.org/2000/01/rdf-schema#label> "TransmodelOntologyJourneys"@en .
+<https://w3id.org/transmodel/journeys#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/transmodel/journeys/0.2> .
+<https://w3id.org/transmodel/journeys#> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/transmodel/journeys#> <http://purl.org/dc/elements/1.1/creator> "Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<https://w3id.org/transmodel/journeys#> <http://purl.org/dc/elements/1.1/creator> "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<https://w3id.org/transmodel/journeys#> <http://purl.org/dc/elements/1.1/date> "2019-10-22" .
+<https://w3id.org/transmodel/journeys#> <http://purl.org/dc/elements/1.1/description> "Module of the Transmodel Ontology focused on journeys. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en .
+<https://w3id.org/transmodel/journeys#> <http://purl.org/dc/elements/1.1/identifier> "https://w3id.org/transmodel/journies" .
+<https://w3id.org/transmodel/journeys#> <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)" .
+<https://w3id.org/transmodel/journeys#> <http://purl.org/dc/elements/1.1/title> "Transmodel Ontology - Journeys"@en .
+<https://w3id.org/transmodel/journeys#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/transmodel/facilities#> .
+<https://w3id.org/transmodel/journeys#> <http://www.w3.org/2000/01/rdf-schema#comment> "Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en .
+<https://w3id.org/transmodel/journeys#> <http://www.w3.org/2000/01/rdf-schema#label> "Transmodel Ontology - Journeys"@en .
 <https://w3id.org/transmodel/journeys#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://github.com/oeg-upm/transmodel-ontology"@en .
-<https://w3id.org/transmodel/journeys#> <https://w3id.org/transmodel/journeys#author> _:genid1 .
-_:genid1 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
-<https://w3id.org/transmodel/journeys#> <https://w3id.org/transmodel/journeys#description> "Module of the Transmodel Ontology focused on journeys. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en .
+<https://w3id.org/transmodel/journeys#> <http://www.w3.org/2002/07/owl#versionInfo> "This is the initial version of the module on Journeys, after considering the UML models and XSD descriptions of Transmodel and NeTEx"@en .
 # 
 # 
 # #################################################################
@@ -16,6 +22,30 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 # #################################################################
 # 
 # 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # https://w3id.org/transmodel/journeys#author
 <https://w3id.org/transmodel/journeys#author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -24,12 +54,15 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 # 
 # https://w3id.org/transmodel/journeys#description
 <https://w3id.org/transmodel/journeys#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/transmodel/journeys#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/transmodel/journeys#description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#MeetingPointService> .
 # 
 # https://w3id.org/transmodel/journeys#mbox
 <https://w3id.org/transmodel/journeys#mbox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # https://w3id.org/transmodel/journeys#name
 <https://w3id.org/transmodel/journeys#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/transmodel/journeys#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 # 
 # 
 # 
@@ -428,6 +461,9 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 # #
 # #################################################################
 # 
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/transmodel/journeys#Access
 <https://w3id.org/transmodel/journeys#Access> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -994,26 +1030,13 @@ _:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 <https://w3id.org/transmodel/journeys#virtualLineService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#TypeOfFlexibleService> .
 <https://w3id.org/transmodel/journeys#virtualLineService> <http://www.w3.org/2000/01/rdf-schema#label> "VirtualLineService"@en .
 # 
-_:genid2 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid2 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
-_:genid3 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid3 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
-_:genid4 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid4 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
-_:genid5 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid5 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
-_:genid6 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid6 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
-_:genid7 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid7 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
-_:genid8 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid8 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
-_:genid9 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid9 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
-_:genid10 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid10 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
-_:genid11 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid11 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
+# https://w3id.org/transmodel/kos/journeys/JourneyType
+<https://w3id.org/transmodel/kos/journeys/JourneyType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/JourneyType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/transmodel/kos/journeys/JourneyType> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme where all the codelists for the types of journeys that are included in the Transmodel ontology"@en .
+# 
+_:genid1 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid1 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 # 
 # 
 # #################################################################
