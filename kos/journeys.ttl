@@ -55,33 +55,34 @@ skos:ConceptScheme rdf:type owl:Class .
 #    Individuals
 #################################################################
 
-### https://w3id.org/transmodel/kos/commons/CommonsType
-<https://w3id.org/transmodel/kos/commons/CommonsType> rdf:type owl:NamedIndividual , skos:ConceptScheme ; dc:title "Codelist
-    of types of commons."@en ; skos:hasTopConcept
-    <https://w3id.org/transmodel/kos/commons/CommonType/> ,
-    <https://w3id.org/transmodel/kos/commons/CommonType/> ;
-	skos:notation "CommonsType" .
+### https://w3id.org/transmodel/kos/journeys/JourneysType
+<https://w3id.org/transmodel/kos/journeys/JourneysType> rdf:type owl:NamedIndividual , skos:ConceptScheme ; dc:title "Codelist
+    of types of journeys"@en ; skos:hasTopConcept
+    <https://w3id.org/transmodel/kos/journeys/JourneysType/> ,
+    <https://w3id.org/transmodel/kos/journeys/JourneysType/> ;
+	skos:notation "JourneysType" .
 
 ### Individuals    
 
-### https://w3id.org/transmodel/kos/commons/CommonsType/
-<https://w3id.org/transmodel/kos/commons/CommonsType/>
-    rdf:type owl:NamedIndividual , skos:Concept ; rdfs:comment "Allowed values for ..."@en ;
+### https://w3id.org/transmodel/kos/journeys/JourneysType/
+<https://w3id.org/transmodel/kos/journeys/JourneysType/>
+    rdf:type owl:NamedIndividual , skos:Concept ; rdfs:comment "Allowed values for Journeys."@en ;
     skos:inScheme
-    <https://w3id.org/transmodel/kos/commons/CommonsType> ;
+    <https://w3id.org/transmodel/kos/journeys/JourneysType> ;
     skos:narrower
-    <https://w3id.org/transmodel/kos/commons/CommonsType/> ,
-        <https://w3id.org/transmodel/kos/commons/CommonsType/> ;
+    <https://w3id.org/transmodel/kos/journeys/JourneysType/authority> ,
+        <https://w3id.org/transmodel/kos/journeys/JourneysType/authority> ;
     skos:notation "" .
+
 
 ### DEF
 
 ### ...
 
-### https://w3id.org/transmodel/kos/commons/CommonsType/.../
-    <https://w3id.org/transmodel/kos/commons/CommonsType/.../>
+### https://w3id.org/transmodel/kos/journeys/JourneysType/.../
+    <https://w3id.org/transmodel/kos/journeys/JourneysType/.../>
     rdf:type owl:NamedIndividual , skos:Concept ; skos:broader
-    <https://w3id.org/transmodel/kos/commons/CommonsType/>
+    <https://w3id.org/transmodel/kos/journeys/JourneysType/>
     ; skos:notation "" .
 
 
