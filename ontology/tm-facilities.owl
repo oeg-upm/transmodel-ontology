@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/transmodel/facilities#"
      xml:base="https://w3id.org/transmodel/facilities"
      xmlns:cc="http://creativecommons.org/ns#"
@@ -10,17 +10,17 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:tmfac="https://w3id.org/transmodel/facilities#"
+     xmlns:tmkos="https://w3id.org/transmodel/kos/"
      xmlns:tmauth="https://w3id.org/transmodel/authorities#"
-     xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
      xmlns:tmfare="https://w3id.org/transmodel/fares#"
      xmlns:tmcommons="https://w3id.org/transmodel/commons#"
-     xmlns:tmkos="https://w3id.org/transmodel/kos/"
-     xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/"
-     xmlns:tmkosauthority="https://w3id.org/transmodel/kos/authorities/"
+     xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
      xmlns:tmkosfare="https://w3id.org/transmodel/kos/fares/"
+     xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/"
      xmlns:tmkosjourney="https://w3id.org/transmodel/kos/journeys/"
-     xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/">
-  <owl:Ontology rdf:about="https://w3id.org/transmodel/facilities#">
+     xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/"
+     xmlns:tmkosauthority="https://w3id.org/transmodel/kos/authorities/">
+    <owl:Ontology rdf:about="https://w3id.org/transmodel/facilities#">
         <owl:versionIRI rdf:resource="https://w3id.org/transmodel/facilities/0.2"/>
         <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <dc:creator>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
@@ -72,6 +72,7 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
+
 
     <!-- http://purl.org/dc/elements/1.1/identifier -->
 
@@ -2164,7 +2165,7 @@ It can also include information about the accommodation on board, which can be r
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#SiteComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#SiteElement"/>
-        <rdfs:comment xml:lang="en">An element of a Site descibing a part of its structure. Site Components share common properties for data management, accessibility and other features</rdfs:comment>
+        <rdfs:comment xml:lang="en">An element of a Site describing a part of its structure. Site Components share common properties for data management, accessibility and other features</rdfs:comment>
         <rdfs:label xml:lang="en">Site Component</rdfs:label>
     </owl:Class>
     
@@ -3152,8 +3153,6 @@ It can also include information about the accommodation on board, which can be r
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:comment xml:lang="en">Concept scheme where all the codelists for the types of facilities that are included in the Transmodel ontology</rdfs:comment>
     </owl:NamedIndividual>
-
-    
     <rdf:Description>
         <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
         <name xml:lang="en">Adolfo Anton-Bravo</name>
