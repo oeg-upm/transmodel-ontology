@@ -223,6 +223,13 @@
 <https://w3id.org/transmodel/journeys#passengerConnection> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Connection> .
 <https://w3id.org/transmodel/journeys#passengerConnection> <http://www.w3.org/2000/01/rdf-schema#label> "passengerConnection"@en .
 # 
+# https://w3id.org/transmodel/journeys#passengerJourneys
+<https://w3id.org/transmodel/journeys#passengerJourneys> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#passengerJourneys> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Passenger> .
+<https://w3id.org/transmodel/journeys#passengerJourneys> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Trip> .
+<https://w3id.org/transmodel/journeys#passengerJourneys> <http://www.w3.org/2000/01/rdf-schema#comment> "The Journey of a Passenger is a Trip"@en .
+<https://w3id.org/transmodel/journeys#passengerJourneys> <http://www.w3.org/2000/01/rdf-schema#label> "passengerJourneys"@en .
+# 
 # https://w3id.org/transmodel/journeys#passingTimeTimingPoint
 <https://w3id.org/transmodel/journeys#passingTimeTimingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/transmodel/journeys#passingTimeTimingPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#PassingTime> .
@@ -259,6 +266,11 @@
 <https://w3id.org/transmodel/journeys#stopsAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Vehicle> .
 <https://w3id.org/transmodel/journeys#stopsAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
 <https://w3id.org/transmodel/journeys#stopsAt> <http://www.w3.org/2000/01/rdf-schema#label> "stopsAt"@en .
+# 
+# https://w3id.org/transmodel/journeys#timeTabledPassingTime
+<https://w3id.org/transmodel/journeys#timeTabledPassingTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#timeTabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Point> .
+<https://w3id.org/transmodel/journeys#timeTabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#TimeTabledPassingTime> .
 # 
 # https://w3id.org/transmodel/journeys#timingLink
 <https://w3id.org/transmodel/journeys#timingLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -310,11 +322,24 @@
 <https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#JourneyRunTime> .
 <https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#label> "vehicleJourneyRunTimeOverrides"@en .
 # 
+# https://w3id.org/transmodel/journeys#vehicleJourneys
+<https://w3id.org/transmodel/journeys#vehicleJourneys> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#vehicleJourneys> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Vehicle> .
+<https://w3id.org/transmodel/journeys#vehicleJourneys> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#VehicleJourney> .
+<https://w3id.org/transmodel/journeys#vehicleJourneys> <http://www.w3.org/2000/01/rdf-schema#comment> "The Journey of a Vehicle is a VehicleJourney"@en .
+<https://w3id.org/transmodel/journeys#vehicleJourneys> <http://www.w3.org/2000/01/rdf-schema#label> "vehicleJourneys"@en .
+# 
 # https://w3id.org/transmodel/journeys#vehiclePassingTime
 <https://w3id.org/transmodel/journeys#vehiclePassingTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/transmodel/journeys#vehiclePassingTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Vehicle> .
 <https://w3id.org/transmodel/journeys#vehiclePassingTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#PassingTime> .
 <https://w3id.org/transmodel/journeys#vehiclePassingTime> <http://www.w3.org/2000/01/rdf-schema#label> "vehiclePassingTime"@en .
+# 
+# https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime
+<https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Vehicle> .
+<https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#TimeTabledPassingTime> .
+<https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#label> "vehicleTimeTabledPassingTime"@en .
 # 
 # 
 # 
@@ -606,7 +631,7 @@
 # https://w3id.org/transmodel/journeys#FlexibleLine
 <https://w3id.org/transmodel/journeys#FlexibleLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#FlexibleLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Line> .
-<https://w3id.org/transmodel/journeys#FlexibleLine> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of Line for flexible service. As all the service on a Line may not ve flexible, flexibility itself is described at JourneyPattern level, meaning that a separate JourneyPattern is needed for each type of flexibility available for the line"@en .
+<https://w3id.org/transmodel/journeys#FlexibleLine> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of Line for FlexibleService. As all the service on a Line may not be flexible, flexibility itself is described at JourneyPattern level, meaning that a separate JourneyPattern is needed for each type of flexibility available for the Line"@en .
 <https://w3id.org/transmodel/journeys#FlexibleLine> <http://www.w3.org/2000/01/rdf-schema#label> "FlexibleLine"@en .
 # 
 # https://w3id.org/transmodel/journeys#FlexiblePoint
@@ -671,6 +696,12 @@
 <https://w3id.org/transmodel/journeys#MeanOfTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "Any Mode of Transport"@en .
 <https://w3id.org/transmodel/journeys#MeanOfTransport> <http://www.w3.org/2000/01/rdf-schema#label> "ModeOfTransport"@en .
 # 
+# https://w3id.org/transmodel/journeys#MonitoredVehicleJourney
+<https://w3id.org/transmodel/journeys#MonitoredVehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#MonitoredVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#VehicleJourney> .
+<https://w3id.org/transmodel/journeys#MonitoredVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "A VehicleJourney that is run under real-time tracking system and so for which real-time observations and predictions and other data are available"@en .
+<https://w3id.org/transmodel/journeys#MonitoredVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#label> "MonitoredVehicleJourney"@en .
+# 
 # https://w3id.org/transmodel/journeys#OperatingDay
 <https://w3id.org/transmodel/journeys#OperatingDay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#OperatingDay> <http://www.w3.org/2000/01/rdf-schema#comment> "A day of public transport operation of which the characteristics are defined within in a specific ServiceCalendar. An OperatingDay may last more than 24 hours."@en .
@@ -702,6 +733,12 @@
 <https://w3id.org/transmodel/journeys#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location"@en .
 <https://w3id.org/transmodel/journeys#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point"@en .
 # 
+# https://w3id.org/transmodel/journeys#PointInJourneyPattern
+<https://w3id.org/transmodel/journeys#PointInJourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#PointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Point> .
+<https://w3id.org/transmodel/journeys#PointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "A Scheduled Stop Point of Timing Point in a Journey Pattern with its order in that Journey Pattern"@en .
+<https://w3id.org/transmodel/journeys#PointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "PointInJourneyPattern"@en .
+# 
 # https://w3id.org/transmodel/journeys#PostalAddress
 <https://w3id.org/transmodel/journeys#PostalAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#PostalAddress> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Address> .
@@ -726,8 +763,7 @@
 # 
 # https://w3id.org/transmodel/journeys#ScheduledStopPoint
 <https://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> .
-<https://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Point> .
+<https://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#PointInJourneyPattern> .
 <https://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A ScheduledStopPoint is a Point where a Passenger can board or alight from a Vehicle."@en .
 <https://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#label> "ScheduledStopPoint"@en .
 # 
@@ -772,6 +808,17 @@
 <https://w3id.org/transmodel/journeys#TimeDemandType> <http://www.w3.org/2000/01/rdf-schema#comment> "An indicator of traffic conditions or other factors which may affect Vehicle Run or Wait times. It may be entered directly by the scheduler or defined by the use of TimeBands."@en .
 <https://w3id.org/transmodel/journeys#TimeDemandType> <http://www.w3.org/2000/01/rdf-schema#label> "TimeDemandType"@en .
 # 
+# https://w3id.org/transmodel/journeys#TimeTabledPassingTime
+<https://w3id.org/transmodel/journeys#TimeTabledPassingTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#TimeTabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Long-term planned time data concerning public transport vehicles passing a particular PointInJourneyPattern on a specified VehicleJourney for a certain DayType"@en .
+<https://w3id.org/transmodel/journeys#TimeTabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#label> "TimeTabledPassingTime"@en .
+# 
+# https://w3id.org/transmodel/journeys#TimetabledVehicleJourney
+<https://w3id.org/transmodel/journeys#TimetabledVehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#TimetabledVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#VehicleJourney> .
+<https://w3id.org/transmodel/journeys#TimetabledVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route."@en .
+<https://w3id.org/transmodel/journeys#TimetabledVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#label> "TimetabledVehicleJourney"@en .
+# 
 # https://w3id.org/transmodel/journeys#TimingLink
 <https://w3id.org/transmodel/journeys#TimingLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#TimingLink> <http://www.w3.org/2000/01/rdf-schema#label> "A TimingLink is an ordered pair of TimingPoint for which run times\nmay be recorded."@en .
@@ -784,8 +831,7 @@
 # 
 # https://w3id.org/transmodel/journeys#TimingPoint
 <https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> .
-<https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Point> .
+<https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#PointInJourneyPattern> .
 <https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A TimingPoint is a Point against which the timing information necessary to build schedules may be recorded.\n\nIt's the same as TimingPointInJourneyPattern"@en .
 <https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/2000/01/rdf-schema#label> "TimingPoint"@en .
 # 
@@ -818,7 +864,7 @@
 # 
 # https://w3id.org/transmodel/journeys#VehicleJourney
 <https://w3id.org/transmodel/journeys#VehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#label> "The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route."@en .
+<https://w3id.org/transmodel/journeys#VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "The Journey made by the Vehicle. Within VehicleJourney there are three types:\n- TimetabledVehicleJourney in a geneeral timetable that will run on a specific time on a DayType throughout the period of applicability of the schedule.\n- DatedVehicleJourney, a specific VehicleJourney that runs on a spcific calendar date;\n- MonitoredVehicleJourney, a VehicleJourney run under real-time tracking system and so for which real-time observations and predictions and other data are available."@en .
 <https://w3id.org/transmodel/journeys#VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleJourney"@en .
 # 
 # https://w3id.org/transmodel/journeys#VehicleJourneyLayover
