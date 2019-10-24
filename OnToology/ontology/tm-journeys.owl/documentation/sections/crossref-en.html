@@ -25,7 +25,8 @@ may be recorded.</a>
             title="https://w3id.org/transmodel/journeys#AllowedLineDirections">AllowedLineDirections</a>
       </li>
       <li>
-         <a href="#BeaconPoint" title="https://w3id.org/transmodel/journeys#BeaconPoint">BeaconPoint</a>
+         <a href="#BeaconPoint"
+            title="https://w3id.org/transmodel/journeys#BeaconPoint">BeaconPoint</a>
       </li>
       <li>
          <a href="#Block" title="https://w3id.org/transmodel/journeys#Block">Block</a>
@@ -147,6 +148,10 @@ may be recorded.</a>
             title="https://w3id.org/transmodel/journeys#MeanOfTransport">ModeOfTransport</a>
       </li>
       <li>
+         <a href="#MonitoredVehicleJourney"
+            title="https://w3id.org/transmodel/journeys#MonitoredVehicleJourney">MonitoredVehicleJourney</a>
+      </li>
+      <li>
          <a href="#OperatingDay"
             title="https://w3id.org/transmodel/journeys#OperatingDay">OperatingDay</a>
       </li>
@@ -166,6 +171,10 @@ may be recorded.</a>
       </li>
       <li>
          <a href="#Point" title="https://w3id.org/transmodel/journeys#Point">Point</a>
+      </li>
+      <li>
+         <a href="#PointInJourneyPattern"
+            title="https://w3id.org/transmodel/journeys#PointInJourneyPattern">PointInJourneyPattern</a>
       </li>
       <li>
          <a href="#PostalAddress"
@@ -209,15 +218,19 @@ may be recorded.</a>
             title="https://w3id.org/transmodel/journeys#StopPointInJourneyPattern">StopPointInJourneyPattern</a>
       </li>
       <li>
-         <a href="#VehicleJourney"
-            title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
-      </li>
-      <li>
          <a href="#TimeBand" title="https://w3id.org/transmodel/journeys#TimeBand">TimeBand</a>
       </li>
       <li>
          <a href="#TimeDemandType"
             title="https://w3id.org/transmodel/journeys#TimeDemandType">TimeDemandType</a>
+      </li>
+      <li>
+         <a href="#TimeTabledPassingTime"
+            title="https://w3id.org/transmodel/journeys#TimeTabledPassingTime">TimeTabledPassingTime</a>
+      </li>
+      <li>
+         <a href="#TimetabledVehicleJourney"
+            title="https://w3id.org/transmodel/journeys#TimetabledVehicleJourney">TimetabledVehicleJourney</a>
       </li>
       <li>
          <a href="#TimingLinkInJourneyPattern"
@@ -247,6 +260,10 @@ may be recorded.</a>
       </li>
       <li>
          <a href="#Vehicle" title="https://w3id.org/transmodel/journeys#Vehicle">Vehicle</a>
+      </li>
+      <li>
+         <a href="#VehicleJourney"
+            title="https://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
       </li>
       <li>
          <a href="#VehicleJourneyLayover"
@@ -520,7 +537,7 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          <dt>is equivalent to</dt>
          <dd>
             <a href="#VehicleJourney"
-               title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+               title="https://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -587,7 +604,7 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          <dt>has super-classes</dt>
          <dd>
             <a href="#VehicleJourney"
-               title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+               title="https://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -657,7 +674,7 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          <dt>has super-classes</dt>
          <dd>
             <a href="#VehicleJourney"
-               title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+               title="https://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -818,7 +835,7 @@ may be recorded.<sup class="type-c" title="class">c</sup>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#FlexibleLine</p>
       <div class="comment">
-         <span class="markdown">Specialisation of Line for flexible service. As all the service on a Line may not ve flexible, flexibility itself is described at JourneyPattern level, meaning that a separate JourneyPattern is needed for each type of flexibility available for the line</span>
+         <span class="markdown">Specialisation of Line for FlexibleService. As all the service on a Line may not be flexible, flexibility itself is described at JourneyPattern level, meaning that a separate JourneyPattern is needed for each type of flexibility available for the Line</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -1096,6 +1113,25 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
+   <div class="entity" id="MonitoredVehicleJourney">
+      <h3>MonitoredVehicleJourney<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#MonitoredVehicleJourney</p>
+      <div class="comment">
+         <span class="markdown">A VehicleJourney that is run under real-time tracking system and so for which real-time observations and predictions and other data are available</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#VehicleJourney"
+               title="https://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="OperatingDay">
       <h3>OperatingDay<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1153,6 +1189,8 @@ may be recorded.<sup class="type-c" title="class">c</sup>
             <sup class="type-op" title="object property">op</sup>, <a href="#canBoard" title="https://w3id.org/transmodel/journeys#canBoard">canBoard</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#passengerConnection"
                title="https://w3id.org/transmodel/journeys#passengerConnection">passengerConnection</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#passengerJourneys"
+               title="https://w3id.org/transmodel/journeys#passengerJourneys">passengerJourneys</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#makesAServiceJourney"
                title="https://w3id.org/transmodel/journeys#makesAServiceJourney">serviceJourney</a>
             <sup class="type-op" title="object property">op</sup>
@@ -1234,15 +1272,14 @@ may be recorded.<sup class="type-c" title="class">c</sup>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#BeaconPoint" title="https://w3id.org/transmodel/journeys#BeaconPoint">BeaconPoint</a>
+            <a href="#BeaconPoint"
+               title="https://w3id.org/transmodel/journeys#BeaconPoint">BeaconPoint</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FlexiblePoint"
                title="https://w3id.org/transmodel/journeys#FlexiblePoint">FlexiblePoint</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ScheduledStopPoint"
-               title="https://w3id.org/transmodel/journeys#ScheduledStopPoint">ScheduledStopPoint</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PointInJourneyPattern"
+               title="https://w3id.org/transmodel/journeys#PointInJourneyPattern">PointInJourneyPattern</a>
             <sup class="type-c" title="class">c</sup>, <a href="#StopPointInJourneyPattern"
                title="https://w3id.org/transmodel/journeys#StopPointInJourneyPattern">StopPointInJourneyPattern</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#TimingPoint"
-               title="https://w3id.org/transmodel/journeys#TimingPoint">TimingPoint</a>
             <sup class="type-c" title="class">c</sup>, <a href="#TimingPointInJourneyPattern"
                title="https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern">TimingPointInJourneyPattern</a>
             <sup class="type-c" title="class">c</sup>
@@ -1251,13 +1288,41 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          <dd>
             <a href="#latitude" title="https://w3id.org/transmodel/journeys#latitude">latitude</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#longitude" title="https://w3id.org/transmodel/journeys#longitude">longitude</a>
-            <sup class="type-dp" title="data property">dp</sup>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#timeTabledPassingTime"
+               title="https://w3id.org/transmodel/journeys#timeTabledPassingTime">time tabled passing time</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#journeyPatternPoint"
                title="https://w3id.org/transmodel/journeys#journeyPatternPoint">journeyPatternPoint</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PointInJourneyPattern">
+      <h3>PointInJourneyPattern<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#PointInJourneyPattern</p>
+      <div class="comment">
+         <span class="markdown">A Scheduled Stop Point of Timing Point in a Journey Pattern with its order in that Journey Pattern</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Point" title="https://w3id.org/transmodel/journeys#Point">Point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ScheduledStopPoint"
+               title="https://w3id.org/transmodel/journeys#ScheduledStopPoint">ScheduledStopPoint</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimingPoint"
+               title="https://w3id.org/transmodel/journeys#TimingPoint">TimingPoint</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -1380,15 +1445,10 @@ A Quay may contain a subquay.</span>
          <span class="markdown">A ScheduledStopPoint is a Point where a Passenger can board or alight from a Vehicle.</span>
       </div>
       <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>
-            <a href="#StopPointInJourneyPattern"
-               title="https://w3id.org/transmodel/journeys#StopPointInJourneyPattern">StopPointInJourneyPattern</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Point" title="https://w3id.org/transmodel/journeys#Point">Point</a>
+            <a href="#PointInJourneyPattern"
+               title="https://w3id.org/transmodel/journeys#PointInJourneyPattern">PointInJourneyPattern</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -1531,45 +1591,6 @@ by a ServiceJourneyPattern.</span>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="VehicleJourney">
-      <h3>The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#VehicleJourney</p>
-      <dl class="description">
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#DatedVehicleJourney"
-               title="https://w3id.org/transmodel/journeys#DatedVehicleJourney">DatedVehicleJourney</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#DeadRun" title="https://w3id.org/transmodel/journeys#DeadRun">DeadRun</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#followsDeadRunTime"
-               title="https://w3id.org/transmodel/journeys#followsDeadRunTime">followsDeadRunPattern</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#followsJourneyPattern"
-               title="https://w3id.org/transmodel/journeys#followsJourneyPattern">followsJourneyPattern</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#headway" title="https://w3id.org/transmodel/journeys#headway">headway</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#layover" title="https://w3id.org/transmodel/journeys#layover">layover</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#runtime" title="https://w3id.org/transmodel/journeys#runtime">runtime</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#vehicleJourneyDayType"
-               title="https://w3id.org/transmodel/journeys#vehicleJourneyDayType">vehicleJourneyDayType</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#vehicleJourneyRoute"
-               title="https://w3id.org/transmodel/journeys#vehicleJourneyRoute">vehicleJourneyRoute</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#waitTime" title="https://w3id.org/transmodel/journeys#waitTime">waitTime</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#vehicleJourney"
-               title="https://w3id.org/transmodel/journeys#vehicleJourney">vehicleJourney</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="TimeBand">
       <h3>TimeBand<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1591,6 +1612,46 @@ by a ServiceJourneyPattern.</span>
       <div class="comment">
          <span class="markdown">An indicator of traffic conditions or other factors which may affect Vehicle Run or Wait times. It may be entered directly by the scheduler or defined by the use of TimeBands.</span>
       </div>
+   </div>
+   <div class="entity" id="TimeTabledPassingTime">
+      <h3>TimeTabledPassingTime<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#TimeTabledPassingTime</p>
+      <div class="comment">
+         <span class="markdown">Long-term planned time data concerning public transport vehicles passing a particular PointInJourneyPattern on a specified VehicleJourney for a certain DayType</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#timeTabledPassingTime"
+               title="https://w3id.org/transmodel/journeys#timeTabledPassingTime">time tabled passing time</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#vehicleTimeTabledPassingTime"
+               title="https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime">vehicleTimeTabledPassingTime</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TimetabledVehicleJourney">
+      <h3>TimetabledVehicleJourney<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#TimetabledVehicleJourney</p>
+      <div class="comment">
+         <span class="markdown">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#VehicleJourney"
+               title="https://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="TimingLinkInJourneyPattern">
       <h3>TimingLinkInJourneyPattern<sup class="type-c" title="class">c</sup>
@@ -1627,15 +1688,10 @@ about each iteration of the TimingLink</span>
 It's the same as TimingPointInJourneyPattern</span>
       </div>
       <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>
-            <a href="#TimingPointInJourneyPattern"
-               title="https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern">TimingPointInJourneyPattern</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Point" title="https://w3id.org/transmodel/journeys#Point">Point</a>
+            <a href="#PointInJourneyPattern"
+               title="https://w3id.org/transmodel/journeys#PointInJourneyPattern">PointInJourneyPattern</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -1708,6 +1764,14 @@ It's the same as TimingPointInJourneyPattern</span>
       <div class="comment">
          <span class="markdown">The physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip.</span>
       </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#passengerJourneys"
+               title="https://w3id.org/transmodel/journeys#passengerJourneys">passengerJourneys</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="Access">
       <h3>TypeOfAccess<sup class="type-c" title="class">c</sup>
@@ -1800,8 +1864,63 @@ It's the same as TimingPointInJourneyPattern</span>
                title="https://w3id.org/transmodel/journeys#vehicleJourney">vehicleJourney</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#vehicleJourneyPart"
                title="https://w3id.org/transmodel/journeys#vehicleJourneyPart">vehicleJourneyPart</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#vehicleJourneys"
+               title="https://w3id.org/transmodel/journeys#vehicleJourneys">vehicleJourneys</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#vehiclePassingTime"
                title="https://w3id.org/transmodel/journeys#vehiclePassingTime">vehiclePassingTime</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#vehicleTimeTabledPassingTime"
+               title="https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime">vehicleTimeTabledPassingTime</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VehicleJourney">
+      <h3>VehicleJourney<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#VehicleJourney</p>
+      <div class="comment">
+         <span class="markdown">The Journey made by the Vehicle. Within VehicleJourney there are three types:
+- TimetabledVehicleJourney in a geneeral timetable that will run on a specific time on a DayType throughout the period of applicability of the schedule.
+- DatedVehicleJourney, a specific VehicleJourney that runs on a spcific calendar date;
+- MonitoredVehicleJourney, a VehicleJourney run under real-time tracking system and so for which real-time observations and predictions and other data are available.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#DatedVehicleJourney"
+               title="https://w3id.org/transmodel/journeys#DatedVehicleJourney">DatedVehicleJourney</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#DeadRun" title="https://w3id.org/transmodel/journeys#DeadRun">DeadRun</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#MonitoredVehicleJourney"
+               title="https://w3id.org/transmodel/journeys#MonitoredVehicleJourney">MonitoredVehicleJourney</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TimetabledVehicleJourney"
+               title="https://w3id.org/transmodel/journeys#TimetabledVehicleJourney">TimetabledVehicleJourney</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#followsDeadRunTime"
+               title="https://w3id.org/transmodel/journeys#followsDeadRunTime">followsDeadRunPattern</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#followsJourneyPattern"
+               title="https://w3id.org/transmodel/journeys#followsJourneyPattern">followsJourneyPattern</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#headway" title="https://w3id.org/transmodel/journeys#headway">headway</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#layover" title="https://w3id.org/transmodel/journeys#layover">layover</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#runtime" title="https://w3id.org/transmodel/journeys#runtime">runtime</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#vehicleJourneyDayType"
+               title="https://w3id.org/transmodel/journeys#vehicleJourneyDayType">vehicleJourneyDayType</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#vehicleJourneyRoute"
+               title="https://w3id.org/transmodel/journeys#vehicleJourneyRoute">vehicleJourneyRoute</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#waitTime" title="https://w3id.org/transmodel/journeys#waitTime">waitTime</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#vehicleJourney"
+               title="https://w3id.org/transmodel/journeys#vehicleJourney">vehicleJourney</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#vehicleJourneys"
+               title="https://w3id.org/transmodel/journeys#vehicleJourneys">vehicleJourneys</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1950,6 +2069,10 @@ A vehicle stopping place may be served by one or more quays.</span>
             title="https://w3id.org/transmodel/journeys#passengerConnection">passengerConnection</a>
       </li>
       <li>
+         <a href="#passengerJourneys"
+            title="https://w3id.org/transmodel/journeys#passengerJourneys">passengerJourneys</a>
+      </li>
+      <li>
          <a href="#passingTimeTimingPoint"
             title="https://w3id.org/transmodel/journeys#passingTimeTimingPoint">passingTimeTimingPoint</a>
       </li>
@@ -1974,6 +2097,12 @@ A vehicle stopping place may be served by one or more quays.</span>
       </li>
       <li>
          <a href="#stopsAt" title="https://w3id.org/transmodel/journeys#stopsAt">stopsAt</a>
+      </li>
+      <li>
+         <a href="#timeTabledPassingTime"
+            title="https://w3id.org/transmodel/journeys#timeTabledPassingTime">
+            <span>time tabled passing time</span>
+         </a>
       </li>
       <li>
          <a href="#timingLinkInJourneyPattern"
@@ -2009,8 +2138,16 @@ A vehicle stopping place may be served by one or more quays.</span>
             title="https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides">vehicleJourneyRunTimeOverrides</a>
       </li>
       <li>
+         <a href="#vehicleJourneys"
+            title="https://w3id.org/transmodel/journeys#vehicleJourneys">vehicleJourneys</a>
+      </li>
+      <li>
          <a href="#vehiclePassingTime"
             title="https://w3id.org/transmodel/journeys#vehiclePassingTime">vehiclePassingTime</a>
+      </li>
+      <li>
+         <a href="#vehicleTimeTabledPassingTime"
+            title="https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime">vehicleTimeTabledPassingTime</a>
       </li>
    </ul>
    <div class="entity" id="accessMode">
@@ -2384,7 +2521,7 @@ may be recorded.</a>
             <dt>has domain</dt>
             <dd>
                <a href="#VehicleJourney"
-                  title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -2408,7 +2545,7 @@ may be recorded.</a>
             <dt>has domain</dt>
             <dd>
                <a href="#VehicleJourney"
-                  title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -2583,6 +2720,31 @@ may be recorded.</a>
          </dl>
       </div>
    </div>
+   <div class="entity" id="passengerJourneys">
+      <h3>passengerJourneys<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#passengerJourneys</p>
+      <div class="comment">
+         <span class="markdown">The Journey of a Passenger is a Trip</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Passenger" title="https://w3id.org/transmodel/journeys#Passenger">Passenger</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Trip" title="https://w3id.org/transmodel/journeys#Trip">Trip</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="passingTimeTimingPoint">
       <h3>passingTimeTimingPoint<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2741,6 +2903,29 @@ may be recorded.</a>
          </dl>
       </div>
    </div>
+   <div class="entity" id="timeTabledPassingTime">
+      <h3>time tabled passing time<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#timeTabledPassingTime</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Point" title="https://w3id.org/transmodel/journeys#Point">Point</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#TimeTabledPassingTime"
+                  title="https://w3id.org/transmodel/journeys#TimeTabledPassingTime">TimeTabledPassingTime</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="timingLinkInJourneyPattern">
       <h3>timingLinkInJourneyPattern<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2832,7 +3017,7 @@ may be recorded.</a>
             <dt>has range</dt>
             <dd>
                <a href="#VehicleJourney"
-                  title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -2850,7 +3035,7 @@ may be recorded.</a>
             <dt>has domain</dt>
             <dd>
                <a href="#VehicleJourney"
-                  title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -2896,7 +3081,7 @@ may be recorded.</a>
             <dt>has domain</dt>
             <dd>
                <a href="#VehicleJourney"
-                  title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -2946,6 +3131,32 @@ may be recorded.</a>
          </dl>
       </div>
    </div>
+   <div class="entity" id="vehicleJourneys">
+      <h3>vehicleJourneys<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#vehicleJourneys</p>
+      <div class="comment">
+         <span class="markdown">The Journey of a Vehicle is a VehicleJourney</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Vehicle" title="https://w3id.org/transmodel/journeys#Vehicle">Vehicle</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#VehicleJourney"
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="vehiclePassingTime">
       <h3>vehiclePassingTime<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2964,6 +3175,29 @@ may be recorded.</a>
             <dd>
                <a href="#PassingTime"
                   title="https://w3id.org/transmodel/journeys#PassingTime">PassingTime</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="vehicleTimeTabledPassingTime">
+      <h3>vehicleTimeTabledPassingTime<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Vehicle" title="https://w3id.org/transmodel/journeys#Vehicle">Vehicle</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#TimeTabledPassingTime"
+                  title="https://w3id.org/transmodel/journeys#TimeTabledPassingTime">TimeTabledPassingTime</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -3106,7 +3340,7 @@ may be recorded.</a>
             </dd>
             <dd>
                <a href="#VehicleJourney"
-                  title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -3150,7 +3384,7 @@ may be recorded.</a>
             </dd>
             <dd>
                <a href="#VehicleJourney"
-                  title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -3305,7 +3539,7 @@ may be recorded.</a>
             </dd>
             <dd>
                <a href="#VehicleJourney"
-                  title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -3505,7 +3739,7 @@ may be recorded.</a>
             </dd>
             <dd>
                <a href="#VehicleJourney"
-                  title="https://w3id.org/transmodel/journeys#VehicleJourney">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</a>
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
