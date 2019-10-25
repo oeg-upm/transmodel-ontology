@@ -304,6 +304,7 @@
 # https://w3id.org/transmodel/common#Passenger
 <https://w3id.org/transmodel/common#Passenger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/common#Passenger> <http://www.w3.org/2000/01/rdf-schema#comment> "A Passenger is someone who makes a Trip"@en .
+<https://w3id.org/transmodel/common#Passenger> <http://www.w3.org/2000/01/rdf-schema#comment> "When a Passenger makes a Journey it is a Trip; when a Vehicle does it is a VehicleJourney"@en .
 <https://w3id.org/transmodel/common#Passenger> <http://www.w3.org/2000/01/rdf-schema#label> "Passenger"@en .
 # 
 # https://w3id.org/transmodel/common#Point
@@ -360,6 +361,7 @@
 # 
 # https://w3id.org/transmodel/common#VehicleJourney
 <https://w3id.org/transmodel/common#VehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/common#VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "The Trip/Journey of a Vehicle is a VehicleJourney; a Trip for a Passenger"@en .
 <https://w3id.org/transmodel/common#VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route."@en .
 <https://w3id.org/transmodel/common#VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleJourney"@en .
 # 

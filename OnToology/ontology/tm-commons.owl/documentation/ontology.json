@@ -116,6 +116,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A Passenger is someone who makes a Trip"
+  }, {
+    "@language" : "en",
+    "@value" : "When a Passenger makes a Journey it is a Trip; when a Vehicle does it is a VehicleJourney"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -239,6 +242,9 @@
   "@id" : "https://w3id.org/transmodel/common#VehicleJourney",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Trip/Journey of a Vehicle is a VehicleJourney; a Trip for a Passenger"
+  }, {
     "@language" : "en",
     "@value" : "The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route."
   } ],

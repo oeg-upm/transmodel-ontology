@@ -1,0 +1,29 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "tmjourney:PostalAddress" "tmjourney:Address" "tmjourney:ParkingPoint" "tmjourney:Connection" "tmjourney:Point" "tmjourney:TimingPointInJourneyPattern" "tmjourney:BeaconPoint" "tmjourney:MonitoredVehicleJourney" "tmjourney:PassingTime" "tmjourney:VehicleJourney" "tmjourney:StopPointInJourneyPattern" "tmjourney:DeadRunPattern" "tmjourney:FlexibleRoute" "tmjourney:FlexibleLine" "tmjourney:TimingPoint" "tmjourney:Route" "tmjourney:DefaultConnection" "tmjourney:JourneyPattern" "tmjourney:ServiceJourneyPattern" "tmjourney:TimetabledVehicleJourney" "tmjourney:AddressablePlace" "tmjourney:ScheduledStopPoint" "tmjourney:DatedVehicleJourney" "tmjourney:DatedBlock" "tmjourney:DeadRun" "tmjourney:FlexiblePoint" "tmjourney:Line" "tmjourney:Place" "tmjourney:TopographicPlace" "tmjourney:Block" "tmjourney:PointInJourneyPattern" "tmjourney:DatedPassingTime" "tmjourney:RoadAddress" ; /*classes style*/
+	"tmjourney:TopographicPlace" -> "tmjourney:Place" [ label = "rdfs:subClassOf" ];
+	"tmjourney:FlexibleRoute" -> "tmjourney:Route" [ label = "rdfs:subClassOf" ];
+	"tmjourney:ServiceJourneyPattern" -> "tmjourney:JourneyPattern" [ label = "rdfs:subClassOf" ];
+	"tmjourney:TimingPoint" -> "tmjourney:PointInJourneyPattern" [ label = "rdfs:subClassOf" ];
+	"tmjourney:FlexibleLine" -> "tmjourney:Line" [ label = "rdfs:subClassOf" ];
+	"tmjourney:DatedVehicleJourney" -> "tmjourney:VehicleJourney" [ label = "rdfs:subClassOf" ];
+	"tmjourney:DeadRunPattern" -> "tmjourney:JourneyPattern" [ label = "rdfs:subClassOf" ];
+	"tmjourney:StopPointInJourneyPattern" -> "tmjourney:Point" [ label = "rdfs:subClassOf" ];
+	"tmjourney:DeadRun" -> "tmjourney:VehicleJourney" [ label = "rdfs:subClassOf" ];
+	"tmjourney:DatedBlock" -> "tmjourney:Block" [ label = "rdfs:subClassOf" ];
+	"tmjourney:DatedPassingTime" -> "tmjourney:PassingTime" [ label = "rdfs:subClassOf" ];
+	"tmjourney:AddressablePlace" -> "tmjourney:Place" [ label = "rdfs:subClassOf" ];
+	"tmjourney:PointInJourneyPattern" -> "tmjourney:Point" [ label = "rdfs:subClassOf" ];
+	"tmjourney:TimingPointInJourneyPattern" -> "tmjourney:Point" [ label = "rdfs:subClassOf" ];
+	"tmjourney:BeaconPoint" -> "tmjourney:Point" [ label = "rdfs:subClassOf" ];
+	"tmjourney:RoadAddress" -> "tmjourney:Address" [ label = "rdfs:subClassOf" ];
+	"tmjourney:ParkingPoint" -> "tmjourney:TimingPoint" [ label = "rdfs:subClassOf" ];
+	"tmjourney:FlexiblePoint" -> "tmjourney:Point" [ label = "rdfs:subClassOf" ];
+	"tmjourney:DefaultConnection" -> "tmjourney:Connection" [ label = "rdfs:subClassOf" ];
+	"tmjourney:PostalAddress" -> "tmjourney:Address" [ label = "rdfs:subClassOf" ];
+	"tmjourney:MonitoredVehicleJourney" -> "tmjourney:VehicleJourney" [ label = "rdfs:subClassOf" ];
+	"tmjourney:TimetabledVehicleJourney" -> "tmjourney:VehicleJourney" [ label = "rdfs:subClassOf" ];
+	"tmjourney:ScheduledStopPoint" -> "tmjourney:PointInJourneyPattern" [ label = "rdfs:subClassOf" ];
+
+}
