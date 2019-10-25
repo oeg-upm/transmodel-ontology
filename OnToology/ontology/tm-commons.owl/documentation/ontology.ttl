@@ -342,7 +342,8 @@
 
 ###  https://w3id.org/transmodel/common#Passenger
 <https://w3id.org/transmodel/common#Passenger> rdf:type owl:Class ;
-                                               rdfs:comment "A Passenger is someone who makes a Trip"@en ;
+                                               rdfs:comment "A Passenger is someone who makes a Trip"@en ,
+                                                            "When a Passenger makes a Journey it is a Trip; when a Vehicle does it is a VehicleJourney"@en ;
                                                rdfs:label "Passenger"@en .
 
 
@@ -417,7 +418,8 @@ recorded. It's the same as TimingPointInJourneyPattern"""@en ;
 
 ###  https://w3id.org/transmodel/common#VehicleJourney
 <https://w3id.org/transmodel/common#VehicleJourney> rdf:type owl:Class ;
-                                                    rdfs:comment "The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route."@en ;
+                                                    rdfs:comment "The Trip/Journey of a Vehicle is a VehicleJourney; a Trip for a Passenger"@en ,
+                                                                 "The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route."@en ;
                                                     rdfs:label "VehicleJourney"@en .
 
 

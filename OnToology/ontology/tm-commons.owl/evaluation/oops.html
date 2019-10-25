@@ -117,7 +117,7 @@ table.tablesorter thead tr .headerSortDown {
     <div class="panel-heading">
     <h4 class="panel-title">
     <a data-toggle="collapse" href="#collapse0">
-    "P08". "Missing annotations"<span style="float: right;">"30" cases detected. <span class="label label-minor">"Minor"</span></span></a>
+    "P08". "Missing annotations"<span style="float: right;">"31" cases detected. <span class="label label-minor">"Minor"</span></span></a>
     </h4>
     </div>
     <div id="collapse0" class="panel-collapse collapse">
@@ -145,24 +145,10 @@ table.tablesorter thead tr .headerSortDown {
     <div class="panel-heading">
     <h4 class="panel-title">
     <a data-toggle="collapse" href="#collapse2">
-    "P10". "Missing disjointness"<span style="float: right;">"1" cases detected. <span class="label label-warning">"Important"</span></span></a>
-    </h4>
-    </div>
-    <div id="collapse2" class="panel-collapse collapse">
-    <div class="panel-body">
-    <p>"The ontology lacks disjoint axioms between classes or between properties that should be defined as disjoint. This pitfall is related with the guidelines provided in [6], [2] and [7].\t"</p>
-    </div>
-    </div>
-    </div>
-    
-    <div class="panel panel-default">
-    <div class="panel-heading">
-    <h4 class="panel-title">
-    <a data-toggle="collapse" href="#collapse3">
     "P13". "Inverse relationships not explicitly declared"<span style="float: right;">"16" cases detected. <span class="label label-minor">"Minor"</span></span></a>
     </h4>
     </div>
-    <div id="collapse3" class="panel-collapse collapse">
+    <div id="collapse2" class="panel-collapse collapse">
     <div class="panel-body">
     <p>"This pitfall appears when any relationship (except for those that are defined as symmetric properties using owl:SymmetricProperty) does not have an inverse relationship (owl:inverseOf) defined within the ontology.\t"</p>
     </div>
@@ -172,13 +158,27 @@ table.tablesorter thead tr .headerSortDown {
     <div class="panel panel-default">
     <div class="panel-heading">
     <h4 class="panel-title">
+    <a data-toggle="collapse" href="#collapse3">
+    "P10". "Missing disjointness"<span style="float: right;">"1" cases detected. <span class="label label-warning">"Important"</span></span></a>
+    </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+    <div class="panel-body">
+    <p>"The ontology lacks disjoint axioms between classes or between properties that should be defined as disjoint. This pitfall is related with the guidelines provided in [6], [2] and [7].\t"</p>
+    </div>
+    </div>
+    </div>
+    
+    <div class="panel panel-default">
+    <div class="panel-heading">
+    <h4 class="panel-title">
     <a data-toggle="collapse" href="#collapse4">
-    "P04". "Creating unconnected ontology elements"<span style="float: right;">"3" cases detected. <span class="label label-minor">"Minor"</span></span></a>
+    "P11". "Missing domain or range in properties"<span style="float: right;">"5" cases detected. <span class="label label-warning">"Important"</span></span></a>
     </h4>
     </div>
     <div id="collapse4" class="panel-collapse collapse">
     <div class="panel-body">
-    <p>"Ontology elements (classes, object properties and datatype properties) are created isolated, with no relation to the rest of the ontology.\t"</p>
+    <p>"Object and/or datatype properties without domain or range (or none of them) are included in the ontology. \t"</p>
     </div>
     </div>
     </div>
@@ -187,12 +187,12 @@ table.tablesorter thead tr .headerSortDown {
     <div class="panel-heading">
     <h4 class="panel-title">
     <a data-toggle="collapse" href="#collapse5">
-    "P11". "Missing domain or range in properties"<span style="float: right;">"5" cases detected. <span class="label label-warning">"Important"</span></span></a>
+    "P04". "Creating unconnected ontology elements"<span style="float: right;">"4" cases detected. <span class="label label-minor">"Minor"</span></span></a>
     </h4>
     </div>
     <div id="collapse5" class="panel-collapse collapse">
     <div class="panel-body">
-    <p>"Object and/or datatype properties without domain or range (or none of them) are included in the ontology. \t"</p>
+    <p>"Ontology elements (classes, object properties and datatype properties) are created isolated, with no relation to the rest of the ontology.\t"</p>
     </div>
     </div>
     </div>
