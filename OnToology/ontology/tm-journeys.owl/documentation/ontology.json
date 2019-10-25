@@ -469,7 +469,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Specialisation of Line for flexible service. As all the service on a Line may not ve flexible, flexibility itself is described at JourneyPattern level, meaning that a separate JourneyPattern is needed for each type of flexibility available for the line"
+    "@value" : "Specialisation of Line for FlexibleService. As all the service on a Line may not be flexible, flexibility itself is described at JourneyPattern level, meaning that a separate JourneyPattern is needed for each type of flexibility available for the Line"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -685,6 +685,20 @@
     "@value" : "Monday"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#MonitoredVehicleJourney",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A VehicleJourney that is run under real-time tracking system and so for which real-time observations and predictions and other data are available"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MonitoredVehicleJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#OneDirection",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#AllowedLineDirections" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -773,6 +787,20 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Point"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#PointInJourneyPattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Scheduled Stop Point of Timing Point in a Journey Pattern with its order in that Journey Pattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "PointInJourneyPattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Point"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#PostalAddress",
@@ -866,10 +894,7 @@
     "@value" : "ScheduledStopPoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Point"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#StopPointInJourneyPattern"
+    "@id" : "https://w3id.org/transmodel/journeys#PointInJourneyPattern"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#Service",
@@ -976,6 +1001,31 @@
     "@value" : "TimeDemandType"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#TimeTabledPassingTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Long-term planned time data concerning public transport vehicles passing a particular PointInJourneyPattern on a specified VehicleJourney for a certain DayType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "TimeTabledPassingTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#TimetabledVehicleJourney",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "TimetabledVehicleJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#TimingLink",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1008,10 +1058,7 @@
     "@value" : "TimingPoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Point"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern"
+    "@id" : "https://w3id.org/transmodel/journeys#PointInJourneyPattern"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern",
@@ -1091,10 +1138,11 @@
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route."
-  }, {
+    "@value" : "The Journey made by the Vehicle. Within VehicleJourney there are three types:\n- TimetabledVehicleJourney in a geneeral timetable that will run on a specific time on a DayType throughout the period of applicability of the schedule.\n- DatedVehicleJourney, a specific VehicleJourney that runs on a spcific calendar date;\n- MonitoredVehicleJourney, a VehicleJourney run under real-time tracking system and so for which real-time observations and predictions and other data are available."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "VehicleJourney"
   } ]
@@ -1604,6 +1652,23 @@
     "@id" : "https://w3id.org/transmodel/journeys#Connection"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#passengerJourneys",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Journey of a Passenger is a Trip"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Passenger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "passengerJourneys"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Trip"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#passingTimeTimingPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1828,6 +1893,15 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#timeTabledPassingTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#TimeTabledPassingTime"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#timingLink",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1946,6 +2020,23 @@
     "@id" : "https://w3id.org/transmodel/journeys#JourneyRunTime"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#vehicleJourneys",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Journey of a Vehicle is a VehicleJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Vehicle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "vehicleJourneys"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#vehiclePassingTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -1957,6 +2048,19 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#PassingTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Vehicle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "vehicleTimeTabledPassingTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#TimeTabledPassingTime"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#virtualLineService",

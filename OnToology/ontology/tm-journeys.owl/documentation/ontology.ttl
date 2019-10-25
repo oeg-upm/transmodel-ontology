@@ -262,6 +262,14 @@
                      rdfs:label "passengerConnection"@en .
 
 
+###  https://w3id.org/transmodel/journeys#passengerJourneys
+:passengerJourneys rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Passenger ;
+                   rdfs:range :Trip ;
+                   rdfs:comment "The Journey of a Passenger is a Trip"@en ;
+                   rdfs:label "passengerJourneys"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#passingTimeTimingPoint
 :passingTimeTimingPoint rdf:type owl:ObjectProperty ;
                         rdfs:domain :PassingTime ;
@@ -303,6 +311,12 @@
          rdfs:domain :Vehicle ;
          rdfs:range :ScheduledStopPoint ;
          rdfs:label "stopsAt"@en .
+
+
+###  https://w3id.org/transmodel/journeys#timeTabledPassingTime
+:timeTabledPassingTime rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Point ;
+                       rdfs:range :TimeTabledPassingTime .
 
 
 ###  https://w3id.org/transmodel/journeys#timingLink
@@ -363,11 +377,26 @@
                                 rdfs:label "vehicleJourneyRunTimeOverrides"@en .
 
 
+###  https://w3id.org/transmodel/journeys#vehicleJourneys
+:vehicleJourneys rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Vehicle ;
+                 rdfs:range :VehicleJourney ;
+                 rdfs:comment "The Journey of a Vehicle is a VehicleJourney"@en ;
+                 rdfs:label "vehicleJourneys"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#vehiclePassingTime
 :vehiclePassingTime rdf:type owl:ObjectProperty ;
                     rdfs:domain :Vehicle ;
                     rdfs:range :PassingTime ;
                     rdfs:label "vehiclePassingTime"@en .
+
+
+###  https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime
+:vehicleTimeTabledPassingTime rdf:type owl:ObjectProperty ;
+                              rdfs:domain :Vehicle ;
+                              rdfs:range :TimeTabledPassingTime ;
+                              rdfs:label "vehicleTimeTabledPassingTime"@en .
 
 
 #################################################################
@@ -701,7 +730,7 @@
 ###  https://w3id.org/transmodel/journeys#FlexibleLine
 :FlexibleLine rdf:type owl:Class ;
               rdfs:subClassOf :Line ;
-              rdfs:comment "Specialisation of Line for flexible service. As all the service on a Line may not ve flexible, flexibility itself is described at JourneyPattern level, meaning that a separate JourneyPattern is needed for each type of flexibility available for the line"@en ;
+              rdfs:comment "Specialisation of Line for FlexibleService. As all the service on a Line may not be flexible, flexibility itself is described at JourneyPattern level, meaning that a separate JourneyPattern is needed for each type of flexibility available for the Line"@en ;
               rdfs:label "FlexibleLine"@en .
 
 
@@ -779,6 +808,13 @@
                  rdfs:label "ModeOfTransport"@en .
 
 
+###  https://w3id.org/transmodel/journeys#MonitoredVehicleJourney
+:MonitoredVehicleJourney rdf:type owl:Class ;
+                         rdfs:subClassOf :VehicleJourney ;
+                         rdfs:comment "A VehicleJourney that is run under real-time tracking system and so for which real-time observations and predictions and other data are available"@en ;
+                         rdfs:label "MonitoredVehicleJourney"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#OperatingDay
 :OperatingDay rdf:type owl:Class ;
               rdfs:comment "A day of public transport operation of which the characteristics are defined within in a specific ServiceCalendar. An OperatingDay may last more than 24 hours."@en ;
@@ -816,6 +852,13 @@
        rdfs:label "Point"@en .
 
 
+###  https://w3id.org/transmodel/journeys#PointInJourneyPattern
+:PointInJourneyPattern rdf:type owl:Class ;
+                       rdfs:subClassOf :Point ;
+                       rdfs:comment "A Scheduled Stop Point of Timing Point in a Journey Pattern with its order in that Journey Pattern"@en ;
+                       rdfs:label "PointInJourneyPattern"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#PostalAddress
 :PostalAddress rdf:type owl:Class ;
                rdfs:subClassOf :Address ;
@@ -846,8 +889,7 @@ A Quay may contain a subquay."""@en ;
 
 ###  https://w3id.org/transmodel/journeys#ScheduledStopPoint
 :ScheduledStopPoint rdf:type owl:Class ;
-                    owl:equivalentClass :StopPointInJourneyPattern ;
-                    rdfs:subClassOf :Point ;
+                    rdfs:subClassOf :PointInJourneyPattern ;
                     rdfs:comment "A ScheduledStopPoint is a Point where a Passenger can board or alight from a Vehicle."@en ;
                     rdfs:label "ScheduledStopPoint"@en .
 
@@ -903,6 +945,19 @@ by a ServiceJourneyPattern."""@en ;
                 rdfs:label "TimeDemandType"@en .
 
 
+###  https://w3id.org/transmodel/journeys#TimeTabledPassingTime
+:TimeTabledPassingTime rdf:type owl:Class ;
+                       rdfs:comment "Long-term planned time data concerning public transport vehicles passing a particular PointInJourneyPattern on a specified VehicleJourney for a certain DayType"@en ;
+                       rdfs:label "TimeTabledPassingTime"@en .
+
+
+###  https://w3id.org/transmodel/journeys#TimetabledVehicleJourney
+:TimetabledVehicleJourney rdf:type owl:Class ;
+                          rdfs:subClassOf :VehicleJourney ;
+                          rdfs:comment "The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route."@en ;
+                          rdfs:label "TimetabledVehicleJourney"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#TimingLink
 :TimingLink rdf:type owl:Class ;
             rdfs:label """A TimingLink is an ordered pair of TimingPoint for which run times
@@ -921,8 +976,7 @@ about each iteration of the TimingLink"""@en ;
 
 ###  https://w3id.org/transmodel/journeys#TimingPoint
 :TimingPoint rdf:type owl:Class ;
-             owl:equivalentClass :TimingPointInJourneyPattern ;
-             rdfs:subClassOf :Point ;
+             rdfs:subClassOf :PointInJourneyPattern ;
              rdfs:comment """A TimingPoint is a Point against which the timing information necessary to build schedules may be recorded.
 
 It's the same as TimingPointInJourneyPattern"""@en ;
@@ -970,8 +1024,11 @@ It's the same as TimingPointInJourneyPattern"""@en ;
 
 ###  https://w3id.org/transmodel/journeys#VehicleJourney
 :VehicleJourney rdf:type owl:Class ;
-                rdfs:label "The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route."@en ,
-                           "VehicleJourney"@en .
+                rdfs:comment """The Journey made by the Vehicle. Within VehicleJourney there are three types:
+- TimetabledVehicleJourney in a geneeral timetable that will run on a specific time on a DayType throughout the period of applicability of the schedule.
+- DatedVehicleJourney, a specific VehicleJourney that runs on a spcific calendar date;
+- MonitoredVehicleJourney, a VehicleJourney run under real-time tracking system and so for which real-time observations and predictions and other data are available."""@en ;
+                rdfs:label "VehicleJourney"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#VehicleJourneyLayover
