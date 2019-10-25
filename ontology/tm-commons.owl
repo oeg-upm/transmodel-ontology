@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/transmodel/commons#"
      xml:base="https://w3id.org/transmodel/commons"
      xmlns:cc="http://creativecommons.org/ns#"
@@ -10,17 +10,17 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:tmfac="https://w3id.org/transmodel/facilities#"
+     xmlns:tmkos="https://w3id.org/transmodel/kos/"
      xmlns:tmauth="https://w3id.org/transmodel/authorities#"
-     xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
      xmlns:tmfare="https://w3id.org/transmodel/fares#"
      xmlns:tmcommons="https://w3id.org/transmodel/commons#"
-     xmlns:tmkos="https://w3id.org/transmodel/kos/"
-     xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/"
-     xmlns:tmkosauthority="https://w3id.org/transmodel/kos/authorities/"
+     xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
      xmlns:tmkosfare="https://w3id.org/transmodel/kos/fares/"
+     xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/"
      xmlns:tmkosjourney="https://w3id.org/transmodel/kos/journeys/"
-     xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/">
-  <owl:Ontology rdf:about="https://w3id.org/transmodel/commons#">
+     xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/"
+     xmlns:tmkosauthority="https://w3id.org/transmodel/kos/authorities/">
+    <owl:Ontology rdf:about="https://w3id.org/transmodel/commons#">
         <owl:versionIRI rdf:resource="https://w3id.org/transmodel/commons/0.2"/>
         <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <dc:creator>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
@@ -36,7 +36,6 @@
         <rdfs:seeAlso xml:lang="en">https://github.com/oeg-upm/transmodel-ontology</rdfs:seeAlso>
         <owl:versionInfo xml:lang="en">This is the initial version of the module on Commons, after considering the UML models and XSD descriptions of Transmodel and NeTEx</owl:versionInfo>
     </owl:Ontology>
-
     
 
 
@@ -48,52 +47,83 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
     <!-- http://creativecommons.org/ns#license -->
 
     <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
 
-    <!-- https://w3id.org/transmodel/journeys#creator -->
 
-    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/commons#creator"/>
+    <!-- http://purl.org/dc/elements/1.1/creator -->
 
-        <!-- http://purl.org/dc/elements/1.1/date -->
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
 
-    <!-- https://w3id.org/transmodel/commons#description -->
 
-    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/commons#description"/>
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
 
     <!-- http://purl.org/dc/elements/1.1/identifier -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+    
+
 
     <!-- http://purl.org/dc/elements/1.1/rights -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
 
     <!-- http://purl.org/dc/elements/1.1/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
 
     <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
 
-    <!-- https://w3id.org/transmodel/facilities#author -->
+
+    <!-- https://w3id.org/transmodel/commons#author -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/commons#author"/>
+    
 
-    <!-- https://w3id.org/transmodel/facilities#description -->
+
+    <!-- https://w3id.org/transmodel/commons#creator -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/commons#creator"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#description -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/commons#description">
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/commons#MeetingPointService"/>
     </owl:AnnotationProperty>
+    
 
-    <!-- https://w3id.org/transmodel/journeys#mbox -->
+
+    <!-- https://w3id.org/transmodel/commons#mbox -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/commons#mbox"/>
+    
+
 
     <!-- https://w3id.org/transmodel/commons#name -->
 
@@ -423,6 +453,12 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
     <!-- https://w3id.org/transmodel/common#ActivationLink -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/common#ActivationLink">
@@ -490,6 +526,7 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/common#Passenger">
         <rdfs:comment xml:lang="en">A Passenger is someone who makes a Trip</rdfs:comment>
+        <rdfs:comment xml:lang="en">When a Passenger makes a Journey it is a Trip; when a Vehicle does it is a VehicleJourney</rdfs:comment>
         <rdfs:label xml:lang="en">Passenger</rdfs:label>
     </owl:Class>
     
@@ -597,6 +634,7 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
     <!-- https://w3id.org/transmodel/common#VehicleJourney -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/common#VehicleJourney">
+        <rdfs:comment xml:lang="en">The Trip/Journey of a Vehicle is a VehicleJourney; a Trip for a Passenger</rdfs:comment>
         <rdfs:comment xml:lang="en">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</rdfs:comment>
         <rdfs:label xml:lang="en">VehicleJourney</rdfs:label>
     </owl:Class>
@@ -608,12 +646,8 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/transmodel/common#VehicleJourneyLayover">
         <rdfs:label xml:lang="en">VehicleJourneyLayover</rdfs:label>
     </owl:Class>
+    
 
-    <rdf:Description>
-        <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
-        <name xml:lang="en">Adolfo Anton-Bravo</name>
-    </rdf:Description>
-        
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -621,14 +655,22 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
     // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
-    -->
+     -->
+
     
+
+
     <!-- https://w3id.org/transmodel/kos/commons/CommonsType -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/commons/CommonsType">
-      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-      <rdfs:comment xml:lang="en">Concept scheme where all the codelists for the types of journeys that are included in the Transmodel ontology</rdfs:comment>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:comment xml:lang="en">Concept scheme where all the codelists for the types of journeys that are included in the Transmodel ontology</rdfs:comment>
     </owl:NamedIndividual>
+    <rdf:Description>
+        <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
+        <name xml:lang="en">Adolfo Anton-Bravo</name>
+    </rdf:Description>
+    
 
 
     <!-- 
