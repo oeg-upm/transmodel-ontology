@@ -3,27 +3,35 @@
     "ParkingComponent" : {
       "@id" : "https://w3id.org/transmodel/authorities#ParkingComponent"
     },
-    "TypeOfResponsability" : {
-      "@id" : "https://w3id.org/transmodel/authorities#TypeOfResponsability"
-    },
     "ParkingEntrance" : {
       "@id" : "https://w3id.org/transmodel/authorities#ParkingEntrance"
+    },
+    "describedThrough" : {
+      "@id" : "https://w3id.org/transmodel/authorities#describedThrough",
+      "@type" : "@id"
+    },
+    "governedBy" : {
+      "@id" : "https://w3id.org/transmodel/authorities#governedBy",
+      "@type" : "@id"
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
-    "OtherOrganization" : {
-      "@id" : "https://w3id.org/transmodel/authorities#OtherOrganization"
-    },
     "license" : {
       "@id" : "http://creativecommons.org/ns#license"
     },
+    "Organisation" : {
+      "@id" : "https://w3id.org/transmodel/authorities#Organisation"
+    },
     "Organization" : {
-      "@id" : "https://w3id.org/transmodel/authorities#Organization"
+      "@id" : "http://xmlns.com/foaf/0.1/Organization"
     },
     "operatesInAdministrativeZone" : {
       "@id" : "https://w3id.org/transmodel/authorities#operatesInAdministrativeZone",
       "@type" : "@id"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
     },
     "Department" : {
       "@id" : "https://w3id.org/transmodel/authorities#Department"
@@ -43,19 +51,15 @@
     "ControlCenter" : {
       "@id" : "https://w3id.org/transmodel/authorities#ControlCenter"
     },
-    "isPartOf" : {
-      "@id" : "https://w3id.org/transmodel/authorities#isPartOf",
-      "@type" : "@id"
-    },
     "mbox" : {
       "@id" : "https://w3id.org/transmodel/authorities#mbox"
     },
     "Concept" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "parkingCapacity" : {
-      "@id" : "https://w3id.org/transmodel/authorities#parkingCapacity",
-      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    "timeZone" : {
+      "@id" : "http://www.w3.org/2006/time#timeZone",
+      "@type" : "@id"
     },
     "GroupOfOperators" : {
       "@id" : "https://w3id.org/transmodel/authorities#GroupOfOperators"
@@ -64,9 +68,8 @@
       "@id" : "https://w3id.org/transmodel/authorities#providesService",
       "@type" : "@id"
     },
-    "hasAResponsability" : {
-      "@id" : "https://w3id.org/transmodel/authorities#hasAResponsability",
-      "@type" : "@id"
+    "ContactDetails" : {
+      "@id" : "https://w3id.org/transmodel/authorities#ContactDetails"
     },
     "creator" : {
       "@id" : "http://purl.org/dc/elements/1.1/creator"
@@ -74,11 +77,11 @@
     "name" : {
       "@id" : "https://w3id.org/transmodel/authorities#name"
     },
-    "contactDetails" : {
-      "@id" : "https://w3id.org/transmodel/authorities#contactDetails"
-    },
     "ParkingBay" : {
       "@id" : "https://w3id.org/transmodel/authorities#ParkingBay"
+    },
+    "ContactPoint" : {
+      "@id" : "http://schema.org/ContactPoint"
     },
     "Zone" : {
       "@id" : "https://w3id.org/transmodel/authorities#Zone"
@@ -89,15 +92,8 @@
     "ServicedOrganisation" : {
       "@id" : "https://w3id.org/transmodel/authorities#ServicedOrganisation"
     },
-    "ManagementAgent" : {
-      "@id" : "https://w3id.org/transmodel/authorities#ManagementAgent"
-    },
     "identifier" : {
       "@id" : "http://purl.org/dc/elements/1.1/identifier"
-    },
-    "isGroupOfOperators" : {
-      "@id" : "https://w3id.org/transmodel/authorities#isGroupOfOperators",
-      "@type" : "@id"
     },
     "AdministrativeZone" : {
       "@id" : "https://w3id.org/transmodel/authorities#AdministrativeZone"
@@ -123,6 +119,17 @@
     "Employee" : {
       "@id" : "https://w3id.org/transmodel/authorities#Employee"
     },
+    "DistributionChannel" : {
+      "@id" : "https://w3id.org/transmodel/authorities#DistributionChannel"
+    },
+    "hasUnit" : {
+      "@id" : "http://www.w3.org/ns/org#hasUnit",
+      "@type" : "@id"
+    },
+    "TOBECHECKED_parkingCapacity" : {
+      "@id" : "https://w3id.org/transmodel/authorities#TOBECHECKED_parkingCapacity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
     "date" : {
       "@id" : "http://purl.org/dc/elements/1.1/date"
     },
@@ -132,15 +139,27 @@
     "CrewBase" : {
       "@id" : "https://w3id.org/transmodel/authorities#CrewBase"
     },
+    "contactPoint" : {
+      "@id" : "http://schema.org/contactPoint",
+      "@type" : "@id"
+    },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
-    "ownership" : {
-      "@id" : "https://w3id.org/transmodel/authorities#ownership",
-      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    "language" : {
+      "@id" : "https://w3id.org/transmodel/authorities#language",
+      "@type" : "http://www.w3.org/2001/XMLSchema#language"
+    },
+    "distributionChannelType" : {
+      "@id" : "https://w3id.org/transmodel/authorities#distributionChannelType",
+      "@type" : "@id"
     },
     "ParkingEntranceForVehicles" : {
       "@id" : "https://w3id.org/transmodel/authorities#ParkingEntranceForVehicles"
+    },
+    "characterisedBy" : {
+      "@id" : "https://w3id.org/transmodel/authorities#characterisedBy",
+      "@type" : "@id"
     },
     "OrganisationPart" : {
       "@id" : "https://w3id.org/transmodel/authorities#OrganisationPart"
@@ -148,14 +167,26 @@
     "ServiceArea" : {
       "@id" : "https://w3id.org/transmodel/authorities#ServiceArea"
     },
+    "OrganizationalUnit" : {
+      "@id" : "http://www.w3.org/ns/org#OrganizationalUnit"
+    },
+    "inScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+      "@type" : "@id"
+    },
     "description" : {
       "@id" : "http://purl.org/dc/elements/1.1/description"
     },
     "preferredNamespaceUri" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
     },
-    "TravelAgent" : {
-      "@id" : "https://w3id.org/transmodel/authorities#TravelAgent"
+    "TOBECHECKED" : {
+      "@id" : "https://w3id.org/transmodel/authorities#TOBECHECKED",
+      "@type" : "@id"
+    },
+    "classification" : {
+      "@id" : "http://www.w3.org/ns/org#classification",
+      "@type" : "@id"
     }
   }
 }
