@@ -8,6 +8,7 @@
 
 <https://w3id.org/transmodel/authorities#> rdf:type owl:Ontology ;
                                             owl:versionIRI <https://w3id.org/transmodel/authorities/0.2> ;
+                                            owl:imports <http://www.w3.org/ns/org#> ;
                                             <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> ;
                                             <http://purl.org/dc/elements/1.1/creator> "Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)" ,
                                                                                       "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
@@ -17,7 +18,8 @@
                                             <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)" ;
                                             <http://purl.org/dc/elements/1.1/title> "Transmodel Ontology - Authorities"@en ;
                                             <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/transmodel/facilities#> ;
-                                            rdfs:comment "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en ;
+                                            rdfs:comment "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en ,
+                                                         "TODO: Check whether this ontology should be better renamed to Organisations, as it refers to more things than authorities."@en ;
                                             rdfs:label "Transmodel Ontology - Authorities"@en ;
                                             rdfs:seeAlso "https://github.com/oeg-upm/transmodel-ontology"@en ;
                                             owl:versionInfo "This is the initial version of the module on Authorities, after considering the UML models and XSD descriptions of Transmodel and NeTEx"@en .
@@ -85,39 +87,79 @@
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/transmodel/authorities#hasAResponsability
-:hasAResponsability rdf:type owl:ObjectProperty ;
-                    rdfs:domain :Organization ;
-                    rdfs:range :TypeOfResponsability ;
-                    rdfs:comment "A particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, data aggreggation, data distribution, planning, operation, control, ownership, etc."@en ;
-                    rdfs:label "hasAResponsabilityRole"@en .
+###  http://schema.org/contactPoint
+<http://schema.org/contactPoint> rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/transmodel/authorities#isGroupOfOperators
-:isGroupOfOperators rdf:type owl:ObjectProperty ;
-                    rdfs:domain :GroupOfOperators ;
-                    rdfs:range :Operator ;
-                    rdfs:label "isGroupOfOperators"@en .
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/transmodel/authorities#isPartOf
-:isPartOf rdf:type owl:ObjectProperty ;
-          rdfs:domain :Organization ;
-          rdfs:range :OrganisationPart ;
-          rdfs:label "isPartOf"@en .
+###  http://www.w3.org/2006/time#timeZone
+<http://www.w3.org/2006/time#timeZone> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/org#classification
+<http://www.w3.org/ns/org#classification> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/transmodel/authorities#TOBECHECKED
+:TOBECHECKED rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/transmodel/authorities#characterisedBy
+:characterisedBy rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf <http://schema.org/contactPoint> ;
+                 rdfs:domain :Organisation ;
+                 rdfs:range :ContactDetails ;
+                 rdfs:comment "This property relates an Organisation with its corresponding Contact Details. It is a subproperty of schema:contactPoint, which relates anything to a ContactPoint"@en ;
+                 rdfs:label "characterised by"@en .
+
+
+###  https://w3id.org/transmodel/authorities#describedThrough
+:describedThrough rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://schema.org/contactPoint> ;
+                  rdfs:range :ContactDetails ;
+                  rdfs:comment "TODO: add as domain :DistributionChannel if it makes sense"@en ,
+                               "This property relates a Distribution Channel with its corresponding Contact Details. It is a subproperty of schema:contactPoint, which relates anything to a ContactPoint"@en ;
+                  rdfs:label "described through"@en .
+
+
+###  https://w3id.org/transmodel/authorities#distributionChannelType
+:distributionChannelType rdf:type owl:ObjectProperty ;
+                         rdfs:domain :DistributionChannel ;
+                         rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                             owl:hasValue <https://w3id.org/transmodel/kos/authorities/DistributionChannelType>
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                         rdfs:label "This property assigns to a Distribution Channel one or several SKOS Concepts from the codelist on types of distribution channels"@en ,
+                                    "distribution channel type"@en .
+
+
+###  https://w3id.org/transmodel/authorities#governedBy
+:governedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :DistributionChannel ;
+            rdfs:range :Organisation ;
+            rdfs:comment "This property relates a Distribution Channel to the Organisation that takes responsability over it"@en ;
+            rdfs:label "governed by"@en .
 
 
 ###  https://w3id.org/transmodel/authorities#operatesInAdministrativeZone
 :operatesInAdministrativeZone rdf:type owl:ObjectProperty ;
-                              rdfs:domain :Operator ,
-                                          :ServicedOrganisation ;
+                              rdfs:subPropertyOf :TOBECHECKED ;
+                              rdfs:domain :Operator ;
                               rdfs:range :AdministrativeZone ;
                               rdfs:label "operatesInAdministrativeZone"@en .
 
 
 ###  https://w3id.org/transmodel/authorities#providesService
 :providesService rdf:type owl:ObjectProperty ;
-                 rdfs:domain :Organization ;
+                 rdfs:subPropertyOf :TOBECHECKED ;
+                 rdfs:domain :Organisation ;
                  rdfs:range :ServiceArea ;
                  rdfs:label "providesService"@en .
 
@@ -126,31 +168,28 @@
 #    Data properties
 #################################################################
 
-###  https://w3id.org/transmodel/authorities#contactDetails
-:contactDetails rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Organization ;
-                rdfs:label "contactDetails"@en .
+###  https://w3id.org/transmodel/authorities#TOBECHECKED_parkingCapacity
+:TOBECHECKED_parkingCapacity rdf:type owl:DatatypeProperty ;
+                             rdfs:domain :Parking ;
+                             rdfs:range xsd:nonNegativeInteger ;
+                             rdfs:label "parkingCapacity"@en .
 
 
-###  https://w3id.org/transmodel/authorities#ownership
-:ownership rdf:type owl:DatatypeProperty ;
-           rdfs:domain :Operator ,
-                       :ServicedOrganisation ;
-           rdfs:range xsd:boolean ;
-           rdfs:comment "publicOwnership means at least 51% of the participation of the company"@en ;
-           rdfs:label "publicOwnership"@en .
-
-
-###  https://w3id.org/transmodel/authorities#parkingCapacity
-:parkingCapacity rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Parking ;
-                 rdfs:range xsd:nonNegativeInteger ;
-                 rdfs:label "parkingCapacity"@en .
+###  https://w3id.org/transmodel/authorities#language
+:language rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Organisation ;
+          rdfs:range xsd:language ;
+          rdfs:label "The language in which an organisation operates"@en ,
+                     "language"@en .
 
 
 #################################################################
 #    Classes
 #################################################################
+
+###  http://schema.org/ContactPoint
+<http://schema.org/ContactPoint> rdf:type owl:Class .
+
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
@@ -169,9 +208,17 @@
 
 ###  https://w3id.org/transmodel/authorities#Authority
 :Authority rdf:type owl:Class ;
-           rdfs:subClassOf :Organization ;
+           rdfs:subClassOf :Organisation ;
+           owl:disjointWith :Organisation ;
            rdfs:comment "Public Transport Authority, the organization under which the responsability of organising the TransportService in a certain area (AdministrativeZone) is placed"@en ;
            rdfs:label "Authority"@en .
+
+
+###  https://w3id.org/transmodel/authorities#ContactDetails
+:ContactDetails rdf:type owl:Class ;
+                rdfs:subClassOf <http://schema.org/ContactPoint> ;
+                rdfs:comment "Contact Details for an Organisation. A subclass of schema:ContactPoint. As such, it can be the domain of properties like schema:url, schema:telephone, schema:email, etc."@en ;
+                rdfs:label "Contact Details"@en .
 
 
 ###  https://w3id.org/transmodel/authorities#ControlCenter
@@ -183,6 +230,7 @@
 
 ###  https://w3id.org/transmodel/authorities#CrewBase
 :CrewBase rdf:type owl:Class ;
+          rdfs:subClassOf :TOBECHECKED ;
           rdfs:comment "A place where operating employees (e.g. drivers) report on and register their work"@en ;
           rdfs:label "CrewBase"@en .
 
@@ -194,35 +242,91 @@
             rdfs:label "Department"@en .
 
 
+###  https://w3id.org/transmodel/authorities#DistributionChannel
+:DistributionChannel rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty :describedThrough ;
+                                       owl:allValuesFrom :ContactDetails
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :distributionChannelType ;
+                                       owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                  owl:hasValue <https://w3id.org/transmodel/kos/authorities/DistributionChannelType>
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ]
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :governedBy ;
+                                       owl:allValuesFrom :Organisation
+                                     ] ;
+                     rdfs:comment "A type of outlet for selling a product (definition coming from NeTEx)"@en ;
+                     rdfs:label "Distribution Channel"@en .
+
+
 ###  https://w3id.org/transmodel/authorities#Employee
 :Employee rdf:type owl:Class ;
+          rdfs:subClassOf :TOBECHECKED ;
           rdfs:label "Employee"@en .
 
 
 ###  https://w3id.org/transmodel/authorities#GroupOfOperators
 :GroupOfOperators rdf:type owl:Class ;
+                  rdfs:subClassOf :TOBECHECKED ;
                   rdfs:comment "A group of Operator having for instance common schemes for fare collection of passenger information"@en ;
                   rdfs:label "GroupOfOperators"@en .
 
 
-###  https://w3id.org/transmodel/authorities#ManagementAgent
-:ManagementAgent rdf:type owl:Class ;
-                 rdfs:subClassOf :OtherOrganization ;
-                 rdfs:comment "Specialisation of TransportAgent for ManagementAgent"@en ;
-                 rdfs:label "ManagementAgent"@en .
-
-
 ###  https://w3id.org/transmodel/authorities#Operator
 :Operator rdf:type owl:Class ;
-          rdfs:subClassOf :Organization ;
-          rdfs:comment """A company providing Public Transport Services.
-
-A TransitAgency in GTFS"""@en ;
+          rdfs:subClassOf :Organisation ;
+          owl:disjointWith :Organisation ;
+          rdfs:comment "A company providing Public Transport Services. In GTFS, this is represented as a TransitAgency"@en ;
           rdfs:label "Operator"@en .
+
+
+###  https://w3id.org/transmodel/authorities#Organisation
+:Organisation rdf:type owl:Class ;
+              rdfs:subClassOf <http://xmlns.com/foaf/0.1/Organization> ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://www.w3.org/2006/time#timeZone> ;
+                                owl:allValuesFrom owl:Thing
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://www.w3.org/ns/org#classification> ;
+                                owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                           owl:hasValue <https://w3id.org/transmodel/kos/authorities/OrganisationType>
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ]
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://www.w3.org/ns/org#hasUnit> ;
+                                owl:allValuesFrom :OrganisationPart
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :characterisedBy ;
+                                owl:allValuesFrom :ContactDetails
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :language ;
+                                owl:allValuesFrom xsd:language
+                              ] ;
+              rdfs:comment "A legally incorporated body associated with any aspect of the transport system"@en ,
+                           "TODO: Check how many of these properties need to be added to cover completely the TransModel model: legalName, remarks, status, shortName, tradingName, validFromDate and validToDate, in case that they are not included already in the W3C Organization ontology"@en ,
+                           "TODO: Modify the range of the property timeZone so that it reflects time:TimeZone, as described in the OWL Time ontology."@en ;
+              rdfs:label "Organisation"@en .
 
 
 ###  https://w3id.org/transmodel/authorities#OrganisationPart
 :OrganisationPart rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/ns/org#OrganizationalUnit> ;
                   rdfs:comment "A part of an organisation to which a set of responsabilities upon the data and data management may be assigned"@en ;
                   rdfs:label "OrganisationPart"@en .
 
@@ -234,21 +338,9 @@ A TransitAgency in GTFS"""@en ;
                   rdfs:label "OrganisationalUnit"@en .
 
 
-###  https://w3id.org/transmodel/authorities#Organization
-:Organization rdf:type owl:Class ;
-              rdfs:comment "A legally incorporated body associated with any aspect of the transport system"@en ;
-              rdfs:label "Organization"@en .
-
-
-###  https://w3id.org/transmodel/authorities#OtherOrganization
-:OtherOrganization rdf:type owl:Class ;
-                   rdfs:subClassOf :Organization ;
-                   rdfs:comment "The defined \"Generic organization\" in Transmodel, is an organization which deals with Public Transport Services"@en ;
-                   rdfs:label "TransportAgent"@en .
-
-
 ###  https://w3id.org/transmodel/authorities#Parking
 :Parking rdf:type owl:Class ;
+         rdfs:subClassOf :TOBECHECKED ;
          rdfs:comment "Designated locations for leaving vehicles such as cars, motorcycles and bicycles."@en ;
          rdfs:label "Parking"@en .
 
@@ -269,12 +361,14 @@ A TransitAgency in GTFS"""@en ;
 
 ###  https://w3id.org/transmodel/authorities#ParkingComponent
 :ParkingComponent rdf:type owl:Class ;
+                  rdfs:subClassOf :TOBECHECKED ;
                   rdfs:comment "Generic component of a parking"@en ;
                   rdfs:label "ParkingComponent"@en .
 
 
 ###  https://w3id.org/transmodel/authorities#ParkingEntrance
 :ParkingEntrance rdf:type owl:Class ;
+                 rdfs:subClassOf :TOBECHECKED ;
                  rdfs:comment "An entrance to the Parking"@en ;
                  rdfs:label "ParkingEntrance"@en .
 
@@ -295,32 +389,25 @@ A TransitAgency in GTFS"""@en ;
 
 ###  https://w3id.org/transmodel/authorities#ServiceArea
 :ServiceArea rdf:type owl:Class ;
+             rdfs:subClassOf :TOBECHECKED ;
              rdfs:comment "Service Area is where the Public Transport Operator operates"@en ;
              rdfs:label "ServiceArea"@en .
 
 
 ###  https://w3id.org/transmodel/authorities#ServicedOrganisation
 :ServicedOrganisation rdf:type owl:Class ;
-                      rdfs:subClassOf :Organization ;
-                      rdfs:comment "A public or private organisation (Operator) for which public transport services are provided on specific day (DayType), e.g., a school, university or works"@en ;
-                      rdfs:label "ServicedOperator"@en .
+                      rdfs:subClassOf <http://xmlns.com/foaf/0.1/Organization> ;
+                      rdfs:comment "A public or private organisation for which public transport services are provided on specific days (DayType), e.g., a school, university or works"@en ;
+                      rdfs:label "Serviced Organisation"@en .
 
 
-###  https://w3id.org/transmodel/authorities#TravelAgent
-:TravelAgent rdf:type owl:Class ;
-             rdfs:subClassOf :OtherOrganization ;
-             rdfs:comment "Specialisation of TransportAgent for TravelAgent"@en ;
-             rdfs:label "TravelAgent"@en .
-
-
-###  https://w3id.org/transmodel/authorities#TypeOfResponsability
-:TypeOfResponsability rdf:type owl:Class ;
-                      rdfs:comment "Responsability (Role) is a particular role an Organization or an OrganizationPart is playing as regards certain data, for example data origination, data augmentation, etc."@en ;
-                      rdfs:label "TypeOfResponsability"@en .
+###  https://w3id.org/transmodel/authorities#TOBECHECKED
+:TOBECHECKED rdf:type owl:Class .
 
 
 ###  https://w3id.org/transmodel/authorities#Zone
 :Zone rdf:type owl:Class ;
+      rdfs:subClassOf :TOBECHECKED ;
       rdfs:comment """A two dimmensional Place within the ServiceArea of an Operator or ServicedOperator. It can be:
 
 - AdministrativeZone
@@ -334,70 +421,18 @@ A TransitAgency in GTFS"""@en ;
 #    Individuals
 #################################################################
 
-###  https://w3id.org/transmodel/authorities#DataAggregation
-:DataAggregation rdf:type owl:NamedIndividual ,
-                          :TypeOfResponsability .
+###  https://w3id.org/transmodel/kos/authorities/DistributionChannelType
+<https://w3id.org/transmodel/kos/authorities/DistributionChannelType> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 
 
-###  https://w3id.org/transmodel/authorities#DataAugmentation
-:DataAugmentation rdf:type owl:NamedIndividual ,
-                           :TypeOfResponsability .
+###  https://w3id.org/transmodel/kos/authorities/OrganisationType
+<https://w3id.org/transmodel/kos/authorities/OrganisationType> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                               rdfs:comment "Concept scheme where all the codelists for the types of organisations that are included in the Transmodel ontology"@en .
 
 
-###  https://w3id.org/transmodel/authorities#DataControl
-:DataControl rdf:type owl:NamedIndividual ,
-                      :TypeOfResponsability .
-
-
-###  https://w3id.org/transmodel/authorities#DataDistribution
-:DataDistribution rdf:type owl:NamedIndividual ,
-                           :TypeOfResponsability .
-
-
-###  https://w3id.org/transmodel/authorities#DataOperation
-:DataOperation rdf:type owl:NamedIndividual ,
-                        :TypeOfResponsability .
-
-
-###  https://w3id.org/transmodel/authorities#DataOrigination
-:DataOrigination rdf:type owl:NamedIndividual ,
-                          :TypeOfResponsability .
-
-
-###  https://w3id.org/transmodel/authorities#DataOwnership
-:DataOwnership rdf:type owl:NamedIndividual ,
-                        :TypeOfResponsability .
-
-
-###  https://w3id.org/transmodel/authorities#DataPlanning
-:DataPlanning rdf:type owl:NamedIndividual ,
-                       :TypeOfResponsability .
-
-
-###  https://w3id.org/transmodel/authorities#DataUpdate
-:DataUpdate rdf:type owl:NamedIndividual ,
-                     :TypeOfResponsability .
-
-
-###  https://w3id.org/transmodel/authorities#Private
-:Private rdf:type owl:NamedIndividual ,
-                  :Operator ,
-                  :ServicedOrganisation .
-
-
-###  https://w3id.org/transmodel/authorities#Public
-:Public rdf:type owl:NamedIndividual ,
-                 :Operator ,
-                 :ServicedOrganisation .
-
-
-###  https://w3id.org/transmodel/kos/authorities/AuthorityType
-<https://w3id.org/transmodel/kos/authorities/AuthorityType> rdf:type owl:NamedIndividual ,
-                                                                     <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                                            rdfs:comment "Concept scheme where all the codelists for the types of authorities that are included in the Transmodel ontology"@en .
-
-
-_:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
-         :name "Adolfo Anton-Bravo"@en .
+_:genid21 :mbox "adolfo.anton.bravo@upm.es"@en ;
+          :name "Adolfo Anton-Bravo"@en .
 
 ###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
