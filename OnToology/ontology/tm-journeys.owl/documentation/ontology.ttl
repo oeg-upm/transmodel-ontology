@@ -283,6 +283,14 @@
        rdfs:label "route"@en .
 
 
+###  https://w3id.org/transmodel/journeys#runBy
+:runBy rdf:type owl:ObjectProperty ;
+       rdfs:domain :Line ;
+       rdfs:range <https://w3id.org/transmodel/authorities#Operator> ;
+       rdfs:comment "A Line is run by an Operator"@en ;
+       rdfs:label "run By"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#runTimeOverrides
 :runTimeOverrides rdf:type owl:ObjectProperty ;
                   rdfs:domain :JourneyRunTime ;
@@ -558,6 +566,13 @@
 
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+###  https://w3id.org/transmodel/authorities#Operator
+<https://w3id.org/transmodel/authorities#Operator> rdf:type owl:Class ;
+                                                   rdfs:comment "A company providing Public Transport Services. In GTFS, this is represented as a TransitAgency"@en ,
+                                                                "The class comes from tm-authorities.owl"@en ;
+                                                   rdfs:label "Operator"@es .
 
 
 ###  https://w3id.org/transmodel/journeys#Access
@@ -999,7 +1014,9 @@ It's the same as TimingPointInJourneyPattern"""@en ;
 
 ###  https://w3id.org/transmodel/journeys#Trip
 :Trip rdf:type owl:Class ;
-      rdfs:comment "The physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip."@en ;
+      owl:equivalentClass :VehicleJourney ;
+      rdfs:comment "According to the definition of GTFS for Trip the VehicleJourney's Transmodel definition would fit better"@en ,
+                   "In Transmodel is the physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip."@en ;
       rdfs:label "Trip"@en .
 
 
@@ -1024,8 +1041,10 @@ It's the same as TimingPointInJourneyPattern"""@en ;
 
 ###  https://w3id.org/transmodel/journeys#VehicleJourney
 :VehicleJourney rdf:type owl:Class ;
-                rdfs:comment """The Journey made by the Vehicle. Within VehicleJourney there are three types:
-- TimetabledVehicleJourney in a geneeral timetable that will run on a specific time on a DayType throughout the period of applicability of the schedule.
+                rdfs:comment """A Vehicle Journey is the journey made by the Vehicle.
+
+Within VehicleJourney there are three types:
+- TimetabledVehicleJourney in a general timetable that will run on a specific time on a DayType throughout the period of applicability of the schedule.
 - DatedVehicleJourney, a specific VehicleJourney that runs on a spcific calendar date;
 - MonitoredVehicleJourney, a VehicleJourney run under real-time tracking system and so for which real-time observations and predictions and other data are available."""@en ;
                 rdfs:label "VehicleJourney"@en .

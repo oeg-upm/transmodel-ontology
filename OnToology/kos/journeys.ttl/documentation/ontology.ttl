@@ -1,0 +1,424 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType
+<https://w3id.org/transmodel/kos/journeys/JourneyType> rdf:type owl:NamedIndividual ,
+                                                                <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                       <http://purl.org/dc/terms/title> "Allowed values for Component Types"@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType> ,
+                                                                                                           <https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType> ,
+                                                                                                           <https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType> ,
+                                                                                                           <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType> ,
+                                                                                                           <https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType> ;
+                                                       <http://www.w3.org/2004/02/skos/core#notation> "JourneyType" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceTypeEnumeration
+<https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceTypeEnumeration> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                               <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/journeys/JourneyType> ;
+                                                                               <http://www.w3.org/2004/02/skos/core#notation> "EntranceTypeEnumeration" ,
+                                                                                                                              "LimitedUseTypeEnumeration" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType
+<https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/journeys/InterchangeWeighting> ;
+                                                                                <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/InterchangeAllowed> ,
+                                                                                                                               <https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/noInterchange> ,
+                                                                                                                               <https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/preferredInterchange> ,
+                                                                                                                               <https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/recomendedInterchange> ;
+                                                                                <http://www.w3.org/2004/02/skos/core#notation> "InterchangeWeightingEnumeration" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType
+<https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/journeys/JourneyType> ;
+                                                                <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/airlaneGate> ,
+                                                                                                               <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/boatQuay> ,
+                                                                                                               <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/busBay> ,
+                                                                                                               <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/busStop> ,
+                                                                                                               <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/coachStop> ,
+                                                                                                               <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/ferryLanding> ,
+                                                                                                               <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/metroPlatform> ,
+                                                                                                               <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/other> ,
+                                                                                                               <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/railPlatform> ,
+                                                                                                               <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/setDownPlace> ,
+                                                                                                               <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/taxiStand> ,
+                                                                                                               <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/telecabinePlatform> ,
+                                                                                                               <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/tramPlatform> ,
+                                                                                                               <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/tramStop> ,
+                                                                                                               <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/vehicleLoadingPlace> ;
+                                                                <http://www.w3.org/2004/02/skos/core#notation> "QuayTypeEnumeration" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType
+<https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/journeys/JourneyType> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/accessSpace> ,
+                                                                                                                             <https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/boardingPosition> ,
+                                                                                                                             <https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/entrance> ,
+                                                                                                                             <https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/quay> ,
+                                                                                                                             <https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/stoppingPlace> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#notation> "StopPlaceComponentTypeEnumeration" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/barrier
+<https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/barrier> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                            <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType> ;
+                                                                            <http://www.w3.org/2004/02/skos/core#notation> "barrier" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/door
+<https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/door> rdf:type owl:NamedIndividual ,
+                                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#notation> "door" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/doorway
+<https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/doorway> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                            <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType> ;
+                                                                            <http://www.w3.org/2004/02/skos/core#notation> "doorway" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/gate
+<https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/gate> rdf:type owl:NamedIndividual ,
+                                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#notation> "gate" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/idBarrier
+<https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/idBarrier> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#notation> "idBarrier" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/other
+<https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/other> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                          <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType> ;
+                                                                          <http://www.w3.org/2004/02/skos/core#notation> "other" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/revolvingDoor
+<https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/revolvingDoor> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                  <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType> ;
+                                                                                  <http://www.w3.org/2004/02/skos/core#notation> "revolvingDoor" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/slidingDoors
+<https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/slidingDoors> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                 <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType> ;
+                                                                                 <http://www.w3.org/2004/02/skos/core#notation> "slidingDoors" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/style
+<https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/style> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                          <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType> ;
+                                                                          <http://www.w3.org/2004/02/skos/core#notation> "style" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/ticketBarrier
+<https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/ticketBarrier> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                  <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType> ;
+                                                                                  <http://www.w3.org/2004/02/skos/core#notation> "ticketBarrier" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/InterchangeAllowed
+<https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/InterchangeAllowed> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                                   <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType> ;
+                                                                                                   <http://www.w3.org/2004/02/skos/core#notation> "InterchangeAllowed" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/noInterchange
+<https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/noInterchange> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                              <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType> ;
+                                                                                              <http://www.w3.org/2004/02/skos/core#notation> "noInterchange" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/preferredInterchange
+<https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/preferredInterchange> rdf:type owl:NamedIndividual ,
+                                                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                                     <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType> ;
+                                                                                                     <http://www.w3.org/2004/02/skos/core#notation> "preferredInterchanged" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/recommendedInterchange
+<https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/recommendedInterchange> rdf:type owl:NamedIndividual ,
+                                                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                                       <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType> ;
+                                                                                                       <http://www.w3.org/2004/02/skos/core#notation> "recomendedInterchange" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/interchangeOnly
+<https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/interchangeOnly> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                      <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType> ;
+                                                                                      <http://www.w3.org/2004/02/skos/core#notation> "interchangeOnly" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/isolated
+<https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/isolated> rdf:type owl:NamedIndividual ,
+                                                                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                               <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType> ;
+                                                                               <http://www.w3.org/2004/02/skos/core#notation> "isolated" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/limitedService
+<https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/limitedService> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                     <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType> ;
+                                                                                     <http://www.w3.org/2004/02/skos/core#notation> "limitedService" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/longWaltToAccess
+<https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/longWaltToAccess> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                       <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType> ;
+                                                                                       <http://www.w3.org/2004/02/skos/core#notation> "longWalkToAccess" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/noDirectRoadAccess
+<https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/noDirectRoadAccess> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                         <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType> ;
+                                                                                         <http://www.w3.org/2004/02/skos/core#notation> "noDirectRoadAccess" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/other
+<https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/other> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                            <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType> ;
+                                                                            <http://www.w3.org/2004/02/skos/core#notation> "other" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/airlineGate
+<https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/airlineGate> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                            <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType> ;
+                                                                            <http://www.w3.org/2004/02/skos/core#notation> "airlaneGate" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/boatQuay
+<https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/boatQuay> rdf:type owl:NamedIndividual ,
+                                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#notation> "boatQuay" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/busBay
+<https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/busBay> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType> ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> "busBay" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/busStop
+<https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/busStop> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#notation> "busStop" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/coachStop
+<https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/coachStop> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                          <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType> ;
+                                                                          <http://www.w3.org/2004/02/skos/core#notation> "coachStop" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/ferryLanding
+<https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/ferryLanding> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                             <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType> ;
+                                                                             <http://www.w3.org/2004/02/skos/core#notation> "ferryLanding" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/metroPlatform
+<https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/metroPlatform> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#notation> "metroPlatform" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/other
+<https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/other> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#notation> "other" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/railPlatform
+<https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/railPlatform> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                             <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType> ;
+                                                                             <http://www.w3.org/2004/02/skos/core#notation> "railPlatform" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/setDownPlace
+<https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/setDownPlace> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                             <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType> ;
+                                                                             <http://www.w3.org/2004/02/skos/core#notation> "setDownPlace" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/taxiStand
+<https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/taxiStand> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                          <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType> ;
+                                                                          <http://www.w3.org/2004/02/skos/core#notation> "taxiStand" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/telecabinePlatform
+<https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/telecabinePlatform> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                   <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType> ;
+                                                                                   <http://www.w3.org/2004/02/skos/core#notation> "telecabinePlatform" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/tramPlatform
+<https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/tramPlatform> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                             <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType> ;
+                                                                             <http://www.w3.org/2004/02/skos/core#notation> "tramPlatform" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/tramStop
+<https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/tramStop> rdf:type owl:NamedIndividual ,
+                                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#notation> "tramStop" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/vehicleLoadingPlace
+<https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/vehicleLoadingPlace> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                    <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType> ;
+                                                                                    <http://www.w3.org/2004/02/skos/core#notation> "vehicleLoadingPlace" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/accessSpace
+<https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/accessSpace> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                          <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType> ;
+                                                                                          <http://www.w3.org/2004/02/skos/core#notation> "accessSpace" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/boardingPosition
+<https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/boardingPosition> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                               <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType> ;
+                                                                                               <http://www.w3.org/2004/02/skos/core#notation> "boardingPosition" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/entrance
+<https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/entrance> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                       <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType> ;
+                                                                                       <http://www.w3.org/2004/02/skos/core#notation> "entrance" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/quay
+<https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/quay> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                   <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType> ;
+                                                                                   <http://www.w3.org/2004/02/skos/core#notation> "quay" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/stoppingPlace
+<https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/stoppingPlace> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                            <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType> ;
+                                                                                            <http://www.w3.org/2004/02/skos/core#notation> "stoppingPlace" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/barrier> ,
+                                                                                                                   <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/door> ,
+                                                                                                                   <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/doorway> ,
+                                                                                                                   <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/gate> ,
+                                                                                                                   <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/idBarrier> ,
+                                                                                                                   <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/other> ,
+                                                                                                                   <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/revolvingDoor> ,
+                                                                                                                   <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/slidingDoors> ,
+                                                                                                                   <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/style> ,
+                                                                                                                   <https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/ticketBarrier> .
+
+
+<https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/interchangeOnly> ,
+                                                                                                                     <https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/isolated> ,
+                                                                                                                     <https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/limitedService> ,
+                                                                                                                     <https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/longWalkToAccess> ,
+                                                                                                                     <https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/noDirectRoadAccess> ,
+                                                                                                                     <https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/other> .
+
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

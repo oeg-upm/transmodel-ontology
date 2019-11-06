@@ -36,6 +36,20 @@
   "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "https://w3id.org/transmodel/authorities#Operator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A company providing Public Transport Services. In GTFS, this is represented as a TransitAgency"
+  }, {
+    "@language" : "en",
+    "@value" : "The class comes from tm-authorities.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Operator"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://creativecommons.org/ns#license" : [ {
@@ -1100,11 +1114,17 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip."
+    "@value" : "According to the definition of GTFS for Trip the VehicleJourney's Transmodel definition would fit better"
+  }, {
+    "@language" : "en",
+    "@value" : "In Transmodel is the physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Trip"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#Tuesday",
@@ -1140,7 +1160,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The Journey made by the Vehicle. Within VehicleJourney there are three types:\n- TimetabledVehicleJourney in a geneeral timetable that will run on a specific time on a DayType throughout the period of applicability of the schedule.\n- DatedVehicleJourney, a specific VehicleJourney that runs on a spcific calendar date;\n- MonitoredVehicleJourney, a VehicleJourney run under real-time tracking system and so for which real-time observations and predictions and other data are available."
+    "@value" : "A Vehicle Journey is the journey made by the Vehicle.\n\nWithin VehicleJourney there are three types:\n- TimetabledVehicleJourney in a general timetable that will run on a specific time on a DayType throughout the period of applicability of the schedule.\n- DatedVehicleJourney, a specific VehicleJourney that runs on a spcific calendar date;\n- MonitoredVehicleJourney, a VehicleJourney run under real-time tracking system and so for which real-time observations and predictions and other data are available."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1745,6 +1765,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Route"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#runBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Line is run by an Operator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "run By"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/authorities#Operator"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#runTimeOverrides",

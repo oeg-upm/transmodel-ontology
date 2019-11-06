@@ -156,6 +156,9 @@ may be recorded.</a>
             title="https://w3id.org/transmodel/journeys#OperatingDay">OperatingDay</a>
       </li>
       <li>
+         <a href="#https://w3id.org/transmodel/authorities#Operator" title="https://w3id.org/transmodel/authorities#Operator">Operator</a>
+      </li>
+      <li>
          <a href="#ParkingPoint"
             title="https://w3id.org/transmodel/journeys#ParkingPoint">ParkingPoint</a>
       </li>
@@ -1078,7 +1081,8 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          <dd>
             <a href="#lineName" title="https://w3id.org/transmodel/journeys#lineName">lineName</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#lineNumber" title="https://w3id.org/transmodel/journeys#lineNumber">lineNumber</a>
-            <sup class="type-dp" title="data property">dp</sup>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#runBy" title="https://w3id.org/transmodel/journeys#runBy">run By</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -1147,6 +1151,24 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          <dd>
             <a href="#dayTypeAssignment"
                title="https://w3id.org/transmodel/journeys#dayTypeAssignment">dayTypeAssignment</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/authorities#Operator">
+      <h3>Operator<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/authorities#Operator</p>
+      <div class="comment">
+         <span class="markdown">A company providing Public Transport Services. In GTFS, this is represented as a TransitAgency</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#runBy" title="https://w3id.org/transmodel/journeys#runBy">run By</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1762,9 +1784,15 @@ It's the same as TimingPointInJourneyPattern</span>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Trip</p>
       <div class="comment">
-         <span class="markdown">The physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip.</span>
+         <span class="markdown">According to the definition of GTFS for Trip the VehicleJourney's Transmodel definition would fit better</span>
       </div>
       <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#VehicleJourney"
+               title="https://w3id.org/transmodel/journeys#VehicleJourney">VehicleJourney</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#passengerJourneys"
@@ -1882,8 +1910,10 @@ It's the same as TimingPointInJourneyPattern</span>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#VehicleJourney</p>
       <div class="comment">
-         <span class="markdown">The Journey made by the Vehicle. Within VehicleJourney there are three types:
-- TimetabledVehicleJourney in a geneeral timetable that will run on a specific time on a DayType throughout the period of applicability of the schedule.
+         <span class="markdown">A Vehicle Journey is the journey made by the Vehicle.
+
+Within VehicleJourney there are three types:
+- TimetabledVehicleJourney in a general timetable that will run on a specific time on a DayType throughout the period of applicability of the schedule.
 - DatedVehicleJourney, a specific VehicleJourney that runs on a spcific calendar date;
 - MonitoredVehicleJourney, a VehicleJourney run under real-time tracking system and so for which real-time observations and predictions and other data are available.</span>
       </div>
@@ -2078,6 +2108,9 @@ A vehicle stopping place may be served by one or more quays.</span>
       </li>
       <li>
          <a href="#route" title="https://w3id.org/transmodel/journeys#route">route</a>
+      </li>
+      <li>
+         <a href="#runBy" title="https://w3id.org/transmodel/journeys#runBy">run By</a>
       </li>
       <li>
          <a href="#scheduledStopPoint"
@@ -2781,6 +2814,31 @@ may be recorded.</a>
             <dt>has range</dt>
             <dd>
                <a href="#Route" title="https://w3id.org/transmodel/journeys#Route">Route</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="runBy">
+      <h3>run By<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#runBy</p>
+      <div class="comment">
+         <span class="markdown">A Line is run by an Operator</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Line" title="https://w3id.org/transmodel/journeys#Line">Line</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/transmodel/authorities#Operator" title="https://w3id.org/transmodel/authorities#Operator">Operator</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>

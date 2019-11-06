@@ -1,0 +1,536 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#broader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#narrower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#notation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Allowed values for Component Types"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "JourneyType"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType",
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/barrier"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/door"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/doorway"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/gate"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/idBarrier"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/other"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/revolvingDoor"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/slidingDoors"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/style"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/ticketBarrier"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/barrier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "barrier"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/door",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "door"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/doorway",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "doorway"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/gate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "gate"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/idBarrier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "idBarrier"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/other",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "other"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/revolvingDoor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "revolvingDoor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/slidingDoors",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "slidingDoors"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/style",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "style"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType/ticketBarrier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ticketBarrier"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/EntranceTypeEnumeration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "EntranceTypeEnumeration"
+  }, {
+    "@value" : "LimitedUseTypeEnumeration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/InterchangeWeighting"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/InterchangeAllowed"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/noInterchange"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/preferredInterchange"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/recomendedInterchange"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "InterchangeWeightingEnumeration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/InterchangeAllowed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "InterchangeAllowed"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/noInterchange",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "noInterchange"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/preferredInterchange",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "preferredInterchanged"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType/recommendedInterchange",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/InterchangeWeightingType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "recomendedInterchange"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType",
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/interchangeOnly"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/isolated"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/limitedService"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/longWalkToAccess"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/noDirectRoadAccess"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/other"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/interchangeOnly",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "interchangeOnly"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/isolated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "isolated"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/limitedService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "limitedService"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/longWaltToAccess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "longWalkToAccess"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/noDirectRoadAccess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "noDirectRoadAccess"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType/other",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/LimitedUseType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "other"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/airlaneGate"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/boatQuay"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/busBay"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/busStop"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/coachStop"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/ferryLanding"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/metroPlatform"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/other"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/railPlatform"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/setDownPlace"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/taxiStand"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/telecabinePlatform"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/tramPlatform"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/tramStop"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/vehicleLoadingPlace"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "QuayTypeEnumeration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/airlineGate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "airlaneGate"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/boatQuay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "boatQuay"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/busBay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "busBay"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/busStop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "busStop"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/coachStop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "coachStop"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/ferryLanding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ferryLanding"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/metroPlatform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "metroPlatform"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/other",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "other"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/railPlatform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "railPlatform"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/setDownPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "setDownPlace"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/taxiStand",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "taxiStand"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/telecabinePlatform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "telecabinePlatform"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/tramPlatform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "tramPlatform"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/tramStop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "tramStop"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType/vehicleLoadingPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/QuayType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "vehicleLoadingPlace"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/accessSpace"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/boardingPosition"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/entrance"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/quay"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/stoppingPlace"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "StopPlaceComponentTypeEnumeration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/accessSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "accessSpace"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/boardingPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "boardingPosition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/entrance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "entrance"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/quay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "quay"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType/stoppingPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType/StopPlaceComponentType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "stoppingPlace"
+  } ]
+} ]
