@@ -426,6 +426,17 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#runBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#runBy">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Line"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#Operator"/>
+        <rdfs:comment xml:lang="en">A Line is run by an Operator</rdfs:comment>
+        <rdfs:label xml:lang="en">run By</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#runTimeOverrides -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#runTimeOverrides">
@@ -826,6 +837,16 @@
     <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
 
     <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#Operator -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Operator">
+        <rdfs:comment xml:lang="en">A company providing Public Transport Services. In GTFS, this is represented as a TransitAgency</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class comes from tm-authorities.owl</rdfs:comment>
+        <rdfs:label xml:lang="es">Operator</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1470,7 +1491,9 @@ It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
     <!-- https://w3id.org/transmodel/journeys#Trip -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Trip">
-        <rdfs:comment xml:lang="en">The physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip.</rdfs:comment>
+        <owl:equivalentClass rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:comment xml:lang="en">According to the definition of GTFS for Trip the VehicleJourney&apos;s Transmodel definition would fit better</rdfs:comment>
+        <rdfs:comment xml:lang="en">In Transmodel is the physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip.</rdfs:comment>
         <rdfs:label xml:lang="en">Trip</rdfs:label>
     </owl:Class>
     
@@ -1504,8 +1527,10 @@ It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
     <!-- https://w3id.org/transmodel/journeys#VehicleJourney -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#VehicleJourney">
-        <rdfs:comment xml:lang="en">The Journey made by the Vehicle. Within VehicleJourney there are three types:
-- TimetabledVehicleJourney in a geneeral timetable that will run on a specific time on a DayType throughout the period of applicability of the schedule.
+        <rdfs:comment xml:lang="en">A Vehicle Journey is the journey made by the Vehicle.
+
+Within VehicleJourney there are three types:
+- TimetabledVehicleJourney in a general timetable that will run on a specific time on a DayType throughout the period of applicability of the schedule.
 - DatedVehicleJourney, a specific VehicleJourney that runs on a spcific calendar date;
 - MonitoredVehicleJourney, a VehicleJourney run under real-time tracking system and so for which real-time observations and predictions and other data are available.</rdfs:comment>
         <rdfs:label xml:lang="en">VehicleJourney</rdfs:label>
