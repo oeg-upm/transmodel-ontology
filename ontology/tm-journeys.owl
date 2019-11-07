@@ -1,72 +1,40 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.w3.org/ns/org#"
-     xml:base="http://www.w3.org/ns/org"
-     xmlns:gr="http://purl.org/goodrelations/v1#"
-     xmlns:dct="http://purl.org/dc/terms/"
-     xmlns:org="http://www.w3.org/ns/org#"
+<rdf:RDF xmlns="https://w3id.org/transmodel/journeys#"
+     xml:base="https://w3id.org/transmodel/journeys"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
-     xmlns:owlTime="http://www.w3.org/2006/time#">
-    <owl:Ontology rdf:about="http://www.w3.org/ns/org#">
-        <dct:contributor>
-            <rdf:Description/>
-        </dct:contributor>
-        <dct:contributor>
-            <rdf:Description/>
-        </dct:contributor>
-        <dct:contributor>
-            <rdf:Description/>
-        </dct:contributor>
-        <dct:contributor>
-            <rdf:Description/>
-        </dct:contributor>
-        <dct:contributor>
-            <rdf:Description/>
-        </dct:contributor>
-        <dct:contributor>
-            <rdf:Description/>
-        </dct:contributor>
-        <dct:contributor>
-            <rdf:Description/>
-        </dct:contributor>
-        <dct:contributor>
-            <rdf:Description/>
-        </dct:contributor>
-        <dct:contributor>
-            <rdf:Description/>
-        </dct:contributor>
-        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-05-28</dct:created>
-        <dct:license rdf:resource="http://www.opendatacommons.org/licenses/pddl/1.0/"/>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-06-09</dct:modified>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-10-08</dct:modified>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-09-30</dct:modified>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-10-06</dct:modified>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-02-15</dct:modified>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-12-16</dct:modified>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-02</dct:modified>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-25</dct:modified>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-02-05</dct:modified>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-04-12</dct:modified>
-        <dct:title xml:lang="en">Core organization ontology</dct:title>
-        <dct:title xml:lang="it">Ontologia delle organizzazioni</dct:title>
-        <dct:title xml:lang="fr">Ontologie des organisations</dct:title>
-        <dct:title xml:lang="es">Ontología de organizaciones</dct:title>
-        <rdfs:comment xml:lang="it">Vocabolario per descrivere strutture organizzative, le quali possono essere specializzate in una vasta varietà di tipi di organizzazione</rdfs:comment>
-        <rdfs:comment xml:lang="es">Vocabulario para describir organizaciones, adaptable a una amplia variedad de ellas.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Vocabulary for describing organizational structures, specializable to a broad variety of types of organization.</rdfs:comment>
-        <rdfs:label xml:lang="en">Core organization ontology</rdfs:label>
-        <rdfs:label xml:lang="it">Ontologia delle organizzazioni</rdfs:label>
-        <rdfs:label xml:lang="fr">Ontologie des organisations</rdfs:label>
-        <rdfs:label xml:lang="es">Ontología de organizaciones</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/vocab-org/"/>
-        <owl:versionInfo>0.8</owl:versionInfo>
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:tmfac="https://w3id.org/transmodel/facilities#"
+     xmlns:tmkos="https://w3id.org/transmodel/kos/"
+     xmlns:tmauth="https://w3id.org/transmodel/authorities#"
+     xmlns:tmfare="https://w3id.org/transmodel/fares#"
+     xmlns:tmcommons="https://w3id.org/transmodel/commons#"
+     xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
+     xmlns:tmkosfare="https://w3id.org/transmodel/kos/fares/"
+     xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/"
+     xmlns:tmkosjourney="https://w3id.org/transmodel/kos/journeys/"
+     xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/"
+     xmlns:tmkosauthority="https://w3id.org/transmodel/kos/authorities/">
+    <owl:Ontology rdf:about="https://w3id.org/transmodel/journeys#">
+        <owl:versionIRI rdf:resource="https://w3id.org/transmodel/journeys/0.2"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dc:creator>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:date>2019-10-22</dc:date>
+        <dc:description xml:lang="en">Module of the Transmodel Ontology focused on journeys. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</dc:description>
+        <dc:identifier>https://w3id.org/transmodel/journies</dc:identifier>
+        <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
+        <dc:title xml:lang="en">Transmodel Ontology - Journeys</dc:title>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/facilities#"/>
+        <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">Transmodel Ontology - Journeys</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://github.com/oeg-upm/transmodel-ontology</rdfs:seeAlso>
+        <owl:versionInfo xml:lang="en">This is the initial version of the module on Journeys, after considering the UML models and XSD descriptions of Transmodel and NeTEx</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -82,94 +50,86 @@
     
 
 
-    <!-- http://purl.org/dc/terms/contributor -->
+    <!-- http://creativecommons.org/ns#license -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
     
 
 
-    <!-- http://purl.org/dc/terms/created -->
+    <!-- http://purl.org/dc/elements/1.1/creator -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
-    <!-- http://purl.org/dc/terms/license -->
+    <!-- http://purl.org/dc/elements/1.1/date -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
     
 
 
-    <!-- http://purl.org/dc/terms/modified -->
+    <!-- http://purl.org/dc/elements/1.1/description -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
 
 
-    <!-- http://purl.org/dc/terms/title -->
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
     
 
 
-    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+    <!-- http://purl.org/dc/elements/1.1/rights -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
     
 
 
-    <!-- http://www.w3.org/ns/org#purpose -->
+    <!-- http://purl.org/dc/elements/1.1/title -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/org#purpose">
-        <rdfs:comment xml:lang="es">Finalidad u objetivo de la organización. La organización puede tener muchos objetivos a diferentes niveles de abstracción, pero en la naturaleza de las organizaciones está el tener una razón para existir, y la finalidad de esta propiedad es documentar dicha razón. La organización podrá tener más de un objetivo. Se recomienda el uso de vocabularios controlados o listas de códigos para indicar el objetivo, preferentemente mediante el uso de un `skos:Concept`. Sin embargo, el rango no está predeterminado, de forma que otros tipos de esquemas descriptivos tiene cabida. Se espera que ciertas especializaciones de este vocabulario o ciertos perfiles de aplicaciones restrinjan el rango del objetivo. Denominaciones alternativas: área_ _jurisdicción_ _ responsabilidad _ (especialmente cuando se aplica a unidades tales como ministerios o divisiones administrativas de los gobiernos)</rdfs:comment>
-        <rdfs:comment xml:lang="it">Indica l&apos;obiettivo di questa Organization. In generale, si possono esprimere gli obiettivi di un&apos;organizzazione secondo diversi livelli di astrazione, ma la natura stessa dell&apos;organizzazione ha una ragione d&apos;essere ed è proprio questa che deve essere catturata con tale proprietà. Inoltre, un&apos;Organization può avere obiettivi multipli. È raccomandabile che l&apos;obiettivo faccia parte di una code list, e che sia preferibilmente un `skos:Concept`. Ad ogni modo, il codominio della proprietà è lasciato aperto per consentire altri tipi di di descrizione. Conseguentemente, eventuali specializzazioni o profili applicativi possono utilizzare quel vocabolario come codominio della proprietà.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates the purpose of this Organization. There can be many purposes at different levels of abstraction but the nature of an organization is to have a reason for existence and this property is a means to document that reason. An Organization may have multiple purposes. It is recommended that the purpose be denoted by a controlled term or code list, ideally a `skos:Concept`. However, the range is left open to allow for other types of descriptive schemes. It is expected that specializations or application profiles of this vocabulary will constrain the range of the purpose. Alternative names: _remit_ _responsibility_ (esp. if applied to OrganizationalUnits such as Government Departments).</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique le but de cette Organisation. Il peut exister plusieurs buts à différents niveaux d&apos;abstraction mais la nature d&apos;une organisation est d&apos;avoir une raison d&apos;exister et cette propriété doit servir à documenter cette raison d&apos;être. Une Organisation peut avoir plusieurs Buts. Il est recommandé que le but soit libellé à l&apos;aide d&apos;un vocabulaire contrôlé ou autre code établi, idéalement avec un concept `skos:Concept`. Toutefois, le champ de cette propriété est laissé ouvert et pourrait accepter d&apos;autres schémas de description. Il est préférable que les spécialisations ou les profils d&apos;applications de ce vocabulaire contraignent le champ de cette propriété.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">この組織の目的を示します。異なる抽象レベルの多くの目的がありえますが、組織の本質は存在理由を持つことであり、このプロパティーはその理由をドキュメント化する手段です。組織は、複数の目的を持っている可能性があります。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="fr">but</rdfs:label>
-        <rdfs:label xml:lang="it">obiettivo</rdfs:label>
-        <rdfs:label xml:lang="en">purpose</rdfs:label>
-        <rdfs:label xml:lang="es">tiene objetivo</rdfs:label>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#author -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/journeys#author"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#creator -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/journeys#creator"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#description -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/journeys#description">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#MeetingPointService"/>
     </owl:AnnotationProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#roleProperty -->
+    <!-- https://w3id.org/transmodel/journeys#mbox -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/org#roleProperty">
-        <rdfs:comment xml:lang="fr">Ceci est une méta-propriété utilisée pour annoter une instance de `org:Role` ayant une sous-propriété `org:memberOf` qui peut être utilisée pour indiquer directement le rôle et pouvoir faire des requêtes plus facilement. La sémantique visée est un Engagement impliquant l&apos;existence d&apos;une relation de propriété directe à travers d&apos;une règle d&apos;inférence de la forme:  `{ [] org:member ?p; org:organization ?o; org:role [org:roleProperty ?r] } -&gt; {?p ?r ?o}`.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Meta-propiedad que se utiliza para anotar una instancia de `org:Role` con una sub-propiedad de `org:memberOf`, que puede ser utilizada para indicar directamente la actividad a fin de facilitar las consultas a los datos. The intended semantics is that a Membership relation involving the Role implies the existence of a direct property relationship through an inference rule of the form: { [] org:member ?a; org:organization ?o; org:role [org:roleProperty ?r] } -&gt; {?a ?r ?o}</rdfs:comment>
-        <rdfs:comment xml:lang="it">Questa è una meta-proprietà usata per annotare un&apos;istanza di `org:Role` con una sotto-proprietà di `org:memberOf` e può essere usata per indicare direttamente il ruolo per facilitare un&apos;interrogazione sui dati.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This is a metalevel property which is used to annotate an `org:Role` instance with a sub-property of `org:memberOf` that can be used to directly indicate the role for easy of query. The intended semantics is a Membership relation involving the Role implies the existence of a direct property relationship through an inference rule of the form:  `{ [] org:member ?p; org:organization ?o; org:role [org:roleProperty ?r] } -&gt; {?p ?r ?o}`.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">これは、クエリが容易になるように役割を直接的に示すために使用できるorg:memberOfのサブプロパティーでorg:Roleインスタンスを注釈するために用いられるメタレベルのプロパティーです。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="es">desempeña la actividad de (propiedad)</rdfs:label>
-        <rdfs:label xml:lang="en">role (property)</rdfs:label>
-        <rdfs:label xml:lang="it">ruolo (proprietà)</rdfs:label>
-        <rdfs:label xml:lang="fr">rôle (propriété)</rdfs:label>
-        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Role"/>
+    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/journeys#mbox"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#name -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/journeys#name">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/homepage -->
-
-    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/mbox -->
-
-    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/mbox"/>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/name -->
-
-    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
     
 
 
@@ -184,657 +144,460 @@
     
 
 
-    <!-- http://www.w3.org/ns/org#basedAt -->
+    <!-- https://w3id.org/transmodel/journeys#access -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#basedAt">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Site"/>
-        <rdfs:comment xml:lang="it">Indica la sede in cui una è stabilita una persona. Non esclude la possibilità che una persona sia allocata su più sedi.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates the site at which a person is based. We do not restrict the possibility that a person is based at multiple sites.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique le site sur lequel une personne est basée. Nous ne limitons pas le nombre de sites sur lesquels une personne peut être basée.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Lugar en el que trabaja una persona. No se restringe el hecho de que una persona pueda estar adscrita a múltiples ubicaciones.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">人が基礎としているサイトを示します。人が複数のサイトを基礎としている可能性を制限しません。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="it">basata a</rdfs:label>
-        <rdfs:label xml:lang="en">based At</rdfs:label>
-        <rdfs:label xml:lang="fr">basé à</rdfs:label>
-        <rdfs:label xml:lang="es">trabaja en la sede</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#access">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Passenger"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Access"/>
+        <rdfs:comment xml:lang="en">The physical spatial possibility for a passenger to access or leave the Public Transport System. The link may be used during a Trip for :
+- The walking movement of the Passenger from a Place (Origin of the Trip) to a ScheduledStopPoint (origin of the Public Transport Trip) or;
+- The walking movement of the Passenger from a Scheduled Stop Point (destination of the Public Transport Trip) to a Place (destination of the Trip)</rdfs:comment>
+        <rdfs:label xml:lang="en">accessPTS</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#changedBy -->
+    <!-- https://w3id.org/transmodel/journeys#accessMode -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#changedBy">
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#originalOrganization"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
-        <rdfs:comment xml:lang="es">Evento de cambio que resulta en una modificación en la organización. Dependiendo del evento, la organización puede dejar de existir tras el cambio. Es la relación inversa de `org:originalOrganization`.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Indica un evento che ha contribuito al cambiamento di questa organizzazione. A seconda dell&apos;evento, l&apos;organizzazione potrebbe essere esistente dopo l&apos;evento o aver cessato la propria esistenza. È l&apos;inverso di `org:originalOrganization`.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates a change event which resulted in a change to this organization. Depending on the event the organization may or may not have continued to exist after the event. Inverse of `org:originalOrganization`.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique un évènement qui a impliqué un changement dans l&apos;Organisation. Selon l&apos;évènement, l&apos;Organisation a continué à exister après l&apos;évènement, ou pas. Inverse de `org:originalOrganization`.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">この組織の変更のきっかけとなった出来事を示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="it">cambiata da</rdfs:label>
-        <rdfs:label xml:lang="en">changed by</rdfs:label>
-        <rdfs:label xml:lang="es">es modificada por</rdfs:label>
-        <rdfs:label xml:lang="es">es modificado por</rdfs:label>
-        <rdfs:label xml:lang="fr">modifiée par</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#accessMode">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Passenger"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#AccessMode"/>
+        <rdfs:label xml:lang="en">accessMode</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#classification -->
+    <!-- https://w3id.org/transmodel/journeys#allowedLineDirections -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#classification">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:comment xml:lang="it">Indica una classificazione per questa Organization all&apos;interno di un qualche schema di classificazione. Alcuni vocabolari potrebbero voler specializzare questa proprietà per avere un codominio corrispondente a uno specifico `skos:ConceptScheme`. Si noti che la presenza di questa proprietà è ancora in fase di discussione e potrebbe  essere revisionata o rimossa.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates a classification for this Organization within some classification scheme. Extension vocabularies may wish to specialize this property to have a range corresponding to a specific `skos:ConceptScheme`. This property is under discussion and may be revised or removed - in many cases organizations are best categorized by defining a sub-class hierarchy in an extension vocabulary.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique une classification pour cette Organisation dans le cadre d&apos;un schéma de classification. Il est possible de spécialiser cette propriété en utilisant un vocabulaire spécialisé pour que le champ corresponde à un concept spécifique `skos:ConceptScheme`. Cette propriété est en discussion est pourrait être révisée ou supprimée - dans de nombreux cas, les organisations sont mieux catégorisées par une hiérarchie de sous-classe dans un vocabulaire externe.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Ordenación jerárquica que se hace de una organización dentro de un esquema de clasificación. Es posible que algunos vocabularios especifiquen esta propiedad de forma que el rango se corresponda con un `skos:ConceptScheme` específico. La conveniencia de incluir esta propiedad se está debatiendo y puede que se revise o elimine (en muchos casos las organizaciones se clasifican mejor si se define una jerarquía de subclases en un vocabulario aparte)</rdfs:comment>
-        <rdfs:comment xml:lang="ja">ある分類表内のこの組織に対する分類を示します。
-アプリケーションがorg:Organizationのサブクラスを組織的なカテゴリーを表わす手段として定義することも許容されることに注意してください。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="en">classification</rdfs:label>
-        <rdfs:label xml:lang="fr">classification</rdfs:label>
-        <rdfs:label xml:lang="it">classificazione</rdfs:label>
-        <rdfs:label xml:lang="es">pertenece a la clasificación</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#allowedLineDirections">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Route"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#AllowedLineDirections"/>
+        <rdfs:label xml:lang="en">allowedLineDirections</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#hasMember -->
+    <!-- https://w3id.org/transmodel/journeys#beginsConnection -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasMember">
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#memberOf"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <rdfs:comment xml:lang="it">Indica una persona che è membro della data Organization. È l&apos;inverso di `org:memberOf` ed è fornita per  compatibilità con `foaf:member`.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates a person who is a member of the subject Organization. Inverse of `org:memberOf`, see that property for further clarification. Provided for compatibility with `foaf:member`.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique une personne membre de l&apos;Organisation sujet. Inverse de `org:memberOf`, voyez la description de cette propriété pour plus de précisions. Fourni pour la compatibilité avec `foaf:member`.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Persona que es miembro de la organización en cuestión. Es la relación inversa de `org:memberOf`, véase la descripción de esa propiedad para más detalles. Se prevé compatibilidad con foaf:member`.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">対象組織のメンバーであるエージェント（人または他の組織）を示します。org:memberOfの逆。さらに明確な説明については、そのプロパティーを参照してください。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="it">ha membro</rdfs:label>
-        <rdfs:label xml:lang="en">has member</rdfs:label>
-        <rdfs:label xml:lang="fr">possède un membre</rdfs:label>
-        <rdfs:label xml:lang="es">tiene miembro</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#beginsConnection">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Connection"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+        <rdfs:label xml:lang="en">beginsConnection</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#hasMembership -->
+    <!-- https://w3id.org/transmodel/journeys#blockPart -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasMembership">
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#member"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Membership"/>
-        <rdfs:comment xml:lang="it">Indica una relazione di appartenenza che coinvolge un Agent. È l&apos;inverso di `org:member`.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates a membership relationship that the Agent plays. Inverse of `org:member`.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique pour cet Agent un engagement dans une Organisation. Inverse de `org:member`.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Relación de pertenencia o afiliación a una organización en la que el agente desempeña un cargo o función. Es la relación inversa de `org:member`.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">エージェントが担う構成員関係を示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="it">appartenenza</rdfs:label>
-        <rdfs:label xml:lang="fr">engagement</rdfs:label>
-        <rdfs:label xml:lang="en">membership</rdfs:label>
-        <rdfs:label xml:lang="es">tiene membresía</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#blockPart">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#JourneyPart"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#BlockPart"/>
+        <rdfs:label xml:lang="en">blockPart</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#hasPost -->
+    <!-- https://w3id.org/transmodel/journeys#boardingPositionInQuay -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasPost">
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#postIn"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Post"/>
-        <rdfs:comment xml:lang="it">Indica il Post che è presente in una Organization.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indicate un Poste qui existe dans l&apos;Organisation.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates a Post which exists within the Organization.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Posición que existe en una organización.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">組織内に存在するポストを示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="it">impiego</rdfs:label>
-        <rdfs:label xml:lang="fr">possède un poste</rdfs:label>
-        <rdfs:label xml:lang="en">post</rdfs:label>
-        <rdfs:label xml:lang="es">tiene puesto</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#boardingPositionInQuay">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Quay"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#BoardingPosition"/>
+        <rdfs:label xml:lang="en">boardingPositionInQuay</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#hasPrimarySite -->
+    <!-- https://w3id.org/transmodel/journeys#canAlight -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasPrimarySite">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#hasSite"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Site"/>
-        <rdfs:comment xml:lang="it">Indica la sede principale per l&apos;Organization. È da considerarsi come la sede di default in cui l&apos;Organization deve essere contattata pur non essendo necessariamente il quartier generale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates a primary site for the Organization, this is the default means by which an Organization can be contacted and is not necessarily the formal headquarters.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique le site principal d&apos;une Organisation, le moyen par défaut par lequel l&apos;Organisation peut être contactée et pas nécessairement le siège social légal.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Oficina principal de la organización, la opción por defecto para ponerse en contacto con una organización, aunque no corresponde necesariamente con las oficinas centrales de la organización.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">組織の主要サイトを示します。組織の窓口となりえるデフォルトの手段ですが、正式な本部とは限りません。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="en">primary Site</rdfs:label>
-        <rdfs:label xml:lang="it">sede principale</rdfs:label>
-        <rdfs:label xml:lang="fr">site principal</rdfs:label>
-        <rdfs:label xml:lang="es">tiene sede principal en</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#canAlight">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Passenger"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+        <rdfs:label xml:lang="en">canAlight</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#hasRegisteredSite -->
+    <!-- https://w3id.org/transmodel/journeys#canBoard -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasRegisteredSite">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#hasPrimarySite"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Site"/>
-        <rdfs:comment xml:lang="it">Indica la sede legale per l&apos;Organization. In molte giurisdizioni è richiesto che una FormalOrganization abbia una sede di questo tipo.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates the legally registered site for the organization, in many legal jurisdictions there is a requirement that FormalOrganizations such as Companies or Charities have such a primary designed site. </rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique l&apos;établissement principal légalement enregistré pour l&apos;Organisation. Dans de nombreuses juridictions existe l&apos;obligation pour une Organisation Formelle d&apos;avoir un tel site principal. </rdfs:comment>
-        <rdfs:comment xml:lang="es">Oficina o sede legalmente registrada de la organización. En muchas jurisdicciones legales existe el requisito de que organizaciones formales tales como empresas u organizaciones de beneficencia tengan una sede principal de este tipo.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">組織の法律上登録されたサイトを示し、多くの法的管轄区域では、会社や慈善団体などのFormalOrganizations（正式な組織）がそのような主要サイトを持っているという要件があります。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="en">registered Site</rdfs:label>
-        <rdfs:label xml:lang="it">sede legale</rdfs:label>
-        <rdfs:label xml:lang="fr">siège social</rdfs:label>
-        <rdfs:label xml:lang="es">tiene sede registrada en</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#canBoard">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Passenger"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+        <rdfs:label xml:lang="en">canBoard</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#hasSite -->
+    <!-- https://w3id.org/transmodel/journeys#dayTypeAssignment -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasSite">
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#siteOf"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Site"/>
-        <rdfs:comment xml:lang="it">Indica la sede in cui l&apos;Organization ha una qualche presenza anche in modo indiretto (ad esempio un ufficio virtuale). È l&apos;inverso di `org:siteOf`.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates a site at which the Organization has some presence even if only indirect (e.g. virtual office or a professional service which is acting as the registered address for a company). Inverse of `org:siteOf`.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique un site sur lequel l&apos;Organisation possède une présence, même indirecte (domiciliation, boite postale). Inverse de `org:siteOf`.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Lugar en donde la organización tiene algún tipo de presencia, incluso si es de forma indirecta (por ejemplo, una oficina virtual o servicio profesional que hagan la función de dirección registrada de la compañía). Es la relación inversa de `org:siteOf`.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">組織が、間接（例えば、会社の登録住所として機能しているバーチャル・オフィスやプロフェッショナル・サービス）のみであったとしても、ある存在感を持っているサイトを示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="fr">a un site</rdfs:label>
-        <rdfs:label xml:lang="it">ha sede</rdfs:label>
-        <rdfs:label xml:lang="en">has site</rdfs:label>
-        <rdfs:label xml:lang="es">tiene sede en</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#dayTypeAssignment">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#OperatingDay"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#DayType"/>
+        <rdfs:comment xml:lang="en">The assignment of operational characteristics, expressed by DayType, to a particular OperatingDay within a ServiceCalendar</rdfs:comment>
+        <rdfs:label xml:lang="en">dayTypeAssignment</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#hasSubOrganization -->
+    <!-- https://w3id.org/transmodel/journeys#defaultDeadRunRunTime -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasSubOrganization">
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#subOrganizationOf"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:comment xml:lang="fr">Indique le statut de dépendance hiérarchique pour des Organisations ou des Unités Opérationnelles; indique une Organisation qui est une sous-partie ou une branche d&apos;une Organisation plus large. C&apos;est la propriété inverse de `org:subOrganizationOf`.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Organización jerárquica de organizaciones o unidades. Indica que una organización es parte de otra organización más amplia o pertenece a ella. Es la relación inversa de `org:subOrganizationOf`.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Rappresenta un contenimento gerarchico di una Organization o di una OrganizationalUnit. Indica una organizzazione che è parte di una organizzazione più grande. È l&apos;inverso di `org:subOrganizationOf`.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Represents hierarchical containment of Organizations or Organizational Units; indicates an organization which is a sub-part or child of this organization.  Inverse of `org:subOrganizationOf`.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">組織または組織単位の階層的包含を表わします。この組織のサブパートまたは子である組織を示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="fr">a une Sous-Organization</rdfs:label>
-        <rdfs:label xml:lang="it">ha sotto-Organization</rdfs:label>
-        <rdfs:label xml:lang="en">has SubOrganization</rdfs:label>
-        <rdfs:label xml:lang="es">tiene suborganización</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#defaultDeadRunRunTime">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#DeadRun"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#TimingLink"/>
+        <rdfs:label xml:lang="en">defaultDeadRunRunTime</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#hasUnit -->
+    <!-- https://w3id.org/transmodel/journeys#defaultInterchange -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasUnit">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#hasSubOrganization"/>
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#unitOf"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
-        <rdfs:comment xml:lang="it">Indica un&apos;unità che è parte di questa Organization, come ad esempio un dipartimento facente parte di una più ampia FormalOrganization. È l&apos;inverso di `org:unitOf`.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates a unit which is part of this Organization, e.g. a Department within a larger FormalOrganization. Inverse of `org:unitOf`.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique une Unité qui fait partie d&apos;une Organisation, par exemple un Départment au sein d&apos;une Organisation Formelle plus large. Inverse de `org:unitOf`.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Unidad que es parte de la organización, como, por ejemplo, un departamento incluido en una organización formal más amplia.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">例えば、より大きな組織内の部局など、この組織の一部である単位を示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="es">contiene unidad</rdfs:label>
-        <rdfs:label xml:lang="it">ha Unit</rdfs:label>
-        <rdfs:label xml:lang="en">has Unit</rdfs:label>
-        <rdfs:label xml:lang="fr">possède une Unité</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#defaultInterchange">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#DefaultInterchange"/>
+        <rdfs:label xml:lang="en">defaultInterchange</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#headOf -->
+    <!-- https://w3id.org/transmodel/journeys#destinationStop -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#headOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#memberOf"/>
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:comment xml:lang="it">Indica che una persona è leader o responsabile formale di una Organization. Questo significa che la persona è alla radice del grafo (aciclico) creato dalle `org:reportsTo`, sebbene un&apos;organizzazione possa avere più di un responsabile.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates that a person is the leader or formal head of the Organization. This will normally mean that they are the root of the `org:reportsTo` (acyclic) graph, though an organization may have more than one head.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique qu&apos;une personne est le directeur ou le responsable formel d&apos;une Organisation. Ceci indique souvent qu&apos;il est au sommet de du graphe acyclique des `org:reportsTo`, même si une organisation peut avoir plus d&apos;un responsable.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Persona que es jefe o jefa, representante ,,director o directora de la organización. Esto significa que dicha persona es el rango de la relación `org:reportsTo` en el organigrama de la organización (acíclico), aunque una organización puede tener más de un jefe.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">人（または他のエージェント）が組織のリーダーや正式なトップであることを示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="es">es director ejecutivo de</rdfs:label>
-        <rdfs:label xml:lang="en">head of</rdfs:label>
-        <rdfs:label xml:lang="it">responsabile di</rdfs:label>
-        <rdfs:label xml:lang="fr">responsable de</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#destinationStop">
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+        <rdfs:label xml:lang="en">destinationStop</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#heldBy -->
+    <!-- https://w3id.org/transmodel/journeys#direction -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#heldBy">
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#holds"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Post"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <rdfs:comment xml:lang="es">Agente que ocupa un puesto.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Indica un Agent che ricopre un Post.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indicate un Agent qui occupe le Poste.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates an Agent which holds a Post.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">ポストを保持するエージェントを示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="en">held by</rdfs:label>
-        <rdfs:label xml:lang="fr">occupé par</rdfs:label>
-        <rdfs:label xml:lang="es">ocupado por</rdfs:label>
-        <rdfs:label xml:lang="it">ricoperto da</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#direction">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Route"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Direction"/>
+        <rdfs:label xml:lang="en">direction</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#holds -->
+    <!-- https://w3id.org/transmodel/journeys#endsConnection -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#holds">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Post"/>
-        <rdfs:comment xml:lang="it">Indica un Impiego ricoperto da un Agent.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indicate un Poste occupé par un Agent.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates a Post held by some Agent.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Puesto ocupado por algún agente.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">あるエージェントによって保持されているポストを示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="en">holds</rdfs:label>
-        <rdfs:label xml:lang="fr">occupe</rdfs:label>
-        <rdfs:label xml:lang="es">ocupa</rdfs:label>
-        <rdfs:label xml:lang="it">ricopre</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#endsConnection">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Connection"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+        <rdfs:label xml:lang="en">Connection End, one end of a connection in Transmodel v6.0</rdfs:label>
+        <rdfs:label xml:lang="en">endsConnection</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#linkedTo -->
+    <!-- https://w3id.org/transmodel/journeys#endsConnectionDefault -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#linkedTo">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:comment xml:lang="ja">2つの組織の任意の関係を示します。</rdfs:comment>
-        <rdfs:comment xml:lang="it">Indica una relazione arbitraria tra due organizzazioni. Ad esempio, specializzazioni di questa proprietà possono essere usate per denotare relazioni particolari tipo il finanziamento o la fornitura.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates an arbitrary relationship between two organizations. Specializations of this can be used to, for example, denote funding or supply chain relationships.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique une relation arbitraire entre deux Organisations. Des spécialisations peuvent être utilisées pour, par exemple, qualifier une relation de fournisseur ou de financeur.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Relación arbitraria entre dos organizaciones. Las especializaciones de esta relación se pueden utilizar para denotar relaciones de financiación o suministro, entre otras.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="it">collegato a</rdfs:label>
-        <rdfs:label xml:lang="es">está relacionada con</rdfs:label>
-        <rdfs:label xml:lang="es">está relacionado con</rdfs:label>
-        <rdfs:label xml:lang="en">linked to</rdfs:label>
-        <rdfs:label xml:lang="fr">relié à</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#endsConnectionDefault">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#endsConnection"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#DefaultConnection"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+        <rdfs:label xml:lang="en">endsConnectionDefault</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#member -->
+    <!-- https://w3id.org/transmodel/journeys#followsDeadRunTime -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#member">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Membership"/>
-        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <rdfs:comment xml:lang="it">Indica la Person (o un altro Agent) coinvolto in una relazione di Membership. È l&apos;inverso di `org:hasMembership`.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates the Person (or other Agent including Organization) involved in the Membership relationship. Inverse of `org:hasMembership`</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique une personne (ou tout autre Agent, y compris une Organisation) impliqué dans la relation d&apos;Engagement. Inverse de `org:hasMembership`</rdfs:comment>
-        <rdfs:comment xml:lang="es">Persona (u otro agente, incluyendo una organización) que participa en la relación de membresía. Es la relación inversa de `org:hasMembership`.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">構成員関係に含まれている人（または、組織を含んでいる他のエージェント）を示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="es">es condición de miembro sobre agente</rdfs:label>
-        <rdfs:label xml:lang="en">member</rdfs:label>
-        <rdfs:label xml:lang="fr">membre</rdfs:label>
-        <rdfs:label xml:lang="it">membro</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#followsDeadRunTime">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#DeadRunPattern"/>
+        <rdfs:label xml:lang="en">followsDeadRunPattern</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#memberDuring -->
+    <!-- https://w3id.org/transmodel/journeys#followsJourneyPattern -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#memberDuring">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Membership"/>
-        <rdfs:comment xml:lang="en">Optional property to indicate the interval for which the membership is/was valid.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Propiedad opcional que indica el periodo durante el cual la relación de membresía o pertenencia a una organización se mantiene en vigencia.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Proprietà opzionale per indicare l&apos;intervallo per il quale l&apos;appartenenza è/è stata valida.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Propriété optionnelle pour indiquer l&apos;intervalle durant lequel l&apos;engagemnet est ou était valide.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">構成員が有効である／であった期間を示すためのオプションのプロパティー。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="fr">durée d&apos;engagement</rdfs:label>
-        <rdfs:label xml:lang="es">es miembro durante</rdfs:label>
-        <rdfs:label xml:lang="en">member During</rdfs:label>
-        <rdfs:label xml:lang="it">membro durante</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#followsJourneyPattern">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#JourneyPattern"/>
+        <rdfs:label xml:lang="en">followsJourneyPattern</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#memberOf -->
+    <!-- https://w3id.org/transmodel/journeys#hasAServiceJourneyPattern -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#memberOf">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:comment xml:lang="it">Indica che una persona è membro di una Organization senza una precisa indicazione sulla natura di questa appartenenza e sul suo ruolo. Si noti che la scelta del nome di questa proprietà non intende limitarla alla sola  rappresentazione formalmente di un&apos;appartenenza. La proprietà può coprire anche altri coinvolgimenti nell&apos;organizzazione. Questa proprietà può essere specializzata per indicare ruoli all&apos;interno organizzazione o relazioni di diverse tipologie. Ha `org:hasmember` come proprietà inversa opzionale.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates that a person is a member of the Organization with no indication of the nature of that membership or the role played. Note that the choice of property name is not meant to limit the property to only formal membership arrangements, it is also indended to cover related concepts such as affilliation or other involvement in the organization. Extensions can specialize this relationship to indicate particular roles within the organization or more nuanced relationships to the organization. Has an optional inverse, `org:hasmember`.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique qu&apos;une personne est membre de l&apos;Organisation sans précision sur la nature de cet engagement ou du rôle joué. Notez que le choix du nom de cette propriété ne vise pas à la limiter aux seuls engagements formels, elle peut également couvrir des concepts reliés comme l&apos;affiliation ou le bénévolat. Des extensions peuvent spécialiser cette relation pour indiquer des rôles particuliers au sein de l&apos;Organisation or des relations plus nuancées avec elle. Possède une propriété inverse optionnelle, `org:hasmember`.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Persona que pertenece a la organización o es miembro de la misma, sin que conste la naturaleza de dicha pertenencia o el papel que desempeña. Se debe tener en cuenta que la elección de una denominación para esta propiedad no significa que la propiedad esté limitada a ciertos tipos de pertenencia formales, sino que pretende cubrir conceptos relacionados como el de afiliación u otras formas de participación en la organización. Se puede hacer uso de extensiones para especializar esta relación de forma que incluya tipos específicos de pertenencia a las organizaciones o relaciones especiales con la organización.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">エージェント（人または他の組織）が組織のメンバーであることを示します。ただし、その構成員の本質や担う役割は示しません。プロパティー名の選択は、プロパティーを正式な構成員配置のみに制限することが目的ではないことに注意してください。所属や組織へのその他の関与などの関連する概念をカバーすることも意図されています。拡張により、この関係を特殊化し、組織内の特定の役割やよりニュアンスを含んだ組織との関係を示すことができます。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="es">es miembro de</rdfs:label>
-        <rdfs:label xml:lang="en">member of</rdfs:label>
-        <rdfs:label xml:lang="fr">membre de</rdfs:label>
-        <rdfs:label xml:lang="it">membro di</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#hasAServiceJourneyPattern">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Service"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#ServiceJourneyPattern"/>
+        <rdfs:label xml:lang="en">serviceJourneyPattern</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#organization -->
+    <!-- https://w3id.org/transmodel/journeys#journeyPatternPoint -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#organization">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Membership"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:comment xml:lang="it">Indica l&apos;Organization in cui l&apos;Agent è un membro.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates Organization in which the Agent is a member.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique l&apos;Organization dont l&apos;agent est membre.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Organización a la que pertenece el agente en calidad de miembro.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">エージェントがメンバーである組織を示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="es">es condición de miembro sobre organización</rdfs:label>
-        <rdfs:label xml:lang="fr">organisation</rdfs:label>
-        <rdfs:label xml:lang="en">organization</rdfs:label>
-        <rdfs:label xml:lang="it">organizzazione</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#journeyPatternPoint">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#JourneyPattern"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:label xml:lang="en">journeyPatternPoint</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#originalOrganization -->
+    <!-- https://w3id.org/transmodel/journeys#journeyPatternRunTime -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#originalOrganization">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#used"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:comment xml:lang="it">Indica una o più organizzazioni pregresse rispetto a un evento di cambiamento. A seconda dell&apos;evento, queste organizzazioni potrebbero essere esistenti dopo l&apos;evento o  aver cessato la loro esistenza. È l&apos;inverso di `org:changedBy`.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Inverse of `org:changedBy`.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique une ou plusieurs organisations qui ont existé avant un évènement de changement. Selon l&apos;évènement, ces organisations ont pu continuer à exister ou non. Inverse de `org:changedBy`. </rdfs:comment>
-        <rdfs:comment xml:lang="es">Una o más organizaciones que existían antes de que sucediera el cambio en la organización. Dependiendo del tipo de cambio, dichas organizaciones pueden haber dejado de existir o no. Es la relación inversa de `org:changedBy`.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">変更のきっかけとなった出来事以前に存在した1つ以上の組織を示します。出来事によって、出来事の後にそれらは存在し続けたかも、存在し続けなかったかもしれません。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="es">es organización original</rdfs:label>
-        <rdfs:label xml:lang="fr">organisation originelle</rdfs:label>
-        <rdfs:label xml:lang="it">organizzazione originale</rdfs:label>
-        <rdfs:label xml:lang="en">original organization</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#journeyPatternRunTime">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/transmodel/journeys#journeyRunTime"/>
+        <rdfs:label xml:lang="en">journeyPatternRunTime</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#postIn -->
+    <!-- https://w3id.org/transmodel/journeys#journeyRunTime -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#postIn">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Post"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:comment xml:lang="it">Indica l&apos;Organization in cui il Post è presente.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indicate l&apos;Organisation dans laquelle le Poste existe.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates the Organization in which the Post exists.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Organización en la que existe el puesto.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">ポストが存在する組織を示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="es">es un puesto en</rdfs:label>
-        <rdfs:label xml:lang="it">impiego in</rdfs:label>
-        <rdfs:label xml:lang="en">post in</rdfs:label>
-        <rdfs:label xml:lang="fr">poste chez</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#journeyRunTime">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#JourneyPattern"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#TimingLink"/>
+        <rdfs:label xml:lang="en">journeyRunTime</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#remuneration -->
+    <!-- https://w3id.org/transmodel/journeys#makesAServiceJourney -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#remuneration">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Role"/>
-        <rdfs:comment xml:lang="it">Indica il salario o altra forma di remunerazione associata al ruolo. In genere, questo si denota usando uno schema di rappresentazione esistente come il `gr:PriceSpecification` ma il codominio è lasciato libero di essere specializzato a seconda delle applicazioni.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates a salary or other reward associated with the role. Typically this will be denoted using an existing representation scheme such as `gr:PriceSpecification` but the range is left open to allow applications to specialize it (e.g. to remunerationInGBP).</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique un salaire ou tout autre compensation associée au Rôle. Typiquement, ceci sera annoté en utilisant un schéma existant comme  `gr:PriceSpecification` mais le champ de cette propriété est laissé ouvert afin de permettre aux applications de la spécialiser (par exemple remunerationEuro).</rdfs:comment>
-        <rdfs:comment xml:lang="es">Salario o cualquier otra remuneración asociada con la actividad. La forma usual de referirse a dicha remuneración será utilizando un esquema de representación como el propuesto en la ontología GoodRelations `gr:PriceSpecification`, pero el rango se deja abierto a que las distintas aplicaciones lo especialicen (por ejemplo, remunerationInGBP)</rdfs:comment>
-        <rdfs:comment xml:lang="ja">役割に関係する給料やその他の報酬を示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="es">recibe remuneración</rdfs:label>
-        <rdfs:label xml:lang="en">remuneration</rdfs:label>
-        <rdfs:label xml:lang="it">remunerazione</rdfs:label>
-        <rdfs:label xml:lang="fr">rémuneration</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#makesAServiceJourney">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Passenger"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Service"/>
+        <rdfs:label xml:lang="en">serviceJourney</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#reportsTo -->
+    <!-- https://w3id.org/transmodel/journeys#modeOfTransport -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#reportsTo">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/ns/org#Post"/>
-                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/ns/org#Post"/>
-                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:comment xml:lang="it">Indica una relazione di subordinazione all&apos;interno dell&apos;organigramma. La semantica precisa può variare a seconda dell&apos;organizzazione, per esempio può essere usata per rappresentare la proprietà di supervisione oppure per le relazioni di rendicontazione.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates a reporting relationship as might be depicted on an organizational chart. The precise semantics of the reporting relationship will vary by organization but is intended to encompass both direct supervisory relationships (e.g. carrying objective and salary setting authority) and more general reporting or accountability relationships (e.g. so called _dotted line_ reporting).</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique une relation de subordination comme elle pourrait figurer dans un organigramme. La sémantique précise de cette subordination pourra varier selon l&apos;Organisation mais vise à englober aussi bien les relations hiérarchiques directes (définition d&apos;objectifs, montant du salaire) que des relations plus générales ou organisationnelles (les liens en pointillés dans les organigrammes).</rdfs:comment>
-        <rdfs:comment xml:lang="es">Relación de subordinación que se representa en los organigramas de las organizaciones. La semántica de la relación de subordinación varía según las organizaciones, pero su intención es abarcar tanto a las relaciones de supervisión directa (por ejemplo, aquellas en las que la autoridad determina los objetivos o el salario) como a las relaciones de subordinación más generales (por ejemplo, las llamadas líneas de autoridad o de mando (y responsabilidad) (http://www.promonegocios.net/organigramas/tipos-de-organigramas.html)).</rdfs:comment>
-        <rdfs:comment xml:lang="ja">組織図で描かれるかもしれないような上下関係を示します。エージェント間またはエージェントが就くことができるポスト間の上下関係を直接的に示すために使用できます。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="fr">est subordonné à</rdfs:label>
-        <rdfs:label xml:lang="en">reports to</rdfs:label>
-        <rdfs:label xml:lang="es">responde ante</rdfs:label>
-        <rdfs:label xml:lang="it">riporta a</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#modeOfTransport">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Route"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#resultedFrom -->
+    <!-- https://w3id.org/transmodel/journeys#originStop -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#resultedFrom">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#resultingOrganization"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
-        <rdfs:comment xml:lang="es">Evento que tiene como resultado la creación de una organización.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Indica l&apos;evento che ha permesso all&apos;organizzazione di instaurarsi. È l&apos;inverso di `org:resultingOrganization`.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates an event which resulted in this organization. Inverse of `org:resultingOrganization`.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique un évènement dont est issue l&apos;Organisation. Inverse de `org:resultingOrganization`.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">この組織になった（導いた、作成された）きっかけとなった出来事を示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="es">es el resultado de</rdfs:label>
-        <rdfs:label xml:lang="fr">issue de</rdfs:label>
-        <rdfs:label xml:lang="en">resulted from</rdfs:label>
-        <rdfs:label xml:lang="it">risultato da</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#originStop">
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+        <rdfs:label xml:lang="en">originStop</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#resultingOrganization -->
+    <!-- https://w3id.org/transmodel/journeys#passengerConnection -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#resultingOrganization">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:comment xml:lang="it">Indica l&apos;organizzazione che è stata creata o mutata a seguito dell&apos;evento. È l&apos;inverso di `org:resultedFrom`.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates an organization which was created or changed as a result of the event. Inverse of `org:resultedFrom`.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique une organisation qui a été créée ou a été modifiée à la suite d&apos;un Évènement de changement. Inverse de `org:resultedFrom`.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Organización que ha sido creada o modificada tras un evento específico.  Es la relación inversa de `org:resultedFrom`.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">出来事の結果、作成、変更された組織を示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="fr">a donné naissance à</rdfs:label>
-        <rdfs:label xml:lang="es">resulta en</rdfs:label>
-        <rdfs:label xml:lang="en">resulted in</rdfs:label>
-        <rdfs:label xml:lang="it">risultato in</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#passengerConnection">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Passenger"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Connection"/>
+        <rdfs:label xml:lang="en">passengerConnection</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#role -->
+    <!-- https://w3id.org/transmodel/journeys#passengerJourneys -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#role">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/ns/org#Membership"/>
-                    <rdf:Description rdf:about="http://www.w3.org/ns/org#Post"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Role"/>
-        <rdfs:comment xml:lang="es">Actividad que el agente desempeña en una relación de pertenencia a una organización.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Indica il Role che un Agent ricopre in una relazione di Membership con una Organization</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates the Role that the Agent plays in a Membership relationship with an Organization.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique le Rôle de l&apos;Agent dans son Engagement avec l&apos;Organisation.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">エージェントが組織との構成員関係において担う役割を示します。ポストの保持者が担う役割を示すためにorg:Postで用いることもできます。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="es">desempeña la actividad de</rdfs:label>
-        <rdfs:label xml:lang="en">role</rdfs:label>
-        <rdfs:label xml:lang="it">ruolo</rdfs:label>
-        <rdfs:label xml:lang="fr">rôle</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#passengerJourneys">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Passenger"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Trip"/>
+        <rdfs:comment xml:lang="en">The Journey of a Passenger is a Trip</rdfs:comment>
+        <rdfs:label xml:lang="en">passengerJourneys</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#siteAddress -->
+    <!-- https://w3id.org/transmodel/journeys#passingTimeTimingPoint -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#siteAddress">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Site"/>
-        <rdfs:comment xml:lang="es">Dirección de la sede según una codificación adecuada. Se recomienda el uso de vCard (que utiliza el vocabulario en http://www.w3.org/TR/vcard-rdf/), pero el rango no se restringe únicamente al uso de este vocabulario sino que se permite el uso de otros códigos. La dirección puede constar de una dirección de correo electrónico, un número de teléfono o información de geo-localización, y no se limita a una dirección postal física.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Indica un indirizzo per la sede in una codifica appropriata. Il codominio è lasciato libero ma è consigliabile l&apos;uso del vocabolario vCard (http://www.w3.org/TR/vcard-rdf/). L&apos;indirizzo può includere email, numero di telefono e informazioni di geolocalizzazione e non è vincolato ad essere un indirizzo fisico.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates an address for the site in a suitable encoding. Use of vCard (using the http://www.w3.org/TR/vcard-rdf/ vocabulary) is encouraged but the range is left open to allow other encodings to be used. The address may include email, telephone, and geo-location information and is not restricted to a physical address. </rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique une adresse pour le site dans un encodage approprié. L&apos;usage du vocabulaire vCard ( http://www.w3.org/TR/vcard-rdf/) est encouragé, mais le range est ouvert pour permettre l&apos;utilisation d&apos;autres vocabulaires. L&apos;adresse peut comporter le courriel, le téléphone, et l&apos;information de géolocalisation; et n&apos;est donc pas seulement limitée à une adresse physique. </rdfs:comment>
-        <rdfs:comment xml:lang="ja">適切にコード化されたサイトのアドレスを示します。vCard[vcard-rdf]語彙などの有名なアドレスのコード化の使用が奨励されますが、他の符号化の使用を可能とするために値域はオープンのままにされます。アドレスには、電子メール、電話およびジオロケーション情報を含むことができ、物理的なアドレスに制限されません。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="fr">adresse du Site</rdfs:label>
-        <rdfs:label xml:lang="es">es la dirección de la sede</rdfs:label>
-        <rdfs:label xml:lang="it">indirizzo della sede</rdfs:label>
-        <rdfs:label xml:lang="en">site Address</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#passingTimeTimingPoint">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#PassingTime"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#TimingPoint"/>
+        <rdfs:label>passingTimeTimingPoint</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#siteOf -->
+    <!-- https://w3id.org/transmodel/journeys#route -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#siteOf">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Site"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:comment xml:lang="it">Indica un&apos;Organization che ha una qualche presenza nella data sede. È l&apos;inverso di `org:hasSite`.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates an Organization which has some presence at the given site. This is the inverse of `org:hasSite`.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique une Organisation qui a une présence sur le site en question. Inverse de `org:hasSite`.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Organización que tiene ubicación en un lugar. Es la relación inversa de `org:hasSite`.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">あるサイトである存在感を持っている組織を示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="es">es sede de</rdfs:label>
-        <rdfs:label xml:lang="it">sede di</rdfs:label>
-        <rdfs:label xml:lang="en">site Of</rdfs:label>
-        <rdfs:label xml:lang="fr">site de</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#route">
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Route"/>
+        <rdfs:label xml:lang="en">route</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#subOrganizationOf -->
+    <!-- https://w3id.org/transmodel/journeys#runBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#subOrganizationOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#transitiveSubOrganizationOf"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:comment xml:lang="es">Distribución jerárquica de organizaciones o unidades. Indica que una organización contiene a otra organización. Es la relación inversa de `org:hasSubOrganization`</rdfs:comment>
-        <rdfs:comment xml:lang="it">Rappresenta un contenimento gerarchico di una Organization o di una OrganizationalUnit. È l&apos;inverso di `org:hasSubOrganization`. Ha nome come nome alternativo hasSubOrg.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an Organization which contains this Organization. Inverse of `org:hasSubOrganization`.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Représente une relation hierarchique des Organisations ou des Unités Opérationnelles; indique une Organisation sujet qui contient cette Organisation. Inverse de `org:hasSubOrganization`.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">組織または組織単位の階層的包含を表わします。この組織を含む組織を示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="es">es suborganización de</rdfs:label>
-        <rdfs:label xml:lang="it">sotto-Organization di</rdfs:label>
-        <rdfs:label xml:lang="fr">sous-Organization de</rdfs:label>
-        <rdfs:label xml:lang="en">subOrganization of</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#runBy">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Line"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#Operator"/>
+        <rdfs:comment xml:lang="en">A Line is run by an Operator</rdfs:comment>
+        <rdfs:label xml:lang="en">run By</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#transitiveSubOrganizationOf -->
+    <!-- https://w3id.org/transmodel/journeys#runTimeOverrides -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#transitiveSubOrganizationOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:comment xml:lang="fr">La version transitive de la propriété subOrganizationOf, renvoie une représentation de toutes les organisations qui contiennent celle-ci. Notez que ceci est une super-propriété de la relation transitive donc elle pourrait contenir des assertions additionnelles mais cet usage n&apos;est pas recommandé.</rdfs:comment>
-        <rdfs:comment xml:lang="es">La versión transitiva de la propiedad “subOrganizationOf”, es decir, la representación de todas las organizaciones en las que esta está contenida. Téngase en cuenta que desde el punto de vista técnico esta es una propiedad que contiene a todas las propiedades transitivas, de forma que podría contener afirmaciones adicionales, aunque su uso no está aconsejado.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The transitive closure of subOrganizationOf, giving a representation of all organizations that contain this one. Note that technically this is a super property of the transitive closure so it could contain additional assertions but such usage is discouraged.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">subOrganizationOfの推移閉包で、これを含むすべての組織の表現を与える。技術的に、これが推移閉包のスーパープロパティーであるため、追加の言明を含むことができますが、そのような使用法はお勧めできないことに注意してください。</rdfs:comment>
-        <rdfs:comment xml:lang="it">È la chiusura transitiva di subOrganizationOf, quindi rappresenta tutte le organizzazioni che la contengono. Tecnicamente, essendo una chiusura transitiva, può contenere asserzioni che non la riguardano e quindi il suo uso è sconsigliato.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="es">es suborganización de (transitiva)</rdfs:label>
-        <rdfs:label xml:lang="es">es suborganización de manera transitiva de</rdfs:label>
-        <rdfs:label xml:lang="it">sotto-Organization transitiva</rdfs:label>
-        <rdfs:label xml:lang="fr">sous-Organization transitive de</rdfs:label>
-        <rdfs:label xml:lang="en">transitive sub-organization</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#runTimeOverrides">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#JourneyRunTime"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#DefaultDeadRunRunTime"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#DefaultServiceJourneyRunTime"/>
+        <rdfs:label xml:lang="en">journeyRunTimeOverrides</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#unitOf -->
+    <!-- https://w3id.org/transmodel/journeys#scheduledStopPoint -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#unitOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#subOrganizationOf"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
-        <rdfs:comment xml:lang="it">Indica un Organization di cui questa Unit fa parte, come ad esempio un dipartimento all&apos;interno di una più vasta FormalOrganization. È l&apos;inverso di `org:hasUnit`.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates an Organization of which this Unit is a part, e.g. a Department within a larger FormalOrganization. This is the inverse of `org:hasUnit`.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique l&apos;Organisation dont cette Organisation ou Unité fait partie, par exemple un Départment au sein d&apos;une Organisation Formelle plus large. Inverse de `org:hasUnit`.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Organización de la que es parte esta unidad, por ejemplo, un departamento incluido en una organización formal más amplia.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">例えば、より大きな組織内の部局など、この単位がその一部分である組織を示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="es">es unidad de</rdfs:label>
-        <rdfs:label xml:lang="en">unit Of</rdfs:label>
-        <rdfs:label xml:lang="it">unità di</rdfs:label>
-        <rdfs:label xml:lang="fr">unité de</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#scheduledStopPoint">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Route"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+        <rdfs:label xml:lang="en">scheduledStopPoint</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/prov#used -->
+    <!-- https://w3id.org/transmodel/journeys#stopPlaceAssignment -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#used"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.w3.org/ns/org#resultedFrom"/>
-            <rdf:Description rdf:about="http://www.w3.org/ns/org#originalOrganization"/>
-        </owl:propertyChainAxiom>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#stopPlaceAssignment">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#StopPlace"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+        <rdfs:comment xml:lang="en">The allocation of a ScheduledStopPoint (i.e. a ScheduledStopPoint of a ServicePattern or JourneyPattern) to a specific StopPlace, for either a ServiceJourney or VehicleService</rdfs:comment>
+        <rdfs:label xml:lang="en">stopAssignment</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
+    <!-- https://w3id.org/transmodel/journeys#stopsAt -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#stopsAt">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Vehicle"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+        <rdfs:label xml:lang="en">stopsAt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#timeTabledPassingTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#timeTabledPassingTime">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#TimeTabledPassingTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#timingLink -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#timingLink">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#TimingLink"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#TimingPoint"/>
+        <rdfs:label xml:lang="en">timingLinkPoint</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#JourneyPattern"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#TimingLinkInJourneyPattern"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#typeOfFlexibleService -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#typeOfFlexibleService">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#FlexibleLine"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#TypeOfFlexibleService"/>
+        <rdfs:label>typeOfFlexibleService</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#vehicleJourney -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#vehicleJourney">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Vehicle"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:label xml:lang="en">vehicleJourney</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#vehicleJourneyDayType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#vehicleJourneyDayType">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#DayType"/>
+        <rdfs:label xml:lang="en">vehicleJourneyDayType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#vehicleJourneyPart -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#vehicleJourneyPart">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Vehicle"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#JourneyPart"/>
+        <rdfs:label xml:lang="en">vehicleJourneyPart</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#vehicleJourneyRoute -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#vehicleJourneyRoute">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Route"/>
+        <rdfs:label xml:lang="en">vehicleJourneyRoute</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourneyRunTime"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#DefaultDeadRunRunTime"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#DefaultServiceJourneyRunTime"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#JourneyPatternRunTime"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#JourneyRunTime"/>
+        <rdfs:label xml:lang="en">vehicleJourneyRunTimeOverrides</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#vehicleJourneys -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#vehicleJourneys">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Vehicle"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:comment xml:lang="en">The Journey of a Vehicle is a VehicleJourney</rdfs:comment>
+        <rdfs:label xml:lang="en">vehicleJourneys</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#vehiclePassingTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#vehiclePassingTime">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Vehicle"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#PassingTime"/>
+        <rdfs:label xml:lang="en">vehiclePassingTime</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Vehicle"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#TimeTabledPassingTime"/>
+        <rdfs:label xml:lang="en">vehicleTimeTabledPassingTime</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -849,47 +612,213 @@
     
 
 
-    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+    <!-- https://w3id.org/transmodel/journeys#arrivalTime -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
-    
-
-
-    <!-- http://www.w3.org/ns/org#identifier -->
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:comment xml:lang="es">Código o identificador, como por ejemplo el CIF de una empresa, que permite identificar de forma inequívoca a una organización. Existen muchos códigos de identificación tanto nacionales como internacionales. Esta ontología no obliga al uso de ningún esquema en concreto. Los códigos de identificación utilizados en cada caso se deberían indicar mediante el uso de la propiedad “datatype” del valor del identificador. El uso de la propiedad “datatype” para especificar el esquema de notación utilizado está en consonancia con las buenas prácticas recomendadas para el uso de la propiedad `skos:notation`, de la que esta propiedad es una especialización.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Donne un identifiant, comme par exemple le numéro d&apos;enregistrement d&apos;une entreprise, qui peut être utilisé comme identifiant unique pour l&apos;Organisation. De nombreux schémas nationaux et internationaux sont disponibles. Cette ontologie reste neutre par rapport au schéma utilisé. Le schéma particulier utilisé devrait être indiqué par le `datatype` de la valeur de l&apos;identifiant. Utiliser les datatypes pour distinguer les schémas de notation est cohérent avec les bonnes pratiques pour `skos:notation` dont cette propriété est une spécialisation.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Gives an identifier, such as a company registration number, that can be used to used to uniquely identify the organization. Many different national and international identier schemes are available. The org ontology is neutral to which schemes are used. The particular identifier scheme should be indicated by the datatype of the identifier value.  Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for `skos:notation` of which this property is a specialization.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Indica un identificatore univoco per l&apos;organizzazione, come ad esempio la partita IVA di un&apos;azienda. Molti schemi di identificazione a livello nazionale e internazionale sono disponibili allo scopo. L&apos;ontologia ORG è neutrale rispetto allo schema da utilizzare. Lo schema di identificazione dovrebbe essere indicato dal datatype del valore dell&apos;identificatore. L&apos;uso del datatype per distinguere lo schema di identificazione è coerente con le best practice per `skos:notation`, di cui questa proprietà è una specializzazione.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">組織を一意に識別するために使用できる会社登録番号などの識別子を与えます。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="fr">identifiant</rdfs:label>
-        <rdfs:label xml:lang="it">identificatore</rdfs:label>
-        <rdfs:label xml:lang="en">identifier</rdfs:label>
-        <rdfs:label xml:lang="es">tiene identificador</rdfs:label>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#arrivalTime">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#TimingPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:label xml:lang="en">arrivalTime</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.w3.org/ns/org#location -->
+    <!-- https://w3id.org/transmodel/journeys#buildingidentifier -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#location">
-        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#buildingidentifier">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#PostalAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">buildingIdentifier</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#headway -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#headway">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#JourneyPattern"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:label xml:lang="en">headway</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#latitude -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#latitude">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:label xml:lang="en">latitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#layover -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#layover">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#JourneyPattern"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:label xml:lang="en">layover</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#lineName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#lineName">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Line"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">lineName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#lineNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#lineNumber">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Line"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:label xml:lang="en">lineNumber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#longitude -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#longitude">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:label xml:lang="en">longitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#pointSequence -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#pointSequence">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">Sequences of ScheduledStopPoint</rdfs:comment>
+        <rdfs:label xml:lang="en">stopSequence</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#postCode -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#postCode">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#PostalAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:label xml:lang="en">postCode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#roadName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#roadName">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#RoadAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">roadName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#roadNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#roadNumber">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#RoadAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:label xml:lang="en">roadNumber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#runtime -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#runtime">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#JourneyPattern"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:label xml:lang="en">runtime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#startTime -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#startTime">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#HeadingInterval"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Gives a location description for a person within the organization, for example a _Mail Stop_ for internal posting purposes.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Indica la descrizione del luogo presso cui è possibile reperire una persona dell&apos;organizzazione.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique la description de l&apos;endroit ou est basé une personne de l&apos;Organisation, par exemple pour des besoins de messagerie interne (Bureau 42).</rdfs:comment>
-        <rdfs:comment xml:lang="es">Lugar o ubicación exacta de una persona en una organización con el objetivo de facilitar, por ejemplo, la entrega de correo.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">例えば、内部配送目的のメール・ストップ（Mail Stop）などの、組織内の人の位置記述を提供します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="es">está ubicada en</rdfs:label>
-        <rdfs:label xml:lang="es">está ubicado en</rdfs:label>
-        <rdfs:label xml:lang="fr">localisation</rdfs:label>
-        <rdfs:label xml:lang="en">location</rdfs:label>
-        <rdfs:label xml:lang="it">luogo</rdfs:label>
+        <rdfs:label xml:lang="en">startTime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#stopPlaceNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#stopPlaceNumber">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#StopPlace"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">stopPlaceName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#streetName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#streetName">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#PostalAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">streetName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#time -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#time">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#JourneyPatternLayover"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#TimingPoint"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourneyLayover"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:label xml:lang="en">time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#timeLink -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#timeLink">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#TimingPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">Sequences of TimePoints</rdfs:comment>
+        <rdfs:label xml:lang="en">timeLink</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#timingLinkPointSequence -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#timingLinkPointSequence">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#TimingPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#waitTime -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#waitTime">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#JourneyPattern"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">waitTime</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -905,226 +834,737 @@
     
 
 
-    <!-- http://purl.org/goodrelations/v1#BusinessEntity -->
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
 
-    <owl:Class rdf:about="http://purl.org/goodrelations/v1#BusinessEntity">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#Operator -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Operator">
+        <rdfs:comment xml:lang="en">A company providing Public Transport Services. In GTFS, this is represented as a TransitAgency</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class comes from tm-authorities.owl</rdfs:comment>
+        <rdfs:label xml:lang="es">Operator</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+    <!-- https://w3id.org/transmodel/journeys#Access -->
 
-    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
-    
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Access">
+        <rdfs:comment xml:lang="en">The physical spatial possibility for a passenger to access or leave the public transport system. The link may be used during a Trip for:
 
-
-    <!-- http://www.w3.org/ns/org#ChangeEvent -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/org#ChangeEvent">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-        <owl:disjointWith rdf:resource="http://www.w3.org/ns/org#Membership"/>
-        <owl:disjointWith rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <owl:disjointWith rdf:resource="http://www.w3.org/ns/org#Role"/>
-        <owl:disjointWith rdf:resource="http://www.w3.org/ns/org#Site"/>
-        <rdfs:comment xml:lang="es">Evento que da como resultado un cambio sustancial en la organización, por ejemplo, una fusión o una reestructuración total. Está pensado para situaciones en las que la organización resultante es lo suficientemente distinta de las organizaciones originales, tiene una identidad distinta y una URI también distinta. Se deberían definir subtipos de eventos mediante vocabularios específicos (Extension vocabularies) para referirse a categorías de eventos específicos. El momento o periodo en el que el evento ocurre se debería expresar mediante las propiedades `prov:startAtTime` y `prov:endedAtTime`, y una descripción del mismo se debería incluir mediante el uso de la propiedad `dct:description`.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Rappresenta un evento risultato essere un importante cambiamento per un&apos;organizzazione come ad esempio una fusione o una riorganizzazione. È pensato per quelle situazioni in cui l&apos;organizzazione risultante si distingue da quella originale sufficientemente da essere rappresentata con una URI differente. Le estensioni del vocabolario dovrebbero definire le sotto-classi per esprimere particolari categorie di eventi. L&apos;istante o l&apos;intervallo in cui l&apos;evento accade dovrebbe essere espresso tramite `prov:startAtTime` e`prov:endedAtTime`. Una descrizione dovrebbe essere fornita attraverso `dct:description`.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `prov:startAtTime` and `prov:endedAtTime`, a description should be given by `dct:description`. </rdfs:comment>
-        <rdfs:comment xml:lang="fr">Représente un Évènement impliquant un changement majeur dans l&apos;Organisation, comme une fusion ou une restructuration. Prévu pour des situations ou l&apos;organisation finale est suffisamment différente des Organisations originales pour qu&apos;elle ait une identité et une URI distinctes. Des vocabulaires d&apos;extension devraient définir des sous-classes de celle-ci pour annoter les différentes catégories d&apos;Évènemenents. Le moment ou l&apos;intervalle de l&apos;Évènement devrait être indiqué avec `prov:startAtTime` et `prov:endedAtTime`, et une description avec la classe `dct:description`. </rdfs:comment>
-        <rdfs:comment xml:lang="ja">合併や完全な再編などの組織に大きな変化をもたらした出来事を表わします。これは、結果として作成される組織と元の組織とが、別のアイデンティティーと別のURIを持つに足るほど異なる状況を対象としています。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="en">Change Event</rdfs:label>
-        <rdfs:label xml:lang="it">Evento di cambiamento</rdfs:label>
-        <rdfs:label xml:lang="es">evento de cambio</rdfs:label>
-        <rdfs:label xml:lang="fr">Évènement</rdfs:label>
+- The walking movement of the Passenger from a Place (Origin of the Trip) to a ScheduledStopPoint (origin of the Public Transport Trip).
+- The walking movement of the Passenger from a Scheduled Stop Point (destination of the Public Transport Trip) to a Place (destination of the Trip)</rdfs:comment>
+        <rdfs:label xml:lang="en">TypeOfAccess</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.w3.org/ns/org#FormalOrganization -->
+    <!-- https://w3id.org/transmodel/journeys#AccessMode -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/org#FormalOrganization">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-        <rdfs:comment xml:lang="en">An Organization which is recognized in the world at large, in particular in legal jurisdictions, with associated rights and responsibilities. Examples include a Corporation, Charity, Government or Church. Note that this is a super class of `gr:BusinessEntity` and it is recommended to use the GoodRelations vocabulary to denote Business classifications such as DUNS or NAICS.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Organización reconocida a nivel mundial, en particular en jurisdicciones legales, con derechos y responsabilidades asociadas. Algunos ejemplos son: organización corporativa, organización benéfica, organización gubernamental, organización religiosa. Se debe tener en cuenta que ésta es una superclase de `gr:BusinessEntity` y que se recomienda el uso del vocabulario GoodRelations para referirse a clasificaciones de negocios tales como DUNS o NAICS.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Un&apos;organizzazione che è riconosciuta a livello mondiale o, in generale, all&apos;interno di una qualche giurisdizione, e che quindi possiede diritti e responsabilità. Ad esempio aziende, enti governativi, associazioni di volontariato. Si noti che questa è una superclasse di `gr:BusinessEntity` e che quindi è raccomandabile usare il vocabolario GoodRelations per esprimere classificazioni di tipo industriale e commerciale come DUNS e NAICS.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Une Organisation reconnue, en particulier par les juridictions locales, ayant des droits et des responsabilités. Exemples : entreprises, association à but non-lucratif, collectivité, église. Notez que c&apos;est une super-classe de `gr:BusinessEntity` et qu&apos;il est recommandé d&apos;utiliser le vocabulaire GoodRelations pour indiquer les classifications économiques comme le code NACE.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">関連する権利と責任を有する（特に法的管轄区域において）世界中に広く認識されている組織。例には、企業、慈善団体、政府や教会が含まれます。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="en">Formal Organization</rdfs:label>
-        <rdfs:label xml:lang="fr">Organisation Formelle</rdfs:label>
-        <rdfs:label xml:lang="it">Organizzazione formale</rdfs:label>
-        <rdfs:label xml:lang="es">organización formal</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#AccessMode">
+        <rdfs:comment xml:lang="en">A characterisation of the passenger movement according to the means of transport different from public transport: walking, own bike,</rdfs:comment>
+        <rdfs:label xml:lang="en">AccessMode</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.w3.org/ns/org#Membership -->
+    <!-- https://w3id.org/transmodel/journeys#AccessZone -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/org#Membership">
-        <owl:disjointWith rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <owl:disjointWith rdf:resource="http://www.w3.org/ns/org#Role"/>
-        <owl:disjointWith rdf:resource="http://www.w3.org/ns/org#Site"/>
-        <rdfs:comment xml:lang="it">Indica la natura della relazione di appartenenza di un Agent in un&apos;organizzazione. Rappresenta una relazione n-aria tra un&apos;Agent, un Organization e un Role. È possibile indicare direttamente la membership, indipendentemente dallo specifico Role, attraverso l&apos;uso della proprietà `org:memberOf`</rdfs:comment>
-        <rdfs:comment xml:lang="en">Indicates the nature of an Agent&apos;s membership of an organization. Represents an n-ary relation between an Agent, an Organization and a Role. It is possible to directly indicate membership, independent of the specific Role, through use of the `org:memberOf` property.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique la nature de l&apos;engagement d&apos;un Agent dans une Organisation. Représente une relation n-aire entre un Agent, une Organisation et un Role. Il est possible d&apos;indiquer directement l&apos;appartenance à une organisation, independemment d&apos;un rôle spécifique, à travers l&apos;usage de la propriété `org:memberOf`.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Pertenencia o afiliación de un agente a una organización. Es una relación n-aria entre un agente, una organización y una actividad. Es posible indicar pertenencia mediante el uso de la propiedad `org:memberOf`, independientemente de la actividad específica que se desempeñe.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">組織のエージェントの構成員の本質を示します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="it">Appartenenza</rdfs:label>
-        <rdfs:label xml:lang="fr">Engagement</rdfs:label>
-        <rdfs:label xml:lang="en">Membership</rdfs:label>
-        <rdfs:label xml:lang="es">membresía</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#AccessZone">
+        <rdfs:comment xml:lang="en">A Zone for which the duration to cover any Access link to a particular ScheduledStopPoint is the same</rdfs:comment>
+        <rdfs:label xml:lang="en">AccessZone</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.w3.org/ns/org#Organization -->
+    <!-- https://w3id.org/transmodel/journeys#Address -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/org#Organization">
-        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <owl:disjointWith rdf:resource="http://www.w3.org/ns/org#Role"/>
-        <owl:disjointWith rdf:resource="http://www.w3.org/ns/org#Site"/>
-        <owl:hasKey rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.w3.org/ns/org#identifier"/>
-        </owl:hasKey>
-        <rdfs:comment xml:lang="es">Grupo de personas que se organiza en una comunidad u otro tipo de estructura social, comercial o política. Dicho grupo tiene un objetivo o motivo común para su existencia que va más allá del conjunto de personas que lo forman y que puede actuar como “agente”. A menudo las organizaciones se pueden agrupar en estructuras jerárquicas. Se recomienda el uso de etiquetas de SKOS para denominar a cada “organización”. En concreto, `skos:prefLabel` para la denominación principal o recomendada (aquella reconocida legalmente, siempre que sea posible), `skos:altLabel` para denominaciones alternativas (nombre comercial, sigla, denominación por la que se conoce a la organización coloquialmente) y `skos:notation` para referirse al código que identifique a la organización en una lista de códigos. Denominaciones alternativas: _colectivo_ _corporación_ _grupo_</rdfs:comment>
-        <rdfs:comment xml:lang="it">Rappresenta una collezione di persone organizzate all&apos;interno di una communità o di una qualche struttura sociale, commerciale o politica. Il gruppo condivide un obiettivo o una ragione d&apos;essere che va oltre gli stessi membri appartenenti al gruppo e  può agire come un Agent. Le organizzazioni si possono spesso suddividere in strutture gerarchiche. Si raccomanda di usare le label per l&apos;Organization mediante le proprietà di SKOS. In particolare, `skos:prefLabel` per il nome principale (possibilmente un nome legalmente riconosciuto)”, `skos:altLabel` come nome alternativo (denominazione commerciale, denominazione colloquiale) e `skos:notation` per indicare un codice di una lista di codici.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.  It is recommended that SKOS lexical labels should be used to label the Organization. In particular `skos:prefLabel` for the primary (possibly legally recognized name), `skos:altLabel` for alternative names (trading names, colloquial names) and `skos:notation` to denote a code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Représente un groupe de personnes organisées en communauté où tout autre forme de structure sociale, commerciale ou politique. Le groupe a un but commun ou une raison d&apos;être qui va au-delà de la somme des personnes qui en font partie et peut agir en tant que &quot;Agent&quot;. Les organisations sont souvent décomposables en structures hiérarchisées. Il est recommandé que des labels lexicaux SKOS soient utilisés pour nommer l&apos;Organisation. En particulier `skos:prefLabel` pour le nom principal (en général le nom légal), `skos:altLabel` pour les noms alternatifs (marques, sigles, appellations familières) et `skos:notation` pour indiquer un code provenant d&apos;une liste de code.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">コミュニティー、その他の社会、商業、政治的な構造に共に編入された人々の集合を表わします。グループには、そこに属する人々を超えた、存在に対するある共通の目的や理由があり、エージェント（代理）を務めることができます。組織は、多くの場合、階層構造に分割できます。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="fr">Organisation</rdfs:label>
-        <rdfs:label xml:lang="en">Organization</rdfs:label>
-        <rdfs:label xml:lang="it">Organizzazione</rdfs:label>
-        <rdfs:label xml:lang="es">organización</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Address">
+        <rdfs:comment xml:lang="en">The descriptive data associated with a Place that can be used to describe the unique geographical context of a Place for the purposes of identifying. May be refined as either a Road Address, a Postal Address or both.</rdfs:comment>
+        <rdfs:label xml:lang="en">Address</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.w3.org/ns/org#OrganizationalCollaboration -->
+    <!-- https://w3id.org/transmodel/journeys#AddressablePlace -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/org#OrganizationalCollaboration">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/ns/org#Organization"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/ns/org#hasMember"/>
-                        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/org#Organization"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:comment xml:lang="en">A collaboration between two or more Organizations such as a project. It meets the criteria for being an Organization in that it has an identity and defining purpose independent of its particular members but is neither a formally recognized legal entity nor a sub-unit within some larger organization. Might typically have a shorter lifetime than the Organizations within it, but not necessarily. All members are `org:Organization`s rather than individuals and those Organizations can play particular roles within the venture. Alternative names: _Project_ _Venture_  _Endeavour_ _Consortium_ _Endeavour_</rdfs:comment>
-        <rdfs:comment xml:lang="es">Colaboración determinada entre dos o más organizaciones, como en el caso de un proyecto común. Cumple con los criterios de ser una organización en sí misma, en la medida en que tiene una identidad y un propósito definido independiente de sus miembros en particular, pero no es una entidad legal formalmente reconocida ni una sub-unidad dentro de una organización más grande. La duración suele ser más corta que la de las organizaciones que lo componen, pero no necesariamente. Todos sus miembros son de tipo `org:Organization` en vez de individuos, y desempeñan una actividad concreta en el marco del proyecto de cooperación.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Une collaboration entre deux ou plusieurs Organisations, telle qu&apos;un projet commun. Un partenariat peut être considéré comme Organisation dans le sens ou il possède une identité et un But propre indépendant de ceux de ses membres, mais ce n&apos;est ni une entité légale ni une sous-unité d&apos;une Organisation plus grande. Typiquement, elle peut avoir une durée de vie plus courte que les Organisations qui la composent, mais pas nécessairement. Tous les membres sont des `org:Organization`s plutôt que des individus et ces Organisations peuvent jouer des Rôles particuliers au sein du Partenariat. </rdfs:comment>
-        <rdfs:comment xml:lang="it">È una collaborazione tra due o più Organization come ad esempio un progetto. Consente di rappresentare alcune identità dell&apos;Organization che sono fuori dallo scopo principale e non sono formalmente riconosciute. Potrebbe anche avere un ciclo di vita limitato.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">プロジェクトなどの2つ以上の組織間のコラボレーション。それは、アイデンティティを有し、その特定のメンバーとは無関係に目的を定めているという点で、組織としての基準を満たしますが、正式に認識された法的実体でも、あるより大きな組織内のサブユニットでもありません。一般的には、その内部の組織よりも存続期間が短いかもしれませんが、必ずしもそうとは限りません。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="it">Collaborazione</rdfs:label>
-        <rdfs:label xml:lang="en">Endeavour</rdfs:label>
-        <rdfs:label xml:lang="fr">Partenariat</rdfs:label>
-        <rdfs:label xml:lang="es">proyecto de cooperación empresarial</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#AddressablePlace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Place"/>
+        <rdfs:comment xml:lang="en">A type of Place to which Passengers may refer to indicate the origin or a destination of a trip and that is so specific that it has an Address.</rdfs:comment>
+        <rdfs:label xml:lang="en">AddressablePlace</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.w3.org/ns/org#OrganizationalUnit -->
+    <!-- https://w3id.org/transmodel/journeys#AllowedLineDirections -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/org#OrganizationalUnit">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
-        <rdfs:comment xml:lang="en">An Organization such as a University Support Unit which is part of some larger FormalOrganization and only has full recognition within the context of that FormalOrganization, it is not a Legal Entity in its own right. Units can be large and complex containing other Units and even FormalOrganizations. Alternative names: _OU_ _Unit_ _Department_</rdfs:comment>
-        <rdfs:comment xml:lang="es">Organización que forma parte de una organización formal más amplia, como el servicio de informática o centro de cálculo de una universidad, y que sólo tiene reconocimiento pleno en el contexto de dicha organización formal, pero que no es una entidad legal propiamente dicha. Estas unidades pueden ser amplias y complejas, e incluir a otras unidades o incluso a otras organizaciones formales. Denominaciones alternativas: departamento.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Un&apos;organizzazione come ad esempio l&apos;unità dei sistemi informativi che è parte di una più grande FormalOrganization e che, pur essendo riconosciuta nel contesto della propria organizzazione di riferimento, non è legalmente riconosciuta come entità a sé stante. Le unità possono essere ampie e complesse e contenere al loro interno sia altre unità che addirittura FormalOrganization.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Une organisation telle que le support informatique d&apos;une université, qui fait partie d&apos;une Organisation Formelle plus importante et qui ne peut être reconnue qu&apos;en tant que membre de cette organisation supérieure, ce n&apos;est pas une entité légale en elle-même. Les unités opérationnelles peuvent être étendues, complexes et inclure elles-mêmes d&apos;autres branches ou Unités Opérationnelles, voire des Organisations Formelles.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">あるより大きな組織の一部であり、その組織の中においてのみ完全に認識される部局や支援部署などの組織です。特に、その単位はそれ自体では法的実体と見なされません。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="en">OrganizationalUnit</rdfs:label>
-        <rdfs:label xml:lang="it">Unità Organizzativa</rdfs:label>
-        <rdfs:label xml:lang="fr">Unité opérationnelle</rdfs:label>
-        <rdfs:label xml:lang="es">unidad organizativa</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#AllowedLineDirections">
+        <rdfs:comment xml:lang="en">An allowed direction that can be used on a given Route. This can be used to validate the selection of allowed values</rdfs:comment>
+        <rdfs:label xml:lang="en">AllowedLineDirections</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.w3.org/ns/org#Post -->
+    <!-- https://w3id.org/transmodel/journeys#BeaconPoint -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/org#Post">
-        <rdfs:comment xml:lang="en">A Post represents some position within an organization that exists independently of the person or persons filling it. Posts may be used to represent situations where a person is a member of an organization ex officio (for example the Secretary of State for Scotland is part of UK Cabinet by virtue of being Secretary of State for Scotland, not as an individual person). A post can be held by multiple people and hence can be treated as a organization in its own right.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Puesto o posición que representa algún tipo de empleo dentro de una organización, que existe independientemente de la persona o personas que lo desempeñan. Esta clase puede utilizarse para representar situaciones en las que una persona es miembro de una organización ex oficio (por ejemplo, el Secretario de Estado escocés es parte del Gabinete del gobierno británico por virtud de ser Secretario de Estado en Escocia, y no como individuo). Un puesto puede ser desempeñado por múltiples individuos y de aquí que sea tratado como una organización en sí misma.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Un Impiego rappresenta una posizione all&apos;interno dell&apos;organizzazione che esiste indipendentemente dalla persona che la ricopre. Gli impieghi possono essere utilizzati per le situazioni in cui una persona è membro di un&apos;organizzazione o di un ufficio (ad esempio un segretario di stato). Un Impiego può essere ricoperto da più persone.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Un Poste représente une position au sein d&apos;une Organisation qui existe indépendamment de la personne ou des personnes qui le remplissent. Les postes peuvent être utilisés pour représenter des situations où une personne est membre d&apos;une Organisation d&apos;office (par exemple, le Secrétaire d&apos;Etat pour l&apos;Ecosse fait partie du Cabinet du Royaume-Uni du fait d&apos;être Secrétaire d&apos;Etat pour l&apos;Ecosse, non pas comme une personne physique). Un poste après peut être occupé par plusieurs personnes et peut donc être considéré comme une Organisation à part entière.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">ポストは、それを埋める人（人々）とは無関係に存在する組織内のある位置を表わします。ポストは、人が職権上、組織のメンバーである状況を表わすために使用できます（例えば、スコットランド大臣は、個人としてではなく、スコットランド大臣であることにより、英国内閣の一部です）。ポストは、複数の人々によって保持されることが可能だあるため、それ自体を組織として扱うことができます。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="it">Impiego</rdfs:label>
-        <rdfs:label xml:lang="en">Post</rdfs:label>
-        <rdfs:label xml:lang="fr">Poste</rdfs:label>
-        <rdfs:label xml:lang="es">puesto</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#BeaconPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:comment xml:lang="en">A Point where a beacon or similar device to support the automatic detection of vehicles passing by is located</rdfs:comment>
+        <rdfs:label xml:lang="en">BeaconPoint</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.w3.org/ns/org#Role -->
+    <!-- https://w3id.org/transmodel/journeys#Block -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/org#Role">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <owl:disjointWith rdf:resource="http://www.w3.org/ns/org#Site"/>
-        <rdfs:comment xml:lang="en">Denotes a role that a Person or other Agent can take in an organization. Instances of this class describe the abstract role; to denote a specific instance of a person playing that role in a specific organization use an instance of `org:Membership`. It is common for roles to be arranged in some taxonomic structure and we use SKOS to represent that. The normal SKOS lexical properties should be used when labelling the Role. Additional descriptive properties for the Role, such as a Salary band, may be added by extension vocabularies.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Función que una persona o agente desempeña en el seno de una organización. Las instancias de esta clase describen la actividad en abstracto; si lo que se pretende es incluir una instancia que refleje la función o actividad que desempeña una persona en concreto en una organización específica, se indica el uso de instancias de la clase `org:Membership`. Es común que dichas actividades se representen en una estructura taxonómica mediante SKOS. Las propiedades léxicas de SKOS deberían utilizarse a la hora de denominar o etiquetar la actividad desempeñada. Para añadir propiedades descriptivas adicionales, como rango salarial, se tendrá que recurrir a vocabularios externos.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Indica il ruolo che una Person o un altro Agent può assumere in un&apos;organizzazione. Le istanze di questa classe descrivono un ruolo astratto; per esprimere il ruolo che una precisa persona ricopre in un&apos;organizzazione si usi un&apos;istanza di `org:Membership`. È comune organizzare i ruoli in una qualche struttura tassonomica e quindi si raccomanda SKOS per questo. Altre proprietà descrittive per il Role, come salario, possono essere aggiunte mediante l&apos;uso di altri vocabolari.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Indique le rôle qu&apos;une Personne ou un autre Agent peut avoir dans une Organisation. Les instances de cette classe décrivent le rôle dans l&apos;absolu; pour indiquer une personne ayant ce rôle spécifique dans une Organisation, utilisez une instance de `org:Membership`. Il est courant que les rôles soient organisés dans une sorte de taxonomie, ce qui peut être représenté avec SKOS. Les propriétés de libellés standards de SKOS devraient être utilisées pour libeller le Rôle. D&apos;autres propriétés additionnelles pour ce rôle, comme une fourchette de Salaire peuvent être ajoutées par une extension de ce vocabulaire.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">人またはその他のエージェントが組織で担うことができる役割を表わします。この種のインスタンスは、抽象的な役割を記述します。特定の組織でその役割を担っている人の特定のインスタンスを示すためには、org:Membershipのインスタンスを使用します。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="en">Role</rdfs:label>
-        <rdfs:label xml:lang="it">Ruolo</rdfs:label>
-        <rdfs:label xml:lang="fr">Rôle</rdfs:label>
-        <rdfs:label xml:lang="es">actividad</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Block">
+        <rdfs:comment xml:lang="en">The work of a vehicle from the time it leaves a ParkingPoint after parking until its next retrun to park at a ParkingPoint. Any subsequent departure form a ParkingPoint after parking marks the start of a new Block. The period of a Block must be covered by Duties.</rdfs:comment>
+        <rdfs:label xml:lang="en">Block</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.w3.org/ns/org#Site -->
+    <!-- https://w3id.org/transmodel/journeys#BlockPart -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/org#Site">
-        <rdfs:comment xml:lang="en">An office or other premise at which the organization is located. Many organizations are spread across multiple sites and many sites will host multiple locations. In most cases a Site will be a physical location. However, we don&apos;t exclude the possibility of non-physical sites such as a virtual office with an associated post box and phone reception service. Extensions may provide subclasses to denote particular types of site.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Oficina, local o cualquier otro lugar en el que se encuentra una organización. Muchas organizaciones están distribuidas en varias sedes, que a su vez están repartidas en distintas ubicaciones. En muchos casos una sede será un sitio o local físico. Sin embargo, no se excluye la posibilidad de lugares no físicos como oficinas virtuales con los correspondientes apartados de correo y servicio de atención telefónica. Se pueden añadir más subtipos mediante extensiones para incluir tipos especiales de lugares.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Un ufficio o altra sede dovei l&apos;organizzazione è situata. Molte organizzazione sono distribuite su più sedi e molte sedi ospitano più ubicazioni. Nella maggior parte dei casi un Site è una locazione fisica. Non si esclude la possibilità di indicare sedi non fisiche come ad esempio gli uffici virtuali. Le estensioni dell&apos;ontologia potrebbero usare delle sottoclassi per rappresentare i tipi particolari di sede.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Un établissement ou tout autre lieu dans lequel une Organisation est localisé. Beaucoup d&apos;organisations sont dispersées à travers plusieurs sites. Dans la plupart des cas un Site sera un lieu physique. Toutefois, nous n&apos;excluons pas la possibilité de sites non-physiques comme un bureau virtuel avec une boîte postale et un service de secrétariat mutualisé. Des extensions pourraient fournir des sous-classes pour décrire des types de sites particuliers.</rdfs:comment>
-        <rdfs:comment xml:lang="ja">組織が位置するオフィスやその他の敷地。多くの組織が複数のサイトに散在しており、多くのサイトが多数の場所を持つでしょう。</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="it">Sede</rdfs:label>
-        <rdfs:label xml:lang="en">Site</rdfs:label>
-        <rdfs:label xml:lang="fr">Site</rdfs:label>
-        <rdfs:label xml:lang="es">sede</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#BlockPart">
+        <rdfs:comment xml:lang="en">Part of a Block corresponding to the different JourneyPart of the VehicleJourney in a Block</rdfs:comment>
+        <rdfs:label xml:lang="en">BlockPart</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.w3.org/ns/prov#Activity -->
+    <!-- https://w3id.org/transmodel/journeys#BoardingPosition -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity"/>
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#BoardingPosition">
+        <rdfs:comment xml:lang="en">A location within a Quay from which Passenger may directly board, or onto which passengers may directly alight from a Vehicle</rdfs:comment>
+        <rdfs:label xml:lang="en">BoardingPosition</rdfs:label>
+    </owl:Class>
     
 
 
-    <!-- http://xmlns.com/foaf/0.1/Agent -->
+    <!-- https://w3id.org/transmodel/journeys#CompoundBlock -->
 
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#CompoundBlock">
+        <rdfs:comment xml:lang="en">The work of a vehicle during the time it is coupled to anohter vehicle</rdfs:comment>
+        <rdfs:label xml:lang="en">CompoundBlock</rdfs:label>
+    </owl:Class>
     
 
 
-    <!-- http://xmlns.com/foaf/0.1/Organization -->
+    <!-- https://w3id.org/transmodel/journeys#Connection -->
 
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Connection">
+        <rdfs:comment xml:lang="en">The physical (spatial) possibility for a Passenger to change from one public transport vehicle to another to continue the trip, determined by two ScheduledStopPoint. Different times may be necessary to cover the link between these points, depending the kind of Passenger</rdfs:comment>
+        <rdfs:label xml:lang="en">Connection</rdfs:label>
+    </owl:Class>
     
 
 
-    <!-- http://xmlns.com/foaf/0.1/Person -->
+    <!-- https://w3id.org/transmodel/journeys#CoupledJourney -->
 
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#CoupledJourney">
+        <owl:equivalentClass rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:comment xml:lang="en">A complete journey operated by a coupled train, composed of two or more Vehicle Journeys remaining coupled together all along a Journey Pattern. A Coupled Journey may be viewed as a single VehicleJourney.</rdfs:comment>
+        <rdfs:label xml:lang="en">CoupledJourney</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#CourseOfJourneys -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#CourseOfJourneys">
+        <rdfs:comment xml:lang="en">A part of a Block composed of consecutive VehicleJourneys defined for the same DayType, all operated on the same Line.</rdfs:comment>
+        <rdfs:label xml:lang="en">CourseOfJourneys</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#DatedBlock -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#DatedBlock">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Block"/>
+        <rdfs:comment xml:lang="en">The work of a Vehicle on a particular OperatingDay from the time it leaves a ParkingPoint after parking until its next return to park at a ParkingPoint</rdfs:comment>
+        <rdfs:label xml:lang="en">DatedBlock</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#DatedPassingTime -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#DatedPassingTime">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#PassingTime"/>
+        <rdfs:comment xml:lang="en">A PassingTime on a particular OperatingDay</rdfs:comment>
+        <rdfs:label xml:lang="en">DatedPassingTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#DatedVehicleJourney -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#DatedVehicleJourney">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:comment xml:lang="en">A particular Journey of a Vehicle on a particular OperatingDay including all modifications possibly decided by the control staff</rdfs:comment>
+        <rdfs:label xml:lang="en">DatedVehicleJourney</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#DayOfWeek -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#DayOfWeek">
+        <rdfs:comment xml:lang="en">A particular week day, from Monday to Sunday</rdfs:comment>
+        <rdfs:label xml:lang="en">DayOfWeek</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#DayType -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#DayType">
+        <rdfs:comment xml:lang="en">A DayType is a type of day characterised by one or more properties which affect public transport operation</rdfs:comment>
+        <rdfs:label xml:lang="en">DayType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#DeadRun -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#DeadRun">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:comment xml:lang="en">A non-service VehicleJourney</rdfs:comment>
+        <rdfs:label xml:lang="en">DeadRun</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#DeadRunPattern -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#DeadRunPattern">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#JourneyPattern"/>
+        <rdfs:comment xml:lang="en">A JourneyPattern to be used for DeadRun</rdfs:comment>
+        <rdfs:label xml:lang="en">DeadRunPattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#DefaultConnection -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#DefaultConnection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Connection"/>
+        <rdfs:comment xml:lang="en">The physical (spatial) possibility for a Passenger to change from one public transport Vehicle to another to continue the Trip. It specifies default times to be used to change from one mode of transport to another at an area or national level as specified by a TopographicPlace, Stop Area or SiteElement. It may be restricted to a specific Mode or Operator oe only apply in a particular direction of transfer, e.g. bus to rail may have a different time for rail to bus.</rdfs:comment>
+        <rdfs:label xml:lang="en">DefaultConnection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#DefaultDeadRunRunTime -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#DefaultDeadRunRunTime">
+        <rdfs:label xml:lang="en">DefaultDeadRunRunTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#DefaultInterchange -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#DefaultInterchange">
+        <rdfs:comment xml:lang="en">A quality parameter fixing the acceptable duration (standard and maximum) for an Interchage to be planned between two ScheduledStopPoint. this parameter will be used to control whether any two VehicleJourney serving those Points may be in connection.</rdfs:comment>
+        <rdfs:label xml:lang="en">DefaultInterchange</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#DefaultServiceJourneyRunTime -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#DefaultServiceJourneyRunTime">
+        <rdfs:comment xml:lang="en">The default time taken by a Vehicle to traverse a TimingLink during a ServiceJourney, for a specified TimeDemandType. This time may be superseded by the JourneyPatternRunTime or VehicleJourneyRunTime if these exist</rdfs:comment>
+        <rdfs:label xml:lang="en">DefaultServiceJourneyRunTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Direction -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Direction">
+        <rdfs:comment xml:lang="en">A classification for the general orientation of Routes</rdfs:comment>
+        <rdfs:label xml:lang="en">Direction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#FlexibleLine -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#FlexibleLine">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Line"/>
+        <rdfs:comment xml:lang="en">Specialisation of Line for FlexibleService. As all the service on a Line may not be flexible, flexibility itself is described at JourneyPattern level, meaning that a separate JourneyPattern is needed for each type of flexibility available for the Line</rdfs:comment>
+        <rdfs:label xml:lang="en">FlexibleLine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#FlexiblePoint -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#FlexiblePoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:comment xml:lang="en">A specialisation of Point for FlexibleService</rdfs:comment>
+        <rdfs:label xml:lang="en">FlexiblePoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#FlexibleRoute -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#FlexibleRoute">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Route"/>
+        <rdfs:comment xml:lang="en">Specialisation of Route for FlexibleService. May include both Point and Zonal areas and ordered and unordered sections.</rdfs:comment>
+        <rdfs:label xml:lang="en">FlexibleRoute</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#GroupOfTimingLinks -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#GroupOfTimingLinks">
+        <rdfs:comment xml:lang="en">A set of TimingLinks grouped together according to the similarity of TimeBand which are relevant to them. There may be a GroupOfTimingLinks which covers all TimingLinks, for use when different GroupOfTimingLinks are not needed</rdfs:comment>
+        <rdfs:label xml:lang="en">GroupOfTimingLink</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#HeadingInterval -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#HeadingInterval">
+        <rdfs:comment xml:lang="en">A time interval or a duration defining a headway period and characterizing HeadwayJourneyGroup</rdfs:comment>
+        <rdfs:label xml:lang="en">HeadwayInterval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#JourneyPart -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#JourneyPart">
+        <rdfs:comment xml:lang="en">A part of a VehicleJourney created according to a specific functional purpose, for instance in situations when Vehicle coupling or separating occurrs</rdfs:comment>
+        <rdfs:label xml:lang="en">JourneyPart</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#JourneyPartCouple -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#JourneyPartCouple">
+        <rdfs:comment xml:lang="en">Two JourneyParts of different VehicleJourneys served simultaneously by a train set up by coupling their single Vehicles</rdfs:comment>
+        <rdfs:label xml:lang="en">JourneyPartCouple</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#JourneyPattern -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#JourneyPattern">
+        <rdfs:comment xml:lang="en">An ordered list of Scheduled Stop Points and Timing Point on a single Route, describing the pattern of working for public transport vehicles. A Journey Pattern may pass through the same Point more than once. The first point of a JourneyPattern is the origin. The last point is the destination.</rdfs:comment>
+        <rdfs:label xml:lang="en">JourneyPattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#JourneyPatternLayover -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#JourneyPatternLayover">
+        <rdfs:comment xml:lang="en">A JourneyPatternLayover is the time allowance at the end of each journey on a specified JourneyPattern to allow for delays and for other purposes. This layover supersedes any global layover and may be superseded by a specific VehicleJourneyLayover</rdfs:comment>
+        <rdfs:label xml:lang="en">JourneyPatternLayover</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#JourneyPatternRunTime -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#JourneyPatternRunTime">
+        <owl:equivalentClass rdf:resource="https://w3id.org/transmodel/journeys#JourneyRunTime"/>
+        <rdfs:label xml:lang="en">JourneyPatternRunTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#JourneyRunTime -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#JourneyRunTime">
+        <rdfs:comment xml:lang="en">The time taken to traverse a TimingLink in a particular JourneyPattern, for a specified TimeDemandType. If it exists, it will override the DefaultServiceJourneyRunTime and DefaultDeadRunRunTime</rdfs:comment>
+        <rdfs:label xml:lang="en">JourneyRunTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Line -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Line">
+        <rdfs:comment xml:lang="en">A Line is a group of Route which is generally known to the public by a similar name or number.</rdfs:comment>
+        <rdfs:label xml:lang="en">Line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#MeanOfTransport -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#MeanOfTransport">
+        <rdfs:comment xml:lang="en">Any Mode of Transport</rdfs:comment>
+        <rdfs:label xml:lang="en">ModeOfTransport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#MonitoredVehicleJourney -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#MonitoredVehicleJourney">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:comment xml:lang="en">A VehicleJourney that is run under real-time tracking system and so for which real-time observations and predictions and other data are available</rdfs:comment>
+        <rdfs:label xml:lang="en">MonitoredVehicleJourney</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#OperatingDay -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#OperatingDay">
+        <rdfs:comment xml:lang="en">A day of public transport operation of which the characteristics are defined within in a specific ServiceCalendar. An OperatingDay may last more than 24 hours.</rdfs:comment>
+        <rdfs:label xml:lang="en">OperatingDay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#ParkingPoint -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#ParkingPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#TimingPoint"/>
+        <rdfs:comment xml:lang="en">A ParkingPoint where vehicles may stay unattended for a long time. A vehicle&apos;s return to the ParkingPoint marks the end of a Block</rdfs:comment>
+        <rdfs:label xml:lang="en">ParkingPoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Passenger -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Passenger">
+        <rdfs:comment xml:lang="en">A Passenger is someone who makes a Trip</rdfs:comment>
+        <rdfs:label xml:lang="en">Passenger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#PassingTime -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#PassingTime">
+        <rdfs:comment xml:lang="en">Time data concerning public transport vehicles passing a particular Point, e.g. arrival time, departure time, waiting time</rdfs:comment>
+        <rdfs:label xml:lang="en">PassingTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Place -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Place">
+        <rdfs:comment xml:lang="en">A geographic Place of any type which may be specified as the origin or destination of a Trip. A Place may be represented as a Point (dimension 0), a Road section (dimension 1) or a Zone (dimension 2)</rdfs:comment>
+        <rdfs:label xml:lang="en">Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Point -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Point">
+        <rdfs:comment xml:lang="en">A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location</rdfs:comment>
+        <rdfs:label xml:lang="en">Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#PointInJourneyPattern -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#PointInJourneyPattern">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:comment xml:lang="en">A Scheduled Stop Point of Timing Point in a Journey Pattern with its order in that Journey Pattern</rdfs:comment>
+        <rdfs:label xml:lang="en">PointInJourneyPattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#PostalAddress -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#PostalAddress">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Address"/>
+        <rdfs:comment xml:lang="en">A specification of Address refining it by using the attributes used for conventional identification for mail. Comprises variously a building identifier, Streeet name, Post Code and other descriptions.</rdfs:comment>
+        <rdfs:comment xml:lang="en">PostalAddress</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Quay -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Quay">
+        <rdfs:comment xml:lang="en">A place where Passenger have access to Vehicles, taxi, cars or other means of transportation. A Quay may serve one or more VehicleStoppingPlace and be associated with one or more ScheduledStopPoints.
+
+A Quay may contain a subquay.</rdfs:comment>
+        <rdfs:label xml:lang="en">Quay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#RoadAddress -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#RoadAddress">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Address"/>
+        <rdfs:comment xml:lang="en">Specialisation of Address refining it by using the characteristics such as road number and mname use for conventional inidentification of along a road</rdfs:comment>
+        <rdfs:label xml:lang="en">RoadAddress</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Route -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Route">
+        <rdfs:comment xml:lang="en">A Route is and ordered list of located Point defining one single path through the road (or rail) network.</rdfs:comment>
+        <rdfs:label xml:lang="en">Route</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#ScheduledStopPoint -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#ScheduledStopPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#PointInJourneyPattern"/>
+        <rdfs:comment xml:lang="en">A ScheduledStopPoint is a Point where a Passenger can board or alight from a Vehicle.</rdfs:comment>
+        <rdfs:label xml:lang="en">ScheduledStopPoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Service -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Service">
+        <rdfs:comment xml:lang="en">A ServiceJourney is a Passenger carrying VehicleJourney for one
+specified DayType. The pattern of working is in principle defined
+by a ServiceJourneyPattern.</rdfs:comment>
+        <rdfs:label xml:lang="en">ServiceJourney</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#ServiceCalendar -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#ServiceCalendar">
+        <rdfs:label xml:lang="en">ServiceCalendar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#ServiceJourneyPattern -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#ServiceJourneyPattern">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#JourneyPattern"/>
+        <rdfs:comment xml:lang="en">The Journey Pattern for a passenger carrying Service Journey</rdfs:comment>
+        <rdfs:label xml:lang="en">ServiceJourneyPattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#StopArea -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#StopArea">
+        <rdfs:comment xml:lang="en">A group of ScheduledStopPoint close to each other</rdfs:comment>
+        <rdfs:label xml:lang="en">StopArea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#StopPlace -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#StopPlace">
+        <rdfs:comment xml:lang="en">A place comprising one or more locations where Vehicles may stop and where passengers may board or leave Vehicles or prepare their Trip. A StopPlace will usually have one or more wellknown names.</rdfs:comment>
+        <rdfs:label xml:lang="en">StopPlace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#StopPointInJourneyPattern -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#StopPointInJourneyPattern">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:comment xml:lang="en">A Point in Journey Pattern that is a ScheduledStopPoint</rdfs:comment>
+        <rdfs:label xml:lang="en">StopPointInJourneyPattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#TimeBand -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimeBand">
+        <rdfs:comment xml:lang="en">A period in a day, significant for some aspect of public transport, e.g. similar traffic conditions or fare category</rdfs:comment>
+        <rdfs:label xml:lang="en">TimeBand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#TimeDemandType -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimeDemandType">
+        <rdfs:comment xml:lang="en">An indicator of traffic conditions or other factors which may affect Vehicle Run or Wait times. It may be entered directly by the scheduler or defined by the use of TimeBands.</rdfs:comment>
+        <rdfs:label xml:lang="en">TimeDemandType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#TimeTabledPassingTime -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimeTabledPassingTime">
+        <rdfs:comment xml:lang="en">Long-term planned time data concerning public transport vehicles passing a particular PointInJourneyPattern on a specified VehicleJourney for a certain DayType</rdfs:comment>
+        <rdfs:label xml:lang="en">TimeTabledPassingTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#TimetabledVehicleJourney -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimetabledVehicleJourney">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:comment xml:lang="en">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</rdfs:comment>
+        <rdfs:label xml:lang="en">TimetabledVehicleJourney</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#TimingLink -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimingLink">
+        <rdfs:label xml:lang="en">A TimingLink is an ordered pair of TimingPoint for which run times
+may be recorded.</rdfs:label>
+        <rdfs:label xml:lang="en">TimingLink</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#TimingLinkInJourneyPattern -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimingLinkInJourneyPattern">
+        <rdfs:comment xml:lang="en">A TimingLinkInJourneyPattern is the position of a TimingLink in a
+JourneyPattern. This entity is needed if a TimingLink is repeated
+in the same JourneyPattern, and separate information is to be stored
+about each iteration of the TimingLink</rdfs:comment>
+        <rdfs:label xml:lang="en">TimingLinkInJourneyPattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#TimingPoint -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimingPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#PointInJourneyPattern"/>
+        <rdfs:comment xml:lang="en">A TimingPoint is a Point against which the timing information necessary to build schedules may be recorded.
+
+It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
+        <rdfs:label xml:lang="en">TimingPoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:comment xml:lang="en">A Point in a JourneyPattern which is a TimingPoint</rdfs:comment>
+        <rdfs:label xml:lang="en">TimingPointInJourneyPattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#TopographicPlace -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TopographicPlace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Place"/>
+        <rdfs:comment xml:lang="en">A type of Place providing the topographical context when searching for or presenting travel information, for example as the origin or destination of a trip. It may be of any size (e.g. County, City, Town, Village) and of different specificity (e.g. Greater London, London, West End, Westimenster, St James)</rdfs:comment>
+        <rdfs:label xml:lang="en">TopographicPlace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Trip -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Trip">
+        <owl:equivalentClass rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:comment xml:lang="en">According to the definition of GTFS for Trip the VehicleJourney&apos;s Transmodel definition would fit better</rdfs:comment>
+        <rdfs:comment xml:lang="en">In Transmodel is the physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip.</rdfs:comment>
+        <rdfs:label xml:lang="en">Trip</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#TypeOfFlexibleService -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TypeOfFlexibleService">
+        <rdfs:comment xml:lang="en">TypeOfFlexibleService are:
+-. Veritual line service
+- Flexible service with main route
+- Corridor service
+- Fixed stop area-wide flexible service
+- Free area-wide flexible service
+- Mixed types of flexible service
+- Mixed type of flexible and regular service</rdfs:comment>
+        <rdfs:label xml:lang="en">TypeOfFlexibleService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Vehicle -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Vehicle">
+        <rdfs:comment xml:lang="en">A PublicTransportVehicle used for carrying Passengers</rdfs:comment>
+        <rdfs:label xml:lang="en">Vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#VehicleJourney -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#VehicleJourney">
+        <rdfs:comment xml:lang="en">A Vehicle Journey is the journey made by the Vehicle.
+
+Within VehicleJourney there are three types:
+- TimetabledVehicleJourney in a general timetable that will run on a specific time on a DayType throughout the period of applicability of the schedule.
+- DatedVehicleJourney, a specific VehicleJourney that runs on a spcific calendar date;
+- MonitoredVehicleJourney, a VehicleJourney run under real-time tracking system and so for which real-time observations and predictions and other data are available.</rdfs:comment>
+        <rdfs:label xml:lang="en">VehicleJourney</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#VehicleJourneyLayover -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#VehicleJourneyLayover">
+        <rdfs:label xml:lang="en">VehicleJourneyLayover</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#VehicleJourneyRunTime -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#VehicleJourneyRunTime">
+        <rdfs:comment xml:lang="en">The time taken to traverse a specified TimingLinkInJourneyPattern on a specified VehicleJourney. This gives the most detailed control over times and overrides the DefaultServiceJourneyRunTime and JourneyPatternRunTime and the DefaultDeadRunRunTime</rdfs:comment>
+        <rdfs:label xml:lang="en">VehicleJourneyRunTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#VehicleStoppingPlace -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#VehicleStoppingPlace">
+        <rdfs:comment xml:lang="en">A place on the vehicle track where vehicles stop in order for passengers to board or alight from a vehicle.
+
+A vehicle track is located on the respective infrastructure link for the mode (railway element of railway network, road element of road network, etc.).
+
+A vehicle stopping place may be served by one or more quays.</rdfs:comment>
+        <rdfs:label xml:lang="en">VehicleStoppingPlace</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1139,60 +1579,367 @@
     
 
 
-    <!-- http://www.w3.org/ns/org#Head -->
+    <!-- https://w3id.org/transmodel/journeys#ArrivalTime -->
 
-    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/org#Head">
-        <rdf:type rdf:resource="http://www.w3.org/ns/org#Role"/>
-        <rdfs:comment xml:lang="en">A role corresponding to the `org:headOf` property</rdfs:comment>
-        <rdfs:comment xml:lang="es">Actividad correspondiente a la propiedad `org:headOf`.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Un ruolo corrispondente alla proprietà `org:headOf`.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Un rôle correspondant à la propriété `org:headOf`</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-        <rdfs:label xml:lang="es">director ejecutivo</rdfs:label>
-        <rdfs:label xml:lang="es">directora ejecutiva</rdfs:label>
-        <rdfs:label xml:lang="en">head</rdfs:label>
-        <rdfs:label xml:lang="it">responsabile</rdfs:label>
-        <rdfs:label xml:lang="fr">responsable</rdfs:label>
-        <skos:prefLabel xml:lang="en">head</skos:prefLabel>
-        <skos:prefLabel xml:lang="it">responsabile</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">responsable</skos:prefLabel>
-        <roleProperty rdf:resource="http://www.w3.org/ns/org#headOf"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#ArrivalTime">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#PassingTime"/>
+        <rdfs:label xml:lang="en">ArrivalTime</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#BothDirections -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#BothDirections">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#AllowedLineDirections"/>
+        <rdfs:label xml:lang="en">BothDirections</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Bus -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Bus">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
+        <rdfs:label xml:lang="en">Bus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#CableCar -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#CableCar">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
+        <rdfs:label xml:lang="en">CableCar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#CorridorService -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#CorridorService">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#TypeOfFlexibleService"/>
+        <rdfs:label xml:lang="en">CorridorService</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#DefaultInterchangeMaximum -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#DefaultInterchangeMaximum">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#DefaultInterchange"/>
+        <rdfs:label xml:lang="en">DefaultInterchangeStandard</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#DefaultInterchangeStandard -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#DefaultInterchangeStandard">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#DefaultInterchange"/>
+        <rdfs:label xml:lang="en">DefaultInterchangeMaximum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#DepartureTime -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#DepartureTime">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#PassingTime"/>
+        <rdfs:label xml:lang="en">DepartureTime</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Ferry -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Ferry">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
+        <rdfs:label xml:lang="en">Ferry</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#FixedStopAreaWideFlexibleService -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#FixedStopAreaWideFlexibleService">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#TypeOfFlexibleService"/>
+        <rdfs:label xml:lang="en">FixedStopAreaWideFlexibleService</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#FlexibleServiceWithMainRoute -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#FlexibleServiceWithMainRoute">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#TypeOfFlexibleService"/>
+        <rdfs:label xml:lang="en">FlexibleServiceWithMainRoute</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#FreeAreaWideFlexibleService -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#FreeAreaWideFlexibleService">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#TypeOfFlexibleService"/>
+        <rdfs:label xml:lang="en">FreeAreaWideFlexibleService</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Friday -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Friday">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#DayOfWeek"/>
+        <rdfs:label xml:lang="en">Friday</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#FromOriginToSSP -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#FromOriginToSSP">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#Access"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#FromSSPtoDestination -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#FromSSPtoDestination">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#Access"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Funicular -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Funicular">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
+        <rdfs:label xml:lang="en">Funicular</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Gondola -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Gondola">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
+        <rdfs:label xml:lang="en">Gondola</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Metro -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Metro">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
+        <rdfs:label xml:lang="en">Metro</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#MixedTypeOfFlexibleAndRegularServices -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#MixedTypeOfFlexibleAndRegularServices">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#TypeOfFlexibleService"/>
+        <rdfs:label xml:lang="en">MixedTypeOfFlexibleAndRegularServices</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#MixedTypesOfFlexibleService -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#MixedTypesOfFlexibleService">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#TypeOfFlexibleService"/>
+        <rdfs:label xml:lang="en">MixedTypesOfFlexibleService</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Monday -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Monday">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#DayOfWeek"/>
+        <rdfs:label xml:lang="en">Monday</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#OneDirection -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#OneDirection">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#AllowedLineDirections"/>
+        <rdfs:label xml:lang="en">OneDirection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#OtherDirections -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#OtherDirections">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#AllowedLineDirections"/>
+        <rdfs:label xml:lang="en">OtherDirections</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#OutboundRoute -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#OutboundRoute">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#Direction"/>
+        <rdfs:label xml:lang="en">Outbound</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#PrivateBike -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#PrivateBike">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#AccessMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Rail -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Rail">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
+        <rdfs:label xml:lang="en">Rail</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#ReturnRoute -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#ReturnRoute">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#Direction"/>
+        <rdfs:label xml:lang="en">ReturnRoute</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#RoundTrip -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#RoundTrip">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#Direction"/>
+        <rdfs:label xml:lang="en">RoundTrip</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Saturday -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Saturday">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#DayOfWeek"/>
+        <rdfs:label xml:lang="en">Saturday</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Sunday -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Sunday">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#DayOfWeek"/>
+        <rdfs:label xml:lang="en">Sunday</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Thursday -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Thursday">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#DayOfWeek"/>
+        <rdfs:label xml:lang="en">Thursday</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Tram -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Tram">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#MeanOfTransport"/>
+        <rdfs:label xml:lang="en">Tram</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Tuesday -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Tuesday">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#DayOfWeek"/>
+        <rdfs:label xml:lang="en">Tuesday</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#WaitingTime -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#WaitingTime">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#PassingTime"/>
+        <rdfs:label xml:lang="en">WaitingTime</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Walking -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Walking">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#AccessMode"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Wednesday -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#Wednesday">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#DayOfWeek"/>
+        <rdfs:label xml:lang="en">Wednesday</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#WeekdayInSchoolHolidays -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#WeekdayInSchoolHolidays">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#DayType"/>
+        <rdfs:label xml:lang="en">WeekdayInSchoolHolidays</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#virtualLineService -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#virtualLineService">
+        <rdf:type rdf:resource="https://w3id.org/transmodel/journeys#TypeOfFlexibleService"/>
+        <rdfs:label xml:lang="en">VirtualLineService</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/journeys/JourneyType -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/JourneyType">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:comment xml:lang="en">Concept scheme where all the codelists for the types of journeys that are included in the Transmodel ontology</rdfs:comment>
     </owl:NamedIndividual>
     <rdf:Description>
-        <foaf:homepage rdf:resource="http://www.asahi-net.or.jp/~ax2s-kmtn/"/>
-        <foaf:name>Shuji Kamitsuna</foaf:name>
+        <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
+        <name xml:lang="en">Adolfo Anton-Bravo</name>
     </rdf:Description>
-    <rdf:Description>
-        <foaf:mbox>dguardiola@quinode.fr</foaf:mbox>
-        <foaf:name>Dominique Guardiola</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:mbox>ogiraldo@fi.upm.es</foaf:mbox>
-        <foaf:name>Olga Ximena Giraldo</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:mbox>dave@epimorphics.com</foaf:mbox>
-        <foaf:name>Dave Reynolds</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:mbox>lupe@fi.upm.es</foaf:mbox>
-        <foaf:name>Guadalupe Aguado de Cea</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:mbox>giorgia.lodi@agid.gov.it</foaf:mbox>
-        <foaf:name>Giorgia Lodi</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:mbox>emontiel@fi.upm.es</foaf:mbox>
-        <foaf:name>Elena Montiel Ponsoda</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:mbox>mpoveda@fi.upm.es</foaf:mbox>
-        <foaf:name>María Poveda Villalón</foaf:name>
-    </rdf:Description>
-    <rdf:Description>
-        <foaf:mbox>antonio.maccioni@agid.gov.it</foaf:mbox>
-        <foaf:name>Antonio Maccioni</foaf:name>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern">
+        <rdfs:label xml:lang="en">timingLinkInJourneyPattern</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 
