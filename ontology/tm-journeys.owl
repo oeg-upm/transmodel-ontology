@@ -144,15 +144,47 @@
     
 
 
-    <!-- https://w3id.org/transmodel/journeys#access -->
+    <!-- https://w3id.org/transmodel/authorities#passengerJourney -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#access">
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/authorities#passengerJourney">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Passenger"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Access"/>
-        <rdfs:comment xml:lang="en">The physical spatial possibility for a passenger to access or leave the Public Transport System. The link may be used during a Trip for :
-- The walking movement of the Passenger from a Place (Origin of the Trip) to a ScheduledStopPoint (origin of the Public Transport Trip) or;
-- The walking movement of the Passenger from a Scheduled Stop Point (destination of the Public Transport Trip) to a Place (destination of the Trip)</rdfs:comment>
-        <rdfs:label xml:lang="en">accessPTS</rdfs:label>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Trip"/>
+        <rdfs:comment xml:lang="en">A Passenger makes (journey) a Trip</rdfs:comment>
+        <rdfs:label xml:lang="en">passengerJourney</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#ServiceJourney"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:comment xml:lang="en">A Service Journey is served by Vehicle Journeys</rdfs:comment>
+        <rdfs:label xml:lang="en">service Journey Served By Vehicle Journey</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#trip -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/authorities#trip">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Trip"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#ServiceJourney"/>
+        <rdfs:comment xml:lang="en">A Trip is made of ServiceJourneys</rdfs:comment>
+        <rdfs:label xml:lang="en">trip</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#JourneyPattern"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#DestinationDisplay"/>
+        <rdfs:comment xml:lang="en">A Journey Pattern is advertised in a Destination Display</rdfs:comment>
+        <rdfs:comment xml:lang="en">TODO: change to aViewOf</rdfs:comment>
+        <rdfs:label xml:lang="en">journey Pattern Advertised For</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -163,6 +195,19 @@
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Passenger"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#AccessMode"/>
         <rdfs:label xml:lang="en">accessMode</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#accessPTS -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#accessPTS">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Passenger"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Access"/>
+        <rdfs:comment xml:lang="en">The physical spatial possibility for a passenger to access or leave the Public Transport System. The link may be used during a Trip for :
+- The walking movement of the Passenger from a Place (Origin of the Trip) to a ScheduledStopPoint (origin of the Public Transport Trip) or;
+- The walking movement of the Passenger from a Scheduled Stop Point (destination of the Public Transport Trip) to a Place (destination of the Trip)</rdfs:comment>
+        <rdfs:label xml:lang="en">accessPTS</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -267,12 +312,12 @@
     
 
 
-    <!-- https://w3id.org/transmodel/journeys#direction -->
+    <!-- https://w3id.org/transmodel/journeys#directionType -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#direction">
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#directionType">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Route"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Direction"/>
-        <rdfs:label xml:lang="en">direction</rdfs:label>
+        <rdfs:label xml:lang="en">direction Type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -319,12 +364,14 @@
     
 
 
-    <!-- https://w3id.org/transmodel/journeys#hasAServiceJourneyPattern -->
+    <!-- https://w3id.org/transmodel/journeys#journeyPatternMadeUpOf -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#hasAServiceJourneyPattern">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Service"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#ServiceJourneyPattern"/>
-        <rdfs:label xml:lang="en">serviceJourneyPattern</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#journeyPatternMadeUpOf">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#JourneyPattern"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#StopPointInJourneyPattern"/>
+        <rdfs:comment xml:lang="en">A Journey Pattern is Made Up Of Stop Point In Journey Pattern</rdfs:comment>
+        <rdfs:comment xml:lang="en">TODO: change to madeUpOf</rdfs:comment>
+        <rdfs:label xml:lang="en">journey Pattern Made Up Of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -358,16 +405,6 @@
     
 
 
-    <!-- https://w3id.org/transmodel/journeys#makesAServiceJourney -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#makesAServiceJourney">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Passenger"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Service"/>
-        <rdfs:label xml:lang="en">serviceJourney</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/transmodel/journeys#modeOfTransport -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#modeOfTransport">
@@ -396,17 +433,6 @@
     
 
 
-    <!-- https://w3id.org/transmodel/journeys#passengerJourneys -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#passengerJourneys">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Passenger"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Trip"/>
-        <rdfs:comment xml:lang="en">The Journey of a Passenger is a Trip</rdfs:comment>
-        <rdfs:label xml:lang="en">passengerJourneys</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/transmodel/journeys#passingTimeTimingPoint -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#passingTimeTimingPoint">
@@ -417,11 +443,12 @@
     
 
 
-    <!-- https://w3id.org/transmodel/journeys#route -->
+    <!-- https://w3id.org/transmodel/journeys#routeOnLine -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#route">
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#routeOnLine">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Line"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Route"/>
-        <rdfs:label xml:lang="en">route</rdfs:label>
+        <rdfs:label xml:lang="en">route On Line</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -458,6 +485,17 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#ServiceJourney"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#ServiceJourneyPattern"/>
+        <rdfs:comment xml:lang="en">A Service Journey has (service Journey Pattern) a Service Journey Pattern</rdfs:comment>
+        <rdfs:label xml:lang="en">service Journey Pattern</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#stopPlaceAssignment -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#stopPlaceAssignment">
@@ -482,7 +520,7 @@
     <!-- https://w3id.org/transmodel/journeys#timeTabledPassingTime -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#timeTabledPassingTime">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#ServiceJourney"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#TimeTabledPassingTime"/>
     </owl:ObjectProperty>
     
@@ -522,7 +560,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#vehicleJourney">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Vehicle"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
-        <rdfs:label xml:lang="en">vehicleJourney</rdfs:label>
+        <rdfs:comment xml:lang="en">A Vehicle makes (vehicleJourney) a Vehicle Journey</rdfs:comment>
+        <rdfs:label xml:lang="en">vehicle Journey</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -612,12 +651,33 @@
     
 
 
+    <!-- https://w3id.org/transmodel/authorities#departureTime -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/authorities#departureTime">
+        <rdfs:comment xml:lang="en">arrival Time for a Service Journey in a Timing Point</rdfs:comment>
+        <rdfs:label xml:lang="en">departure Time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/authorities#directionType -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/authorities#directionType">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#ServiceJourney"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+        <rdfs:label>direction Type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#arrivalTime -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#arrivalTime">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#TimingPoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
-        <rdfs:label xml:lang="en">arrivalTime</rdfs:label>
+        <rdfs:comment xml:lang="en">departure Time for a Service Journey in a Timing Point</rdfs:comment>
+        <rdfs:label xml:lang="en">arrival Time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -850,6 +910,21 @@
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#DestinationDisplay -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#DestinationDisplay">
+        <rdfs:comment xml:lang="en">An advertised destination of a specific JOURNEY PATTERN, usually displayed on a headsign or at other on-board locations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Destination Display</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#JourneyPattern -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#JourneyPattern"/>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#Access -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Access">
@@ -912,7 +987,7 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#BeaconPoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
-        <rdfs:comment xml:lang="en">A Point where a beacon or similar device to support the automatic detection of vehicles passing by is located</rdfs:comment>
+        <rdfs:comment xml:lang="en">A Point where a beacon or similar device to support the automatic detection of Vehicles passing by is located</rdfs:comment>
         <rdfs:label xml:lang="en">BeaconPoint</rdfs:label>
     </owl:Class>
     
@@ -1007,7 +1082,7 @@
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#DatedVehicleJourney">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
         <rdfs:comment xml:lang="en">A particular Journey of a Vehicle on a particular OperatingDay including all modifications possibly decided by the control staff</rdfs:comment>
-        <rdfs:label xml:lang="en">DatedVehicleJourney</rdfs:label>
+        <rdfs:label xml:lang="en">Dated Vehicle Journey</rdfs:label>
     </owl:Class>
     
 
@@ -1035,7 +1110,7 @@
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#DeadRun">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
         <rdfs:comment xml:lang="en">A non-service VehicleJourney</rdfs:comment>
-        <rdfs:label xml:lang="en">DeadRun</rdfs:label>
+        <rdfs:label xml:lang="en">Dead Run</rdfs:label>
     </owl:Class>
     
 
@@ -1109,8 +1184,8 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#FlexiblePoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
-        <rdfs:comment xml:lang="en">A specialisation of Point for FlexibleService</rdfs:comment>
-        <rdfs:label xml:lang="en">FlexiblePoint</rdfs:label>
+        <rdfs:comment xml:lang="en">A specialisation of Point for Flexible Service</rdfs:comment>
+        <rdfs:label xml:lang="en">Flexible Point</rdfs:label>
     </owl:Class>
     
 
@@ -1164,8 +1239,8 @@
     <!-- https://w3id.org/transmodel/journeys#JourneyPattern -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#JourneyPattern">
-        <rdfs:comment xml:lang="en">An ordered list of Scheduled Stop Points and Timing Point on a single Route, describing the pattern of working for public transport vehicles. A Journey Pattern may pass through the same Point more than once. The first point of a JourneyPattern is the origin. The last point is the destination.</rdfs:comment>
-        <rdfs:label xml:lang="en">JourneyPattern</rdfs:label>
+        <rdfs:comment xml:lang="en">An ordered list of Scheduled Stop Points and Timing Point on a single Route, describing the pattern of working for public transport vehicles. A Journey Pattern may pass through the same Point more than once. The first Point of a Journey Pattern is the origin. The last Point is the destination.</rdfs:comment>
+        <rdfs:label xml:lang="en">Journey Pattern</rdfs:label>
     </owl:Class>
     
 
@@ -1220,7 +1295,7 @@
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#MonitoredVehicleJourney">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
         <rdfs:comment xml:lang="en">A VehicleJourney that is run under real-time tracking system and so for which real-time observations and predictions and other data are available</rdfs:comment>
-        <rdfs:label xml:lang="en">MonitoredVehicleJourney</rdfs:label>
+        <rdfs:label xml:lang="en">Monitored Vehicle Journey</rdfs:label>
     </owl:Class>
     
 
@@ -1238,8 +1313,8 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#ParkingPoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#TimingPoint"/>
-        <rdfs:comment xml:lang="en">A ParkingPoint where vehicles may stay unattended for a long time. A vehicle&apos;s return to the ParkingPoint marks the end of a Block</rdfs:comment>
-        <rdfs:label xml:lang="en">ParkingPoint</rdfs:label>
+        <rdfs:comment xml:lang="en">A Parking Point where Vehicles may stay unattended for a long time. A vehicle&apos;s return to the Parking Point marks the end of a Block</rdfs:comment>
+        <rdfs:label xml:lang="en">Parking Point</rdfs:label>
     </owl:Class>
     
 
@@ -1247,7 +1322,7 @@
     <!-- https://w3id.org/transmodel/journeys#Passenger -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Passenger">
-        <rdfs:comment xml:lang="en">A Passenger is someone who makes a Trip</rdfs:comment>
+        <rdfs:comment xml:lang="en">In Transmodel a Passenger is someone who makes a Trip</rdfs:comment>
         <rdfs:label xml:lang="en">Passenger</rdfs:label>
     </owl:Class>
     
@@ -1284,8 +1359,8 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#PointInJourneyPattern">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
-        <rdfs:comment xml:lang="en">A Scheduled Stop Point of Timing Point in a Journey Pattern with its order in that Journey Pattern</rdfs:comment>
-        <rdfs:label xml:lang="en">PointInJourneyPattern</rdfs:label>
+        <rdfs:comment xml:lang="en">A Scheduled Stop Point OR Timing Point in a Journey Pattern with its order in that Journey Pattern</rdfs:comment>
+        <rdfs:label xml:lang="en">Point In Journey Pattern</rdfs:label>
     </owl:Class>
     
 
@@ -1333,20 +1408,9 @@ A Quay may contain a subquay.</rdfs:comment>
     <!-- https://w3id.org/transmodel/journeys#ScheduledStopPoint -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#ScheduledStopPoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#PointInJourneyPattern"/>
-        <rdfs:comment xml:lang="en">A ScheduledStopPoint is a Point where a Passenger can board or alight from a Vehicle.</rdfs:comment>
-        <rdfs:label xml:lang="en">ScheduledStopPoint</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/transmodel/journeys#Service -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Service">
-        <rdfs:comment xml:lang="en">A ServiceJourney is a Passenger carrying VehicleJourney for one
-specified DayType. The pattern of working is in principle defined
-by a ServiceJourneyPattern.</rdfs:comment>
-        <rdfs:label xml:lang="en">ServiceJourney</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:comment xml:lang="en">A Scheduled Stop Point is a Point where a Passenger can board or alight from a Vehicle.</rdfs:comment>
+        <rdfs:label xml:lang="en">Scheduled Stop Point</rdfs:label>
     </owl:Class>
     
 
@@ -1359,12 +1423,23 @@ by a ServiceJourneyPattern.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#ServiceJourney -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#ServiceJourney">
+        <rdfs:comment xml:lang="en">A Service Journey is a Passenger carrying a Vehicle Journey for one
+specified Day Type. The pattern of working is in principle defined
+by a Service Journey Pattern.</rdfs:comment>
+        <rdfs:label xml:lang="en">Service Journey</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#ServiceJourneyPattern -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#ServiceJourneyPattern">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#JourneyPattern"/>
-        <rdfs:comment xml:lang="en">The Journey Pattern for a passenger carrying Service Journey</rdfs:comment>
-        <rdfs:label xml:lang="en">ServiceJourneyPattern</rdfs:label>
+        <rdfs:comment xml:lang="en">The Journey Pattern for (a Passenger carrying) Service Journeys</rdfs:comment>
+        <rdfs:label xml:lang="en">Service Journey Pattern</rdfs:label>
     </owl:Class>
     
 
@@ -1372,8 +1447,8 @@ by a ServiceJourneyPattern.</rdfs:comment>
     <!-- https://w3id.org/transmodel/journeys#StopArea -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#StopArea">
-        <rdfs:comment xml:lang="en">A group of ScheduledStopPoint close to each other</rdfs:comment>
-        <rdfs:label xml:lang="en">StopArea</rdfs:label>
+        <rdfs:comment xml:lang="en">A group of Scheduled Stop Points close to each other</rdfs:comment>
+        <rdfs:label xml:lang="en">Stop Area</rdfs:label>
     </owl:Class>
     
 
@@ -1390,9 +1465,9 @@ by a ServiceJourneyPattern.</rdfs:comment>
     <!-- https://w3id.org/transmodel/journeys#StopPointInJourneyPattern -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#StopPointInJourneyPattern">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
-        <rdfs:comment xml:lang="en">A Point in Journey Pattern that is a ScheduledStopPoint</rdfs:comment>
-        <rdfs:label xml:lang="en">StopPointInJourneyPattern</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+        <rdfs:comment xml:lang="en">A Point in Journey Pattern that is a Scheduled Stop Point</rdfs:comment>
+        <rdfs:label xml:lang="en">Stop Point In Journey Pattern</rdfs:label>
     </owl:Class>
     
 
@@ -1418,8 +1493,8 @@ by a ServiceJourneyPattern.</rdfs:comment>
     <!-- https://w3id.org/transmodel/journeys#TimeTabledPassingTime -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimeTabledPassingTime">
-        <rdfs:comment xml:lang="en">Long-term planned time data concerning public transport vehicles passing a particular PointInJourneyPattern on a specified VehicleJourney for a certain DayType</rdfs:comment>
-        <rdfs:label xml:lang="en">TimeTabledPassingTime</rdfs:label>
+        <rdfs:comment xml:lang="en">Long-term planned time data concerning public transport vehicles passing a particular Point In Journey Pattern on a specified Vehicle Journey for a certain Day Type</rdfs:comment>
+        <rdfs:label xml:lang="en">Time Tabled Passing Time</rdfs:label>
     </owl:Class>
     
 
@@ -1428,8 +1503,8 @@ by a ServiceJourneyPattern.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimetabledVehicleJourney">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
-        <rdfs:comment xml:lang="en">The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.</rdfs:comment>
-        <rdfs:label xml:lang="en">TimetabledVehicleJourney</rdfs:label>
+        <rdfs:comment xml:lang="en">The planned movement of a Public Transport Vehicle on a Day Type from the start point to the end point of a Journey Pattern on a specified Route.</rdfs:comment>
+        <rdfs:label xml:lang="en">Timetabled Vehicle Journey</rdfs:label>
     </owl:Class>
     
 
@@ -1459,11 +1534,11 @@ about each iteration of the TimingLink</rdfs:comment>
     <!-- https://w3id.org/transmodel/journeys#TimingPoint -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimingPoint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#PointInJourneyPattern"/>
-        <rdfs:comment xml:lang="en">A TimingPoint is a Point against which the timing information necessary to build schedules may be recorded.
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:comment xml:lang="en">A Timing Point is a Point against which the timing information necessary to build schedules may be recorded.
 
-It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
-        <rdfs:label xml:lang="en">TimingPoint</rdfs:label>
+It&apos;s the same as Timing Point In Journey Pattern</rdfs:comment>
+        <rdfs:label xml:lang="en">Timing Point</rdfs:label>
     </owl:Class>
     
 
@@ -1471,9 +1546,9 @@ It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
     <!-- https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
-        <rdfs:comment xml:lang="en">A Point in a JourneyPattern which is a TimingPoint</rdfs:comment>
-        <rdfs:label xml:lang="en">TimingPointInJourneyPattern</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#TimingPoint"/>
+        <rdfs:comment xml:lang="en">A Point in a Journey Pattern which is a Timing Point</rdfs:comment>
+        <rdfs:label xml:lang="en">Timing Point In Journey Pattern</rdfs:label>
     </owl:Class>
     
 
@@ -1491,7 +1566,6 @@ It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
     <!-- https://w3id.org/transmodel/journeys#Trip -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Trip">
-        <owl:equivalentClass rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
         <rdfs:comment xml:lang="en">According to the definition of GTFS for Trip the VehicleJourney&apos;s Transmodel definition would fit better</rdfs:comment>
         <rdfs:comment xml:lang="en">In Transmodel is the physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip.</rdfs:comment>
         <rdfs:label xml:lang="en">Trip</rdfs:label>
@@ -1529,11 +1603,14 @@ It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#VehicleJourney">
         <rdfs:comment xml:lang="en">A Vehicle Journey is the journey made by the Vehicle.
 
+A Service Journey is made of Vehicle Journeys
+
 Within VehicleJourney there are three types:
-- TimetabledVehicleJourney in a general timetable that will run on a specific time on a DayType throughout the period of applicability of the schedule.
-- DatedVehicleJourney, a specific VehicleJourney that runs on a spcific calendar date;
-- MonitoredVehicleJourney, a VehicleJourney run under real-time tracking system and so for which real-time observations and predictions and other data are available.</rdfs:comment>
-        <rdfs:label xml:lang="en">VehicleJourney</rdfs:label>
+- Timetabled Vehicle Journey in a general timetable that will run on a specific time on a Day Type throughout the period of applicability of the schedule.
+- Dated Vehicle Journey, a specific Vehicle Journey that runs on a spcific calendar date;
+- Monitored Vehicle Journey, a Vehicle Journey run under real-time tracking system and so for which real-time observations and predictions and other data are available.
+- Dead Run, a Vehicle Journey without service</rdfs:comment>
+        <rdfs:label xml:lang="en">Vehicle Journey</rdfs:label>
     </owl:Class>
     
 
