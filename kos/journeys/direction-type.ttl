@@ -1,0 +1,31 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+
+<https://w3id.org/transmodel/kos/journeys/direction-type> a skos:ConceptScheme ;
+    skos:notation "DirectionTypeEnumeration" ;
+    dcterms:creator "Adolfo Antón Bravo (OEG - Universidad Politécnica de Madrid)"@es ;
+    determs:date "2019-11-15"@es ;
+    dcterms:description "Enumeration of Direction Type"@en ;
+    dcterms:title "Limited Direction Type Enumeration"@en ;
+    skos:definition "Enumeration of Direction Type"@en ;
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/direction-type> ;
+    dc:title "Allowed values for Direction Types"@en ;
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/direction-type/inbound> ,
+        <https://w3id.org/transmodel/kos/journeys/direction-type/outbound> ,
+        <https://w3id.org/transmodel/kos/journeys/direction-type/clockwise> ,
+        <https://w3id.org/transmodel/kos/journeys/direction-type/antiClockwise> .
+
+<https://w3id.org/transmodel/kos/journeys/direction-type/inbound> skos:inScheme <https://w3id.org/transmodel/kos/journeys/direction-type> .
+
+<https://w3id.org/transmodel/kos/journeys/direction-type/outbound> skos:inScheme <https://w3id.org/transmodel/kos/journeys/direction-type> .
+
+<https://w3id.org/transmodel/kos/journeys/direction-type/clockwise> skos:inScheme <https://w3id.org/transmodel/kos/journeys/direction-type> .
+
+<https://w3id.org/transmodel/kos/journeys/direction-type/antiClockwise> skos:inScheme <https://w3id.org/transmodel/kos/journeys/direction-type> .
