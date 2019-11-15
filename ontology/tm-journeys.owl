@@ -521,6 +521,18 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#prescribing -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#prescribing">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#PointInJourneyPattern"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#DestinationDisplay"/>
+        <rdfs:comment xml:lang="en">This property relates a Point in Journey Pattern with a Destination Display</rdfs:comment>
+        <rdfs:label xml:lang="en">prescribing</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#primarilyAdvertisedWith -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#primarilyAdvertisedWith">
@@ -1563,6 +1575,12 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#PointInJourneyPattern">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#PointInLinkSequence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#prescribing"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/facilities#DestinationDisplay"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A Scheduled Stop Point OR Timing Point in a Journey Pattern with its order in that Journey Pattern</rdfs:comment>
         <rdfs:label xml:lang="en">Point In Journey Pattern</rdfs:label>
     </owl:Class>
