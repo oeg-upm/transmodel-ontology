@@ -152,7 +152,7 @@
 
 ###  https://w3id.org/transmodel/journeys#allowedLineDirections
 :allowedLineDirections rdf:type owl:ObjectProperty ;
-                       rdfs:domain :Route ;
+                       rdfs:domain :Route-old ;
                        rdfs:range :AllowedLineDirections ;
                        rdfs:label "allowedLineDirections"@en .
 
@@ -212,6 +212,15 @@
                     rdfs:label "defaultInterchange"@en .
 
 
+###  https://w3id.org/transmodel/journeys#describedBy
+:describedBy rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :GOOD_PROPERTIEs ;
+             rdfs:domain :DayType ;
+             rdfs:range :PropertyOfDay ;
+             rdfs:comment "This property asign a DayType to the specific Property of Day"@en ;
+             rdfs:label "describedBy"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#destinationStop
 :destinationStop rdf:type owl:ObjectProperty ;
                  rdfs:range :ScheduledStopPoint ;
@@ -225,7 +234,7 @@
                rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                   owl:hasValue <https://w3id.org/transmodel/kos/journeys/DirectionType>
+                                                   owl:hasValue <https://w3id.org/transmodel/kos/journeys/direction-type>
                                                  ]
                                                ) ;
                             rdf:type owl:Class
@@ -236,7 +245,7 @@
 
 ###  https://w3id.org/transmodel/journeys#directionType_old
 :directionType_old rdf:type owl:ObjectProperty ;
-                   rdfs:domain :Route ;
+                   rdfs:domain :Route-old ;
                    rdfs:label "direction Type"@en .
 
 
@@ -330,8 +339,33 @@
 
 ###  https://w3id.org/transmodel/journeys#modeOfTransport
 :modeOfTransport rdf:type owl:ObjectProperty ;
-                 rdfs:domain :Route ;
+                 rdfs:domain :Route-old ;
                  rdfs:range :MeanOfTransport .
+
+
+###  https://w3id.org/transmodel/journeys#on
+:on rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf :GOOD_PROPERTIEs ;
+    rdfs:comment "This property allows relating an entity with the entity where it appears. For instance, a Journey Pattern on (onRoute) a Route, a Route on (onLine) a Line."@en ;
+    rdfs:label "on"@en .
+
+
+###  https://w3id.org/transmodel/journeys#onLine
+:onLine rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :on ;
+        rdfs:domain :Line ;
+        rdfs:range :Route ;
+        rdfs:comment "This property allows relating a Route with a Line where it appears"@en ;
+        rdfs:label "on Line"@en .
+
+
+###  https://w3id.org/transmodel/journeys#onRoute
+:onRoute rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :on ;
+         rdfs:domain :Route ;
+         rdfs:range :ServiceJourneyPattern ;
+         rdfs:comment "This property allows relating a Journey Pattern with a Route where it appears"@en ;
+         rdfs:label "on Route"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#originStop
@@ -371,13 +405,14 @@
 
 ###  https://w3id.org/transmodel/journeys#routeOnLine
 :routeOnLine rdf:type owl:ObjectProperty ;
-             rdfs:domain :Line ;
-             rdfs:range :Route ;
+             rdfs:domain :Line-old ;
+             rdfs:range :Route-old ;
              rdfs:label "route On Line"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#runBy
 :runBy rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf :GOOD_PROPERTIEs ;
        rdfs:domain :Line ;
        rdfs:range <https://w3id.org/transmodel/authorities#Operator> ;
        rdfs:comment "A Line is run by an Operator"@en ;
@@ -394,7 +429,7 @@
 
 ###  https://w3id.org/transmodel/journeys#scheduledStopPoint
 :scheduledStopPoint rdf:type owl:ObjectProperty ;
-                    rdfs:domain :Route ;
+                    rdfs:domain :Route-old ;
                     rdfs:range :ScheduledStopPoint ;
                     rdfs:label "scheduledStopPoint"@en .
 
@@ -422,7 +457,7 @@
          rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                             owl:hasValue <https://w3id.org/transmodel/kos/journeys/StopUseType>
+                                             owl:hasValue <https://w3id.org/transmodel/kos/journeys/stop-use-type>
                                            ]
                                          ) ;
                       rdf:type owl:Class
@@ -488,7 +523,7 @@
 ###  https://w3id.org/transmodel/journeys#vehicleJourneyRoute
 :vehicleJourneyRoute rdf:type owl:ObjectProperty ;
                      rdfs:domain :VehicleJourney ;
-                     rdfs:range :Route ;
+                     rdfs:range :Route-old ;
                      rdfs:label "vehicleJourneyRoute"@en .
 
 
@@ -628,16 +663,24 @@
 
 ###  https://w3id.org/transmodel/journeys#lineName
 :lineName rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Line ;
+          rdfs:domain :Line-old ;
           rdfs:range rdfs:Literal ;
           rdfs:label "lineName"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#lineNumber
 :lineNumber rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Line ;
+            rdfs:domain :Line-old ;
             rdfs:range xsd:nonNegativeInteger ;
             rdfs:label "lineNumber"@en .
+
+
+###  https://w3id.org/transmodel/journeys#monitored
+:monitored rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :GOODDATAPROPERTIES ;
+           rdfs:domain :Journey ;
+           rdfs:comment "This property defines whether the journey is monitored or not"@en ;
+           rdfs:label "monitored"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#order
@@ -879,7 +922,6 @@
 
 ###  https://w3id.org/transmodel/journeys#DayType
 :DayType rdf:type owl:Class ;
-         rdfs:subClassOf :TOREVIEWCLASSES ;
          rdfs:comment "A DayType is a type of day characterised by one or more properties which affect public transport operation"@en ;
          rdfs:label "DayType"@en .
 
@@ -934,7 +976,7 @@
 
 ###  https://w3id.org/transmodel/journeys#FlexibleLine
 :FlexibleLine rdf:type owl:Class ;
-              rdfs:subClassOf :Line ;
+              rdfs:subClassOf :Line-old ;
               rdfs:comment "Specialisation of Line for FlexibleService. As all the service on a Line may not be flexible, flexibility itself is described at JourneyPattern level, meaning that a separate JourneyPattern is needed for each type of flexibility available for the Line"@en ;
               rdfs:label "FlexibleLine"@en .
 
@@ -948,7 +990,7 @@
 
 ###  https://w3id.org/transmodel/journeys#FlexibleRoute
 :FlexibleRoute rdf:type owl:Class ;
-               rdfs:subClassOf :Route ;
+               rdfs:subClassOf :Route-old ;
                rdfs:comment "Specialisation of Route for FlexibleService. May include both Point and Zonal areas and ordered and unordered sections."@en ;
                rdfs:label "FlexibleRoute"@en .
 
@@ -968,7 +1010,8 @@
 
 
 ###  https://w3id.org/transmodel/journeys#Journey
-:Journey rdf:type owl:Class .
+:Journey rdf:type owl:Class ;
+         rdfs:label "Journey"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#JourneyPart
@@ -1019,9 +1062,15 @@
 
 ###  https://w3id.org/transmodel/journeys#Line
 :Line rdf:type owl:Class ;
-      rdfs:subClassOf :TOREVIEWCLASSES ;
       rdfs:comment "A Line is a group of Route which is generally known to the public by a similar name or number."@en ;
       rdfs:label "Line"@en .
+
+
+###  https://w3id.org/transmodel/journeys#Line-old
+:Line-old rdf:type owl:Class ;
+          rdfs:subClassOf :TOREVIEWCLASSES ;
+          rdfs:comment "A Line is a group of Route which is generally known to the public by a similar name or number."@en ;
+          rdfs:label "Line-old"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#LinkSequence
@@ -1130,6 +1179,12 @@
                             "PostalAddress"@en .
 
 
+###  https://w3id.org/transmodel/journeys#PropertyOfDay
+:PropertyOfDay rdf:type owl:Class ;
+               rdfs:comment "A property which a day may possess, such as school holiday, weekday, summer, winter, etc."@en ;
+               rdfs:label "Property of day"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#Quay
 :Quay rdf:type owl:Class ;
       rdfs:subClassOf :TOREVIEWCLASSES ;
@@ -1148,9 +1203,15 @@ A Quay may contain a subquay."""@en ;
 
 ###  https://w3id.org/transmodel/journeys#Route
 :Route rdf:type owl:Class ;
-       rdfs:subClassOf :TOREVIEWCLASSES ;
        rdfs:comment "A Route is and ordered list of located Point defining one single path through the road (or rail) network."@en ;
        rdfs:label "Route"@en .
+
+
+###  https://w3id.org/transmodel/journeys#Route-old
+:Route-old rdf:type owl:Class ;
+           rdfs:subClassOf :TOREVIEWCLASSES ;
+           rdfs:label "Route-old"@en ;
+           owl:backwardCompatibleWith "A Route is and ordered list of located Point defining one single path through the road (or rail) network."@en .
 
 
 ###  https://w3id.org/transmodel/journeys#ScheduledStopPoint
@@ -1177,7 +1238,7 @@ A Quay may contain a subquay."""@en ;
                                   owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
                                                                            [ rdf:type owl:Restriction ;
                                                                              owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                                             owl:hasValue <https://w3id.org/transmodel/kos/journeys/DirectionType>
+                                                                             owl:hasValue <https://w3id.org/transmodel/kos/journeys/direction-type>
                                                                            ]
                                                                          ) ;
                                                       rdf:type owl:Class
@@ -1234,7 +1295,7 @@ A Quay may contain a subquay."""@en ;
                                              owl:onClass [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
                                                                                 [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                                                  owl:hasValue <https://w3id.org/transmodel/kos/journeys/StopUseType>
+                                                                                  owl:hasValue <https://w3id.org/transmodel/kos/journeys/stop-use-type>
                                                                                 ]
                                                                               ) ;
                                                            rdf:type owl:Class
@@ -1632,22 +1693,46 @@ A vehicle stopping place may be served by one or more quays."""@en ;
                     rdfs:label "VirtualLineService"@en .
 
 
-###  https://w3id.org/transmodel/kos/journeys/DirectionType
-<https://w3id.org/transmodel/kos/journeys/DirectionType> rdf:type owl:NamedIndividual ,
+###  https://w3id.org/transmodel/kos/journeys/direction-type
+<https://w3id.org/transmodel/kos/journeys/direction-type> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                          rdfs:comment "Concept scheme for types of directions (inbound, outbound, clockwise, anticlockwise)"@en .
+
+
+###  https://w3id.org/transmodel/kos/journeys/entrance-type
+<https://w3id.org/transmodel/kos/journeys/entrance-type> rdf:type owl:NamedIndividual ,
                                                                   <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                                         rdfs:comment "Concept scheme for types of directions (inbound, outbound, clockwise, anticlockwise)"@en .
+                                                         rdfs:comment "Concept scheme where all the codelists for the types of entrance types that are included in the Transmodel ontology"@en .
 
 
-###  https://w3id.org/transmodel/kos/journeys/JourneyType
-<https://w3id.org/transmodel/kos/journeys/JourneyType> rdf:type owl:NamedIndividual ,
-                                                                <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                                       rdfs:comment "Concept scheme where all the codelists for the types of journeys that are included in the Transmodel ontology"@en .
+###  https://w3id.org/transmodel/kos/journeys/interchange-weighting-type
+<https://w3id.org/transmodel/kos/journeys/interchange-weighting-type> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                      rdfs:comment "Concept scheme where all the codelists for the types of interchange weighting types that are included in the Transmodel ontology"@en .
 
 
-###  https://w3id.org/transmodel/kos/journeys/StopUseType
-<https://w3id.org/transmodel/kos/journeys/StopUseType> rdf:type owl:NamedIndividual ,
-                                                                <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                                       rdfs:comment "Concept scheme  for types of use of stops (e.g., access, interchange only, pass through)"@en .
+###  https://w3id.org/transmodel/kos/journeys/limited-use-type
+<https://w3id.org/transmodel/kos/journeys/limited-use-type> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                            rdfs:comment "Concept scheme where all the codelists for the types of limited use that are included in the Transmodel ontology"@en .
+
+
+###  https://w3id.org/transmodel/kos/journeys/quay-type
+<https://w3id.org/transmodel/kos/journeys/quay-type> rdf:type owl:NamedIndividual ,
+                                                              <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                     rdfs:comment "Concept scheme where all the codelists for the types of quay types that are included in the Transmodel ontology"@en .
+
+
+###  https://w3id.org/transmodel/kos/journeys/stop-place-component-type
+<https://w3id.org/transmodel/kos/journeys/stop-place-component-type> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                     rdfs:comment "Concept scheme where all the codelists for the types of stop place component types that are included in the Transmodel ontology"@en .
+
+
+###  https://w3id.org/transmodel/kos/journeys/stop-use-type
+<https://w3id.org/transmodel/kos/journeys/stop-use-type> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                         rdfs:comment "Concept scheme  for types of use of stops (e.g., access, interchange only, pass through or non boarding alighting)"@en .
 
 
 _:genid38 :mbox "adolfo.anton.bravo@upm.es"@en ;

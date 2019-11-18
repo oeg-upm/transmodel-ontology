@@ -129,7 +129,7 @@
 # 
 # https://w3id.org/transmodel/journeys#allowedLineDirections
 <https://w3id.org/transmodel/journeys#allowedLineDirections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#allowedLineDirections> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Route> .
+<https://w3id.org/transmodel/journeys#allowedLineDirections> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Route-old> .
 <https://w3id.org/transmodel/journeys#allowedLineDirections> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#AllowedLineDirections> .
 <https://w3id.org/transmodel/journeys#allowedLineDirections> <http://www.w3.org/2000/01/rdf-schema#label> "allowedLineDirections"@en .
 # 
@@ -180,6 +180,14 @@
 <https://w3id.org/transmodel/journeys#defaultInterchange> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DefaultInterchange> .
 <https://w3id.org/transmodel/journeys#defaultInterchange> <http://www.w3.org/2000/01/rdf-schema#label> "defaultInterchange"@en .
 # 
+# https://w3id.org/transmodel/journeys#describedBy
+<https://w3id.org/transmodel/journeys#describedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#describedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs> .
+<https://w3id.org/transmodel/journeys#describedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#DayType> .
+<https://w3id.org/transmodel/journeys#describedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#PropertyOfDay> .
+<https://w3id.org/transmodel/journeys#describedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "This property asign a DayType to the specific Property of Day"@en .
+<https://w3id.org/transmodel/journeys#describedBy> <http://www.w3.org/2000/01/rdf-schema#label> "describedBy"@en .
+# 
 # https://w3id.org/transmodel/journeys#destinationStop
 <https://w3id.org/transmodel/journeys#destinationStop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/transmodel/journeys#destinationStop> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
@@ -198,7 +206,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/journeys/DirectionType> .
+_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/journeys/direction-type> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#directionType> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows describing the type of direction for a service journey"@en .
@@ -206,7 +214,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#directionType_old
 <https://w3id.org/transmodel/journeys#directionType_old> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#directionType_old> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Route> .
+<https://w3id.org/transmodel/journeys#directionType_old> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Route-old> .
 <https://w3id.org/transmodel/journeys#directionType_old> <http://www.w3.org/2000/01/rdf-schema#label> "direction Type"@en .
 # 
 # https://w3id.org/transmodel/journeys#endsConnection
@@ -288,8 +296,30 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#modeOfTransport
 <https://w3id.org/transmodel/journeys#modeOfTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#modeOfTransport> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Route> .
+<https://w3id.org/transmodel/journeys#modeOfTransport> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Route-old> .
 <https://w3id.org/transmodel/journeys#modeOfTransport> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#MeanOfTransport> .
+# 
+# https://w3id.org/transmodel/journeys#on
+<https://w3id.org/transmodel/journeys#on> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#on> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs> .
+<https://w3id.org/transmodel/journeys#on> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows relating an entity with the entity where it appears. For instance, a Journey Pattern on (onRoute) a Route, a Route on (onLine) a Line."@en .
+<https://w3id.org/transmodel/journeys#on> <http://www.w3.org/2000/01/rdf-schema#label> "on"@en .
+# 
+# https://w3id.org/transmodel/journeys#onLine
+<https://w3id.org/transmodel/journeys#onLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#onLine> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#on> .
+<https://w3id.org/transmodel/journeys#onLine> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Line> .
+<https://w3id.org/transmodel/journeys#onLine> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Route> .
+<https://w3id.org/transmodel/journeys#onLine> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows relating a Route with a Line where it appears"@en .
+<https://w3id.org/transmodel/journeys#onLine> <http://www.w3.org/2000/01/rdf-schema#label> "on Line"@en .
+# 
+# https://w3id.org/transmodel/journeys#onRoute
+<https://w3id.org/transmodel/journeys#onRoute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#onRoute> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#on> .
+<https://w3id.org/transmodel/journeys#onRoute> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Route> .
+<https://w3id.org/transmodel/journeys#onRoute> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ServiceJourneyPattern> .
+<https://w3id.org/transmodel/journeys#onRoute> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows relating a Journey Pattern with a Route where it appears"@en .
+<https://w3id.org/transmodel/journeys#onRoute> <http://www.w3.org/2000/01/rdf-schema#label> "on Route"@en .
 # 
 # https://w3id.org/transmodel/journeys#originStop
 <https://w3id.org/transmodel/journeys#originStop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -323,12 +353,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#routeOnLine
 <https://w3id.org/transmodel/journeys#routeOnLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#routeOnLine> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Line> .
-<https://w3id.org/transmodel/journeys#routeOnLine> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Route> .
+<https://w3id.org/transmodel/journeys#routeOnLine> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Line-old> .
+<https://w3id.org/transmodel/journeys#routeOnLine> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Route-old> .
 <https://w3id.org/transmodel/journeys#routeOnLine> <http://www.w3.org/2000/01/rdf-schema#label> "route On Line"@en .
 # 
 # https://w3id.org/transmodel/journeys#runBy
 <https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs> .
 <https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Line> .
 <https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/authorities#Operator> .
 <https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A Line is run by an Operator"@en .
@@ -343,7 +374,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#scheduledStopPoint
 <https://w3id.org/transmodel/journeys#scheduledStopPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#scheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Route> .
+<https://w3id.org/transmodel/journeys#scheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Route-old> .
 <https://w3id.org/transmodel/journeys#scheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
 <https://w3id.org/transmodel/journeys#scheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#label> "scheduledStopPoint"@en .
 # 
@@ -374,7 +405,7 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/journeys/StopUseType> .
+_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/journeys/stop-use-type> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#stopUse> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows describing the type of use of a stop (e.g., access, interchange only, pass through)"@en .
@@ -429,7 +460,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/transmodel/journeys#vehicleJourneyRoute
 <https://w3id.org/transmodel/journeys#vehicleJourneyRoute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/transmodel/journeys#vehicleJourneyRoute> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#VehicleJourney> .
-<https://w3id.org/transmodel/journeys#vehicleJourneyRoute> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Route> .
+<https://w3id.org/transmodel/journeys#vehicleJourneyRoute> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Route-old> .
 <https://w3id.org/transmodel/journeys#vehicleJourneyRoute> <http://www.w3.org/2000/01/rdf-schema#label> "vehicleJourneyRoute"@en .
 # 
 # https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides
@@ -557,15 +588,22 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#lineName
 <https://w3id.org/transmodel/journeys#lineName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/transmodel/journeys#lineName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Line> .
+<https://w3id.org/transmodel/journeys#lineName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Line-old> .
 <https://w3id.org/transmodel/journeys#lineName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/transmodel/journeys#lineName> <http://www.w3.org/2000/01/rdf-schema#label> "lineName"@en .
 # 
 # https://w3id.org/transmodel/journeys#lineNumber
 <https://w3id.org/transmodel/journeys#lineNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/transmodel/journeys#lineNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Line> .
+<https://w3id.org/transmodel/journeys#lineNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Line-old> .
 <https://w3id.org/transmodel/journeys#lineNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://w3id.org/transmodel/journeys#lineNumber> <http://www.w3.org/2000/01/rdf-schema#label> "lineNumber"@en .
+# 
+# https://w3id.org/transmodel/journeys#monitored
+<https://w3id.org/transmodel/journeys#monitored> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#monitored> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES> .
+<https://w3id.org/transmodel/journeys#monitored> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Journey> .
+<https://w3id.org/transmodel/journeys#monitored> <http://www.w3.org/2000/01/rdf-schema#comment> "This property defines whether the journey is monitored or not"@en .
+<https://w3id.org/transmodel/journeys#monitored> <http://www.w3.org/2000/01/rdf-schema#label> "monitored"@en .
 # 
 # https://w3id.org/transmodel/journeys#order
 <https://w3id.org/transmodel/journeys#order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -774,7 +812,6 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#DayType
 <https://w3id.org/transmodel/journeys#DayType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#DayType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#TOREVIEWCLASSES> .
 <https://w3id.org/transmodel/journeys#DayType> <http://www.w3.org/2000/01/rdf-schema#comment> "A DayType is a type of day characterised by one or more properties which affect public transport operation"@en .
 <https://w3id.org/transmodel/journeys#DayType> <http://www.w3.org/2000/01/rdf-schema#label> "DayType"@en .
 # 
@@ -821,7 +858,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#FlexibleLine
 <https://w3id.org/transmodel/journeys#FlexibleLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#FlexibleLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Line> .
+<https://w3id.org/transmodel/journeys#FlexibleLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Line-old> .
 <https://w3id.org/transmodel/journeys#FlexibleLine> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of Line for FlexibleService. As all the service on a Line may not be flexible, flexibility itself is described at JourneyPattern level, meaning that a separate JourneyPattern is needed for each type of flexibility available for the Line"@en .
 <https://w3id.org/transmodel/journeys#FlexibleLine> <http://www.w3.org/2000/01/rdf-schema#label> "FlexibleLine"@en .
 # 
@@ -833,7 +870,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#FlexibleRoute
 <https://w3id.org/transmodel/journeys#FlexibleRoute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#FlexibleRoute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Route> .
+<https://w3id.org/transmodel/journeys#FlexibleRoute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Route-old> .
 <https://w3id.org/transmodel/journeys#FlexibleRoute> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of Route for FlexibleService. May include both Point and Zonal areas and ordered and unordered sections."@en .
 <https://w3id.org/transmodel/journeys#FlexibleRoute> <http://www.w3.org/2000/01/rdf-schema#label> "FlexibleRoute"@en .
 # 
@@ -851,6 +888,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#Journey
 <https://w3id.org/transmodel/journeys#Journey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#Journey> <http://www.w3.org/2000/01/rdf-schema#label> "Journey"@en .
 # 
 # https://w3id.org/transmodel/journeys#JourneyPart
 <https://w3id.org/transmodel/journeys#JourneyPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -894,9 +932,14 @@ _:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmo
 # 
 # https://w3id.org/transmodel/journeys#Line
 <https://w3id.org/transmodel/journeys#Line> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#Line> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#TOREVIEWCLASSES> .
 <https://w3id.org/transmodel/journeys#Line> <http://www.w3.org/2000/01/rdf-schema#comment> "A Line is a group of Route which is generally known to the public by a similar name or number."@en .
 <https://w3id.org/transmodel/journeys#Line> <http://www.w3.org/2000/01/rdf-schema#label> "Line"@en .
+# 
+# https://w3id.org/transmodel/journeys#Line-old
+<https://w3id.org/transmodel/journeys#Line-old> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#Line-old> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#TOREVIEWCLASSES> .
+<https://w3id.org/transmodel/journeys#Line-old> <http://www.w3.org/2000/01/rdf-schema#comment> "A Line is a group of Route which is generally known to the public by a similar name or number."@en .
+<https://w3id.org/transmodel/journeys#Line-old> <http://www.w3.org/2000/01/rdf-schema#label> "Line-old"@en .
 # 
 # https://w3id.org/transmodel/journeys#LinkSequence
 <https://w3id.org/transmodel/journeys#LinkSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -993,6 +1036,11 @@ _:genid15 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <https://w3id.org/transmodel/journeys#PostalAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "A specification of Address refining it by using the attributes used for conventional identification for mail. Comprises variously a building identifier, Streeet name, Post Code and other descriptions."@en .
 <https://w3id.org/transmodel/journeys#PostalAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "PostalAddress"@en .
 # 
+# https://w3id.org/transmodel/journeys#PropertyOfDay
+<https://w3id.org/transmodel/journeys#PropertyOfDay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#PropertyOfDay> <http://www.w3.org/2000/01/rdf-schema#comment> "A property which a day may possess, such as school holiday, weekday, summer, winter, etc."@en .
+<https://w3id.org/transmodel/journeys#PropertyOfDay> <http://www.w3.org/2000/01/rdf-schema#label> "Property of day"@en .
+# 
 # https://w3id.org/transmodel/journeys#Quay
 <https://w3id.org/transmodel/journeys#Quay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#Quay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#TOREVIEWCLASSES> .
@@ -1007,9 +1055,14 @@ _:genid15 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # 
 # https://w3id.org/transmodel/journeys#Route
 <https://w3id.org/transmodel/journeys#Route> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#Route> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#TOREVIEWCLASSES> .
 <https://w3id.org/transmodel/journeys#Route> <http://www.w3.org/2000/01/rdf-schema#comment> "A Route is and ordered list of located Point defining one single path through the road (or rail) network."@en .
 <https://w3id.org/transmodel/journeys#Route> <http://www.w3.org/2000/01/rdf-schema#label> "Route"@en .
+# 
+# https://w3id.org/transmodel/journeys#Route-old
+<https://w3id.org/transmodel/journeys#Route-old> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#Route-old> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#TOREVIEWCLASSES> .
+<https://w3id.org/transmodel/journeys#Route-old> <http://www.w3.org/2000/01/rdf-schema#label> "Route-old"@en .
+<https://w3id.org/transmodel/journeys#Route-old> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> "A Route is and ordered list of located Point defining one single path through the road (or rail) network."@en .
 # 
 # https://w3id.org/transmodel/journeys#ScheduledStopPoint
 <https://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1040,7 +1093,7 @@ _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid20 .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid20 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/journeys/DirectionType> .
+_:genid20 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/journeys/direction-type> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#ServiceJourney> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
@@ -1097,7 +1150,7 @@ _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid28 .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid28 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/journeys/StopUseType> .
+_:genid28 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/journeys/stop-use-type> .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
@@ -1423,20 +1476,40 @@ _:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 <https://w3id.org/transmodel/journeys#virtualLineService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/transmodel/journeys#virtualLineService> <http://www.w3.org/2000/01/rdf-schema#label> "VirtualLineService"@en .
 # 
-# https://w3id.org/transmodel/kos/journeys/DirectionType
-<https://w3id.org/transmodel/kos/journeys/DirectionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/kos/journeys/DirectionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
-<https://w3id.org/transmodel/kos/journeys/DirectionType> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme for types of directions (inbound, outbound, clockwise, anticlockwise)"@en .
+# https://w3id.org/transmodel/kos/journeys/direction-type
+<https://w3id.org/transmodel/kos/journeys/direction-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/direction-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/transmodel/kos/journeys/direction-type> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme for types of directions (inbound, outbound, clockwise, anticlockwise)"@en .
 # 
-# https://w3id.org/transmodel/kos/journeys/JourneyType
-<https://w3id.org/transmodel/kos/journeys/JourneyType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/kos/journeys/JourneyType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
-<https://w3id.org/transmodel/kos/journeys/JourneyType> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme where all the codelists for the types of journeys that are included in the Transmodel ontology"@en .
+# https://w3id.org/transmodel/kos/journeys/entrance-type
+<https://w3id.org/transmodel/kos/journeys/entrance-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/entrance-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/transmodel/kos/journeys/entrance-type> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme where all the codelists for the types of entrance types that are included in the Transmodel ontology"@en .
 # 
-# https://w3id.org/transmodel/kos/journeys/StopUseType
-<https://w3id.org/transmodel/kos/journeys/StopUseType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/kos/journeys/StopUseType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
-<https://w3id.org/transmodel/kos/journeys/StopUseType> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme  for types of use of stops (e.g., access, interchange only, pass through)"@en .
+# https://w3id.org/transmodel/kos/journeys/interchange-weighting-type
+<https://w3id.org/transmodel/kos/journeys/interchange-weighting-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/interchange-weighting-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/transmodel/kos/journeys/interchange-weighting-type> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme where all the codelists for the types of interchange weighting types that are included in the Transmodel ontology"@en .
+# 
+# https://w3id.org/transmodel/kos/journeys/limited-use-type
+<https://w3id.org/transmodel/kos/journeys/limited-use-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/limited-use-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/transmodel/kos/journeys/limited-use-type> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme where all the codelists for the types of limited use that are included in the Transmodel ontology"@en .
+# 
+# https://w3id.org/transmodel/kos/journeys/quay-type
+<https://w3id.org/transmodel/kos/journeys/quay-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/quay-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/transmodel/kos/journeys/quay-type> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme where all the codelists for the types of quay types that are included in the Transmodel ontology"@en .
+# 
+# https://w3id.org/transmodel/kos/journeys/stop-place-component-type
+<https://w3id.org/transmodel/kos/journeys/stop-place-component-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/stop-place-component-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/transmodel/kos/journeys/stop-place-component-type> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme where all the codelists for the types of stop place component types that are included in the Transmodel ontology"@en .
+# 
+# https://w3id.org/transmodel/kos/journeys/stop-use-type
+<https://w3id.org/transmodel/kos/journeys/stop-use-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/stop-use-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/transmodel/kos/journeys/stop-use-type> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme  for types of use of stops (e.g., access, interchange only, pass through or non boarding alighting)"@en .
 # 
 _:genid38 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
 _:genid38 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .

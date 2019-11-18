@@ -1,0 +1,479 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#broader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#narrower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#notation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Allowed values for Properties of Day"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week-enumeration"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "PropertiesOfDay"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/everyday"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/friday"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/monday"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/none"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/saturday"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/sunday"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/thursday"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/tuesday"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/wednesday"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/weekdays"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/weekend"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Allowed values of List of Days of the Week"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/everyday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Everyday"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/friday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Friday"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/monday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Monday"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/none",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "None"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/saturday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Saturday"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/sunday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Sunday"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/thursday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Thursday"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/tuesday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Tuesday"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/wednesday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Wednesday"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/weekdays",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Weekdays"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/weekend",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Weekend"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/any-day"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/any-holiday"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/eve-of-holiday"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/holiday-displacement-day"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/local-holiday"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/national-holiday"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-holiday"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-school-day"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-working-day"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/regional-holiday"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/school-day"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/working-day"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "HolidayTypeEnumeration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/any-day",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Any-day"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/any-holiday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Any-holiday"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/eve-of-holiday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "eve-of-holiday"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/holiday-displacement-day",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Holiday displacement day"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/local-holiday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Local-holiday"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/national-holiday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "National-holiday"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-holiday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Not-Holiday"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-school-day",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Not-School-Day"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-working-day",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Not-Working-Day"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/regional-holiday",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Regional-holiday"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/school-day",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "School-day"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/autumn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Autumn"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/perennially",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Perennially"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/spring",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Spring"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/summer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Summer"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/winter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Winter"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/high-tide",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "High-tide"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/working-day",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Working-day"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type/autumn"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type/perennially"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type/spring"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type/summer"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type/winter"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Allowed values for Tide Enumeration"
+  }, {
+    "@value" : "Season Enumeration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type",
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type/high-tide"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/everyweek"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/1"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/2"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/3"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/4"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/5"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "WeeksOfMonthEnumeration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/everyweek",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Everyweek"
+  } ]
+} ]

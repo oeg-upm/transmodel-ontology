@@ -1,0 +1,344 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties
+<https://w3id.org/transmodel/kos/journeys/daytype-properties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties> <http://purl.org/dc/terms/title> "Allowed values for Properties of Day"@en .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week-enumeration> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties> <http://www.w3.org/2004/02/skos/core#notation> "PropertiesOfDay" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/journeys/daytype-properties> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/everyday> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/friday> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/monday> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/none> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/saturday> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/sunday> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/thursday> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/tuesday> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/wednesday> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/weekdays> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/weekend> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> <http://www.w3.org/2004/02/skos/core#notation> "Allowed values of List of Days of the Week" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/journeys/daytype-properties> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/any-day> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/any-holiday> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/eve-of-holiday> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/holiday-displacement-day> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/local-holiday> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/national-holiday> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-holiday> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-school-day> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-working-day> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/regional-holiday> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/school-day> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/working-day> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> <http://www.w3.org/2004/02/skos/core#notation> "HolidayTypeEnumeration" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/journeys/daytype-properties> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type/autumn> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type/perennially> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type/spring> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type/summer> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type/winter> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type> <http://www.w3.org/2004/02/skos/core#notation> "Allowed values for Tide Enumeration" .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type> <http://www.w3.org/2004/02/skos/core#notation> "Season Enumeration" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/journeys/daytype-properties> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/everyweek> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/1> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/2> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/3> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/4> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/5> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> <http://www.w3.org/2004/02/skos/core#notation> "WeeksOfMonthEnumeration" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/everyday
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/everyday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/everyday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/everyday> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/everyday> <http://www.w3.org/2004/02/skos/core#notation> "Everyday" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/friday
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/friday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/friday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/friday> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/friday> <http://www.w3.org/2004/02/skos/core#notation> "Friday" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/monday
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/monday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/monday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/monday> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/monday> <http://www.w3.org/2004/02/skos/core#notation> "Monday" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/none
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/none> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/none> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/none> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/none> <http://www.w3.org/2004/02/skos/core#notation> "None" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/saturday
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/saturday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/saturday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/saturday> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/saturday> <http://www.w3.org/2004/02/skos/core#notation> "Saturday" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/sunday
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/sunday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/sunday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/sunday> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/sunday> <http://www.w3.org/2004/02/skos/core#notation> "Sunday" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/thursday
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/thursday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/thursday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/thursday> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/thursday> <http://www.w3.org/2004/02/skos/core#notation> "Thursday" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/tuesday
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/tuesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/tuesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/tuesday> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/tuesday> <http://www.w3.org/2004/02/skos/core#notation> "Tuesday" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/wednesday
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/wednesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/wednesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/wednesday> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/wednesday> <http://www.w3.org/2004/02/skos/core#notation> "Wednesday" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/weekdays
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/weekdays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/weekdays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/weekdays> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/weekdays> <http://www.w3.org/2004/02/skos/core#notation> "Weekdays" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/weekend
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/weekend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/weekend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/weekend> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/weekend> <http://www.w3.org/2004/02/skos/core#notation> "Weekend" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/any-day
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/any-day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/any-day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/any-day> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/any-day> <http://www.w3.org/2004/02/skos/core#notation> "Any-day" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/any-holiday
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/any-holiday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/any-holiday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/any-holiday> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/any-holiday> <http://www.w3.org/2004/02/skos/core#notation> "Any-holiday" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/eve-of-holiday
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/eve-of-holiday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/eve-of-holiday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/eve-of-holiday> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/eve-of-holiday> <http://www.w3.org/2004/02/skos/core#notation> "eve-of-holiday" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/holiday-displacement-day
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/holiday-displacement-day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/holiday-displacement-day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/holiday-displacement-day> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/holiday-displacement-day> <http://www.w3.org/2004/02/skos/core#notation> "Holiday displacement day" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/local-holiday
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/local-holiday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/local-holiday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/local-holiday> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/local-holiday> <http://www.w3.org/2004/02/skos/core#notation> "Local-holiday" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/national-holiday
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/national-holiday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/national-holiday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/national-holiday> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/national-holiday> <http://www.w3.org/2004/02/skos/core#notation> "National-holiday" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-holiday
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-holiday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-holiday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-holiday> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-holiday> <http://www.w3.org/2004/02/skos/core#notation> "Not-Holiday" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-school-day
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-school-day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-school-day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-school-day> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-school-day> <http://www.w3.org/2004/02/skos/core#notation> "Not-School-Day" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-working-day
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-working-day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-working-day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-working-day> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/not-working-day> <http://www.w3.org/2004/02/skos/core#notation> "Not-Working-Day" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/regional-holiday
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/regional-holiday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/regional-holiday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/regional-holiday> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/regional-holiday> <http://www.w3.org/2004/02/skos/core#notation> "Regional-holiday" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/school-day
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/school-day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/school-day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/school-day> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/school-day> <http://www.w3.org/2004/02/skos/core#notation> "School-day" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/working-day
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/working-day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/working-day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/working-day> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/working-day> <http://www.w3.org/2004/02/skos/core#notation> "Working-day" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/autumn
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/autumn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/autumn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/autumn> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/autumn> <http://www.w3.org/2004/02/skos/core#notation> "Autumn" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/perennially
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/perennially> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/perennially> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/perennially> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/perennially> <http://www.w3.org/2004/02/skos/core#notation> "Perennially" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/spring
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/spring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/spring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/spring> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/spring> <http://www.w3.org/2004/02/skos/core#notation> "Spring" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/summer
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/summer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/summer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/summer> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/summer> <http://www.w3.org/2004/02/skos/core#notation> "Summer" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/winter
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/winter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/winter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/winter> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/winter> <http://www.w3.org/2004/02/skos/core#notation> "Winter" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/high-tide
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/high-tide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/high-tide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/high-tide> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/high-tide> <http://www.w3.org/2004/02/skos/core#notation> "High-tide" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/everyweek
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/everyweek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/everyweek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/everyweek> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/everyweek> <http://www.w3.org/2004/02/skos/core#notation> "Everyweek" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/1
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/1> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/1> <http://www.w3.org/2004/02/skos/core#notation> "1" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/2
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/2> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/2> <http://www.w3.org/2004/02/skos/core#notation> "2" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/3
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/3> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/3> <http://www.w3.org/2004/02/skos/core#notation> "3" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/4
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/4> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/4> <http://www.w3.org/2004/02/skos/core#notation> "4" .
+# 
+# https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/5
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/5> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/5> <http://www.w3.org/2004/02/skos/core#notation> "5" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type/high-tide> .
+# 
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
