@@ -68,6 +68,18 @@
 # 
 # #################################################################
 # #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2000/01/rdf-schema#range
+<http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
 # #    Object Properties
 # #
 # #################################################################
@@ -78,12 +90,14 @@
 # 
 # https://w3id.org/transmodel/authorities#passengerJourney
 <https://w3id.org/transmodel/authorities#passengerJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/authorities#passengerJourney> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/authorities#passengerJourney> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Trip> .
 <https://w3id.org/transmodel/authorities#passengerJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "A Passenger makes (journey) a Trip"@en .
 <https://w3id.org/transmodel/authorities#passengerJourney> <http://www.w3.org/2000/01/rdf-schema#label> "passengerJourney"@en .
 # 
 # https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney
 <https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#ServiceJourney> .
 <https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#VehicleJourney> .
 <https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "A Service Journey is served by Vehicle Journeys"@en .
@@ -91,6 +105,7 @@
 # 
 # https://w3id.org/transmodel/authorities#trip
 <https://w3id.org/transmodel/authorities#trip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/authorities#trip> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/authorities#trip> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Trip> .
 <https://w3id.org/transmodel/authorities#trip> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ServiceJourney> .
 <https://w3id.org/transmodel/authorities#trip> <http://www.w3.org/2000/01/rdf-schema#comment> "A Trip is made of ServiceJourneys"@en .
@@ -98,18 +113,19 @@
 # 
 # https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor
 <https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#JourneyPattern> .
 <https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/facilities#DestinationDisplay> .
 <https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor> <http://www.w3.org/2000/01/rdf-schema#comment> "A Journey Pattern is advertised in a Destination Display"@en .
 <https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: change to aViewOf"@en .
 <https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor> <http://www.w3.org/2000/01/rdf-schema#label> "journey Pattern Advertised For"@en .
 # 
-# https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs
-<https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW
+<https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # https://w3id.org/transmodel/journeys#aViewOf
 <https://w3id.org/transmodel/journeys#aViewOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#aViewOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs> .
+<https://w3id.org/transmodel/journeys#aViewOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <https://w3id.org/transmodel/journeys#aViewOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/transmodel/journeys#viewedAs> .
 <https://w3id.org/transmodel/journeys#aViewOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Point> .
 <https://w3id.org/transmodel/journeys#aViewOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#PointInLinkSequence> .
@@ -118,84 +134,101 @@
 # 
 # https://w3id.org/transmodel/journeys#accessMode
 <https://w3id.org/transmodel/journeys#accessMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#accessMode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#accessMode> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#AccessMode> .
 <https://w3id.org/transmodel/journeys#accessMode> <http://www.w3.org/2000/01/rdf-schema#label> "accessMode"@en .
 # 
 # https://w3id.org/transmodel/journeys#accessPTS
 <https://w3id.org/transmodel/journeys#accessPTS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#accessPTS> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#accessPTS> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Access> .
 <https://w3id.org/transmodel/journeys#accessPTS> <http://www.w3.org/2000/01/rdf-schema#comment> "The physical spatial possibility for a passenger to access or leave the Public Transport System. The link may be used during a Trip for :\n- The walking movement of the Passenger from a Place (Origin of the Trip) to a ScheduledStopPoint (origin of the Public Transport Trip) or;\n- The walking movement of the Passenger from a Scheduled Stop Point (destination of the Public Transport Trip) to a Place (destination of the Trip)"@en .
 <https://w3id.org/transmodel/journeys#accessPTS> <http://www.w3.org/2000/01/rdf-schema#label> "accessPTS"@en .
 # 
 # https://w3id.org/transmodel/journeys#allowedLineDirections
 <https://w3id.org/transmodel/journeys#allowedLineDirections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#allowedLineDirections> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#allowedLineDirections> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Route-old> .
 <https://w3id.org/transmodel/journeys#allowedLineDirections> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#AllowedLineDirections> .
 <https://w3id.org/transmodel/journeys#allowedLineDirections> <http://www.w3.org/2000/01/rdf-schema#label> "allowedLineDirections"@en .
 # 
 # https://w3id.org/transmodel/journeys#beginsConnection
 <https://w3id.org/transmodel/journeys#beginsConnection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#beginsConnection> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#beginsConnection> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Connection> .
 <https://w3id.org/transmodel/journeys#beginsConnection> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
 <https://w3id.org/transmodel/journeys#beginsConnection> <http://www.w3.org/2000/01/rdf-schema#label> "beginsConnection"@en .
 # 
 # https://w3id.org/transmodel/journeys#blockPart
 <https://w3id.org/transmodel/journeys#blockPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#blockPart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#blockPart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#JourneyPart> .
 <https://w3id.org/transmodel/journeys#blockPart> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#BlockPart> .
 <https://w3id.org/transmodel/journeys#blockPart> <http://www.w3.org/2000/01/rdf-schema#label> "blockPart"@en .
 # 
 # https://w3id.org/transmodel/journeys#boardingPositionInQuay
 <https://w3id.org/transmodel/journeys#boardingPositionInQuay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#boardingPositionInQuay> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#boardingPositionInQuay> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Quay> .
 <https://w3id.org/transmodel/journeys#boardingPositionInQuay> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#BoardingPosition> .
 <https://w3id.org/transmodel/journeys#boardingPositionInQuay> <http://www.w3.org/2000/01/rdf-schema#label> "boardingPositionInQuay"@en .
 # 
 # https://w3id.org/transmodel/journeys#canAlight
 <https://w3id.org/transmodel/journeys#canAlight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#canAlight> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#canAlight> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
 <https://w3id.org/transmodel/journeys#canAlight> <http://www.w3.org/2000/01/rdf-schema#label> "canAlight"@en .
 # 
 # https://w3id.org/transmodel/journeys#canBoard
 <https://w3id.org/transmodel/journeys#canBoard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#canBoard> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#canBoard> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
 <https://w3id.org/transmodel/journeys#canBoard> <http://www.w3.org/2000/01/rdf-schema#label> "canBoard"@en .
 # 
 # https://w3id.org/transmodel/journeys#dayTypeAssignment
 <https://w3id.org/transmodel/journeys#dayTypeAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#dayTypeAssignment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#OperatingDay> .
-<https://w3id.org/transmodel/journeys#dayTypeAssignment> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DayType> .
+<https://w3id.org/transmodel/journeys#dayTypeAssignment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#dayTypeAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "The assignment of operational characteristics, expressed by DayType, to a particular OperatingDay within a ServiceCalendar"@en .
 <https://w3id.org/transmodel/journeys#dayTypeAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "dayTypeAssignment"@en .
 # 
 # https://w3id.org/transmodel/journeys#defaultDeadRunRunTime
 <https://w3id.org/transmodel/journeys#defaultDeadRunRunTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#defaultDeadRunRunTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#defaultDeadRunRunTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#DeadRun> .
 <https://w3id.org/transmodel/journeys#defaultDeadRunRunTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#TimingLink> .
 <https://w3id.org/transmodel/journeys#defaultDeadRunRunTime> <http://www.w3.org/2000/01/rdf-schema#label> "defaultDeadRunRunTime"@en .
 # 
 # https://w3id.org/transmodel/journeys#defaultInterchange
 <https://w3id.org/transmodel/journeys#defaultInterchange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#defaultInterchange> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#defaultInterchange> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
 <https://w3id.org/transmodel/journeys#defaultInterchange> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DefaultInterchange> .
 <https://w3id.org/transmodel/journeys#defaultInterchange> <http://www.w3.org/2000/01/rdf-schema#label> "defaultInterchange"@en .
 # 
+# https://w3id.org/transmodel/journeys#definedAS
+<https://w3id.org/transmodel/journeys#definedAS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#definedAS> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#PropertyOfDay> .
+<https://w3id.org/transmodel/journeys#definedAS> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DayOfWeek> .
+<https://w3id.org/transmodel/journeys#definedAS> <http://www.w3.org/2000/01/rdf-schema#comment> "This property sets the relationship between Property Of Day and Day Type"@en .
+<https://w3id.org/transmodel/journeys#definedAS> <http://www.w3.org/2000/01/rdf-schema#label> "defined As"@en .
+# 
 # https://w3id.org/transmodel/journeys#describedBy
 <https://w3id.org/transmodel/journeys#describedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#describedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs> .
+<https://w3id.org/transmodel/journeys#describedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <https://w3id.org/transmodel/journeys#describedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#DayType> .
 <https://w3id.org/transmodel/journeys#describedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#PropertyOfDay> .
 <https://w3id.org/transmodel/journeys#describedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "This property asign a DayType to the specific Property of Day"@en .
-<https://w3id.org/transmodel/journeys#describedBy> <http://www.w3.org/2000/01/rdf-schema#label> "describedBy"@en .
+<https://w3id.org/transmodel/journeys#describedBy> <http://www.w3.org/2000/01/rdf-schema#label> "described By"@en .
 # 
 # https://w3id.org/transmodel/journeys#destinationStop
 <https://w3id.org/transmodel/journeys#destinationStop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#destinationStop> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#destinationStop> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
 <https://w3id.org/transmodel/journeys#destinationStop> <http://www.w3.org/2000/01/rdf-schema#label> "destinationStop"@en .
 # 
 # https://w3id.org/transmodel/journeys#directionType
 <https://w3id.org/transmodel/journeys#directionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#directionType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs> .
+<https://w3id.org/transmodel/journeys#directionType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <https://w3id.org/transmodel/journeys#directionType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#ServiceJourney> .
 <https://w3id.org/transmodel/journeys#directionType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
 _:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
@@ -214,11 +247,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#directionType_old
 <https://w3id.org/transmodel/journeys#directionType_old> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#directionType_old> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#directionType_old> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Route-old> .
 <https://w3id.org/transmodel/journeys#directionType_old> <http://www.w3.org/2000/01/rdf-schema#label> "direction Type"@en .
 # 
 # https://w3id.org/transmodel/journeys#endsConnection
 <https://w3id.org/transmodel/journeys#endsConnection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#endsConnection> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#endsConnection> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Connection> .
 <https://w3id.org/transmodel/journeys#endsConnection> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
 <https://w3id.org/transmodel/journeys#endsConnection> <http://www.w3.org/2000/01/rdf-schema#label> "Connection End, one end of a connection in Transmodel v6.0"@en .
@@ -233,19 +268,21 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#followsDeadRunTime
 <https://w3id.org/transmodel/journeys#followsDeadRunTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#followsDeadRunTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#followsDeadRunTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#VehicleJourney> .
 <https://w3id.org/transmodel/journeys#followsDeadRunTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DeadRunPattern> .
 <https://w3id.org/transmodel/journeys#followsDeadRunTime> <http://www.w3.org/2000/01/rdf-schema#label> "followsDeadRunPattern"@en .
 # 
 # https://w3id.org/transmodel/journeys#followsJourneyPattern
 <https://w3id.org/transmodel/journeys#followsJourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#followsJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#followsJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#VehicleJourney> .
 <https://w3id.org/transmodel/journeys#followsJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#JourneyPattern> .
 <https://w3id.org/transmodel/journeys#followsJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "followsJourneyPattern"@en .
 # 
 # https://w3id.org/transmodel/journeys#inLinkSequence
 <https://w3id.org/transmodel/journeys#inLinkSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#inLinkSequence> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs> .
+<https://w3id.org/transmodel/journeys#inLinkSequence> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <https://w3id.org/transmodel/journeys#inLinkSequence> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/transmodel/journeys#madeUpOf> .
 <https://w3id.org/transmodel/journeys#inLinkSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/transmodel/journeys#inLinkSequence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#PointInLinkSequence> .
@@ -255,6 +292,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#journeyPatternMadeUpOf
 <https://w3id.org/transmodel/journeys#journeyPatternMadeUpOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#journeyPatternMadeUpOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#journeyPatternMadeUpOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#JourneyPattern> .
 <https://w3id.org/transmodel/journeys#journeyPatternMadeUpOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> .
 <https://w3id.org/transmodel/journeys#journeyPatternMadeUpOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A Journey Pattern is Made Up Of Stop Point In Journey Pattern"@en .
@@ -263,6 +301,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#journeyPatternPoint
 <https://w3id.org/transmodel/journeys#journeyPatternPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#journeyPatternPoint> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#journeyPatternPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#JourneyPattern> .
 <https://w3id.org/transmodel/journeys#journeyPatternPoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Point> .
 <https://w3id.org/transmodel/journeys#journeyPatternPoint> <http://www.w3.org/2000/01/rdf-schema#label> "journeyPatternPoint"@en .
@@ -270,17 +309,19 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/transmodel/journeys#journeyPatternRunTime
 <https://w3id.org/transmodel/journeys#journeyPatternRunTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/transmodel/journeys#journeyPatternRunTime> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://w3id.org/transmodel/journeys#journeyRunTime> .
+<https://w3id.org/transmodel/journeys#journeyPatternRunTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#journeyPatternRunTime> <http://www.w3.org/2000/01/rdf-schema#label> "journeyPatternRunTime"@en .
 # 
 # https://w3id.org/transmodel/journeys#journeyRunTime
 <https://w3id.org/transmodel/journeys#journeyRunTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#journeyRunTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#journeyRunTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#JourneyPattern> .
 <https://w3id.org/transmodel/journeys#journeyRunTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#TimingLink> .
 <https://w3id.org/transmodel/journeys#journeyRunTime> <http://www.w3.org/2000/01/rdf-schema#label> "journeyRunTime"@en .
 # 
 # https://w3id.org/transmodel/journeys#madeUpOf
 <https://w3id.org/transmodel/journeys#madeUpOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#madeUpOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs> .
+<https://w3id.org/transmodel/journeys#madeUpOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <https://w3id.org/transmodel/journeys#madeUpOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#LinkSequence> .
 <https://w3id.org/transmodel/journeys#madeUpOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#PointInLinkSequence> .
 <https://w3id.org/transmodel/journeys#madeUpOf> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows relating a Link Sequence with the set of Points in Link Sequence that make it up"@en .
@@ -288,7 +329,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#madeUsing
 <https://w3id.org/transmodel/journeys#madeUsing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#madeUsing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs> .
+<https://w3id.org/transmodel/journeys#madeUsing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <https://w3id.org/transmodel/journeys#madeUsing> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#ServiceJourney> .
 <https://w3id.org/transmodel/journeys#madeUsing> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/facilities#ServiceFacilitySet> .
 <https://w3id.org/transmodel/journeys#madeUsing> <http://www.w3.org/2000/01/rdf-schema#comment> "This property connects a Service Journey to the Service Facility Set that is making it possible"@en .
@@ -296,12 +337,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#modeOfTransport
 <https://w3id.org/transmodel/journeys#modeOfTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#modeOfTransport> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#modeOfTransport> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Route-old> .
 <https://w3id.org/transmodel/journeys#modeOfTransport> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#MeanOfTransport> .
 # 
 # https://w3id.org/transmodel/journeys#on
 <https://w3id.org/transmodel/journeys#on> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#on> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs> .
+<https://w3id.org/transmodel/journeys#on> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <https://w3id.org/transmodel/journeys#on> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows relating an entity with the entity where it appears. For instance, a Journey Pattern on (onRoute) a Route, a Route on (onLine) a Line."@en .
 <https://w3id.org/transmodel/journeys#on> <http://www.w3.org/2000/01/rdf-schema#label> "on"@en .
 # 
@@ -323,23 +365,26 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#originStop
 <https://w3id.org/transmodel/journeys#originStop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#originStop> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#originStop> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
 <https://w3id.org/transmodel/journeys#originStop> <http://www.w3.org/2000/01/rdf-schema#label> "originStop"@en .
 # 
 # https://w3id.org/transmodel/journeys#passengerConnection
 <https://w3id.org/transmodel/journeys#passengerConnection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#passengerConnection> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#passengerConnection> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Connection> .
 <https://w3id.org/transmodel/journeys#passengerConnection> <http://www.w3.org/2000/01/rdf-schema#label> "passengerConnection"@en .
 # 
 # https://w3id.org/transmodel/journeys#passingTimeTimingPoint
 <https://w3id.org/transmodel/journeys#passingTimeTimingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#passingTimeTimingPoint> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#passingTimeTimingPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#PassingTime> .
 <https://w3id.org/transmodel/journeys#passingTimeTimingPoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#TimingPoint> .
 <https://w3id.org/transmodel/journeys#passingTimeTimingPoint> <http://www.w3.org/2000/01/rdf-schema#label> "passingTimeTimingPoint" .
 # 
 # https://w3id.org/transmodel/journeys#prescribing
 <https://w3id.org/transmodel/journeys#prescribing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#prescribing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs> .
+<https://w3id.org/transmodel/journeys#prescribing> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <https://w3id.org/transmodel/journeys#prescribing> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#PointInJourneyPattern> .
 <https://w3id.org/transmodel/journeys#prescribing> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/facilities#DestinationDisplay> .
 <https://w3id.org/transmodel/journeys#prescribing> <http://www.w3.org/2000/01/rdf-schema#comment> "This property relates a Point in Journey Pattern with a Destination Display"@en .
@@ -347,19 +392,22 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#primarilyAdvertisedWith
 <https://w3id.org/transmodel/journeys#primarilyAdvertisedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#primarilyAdvertisedWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs> .
+<https://w3id.org/transmodel/journeys#primarilyAdvertisedWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <https://w3id.org/transmodel/journeys#primarilyAdvertisedWith> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#JourneyPattern> .
 <https://w3id.org/transmodel/journeys#primarilyAdvertisedWith> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/facilities#DestinationDisplay> .
+<https://w3id.org/transmodel/journeys#primarilyAdvertisedWith> <http://www.w3.org/2000/01/rdf-schema#comment> "This property relates where is primarily advertised the Journey Pattern in a Destination Display"@en .
+<https://w3id.org/transmodel/journeys#primarilyAdvertisedWith> <http://www.w3.org/2000/01/rdf-schema#label> "primarily Advertised With"@en .
 # 
 # https://w3id.org/transmodel/journeys#routeOnLine
 <https://w3id.org/transmodel/journeys#routeOnLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#routeOnLine> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#routeOnLine> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Line-old> .
 <https://w3id.org/transmodel/journeys#routeOnLine> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Route-old> .
 <https://w3id.org/transmodel/journeys#routeOnLine> <http://www.w3.org/2000/01/rdf-schema#label> "route On Line"@en .
 # 
 # https://w3id.org/transmodel/journeys#runBy
 <https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs> .
+<https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Line> .
 <https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/authorities#Operator> .
 <https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A Line is run by an Operator"@en .
@@ -367,6 +415,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#runTimeOverrides
 <https://w3id.org/transmodel/journeys#runTimeOverrides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#runTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#runTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#JourneyRunTime> .
 <https://w3id.org/transmodel/journeys#runTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DefaultDeadRunRunTime> .
 <https://w3id.org/transmodel/journeys#runTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DefaultServiceJourneyRunTime> .
@@ -374,29 +423,14 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#scheduledStopPoint
 <https://w3id.org/transmodel/journeys#scheduledStopPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#scheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#scheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Route-old> .
 <https://w3id.org/transmodel/journeys#scheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
 <https://w3id.org/transmodel/journeys#scheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#label> "scheduledStopPoint"@en .
 # 
-# https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern
-<https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#ServiceJourney> .
-<https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ServiceJourneyPattern> .
-<https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "A Service Journey has (service Journey Pattern) a Service Journey Pattern"@en .
-<https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern> <http://www.w3.org/2000/01/rdf-schema#label> "service Journey Pattern"@en .
-# 
-# https://w3id.org/transmodel/journeys#stopPlaceAssignment
-<https://w3id.org/transmodel/journeys#stopPlaceAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#stopPlaceAssignment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#StopPlace> .
-<https://w3id.org/transmodel/journeys#stopPlaceAssignment> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
-<https://w3id.org/transmodel/journeys#stopPlaceAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "The allocation of a ScheduledStopPoint (i.e. a ScheduledStopPoint of a ServicePattern or JourneyPattern) to a specific StopPlace, for either a ServiceJourney or VehicleService"@en .
-<https://w3id.org/transmodel/journeys#stopPlaceAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "stopAssignment"@en .
-# 
-# https://w3id.org/transmodel/journeys#stopUse
-<https://w3id.org/transmodel/journeys#stopUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#stopUse> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs> .
-<https://w3id.org/transmodel/journeys#stopUse> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> .
-<https://w3id.org/transmodel/journeys#stopUse> <http://www.w3.org/2000/01/rdf-schema#range> _:genid5 .
+# https://w3id.org/transmodel/journeys#season
+<https://w3id.org/transmodel/journeys#season> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#season> <http://www.w3.org/2000/01/rdf-schema#range> _:genid5 .
 _:genid5 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid8 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -405,66 +439,121 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/journeys/stop-use-type> .
+_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/journeys/day-type> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#season> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: In journeys/daytype-properties there is the skos:Concept top concept season-type which must be the range of this property"@en .
+<https://w3id.org/transmodel/journeys#season> <http://www.w3.org/2000/01/rdf-schema#comment> "This property states the season of a Operating Period"@en .
+<https://w3id.org/transmodel/journeys#season> <http://www.w3.org/2000/01/rdf-schema#label> "season"@en .
+# 
+# https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern
+<https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
+<https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#ServiceJourney> .
+<https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ServiceJourneyPattern> .
+<https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "A Service Journey has (service Journey Pattern) a Service Journey Pattern"@en .
+<https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern> <http://www.w3.org/2000/01/rdf-schema#label> "service Journey Pattern"@en .
+# 
+# https://w3id.org/transmodel/journeys#specifying
+<https://w3id.org/transmodel/journeys#specifying> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#specifying> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/transmodel/journeys#specifying> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#DayTypeAssignment> .
+<https://w3id.org/transmodel/journeys#specifying> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DayType> .
+<https://w3id.org/transmodel/journeys#specifying> <http://www.w3.org/2000/01/rdf-schema#comment> "The assignment of operational characteristics, expressed by DayType, to a particular OperatingDay within a ServiceCalendar"@en .
+<https://w3id.org/transmodel/journeys#specifying> <http://www.w3.org/2000/01/rdf-schema#label> "specifying"@en .
+# 
+# https://w3id.org/transmodel/journeys#stopPlaceAssignment
+<https://w3id.org/transmodel/journeys#stopPlaceAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#stopPlaceAssignment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
+<https://w3id.org/transmodel/journeys#stopPlaceAssignment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#StopPlace> .
+<https://w3id.org/transmodel/journeys#stopPlaceAssignment> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
+<https://w3id.org/transmodel/journeys#stopPlaceAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "The allocation of a ScheduledStopPoint (i.e. a ScheduledStopPoint of a ServicePattern or JourneyPattern) to a specific StopPlace, for either a ServiceJourney or VehicleService"@en .
+<https://w3id.org/transmodel/journeys#stopPlaceAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "stopAssignment"@en .
+# 
+# https://w3id.org/transmodel/journeys#stopUse
+<https://w3id.org/transmodel/journeys#stopUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#stopUse> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/transmodel/journeys#stopUse> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> .
+<https://w3id.org/transmodel/journeys#stopUse> <http://www.w3.org/2000/01/rdf-schema#range> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid11 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/journeys/stop-use-type> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#stopUse> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows describing the type of use of a stop (e.g., access, interchange only, pass through)"@en .
-<https://w3id.org/transmodel/journeys#stopUse> <http://www.w3.org/2000/01/rdf-schema#label> "stop use"@en .
+<https://w3id.org/transmodel/journeys#stopUse> <http://www.w3.org/2000/01/rdf-schema#label> "stop Use"@en .
 # 
 # https://w3id.org/transmodel/journeys#stopsAt
 <https://w3id.org/transmodel/journeys#stopsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#stopsAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#stopsAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Vehicle> .
 <https://w3id.org/transmodel/journeys#stopsAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
 <https://w3id.org/transmodel/journeys#stopsAt> <http://www.w3.org/2000/01/rdf-schema#label> "stopsAt"@en .
 # 
 # https://w3id.org/transmodel/journeys#timeTabledPassingTime
 <https://w3id.org/transmodel/journeys#timeTabledPassingTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#timeTabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#timeTabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#ServiceJourney> .
 <https://w3id.org/transmodel/journeys#timeTabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#TimeTabledPassingTime> .
 # 
 # https://w3id.org/transmodel/journeys#timingLink
 <https://w3id.org/transmodel/journeys#timingLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#timingLink> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#timingLink> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#TimingLink> .
 <https://w3id.org/transmodel/journeys#timingLink> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#TimingPoint> .
 <https://w3id.org/transmodel/journeys#timingLink> <http://www.w3.org/2000/01/rdf-schema#label> "timingLinkPoint"@en .
 # 
 # https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern
 <https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#JourneyPattern> .
 <https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#TimingLinkInJourneyPattern> .
 # 
 # https://w3id.org/transmodel/journeys#typeOfFlexibleService
 <https://w3id.org/transmodel/journeys#typeOfFlexibleService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#typeOfFlexibleService> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#typeOfFlexibleService> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#FlexibleLine> .
 <https://w3id.org/transmodel/journeys#typeOfFlexibleService> <http://www.w3.org/2000/01/rdf-schema#label> "typeOfFlexibleService" .
 # 
+# https://w3id.org/transmodel/journeys#usedToDefine
+<https://w3id.org/transmodel/journeys#usedToDefine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#usedToDefine> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://w3id.org/transmodel/journeys#usedToDefine> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#OperatingDay> .
+<https://w3id.org/transmodel/journeys#usedToDefine> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DayTypeAssignment> .
+<https://w3id.org/transmodel/journeys#usedToDefine> <http://www.w3.org/2000/01/rdf-schema#comment> "This property sets the relation between a Time Band or an Operating Day with a Day Type Assignment"@en .
+<https://w3id.org/transmodel/journeys#usedToDefine> <http://www.w3.org/2000/01/rdf-schema#label> "used To Define"@en .
+# 
 # https://w3id.org/transmodel/journeys#vehicleJourney
 <https://w3id.org/transmodel/journeys#vehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#vehicleJourney> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#vehicleJourney> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Vehicle> .
 <https://w3id.org/transmodel/journeys#vehicleJourney> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#VehicleJourney> .
 <https://w3id.org/transmodel/journeys#vehicleJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "A Vehicle makes (vehicleJourney) a Vehicle Journey"@en .
 <https://w3id.org/transmodel/journeys#vehicleJourney> <http://www.w3.org/2000/01/rdf-schema#label> "vehicle Journey"@en .
 # 
-# https://w3id.org/transmodel/journeys#vehicleJourneyDayType
-<https://w3id.org/transmodel/journeys#vehicleJourneyDayType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#vehicleJourneyDayType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#VehicleJourney> .
-<https://w3id.org/transmodel/journeys#vehicleJourneyDayType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DayType> .
-<https://w3id.org/transmodel/journeys#vehicleJourneyDayType> <http://www.w3.org/2000/01/rdf-schema#label> "vehicleJourneyDayType"@en .
-# 
 # https://w3id.org/transmodel/journeys#vehicleJourneyPart
 <https://w3id.org/transmodel/journeys#vehicleJourneyPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#vehicleJourneyPart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#vehicleJourneyPart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Vehicle> .
 <https://w3id.org/transmodel/journeys#vehicleJourneyPart> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#JourneyPart> .
 <https://w3id.org/transmodel/journeys#vehicleJourneyPart> <http://www.w3.org/2000/01/rdf-schema#label> "vehicleJourneyPart"@en .
 # 
 # https://w3id.org/transmodel/journeys#vehicleJourneyRoute
 <https://w3id.org/transmodel/journeys#vehicleJourneyRoute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#vehicleJourneyRoute> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#vehicleJourneyRoute> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#VehicleJourney> .
 <https://w3id.org/transmodel/journeys#vehicleJourneyRoute> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Route-old> .
 <https://w3id.org/transmodel/journeys#vehicleJourneyRoute> <http://www.w3.org/2000/01/rdf-schema#label> "vehicleJourneyRoute"@en .
 # 
 # https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides
 <https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#VehicleJourneyRunTime> .
 <https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DefaultDeadRunRunTime> .
 <https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DefaultServiceJourneyRunTime> .
@@ -474,6 +563,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#vehicleJourneys
 <https://w3id.org/transmodel/journeys#vehicleJourneys> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#vehicleJourneys> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#vehicleJourneys> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Vehicle> .
 <https://w3id.org/transmodel/journeys#vehicleJourneys> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#VehicleJourney> .
 <https://w3id.org/transmodel/journeys#vehicleJourneys> <http://www.w3.org/2000/01/rdf-schema#comment> "The Journey of a Vehicle is a VehicleJourney"@en .
@@ -481,24 +571,26 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#vehiclePassingTime
 <https://w3id.org/transmodel/journeys#vehiclePassingTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#vehiclePassingTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#vehiclePassingTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Vehicle> .
 <https://w3id.org/transmodel/journeys#vehiclePassingTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#PassingTime> .
 <https://w3id.org/transmodel/journeys#vehiclePassingTime> <http://www.w3.org/2000/01/rdf-schema#label> "vehiclePassingTime"@en .
 # 
 # https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime
 <https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Vehicle> .
 <https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#TimeTabledPassingTime> .
 <https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#label> "vehicleTimeTabledPassingTime"@en .
 # 
 # https://w3id.org/transmodel/journeys#viewedAs
 <https://w3id.org/transmodel/journeys#viewedAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#viewedAs> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs> .
+<https://w3id.org/transmodel/journeys#viewedAs> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <https://w3id.org/transmodel/journeys#viewedAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/transmodel/journeys#viewedAs> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#PointInLinkSequence> .
 <https://w3id.org/transmodel/journeys#viewedAs> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Point> .
 <https://w3id.org/transmodel/journeys#viewedAs> <http://www.w3.org/2000/01/rdf-schema#label> "This property allows connecting a Point in Link Sequence with the corresponding Point"@en .
-<https://w3id.org/transmodel/journeys#viewedAs> <http://www.w3.org/2000/01/rdf-schema#label> "viewedAs"@en .
+<https://w3id.org/transmodel/journeys#viewedAs> <http://www.w3.org/2000/01/rdf-schema#label> "viewed As"@en .
 # 
 # 
 # 
@@ -511,21 +603,24 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/authorities#departureTime
 <https://w3id.org/transmodel/authorities#departureTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/authorities#departureTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW> .
 <https://w3id.org/transmodel/authorities#departureTime> <http://www.w3.org/2000/01/rdf-schema#comment> "arrival Time for a Service Journey in a Timing Point"@en .
 <https://w3id.org/transmodel/authorities#departureTime> <http://www.w3.org/2000/01/rdf-schema#label> "departure Time"@en .
 # 
 # https://w3id.org/transmodel/authorities#directionType
 <https://w3id.org/transmodel/authorities#directionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/authorities#directionType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW> .
 <https://w3id.org/transmodel/authorities#directionType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#ServiceJourney> .
 <https://w3id.org/transmodel/authorities#directionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/transmodel/authorities#directionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#rational> .
 <https://w3id.org/transmodel/authorities#directionType> <http://www.w3.org/2000/01/rdf-schema#label> "direction Type" .
 # 
-# https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES
-<https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW
+<https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
 # https://w3id.org/transmodel/journeys#arrivalTime
 <https://w3id.org/transmodel/journeys#arrivalTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#arrivalTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#arrivalTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#TimingPoint> .
 <https://w3id.org/transmodel/journeys#arrivalTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
 <https://w3id.org/transmodel/journeys#arrivalTime> <http://www.w3.org/2000/01/rdf-schema#comment> "departure Time for a Service Journey in a Timing Point"@en .
@@ -533,46 +628,80 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#changeOfDestinationDisplay
 <https://w3id.org/transmodel/journeys#changeOfDestinationDisplay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/transmodel/journeys#changeOfDestinationDisplay> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES> .
+<https://w3id.org/transmodel/journeys#changeOfDestinationDisplay> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <https://w3id.org/transmodel/journeys#changeOfDestinationDisplay> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> .
 <https://w3id.org/transmodel/journeys#changeOfDestinationDisplay> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/transmodel/journeys#changeOfDestinationDisplay> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows describing whether there will be a change of the destination display at this point"@en .
-<https://w3id.org/transmodel/journeys#changeOfDestinationDisplay> <http://www.w3.org/2000/01/rdf-schema#label> "change of destination display"@en .
+<https://w3id.org/transmodel/journeys#changeOfDestinationDisplay> <http://www.w3.org/2000/01/rdf-schema#label> "change Of Destination Display"@en .
 # 
 # https://w3id.org/transmodel/journeys#changeOfServiceRequirements
 <https://w3id.org/transmodel/journeys#changeOfServiceRequirements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/transmodel/journeys#changeOfServiceRequirements> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES> .
+<https://w3id.org/transmodel/journeys#changeOfServiceRequirements> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <https://w3id.org/transmodel/journeys#changeOfServiceRequirements> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> .
 <https://w3id.org/transmodel/journeys#changeOfServiceRequirements> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/transmodel/journeys#changeOfServiceRequirements> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows describing whether there will be a change of the service requirements at this point"@en .
-<https://w3id.org/transmodel/journeys#changeOfServiceRequirements> <http://www.w3.org/2000/01/rdf-schema#label> "change of service requirements"@en .
+<https://w3id.org/transmodel/journeys#changeOfServiceRequirements> <http://www.w3.org/2000/01/rdf-schema#label> "change Of Service Requirements"@en .
+# 
+# https://w3id.org/transmodel/journeys#date
+<https://w3id.org/transmodel/journeys#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#date> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/transmodel/journeys#date> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#DayTypeAssignment> .
+<https://w3id.org/transmodel/journeys#date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<https://w3id.org/transmodel/journeys#date> <http://www.w3.org/2000/01/rdf-schema#comment> "This property sets up the date for the Day Type Assignment"@en .
+<https://w3id.org/transmodel/journeys#date> <http://www.w3.org/2000/01/rdf-schema#label> "date"@en .
+# 
+# https://w3id.org/transmodel/journeys#day
+<https://w3id.org/transmodel/journeys#day> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#day> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/transmodel/journeys#day> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#DayOfWeek> .
+<https://w3id.org/transmodel/journeys#day> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: The range of day will be one of the values of days-of-week skos:Concept"@en .
+<https://w3id.org/transmodel/journeys#day> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows to choose the day of the week"@en .
+<https://w3id.org/transmodel/journeys#day> <http://www.w3.org/2000/01/rdf-schema#label> "day"@en .
 # 
 # https://w3id.org/transmodel/journeys#forAlighting
 <https://w3id.org/transmodel/journeys#forAlighting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/transmodel/journeys#forAlighting> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES> .
+<https://w3id.org/transmodel/journeys#forAlighting> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <https://w3id.org/transmodel/journeys#forAlighting> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> .
 <https://w3id.org/transmodel/journeys#forAlighting> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/transmodel/journeys#forAlighting> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows describing whether the stop may be used for alighting"@en .
-<https://w3id.org/transmodel/journeys#forAlighting> <http://www.w3.org/2000/01/rdf-schema#label> "for alighting"@en .
+<https://w3id.org/transmodel/journeys#forAlighting> <http://www.w3.org/2000/01/rdf-schema#label> "for Alighting"@en .
 # 
 # https://w3id.org/transmodel/journeys#forBoarding
 <https://w3id.org/transmodel/journeys#forBoarding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/transmodel/journeys#forBoarding> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES> .
+<https://w3id.org/transmodel/journeys#forBoarding> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <https://w3id.org/transmodel/journeys#forBoarding> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> .
 <https://w3id.org/transmodel/journeys#forBoarding> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/transmodel/journeys#forBoarding> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows describing whether the stop may be used for boarding"@en .
-<https://w3id.org/transmodel/journeys#forBoarding> <http://www.w3.org/2000/01/rdf-schema#label> "for boarding"@en .
+<https://w3id.org/transmodel/journeys#forBoarding> <http://www.w3.org/2000/01/rdf-schema#label> "for Boarding"@en .
 # 
 # https://w3id.org/transmodel/journeys#headway
 <https://w3id.org/transmodel/journeys#headway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#headway> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#headway> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#JourneyPattern> .
 <https://w3id.org/transmodel/journeys#headway> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#VehicleJourney> .
 <https://w3id.org/transmodel/journeys#headway> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
 <https://w3id.org/transmodel/journeys#headway> <http://www.w3.org/2000/01/rdf-schema#label> "headway"@en .
 # 
+# https://w3id.org/transmodel/journeys#holidayType
+<https://w3id.org/transmodel/journeys#holidayType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#holidayType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/transmodel/journeys#holidayType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#OperatingPeriod> .
+<https://w3id.org/transmodel/journeys#holidayType> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: In journeys/daytype-properties there is the top concept holiday-type which must be the skos:Concept range of this property"@en .
+<https://w3id.org/transmodel/journeys#holidayType> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: It is also a property of PropertyOfDay"@en .
+<https://w3id.org/transmodel/journeys#holidayType> <http://www.w3.org/2000/01/rdf-schema#comment> "This propery defines the type of holiday of the Operating Period"@en .
+<https://w3id.org/transmodel/journeys#holidayType> <http://www.w3.org/2000/01/rdf-schema#label> "holiday Type"@en .
+# 
+# https://w3id.org/transmodel/journeys#isAvailable
+<https://w3id.org/transmodel/journeys#isAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#isAvailable> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://w3id.org/transmodel/journeys#isAvailable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#DayTypeAssignment> .
+<https://w3id.org/transmodel/journeys#isAvailable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/transmodel/journeys#isAvailable> <http://www.w3.org/2000/01/rdf-schema#comment> "This property says if a Day Type Assignment is available or not"@en .
+<https://w3id.org/transmodel/journeys#isAvailable> <http://www.w3.org/2000/01/rdf-schema#label> "is Available"@en .
+# 
 # https://w3id.org/transmodel/journeys#isWaitPoint
 <https://w3id.org/transmodel/journeys#isWaitPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/transmodel/journeys#isWaitPoint> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES> .
+<https://w3id.org/transmodel/journeys#isWaitPoint> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <https://w3id.org/transmodel/journeys#isWaitPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/transmodel/journeys#isWaitPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> .
 <https://w3id.org/transmodel/journeys#isWaitPoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
@@ -581,6 +710,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#layover
 <https://w3id.org/transmodel/journeys#layover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#layover> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#layover> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#JourneyPattern> .
 <https://w3id.org/transmodel/journeys#layover> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#VehicleJourney> .
 <https://w3id.org/transmodel/journeys#layover> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
@@ -588,26 +718,29 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#lineName
 <https://w3id.org/transmodel/journeys#lineName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#lineName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#lineName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Line-old> .
 <https://w3id.org/transmodel/journeys#lineName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/transmodel/journeys#lineName> <http://www.w3.org/2000/01/rdf-schema#label> "lineName"@en .
 # 
 # https://w3id.org/transmodel/journeys#lineNumber
 <https://w3id.org/transmodel/journeys#lineNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#lineNumber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#lineNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Line-old> .
 <https://w3id.org/transmodel/journeys#lineNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://w3id.org/transmodel/journeys#lineNumber> <http://www.w3.org/2000/01/rdf-schema#label> "lineNumber"@en .
 # 
 # https://w3id.org/transmodel/journeys#monitored
 <https://w3id.org/transmodel/journeys#monitored> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/transmodel/journeys#monitored> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES> .
+<https://w3id.org/transmodel/journeys#monitored> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <https://w3id.org/transmodel/journeys#monitored> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Journey> .
+<https://w3id.org/transmodel/journeys#monitored> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/transmodel/journeys#monitored> <http://www.w3.org/2000/01/rdf-schema#comment> "This property defines whether the journey is monitored or not"@en .
 <https://w3id.org/transmodel/journeys#monitored> <http://www.w3.org/2000/01/rdf-schema#label> "monitored"@en .
 # 
 # https://w3id.org/transmodel/journeys#order
 <https://w3id.org/transmodel/journeys#order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/transmodel/journeys#order> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES> .
+<https://w3id.org/transmodel/journeys#order> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <https://w3id.org/transmodel/journeys#order> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#PointInLinkSequence> .
 <https://w3id.org/transmodel/journeys#order> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://w3id.org/transmodel/journeys#order> <http://www.w3.org/2000/01/rdf-schema#comment> "Order of a Point in Link Sequence within sequence"@en .
@@ -615,14 +748,15 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#requestStop
 <https://w3id.org/transmodel/journeys#requestStop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/transmodel/journeys#requestStop> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES> .
+<https://w3id.org/transmodel/journeys#requestStop> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <https://w3id.org/transmodel/journeys#requestStop> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> .
 <https://w3id.org/transmodel/journeys#requestStop> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/transmodel/journeys#requestStop> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows describing whether the stop is a Request Stop"@en .
-<https://w3id.org/transmodel/journeys#requestStop> <http://www.w3.org/2000/01/rdf-schema#label> "request stop"@en .
+<https://w3id.org/transmodel/journeys#requestStop> <http://www.w3.org/2000/01/rdf-schema#label> "request Stop"@en .
 # 
 # https://w3id.org/transmodel/journeys#runtime
 <https://w3id.org/transmodel/journeys#runtime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#runtime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#runtime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#JourneyPattern> .
 <https://w3id.org/transmodel/journeys#runtime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#VehicleJourney> .
 <https://w3id.org/transmodel/journeys#runtime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
@@ -630,18 +764,21 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#startTime
 <https://w3id.org/transmodel/journeys#startTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#startTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#startTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#HeadingInterval> .
 <https://w3id.org/transmodel/journeys#startTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/transmodel/journeys#startTime> <http://www.w3.org/2000/01/rdf-schema#label> "startTime"@en .
 # 
 # https://w3id.org/transmodel/journeys#stopPlaceNumber
 <https://w3id.org/transmodel/journeys#stopPlaceNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#stopPlaceNumber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#stopPlaceNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#StopPlace> .
 <https://w3id.org/transmodel/journeys#stopPlaceNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://w3id.org/transmodel/journeys#stopPlaceNumber> <http://www.w3.org/2000/01/rdf-schema#label> "stopPlaceName"@en .
 # 
 # https://w3id.org/transmodel/journeys#time
 <https://w3id.org/transmodel/journeys#time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#time> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#time> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#JourneyPatternLayover> .
 <https://w3id.org/transmodel/journeys#time> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#TimingPoint> .
 <https://w3id.org/transmodel/journeys#time> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#VehicleJourneyLayover> .
@@ -650,6 +787,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#timeLink
 <https://w3id.org/transmodel/journeys#timeLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#timeLink> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#timeLink> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#TimingPoint> .
 <https://w3id.org/transmodel/journeys#timeLink> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://w3id.org/transmodel/journeys#timeLink> <http://www.w3.org/2000/01/rdf-schema#comment> "Sequences of TimePoints"@en .
@@ -657,14 +795,17 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern
 <https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW> .
 # 
 # https://w3id.org/transmodel/journeys#timingLinkPointSequence
 <https://w3id.org/transmodel/journeys#timingLinkPointSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#timingLinkPointSequence> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#timingLinkPointSequence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#TimingPoint> .
 <https://w3id.org/transmodel/journeys#timingLinkPointSequence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 # 
 # https://w3id.org/transmodel/journeys#waitTime
 <https://w3id.org/transmodel/journeys#waitTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/journeys#waitTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#waitTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#JourneyPattern> .
 <https://w3id.org/transmodel/journeys#waitTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#VehicleJourney> .
 <https://w3id.org/transmodel/journeys#waitTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
@@ -806,14 +947,18 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/journeys#DayOfWeek
 <https://w3id.org/transmodel/journeys#DayOfWeek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#DayOfWeek> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#TOREVIEWCLASSES> .
 <https://w3id.org/transmodel/journeys#DayOfWeek> <http://www.w3.org/2000/01/rdf-schema#comment> "A particular week day, from Monday to Sunday"@en .
-<https://w3id.org/transmodel/journeys#DayOfWeek> <http://www.w3.org/2000/01/rdf-schema#label> "DayOfWeek"@en .
+<https://w3id.org/transmodel/journeys#DayOfWeek> <http://www.w3.org/2000/01/rdf-schema#label> "Day Of Week"@en .
 # 
 # https://w3id.org/transmodel/journeys#DayType
 <https://w3id.org/transmodel/journeys#DayType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#DayType> <http://www.w3.org/2000/01/rdf-schema#comment> "A DayType is a type of day characterised by one or more properties which affect public transport operation"@en .
-<https://w3id.org/transmodel/journeys#DayType> <http://www.w3.org/2000/01/rdf-schema#label> "DayType"@en .
+<https://w3id.org/transmodel/journeys#DayType> <http://www.w3.org/2000/01/rdf-schema#comment> "A Day Type is a type of day characterised by one or more properties which affect public transport operation"@en .
+<https://w3id.org/transmodel/journeys#DayType> <http://www.w3.org/2000/01/rdf-schema#label> "Day Type"@en .
+# 
+# https://w3id.org/transmodel/journeys#DayTypeAssignment
+<https://w3id.org/transmodel/journeys#DayTypeAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#DayTypeAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "The assignment of operational characteristics, expressed by Day Type to particular Operating Day within a Service Calendar"@en .
+<https://w3id.org/transmodel/journeys#DayTypeAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Day Type Assignment"@en .
 # 
 # https://w3id.org/transmodel/journeys#DeadRun
 <https://w3id.org/transmodel/journeys#DeadRun> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -905,10 +1050,10 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/transmodel/journeys#JourneyPattern
 <https://w3id.org/transmodel/journeys#JourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#JourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#LinkSequence> .
-<https://w3id.org/transmodel/journeys#JourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#primarilyAdvertisedWith> .
-_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/facilities#DestinationDisplay> .
+<https://w3id.org/transmodel/journeys#JourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#primarilyAdvertisedWith> .
+_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/facilities#DestinationDisplay> .
 <https://w3id.org/transmodel/journeys#JourneyPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "An ordered list of Scheduled Stop Points and Timing Points on a single Route, describing the pattern of working for public transport vehicles. A Journey Pattern may pass through the same Point more than once. The first Point of a Journey Pattern is the origin. The last Point is the destination."@en .
 <https://w3id.org/transmodel/journeys#JourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Journey Pattern"@en .
 # 
@@ -943,10 +1088,10 @@ _:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmo
 # 
 # https://w3id.org/transmodel/journeys#LinkSequence
 <https://w3id.org/transmodel/journeys#LinkSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#LinkSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#madeUpOf> .
-_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#PointInLinkSequence> .
+<https://w3id.org/transmodel/journeys#LinkSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#madeUpOf> .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#PointInLinkSequence> .
 <https://w3id.org/transmodel/journeys#LinkSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "An ordered sequence either of POINTs or of LINKs, defining a path through the network"@en .
 <https://w3id.org/transmodel/journeys#LinkSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: Add all the attributes that are relevant to this class"@en .
 <https://w3id.org/transmodel/journeys#LinkSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: Analyse whether this class should be better defined in the Commons module"@en .
@@ -966,9 +1111,13 @@ _:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transm
 # 
 # https://w3id.org/transmodel/journeys#OperatingDay
 <https://w3id.org/transmodel/journeys#OperatingDay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#OperatingDay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#TOREVIEWCLASSES> .
 <https://w3id.org/transmodel/journeys#OperatingDay> <http://www.w3.org/2000/01/rdf-schema#comment> "A day of public transport operation of which the characteristics are defined within in a specific ServiceCalendar. An OperatingDay may last more than 24 hours."@en .
-<https://w3id.org/transmodel/journeys#OperatingDay> <http://www.w3.org/2000/01/rdf-schema#label> "OperatingDay"@en .
+<https://w3id.org/transmodel/journeys#OperatingDay> <http://www.w3.org/2000/01/rdf-schema#label> "Operating Day"@en .
+# 
+# https://w3id.org/transmodel/journeys#OperatingPeriod
+<https://w3id.org/transmodel/journeys#OperatingPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#OperatingPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "A continous interval of time between two Operating Day which will be used to define validities"@en .
+<https://w3id.org/transmodel/journeys#OperatingPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "Operating Period"@en .
 # 
 # https://w3id.org/transmodel/journeys#ParkingPoint
 <https://w3id.org/transmodel/journeys#ParkingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -990,10 +1139,10 @@ _:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transm
 # 
 # https://w3id.org/transmodel/journeys#Point
 <https://w3id.org/transmodel/journeys#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#aViewOf> .
-_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#PointInLinkSequence> .
+<https://w3id.org/transmodel/journeys#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#aViewOf> .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#PointInLinkSequence> .
 <https://w3id.org/transmodel/journeys#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location"@en .
 <https://w3id.org/transmodel/journeys#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: Make it in that ontology a subclass of the W3C Geo Point"@en .
 <https://w3id.org/transmodel/journeys#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: Move this concept to Commons"@en .
@@ -1002,30 +1151,30 @@ _:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transm
 # https://w3id.org/transmodel/journeys#PointInJourneyPattern
 <https://w3id.org/transmodel/journeys#PointInJourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#PointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#PointInLinkSequence> .
-<https://w3id.org/transmodel/journeys#PointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#prescribing> .
-_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/facilities#DestinationDisplay> .
+<https://w3id.org/transmodel/journeys#PointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#prescribing> .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/facilities#DestinationDisplay> .
 <https://w3id.org/transmodel/journeys#PointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "A Scheduled Stop Point OR Timing Point in a Journey Pattern with its order in that Journey Pattern"@en .
 <https://w3id.org/transmodel/journeys#PointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Point In Journey Pattern"@en .
 # 
 # https://w3id.org/transmodel/journeys#PointInLinkSequence
 <https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#inLinkSequence> .
-_:genid13 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid13 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/journeys#LinkSequence> .
-<https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#viewedAs> .
-_:genid14 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid14 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/journeys#Point> .
-<https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#order> .
-_:genid15 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid15 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#inLinkSequence> .
+_:genid17 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/journeys#LinkSequence> .
+<https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#viewedAs> .
+_:genid18 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/journeys#Point> .
+<https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#order> .
+_:genid19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "A point in a Link Sequence indicating its order in that particular Link Sequence"@en .
 <https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: TransModel defines that a Point in Link Sequence is connected to a Layer, but this is not considered relevant yet"@en .
 <https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Point in Link Sequence"@en .
@@ -1067,10 +1216,10 @@ _:genid15 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # https://w3id.org/transmodel/journeys#ScheduledStopPoint
 <https://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Point> .
-<https://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#aViewOf> .
-_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> .
+<https://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#aViewOf> .
+_:genid20 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> .
 <https://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A Scheduled Stop Point is a Point where a Passenger can board or alight from a Vehicle."@en .
 <https://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Scheduled Stop Point"@en .
 # 
@@ -1081,25 +1230,25 @@ _:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transm
 # 
 # https://w3id.org/transmodel/journeys#ServiceJourney
 <https://w3id.org/transmodel/journeys#ServiceJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#ServiceJourney> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#directionType> .
-_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid18 .
-_:genid18 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid20 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/journeys/direction-type> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#ServiceJourney> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#madeUsing> .
-_:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/facilities#ServiceFacilitySet> .
+<https://w3id.org/transmodel/journeys#ServiceJourney> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#directionType> .
+_:genid21 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid24 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/journeys/direction-type> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#ServiceJourney> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#madeUsing> .
+_:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/facilities#ServiceFacilitySet> .
 <https://w3id.org/transmodel/journeys#ServiceJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "A Service Journey is a passenger-carrying Vehicle Journey for one specified Day Type. The pattern of working is in principle defined by a Service Journey Pattern."@en .
 <https://w3id.org/transmodel/journeys#ServiceJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: Add Service Journey as a subclass of Vehicle Journey"@en .
 <https://w3id.org/transmodel/journeys#ServiceJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: Add object properties to relate the Service Journey to other classes such as Service Journey Interchange, PT Ride Leg, Check constraint and flexible Service properties, and Vehicle Type"@en .
@@ -1127,57 +1276,57 @@ _:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transm
 # https://w3id.org/transmodel/journeys#StopPointInJourneyPattern
 <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#PointInJourneyPattern> .
-<https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#inLinkSequence> .
-_:genid23 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid23 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/journeys#JourneyPattern> .
-<https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#viewedAs> .
-_:genid24 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid24 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
-<https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#stopUse> .
-_:genid25 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid25 <http://www.w3.org/2002/07/owl#onClass> _:genid26 .
-_:genid26 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid29 .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid28 .
+<https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#inLinkSequence> .
+_:genid27 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid27 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/journeys#JourneyPattern> .
+<https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid28 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/journeys/stop-use-type> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#changeOfDestinationDisplay> .
-_:genid30 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid30 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
-<https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#changeOfServiceRequirements> .
-_:genid31 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid31 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
-<https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#viewedAs> .
+_:genid28 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid28 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
+<https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#stopUse> .
+_:genid29 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid29 <http://www.w3.org/2002/07/owl#onClass> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid32 .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#forAlighting> .
-_:genid32 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid32 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
-<https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#forBoarding> .
-_:genid33 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid33 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid32 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/journeys/stop-use-type> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#requestStop> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#changeOfDestinationDisplay> .
 _:genid34 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid34 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#changeOfServiceRequirements> .
+_:genid35 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid35 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#forAlighting> .
+_:genid36 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid36 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#forBoarding> .
+_:genid37 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid37 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#requestStop> .
+_:genid38 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid38 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "A Point in Journey Pattern that is a Scheduled Stop Point"@en .
 <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: determine whether we need to add a property isFlexible in order to describe whether the stop has some flexilbility in the type of drop-off/pick-up, etc."@en .
 <https://w3id.org/transmodel/journeys#StopPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Stop Point In Journey Pattern"@en .
@@ -1228,25 +1377,25 @@ _:genid34 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # https://w3id.org/transmodel/journeys#TimingPoint
 <https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Point> .
-<https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#aViewOf> .
-_:genid35 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> .
+<https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#aViewOf> .
+_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> .
 <https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A Timing Point is a Point against which the timing information necessary to build schedules may be recorded.\n\nIt's the same as Timing Point In Journey Pattern"@en .
 <https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Timing Point"@en .
 # 
 # https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern
 <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#PointInJourneyPattern> .
-<https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#viewedAs> .
-_:genid36 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid36 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/journeys#TimingPoint> .
-<https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#isWaitPoint> .
-_:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#viewedAs> .
+_:genid40 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid40 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/journeys#TimingPoint> .
+<https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#isWaitPoint> .
+_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "A Point in a Journey Pattern which is a Timing Point"@en .
 <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Timing Point In Journey Pattern"@en .
 # 
@@ -1358,7 +1507,6 @@ _:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # 
 # https://w3id.org/transmodel/journeys#Friday
 <https://w3id.org/transmodel/journeys#Friday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/journeys#Friday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DayOfWeek> .
 <https://w3id.org/transmodel/journeys#Friday> <http://www.w3.org/2000/01/rdf-schema#label> "Friday"@en .
 # 
 # https://w3id.org/transmodel/journeys#FromOriginToSSP
@@ -1394,7 +1542,6 @@ _:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # 
 # https://w3id.org/transmodel/journeys#Monday
 <https://w3id.org/transmodel/journeys#Monday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/journeys#Monday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DayOfWeek> .
 <https://w3id.org/transmodel/journeys#Monday> <http://www.w3.org/2000/01/rdf-schema#label> "Monday"@en .
 # 
 # https://w3id.org/transmodel/journeys#OneDirection
@@ -1430,17 +1577,14 @@ _:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # 
 # https://w3id.org/transmodel/journeys#Saturday
 <https://w3id.org/transmodel/journeys#Saturday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/journeys#Saturday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DayOfWeek> .
 <https://w3id.org/transmodel/journeys#Saturday> <http://www.w3.org/2000/01/rdf-schema#label> "Saturday"@en .
 # 
 # https://w3id.org/transmodel/journeys#Sunday
 <https://w3id.org/transmodel/journeys#Sunday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/journeys#Sunday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DayOfWeek> .
 <https://w3id.org/transmodel/journeys#Sunday> <http://www.w3.org/2000/01/rdf-schema#label> "Sunday"@en .
 # 
 # https://w3id.org/transmodel/journeys#Thursday
 <https://w3id.org/transmodel/journeys#Thursday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/journeys#Thursday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DayOfWeek> .
 <https://w3id.org/transmodel/journeys#Thursday> <http://www.w3.org/2000/01/rdf-schema#label> "Thursday"@en .
 # 
 # https://w3id.org/transmodel/journeys#Tram
@@ -1450,7 +1594,6 @@ _:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # 
 # https://w3id.org/transmodel/journeys#Tuesday
 <https://w3id.org/transmodel/journeys#Tuesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/journeys#Tuesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DayOfWeek> .
 <https://w3id.org/transmodel/journeys#Tuesday> <http://www.w3.org/2000/01/rdf-schema#label> "Tuesday"@en .
 # 
 # https://w3id.org/transmodel/journeys#WaitingTime
@@ -1464,17 +1607,21 @@ _:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # 
 # https://w3id.org/transmodel/journeys#Wednesday
 <https://w3id.org/transmodel/journeys#Wednesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/journeys#Wednesday> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DayOfWeek> .
 <https://w3id.org/transmodel/journeys#Wednesday> <http://www.w3.org/2000/01/rdf-schema#label> "Wednesday"@en .
 # 
 # https://w3id.org/transmodel/journeys#WeekdayInSchoolHolidays
 <https://w3id.org/transmodel/journeys#WeekdayInSchoolHolidays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/transmodel/journeys#WeekdayInSchoolHolidays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/transmodel/journeys#DayType> .
 <https://w3id.org/transmodel/journeys#WeekdayInSchoolHolidays> <http://www.w3.org/2000/01/rdf-schema#label> "WeekdayInSchoolHolidays"@en .
 # 
 # https://w3id.org/transmodel/journeys#virtualLineService
 <https://w3id.org/transmodel/journeys#virtualLineService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/transmodel/journeys#virtualLineService> <http://www.w3.org/2000/01/rdf-schema#label> "VirtualLineService"@en .
+# 
+# https://w3id.org/transmodel/kos/journeys/day-type
+<https://w3id.org/transmodel/kos/journeys/day-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/day-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/transmodel/kos/journeys/day-type> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme where all the codelists for the types of datatype properties that are included in the Transmodel ontology"@en .
+<https://w3id.org/transmodel/kos/journeys/day-type> <http://www.w3.org/2000/01/rdf-schema#label> "day type"@en .
 # 
 # https://w3id.org/transmodel/kos/journeys/direction-type
 <https://w3id.org/transmodel/kos/journeys/direction-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1511,8 +1658,8 @@ _:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 <https://w3id.org/transmodel/kos/journeys/stop-use-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 <https://w3id.org/transmodel/kos/journeys/stop-use-type> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme  for types of use of stops (e.g., access, interchange only, pass through or non boarding alighting)"@en .
 # 
-_:genid38 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid38 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
+_:genid42 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid42 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 # 
 # 
 # #################################################################
