@@ -106,7 +106,7 @@
   "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/journeys/DirectionType"
+    "@id" : "https://w3id.org/transmodel/kos/journeys/direction-type"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -173,7 +173,7 @@
   "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/journeys/StopUseType"
+    "@id" : "https://w3id.org/transmodel/kos/journeys/stop-use-type"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -182,7 +182,7 @@
   "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/journeys/DirectionType"
+    "@id" : "https://w3id.org/transmodel/kos/journeys/direction-type"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -307,7 +307,7 @@
   "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/journeys/StopUseType"
+    "@id" : "https://w3id.org/transmodel/kos/journeys/stop-use-type"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -825,9 +825,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "DayType"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#TOREVIEWCLASSES"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#DeadRun",
@@ -969,7 +966,7 @@
     "@value" : "FlexibleLine"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Line"
+    "@id" : "https://w3id.org/transmodel/journeys#Line-old"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#FlexiblePoint",
@@ -997,7 +994,7 @@
     "@value" : "FlexibleRoute"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Route"
+    "@id" : "https://w3id.org/transmodel/journeys#Route-old"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#FlexibleServiceWithMainRoute",
@@ -1076,7 +1073,11 @@
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#Journey",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Journey"
+  } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#JourneyPart",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1172,6 +1173,17 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Line"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Line-old",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Line is a group of Route which is generally known to the public by a similar name or number."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Line-old"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#TOREVIEWCLASSES"
@@ -1403,6 +1415,17 @@
   "@id" : "https://w3id.org/transmodel/journeys#PrivateBike",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/journeys#AccessMode" ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#PropertyOfDay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A property which a day may possess, such as school holiday, weekday, summer, winter, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Property of day"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#Quay",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1461,9 +1484,20 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Route"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#Route-old",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Route-old"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#TOREVIEWCLASSES"
+  } ],
+  "http://www.w3.org/2002/07/owl#backwardCompatibleWith" : [ {
+    "@language" : "en",
+    "@value" : "A Route is and ordered list of located Point defining one single path through the road (or rail) network."
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#Saturday",
@@ -1921,7 +1955,7 @@
   "@id" : "https://w3id.org/transmodel/journeys#allowedLineDirections",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Route"
+    "@id" : "https://w3id.org/transmodel/journeys#Route-old"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2096,6 +2130,26 @@
     "@id" : "https://w3id.org/transmodel/journeys#DefaultInterchange"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#describedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property asign a DayType to the specific Property of Day"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#DayType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "describedBy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#PropertyOfDay"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -2138,7 +2192,7 @@
   "@id" : "https://w3id.org/transmodel/journeys#directionType_old",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Route"
+    "@id" : "https://w3id.org/transmodel/journeys#Route-old"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2375,7 +2429,7 @@
   "@id" : "https://w3id.org/transmodel/journeys#lineName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Line"
+    "@id" : "https://w3id.org/transmodel/journeys#Line-old"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2388,7 +2442,7 @@
   "@id" : "https://w3id.org/transmodel/journeys#lineNumber",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Line"
+    "@id" : "https://w3id.org/transmodel/journeys#Line-old"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2444,16 +2498,87 @@
   "@id" : "https://w3id.org/transmodel/journeys#modeOfTransport",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Route"
+    "@id" : "https://w3id.org/transmodel/journeys#Route-old"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#MeanOfTransport"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#monitored",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property defines whether the journey is monitored or not"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Journey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "monitored"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#name",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#on",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property allows relating an entity with the entity where it appears. For instance, a Journey Pattern on (onRoute) a Route, a Route on (onLine) a Line."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "on"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#onLine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property allows relating a Route with a Line where it appears"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "on Line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Route"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#on"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#onRoute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property allows relating a Journey Pattern with a Route where it appears"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Route"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "on Route"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#ServiceJourneyPattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#on"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#order",
@@ -2563,14 +2688,14 @@
   "@id" : "https://w3id.org/transmodel/journeys#routeOnLine",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Line"
+    "@id" : "https://w3id.org/transmodel/journeys#Line-old"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "route On Line"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Route"
+    "@id" : "https://w3id.org/transmodel/journeys#Route-old"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#runBy",
@@ -2588,6 +2713,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/authorities#Operator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#runTimeOverrides",
@@ -2623,7 +2751,7 @@
   "@id" : "https://w3id.org/transmodel/journeys#scheduledStopPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Route"
+    "@id" : "https://w3id.org/transmodel/journeys#Route-old"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2866,7 +2994,7 @@
     "@value" : "vehicleJourneyRoute"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Route"
+    "@id" : "https://w3id.org/transmodel/journeys#Route-old"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides",
@@ -2972,24 +3100,52 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/kos/journeys/DirectionType",
+  "@id" : "https://w3id.org/transmodel/kos/journeys/direction-type",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Concept scheme for types of directions (inbound, outbound, clockwise, anticlockwise)"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/kos/journeys/JourneyType",
+  "@id" : "https://w3id.org/transmodel/kos/journeys/entrance-type",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Concept scheme where all the codelists for the types of journeys that are included in the Transmodel ontology"
+    "@value" : "Concept scheme where all the codelists for the types of entrance types that are included in the Transmodel ontology"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/kos/journeys/StopUseType",
+  "@id" : "https://w3id.org/transmodel/kos/journeys/interchange-weighting-type",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Concept scheme  for types of use of stops (e.g., access, interchange only, pass through)"
+    "@value" : "Concept scheme where all the codelists for the types of interchange weighting types that are included in the Transmodel ontology"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/limited-use-type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Concept scheme where all the codelists for the types of limited use that are included in the Transmodel ontology"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/quay-type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Concept scheme where all the codelists for the types of quay types that are included in the Transmodel ontology"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/stop-place-component-type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Concept scheme where all the codelists for the types of stop place component types that are included in the Transmodel ontology"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/stop-use-type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Concept scheme  for types of use of stops (e.g., access, interchange only, pass through or non boarding alighting)"
   } ]
 } ]
