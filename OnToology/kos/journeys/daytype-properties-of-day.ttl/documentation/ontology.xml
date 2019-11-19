@@ -110,12 +110,46 @@
     <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/daytype-properties">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <terms:title xml:lang="en">Allowed values for Properties of Day</terms:title>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type"/>
         <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week-enumeration"/>
         <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type"/>
         <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type"/>
         <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type"/>
         <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month"/>
         <skos:notation>PropertiesOfDay</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type/busy"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type/normal"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type/quiet"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type/very-busy"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type/very-quiet"/>
+        <skos:notation>Allowed values for Crowding Enumeration</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/any-day"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/event-day"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/market-day"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/match-day"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/normal-day"/>
+        <skos:notation>Day Event Enumeration</skos:notation>
     </NamedIndividual>
     
 
@@ -195,6 +229,61 @@
         <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/4"/>
         <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/5"/>
         <skos:notation>WeeksOfMonthEnumeration</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/any-day -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/any-day">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type"/>
+        <skos:notation>Any Day</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/event-day -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/event-day">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type"/>
+        <skos:notation>Event Day</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/market-day -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/market-day">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type"/>
+        <skos:notation>Market Day</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/match-day -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/match-day">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type"/>
+        <skos:notation>Match Day</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/normal-day -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/normal-day">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/normal-event-type"/>
+        <skos:notation>Normal Day</skos:notation>
     </NamedIndividual>
     
 
@@ -452,6 +541,61 @@
     
 
 
+    <!-- https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/busy -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/busy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type"/>
+        <skos:notation>Busy</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/normal -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/normal">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type"/>
+        <skos:notation>Normal</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/quiet -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/quiet">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type"/>
+        <skos:notation>Quiet</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/very-busy -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/very-busy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type"/>
+        <skos:notation>Very Busy</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/very-quiet -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/very-quiet">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type"/>
+        <skos:notation>veryQuiet</skos:notation>
+    </NamedIndividual>
+    
+
+
     <!-- https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/autumn -->
 
 
@@ -507,6 +651,17 @@
     
 
 
+    <!-- https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/all-tides -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/all-tides">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type"/>
+        <skos:notation>all-tide</skos:notation>
+    </NamedIndividual>
+    
+
+
     <!-- https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/high-tide -->
 
 
@@ -514,6 +669,28 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type"/>
         <skos:notation>High-tide</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/low-tide -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/low-tide">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/low-type"/>
+        <skos:notation>Low-tide</skos:notation>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/neap-tide -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/neap-tide">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/neap-type"/>
+        <skos:notation>Neap-tide</skos:notation>
     </NamedIndividual>
     
 
@@ -594,7 +771,10 @@
 
 
     <rdf:Description rdf:about="https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type">
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type/all-tide"/>
         <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type/high-tide"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type/low-tide"/>
+        <skos:narrower rdf:resource="https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type/neap-tide"/>
     </rdf:Description>
 </rdf:RDF>
 

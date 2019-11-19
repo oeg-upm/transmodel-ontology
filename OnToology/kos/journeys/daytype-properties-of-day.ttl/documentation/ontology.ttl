@@ -56,12 +56,38 @@
 <https://w3id.org/transmodel/kos/journeys/daytype-properties> rdf:type owl:NamedIndividual ,
                                                                        <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                                                               <http://purl.org/dc/terms/title> "Allowed values for Properties of Day"@en ;
-                                                              <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week-enumeration> ,
+                                                              <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type> ,
+                                                                                                                  <https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type> ,
+                                                                                                                  <https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week-enumeration> ,
                                                                                                                   <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type> ,
                                                                                                                   <https://w3id.org/transmodel/kos/journeys/daytype-properties/season-type> ,
                                                                                                                   <https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type> ,
                                                                                                                   <https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month> ;
                                                               <http://www.w3.org/2004/02/skos/core#notation> "PropertiesOfDay" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/journeys/daytype-properties> ;
+                                                                            <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type/busy> ,
+                                                                                                                           <https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type/normal> ,
+                                                                                                                           <https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type/quiet> ,
+                                                                                                                           <https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type/very-busy> ,
+                                                                                                                           <https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type/very-quiet> ;
+                                                                            <http://www.w3.org/2004/02/skos/core#notation> "Allowed values for Crowding Enumeration" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type> rdf:type owl:NamedIndividual ,
+                                                                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                             <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/journeys/daytype-properties> ;
+                                                                             <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/any-day> ,
+                                                                                                                            <https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/event-day> ,
+                                                                                                                            <https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/market-day> ,
+                                                                                                                            <https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/match-day> ,
+                                                                                                                            <https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/normal-day> ;
+                                                                             <http://www.w3.org/2004/02/skos/core#notation> "Day Event Enumeration" .
 
 
 ###  https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week
@@ -125,6 +151,41 @@
                                                                                                                             <https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/4> ,
                                                                                                                             <https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/5> ;
                                                                              <http://www.w3.org/2004/02/skos/core#notation> "WeeksOfMonthEnumeration" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/any-day
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/any-day> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                     <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type> ;
+                                                                                     <http://www.w3.org/2004/02/skos/core#notation> "Any Day" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/event-day
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/event-day> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                       <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type> ;
+                                                                                       <http://www.w3.org/2004/02/skos/core#notation> "Event Day" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/market-day
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/market-day> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                        <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type> ;
+                                                                                        <http://www.w3.org/2004/02/skos/core#notation> "Market Day" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/match-day
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/match-day> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                       <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type> ;
+                                                                                       <http://www.w3.org/2004/02/skos/core#notation> "Match Day" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/normal-day
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/normal-day> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                        <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/normal-event-type> ;
+                                                                                        <http://www.w3.org/2004/02/skos/core#notation> "Normal Day" .
 
 
 ###  https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week/everyday
@@ -288,6 +349,41 @@
                                                                                        <http://www.w3.org/2004/02/skos/core#notation> "Working-day" .
 
 
+###  https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/busy
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/busy> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                              <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type> ;
+                                                                                              <http://www.w3.org/2004/02/skos/core#notation> "Busy" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/normal
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/normal> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                                <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type> ;
+                                                                                                <http://www.w3.org/2004/02/skos/core#notation> "Normal" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/quiet
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/quiet> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                               <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type> ;
+                                                                                               <http://www.w3.org/2004/02/skos/core#notation> "Quiet" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/very-busy
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/very-busy> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                                   <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type> ;
+                                                                                                   <http://www.w3.org/2004/02/skos/core#notation> "Very Busy" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/very-quiet
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/very-quiet> rdf:type owl:NamedIndividual ,
+                                                                                                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                                    <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type> ;
+                                                                                                    <http://www.w3.org/2004/02/skos/core#notation> "veryQuiet" .
+
+
 ###  https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/autumn
 <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/season-type/autumn> rdf:type owl:NamedIndividual ,
                                                                                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -323,11 +419,32 @@
                                                                                               <http://www.w3.org/2004/02/skos/core#notation> "Winter" .
 
 
+###  https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/all-tides
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/all-tides> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                               <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type> ;
+                                                                                               <http://www.w3.org/2004/02/skos/core#notation> "all-tide" .
+
+
 ###  https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/high-tide
 <https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/high-tide> rdf:type owl:NamedIndividual ,
                                                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                                                <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type> ;
                                                                                                <http://www.w3.org/2004/02/skos/core#notation> "High-tide" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/low-tide
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/low-tide> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                              <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/low-type> ;
+                                                                                              <http://www.w3.org/2004/02/skos/core#notation> "Low-tide" .
+
+
+###  https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/neap-tide
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/neap-tide> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                               <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/transmodel/kos/journeys/daytype-properties/neap-type> ;
+                                                                                               <http://www.w3.org/2004/02/skos/core#notation> "Neap-tide" .
 
 
 ###  https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month/everyweek
@@ -376,7 +493,10 @@
 #    Annotations
 #################################################################
 
-<https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type/high-tide> .
+<https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type/all-tide> ,
+                                                                                                                       <https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type/high-tide> ,
+                                                                                                                       <https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type/low-tide> ,
+                                                                                                                       <https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type/neap-tide> .
 
 
 ###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

@@ -33,6 +33,10 @@
     "@value" : "Allowed values for Properties of Day"
   } ],
   "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type"
+  }, {
     "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week-enumeration"
   }, {
     "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type"
@@ -45,6 +49,91 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#notation" : [ {
     "@value" : "PropertiesOfDay"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type/busy"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type/normal"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type/quiet"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type/very-busy"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type/very-quiet"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Allowed values for Crowding Enumeration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/any-day"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/event-day"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/market-day"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/match-day"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/normal-day"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Day Event Enumeration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/any-day",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Any Day"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/event-day",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Event Day"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/market-day",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Market Day"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/match-day",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Match Day"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/day-event-type/normal-day",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/normal-event-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Normal Day"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/days-of-week",
@@ -230,6 +319,51 @@
     "@value" : "Any-holiday"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/busy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Busy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/normal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Normal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/quiet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Quiet"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/very-busy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Very Busy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/crowding-type/very-quiet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/crowding-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "veryQuiet"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/eve-of-holiday",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
@@ -356,6 +490,15 @@
     "@value" : "Winter"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/all-tides",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "all-tide"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/high-tide",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://www.w3.org/2004/02/skos/core#broader" : [ {
@@ -363,6 +506,24 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#notation" : [ {
     "@value" : "High-tide"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/low-tide",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/low-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Low-tide"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/tide-type/neap-tide",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/neap-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "Neap-tide"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/holiday-type/working-day",
@@ -398,7 +559,13 @@
 }, {
   "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type",
   "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type/all-tide"
+  }, {
     "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type/high-tide"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type/low-tide"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/tide-type/neap-tide"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/kos/journeys/daytype-properties/weeks-of-month",
