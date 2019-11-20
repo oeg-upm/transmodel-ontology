@@ -13,6 +13,9 @@
       "@id" : "https://w3id.org/transmodel/authorities#trip",
       "@type" : "@id"
     },
+    "OperatingPeriod" : {
+      "@id" : "https://w3id.org/transmodel/journeys#OperatingPeriod"
+    },
     "Route" : {
       "@id" : "https://w3id.org/transmodel/journeys#Route"
     },
@@ -79,8 +82,15 @@
     "DatedBlock" : {
       "@id" : "https://w3id.org/transmodel/journeys#DatedBlock"
     },
+    "season" : {
+      "@id" : "https://w3id.org/transmodel/journeys#season",
+      "@type" : "@id"
+    },
     "VehicleJourney" : {
       "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
     },
     "JourneyPatternRunTime" : {
       "@id" : "https://w3id.org/transmodel/journeys#JourneyPatternRunTime"
@@ -128,6 +138,9 @@
     "DefaultDeadRunRunTime" : {
       "@id" : "https://w3id.org/transmodel/journeys#DefaultDeadRunRunTime"
     },
+    "DayTypeAssignment" : {
+      "@id" : "https://w3id.org/transmodel/journeys#DayTypeAssignment"
+    },
     "journeyRunTime" : {
       "@id" : "https://w3id.org/transmodel/journeys#journeyRunTime",
       "@type" : "@id"
@@ -138,9 +151,6 @@
     "runTimeOverrides" : {
       "@id" : "https://w3id.org/transmodel/journeys#runTimeOverrides",
       "@type" : "@id"
-    },
-    "GOODDATAPROPERTIES" : {
-      "@id" : "https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES"
     },
     "TopographicPlace" : {
       "@id" : "https://w3id.org/transmodel/journeys#TopographicPlace"
@@ -153,7 +163,8 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "monitored" : {
-      "@id" : "https://w3id.org/transmodel/journeys#monitored"
+      "@id" : "https://w3id.org/transmodel/journeys#monitored",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "followsJourneyPattern" : {
       "@id" : "https://w3id.org/transmodel/journeys#followsJourneyPattern",
@@ -244,6 +255,10 @@
       "@id" : "https://w3id.org/transmodel/journeys#vehicleJourney",
       "@type" : "@id"
     },
+    "usedToDefine" : {
+      "@id" : "https://w3id.org/transmodel/journeys#usedToDefine",
+      "@type" : "@id"
+    },
     "AddressablePlace" : {
       "@id" : "https://w3id.org/transmodel/journeys#AddressablePlace"
     },
@@ -255,6 +270,10 @@
     },
     "creator" : {
       "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "specifying" : {
+      "@id" : "https://w3id.org/transmodel/journeys#specifying",
+      "@type" : "@id"
     },
     "TimeDemandType" : {
       "@id" : "https://w3id.org/transmodel/journeys#TimeDemandType"
@@ -271,6 +290,10 @@
     },
     "journeyPatternMadeUpOf" : {
       "@id" : "https://w3id.org/transmodel/journeys#journeyPatternMadeUpOf",
+      "@type" : "@id"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
       "@type" : "@id"
     },
     "ServiceCalendar" : {
@@ -310,10 +333,6 @@
     },
     "followsDeadRunTime" : {
       "@id" : "https://w3id.org/transmodel/journeys#followsDeadRunTime",
-      "@type" : "@id"
-    },
-    "GOOD_PROPERTIEs" : {
-      "@id" : "https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs",
       "@type" : "@id"
     },
     "ServiceFacilitySet" : {
@@ -472,6 +491,9 @@
       "@id" : "https://w3id.org/transmodel/journeys#originStop",
       "@type" : "@id"
     },
+    "holidayType" : {
+      "@id" : "https://w3id.org/transmodel/journeys#holidayType"
+    },
     "aViewOf" : {
       "@id" : "https://w3id.org/transmodel/journeys#aViewOf",
       "@type" : "@id"
@@ -487,7 +509,12 @@
       "@id" : "https://w3id.org/transmodel/journeys#StopArea"
     },
     "date" : {
-      "@id" : "http://purl.org/dc/elements/1.1/date"
+      "@id" : "https://w3id.org/transmodel/journeys#date",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+    },
+    "isAvailable" : {
+      "@id" : "https://w3id.org/transmodel/journeys#isAvailable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
@@ -516,6 +543,9 @@
     },
     "HeadingInterval" : {
       "@id" : "https://w3id.org/transmodel/journeys#HeadingInterval"
+    },
+    "DATA-PROPERTIES-TO-REVIEW" : {
+      "@id" : "https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW"
     },
     "modeOfTransport" : {
       "@id" : "https://w3id.org/transmodel/journeys#modeOfTransport",
@@ -552,12 +582,15 @@
       "@id" : "https://w3id.org/transmodel/journeys#timeTabledPassingTime",
       "@type" : "@id"
     },
-    "vehicleJourneyDayType" : {
-      "@id" : "https://w3id.org/transmodel/journeys#vehicleJourneyDayType",
-      "@type" : "@id"
+    "day" : {
+      "@id" : "https://w3id.org/transmodel/journeys#day"
     },
     "PropertyOfDay" : {
       "@id" : "https://w3id.org/transmodel/journeys#PropertyOfDay"
+    },
+    "PROPS-TO-REVIEW" : {
+      "@id" : "https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW",
+      "@type" : "@id"
     },
     "departureTime" : {
       "@id" : "https://w3id.org/transmodel/authorities#departureTime"
@@ -606,6 +639,10 @@
     },
     "journeyPatternAdvertisedFor" : {
       "@id" : "https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor",
+      "@type" : "@id"
+    },
+    "definedAS" : {
+      "@id" : "https://w3id.org/transmodel/journeys#definedAS",
       "@type" : "@id"
     },
     "DayType" : {
