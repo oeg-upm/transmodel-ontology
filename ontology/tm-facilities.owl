@@ -198,7 +198,6 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#accessibilityLimitation">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#Facility"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#AccessibilityLimitation"/>
         <rdfs:label xml:lang="en">accessibilityLimitation</rdfs:label>
     </owl:ObjectProperty>
     
@@ -292,6 +291,17 @@
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#characterisedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#characterisedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Journey"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#AccessibilityAssessment"/>
+        <rdfs:comment xml:lang="en">This property is used to relate a Journey with accessibility assessment</rdfs:comment>
+        <rdfs:label xml:lang="en">characterised By</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#checkConstraint -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#checkConstraint">
@@ -374,6 +384,17 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#determining -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#determining">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#AccessibilityAssessment"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#AccessibilityLimitation"/>
+        <rdfs:comment xml:lang="en">This property sets the relationship between Accessibility Assessment and Accessibility Limitation</rdfs:comment>
+        <rdfs:label xml:lang="en">determining</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#displayAssignment -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#displayAssignment">
@@ -403,7 +424,7 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
             </owl:Class>
         </rdfs:range>
         <rdfs:comment xml:lang="en">This property is used to link an equipment with the types of equipments available in the SKOS concept scheme of types of equipments</rdfs:comment>
-        <rdfs:label xml:lang="en">equipment type</rdfs:label>
+        <rdfs:label xml:lang="en">equipment Type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -415,7 +436,7 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
         <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#Equipment"/>
         <rdfs:comment xml:lang="en">TODO: relate it to a more general property for containment and partOf</rdfs:comment>
         <rdfs:comment xml:lang="en">This property is used to define the equipments that are available in an equipment place</rdfs:comment>
-        <rdfs:label xml:lang="en">equippedWith</rdfs:label>
+        <rdfs:label xml:lang="en">equipped With</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -507,6 +528,17 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
         <rdfs:comment xml:lang="en">TODO: find a more general property (probably similar to contains/containedIn) and think about whether it should be replaced by this more general property, or at least created as a subProperty of that one.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property is used to relate an equipment with the equipment place where it is located</rdfs:comment>
         <rdfs:label xml:lang="en">located in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#madeUsing -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#madeUsing">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#ServiceJourney"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#ServiceFacilitySet"/>
+        <rdfs:comment xml:lang="en">This property sets the relationship between Service Journey and Service Facility Set</rdfs:comment>
+        <rdfs:label xml:lang="en">made Using</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -809,6 +841,27 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#wheelchairAccess -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#wheelchairAccess">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#AccessibilityLimitation"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/transmodel/kos/journeys/mobility-limitation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">This property sets the relationaship between Accessibility Limitation and the kos wheelchair-access</rdfs:comment>
+        <rdfs:label xml:lang="en">wheelchair Access</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#hasAServiceJourneyPattern -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#hasAServiceJourneyPattern">
@@ -1031,9 +1084,15 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     <!-- https://w3id.org/transmodel/facilities#AccessibilityAssessment -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#AccessibilityAssessment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#accessibilityAssessment"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/facilities#AccessibilityAssessment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">TODO: Determine whether this concept should be moved to another module of the Transmodel ontology</rdfs:comment>
         <rdfs:comment xml:lang="en">The accessibility characteristics of an Entity (facility)  used by Passenger such as a Stop Place or a Stop Place Component. Described by AccessibilityLimitations and/or a set of Suitabilities</rdfs:comment>
-        <rdfs:label xml:lang="en">AccessibilityAssessment</rdfs:label>
+        <rdfs:label xml:lang="en">Accessibility Assessment</rdfs:label>
     </owl:Class>
     
 
@@ -1041,9 +1100,15 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     <!-- https://w3id.org/transmodel/facilities#AccessibilityLimitation -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#AccessibilityLimitation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#THINGSTOREVIEW"/>
-        <rdfs:comment xml:lang="en">A categorisation of the accessibility characteristics of a site</rdfs:comment>
-        <rdfs:label xml:lang="en">AccessibilityLimitation</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#determining"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/facilities#AccessibilityLimitation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A categorisation of the accessibility characteristics of a Site, e.g. a Stop Place or a Stop Place Component to indicate its usability by passengers with specific needs, for example, those needing wheelchair access, step-free access or wanting to avoid confined spaces such as lifts. 
+A small number of well-defined categories are used that are chosen to allow the consistent capture of data and the efficient computation of routes for different classes of user.</rdfs:comment>
+        <rdfs:label xml:lang="en">Accessibility Limitation</rdfs:label>
     </owl:Class>
     
 
@@ -2537,6 +2602,12 @@ It can also include information about the accommodation on board, which can be r
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#Journey -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Journey"/>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#Point -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Point">
@@ -2551,7 +2622,18 @@ It can also include information about the accommodation on board, which can be r
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Service">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#THINGSTOREVIEW"/>
         <rdfs:comment xml:lang="en">A ServiceJourney is a Passenger carrying VehicleJourney for one specified DayType. The pattern of working is in principle defined by a ServiceJourneyPattern.</rdfs:comment>
-        <rdfs:label xml:lang="en">ServiceJourney</rdfs:label>
+        <rdfs:label xml:lang="en">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#ServiceJourney -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#ServiceJourney">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Journey"/>
+        <rdfs:comment xml:lang="en">A Service Journey is a Passenger carrying Vehicle Journey for one specified Day Type. The pattern of working is in principle defined by a Service Journey Pattern.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This class is set in journeys</rdfs:comment>
+        <rdfs:label xml:lang="en">Service Journey</rdfs:label>
     </owl:Class>
     
 
@@ -2569,9 +2651,7 @@ It can also include information about the accommodation on board, which can be r
 
     <!-- https://w3id.org/transmodel/facilities#accessible -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/facilities#accessible">
-        <rdf:type rdf:resource="https://w3id.org/transmodel/facilities#AccessibilityLimitation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/facilities#accessible"/>
     
 
 
@@ -2931,9 +3011,7 @@ It can also include information about the accommodation on board, which can be r
 
     <!-- https://w3id.org/transmodel/facilities#nonAccessible -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/facilities#nonAccessible">
-        <rdf:type rdf:resource="https://w3id.org/transmodel/facilities#AccessibilityLimitation"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/facilities#nonAccessible"/>
     
 
 
@@ -3146,6 +3224,14 @@ It can also include information about the accommodation on board, which can be r
     <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:comment xml:lang="en">Concept scheme where all the codelists for the types of facilities that are included in the Transmodel ontology</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/journeys/mobility-limitation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/mobility-limitation">
+        <rdfs:comment xml:lang="en">List of concepts regarding Mobility Limitation defined in kos/journeys/mobility-limitation</rdfs:comment>
     </owl:NamedIndividual>
     <rdf:Description>
         <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
