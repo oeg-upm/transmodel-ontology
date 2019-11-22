@@ -1,40 +1,40 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/transmodel/facilities#"
      xml:base="https://w3id.org/transmodel/facilities"
+     xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
      xmlns:cc="http://creativecommons.org/ns#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:tmauth="https://w3id.org/transmodel/authorities#"
+     xmlns:tmkosjourney="https://w3id.org/transmodel/kos/journeys/"
+     xmlns:tmkos="https://w3id.org/transmodel/kos/"
+     xmlns:tmfare="https://w3id.org/transmodel/fares#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:tmcommons="https://w3id.org/transmodel/commons#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:tmkosauthority="https://w3id.org/transmodel/kos/authorities/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:tmkosfare="https://w3id.org/transmodel/kos/fares/"
+     xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:tmfac="https://w3id.org/transmodel/facilities#"
-     xmlns:tmkos="https://w3id.org/transmodel/kos/"
-     xmlns:tmauth="https://w3id.org/transmodel/authorities#"
-     xmlns:tmfare="https://w3id.org/transmodel/fares#"
-     xmlns:tmcommons="https://w3id.org/transmodel/commons#"
-     xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
-     xmlns:tmkosfare="https://w3id.org/transmodel/kos/fares/"
      xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/"
-     xmlns:tmkosjourney="https://w3id.org/transmodel/kos/journeys/"
-     xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/"
-     xmlns:tmkosauthority="https://w3id.org/transmodel/kos/authorities/">
+     xmlns:tmfac="https://w3id.org/transmodel/facilities#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/transmodel/facilities#">
         <owl:versionIRI rdf:resource="https://w3id.org/transmodel/facilities/0.2"/>
+        <dc:description xml:lang="en">Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</dc:description>
         <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <dc:creator>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
+        <dc:identifier>https://w3id.org/transmodel/facilities</dc:identifier>
+        <rdfs:label xml:lang="en">Transmodel Ontology - Facilities</rdfs:label>
+        <dc:title xml:lang="en">Transmodel Ontology - Facilities</dc:title>
+        <owl:versionInfo xml:lang="en">This is the initial version of the module on Facilities, after considering the UML models and XSD descriptions of Transmodel and NeTEx</owl:versionInfo>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/facilities#"/>
         <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:date>2019-10-06</dc:date>
-        <dc:description xml:lang="en">Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</dc:description>
-        <dc:identifier>https://w3id.org/transmodel/facilities</dc:identifier>
-        <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
-        <dc:title xml:lang="en">Transmodel Ontology - Facilities</dc:title>
-        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/facilities#"/>
-        <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
-        <rdfs:label xml:lang="en">Transmodel Ontology - Facilities</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://github.com/oeg-upm/transmodel-ontology</rdfs:seeAlso>
-        <owl:versionInfo xml:lang="en">This is the initial version of the module on Facilities, after considering the UML models and XSD descriptions of Transmodel and NeTEx</owl:versionInfo>
+        <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
+        <dc:creator>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
     </owl:Ontology>
     
 
@@ -181,6 +181,15 @@
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#accessedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#accessedBy">
+        <rdfs:comment xml:lang="en">This property sets the relationship between Site and Entrance</rdfs:comment>
+        <rdfs:label xml:lang="en">accessed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#accessibilityAssessment -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#accessibilityAssessment">
@@ -291,17 +300,6 @@
     
 
 
-    <!-- https://w3id.org/transmodel/facilities#characterisedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#characterisedBy">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Journey"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#AccessibilityAssessment"/>
-        <rdfs:comment xml:lang="en">This property is used to relate a Journey with accessibility assessment</rdfs:comment>
-        <rdfs:label xml:lang="en">characterised By</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/transmodel/facilities#checkConstraint -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#checkConstraint">
@@ -345,6 +343,25 @@ In the Transmodel UML model this is represented as TypeOfEquipment, and in the N
         <rdfs:comment xml:lang="en">This property is used to aggregate all the facilities that a facility set contains
 In Netex, this is expressed with the element TypeOfFacilityRef, which is used to refer to facilities, and in the Transmodel UML ontology this is simply expressed as &apos;facility&apos;</rdfs:comment>
         <rdfs:label xml:lang="en">comprises facility</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#concernedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#concernedBy">
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#FacilitySet"/>
+        <rdfs:comment xml:lang="en">This property allows connecting any object with a Facility Set</rdfs:comment>
+        <rdfs:label xml:lang="en">concerned by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#containing -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#containing">
+        <rdfs:comment xml:lang="en">This property allows specifying that a Stop contains Quays</rdfs:comment>
+        <rdfs:label xml:lang="en">containing</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -507,6 +524,15 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#in -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#in">
+        <rdfs:comment xml:lang="en">This property sets the relationship between something and other thing contained in the first (e.g., a Quay is in a Stop Place)</rdfs:comment>
+        <rdfs:label xml:lang="en">in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#isUsedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#isUsedBy">
@@ -526,17 +552,6 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
         <rdfs:comment xml:lang="en">TODO: find a more general property (probably similar to contains/containedIn) and think about whether it should be replaced by this more general property, or at least created as a subProperty of that one.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property is used to relate an equipment with the equipment place where it is located</rdfs:comment>
         <rdfs:label xml:lang="en">located in</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/transmodel/facilities#madeUsing -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#madeUsing">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#ServiceJourney"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#ServiceFacilitySet"/>
-        <rdfs:comment xml:lang="en">This property sets the relationship between Service Journey and Service Facility Set</rdfs:comment>
-        <rdfs:label xml:lang="en">made Using</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -914,6 +929,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#borderCrossingPoint -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#borderCrossingPoint">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#StopPlace"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">This property allows establishing whether a Stop Place is a border crossing point or not.</rdfs:comment>
+        <rdfs:label xml:lang="en">border crossing point</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#constraintThroughput -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#constraintThroughput">
@@ -965,28 +991,6 @@ In the TransModel UML model and in the Netex implementation this is expressed as
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Characteristic of a Service that is free to use it</rdfs:comment>
         <rdfs:label xml:lang="en">freeToUse</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/transmodel/facilities#latitude -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#latitude">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/facilities#DATAPROPERTIESTOREVIEW"/>
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:label xml:lang="en">latitude</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/transmodel/facilities#longitude -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#longitude">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/facilities#DATAPROPERTIESTOREVIEW"/>
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Point"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:label xml:lang="en">longitude</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1080,13 +1084,6 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     <!-- https://w3id.org/transmodel/facilities#AccessibilityAssessment -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#AccessibilityAssessment">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#accessibilityAssessment"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/facilities#AccessibilityAssessment"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">TODO: Determine whether this concept should be moved to another module of the Transmodel ontology</rdfs:comment>
         <rdfs:comment xml:lang="en">The accessibility characteristics of an Entity (facility)  used by Passenger such as a Stop Place or a Stop Place Component. Described by AccessibilityLimitations and/or a set of Suitabilities</rdfs:comment>
         <rdfs:label xml:lang="en">Accessibility Assessment</rdfs:label>
     </owl:Class>
@@ -1466,6 +1463,15 @@ A small number of well-defined categories are used that are chosen to allow the 
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#Entrance -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Entrance">
+        <rdfs:comment xml:lang="en">A physical entrance or exit to/from a Site. May be a door, barrier, gate or other recognizable Point of Access.</rdfs:comment>
+        <rdfs:label xml:lang="en">Entrance</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#EntranceEquipment -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#EntranceEquipment">
@@ -1614,6 +1620,16 @@ The terms used for relating a facility set to the facilities and equipment are C
         <rdfs:comment xml:lang="en">TODO: Add a restriction in subclassof for :providedBy only org:Organization</rdfs:comment>
         <rdfs:comment xml:lang="en">TODO: Transmodel also identifies as a potential restriction the assignment of 0 to N validity conditions to the Facility Set, but this has not been yet modelled</rdfs:comment>
         <rdfs:label xml:lang="en">Facility Set</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#FlexibleStopPlace -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#FlexibleStopPlace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#StopPlace"/>
+        <rdfs:comment xml:lang="en">A specialisation of the Stop Place describing a stop of a Flexible Service. It may be composed of Flexible Areas or Hail and Ride Areas identifying the catchment areas for flexible services (when they use areas or flexible quays). Some Flexible Places also use regular Stop Places for their stops. When assigned to a Scheduled Stop Point the corresponding Scheduled Stop Point is supposed to be a Zone (the centroid point of the Zone being the Scheduled Stop Point).</rdfs:comment>
+        <rdfs:label xml:lang="en">Flexible Stop Place</rdfs:label>
     </owl:Class>
     
 
@@ -2062,6 +2078,29 @@ Accessible by Passenger but without direct access to Vehicles</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#Quay -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Quay">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#comprises"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/facilities#Quay"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#in"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/facilities#StopPlace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A place such as platform, stance, or quayside where passengers have access to public transport vehicles, taxi, cars or other means of transportation. A Quay may serve one or more Vehicle Stopping Places and be associated with one or more Scheduled Stop Points. 
+
+A Quay may contain other sub Quays</rdfs:comment>
+        <rdfs:label xml:lang="en">Quay</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#QueuingEquipment -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#QueuingEquipment">
@@ -2215,8 +2254,13 @@ It can also include information about the accommodation on board, which can be r
     <!-- https://w3id.org/transmodel/facilities#Site -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Site">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#concernedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/facilities#FacilitySet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A well known Place to which Passengers may refer to indicate the origin or a destination of a Trip</rdfs:comment>
-        <rdfs:comment xml:lang="en">TODO: Check whether we should move this one to another module</rdfs:comment>
         <rdfs:label xml:lang="en">Site</rdfs:label>
     </owl:Class>
     
@@ -2305,12 +2349,53 @@ It can also include information about the accommodation on board, which can be r
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#StopPlace -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#StopPlace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Site"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#accessedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/facilities#StopPlaceEntrance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#containing"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/facilities#Quay"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#borderCrossingPoint"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A place comprising one or more locations where Vehicles may stop and where passengers may board or leave Vehicles or prepare their Trip. A Stop Place will usually have one or more well-known names.</rdfs:comment>
+        <rdfs:comment xml:lang="en">TODO: Add Stop Place Components to the Stop Place, if considered useful.</rdfs:comment>
+        <rdfs:comment xml:lang="en">TODO: Add Stop Place Type as a SKOS Concept Scheme, and connect it to such concept scheme via an object property</rdfs:comment>
+        <rdfs:comment xml:lang="en">TODO: If considered relevant, add connections from this class to the classes Point of Interest (this stop place services such Point of Interest) and to the class StopPlaceVehicleEntrance (this stop place is entered through an entrance - typical in an interchange area).</rdfs:comment>
+        <rdfs:label xml:lang="en">Stop Place</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#StopPlaceComponent -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#StopPlaceComponent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#THINGSTOREVIEW"/>
         <rdfs:comment xml:lang="en">An element of a StopPlace describing part of its structure. StopPlaceComponent share common properties for data management, accessibility and other features</rdfs:comment>
         <rdfs:label xml:lang="en">StopPlaceComponent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#StopPlaceEntrance -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#StopPlaceEntrance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Entrance"/>
+        <rdfs:comment xml:lang="en">A physical Entrance or Exit to/from a Stop Place for a Passenger. May be a door, barrier, gate or other recognizable point of access.</rdfs:comment>
+        <rdfs:label xml:lang="en">Stop Place Entrance</rdfs:label>
     </owl:Class>
     
 
@@ -2517,6 +2602,20 @@ It can also include information about the accommodation on board, which can be r
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#VehicleStoppingPlace -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#VehicleStoppingPlace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#THINGSTOREVIEW"/>
+        <rdfs:comment xml:lang="en">A place on the vehicle track where vehicles stop in order for passengers to board or alight from a vehicle.
+
+A vehicle track is located on the respective infrastructure link for the mode (railway element of railway network, road element of road network, etc.).
+
+A vehicle stopping place may be served by one or more quays.</rdfs:comment>
+        <rdfs:label xml:lang="en">Vehicle Stopping Place</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#VehicleType -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#VehicleType">
@@ -2588,12 +2687,6 @@ It can also include information about the accommodation on board, which can be r
     
 
 
-    <!-- https://w3id.org/transmodel/journeys#Journey -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Journey"/>
-    
-
-
     <!-- https://w3id.org/transmodel/journeys#Point -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Point">
@@ -2608,18 +2701,8 @@ It can also include information about the accommodation on board, which can be r
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Service">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#THINGSTOREVIEW"/>
         <rdfs:comment xml:lang="en">A ServiceJourney is a Passenger carrying VehicleJourney for one specified DayType. The pattern of working is in principle defined by a ServiceJourneyPattern.</rdfs:comment>
+        <rdfs:comment>TODO: To remove once that we are sure that we are not breaking anything</rdfs:comment>
         <rdfs:label xml:lang="en">Service</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/transmodel/journeys#ServiceJourney -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#ServiceJourney">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Journey"/>
-        <rdfs:comment xml:lang="en">A Service Journey is a Passenger carrying Vehicle Journey for one specified Day Type. The pattern of working is in principle defined by a Service Journey Pattern.</rdfs:comment>
-        <rdfs:comment xml:lang="en">This class is set in journeys</rdfs:comment>
-        <rdfs:label xml:lang="en">Service Journey</rdfs:label>
     </owl:Class>
     
 
@@ -3246,5 +3329,5 @@ It can also include information about the accommodation on board, which can be r
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
