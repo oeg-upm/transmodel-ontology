@@ -1,0 +1,349 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type> a skos:ConceptScheme ;
+    skos:notation "day-type" ;
+    dcterms:creator "Adolfo Antón Bravo (OEG - Universidad Politécnica de Madrid)"@es ;
+    determs:date "2019-11-19"@es ;
+    dcterms:description "Enumeration of Types of Days"@en ;
+    dcterms:title "Types of Days"@en ;
+    skos:definition "Enumeration of Days of Week"@en ;
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> ;
+    dc:title "Allowed values for day type"@en ;
+        
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> a skos:Concept ;
+    skos:notation "days-of-week" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/day-type> .
+    
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/monday> a skos:Concept ;
+	skos:notation "Monday" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/monday> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/tuesday> a skos:Concept ;
+	skos:notation "Tuesday" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/tuesday> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/wednesday> a skos:Concept ;
+	skos:notation "Wednesday" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/wednesday> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/thursday> a skos:Concept ;
+	skos:notation "Thursday" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/thursday> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/friday> a skos:Concept ;
+	skos:notation "Friday" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/friday> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/saturday> a skos:Concept ;
+	skos:notation "Saturday" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/saturday> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/sunday> a skos:Concept ;
+	skos:notation "Sunday" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/sunday> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/everyday> a skos:Concept ;
+	skos:notation "Everyday" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/everyday> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/weekdays> a skos:Concept ;
+	skos:notation "Weekdays" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/weekdays> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/weekend> a skos:Concept ;
+	skos:notation "Weekend" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/weekend> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/none> a skos:Concept ;
+	skos:notation "None" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/days-of-week> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/days-of-week/none> .
+
+
+<https://w3id.org/transmodel/kos/journeys/day-type> skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month> a skos:Concept ;
+	skos:notation "WeeksOfMonthEnumeration" ;
+	skos:inScheme <https://w3id.org/transmodel/kos/journeys/day-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month/1> a skos:Concept ;
+	skos:notation "1" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month/1> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month/2> a skos:Concept ;
+	skos:notation "2" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month/2> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month/3> a skos:Concept ;
+	skos:notation "3" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month/3> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month/4> a skos:Concept ;
+	skos:notation "4" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month/4> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month/5> a skos:Concept ;
+	skos:notation "5" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month/5> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month/everyweek> a skos:Concept ;
+	skos:notation "Everyweek" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/weeks-of-month/everyweek> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type> skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> a skos:Concept ;
+	skos:notation "HolidayTypeEnumeration" ;
+	skos:inScheme <https://w3id.org/transmodel/kos/journeys/day-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/any-day> a skos:Concept ;
+	skos:notation "Any-day" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/any-day> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/working-day> a skos:Concept ;
+	skos:notation "Working-day" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/working-day> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/school-day> a skos:Concept ;
+	skos:notation "School-day" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/school-day> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/not-holiday> a skos:Concept ;
+	skos:notation "Not-Holiday" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/not-holiday> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/not-working-day> a skos:Concept ;
+	skos:notation "Not-Working-Day" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/not-working-day> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/not-school-day> a skos:Concept ;
+	skos:notation "Not-School-Day" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/not-school-day> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/any-holiday> a skos:Concept ;
+	skos:notation "Any-holiday" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/any-holiday> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/local-holiday> a skos:Concept ;
+	skos:notation "Local-holiday" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/local-holiday> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/regional-holiday> a skos:Concept ;
+	skos:notation "Regional-holiday" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/regional-holiday> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/national-holiday> a skos:Concept ;
+	skos:notation "National-holiday" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/national-holiday> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/holiday-displacement-day> a skos:Concept ;
+	skos:notation "Holiday displacement day" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/holiday-displacement-day> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/eve-of-holiday> a skos:Concept ;
+	skos:notation "eve-of-holiday" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/eve-of-holiday> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type> skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/day-type/season-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/season-type> a skos:Concept ;
+	skos:notation "Season Enumeration" ;
+	skos:inScheme <https://w3id.org/transmodel/kos/journeys/day-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/season-type/spring> a skos:Concept ;
+	skos:notation "Spring" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/season-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/season-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/season-type/spring> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/season-type/summer> a skos:Concept ;
+	skos:notation "Summer" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/season-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/season-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/season-type/summer> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/season-type/autumn> a skos:Concept ;
+	skos:notation "Autumn" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/season-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/season-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/season-type/autumn> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/season-type/winter> a skos:Concept ;
+	skos:notation "Winter" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/season-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/season-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/season-type/winter> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/season-type/perennially> a skos:Concept ;
+	skos:notation "Perennially" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/season-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/season-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/season-type/perennially> .
+
+
+<https://w3id.org/transmodel/kos/journeys/day-type> skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/day-type/tide-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/season-type> a skos:Concept ;
+	skos:notation "Allowed values for Tide Enumeration" ;
+	skos:inScheme <https://w3id.org/transmodel/kos/journeys/day-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/tide-type/high-tide> a skos:Concept ;
+	skos:notation "High-tide" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/tide-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/tide-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/tide-type/high-tide> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/tide-type/low-tide> a skos:Concept ;
+	skos:notation "Low-tide" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/low-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/tide-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/tide-type/low-tide> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/tide-type/neap-tide> a skos:Concept ;
+	skos:notation "Neap-tide" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/neap-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/tide-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/tide-type/neap-tide> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/tide-type/all-tides> a skos:Concept ;
+	skos:notation "all-tide" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/tide-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/tide-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/tide-type/all-tide> .
+
+
+<https://w3id.org/transmodel/kos/journeys/day-type> skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/day-type/crowding-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/crowding-type> a skos:Concept ;
+	skos:notation "Allowed values for Crowding Enumeration" ;
+	skos:inScheme <https://w3id.org/transmodel/kos/journeys/day-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/crowding-type/very-quiet> a skos:Concept ;
+	skos:notation "veryQuiet" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/crowding-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/crowding-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/crowding-type/very-quiet> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/crowding-type/quiet> a skos:Concept ;
+	skos:notation "Quiet" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/crowding-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/crowding-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/crowding-type/quiet> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/crowding-type/normal> a skos:Concept ;
+	skos:notation "Normal" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/crowding-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/crowding-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/crowding-type/normal> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/crowding-type/busy> a skos:Concept ;
+	skos:notation "Busy" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/crowding-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/crowding-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/crowding-type/busy> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/holiday-type/crowding-type/very-busy> a skos:Concept ;
+	skos:notation "Very Busy" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/crowding-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/crowding-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/crowding-type/very-busy> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type> skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/day-type/day-event-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/day-event-type> a skos:Concept ;
+	skos:notation "Day Event Enumeration" ;
+	skos:inScheme <https://w3id.org/transmodel/kos/journeys/day-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/day-event-type/any-day> a skos:Concept ;
+	skos:notation "Any Day" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/day-event-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/day-event-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/day-event-type/any-day> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/day-event-type/normal-day> a skos:Concept ;
+	skos:notation "Normal Day" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/normal-event-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/day-event-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/day-event-type/normal-day> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/day-event-type/market-day> a skos:Concept ;
+	skos:notation "Market Day" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/day-event-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/day-event-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/day-event-type/market-day> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/day-event-type/match-day> a skos:Concept ;
+	skos:notation "Match Day" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/day-event-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/day-event-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/day-event-type/match-day> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/day-event-type/event-day> a skos:Concept ;
+	skos:notation "Event Day" ;
+	skos:broader <https://w3id.org/transmodel/kos/journeys/day-type/day-event-type> .
+
+<https://w3id.org/transmodel/kos/journeys/day-type/day-event-type> skos:narrower <https://w3id.org/transmodel/kos/journeys/day-type/day-event-type/event-day> .
