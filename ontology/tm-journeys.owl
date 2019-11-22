@@ -202,6 +202,17 @@
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#aPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#aPartOf">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#BoardingPosition"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Quay"/>
+        <rdfs:comment xml:lang="en">This property sets the relationship between a space entity and other</rdfs:comment>
+        <rdfs:label xml:lang="en">a Part Of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#containing -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#containing">
@@ -217,7 +228,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#in">
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Block"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#StopPlace"/>
-        <rdfs:comment xml:lang="en">This property sets de relationship between a Vehicle Journey and a Block</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property sets de relationship between something and other thing contained in the first</rdfs:comment>
         <rdfs:label xml:lang="en">in</rdfs:label>
     </owl:ObjectProperty>
     
@@ -274,6 +285,17 @@
 - The walking movement of the Passenger from a Place (Origin of the Trip) to a ScheduledStopPoint (origin of the Public Transport Trip) or;
 - The walking movement of the Passenger from a Scheduled Stop Point (destination of the Public Transport Trip) to a Place (destination of the Trip)</rdfs:comment>
         <rdfs:label xml:lang="en">accessPTS</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#accessedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#accessedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#Site"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Entrance"/>
+        <rdfs:comment xml:lang="en">This property sets the relationship between Site and Entrance</rdfs:comment>
+        <rdfs:label xml:lang="en">accessed By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -661,6 +683,17 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#passedAt -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#passedAt">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#PointInJourneyPattern"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#TimetabledPassingTime"/>
+        <rdfs:comment xml:lang="en">This property sets the relationship between a Point In Journey Pattern and a Timetabled Passing Time</rdfs:comment>
+        <rdfs:label xml:lang="en">passed At</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#passengerConnection -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#passengerConnection">
@@ -830,16 +863,6 @@
     
 
 
-    <!-- https://w3id.org/transmodel/journeys#timeTabledPassingTime -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#timeTabledPassingTime">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"/>
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#ServiceJourney"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#TimeTabledPassingTime"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/transmodel/journeys#timingLink -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#timingLink">
@@ -950,17 +973,6 @@
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Vehicle"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#PassingTime"/>
         <rdfs:label xml:lang="en">vehiclePassingTime</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"/>
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Vehicle"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#TimeTabledPassingTime"/>
-        <rdfs:label xml:lang="en">vehicleTimeTabledPassingTime</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1369,6 +1381,16 @@
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#Site -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Site">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Zone"/>
+        <rdfs:comment xml:lang="en">Site is defined in the module facilities</rdfs:comment>
+        <rdfs:label xml:lang="en">Site</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#Access -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Access">
@@ -1470,9 +1492,8 @@
     <!-- https://w3id.org/transmodel/journeys#BoardingPosition -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#BoardingPosition">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEWCLASSES"/>
         <rdfs:comment xml:lang="en">A location within a Quay from which Passenger may directly board, or onto which passengers may directly alight from a Vehicle</rdfs:comment>
-        <rdfs:label xml:lang="en">BoardingPosition</rdfs:label>
+        <rdfs:label xml:lang="en">Boarding Position</rdfs:label>
     </owl:Class>
     
 
@@ -1688,6 +1709,21 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEWCLASSES"/>
         <rdfs:comment xml:lang="en">The default time taken by a Vehicle to traverse a TimingLink during a ServiceJourney, for a specified TimeDemandType. This time may be superseded by the JourneyPatternRunTime or VehicleJourneyRunTime if these exist</rdfs:comment>
         <rdfs:label xml:lang="en">DefaultServiceJourneyRunTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Entrance -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Entrance">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#accessedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#Entrance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A physical entrance or exit to/from a Site. May be a door, barrier, gate or other recognizable Point of Access.</rdfs:comment>
+        <rdfs:label xml:lang="en">Entrance</rdfs:label>
     </owl:Class>
     
 
@@ -2142,6 +2178,7 @@ A Quay may contain a subquay.</rdfs:comment>
     <!-- https://w3id.org/transmodel/journeys#StopPlace -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#StopPlace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#Site"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#containing"/>
@@ -2150,6 +2187,16 @@ A Quay may contain a subquay.</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A place comprising one or more locations where Vehicles may stop and where passengers may board or leave Vehicles or prepare their Trip. A Stop Place will usually have one or more wellknown names.</rdfs:comment>
         <rdfs:label xml:lang="en">Stop Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#StopPlaceEntrance -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#StopPlaceEntrance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Entrance"/>
+        <rdfs:comment xml:lang="en">A physical Entrance or Exit to/from a Stop Place for a Passenger. May be a door, barrier, gate or other recognizable point of access.</rdfs:comment>
+        <rdfs:label xml:lang="en">Stop Place Entrance</rdfs:label>
     </owl:Class>
     
 
@@ -2265,12 +2312,17 @@ A Quay may contain a subquay.</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/transmodel/journeys#TimeTabledPassingTime -->
+    <!-- https://w3id.org/transmodel/journeys#TimetabledPassingTime -->
 
-    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimeTabledPassingTime">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEWCLASSES"/>
-        <rdfs:comment xml:lang="en">Long-term planned time data concerning public transport vehicles passing a particular Point In Journey Pattern on a specified Vehicle Journey for a certain Day Type</rdfs:comment>
-        <rdfs:label xml:lang="en">Time Tabled Passing Time</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimetabledPassingTime">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#passedAt"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#TimetabledPassingTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Long-term planned time data concerning public transport Vehicles passing a particular POINT IN JOURNEY PATTERN on a specified VEHICLE JOURNEY for a certain DAY TYPE.</rdfs:comment>
+        <rdfs:label xml:lang="en">Timetabled Passing Time</rdfs:label>
     </owl:Class>
     
 
@@ -2433,6 +2485,17 @@ A vehicle track is located on the respective infrastructure link for the mode (r
 
 A vehicle stopping place may be served by one or more quays.</rdfs:comment>
         <rdfs:label xml:lang="en">VehicleStoppingPlace</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#Zone -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Zone">
+        <rdfs:comment xml:lang="en">A two-dimensional Place within the service area of a public transport operator (administrative zone, Tariff Zone, Access Zone, etc.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">TODO: Make it in that ontology a subclass of the W3C Geo Zone?</rdfs:comment>
+        <rdfs:comment xml:lang="en">TODO: Move this concept to Commons</rdfs:comment>
+        <rdfs:label xml:lang="en">Zone</rdfs:label>
     </owl:Class>
     
 

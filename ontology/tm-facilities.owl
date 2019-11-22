@@ -457,8 +457,6 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#facilitySet">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"/>
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#VehicleType"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#Facility"/>
         <rdfs:comment xml:lang="en">Set of Facilities available for a ServiceJourney or a JourneyPart. The set may be available only for a specific VehicleType within the service (e.g. carriage equipped with low floor)</rdfs:comment>
         <rdfs:label xml:lang="en">facilitySet</rdfs:label>
     </owl:ObjectProperty>
@@ -625,7 +623,6 @@ In the TransModel UML model and in the Netex implementation this is expressed as
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#stopPlaceComponent">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"/>
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#StopPlace"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#StopPlaceComponent"/>
         <rdfs:label xml:lang="en">stopPlaceComponent</rdfs:label>
     </owl:ObjectProperty>
@@ -636,7 +633,6 @@ In the TransModel UML model and in the Netex implementation this is expressed as
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#stopPlaceEntrance">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"/>
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#StopPlace"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#AccessEquipment"/>
         <rdfs:comment xml:lang="en">A physical entrance or exit to/from a StopPlace for a Passenger. May be a door, barrier, gate other recognizable point of access</rdfs:comment>
         <rdfs:comment xml:lang="en">stopPlaceEntrance</rdfs:comment>
@@ -2305,16 +2301,6 @@ It can also include information about the accommodation on board, which can be r
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#StatusOfEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#THINGSTOREVIEW"/>
         <rdfs:label xml:lang="en">StatusOfEquipment</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/transmodel/facilities#StopPlace -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#StopPlace">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#THINGSTOREVIEW"/>
-        <rdfs:comment xml:lang="en">A place comprising one or more locations where Vehicles may stop and where passengers may board or leave Vehicles or prepare their Trip. A StopPlace will usually have one or more wellknown names.</rdfs:comment>
-        <rdfs:label xml:lang="en">StopPlace</rdfs:label>
     </owl:Class>
     
 
