@@ -9,11 +9,11 @@ This section provides details for each class and property defined by Transmodel 
       </li>
       <li>
          <a href="#AccessibilityAssessment"
-            title="https://w3id.org/transmodel/facilities#AccessibilityAssessment">AccessibilityAssessment</a>
+            title="https://w3id.org/transmodel/facilities#AccessibilityAssessment">Accessibility Assessment</a>
       </li>
       <li>
          <a href="#AccessibilityLimitation"
-            title="https://w3id.org/transmodel/facilities#AccessibilityLimitation">AccessibilityLimitation</a>
+            title="https://w3id.org/transmodel/facilities#AccessibilityLimitation">Accessibility Limitation</a>
       </li>
       <li>
          <a href="#AccessSpace"
@@ -143,6 +143,9 @@ This section provides details for each class and property defined by Transmodel 
             title="https://w3id.org/transmodel/facilities#EncumbranceNeed">EncumbranceNeed</a>
       </li>
       <li>
+         <a href="#Entrance" title="https://w3id.org/transmodel/facilities#Entrance">Entrance</a>
+      </li>
+      <li>
          <a href="#EntranceEquipment"
             title="https://w3id.org/transmodel/facilities#EntranceEquipment">EntranceEquipment</a>
       </li>
@@ -168,6 +171,10 @@ This section provides details for each class and property defined by Transmodel 
       <li>
          <a href="#FacilitySet"
             title="https://w3id.org/transmodel/facilities#FacilitySet">Facility Set</a>
+      </li>
+      <li>
+         <a href="#FlexibleStopPlace"
+            title="https://w3id.org/transmodel/facilities#FlexibleStopPlace">Flexible Stop Place</a>
       </li>
       <li>
          <a href="#FreeWifi" title="https://w3id.org/transmodel/facilities#FreeWifi">FreeWifi</a>
@@ -317,6 +324,9 @@ This section provides details for each class and property defined by Transmodel 
             title="https://w3id.org/transmodel/facilities#PostOfficeService">PostOfficeService</a>
       </li>
       <li>
+         <a href="#Quay" title="https://w3id.org/transmodel/facilities#Quay">Quay</a>
+      </li>
+      <li>
          <a href="#QueuingEquipment"
             title="https://w3id.org/transmodel/facilities#QueuingEquipment">QueingEquipment</a>
       </li>
@@ -345,11 +355,11 @@ This section provides details for each class and property defined by Transmodel 
             title="https://w3id.org/transmodel/facilities#LocalService">Service</a>
       </li>
       <li>
-         <a href="#ServiceFacilitySet"
-            title="https://w3id.org/transmodel/facilities#ServiceFacilitySet">Service Facility Set</a>
+         <a href="#https://w3id.org/transmodel/journeys#Service" title="https://w3id.org/transmodel/journeys#Service">Service</a>
       </li>
       <li>
-         <a href="#https://w3id.org/transmodel/journeys#Service" title="https://w3id.org/transmodel/journeys#Service">ServiceJourney</a>
+         <a href="#ServiceFacilitySet"
+            title="https://w3id.org/transmodel/facilities#ServiceFacilitySet">Service Facility Set</a>
       </li>
       <li>
          <a href="#ShelterEquipment"
@@ -391,7 +401,11 @@ This section provides details for each class and property defined by Transmodel 
       </li>
       <li>
          <a href="#StopPlace"
-            title="https://w3id.org/transmodel/facilities#StopPlace">StopPlace</a>
+            title="https://w3id.org/transmodel/facilities#StopPlace">Stop Place</a>
+      </li>
+      <li>
+         <a href="#StopPlaceEntrance"
+            title="https://w3id.org/transmodel/facilities#StopPlaceEntrance">Stop Place Entrance</a>
       </li>
       <li>
          <a href="#StopPlaceComponent"
@@ -459,6 +473,10 @@ This section provides details for each class and property defined by Transmodel 
       <li>
          <a href="#VehicleEquipment"
             title="https://w3id.org/transmodel/facilities#VehicleEquipment">Vehicle Equipment</a>
+      </li>
+      <li>
+         <a href="#VehicleStoppingPlace"
+            title="https://w3id.org/transmodel/facilities#VehicleStoppingPlace">Vehicle Stopping Place</a>
       </li>
       <li>
          <a href="#AccessAreaDimensions"
@@ -552,63 +570,55 @@ This section provides details for each class and property defined by Transmodel 
       </dl>
    </div>
    <div class="entity" id="AccessibilityAssessment">
-      <h3>AccessibilityAssessment<sup class="type-c" title="class">c</sup>
+      <h3>Accessibility Assessment<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/facilities#AccessibilityAssessment</p>
       <div class="comment">
-         <span class="markdown">TODO: Determine whether this concept should be moved to another module of the Transmodel ontology</span>
+         <span class="markdown">The accessibility characteristics of an Entity (facility)  used by Passenger such as a Stop Place or a Stop Place Component. Described by AccessibilityLimitations and/or a set of Suitabilities</span>
       </div>
       <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#determining"
+               title="https://w3id.org/transmodel/facilities#determining">determining</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#accessibilityAssessment"
                title="https://w3id.org/transmodel/facilities#accessibilityAssessment">accessibility assessment</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
-         <dt>has members</dt>
-         <dd>
-            <a href="#lift" title="https://w3id.org/transmodel/facilities#lift">lift</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#lowFloor" title="https://w3id.org/transmodel/facilities#lowFloor">lowFloor</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#stepFree" title="https://w3id.org/transmodel/facilities#stepFree">stepFree</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#wheelchair"
-               title="https://w3id.org/transmodel/facilities#wheelchair">wheelchair</a>
-            <sup class="type-ni" title="named individual">ni</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="AccessibilityLimitation">
-      <h3>AccessibilityLimitation<sup class="type-c" title="class">c</sup>
+      <h3>Accessibility Limitation<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/facilities#AccessibilityLimitation</p>
       <div class="comment">
-         <span class="markdown">A categorisation of the accessibility characteristics of a site</span>
+         <span class="markdown">A categorisation of the accessibility characteristics of a Site, e.g. a Stop Place or a Stop Place Component to indicate its usability by passengers with specific needs, for example, those needing wheelchair access, step-free access or wanting to avoid confined spaces such as lifts. 
+A small number of well-defined categories are used that are chosen to allow the consistent capture of data and the efficient computation of routes for different classes of user.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/transmodel/facilities#THINGSTOREVIEW">t h i n g s t o r e v i e w</span>
-            <sup class="type-c" title="class">c</sup>
+            <a href="#wheelchairAccess"
+               title="https://w3id.org/transmodel/facilities#wheelchairAccess">wheelchair Access</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#accessibilityLimitation"
-               title="https://w3id.org/transmodel/facilities#accessibilityLimitation">accessibilityLimitation</a>
+            <a href="#determining"
+               title="https://w3id.org/transmodel/facilities#determining">determining</a>
             <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>has members</dt>
-         <dd>
-            <a href="#accessible"
-               title="https://w3id.org/transmodel/facilities#accessible">accessible</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#nonAccessible"
-               title="https://w3id.org/transmodel/facilities#nonAccessible">non accessible</a>
-            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -1311,6 +1321,25 @@ This section provides details for each class and property defined by Transmodel 
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Entrance">
+      <h3>Entrance<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#Entrance</p>
+      <div class="comment">
+         <span class="markdown">A physical entrance or exit to/from a Site. May be a door, barrier, gate or other recognizable Point of Access.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#StopPlaceEntrance"
+               title="https://w3id.org/transmodel/facilities#StopPlaceEntrance">Stop Place Entrance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="EntranceEquipment">
       <h3>EntranceEquipment<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1368,7 +1397,7 @@ These are further characterised as Place Equipment (equipment which may be locat
          <dt>is in domain of</dt>
          <dd>
             <a href="#equipmentType"
-               title="https://w3id.org/transmodel/facilities#equipmentType">equipment type</a>
+               title="https://w3id.org/transmodel/facilities#equipmentType">equipment Type</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#fixed" title="https://w3id.org/transmodel/facilities#fixed">fixed</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#locatedIn" title="https://w3id.org/transmodel/facilities#locatedIn">located in</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#outOfService"
@@ -1382,7 +1411,7 @@ These are further characterised as Place Equipment (equipment which may be locat
             <sup class="type-op" title="object property">op</sup>, <a href="#comprisesEquipment"
                title="https://w3id.org/transmodel/facilities#comprisesEquipment">comprises equipment</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#equippedWith"
-               title="https://w3id.org/transmodel/facilities#equippedWith">equippedWith</a>
+               title="https://w3id.org/transmodel/facilities#equippedWith">equipped With</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1418,7 +1447,7 @@ These are further characterised as Place Equipment (equipment which may be locat
          <dt>is in domain of</dt>
          <dd>
             <a href="#equippedWith"
-               title="https://w3id.org/transmodel/facilities#equippedWith">equippedWith</a>
+               title="https://w3id.org/transmodel/facilities#equippedWith">equipped With</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -1509,8 +1538,6 @@ A Facility has no further properties than a name. An Equipment or LocalService i
                title="https://w3id.org/transmodel/facilities#comprisesFacility">comprises facility</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#facilityRequirement"
                title="https://w3id.org/transmodel/facilities#facilityRequirement">facilityRequirement</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#facilitySet"
-               title="https://w3id.org/transmodel/facilities#facilitySet">facilitySet</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1546,6 +1573,31 @@ The terms used for relating a facility set to the facilities and equipment are C
             <sup class="type-op" title="object property">op</sup>, <a href="#providedBy"
                title="https://w3id.org/transmodel/facilities#providedBy">provided by</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#concernedBy"
+               title="https://w3id.org/transmodel/facilities#concernedBy">concerned by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FlexibleStopPlace">
+      <h3>Flexible Stop Place<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#FlexibleStopPlace</p>
+      <div class="comment">
+         <span class="markdown">A specialisation of the Stop Place describing a stop of a Flexible Service. It may be composed of Flexible Areas or Hail and Ride Areas identifying the catchment areas for flexible services (when they use areas or flexible quays). Some Flexible Places also use regular Stop Places for their stops. When assigned to a Scheduled Stop Point the corresponding Scheduled Stop Point is supposed to be a Zone (the centroid point of the Zone being the Scheduled Stop Point).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#StopPlace"
+               title="https://w3id.org/transmodel/facilities#StopPlace">Stop Place</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -2404,13 +2456,6 @@ Accessible by Passenger but without direct access to Vehicles</span>
                title="https://w3id.org/transmodel/journeys#BeaconPoint">BeaconPoint</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#latitude" title="https://w3id.org/transmodel/facilities#latitude">latitude</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#longitude"
-               title="https://w3id.org/transmodel/facilities#longitude">longitude</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="Porterage">
@@ -2449,6 +2494,23 @@ Accessible by Passenger but without direct access to Vehicles</span>
                title="https://w3id.org/transmodel/facilities#CommunicationService">CommunicationService</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Quay">
+      <h3>Quay<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#Quay</p>
+      <div class="comment">
+         <span class="markdown">A place such as platform, stance, or quayside where passengers have access to public transport vehicles, taxi, cars or other means of transportation. A Quay may serve one or more Vehicle Stopping Places and be associated with one or more Scheduled Stop Points. 
+
+A Quay may contain other sub Quays</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
       </dl>
    </div>
    <div class="entity" id="QueuingEquipment">
@@ -2599,34 +2661,8 @@ A named Service relating to the use of the Site or transport Services at a parti
          </dd>
       </dl>
    </div>
-   <div class="entity" id="ServiceFacilitySet">
-      <h3>Service Facility Set<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#ServiceFacilitySet</p>
-      <div class="comment">
-         <span class="markdown">A service facility set contains a set of facilities available for a service journey or a journey part. The set may be availabe only for a specific vehicle type within the service (e.g., carriage equipped with low floor).
-It can also include information about the accommodation on board, which can be related to the Accommodation or OnboardStay concepts, which are subclasses of Facility, via the comprisesFacility object property. These two concepts are further refined since they may have additional attributes beyond the indication of the corresponding SKOS concepts, as in the other cases.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#FacilitySet"
-               title="https://w3id.org/transmodel/facilities#FacilitySet">Facility Set</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#fareClass" title="https://w3id.org/transmodel/facilities#fareClass">fare class</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#presentAt" title="https://w3id.org/transmodel/facilities#presentAt">present at</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="https://w3id.org/transmodel/journeys#Service">
-      <h3>ServiceJourney<sup class="type-c" title="class">c</sup>
+      <h3>Service<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -2654,6 +2690,32 @@ It can also include information about the accommodation on board, which can be r
          <dd>
             <a href="#https://w3id.org/transmodel/journeys#makesAServiceJourney"
                title="https://w3id.org/transmodel/journeys#makesAServiceJourney">makes a service journey</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ServiceFacilitySet">
+      <h3>Service Facility Set<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#ServiceFacilitySet</p>
+      <div class="comment">
+         <span class="markdown">A service facility set contains a set of facilities available for a service journey or a journey part. The set may be availabe only for a specific vehicle type within the service (e.g., carriage equipped with low floor).
+It can also include information about the accommodation on board, which can be related to the Accommodation or OnboardStay concepts, which are subclasses of Facility, via the comprisesFacility object property. These two concepts are further refined since they may have additional attributes beyond the indication of the corresponding SKOS concepts, as in the other cases.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#FacilitySet"
+               title="https://w3id.org/transmodel/facilities#FacilitySet">Facility Set</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#fareClass" title="https://w3id.org/transmodel/facilities#fareClass">fare class</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#presentAt" title="https://w3id.org/transmodel/facilities#presentAt">present at</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -2736,6 +2798,14 @@ It can also include information about the accommodation on board, which can be r
          <span class="markdown">A well known Place to which Passengers may refer to indicate the origin or a destination of a Trip</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#StopPlace"
+               title="https://w3id.org/transmodel/facilities#StopPlace">Stop Place</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#availableAt"
@@ -2894,29 +2964,50 @@ It can also include information about the accommodation on board, which can be r
       </dl>
    </div>
    <div class="entity" id="StopPlace">
-      <h3>StopPlace<sup class="type-c" title="class">c</sup>
+      <h3>Stop Place<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/facilities#StopPlace</p>
       <div class="comment">
-         <span class="markdown">A place comprising one or more locations where Vehicles may stop and where passengers may board or leave Vehicles or prepare their Trip. A StopPlace will usually have one or more wellknown names.</span>
+         <span class="markdown">A place comprising one or more locations where Vehicles may stop and where passengers may board or leave Vehicles or prepare their Trip. A Stop Place will usually have one or more well-known names.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/transmodel/facilities#THINGSTOREVIEW">t h i n g s t o r e v i e w</span>
+            <a href="#Site" title="https://w3id.org/transmodel/facilities#Site">Site</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#FlexibleStopPlace"
+               title="https://w3id.org/transmodel/facilities#FlexibleStopPlace">Flexible Stop Place</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#stopPlaceEntrance"
-               title="https://w3id.org/transmodel/facilities#stopPlaceEntrance">stop place entrance</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#stopPlaceComponent"
-               title="https://w3id.org/transmodel/facilities#stopPlaceComponent">stopPlaceComponent</a>
-            <sup class="type-op" title="object property">op</sup>
+            <a href="#borderCrossingPoint"
+               title="https://w3id.org/transmodel/facilities#borderCrossingPoint">border crossing point</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StopPlaceEntrance">
+      <h3>Stop Place Entrance<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#StopPlaceEntrance</p>
+      <div class="comment">
+         <span class="markdown">A physical Entrance or Exit to/from a Stop Place for a Passenger. May be a door, barrier, gate or other recognizable point of access.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Entrance" title="https://w3id.org/transmodel/facilities#Entrance">Entrance</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -3347,6 +3438,29 @@ It can also include information about the accommodation on board, which can be r
          </dd>
       </dl>
    </div>
+   <div class="entity" id="VehicleStoppingPlace">
+      <h3>Vehicle Stopping Place<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#VehicleStoppingPlace</p>
+      <div class="comment">
+         <span class="markdown">A place on the vehicle track where vehicles stop in order for passengers to board or alight from a vehicle.
+
+A vehicle track is located on the respective infrastructure link for the mode (railway element of railway network, road element of road network, etc.).
+
+A vehicle stopping place may be served by one or more quays.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted"
+                  title="https://w3id.org/transmodel/facilities#THINGSTOREVIEW">t h i n g s t o r e v i e w</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="AccessAreaDimensions">
       <h3>VehicleAccessAreaDimension<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -3465,12 +3579,6 @@ It can also include information about the accommodation on board, which can be r
             <span class="dotted"
                   title="https://w3id.org/transmodel/facilities#THINGSTOREVIEW">t h i n g s t o r e v i e w</span>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#facilitySet"
-               title="https://w3id.org/transmodel/facilities#facilitySet">facilitySet</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -3622,6 +3730,10 @@ It can also include information about the accommodation on board, which can be r
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
+         <a href="#accessedBy"
+            title="https://w3id.org/transmodel/facilities#accessedBy">accessed by</a>
+      </li>
+      <li>
          <a href="#accessibilityAssessment"
             title="https://w3id.org/transmodel/facilities#accessibilityAssessment">accessibility assessment</a>
       </li>
@@ -3665,6 +3777,14 @@ It can also include information about the accommodation on board, which can be r
             title="https://w3id.org/transmodel/facilities#comprisesFacility">comprises facility</a>
       </li>
       <li>
+         <a href="#concernedBy"
+            title="https://w3id.org/transmodel/facilities#concernedBy">concerned by</a>
+      </li>
+      <li>
+         <a href="#containing"
+            title="https://w3id.org/transmodel/facilities#containing">containing</a>
+      </li>
+      <li>
          <a href="#couchetteFacility"
             title="https://w3id.org/transmodel/facilities#couchetteFacility">couchette facility</a>
       </li>
@@ -3673,16 +3793,20 @@ It can also include information about the accommodation on board, which can be r
             title="https://w3id.org/transmodel/facilities#destinationDisplay">destinationDisplay</a>
       </li>
       <li>
+         <a href="#determining"
+            title="https://w3id.org/transmodel/facilities#determining">determining</a>
+      </li>
+      <li>
          <a href="#displayAssignment"
             title="https://w3id.org/transmodel/facilities#displayAssignment">displayAssignment</a>
       </li>
       <li>
          <a href="#equipmentType"
-            title="https://w3id.org/transmodel/facilities#equipmentType">equipment type</a>
+            title="https://w3id.org/transmodel/facilities#equipmentType">equipment Type</a>
       </li>
       <li>
          <a href="#equippedWith"
-            title="https://w3id.org/transmodel/facilities#equippedWith">equippedWith</a>
+            title="https://w3id.org/transmodel/facilities#equippedWith">equipped With</a>
       </li>
       <li>
          <a href="#facilityType"
@@ -3706,6 +3830,9 @@ It can also include information about the accommodation on board, which can be r
             title="https://w3id.org/transmodel/journeys#hasAServiceJourneyPattern">
             <span>has a service journey pattern</span>
          </a>
+      </li>
+      <li>
+         <a href="#in" title="https://w3id.org/transmodel/facilities#in">in</a>
       </li>
       <li>
          <a href="#isUsedBy" title="https://w3id.org/transmodel/facilities#isUsedBy">isUsedBy</a>
@@ -3825,7 +3952,22 @@ It can also include information about the accommodation on board, which can be r
          <a href="#validityConditionDefines"
             title="https://w3id.org/transmodel/facilities#validityConditionDefines">validityConditionDefines</a>
       </li>
+      <li>
+         <a href="#wheelchairAccess"
+            title="https://w3id.org/transmodel/facilities#wheelchairAccess">wheelchair Access</a>
+      </li>
    </ul>
+   <div class="entity" id="accessedBy">
+      <h3>accessed by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#accessedBy</p>
+      <div class="comment">
+         <span class="markdown">This property sets the relationship between Site and Entrance</span>
+      </div>
+   </div>
    <div class="entity" id="accessibilityAssessment">
       <h3>accessibility assessment<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -3845,7 +3987,7 @@ It can also include information about the accommodation on board, which can be r
             <dt>has range</dt>
             <dd>
                <a href="#AccessibilityAssessment"
-                  title="https://w3id.org/transmodel/facilities#AccessibilityAssessment">AccessibilityAssessment</a>
+                  title="https://w3id.org/transmodel/facilities#AccessibilityAssessment">Accessibility Assessment</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -3869,12 +4011,6 @@ It can also include information about the accommodation on board, which can be r
             <dt>has domain</dt>
             <dd>
                <a href="#Facility" title="https://w3id.org/transmodel/facilities#Facility">Facility</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#AccessibilityLimitation"
-                  title="https://w3id.org/transmodel/facilities#AccessibilityLimitation">AccessibilityLimitation</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -3933,7 +4069,7 @@ It can also include information about the accommodation on board, which can be r
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://w3id.org/transmodel/journeys#Service" title="https://w3id.org/transmodel/journeys#Service">ServiceJourney</a>
+               <a href="#https://w3id.org/transmodel/journeys#Service" title="https://w3id.org/transmodel/journeys#Service">Service</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -4136,6 +4272,38 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
          </dl>
       </div>
    </div>
+   <div class="entity" id="concernedBy">
+      <h3>concerned by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#concernedBy</p>
+      <div class="comment">
+         <span class="markdown">This property allows connecting any object with a Facility Set</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FacilitySet"
+                  title="https://w3id.org/transmodel/facilities#FacilitySet">Facility Set</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="containing">
+      <h3>containing<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#containing</p>
+      <div class="comment">
+         <span class="markdown">This property allows specifying that a Stop contains Quays</span>
+      </div>
+   </div>
    <div class="entity" id="couchetteFacility">
       <h3>couchette facility<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -4205,6 +4373,33 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
          </dl>
       </div>
    </div>
+   <div class="entity" id="determining">
+      <h3>determining<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#determining</p>
+      <div class="comment">
+         <span class="markdown">This property sets the relationship between Accessibility Assessment and Accessibility Limitation</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#AccessibilityAssessment"
+                  title="https://w3id.org/transmodel/facilities#AccessibilityAssessment">Accessibility Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#AccessibilityLimitation"
+                  title="https://w3id.org/transmodel/facilities#AccessibilityLimitation">Accessibility Limitation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="displayAssignment">
       <h3>displayAssignment<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -4239,7 +4434,7 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
       </div>
    </div>
    <div class="entity" id="equipmentType">
-      <h3>equipment type<sup class="type-op" title="object property">op</sup>
+      <h3>equipment Type<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -4273,7 +4468,7 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
       </div>
    </div>
    <div class="entity" id="equippedWith">
-      <h3>equippedWith<sup class="type-op" title="object property">op</sup>
+      <h3>equipped With<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -4392,17 +4587,6 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
                      title="https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW">o b j e c t p r o p e r t i e s t o r e v i e w</span>
                <sup class="type-op" title="object property">op</sup>
             </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#VehicleType"
-                  title="https://w3id.org/transmodel/facilities#VehicleType">VehicleType</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Facility" title="https://w3id.org/transmodel/facilities#Facility">Facility</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
          </dl>
       </div>
    </div>
@@ -4459,10 +4643,21 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://w3id.org/transmodel/journeys#Service" title="https://w3id.org/transmodel/journeys#Service">ServiceJourney</a>
+               <a href="#https://w3id.org/transmodel/journeys#Service" title="https://w3id.org/transmodel/journeys#Service">Service</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
+      </div>
+   </div>
+   <div class="entity" id="in">
+      <h3>in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#in</p>
+      <div class="comment">
+         <span class="markdown">This property sets the relationship between something and other thing contained in the first (e.g., a Quay is in a Stop Place)</span>
       </div>
    </div>
    <div class="entity" id="isUsedBy">
@@ -4538,7 +4733,7 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://w3id.org/transmodel/journeys#Service" title="https://w3id.org/transmodel/journeys#Service">ServiceJourney</a>
+               <a href="#https://w3id.org/transmodel/journeys#Service" title="https://w3id.org/transmodel/journeys#Service">Service</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -4744,12 +4939,6 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
                      title="https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW">o b j e c t p r o p e r t i e s t o r e v i e w</span>
                <sup class="type-op" title="object property">op</sup>
             </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#StopPlace"
-                  title="https://w3id.org/transmodel/facilities#StopPlace">StopPlace</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#AccessEquipment"
@@ -4773,12 +4962,6 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
                <span class="dotted"
                      title="https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW">o b j e c t p r o p e r t i e s t o r e v i e w</span>
                <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#StopPlace"
-                  title="https://w3id.org/transmodel/facilities#StopPlace">StopPlace</a>
-               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
@@ -5252,6 +5435,36 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
          </dl>
       </div>
    </div>
+   <div class="entity" id="wheelchairAccess">
+      <h3>wheelchair Access<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#wheelchairAccess</p>
+      <div class="comment">
+         <span class="markdown">This property sets the relationaship between Accessibility Limitation and the kos wheelchair-access</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#AccessibilityLimitation"
+                  title="https://w3id.org/transmodel/facilities#AccessibilityLimitation">Accessibility Limitation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">value</span> 
+               <a href="#https://w3id.org/transmodel/kos/journeys/mobility-limitation"
+                  title="https://w3id.org/transmodel/kos/journeys/mobility-limitation">mobility limitation</a>)</dd>
+         </dl>
+      </div>
+   </div>
 </div><div id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
@@ -5264,6 +5477,10 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
       <li>
          <a href="#activatedEquipment"
             title="https://w3id.org/transmodel/facilities#activatedEquipment">activatedEquipment</a>
+      </li>
+      <li>
+         <a href="#borderCrossingPoint"
+            title="https://w3id.org/transmodel/facilities#borderCrossingPoint">border crossing point</a>
       </li>
       <li>
          <a href="#siteComponentTimePenalty"
@@ -5286,13 +5503,6 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
       <li>
          <a href="#freeToUse"
             title="https://w3id.org/transmodel/facilities#freeToUse">freeToUse</a>
-      </li>
-      <li>
-         <a href="#latitude" title="https://w3id.org/transmodel/facilities#latitude">latitude</a>
-      </li>
-      <li>
-         <a href="#longitude"
-            title="https://w3id.org/transmodel/facilities#longitude">longitude</a>
       </li>
       <li>
          <a href="#outOfService"
@@ -5351,6 +5561,31 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
             <dt>has domain</dt>
             <dd>
                <a href="#Facility" title="https://w3id.org/transmodel/facilities#Facility">Facility</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="borderCrossingPoint">
+      <h3>border crossing point<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#borderCrossingPoint</p>
+      <div class="comment">
+         <span class="markdown">This property allows establishing whether a Stop Place is a border crossing point or not.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StopPlace"
+                  title="https://w3id.org/transmodel/facilities#StopPlace">Stop Place</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -5520,60 +5755,6 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
          </dl>
       </div>
    </div>
-   <div class="entity" id="latitude">
-      <h3>latitude<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#latitude</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/facilities#DATAPROPERTIESTOREVIEW">d a t a p r o p e r t i e s t o r e v i e w</span>
-               <sup class="type-dp" title="data property">dp</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/journeys#Point" title="https://w3id.org/transmodel/journeys#Point">Point</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="longitude">
-      <h3>longitude<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#longitude</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/facilities#DATAPROPERTIESTOREVIEW">d a t a p r o p e r t i e s t o r e v i e w</span>
-               <sup class="type-dp" title="data property">dp</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/journeys#Point" title="https://w3id.org/transmodel/journeys#Point">Point</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="outOfService">
       <h3>out of service<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -5633,12 +5814,6 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
       <li>
          <a href="#noBeveragesAvailable"
             title="https://w3id.org/transmodel/facilities#noBeveragesAvailable"/>
-      </li>
-      <li>
-         <a href="#accessible"
-            title="https://w3id.org/transmodel/facilities#accessible">
-            <span>accessible</span>
-         </a>
       </li>
       <li>
          <a href="#babychange"
@@ -5732,25 +5907,20 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
             title="https://w3id.org/transmodel/facilities#informationStand">informationStand</a>
       </li>
       <li>
-         <a href="#lift" title="https://w3id.org/transmodel/facilities#lift">
-            <span>lift</span>
-         </a>
-      </li>
-      <li>
          <a href="#lineName" title="https://w3id.org/transmodel/facilities#lineName">lineName</a>
       </li>
       <li>
          <a href="#lowFloor" title="https://w3id.org/transmodel/facilities#lowFloor">lowFloor</a>
       </li>
       <li>
-         <a href="#narrowEntrance"
-            title="https://w3id.org/transmodel/facilities#narrowEntrance">narrowEntrance</a>
+         <a href="#https://w3id.org/transmodel/kos/journeys/mobility-limitation"
+            title="https://w3id.org/transmodel/kos/journeys/mobility-limitation">
+            <span>mobility limitation</span>
+         </a>
       </li>
       <li>
-         <a href="#nonAccessible"
-            title="https://w3id.org/transmodel/facilities#nonAccessible">
-            <span>non accessible</span>
-         </a>
+         <a href="#narrowEntrance"
+            title="https://w3id.org/transmodel/facilities#narrowEntrance">narrowEntrance</a>
       </li>
       <li>
          <a href="#placeAccessStairScalator"
@@ -5807,12 +5977,6 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
             title="https://w3id.org/transmodel/facilities#weatherConditions">weatherConditions</a>
       </li>
       <li>
-         <a href="#wheelchair"
-            title="https://w3id.org/transmodel/facilities#wheelchair">
-            <span>wheelchair</span>
-         </a>
-      </li>
-      <li>
          <a href="#wheelchairAccessToilet"
             title="https://w3id.org/transmodel/facilities#wheelchairAccessToilet">
             <span>wheelchair access toilet</span>
@@ -5833,22 +5997,6 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/facilities#noBeveragesAvailable</p>
-   </div>
-   <div class="entity" id="accessible">
-      <h3>accessible<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#accessible</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#AccessibilityLimitation"
-               title="https://w3id.org/transmodel/facilities#AccessibilityLimitation">AccessibilityLimitation</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="babychange">
       <h3>babyChange<sup class="type-ni" title="named individual">ni</sup>
@@ -6145,22 +6293,6 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
          <span class="markdown">A public transport information piece of Equipment outdoors</span>
       </div>
    </div>
-   <div class="entity" id="lift">
-      <h3>lift<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#lift</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#AccessibilityAssessment"
-               title="https://w3id.org/transmodel/facilities#AccessibilityAssessment">AccessibilityAssessment</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="lineName">
       <h3>lineName<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -6184,14 +6316,17 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/facilities#lowFloor</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#AccessibilityAssessment"
-               title="https://w3id.org/transmodel/facilities#AccessibilityAssessment">AccessibilityAssessment</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/journeys/mobility-limitation">
+      <h3>mobility limitation<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/journeys/mobility-limitation</p>
+      <div class="comment">
+         <span class="markdown">List of concepts regarding Mobility Limitation defined in kos/journeys/mobility-limitation</span>
+      </div>
    </div>
    <div class="entity" id="narrowEntrance">
       <h3>narrowEntrance<sup class="type-ni" title="named individual">ni</sup>
@@ -6200,22 +6335,6 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/facilities#narrowEntrance</p>
-   </div>
-   <div class="entity" id="nonAccessible">
-      <h3>non accessible<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#nonAccessible</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#AccessibilityLimitation"
-               title="https://w3id.org/transmodel/facilities#AccessibilityLimitation">AccessibilityLimitation</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="placeAccessStairScalator">
       <h3>placeAccessStairScalator<sup class="type-ni" title="named individual">ni</sup>
@@ -6353,14 +6472,6 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/facilities#stepFree</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#AccessibilityAssessment"
-               title="https://w3id.org/transmodel/facilities#AccessibilityAssessment">AccessibilityAssessment</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="telematicInformationCenter">
       <h3>telematicInformationService<sup class="type-ni" title="named individual">ni</sup>
@@ -6401,22 +6512,6 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
          <dd>
             <a href="#ValidityTrigger"
                title="https://w3id.org/transmodel/facilities#ValidityTrigger">ValidityTrigger</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="wheelchair">
-      <h3>wheelchair<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#wheelchair</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#AccessibilityAssessment"
-               title="https://w3id.org/transmodel/facilities#AccessibilityAssessment">AccessibilityAssessment</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>

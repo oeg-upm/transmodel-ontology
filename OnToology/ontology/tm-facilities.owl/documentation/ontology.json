@@ -10,6 +10,65 @@
   } ]
 }, {
   "@id" : "_:genid100",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#EquipmentPosition"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#position"
+  } ]
+}, {
+  "@id" : "_:genid102",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#position"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#EquipmentPosition"
+  } ]
+}, {
+  "@id" : "_:genid103",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#fixed"
+  } ]
+}, {
+  "@id" : "_:genid104",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#Quay"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#comprises"
+  } ]
+}, {
+  "@id" : "_:genid105",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#StopPlace"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#in"
+  } ]
+}, {
+  "@id" : "_:genid106",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#VehicleType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#presentAt"
+  } ]
+}, {
+  "@id" : "_:genid107",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "See figure 287, Facility conceptual Model"
@@ -21,10 +80,19 @@
     "@id" : "https://w3id.org/transmodel/facilities#ServiceFacilitySet"
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
-    "@id" : "_:genid99"
+    "@id" : "_:genid106"
   } ]
 }, {
-  "@id" : "_:genid101",
+  "@id" : "_:genid108",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#FacilitySet"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#concernedBy"
+  } ]
+}, {
+  "@id" : "_:genid109",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -37,7 +105,16 @@
     "@id" : "https://w3id.org/transmodel/facilities#accessibilityAssessment"
   } ]
 }, {
-  "@id" : "_:genid102",
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid110",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#Site"
@@ -46,7 +123,34 @@
     "@id" : "https://w3id.org/transmodel/facilities#availableAt"
   } ]
 }, {
-  "@id" : "_:genid103",
+  "@id" : "_:genid111",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#StopPlaceEntrance"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#accessedBy"
+  } ]
+}, {
+  "@id" : "_:genid112",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#Quay"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#containing"
+  } ]
+}, {
+  "@id" : "_:genid113",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#borderCrossingPoint"
+  } ]
+}, {
+  "@id" : "_:genid114",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -59,7 +163,7 @@
     "@id" : "https://w3id.org/transmodel/facilities#locatedIn"
   } ]
 }, {
-  "@id" : "_:genid104",
+  "@id" : "_:genid115",
   "https://w3id.org/transmodel/facilities#mbox" : [ {
     "@language" : "en",
     "@value" : "adolfo.anton.bravo@upm.es"
@@ -69,7 +173,7 @@
     "@value" : "Adolfo Anton-Bravo"
   } ]
 }, {
-  "@id" : "_:genid105",
+  "@id" : "_:genid116",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -79,15 +183,6 @@
     }, {
       "@id" : "https://w3id.org/transmodel/facilities#PlaceSign"
     } ]
-  } ]
-}, {
-  "@id" : "_:genid11",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
   "@id" : "_:genid13",
@@ -205,35 +300,31 @@
   } ]
 }, {
   "@id" : "_:genid36",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "_:genid37"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#accommodationFacility"
-  } ]
-}, {
-  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "_:genid39"
+      "@id" : "_:genid38"
     } ]
   } ]
 }, {
-  "@id" : "_:genid39",
+  "@id" : "_:genid38",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
+    "@id" : "https://w3id.org/transmodel/kos/journeys/mobility-limitation"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#AccessibilityLimitation"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#determining"
   } ]
 }, {
   "@id" : "_:genid41",
@@ -246,7 +337,7 @@
     "@id" : "_:genid42"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#couchetteFacility"
+    "@id" : "https://w3id.org/transmodel/facilities#accommodationFacility"
   } ]
 }, {
   "@id" : "_:genid42",
@@ -278,7 +369,7 @@
     "@id" : "_:genid47"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#fareClass"
+    "@id" : "https://w3id.org/transmodel/facilities#couchetteFacility"
   } ]
 }, {
   "@id" : "_:genid47",
@@ -320,7 +411,7 @@
     "@id" : "_:genid52"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#showerFacility"
+    "@id" : "https://w3id.org/transmodel/facilities#fareClass"
   } ]
 }, {
   "@id" : "_:genid52",
@@ -352,7 +443,7 @@
     "@id" : "_:genid57"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#toiletFacility"
+    "@id" : "https://w3id.org/transmodel/facilities#showerFacility"
   } ]
 }, {
   "@id" : "_:genid57",
@@ -376,11 +467,15 @@
 }, {
   "@id" : "_:genid61",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "_:genid62"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#equipmentType"
+    "@id" : "https://w3id.org/transmodel/facilities#toiletFacility"
   } ]
 }, {
   "@id" : "_:genid62",
@@ -396,13 +491,50 @@
   "@id" : "_:genid64",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/facilities/EquipmentType"
+    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
   "@id" : "_:genid66",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid67"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#equipmentType"
+  } ]
+}, {
+  "@id" : "_:genid67",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid69"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid69",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/facilities/EquipmentType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid71",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -415,7 +547,7 @@
     "@id" : "https://w3id.org/transmodel/facilities#locatedIn"
   } ]
 }, {
-  "@id" : "_:genid67",
+  "@id" : "_:genid72",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -428,7 +560,7 @@
     "@id" : "https://w3id.org/transmodel/facilities#outOfService"
   } ]
 }, {
-  "@id" : "_:genid68",
+  "@id" : "_:genid73",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#Equipment"
@@ -437,7 +569,7 @@
     "@id" : "https://w3id.org/transmodel/facilities#equippedWith"
   } ]
 }, {
-  "@id" : "_:genid69",
+  "@id" : "_:genid74",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#EquipmentPosition"
@@ -446,35 +578,26 @@
     "@id" : "https://w3id.org/transmodel/facilities#position"
   } ]
 }, {
-  "@id" : "_:genid7",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid70",
+  "@id" : "_:genid75",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid71"
+    "@id" : "_:genid76"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#facilityType"
   } ]
 }, {
-  "@id" : "_:genid71",
+  "@id" : "_:genid76",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "_:genid73"
+      "@id" : "_:genid78"
     } ]
   } ]
 }, {
-  "@id" : "_:genid73",
+  "@id" : "_:genid78",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
@@ -483,7 +606,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid75",
+  "@id" : "_:genid80",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#Equipment"
@@ -492,45 +615,13 @@
     "@id" : "https://w3id.org/transmodel/facilities#comprisesEquipment"
   } ]
 }, {
-  "@id" : "_:genid76",
+  "@id" : "_:genid81",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#Facility"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#comprisesFacility"
-  } ]
-}, {
-  "@id" : "_:genid77",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "_:genid78"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#boardingPermission"
-  } ]
-}, {
-  "@id" : "_:genid78",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "@id" : "_:genid80"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid80",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
   "@id" : "_:genid82",
@@ -543,7 +634,7 @@
     "@id" : "_:genid83"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#fareClass"
+    "@id" : "https://w3id.org/transmodel/facilities#boardingPermission"
   } ]
 }, {
   "@id" : "_:genid83",
@@ -571,33 +662,20 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "_:genid88"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#duration"
+    "@id" : "https://w3id.org/transmodel/facilities#fareClass"
   } ]
 }, {
   "@id" : "_:genid88",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "_:genid89"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#locatedIn"
-  } ]
-}, {
-  "@id" : "_:genid89",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/transmodel/facilities#EquipmentPlace"
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "https://w3id.org/transmodel/facilities#Vehicle"
+      "@id" : "_:genid90"
     } ]
   } ]
 }, {
@@ -611,7 +689,52 @@
     } ]
   } ]
 }, {
+  "@id" : "_:genid90",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/facilities/FacilityType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
   "@id" : "_:genid92",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#duration"
+  } ]
+}, {
+  "@id" : "_:genid93",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "_:genid94"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#locatedIn"
+  } ]
+}, {
+  "@id" : "_:genid94",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/transmodel/facilities#EquipmentPlace"
+    }, {
+      "@id" : "https://w3id.org/transmodel/facilities#Vehicle"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid97",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -624,55 +747,14 @@
     "@id" : "https://w3id.org/transmodel/facilities#fixed"
   } ]
 }, {
-  "@id" : "_:genid93",
+  "@id" : "_:genid98",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid97"
+      "@id" : "_:genid102"
     }, {
-      "@id" : "_:genid95"
+      "@id" : "_:genid100"
     } ]
-  } ]
-}, {
-  "@id" : "_:genid95",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#EquipmentPosition"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#position"
-  } ]
-}, {
-  "@id" : "_:genid97",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#position"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#EquipmentPosition"
-  } ]
-}, {
-  "@id" : "_:genid98",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#fixed"
-  } ]
-}, {
-  "@id" : "_:genid99",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#VehicleType"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#presentAt"
   } ]
 }, {
   "@id" : "http://creativecommons.org/ns#license",
@@ -814,28 +896,25 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "TODO: Determine whether this concept should be moved to another module of the Transmodel ontology"
-  }, {
-    "@language" : "en",
     "@value" : "The accessibility characteristics of an Entity (facility)  used by Passenger such as a Stop Place or a Stop Place Component. Described by AccessibilityLimitations and/or a set of Suitabilities"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "AccessibilityAssessment"
+    "@value" : "Accessibility Assessment"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#AccessibilityLimitation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A categorisation of the accessibility characteristics of a site"
+    "@value" : "A categorisation of the accessibility characteristics of a Site, e.g. a Stop Place or a Stop Place Component to indicate its usability by passengers with specific needs, for example, those needing wheelchair access, step-free access or wanting to avoid confined spaces such as lifts. \nA small number of well-defined categories are used that are chosen to allow the consistent capture of data and the efficient computation of routes for different classes of user."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "AccessibilityLimitation"
+    "@value" : "Accessibility Limitation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
+    "@id" : "_:genid40"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#Accommodation",
@@ -851,8 +930,6 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#Facility"
   }, {
-    "@id" : "_:genid36"
-  }, {
     "@id" : "_:genid41"
   }, {
     "@id" : "_:genid46"
@@ -860,6 +937,8 @@
     "@id" : "_:genid51"
   }, {
     "@id" : "_:genid56"
+  }, {
+    "@id" : "_:genid61"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#ActivationLink",
@@ -1223,6 +1302,17 @@
     "@id" : "https://w3id.org/transmodel/facilities#UserNeed"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/facilities#Entrance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A physical entrance or exit to/from a Site. May be a door, barrier, gate or other recognizable Point of Access."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Entrance"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/facilities#EntranceEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1248,11 +1338,11 @@
     "@value" : "Equipment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid61"
-  }, {
     "@id" : "_:genid66"
   }, {
-    "@id" : "_:genid67"
+    "@id" : "_:genid71"
+  }, {
+    "@id" : "_:genid72"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#EquipmentPlace",
@@ -1266,9 +1356,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#SiteComponent"
   }, {
-    "@id" : "_:genid68"
+    "@id" : "_:genid73"
   }, {
-    "@id" : "_:genid69"
+    "@id" : "_:genid74"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#EquipmentPosition",
@@ -1310,7 +1400,7 @@
     "@value" : "Facility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid70"
+    "@id" : "_:genid75"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#FacilitySet",
@@ -1330,9 +1420,23 @@
     "@value" : "Facility Set"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid75"
+    "@id" : "_:genid80"
   }, {
-    "@id" : "_:genid76"
+    "@id" : "_:genid81"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#FlexibleStopPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A specialisation of the Stop Place describing a stop of a Flexible Service. It may be composed of Flexible Areas or Hail and Ride Areas identifying the catchment areas for flexible services (when they use areas or flexible quays). Some Flexible Places also use regular Stop Places for their stops. When assigned to a Scheduled Stop Point the corresponding Scheduled Stop Point is supposed to be a Zone (the centroid point of the Zone being the Scheduled Stop Point)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Flexible Stop Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#StopPlace"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#FreeWifi",
@@ -1651,11 +1755,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#Facility"
   }, {
-    "@id" : "_:genid77"
-  }, {
     "@id" : "_:genid82"
   }, {
     "@id" : "_:genid87"
+  }, {
+    "@id" : "_:genid92"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#OtherSign",
@@ -1713,9 +1817,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#InstalledEquipment"
   }, {
-    "@id" : "_:genid88"
+    "@id" : "_:genid93"
   }, {
-    "@id" : "_:genid92"
+    "@id" : "_:genid97"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#PassengerInformationEquipment",
@@ -1789,9 +1893,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#InstalledEquipment"
   }, {
-    "@id" : "_:genid93"
-  }, {
     "@id" : "_:genid98"
+  }, {
+    "@id" : "_:genid103"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#PlaceLighting",
@@ -1849,6 +1953,22 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#CommunicationService"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#Quay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A place such as platform, stance, or quayside where passengers have access to public transport vehicles, taxi, cars or other means of transportation. A Quay may serve one or more Vehicle Stopping Places and be associated with one or more Scheduled Stop Points. \n\nA Quay may contain other sub Quays"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Quay"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid104"
+  }, {
+    "@id" : "_:genid105"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#QueuingEquipment",
@@ -1987,7 +2107,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#FacilitySet"
   }, {
-    "@id" : "_:genid99"
+    "@id" : "_:genid106"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#ShelterEquipment",
@@ -2040,13 +2160,13 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A well known Place to which Passengers may refer to indicate the origin or a destination of a Trip"
-  }, {
-    "@language" : "en",
-    "@value" : "TODO: Check whether we should move this one to another module"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid108"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#SiteComponent",
@@ -2080,7 +2200,7 @@
     "@value" : "Site Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid101"
+    "@id" : "_:genid109"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#SiteEquipment",
@@ -2108,7 +2228,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#FacilitySet"
   }, {
-    "@id" : "_:genid102"
+    "@id" : "_:genid110"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#StairCaseEquipment",
@@ -2153,14 +2273,29 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A place comprising one or more locations where Vehicles may stop and where passengers may board or leave Vehicles or prepare their Trip. A StopPlace will usually have one or more wellknown names."
+    "@value" : "A place comprising one or more locations where Vehicles may stop and where passengers may board or leave Vehicles or prepare their Trip. A Stop Place will usually have one or more well-known names."
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Add Stop Place Components to the Stop Place, if considered useful."
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: Add Stop Place Type as a SKOS Concept Scheme, and connect it to such concept scheme via an object property"
+  }, {
+    "@language" : "en",
+    "@value" : "TODO: If considered relevant, add connections from this class to the classes Point of Interest (this stop place services such Point of Interest) and to the class StopPlaceVehicleEntrance (this stop place is entered through an entrance - typical in an interchange area)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "StopPlace"
+    "@value" : "Stop Place"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
+    "@id" : "https://w3id.org/transmodel/facilities#Site"
+  }, {
+    "@id" : "_:genid111"
+  }, {
+    "@id" : "_:genid112"
+  }, {
+    "@id" : "_:genid113"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#StopPlaceComponent",
@@ -2175,6 +2310,20 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#StopPlaceEntrance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A physical Entrance or Exit to/from a Stop Place for a Passenger. May be a door, barrier, gate or other recognizable point of access."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Stop Place Entrance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#Entrance"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#StopPlaceSpace",
@@ -2425,7 +2574,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#InstalledEquipment"
   }, {
-    "@id" : "_:genid103"
+    "@id" : "_:genid114"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#VehicleMode",
@@ -2440,6 +2589,20 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#Vehicle"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#VehicleStoppingPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A place on the vehicle track where vehicles stop in order for passengers to board or alight from a vehicle.\n\nA vehicle track is located on the respective infrastructure link for the mode (railway element of railway network, road element of road network, etc.).\n\nA vehicle stopping place may be served by one or more quays."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vehicle Stopping Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#VehicleType",
@@ -2538,6 +2701,17 @@
     "@id" : "https://w3id.org/transmodel/facilities#DATAPROPERTIESTOREVIEW"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/facilities#accessedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property sets the relationship between Site and Entrance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "accessed by"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/facilities#accessibilityAssessment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2567,15 +2741,12 @@
     "@language" : "en",
     "@value" : "accessibilityLimitation"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#AccessibilityLimitation"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#accessible",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#AccessibilityLimitation" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#accommodationFacility",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -2731,6 +2902,23 @@
     "@value" : "bookingHall"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/facilities#borderCrossingPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property allows establishing whether a Stop Place is a border crossing point or not."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#StopPlace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "border crossing point"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/facilities#boundedOpenSpace",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#PassengerArea" ]
 }, {
@@ -2824,6 +3012,20 @@
     "@id" : "https://w3id.org/transmodel/facilities#comprises"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/facilities#concernedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property allows connecting any object with a Facility Set"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "concerned by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#FacilitySet"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/facilities#concourse",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#PassengerArea" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -2848,6 +3050,17 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#DATAPROPERTIESTOREVIEW"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#containing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property allows specifying that a Stop contains Quays"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "containing"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#corridor",
@@ -2921,6 +3134,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#determining",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property sets the relationship between Accessibility Assessment and Accessibility Limitation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#AccessibilityAssessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "determining"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#AccessibilityLimitation"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#directionName",
@@ -3031,7 +3261,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "equipment type"
+    "@value" : "equipment Type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid13"
@@ -3061,7 +3291,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "equippedWith"
+    "@value" : "equipped With"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#Equipment"
@@ -3105,15 +3335,9 @@
     "@language" : "en",
     "@value" : "Set of Facilities available for a ServiceJourney or a JourneyPart. The set may be available only for a specific VehicleType within the service (e.g. carriage equipped with low floor)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#VehicleType"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "facilitySet"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Facility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
@@ -3220,6 +3444,17 @@
     "@value" : "immigrationHall"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/facilities#in",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property sets the relationship between something and other thing contained in the first (e.g., a Quay is in a Stop Place)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "in"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/facilities#incomingCustoms",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
@@ -3261,24 +3496,8 @@
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/facilities#latitude",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Point"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "latitude"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#DATAPROPERTIESTOREVIEW"
-  } ]
-}, {
   "@id" : "https://w3id.org/transmodel/facilities#lift",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#AccessibilityAssessment" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#lineName",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#HeadingSign" ],
@@ -3307,24 +3526,8 @@
     "@id" : "https://w3id.org/transmodel/facilities#EquipmentPlace"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/facilities#longitude",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Point"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "longitude"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#DATAPROPERTIESTOREVIEW"
-  } ]
-}, {
   "@id" : "https://w3id.org/transmodel/facilities#lowFloor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#AccessibilityAssessment" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "lowFloor"
@@ -3366,7 +3569,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#nonAccessible",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#AccessibilityLimitation" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#noticeAssignment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -3581,7 +3784,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#stepFree",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#AccessibilityAssessment" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "stepFree"
@@ -3589,9 +3792,6 @@
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#stopPlaceComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#StopPlace"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "stopPlaceComponent"
@@ -3611,9 +3811,6 @@
   }, {
     "@language" : "en",
     "@value" : "stopPlaceEntrance"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#StopPlace"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#AccessEquipment"
@@ -3915,7 +4112,24 @@
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#wheelchair",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#AccessibilityAssessment" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#wheelchairAccess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property sets the relationaship between Accessibility Limitation and the kos wheelchair-access"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#AccessibilityLimitation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "wheelchair Access"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid36"
+  } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#wheelchairAccessToilet",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/transmodel/facilities#SanitaryEquipment" ]
@@ -3964,10 +4178,12 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A ServiceJourney is a Passenger carrying VehicleJourney for one specified DayType. The pattern of working is in principle defined by a ServiceJourneyPattern."
+  }, {
+    "@value" : "TODO: To remove once that we are sure that we are not breaking anything"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "ServiceJourney"
+    "@value" : "Service"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
@@ -4002,5 +4218,12 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Concept scheme where all the codelists for the types of facilities that are included in the Transmodel ontology"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/journeys/mobility-limitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "List of concepts regarding Mobility Limitation defined in kos/journeys/mobility-limitation"
   } ]
 } ]

@@ -1,8 +1,5 @@
 {
   "@context" : {
-    "JourneyRunTime" : {
-      "@id" : "https://w3id.org/transmodel/journeys#JourneyRunTime"
-    },
     "TimetabledVehicleJourney" : {
       "@id" : "https://w3id.org/transmodel/journeys#TimetabledVehicleJourney"
     },
@@ -35,10 +32,6 @@
     "Line" : {
       "@id" : "https://w3id.org/transmodel/journeys#Line"
     },
-    "stopPlaceAssignment" : {
-      "@id" : "https://w3id.org/transmodel/journeys#stopPlaceAssignment",
-      "@type" : "@id"
-    },
     "dayTypeAssignment" : {
       "@id" : "https://w3id.org/transmodel/journeys#dayTypeAssignment",
       "@type" : "@id"
@@ -56,6 +49,10 @@
       "@id" : "https://w3id.org/transmodel/journeys#timingLink",
       "@type" : "@id"
     },
+    "passedAt" : {
+      "@id" : "https://w3id.org/transmodel/journeys#passedAt",
+      "@type" : "@id"
+    },
     "madeUsing" : {
       "@id" : "https://w3id.org/transmodel/journeys#madeUsing",
       "@type" : "@id"
@@ -64,8 +61,15 @@
       "@id" : "https://w3id.org/transmodel/journeys#onRoute",
       "@type" : "@id"
     },
+    "minimumHeadwayInterval" : {
+      "@id" : "https://w3id.org/transmodel/journeys#minimumHeadwayInterval",
+      "@type" : "http://www.w3.org/2001/XMLSchema#duration"
+    },
     "license" : {
       "@id" : "http://creativecommons.org/ns#license"
+    },
+    "holidayType-old" : {
+      "@id" : "https://w3id.org/transmodel/journeys#holidayType-old"
     },
     "DeadRunPattern" : {
       "@id" : "https://w3id.org/transmodel/journeys#DeadRunPattern"
@@ -73,11 +77,14 @@
     "JourneyPattern" : {
       "@id" : "https://w3id.org/transmodel/journeys#JourneyPattern"
     },
+    "TimetabledPassingTime" : {
+      "@id" : "https://w3id.org/transmodel/journeys#TimetabledPassingTime"
+    },
+    "HeadwayInterval" : {
+      "@id" : "https://w3id.org/transmodel/journeys#HeadwayInterval"
+    },
     "DayOfWeek" : {
       "@id" : "https://w3id.org/transmodel/journeys#DayOfWeek"
-    },
-    "StopPlace" : {
-      "@id" : "https://w3id.org/transmodel/journeys#StopPlace"
     },
     "DatedBlock" : {
       "@id" : "https://w3id.org/transmodel/journeys#DatedBlock"
@@ -97,10 +104,6 @@
     },
     "FarePointInJourneyPattern" : {
       "@id" : "https://w3id.org/transmodel/journeys#FarePointInJourneyPattern"
-    },
-    "stopPlaceNumber" : {
-      "@id" : "https://w3id.org/transmodel/journeys#stopPlaceNumber",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "describedBy" : {
       "@id" : "https://w3id.org/transmodel/journeys#describedBy",
@@ -141,16 +144,15 @@
     "DayTypeAssignment" : {
       "@id" : "https://w3id.org/transmodel/journeys#DayTypeAssignment"
     },
-    "journeyRunTime" : {
-      "@id" : "https://w3id.org/transmodel/journeys#journeyRunTime",
-      "@type" : "@id"
-    },
     "DatedVehicleJourney" : {
       "@id" : "https://w3id.org/transmodel/journeys#DatedVehicleJourney"
     },
     "runTimeOverrides" : {
       "@id" : "https://w3id.org/transmodel/journeys#runTimeOverrides",
       "@type" : "@id"
+    },
+    "HeadwayJourneyGroup" : {
+      "@id" : "https://w3id.org/transmodel/journeys#HeadwayJourneyGroup"
     },
     "TopographicPlace" : {
       "@id" : "https://w3id.org/transmodel/journeys#TopographicPlace"
@@ -186,6 +188,10 @@
     "Concept" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     },
+    "firstDayOffset" : {
+      "@id" : "https://w3id.org/transmodel/journeys#firstDayOffset",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "VehicleJourneyLayover" : {
       "@id" : "https://w3id.org/transmodel/journeys#VehicleJourneyLayover"
     },
@@ -215,6 +221,10 @@
       "@id" : "https://w3id.org/transmodel/journeys#passengerConnection",
       "@type" : "@id"
     },
+    "firstDepartureTime" : {
+      "@id" : "https://w3id.org/transmodel/journeys#firstDepartureTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#time"
+    },
     "lineNumber" : {
       "@id" : "https://w3id.org/transmodel/journeys#lineNumber",
       "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
@@ -236,8 +246,15 @@
     "TimingLinkInJourneyPattern" : {
       "@id" : "https://w3id.org/transmodel/journeys#TimingLinkInJourneyPattern"
     },
+    "RhythmicalJourneyGroup" : {
+      "@id" : "https://w3id.org/transmodel/journeys#RhythmicalJourneyGroup"
+    },
     "Block" : {
       "@id" : "https://w3id.org/transmodel/journeys#Block"
+    },
+    "defines" : {
+      "@id" : "https://w3id.org/transmodel/journeys#defines",
+      "@type" : "@id"
     },
     "timingLinkPointSequence" : {
       "@id" : "https://w3id.org/transmodel/journeys#timingLinkPointSequence",
@@ -247,10 +264,6 @@
       "@id" : "https://w3id.org/transmodel/journeys#waitTime",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
-    "boardingPositionInQuay" : {
-      "@id" : "https://w3id.org/transmodel/journeys#boardingPositionInQuay",
-      "@type" : "@id"
-    },
     "vehicleJourney" : {
       "@id" : "https://w3id.org/transmodel/journeys#vehicleJourney",
       "@type" : "@id"
@@ -259,8 +272,19 @@
       "@id" : "https://w3id.org/transmodel/journeys#usedToDefine",
       "@type" : "@id"
     },
+    "determinedBy" : {
+      "@id" : "https://w3id.org/transmodel/journeys#determinedBy",
+      "@type" : "@id"
+    },
     "AddressablePlace" : {
       "@id" : "https://w3id.org/transmodel/journeys#AddressablePlace"
+    },
+    "TemplateVehicleJourney" : {
+      "@id" : "https://w3id.org/transmodel/journeys#TemplateVehicleJourney"
+    },
+    "maximumHeadwayInterval" : {
+      "@id" : "https://w3id.org/transmodel/journeys#maximumHeadwayInterval",
+      "@type" : "http://www.w3.org/2001/XMLSchema#duration"
     },
     "VehicleJourneyRunTime" : {
       "@id" : "https://w3id.org/transmodel/journeys#VehicleJourneyRunTime"
@@ -307,14 +331,12 @@
       "@type" : "@id"
     },
     "directionType" : {
-      "@id" : "https://w3id.org/transmodel/authorities#directionType"
+      "@id" : "https://w3id.org/transmodel/journeys#directionType",
+      "@type" : "@id"
     },
     "vehiclePassingTime" : {
       "@id" : "https://w3id.org/transmodel/journeys#vehiclePassingTime",
       "@type" : "@id"
-    },
-    "VehicleStoppingPlace" : {
-      "@id" : "https://w3id.org/transmodel/journeys#VehicleStoppingPlace"
     },
     "startTime" : {
       "@id" : "https://w3id.org/transmodel/journeys#startTime",
@@ -379,6 +401,10 @@
     "PostalAddress" : {
       "@id" : "https://w3id.org/transmodel/journeys#PostalAddress"
     },
+    "definedAs" : {
+      "@id" : "https://w3id.org/transmodel/journeys#definedAs",
+      "@type" : "@id"
+    },
     "identifier" : {
       "@id" : "http://purl.org/dc/elements/1.1/identifier"
     },
@@ -396,9 +422,6 @@
     "Access" : {
       "@id" : "https://w3id.org/transmodel/journeys#Access"
     },
-    "backwardCompatibleWith" : {
-      "@id" : "http://www.w3.org/2002/07/owl#backwardCompatibleWith"
-    },
     "TimingPointInJourneyPattern" : {
       "@id" : "https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern"
     },
@@ -414,8 +437,9 @@
       "@id" : "https://w3id.org/transmodel/journeys#defaultDeadRunRunTime",
       "@type" : "@id"
     },
-    "Route-old" : {
-      "@id" : "https://w3id.org/transmodel/journeys#Route-old"
+    "composedOf" : {
+      "@id" : "https://w3id.org/transmodel/journeys#composedOf",
+      "@type" : "@id"
     },
     "time" : {
       "@id" : "https://w3id.org/transmodel/journeys#time",
@@ -427,8 +451,8 @@
     "BeaconPoint" : {
       "@id" : "https://w3id.org/transmodel/journeys#BeaconPoint"
     },
-    "vehicleTimeTabledPassingTime" : {
-      "@id" : "https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime",
+    "isDefinedBy" : {
+      "@id" : "https://w3id.org/transmodel/journeys#isDefinedBy",
       "@type" : "@id"
     },
     "Point" : {
@@ -480,6 +504,10 @@
     "CoupledJourney" : {
       "@id" : "https://w3id.org/transmodel/journeys#CoupledJourney"
     },
+    "runsOn" : {
+      "@id" : "https://w3id.org/transmodel/journeys#runsOn",
+      "@type" : "@id"
+    },
     "Connection" : {
       "@id" : "https://w3id.org/transmodel/journeys#Connection"
     },
@@ -492,7 +520,11 @@
       "@type" : "@id"
     },
     "holidayType" : {
-      "@id" : "https://w3id.org/transmodel/journeys#holidayType"
+      "@id" : "https://w3id.org/transmodel/journeys#holidayType",
+      "@type" : "@id"
+    },
+    "JourneyFrequencyGroup" : {
+      "@id" : "https://w3id.org/transmodel/journeys#JourneyFrequencyGroup"
     },
     "aViewOf" : {
       "@id" : "https://w3id.org/transmodel/journeys#aViewOf",
@@ -541,9 +573,6 @@
       "@id" : "https://w3id.org/transmodel/journeys#canAlight",
       "@type" : "@id"
     },
-    "HeadingInterval" : {
-      "@id" : "https://w3id.org/transmodel/journeys#HeadingInterval"
-    },
     "DATA-PROPERTIES-TO-REVIEW" : {
       "@id" : "https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW"
     },
@@ -558,6 +587,10 @@
       "@id" : "https://w3id.org/transmodel/journeys#scheduledStopPoint",
       "@type" : "@id"
     },
+    "workedOn" : {
+      "@id" : "https://w3id.org/transmodel/journeys#workedOn",
+      "@type" : "@id"
+    },
     "vehicleJourneyRoute" : {
       "@id" : "https://w3id.org/transmodel/journeys#vehicleJourneyRoute",
       "@type" : "@id"
@@ -566,8 +599,9 @@
       "@id" : "https://w3id.org/transmodel/journeys#journeyPatternPoint",
       "@type" : "@id"
     },
-    "TimeTabledPassingTime" : {
-      "@id" : "https://w3id.org/transmodel/journeys#TimeTabledPassingTime"
+    "scheduledHeadwayInterval" : {
+      "@id" : "https://w3id.org/transmodel/journeys#scheduledHeadwayInterval",
+      "@type" : "http://www.w3.org/2001/XMLSchema#duration"
     },
     "Trip" : {
       "@id" : "https://w3id.org/transmodel/journeys#Trip"
@@ -578,12 +612,9 @@
     "timingLinkInJourneyPattern" : {
       "@id" : "https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern"
     },
-    "timeTabledPassingTime" : {
-      "@id" : "https://w3id.org/transmodel/journeys#timeTabledPassingTime",
-      "@type" : "@id"
-    },
     "day" : {
-      "@id" : "https://w3id.org/transmodel/journeys#day"
+      "@id" : "https://w3id.org/transmodel/journeys#day",
+      "@type" : "@id"
     },
     "PropertyOfDay" : {
       "@id" : "https://w3id.org/transmodel/journeys#PropertyOfDay"
@@ -592,8 +623,19 @@
       "@id" : "https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW",
       "@type" : "@id"
     },
+    "lastDepartureTime" : {
+      "@id" : "https://w3id.org/transmodel/journeys#lastDepartureTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "AccessibilityAssessment" : {
+      "@id" : "https://w3id.org/transmodel/facilities#AccessibilityAssessment"
+    },
     "departureTime" : {
       "@id" : "https://w3id.org/transmodel/authorities#departureTime"
+    },
+    "lastDayOffset" : {
+      "@id" : "https://w3id.org/transmodel/journeys#lastDayOffset",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
     "PointInLinkSequence" : {
       "@id" : "https://w3id.org/transmodel/journeys#PointInLinkSequence"
@@ -601,9 +643,6 @@
     "stopsAt" : {
       "@id" : "https://w3id.org/transmodel/journeys#stopsAt",
       "@type" : "@id"
-    },
-    "Quay" : {
-      "@id" : "https://w3id.org/transmodel/journeys#Quay"
     },
     "blockPart" : {
       "@id" : "https://w3id.org/transmodel/journeys#blockPart",
@@ -615,6 +654,10 @@
     },
     "AccessZone" : {
       "@id" : "https://w3id.org/transmodel/journeys#AccessZone"
+    },
+    "characterisedBy" : {
+      "@id" : "https://w3id.org/transmodel/journeys#characterisedBy",
+      "@type" : "@id"
     },
     "FlexiblePoint" : {
       "@id" : "https://w3id.org/transmodel/journeys#FlexiblePoint"
@@ -639,10 +682,6 @@
     },
     "journeyPatternAdvertisedFor" : {
       "@id" : "https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor",
-      "@type" : "@id"
-    },
-    "definedAS" : {
-      "@id" : "https://w3id.org/transmodel/journeys#definedAS",
       "@type" : "@id"
     },
     "DayType" : {
@@ -674,6 +713,10 @@
     },
     "TimingLink" : {
       "@id" : "https://w3id.org/transmodel/journeys#TimingLink"
+    },
+    "in" : {
+      "@id" : "https://w3id.org/transmodel/facilities#in",
+      "@type" : "@id"
     }
   }
 }
