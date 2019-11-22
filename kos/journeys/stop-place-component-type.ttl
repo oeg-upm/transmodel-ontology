@@ -6,26 +6,46 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
 
-<https://w3id.org/transmodel/kos/journeys/stop-place-component-type> a skos:ConceptScheme ;
-    skos:notation "StopPlaceComponentTypeEnumeration" ;
-    dcterms:creator "Adolfo Antón Bravo (OEG - Universidad Politécnica de Madrid)"@es ;
-    determs:date "2019-11-15"@es ;
-    dcterms:description "Enumeration of Stop Place Component Type"@en ;
-    dcterms:title "Stop Place Component Type Enumeration"@en ;
-    skos:definition "Enumeration of Stop Place Component Type"@en ;
-    skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/stop-place-component-type> ;
-    dc:title "Allowed values for Stop Place Component Types"@en ;
-    skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/stop-place-component-type/quay> , <https://w3id.org/transmodel/kos/journeys/stop-place-component-type/entrance> , <https://w3id.org/transmodel/kos/journeys/stop-place-component-type/accessSpace> , <https://w3id.org/transmodel/kos/journeys/stop-place-component-type/boardingPosition>, <https://w3id.org/transmodel/kos/journeys/stop-place-component-type/stoppingPlace> .
-    
+<https://w3id.org/transmodel/kos/journeys/stop-place-component-type> a
+    skos:ConceptScheme ; skos:notation
+    "StopPlaceComponentTypeEnumeration" ; dcterms:creator "Adolfo
+    Antón Bravo (OEG - Universidad Politécnica de Madrid)"@es ;
+    determs:date "2019-11-15"@es ; dcterms:description "Enumeration of
+    Stop Place Component Type"@en ; dcterms:title "Stop Place
+    Component Type Enumeration"@en ; skos:definition "Enumeration of
+    Stop Place Component Type"@en ; dc:title "Allowed values for Stop
+    Place Component Types"@en ; skos:hasTopConcept
+    <https://w3id.org/transmodel/kos/journeys/stop-place-component-type/quay>
+    ,
+    <https://w3id.org/transmodel/kos/journeys/stop-place-component-type/entrance>
+    ,
+    <https://w3id.org/transmodel/kos/journeys/stop-place-component-type/access-space>
+    ,
+    <https://w3id.org/transmodel/kos/journeys/stop-place-component-type/boarding-position>
+    ,
+    <https://w3id.org/transmodel/kos/journeys/stop-place-component-type/stopping-place>
+    .
 
-<https://w3id.org/transmodel/kos/journeys/stop-place-component-type/quay> skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-place-component-type> .
+<https://w3id.org/transmodel/kos/journeys/stop-place-component-type/quay> a skos:Concept ;
+    skos:notation "quay" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-place-component-type> .
 
-<https://w3id.org/transmodel/kos/journeys/stop-place-component-type/entrance> skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-place-component-type> .
+<https://w3id.org/transmodel/kos/journeys/stop-place-component-type/entrance> a skos:Concept ;
+    skos:notation "entrance" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-place-component-type> .
 
-<https://w3id.org/transmodel/kos/journeys/stop-place-component-type/accessSpace> skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-place-component-type> .
+<https://w3id.org/transmodel/kos/journeys/stop-place-component-type/access-space> a skos:Concept ;
+    skos:notation "access-space" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-place-component-type> .
 
-<https://w3id.org/transmodel/kos/journeys/stop-place-component-type/entrance> skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-place-component-type> .
+<https://w3id.org/transmodel/kos/journeys/stop-place-component-type/entrance> a skos:Concept ;
+    skos:notation "entrance" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-place-component-type> .
 
-<https://w3id.org/transmodel/kos/journeys/stop-place-component-type/boardingPosition> skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-place-component-type> .
+<https://w3id.org/transmodel/kos/journeys/stop-place-component-type/boarding-position> a skos:Concept ;
+    skos:notation "boarding-position" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-place-component-type> .
 
-<https://w3id.org/transmodel/kos/journeys/stop-place-component-type/stoppingPlace> skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-place-component-type> .
+<https://w3id.org/transmodel/kos/journeys/stop-place-component-type/stopping-place> a skos:Concept ;
+    skos:notation "stopping-place" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-place-component-type> .

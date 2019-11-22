@@ -13,17 +13,24 @@
     dcterms:description "Enumeration of Direction Type"@en ;
     dcterms:title "Limited Direction Type Enumeration"@en ;
     skos:definition "Enumeration of Direction Type"@en ;
-    skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/direction-type> ;
     dc:title "Allowed values for Direction Types"@en ;
     skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/direction-type/inbound> ,
         <https://w3id.org/transmodel/kos/journeys/direction-type/outbound> ,
         <https://w3id.org/transmodel/kos/journeys/direction-type/clockwise> ,
-        <https://w3id.org/transmodel/kos/journeys/direction-type/antiClockwise> .
+        <https://w3id.org/transmodel/kos/journeys/direction-type/anti-clockwise> .
 
-<https://w3id.org/transmodel/kos/journeys/direction-type/inbound> skos:inScheme <https://w3id.org/transmodel/kos/journeys/direction-type> .
+<https://w3id.org/transmodel/kos/journeys/direction-type/inbound> a skos:Concept ;
+    skos:notation "inbound" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/direction-type> .
 
-<https://w3id.org/transmodel/kos/journeys/direction-type/outbound> skos:inScheme <https://w3id.org/transmodel/kos/journeys/direction-type> .
+<https://w3id.org/transmodel/kos/journeys/direction-type/outbound> a skos:Concept ;
+    skos:notation "outbound" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/direction-type> .
 
-<https://w3id.org/transmodel/kos/journeys/direction-type/clockwise> skos:inScheme <https://w3id.org/transmodel/kos/journeys/direction-type> .
+<https://w3id.org/transmodel/kos/journeys/direction-type/clockwise> a skos:Concept ;
+    skos:notation "clockwise" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/direction-type> .
 
-<https://w3id.org/transmodel/kos/journeys/direction-type/antiClockwise> skos:inScheme <https://w3id.org/transmodel/kos/journeys/direction-type> .
+<https://w3id.org/transmodel/kos/journeys/direction-type/anti-clockwise> a skos:Concept ;
+    skos:notation "anti-clockwise" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/direction-type> .

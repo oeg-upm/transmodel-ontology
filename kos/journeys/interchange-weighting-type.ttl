@@ -13,17 +13,24 @@
     dcterms:description "Enumeration of Interchange Weighting Type"@en ;
     dcterms:title "Limited Interchange Weighting Type Enumeration"@en ;
     skos:definition "Enumeration of Limited Weighting Type"@en ;
-    skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/interchange-weighting-type> ;
     dc:title "Allowed values for Limited Interchange Weighting Types"@en ;
-    skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/interchange-weighting-type/noInterchange> ,
-        <https://w3id.org/transmodel/kos/journeys/interchange-weighting-type/interchangeAllowed> ,
-        <https://w3id.org/transmodel/kos/journeys/interchange-weighting-type/recommendedInterchange> ,
-        <https://w3id.org/transmodel/kos/journeys/interchange-weighting-type/preferredInterchanged> .
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/interchange-weighting-type/no-interchange> ,
+        <https://w3id.org/transmodel/kos/journeys/interchange-weighting-type/interchange-allowed> ,
+        <https://w3id.org/transmodel/kos/journeys/interchange-weighting-type/recommended-interchange> ,
+        <https://w3id.org/transmodel/kos/journeys/interchange-weighting-type/preferred-interchanged> .
 
-<https://w3id.org/transmodel/kos/journeys/interchange-weighting-type/noInterchange> skos:inScheme <https://w3id.org/transmodel/kos/journeys/interchange-weighting-type> .
+<https://w3id.org/transmodel/kos/journeys/interchange-weighting-type/no-interchange> a skos:Concept ;
+    skos:notation "no-interchange" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/interchange-weighting-type> .
 
-<https://w3id.org/transmodel/kos/journeys/interchange-weighting-type/interchangeAllowed> skos:inScheme <https://w3id.org/transmodel/kos/journeys/interchange-weighting-type> .
+<https://w3id.org/transmodel/kos/journeys/interchange-weighting-type/interchange-allowed> a skos:Concept ;
+    skos:notation "interchange-allowed" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/interchange-weighting-type> .
 
-<https://w3id.org/transmodel/kos/journeys/interchange-weighting-type/recommendedInterchange> skos:inScheme <https://w3id.org/transmodel/kos/journeys/interchange-weighting-type> .
+<https://w3id.org/transmodel/kos/journeys/interchange-weighting-type/recommended-interchange> a skos:Concept ;
+    skos:notation "recommended-interchange" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/interchange-weighting-type> .
 
-<https://w3id.org/transmodel/kos/journeys/interchange-weighting-type/preferredInterchanged> skos:inScheme <https://w3id.org/transmodel/kos/journeys/interchange-weighting-type> .
+<https://w3id.org/transmodel/kos/journeys/interchange-weighting-type/preferred-interchanged> a skos:Concept ;
+    skos:notation "ppreferred-interchanged" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/interchange-weighting-type> .

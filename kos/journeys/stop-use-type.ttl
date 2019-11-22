@@ -6,24 +6,31 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 
 
-<https://w3id.org/transmodel/kos/journeys/direction-type> a skos:ConceptScheme ;
+<https://w3id.org/transmodel/kos/journeys/stop-use-type> a skos:ConceptScheme ;
     skos:notation "StopUseType" ;
     dcterms:creator "Adolfo Antón Bravo (OEG - Universidad Politécnica de Madrid)"@es ;
     determs:date "2019-11-15"@es ;
     dcterms:description "Enumeration of Stop Use Type"@en ;
     dcterms:title "Limited Stop Use Type Enumeration"@en ;
     skos:definition "Enumeration of Stop Use Type"@en ;
-    skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/stop-use-type> ;
     dc:title "Allowed values for Stop Use Types"@en ;
     skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/stop-use-type/access> ,
-        <https://w3id.org/transmodel/kos/journeys/stop-use-type/interchangeOnly> ,
-        <https://w3id.org/transmodel/kos/journeys/stop-use-type/passThrough> ,
-        <https://w3id.org/transmodel/kos/journeys/stop-use-type/nonBoardingAlighting> .
+        <https://w3id.org/transmodel/kos/journeys/stop-use-type/interchange-only> ,
+        <https://w3id.org/transmodel/kos/journeys/stop-use-type/pass-through> ,
+        <https://w3id.org/transmodel/kos/journeys/stop-use-type/non-boarding-alighting> .
 
-<https://w3id.org/transmodel/kos/journeys/stop-use-type/access> skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-use-type> .
+<https://w3id.org/transmodel/kos/journeys/stop-use-type/access> a skos:Concept ;
+    skos:notation "access" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-use-type> .
 
-<https://w3id.org/transmodel/kos/journeys/stop-use-type/interchangeOnly> skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-use-type> .
+<https://w3id.org/transmodel/kos/journeys/stop-use-type/interchange-only> a skos:Concept ;
+    skos:notation "interchange-onlye" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-use-type> .
 
-<https://w3id.org/transmodel/kos/journeys/stop-use-type/passThrough> skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-use-type> .
+<https://w3id.org/transmodel/kos/journeys/stop-use-type/pass-through> a skos:Concept ;
+    skos:notation "pass-through" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-use-type> .
 
-<https://w3id.org/transmodel/kos/journeys/stop-use-type/nonBoardingAlighting> skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-use-type> .
+<https://w3id.org/transmodel/kos/journeys/stop-use-type/non-boarding-alighting> a skos:Concept ;
+    skos:notation "non-boarding-alighting" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/stop-use-type> .

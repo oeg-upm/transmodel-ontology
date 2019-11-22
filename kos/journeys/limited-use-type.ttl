@@ -13,23 +13,34 @@
     dcterms:description "Enumeration of Entrance Type"@en ;
     dcterms:title "Limited Use Type Enumeration"@en ;
     skos:definition "Enumeration of Limited Use Type"@en ;
-    skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/limited-use-type> ;
     dc:title "Allowed values for Limited Use Types"@en ;
-    skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/limited-use-type/interchangeOnly> ,
-        <https://w3id.org/transmodel/kos/journeys/limited-use-type/noDirectRoadAccess> ,
-        <https://w3id.org/transmodel/kos/journeys/limited-use-type/longWalkToAccess> ,
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/limited-use-type/interchange-only> ,
+        <https://w3id.org/transmodel/kos/journeys/limited-use-type/no-direct-road-access> ,
+        <https://w3id.org/transmodel/kos/journeys/limited-use-type/long-walk-to-access> ,
         <https://w3id.org/transmodel/kos/journeys/limited-use-type/isolated> ,
-        <https://w3id.org/transmodel/kos/journeys/limited-use-type/limitedService> ,
+        <https://w3id.org/transmodel/kos/journeys/limited-use-type/limited-service> ,
         <https://w3id.org/transmodel/kos/journeys/limited-use-type/other> .
-        
-<https://w3id.org/transmodel/kos/journeys/limited-use-type/interchangeOnly> skos:inScheme <https://w3id.org/transmodel/kos/journeys/limited-use-type> .
 
-<https://w3id.org/transmodel/kos/journeys/limited-use-type/noDirectRoadAccess> skos:inScheme <https://w3id.org/transmodel/kos/journeys/limited-use-type> .
+<https://w3id.org/transmodel/kos/journeys/limited-use-type/interchange-only> a skos:Concept ;
+    skos:notation "interchange-only" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/limited-use-type> .
 
-<https://w3id.org/transmodel/kos/journeys/limited-use-type/longWalkToAccess> skos:inScheme <https://w3id.org/transmodel/kos/journeys/limited-use-type> .
+<https://w3id.org/transmodel/kos/journeys/limited-use-type/no-direct-road-access> a skos:Concept ;
+    skos:notation "no-direct-road-access" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/limited-use-type> .
 
-<https://w3id.org/transmodel/kos/journeys/limited-use-type/isolated> skos:inScheme <https://w3id.org/transmodel/kos/journeys/limited-use-type> .
+<https://w3id.org/transmodel/kos/journeys/limited-use-type/long-walk-to-access> a skos:Concept ;
+    skos:notation "long-walk-to-access" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/limited-use-type> .
 
-<https://w3id.org/transmodel/kos/journeys/limited-use-type/limitedService> skos:inScheme <https://w3id.org/transmodel/kos/journeys/limited-use-type> .
+<https://w3id.org/transmodel/kos/journeys/limited-use-type/isolated> a skos:Concept ;
+    skos:notation "isolated" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/limited-use-type> .
 
-<https://w3id.org/transmodel/kos/journeys/limited-use-type/other> skos:inScheme <https://w3id.org/transmodel/kos/journeys/limited-use-type> .
+<https://w3id.org/transmodel/kos/journeys/limited-use-type/limited-service> a skos:Concept ;
+    skos:notation "limited-service" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/limited-use-type> .
+
+<https://w3id.org/transmodel/kos/journeys/limited-use-type/other> a skos:Concept ;
+    skos:notation "other" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/limited-use-type> .

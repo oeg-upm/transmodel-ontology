@@ -65,10 +65,14 @@ may be recorded.</a>
             title="https://w3id.org/transmodel/journeys#DatedPassingTime">DatedPassingTime</a>
       </li>
       <li>
-         <a href="#DayOfWeek" title="https://w3id.org/transmodel/journeys#DayOfWeek">DayOfWeek</a>
+         <a href="#DayOfWeek" title="https://w3id.org/transmodel/journeys#DayOfWeek">Day Of Week</a>
       </li>
       <li>
-         <a href="#DayType" title="https://w3id.org/transmodel/journeys#DayType">DayType</a>
+         <a href="#DayType" title="https://w3id.org/transmodel/journeys#DayType">Day Type</a>
+      </li>
+      <li>
+         <a href="#DayTypeAssignment"
+            title="https://w3id.org/transmodel/journeys#DayTypeAssignment">Day Type Assignment</a>
       </li>
       <li>
          <a href="#DeadRun" title="https://w3id.org/transmodel/journeys#DeadRun">Dead Run</a>
@@ -124,6 +128,9 @@ may be recorded.</a>
             title="https://w3id.org/transmodel/journeys#HeadingInterval">HeadwayInterval</a>
       </li>
       <li>
+         <a href="#Journey" title="https://w3id.org/transmodel/journeys#Journey">Journey</a>
+      </li>
+      <li>
          <a href="#JourneyPattern"
             title="https://w3id.org/transmodel/journeys#JourneyPattern">Journey Pattern</a>
       </li>
@@ -151,6 +158,9 @@ may be recorded.</a>
          <a href="#Line" title="https://w3id.org/transmodel/journeys#Line">Line</a>
       </li>
       <li>
+         <a href="#Line-old" title="https://w3id.org/transmodel/journeys#Line-old">Line-old</a>
+      </li>
+      <li>
          <a href="#LinkSequence"
             title="https://w3id.org/transmodel/journeys#LinkSequence">Link Sequence</a>
       </li>
@@ -164,7 +174,11 @@ may be recorded.</a>
       </li>
       <li>
          <a href="#OperatingDay"
-            title="https://w3id.org/transmodel/journeys#OperatingDay">OperatingDay</a>
+            title="https://w3id.org/transmodel/journeys#OperatingDay">Operating Day</a>
+      </li>
+      <li>
+         <a href="#OperatingPeriod"
+            title="https://w3id.org/transmodel/journeys#OperatingPeriod">Operating Period</a>
       </li>
       <li>
          <a href="#https://w3id.org/transmodel/authorities#Operator"
@@ -199,6 +213,10 @@ may be recorded.</a>
          </a>
       </li>
       <li>
+         <a href="#PropertyOfDay"
+            title="https://w3id.org/transmodel/journeys#PropertyOfDay">Property of day</a>
+      </li>
+      <li>
          <a href="#Quay" title="https://w3id.org/transmodel/journeys#Quay">Quay</a>
       </li>
       <li>
@@ -207,6 +225,9 @@ may be recorded.</a>
       </li>
       <li>
          <a href="#Route" title="https://w3id.org/transmodel/journeys#Route">Route</a>
+      </li>
+      <li>
+         <a href="#Route-old" title="https://w3id.org/transmodel/journeys#Route-old">Route-old</a>
       </li>
       <li>
          <a href="#ScheduledStopPoint"
@@ -701,7 +722,7 @@ may be recorded.<sup class="type-c" title="class">c</sup>
       </dl>
    </div>
    <div class="entity" id="DayOfWeek">
-      <h3>DayOfWeek<sup class="type-c" title="class">c</sup>
+      <h3>Day Of Week<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -711,55 +732,65 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          <span class="markdown">A particular week day, from Monday to Sunday</span>
       </div>
       <dl class="description">
-         <dt>has super-classes</dt>
+         <dt>is in domain of</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/transmodel/journeys#TOREVIEWCLASSES">t o r e v i e w c l a s s e s</span>
-            <sup class="type-c" title="class">c</sup>
+            <a href="#day" title="https://w3id.org/transmodel/journeys#day">day</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
-         <dt>has members</dt>
+         <dt>is in range of</dt>
          <dd>
-            <a href="#Friday" title="https://w3id.org/transmodel/journeys#Friday">Friday</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Monday" title="https://w3id.org/transmodel/journeys#Monday">Monday</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Saturday" title="https://w3id.org/transmodel/journeys#Saturday">Saturday</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Sunday" title="https://w3id.org/transmodel/journeys#Sunday">Sunday</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Thursday" title="https://w3id.org/transmodel/journeys#Thursday">Thursday</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Tuesday" title="https://w3id.org/transmodel/journeys#Tuesday">Tuesday</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Wednesday" title="https://w3id.org/transmodel/journeys#Wednesday">Wednesday</a>
-            <sup class="type-ni" title="named individual">ni</sup>
+            <a href="#definedAS" title="https://w3id.org/transmodel/journeys#definedAS">defined As</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="DayType">
-      <h3>DayType<sup class="type-c" title="class">c</sup>
+      <h3>Day Type<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#DayType</p>
       <div class="comment">
-         <span class="markdown">A DayType is a type of day characterised by one or more properties which affect public transport operation</span>
+         <span class="markdown">A Day Type is a type of day characterised by one or more properties which affect public transport operation</span>
       </div>
       <dl class="description">
-         <dt>has super-classes</dt>
+         <dt>is in domain of</dt>
          <dd>
-            <span class="dotted"
-                  title="https://w3id.org/transmodel/journeys#TOREVIEWCLASSES">t o r e v i e w c l a s s e s</span>
-            <sup class="type-c" title="class">c</sup>
+            <a href="#describedBy" title="https://w3id.org/transmodel/journeys#describedBy">described By</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#dayTypeAssignment"
-               title="https://w3id.org/transmodel/journeys#dayTypeAssignment">dayTypeAssignment</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#vehicleJourneyDayType"
-               title="https://w3id.org/transmodel/journeys#vehicleJourneyDayType">vehicleJourneyDayType</a>
+            <a href="#specifying" title="https://w3id.org/transmodel/journeys#specifying">specifying</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
-         <dt>has members</dt>
+      </dl>
+   </div>
+   <div class="entity" id="DayTypeAssignment">
+      <h3>Day Type Assignment<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#DayTypeAssignment</p>
+      <div class="comment">
+         <span class="markdown">The assignment of operational characteristics, expressed by Day Type to particular Operating Day within a Service Calendar</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
          <dd>
-            <a href="#WeekdayInSchoolHolidays"
-               title="https://w3id.org/transmodel/journeys#WeekdayInSchoolHolidays">WeekdayInSchoolHolidays</a>
-            <sup class="type-ni" title="named individual">ni</sup>
+            <a href="#date" title="https://w3id.org/transmodel/journeys#date">date</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#isAvailable"
+               title="https://w3id.org/transmodel/journeys#isAvailable">is Available</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#specifying" title="https://w3id.org/transmodel/journeys#specifying">specifying</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#usedToDefine"
+               title="https://w3id.org/transmodel/journeys#usedToDefine">used To Define</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -938,7 +969,7 @@ may be recorded.<sup class="type-c" title="class">c</sup>
                title="https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor">journey Pattern Advertised For</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#prescribing" title="https://w3id.org/transmodel/journeys#prescribing">prescribing</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#primarilyAdvertisedWith"
-               title="https://w3id.org/transmodel/journeys#primarilyAdvertisedWith">primarily advertised with</a>
+               title="https://w3id.org/transmodel/journeys#primarilyAdvertisedWith">primarily Advertised With</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -993,7 +1024,7 @@ may be recorded.<sup class="type-c" title="class">c</sup>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Line" title="https://w3id.org/transmodel/journeys#Line">Line</a>
+            <a href="#Line-old" title="https://w3id.org/transmodel/journeys#Line-old">Line-old</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -1017,7 +1048,7 @@ may be recorded.<sup class="type-c" title="class">c</sup>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Route" title="https://w3id.org/transmodel/journeys#Route">Route</a>
+            <a href="#Route-old" title="https://w3id.org/transmodel/journeys#Route-old">Route-old</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1065,6 +1096,27 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Journey">
+      <h3>Journey<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Journey</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#VehicleJourney"
+               title="https://w3id.org/transmodel/journeys#VehicleJourney">Vehicle Journey</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#monitored" title="https://w3id.org/transmodel/journeys#monitored">monitored</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="JourneyPattern">
       <h3>Journey Pattern<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1099,7 +1151,7 @@ may be recorded.<sup class="type-c" title="class">c</sup>
                title="https://w3id.org/transmodel/journeys#journeyRunTime">journeyRunTime</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#layover" title="https://w3id.org/transmodel/journeys#layover">layover</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#primarilyAdvertisedWith"
-               title="https://w3id.org/transmodel/journeys#primarilyAdvertisedWith">primarily advertised with</a>
+               title="https://w3id.org/transmodel/journeys#primarilyAdvertisedWith">primarily Advertised With</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#runtime" title="https://w3id.org/transmodel/journeys#runtime">runtime</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#timingLinkInJourneyPattern"
                title="https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern">timingLinkInJourneyPattern</a>
@@ -1257,6 +1309,25 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          <span class="markdown">A Line is a group of Route which is generally known to the public by a similar name or number.</span>
       </div>
       <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#onLine" title="https://w3id.org/transmodel/journeys#onLine">on Line</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#runBy" title="https://w3id.org/transmodel/journeys#runBy">run By</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Line-old">
+      <h3>Line-old<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Line-old</p>
+      <div class="comment">
+         <span class="markdown">A Line is a group of Route which is generally known to the public by a similar name or number.</span>
+      </div>
+      <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <span class="dotted"
@@ -1274,7 +1345,6 @@ may be recorded.<sup class="type-c" title="class">c</sup>
             <a href="#lineName" title="https://w3id.org/transmodel/journeys#lineName">lineName</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#lineNumber" title="https://w3id.org/transmodel/journeys#lineNumber">lineNumber</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#routeOnLine" title="https://w3id.org/transmodel/journeys#routeOnLine">route On Line</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#runBy" title="https://w3id.org/transmodel/journeys#runBy">run By</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1368,7 +1438,7 @@ may be recorded.<sup class="type-c" title="class">c</sup>
       </dl>
    </div>
    <div class="entity" id="OperatingDay">
-      <h3>OperatingDay<sup class="type-c" title="class">c</sup>
+      <h3>Operating Day<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -1378,17 +1448,30 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          <span class="markdown">A day of public transport operation of which the characteristics are defined within in a specific ServiceCalendar. An OperatingDay may last more than 24 hours.</span>
       </div>
       <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted"
-                  title="https://w3id.org/transmodel/journeys#TOREVIEWCLASSES">t o r e v i e w c l a s s e s</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#dayTypeAssignment"
-               title="https://w3id.org/transmodel/journeys#dayTypeAssignment">dayTypeAssignment</a>
+            <a href="#usedToDefine"
+               title="https://w3id.org/transmodel/journeys#usedToDefine">used To Define</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OperatingPeriod">
+      <h3>Operating Period<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#OperatingPeriod</p>
+      <div class="comment">
+         <span class="markdown">A continous interval of time between two Operating Day which will be used to define validities</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#holidayType"
+               title="https://w3id.org/transmodel/journeys#holidayType">holiday Type</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -1629,6 +1712,29 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
+   <div class="entity" id="PropertyOfDay">
+      <h3>Property of day<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#PropertyOfDay</p>
+      <div class="comment">
+         <span class="markdown">A property which a day may possess, such as school holiday, weekday, summer, winter, etc.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#definedAS" title="https://w3id.org/transmodel/journeys#definedAS">defined As</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#describedBy" title="https://w3id.org/transmodel/journeys#describedBy">described By</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Quay">
       <h3>Quay<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1684,6 +1790,30 @@ A Quay may contain a subquay.</span>
       <div class="comment">
          <span class="markdown">A Route is and ordered list of located Point defining one single path through the road (or rail) network.</span>
       </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#onRoute" title="https://w3id.org/transmodel/journeys#onRoute">on Route</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#onLine" title="https://w3id.org/transmodel/journeys#onLine">on Line</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Route-old">
+      <h3>Route-old<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Route-old</p>
+      <dl>
+         <dt>Backward compatible with:</dt>
+         <dd>A Route is and ordered list of located Point defining one single path through the road (or rail) network.</dd>
+      </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -1822,7 +1952,8 @@ A Quay may contain a subquay.</span>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#serviceJourneyUsingPattern"
+            <a href="#onRoute" title="https://w3id.org/transmodel/journeys#onRoute">on Route</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#serviceJourneyUsingPattern"
                title="https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern">service Journey Pattern</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -1883,16 +2014,16 @@ A Quay may contain a subquay.</span>
          <dt>is in domain of</dt>
          <dd>
             <a href="#changeOfDestinationDisplay"
-               title="https://w3id.org/transmodel/journeys#changeOfDestinationDisplay">change of destination display</a>
+               title="https://w3id.org/transmodel/journeys#changeOfDestinationDisplay">change Of Destination Display</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#changeOfServiceRequirements"
-               title="https://w3id.org/transmodel/journeys#changeOfServiceRequirements">change of service requirements</a>
+               title="https://w3id.org/transmodel/journeys#changeOfServiceRequirements">change Of Service Requirements</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#forAlighting"
-               title="https://w3id.org/transmodel/journeys#forAlighting">for alighting</a>
+               title="https://w3id.org/transmodel/journeys#forAlighting">for Alighting</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#forBoarding"
-               title="https://w3id.org/transmodel/journeys#forBoarding">for boarding</a>
+               title="https://w3id.org/transmodel/journeys#forBoarding">for Boarding</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#requestStop"
-               title="https://w3id.org/transmodel/journeys#requestStop">request stop</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#stopUse" title="https://w3id.org/transmodel/journeys#stopUse">stop use</a>
+               title="https://w3id.org/transmodel/journeys#requestStop">request Stop</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#stopUse" title="https://w3id.org/transmodel/journeys#stopUse">stop Use</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -2056,7 +2187,8 @@ It's the same as Timing Point In Journey Pattern</span>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#arrivalTime" title="https://w3id.org/transmodel/journeys#arrivalTime">arrival Time</a>
+            <a href="#arrivalTime"
+               title="https://w3id.org/transmodel/journeys#arrivalTime">arrival Time</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#time" title="https://w3id.org/transmodel/journeys#time">time</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#timeLink" title="https://w3id.org/transmodel/journeys#timeLink">timeLink</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#timingLinkPointSequence"
@@ -2263,7 +2395,7 @@ Within VehicleJourney there are three types:
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="https://w3id.org/transmodel/journeys#Journey">journey</span>
+            <a href="#Journey" title="https://w3id.org/transmodel/journeys#Journey">Journey</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -2286,9 +2418,7 @@ Within VehicleJourney there are three types:
             <sup class="type-op" title="object property">op</sup>, <a href="#headway" title="https://w3id.org/transmodel/journeys#headway">headway</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#layover" title="https://w3id.org/transmodel/journeys#layover">layover</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#runtime" title="https://w3id.org/transmodel/journeys#runtime">runtime</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#vehicleJourneyDayType"
-               title="https://w3id.org/transmodel/journeys#vehicleJourneyDayType">vehicleJourneyDayType</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#vehicleJourneyRoute"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#vehicleJourneyRoute"
                title="https://w3id.org/transmodel/journeys#vehicleJourneyRoute">vehicleJourneyRoute</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#waitTime" title="https://w3id.org/transmodel/journeys#waitTime">waitTime</a>
             <sup class="type-dp" title="data property">dp</sup>
@@ -2416,6 +2546,12 @@ A vehicle stopping place may be served by one or more quays.</span>
             title="https://w3id.org/transmodel/journeys#defaultInterchange">defaultInterchange</a>
       </li>
       <li>
+         <a href="#definedAS" title="https://w3id.org/transmodel/journeys#definedAS">defined As</a>
+      </li>
+      <li>
+         <a href="#describedBy" title="https://w3id.org/transmodel/journeys#describedBy">described By</a>
+      </li>
+      <li>
          <a href="#destinationStop"
             title="https://w3id.org/transmodel/journeys#destinationStop">destinationStop</a>
       </li>
@@ -2480,6 +2616,15 @@ A vehicle stopping place may be served by one or more quays.</span>
          </a>
       </li>
       <li>
+         <a href="#on" title="https://w3id.org/transmodel/journeys#on">on</a>
+      </li>
+      <li>
+         <a href="#onLine" title="https://w3id.org/transmodel/journeys#onLine">on Line</a>
+      </li>
+      <li>
+         <a href="#onRoute" title="https://w3id.org/transmodel/journeys#onRoute">on Route</a>
+      </li>
+      <li>
          <a href="#originStop" title="https://w3id.org/transmodel/journeys#originStop">originStop</a>
       </li>
       <li>
@@ -2499,9 +2644,7 @@ A vehicle stopping place may be served by one or more quays.</span>
       </li>
       <li>
          <a href="#primarilyAdvertisedWith"
-            title="https://w3id.org/transmodel/journeys#primarilyAdvertisedWith">
-            <span>primarily advertised with</span>
-         </a>
+            title="https://w3id.org/transmodel/journeys#primarilyAdvertisedWith">primarily Advertised With</a>
       </li>
       <li>
          <a href="#routeOnLine" title="https://w3id.org/transmodel/journeys#routeOnLine">route On Line</a>
@@ -2514,6 +2657,9 @@ A vehicle stopping place may be served by one or more quays.</span>
             title="https://w3id.org/transmodel/journeys#scheduledStopPoint">scheduledStopPoint</a>
       </li>
       <li>
+         <a href="#season" title="https://w3id.org/transmodel/journeys#season">season</a>
+      </li>
+      <li>
          <a href="#serviceJourneyUsingPattern"
             title="https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern">service Journey Pattern</a>
       </li>
@@ -2522,7 +2668,10 @@ A vehicle stopping place may be served by one or more quays.</span>
             title="https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney">service Journey Served By Vehicle Journey</a>
       </li>
       <li>
-         <a href="#stopUse" title="https://w3id.org/transmodel/journeys#stopUse">stop use</a>
+         <a href="#specifying" title="https://w3id.org/transmodel/journeys#specifying">specifying</a>
+      </li>
+      <li>
+         <a href="#stopUse" title="https://w3id.org/transmodel/journeys#stopUse">stop Use</a>
       </li>
       <li>
          <a href="#stopPlaceAssignment"
@@ -2557,12 +2706,12 @@ A vehicle stopping place may be served by one or more quays.</span>
             title="https://w3id.org/transmodel/journeys#typeOfFlexibleService">typeOfFlexibleService</a>
       </li>
       <li>
-         <a href="#vehicleJourney"
-            title="https://w3id.org/transmodel/journeys#vehicleJourney">vehicle Journey</a>
+         <a href="#usedToDefine"
+            title="https://w3id.org/transmodel/journeys#usedToDefine">used To Define</a>
       </li>
       <li>
-         <a href="#vehicleJourneyDayType"
-            title="https://w3id.org/transmodel/journeys#vehicleJourneyDayType">vehicleJourneyDayType</a>
+         <a href="#vehicleJourney"
+            title="https://w3id.org/transmodel/journeys#vehicleJourney">vehicle Journey</a>
       </li>
       <li>
          <a href="#vehicleJourneyPart"
@@ -2603,9 +2752,7 @@ A vehicle stopping place may be served by one or more quays.</span>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs">g o o d p r o p e r t i es</span>
-               <sup class="type-op" title="object property">op</sup>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -2635,6 +2782,12 @@ A vehicle stopping place may be served by one or more quays.</span>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#accessMode</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#AccessMode" title="https://w3id.org/transmodel/journeys#AccessMode">AccessMode</a>
@@ -2657,6 +2810,12 @@ A vehicle stopping place may be served by one or more quays.</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#Access" title="https://w3id.org/transmodel/journeys#Access">TypeOfAccess</a>
@@ -2674,9 +2833,15 @@ A vehicle stopping place may be served by one or more quays.</span>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#allowedLineDirections</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Route" title="https://w3id.org/transmodel/journeys#Route">Route</a>
+               <a href="#Route-old" title="https://w3id.org/transmodel/journeys#Route-old">Route-old</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -2697,6 +2862,12 @@ A vehicle stopping place may be served by one or more quays.</span>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#beginsConnection</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Connection" title="https://w3id.org/transmodel/journeys#Connection">Connection</a>
@@ -2720,6 +2891,12 @@ A vehicle stopping place may be served by one or more quays.</span>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#blockPart</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#JourneyPart"
@@ -2743,6 +2920,12 @@ A vehicle stopping place may be served by one or more quays.</span>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#boardingPositionInQuay</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Quay" title="https://w3id.org/transmodel/journeys#Quay">Quay</a>
@@ -2766,6 +2949,12 @@ A vehicle stopping place may be served by one or more quays.</span>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#canAlight</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#ScheduledStopPoint"
@@ -2784,6 +2973,12 @@ A vehicle stopping place may be served by one or more quays.</span>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#canBoard</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#ScheduledStopPoint"
@@ -2802,6 +2997,12 @@ A vehicle stopping place may be served by one or more quays.</span>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#endsConnection</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has sub-properties</dt>
             <dd>
                <a href="#endsConnectionDefault"
@@ -2834,16 +3035,11 @@ A vehicle stopping place may be served by one or more quays.</span>
       </div>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
+            <dt>has super-properties</dt>
             <dd>
-               <a href="#OperatingDay"
-                  title="https://w3id.org/transmodel/journeys#OperatingDay">OperatingDay</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#DayType" title="https://w3id.org/transmodel/journeys#DayType">DayType</a>
-               <sup class="type-c" title="class">c</sup>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
@@ -2857,6 +3053,12 @@ A vehicle stopping place may be served by one or more quays.</span>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#defaultDeadRunRunTime</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#DeadRun" title="https://w3id.org/transmodel/journeys#DeadRun">Dead Run</a>
@@ -2880,6 +3082,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#defaultInterchange</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#ScheduledStopPoint"
@@ -2895,6 +3103,62 @@ may be recorded.</a>
          </dl>
       </div>
    </div>
+   <div class="entity" id="definedAS">
+      <h3>defined As<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#definedAS</p>
+      <div class="comment">
+         <span class="markdown">This property sets the relationship between Property Of Day and Day Type</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#PropertyOfDay"
+                  title="https://w3id.org/transmodel/journeys#PropertyOfDay">Property of day</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#DayOfWeek" title="https://w3id.org/transmodel/journeys#DayOfWeek">Day Of Week</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="describedBy">
+      <h3>described By<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#describedBy</p>
+      <div class="comment">
+         <span class="markdown">This property asign a DayType to the specific Property of Day</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DayType" title="https://w3id.org/transmodel/journeys#DayType">Day Type</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#PropertyOfDay"
+                  title="https://w3id.org/transmodel/journeys#PropertyOfDay">Property of day</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="destinationStop">
       <h3>destinationStop<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2904,6 +3168,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#destinationStop</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#ScheduledStopPoint"
@@ -2927,9 +3197,7 @@ may be recorded.</a>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs">g o o d p r o p e r t i es</span>
-               <sup class="type-op" title="object property">op</sup>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -2944,8 +3212,8 @@ may be recorded.</a>
                <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span>
                <sup class="type-op" title="object property">op</sup> 
                <span class="logic">value</span> 
-               <a href="#https://w3id.org/transmodel/kos/journeys/DirectionType"
-                  title="https://w3id.org/transmodel/kos/journeys/DirectionType">direction type</a>)</dd>
+               <a href="#https://w3id.org/transmodel/kos/journeys/direction-type"
+                  title="https://w3id.org/transmodel/kos/journeys/direction-type">direction type</a>)</dd>
          </dl>
       </div>
    </div>
@@ -2958,9 +3226,15 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#directionType_old</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Route" title="https://w3id.org/transmodel/journeys#Route">Route</a>
+               <a href="#Route-old" title="https://w3id.org/transmodel/journeys#Route-old">Route-old</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -3005,6 +3279,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#followsDeadRunTime</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#VehicleJourney"
@@ -3029,6 +3309,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#followsJourneyPattern</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#VehicleJourney"
@@ -3060,9 +3346,7 @@ may be recorded.</a>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs">g o o d p r o p e r t i es</span>
-               <sup class="type-op" title="object property">op</sup>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3096,6 +3380,12 @@ may be recorded.</a>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <span class="dotted"
@@ -3123,6 +3413,12 @@ may be recorded.</a>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <span class="dotted"
@@ -3147,6 +3443,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#journeyPatternPoint</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#JourneyPattern"
@@ -3176,6 +3478,12 @@ may be recorded.</a>
                   title="https://w3id.org/transmodel/journeys#journeyRunTime">journeyRunTime</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -3192,6 +3500,12 @@ may be recorded.</a>
             <dd>
                <a href="#journeyPatternRunTime"
                   title="https://w3id.org/transmodel/journeys#journeyPatternRunTime">journeyPatternRunTime</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has domain</dt>
@@ -3218,6 +3532,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#runTimeOverrides</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#JourneyRunTime"
@@ -3252,9 +3572,7 @@ may be recorded.</a>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs">g o o d p r o p e r t i es</span>
-               <sup class="type-op" title="object property">op</sup>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3291,9 +3609,7 @@ may be recorded.</a>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs">g o o d p r o p e r t i es</span>
-               <sup class="type-op" title="object property">op</sup>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3319,6 +3635,98 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#modeOfTransport</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Route-old" title="https://w3id.org/transmodel/journeys#Route-old">Route-old</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#MeanOfTransport"
+                  title="https://w3id.org/transmodel/journeys#MeanOfTransport">ModeOfTransport</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="on">
+      <h3>on<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#on</p>
+      <div class="comment">
+         <span class="markdown">This property allows relating an entity with the entity where it appears. For instance, a Journey Pattern on (onRoute) a Route, a Route on (onLine) a Line.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#onLine" title="https://w3id.org/transmodel/journeys#onLine">on Line</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#onRoute" title="https://w3id.org/transmodel/journeys#onRoute">on Route</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="onLine">
+      <h3>on Line<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#onLine</p>
+      <div class="comment">
+         <span class="markdown">This property allows relating a Route with a Line where it appears</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#on" title="https://w3id.org/transmodel/journeys#on">on</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Line" title="https://w3id.org/transmodel/journeys#Line">Line</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Route" title="https://w3id.org/transmodel/journeys#Route">Route</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="onRoute">
+      <h3>on Route<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#onRoute</p>
+      <div class="comment">
+         <span class="markdown">This property allows relating a Journey Pattern with a Route where it appears</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#on" title="https://w3id.org/transmodel/journeys#on">on</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Route" title="https://w3id.org/transmodel/journeys#Route">Route</a>
@@ -3326,8 +3734,8 @@ may be recorded.</a>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#MeanOfTransport"
-                  title="https://w3id.org/transmodel/journeys#MeanOfTransport">ModeOfTransport</a>
+               <a href="#ServiceJourneyPattern"
+                  title="https://w3id.org/transmodel/journeys#ServiceJourneyPattern">Service Journey Pattern</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -3342,6 +3750,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#originStop</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#ScheduledStopPoint"
@@ -3360,6 +3774,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#passengerConnection</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#Connection" title="https://w3id.org/transmodel/journeys#Connection">Connection</a>
@@ -3380,6 +3800,12 @@ may be recorded.</a>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#Trip" title="https://w3id.org/transmodel/journeys#Trip">Trip</a>
@@ -3397,6 +3823,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#passingTimeTimingPoint</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#PassingTime"
@@ -3426,9 +3858,7 @@ may be recorded.</a>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs">g o o d p r o p e r t i es</span>
-               <sup class="type-op" title="object property">op</sup>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3446,19 +3876,20 @@ may be recorded.</a>
       </div>
    </div>
    <div class="entity" id="primarilyAdvertisedWith">
-      <h3>primarily advertised with<sup class="type-op" title="object property">op</sup>
+      <h3>primarily Advertised With<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#primarilyAdvertisedWith</p>
+      <div class="comment">
+         <span class="markdown">This property relates where is primarily advertised the Journey Pattern in a Destination Display</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs">g o o d p r o p e r t i es</span>
-               <sup class="type-op" title="object property">op</sup>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3484,14 +3915,20 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#routeOnLine</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Line" title="https://w3id.org/transmodel/journeys#Line">Line</a>
+               <a href="#Line-old" title="https://w3id.org/transmodel/journeys#Line-old">Line-old</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Route" title="https://w3id.org/transmodel/journeys#Route">Route</a>
+               <a href="#Route-old" title="https://w3id.org/transmodel/journeys#Route-old">Route-old</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -3509,6 +3946,10 @@ may be recorded.</a>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Line" title="https://w3id.org/transmodel/journeys#Line">Line</a>
@@ -3532,9 +3973,15 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#scheduledStopPoint</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Route" title="https://w3id.org/transmodel/journeys#Route">Route</a>
+               <a href="#Route-old" title="https://w3id.org/transmodel/journeys#Route-old">Route-old</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -3543,6 +3990,30 @@ may be recorded.</a>
                   title="https://w3id.org/transmodel/journeys#ScheduledStopPoint">Scheduled Stop Point</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="season">
+      <h3>season<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#season</p>
+      <div class="comment">
+         <span class="markdown">TODO: In journeys/daytype-properties there is the skos:Concept top concept season-type which must be the range of this property</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">value</span> 
+               <a href="#https://w3id.org/transmodel/kos/journeys/day-type"
+                  title="https://w3id.org/transmodel/kos/journeys/day-type">day type</a>)</dd>
          </dl>
       </div>
    </div>
@@ -3558,6 +4029,12 @@ may be recorded.</a>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#ServiceJourney"
@@ -3585,6 +4062,12 @@ may be recorded.</a>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#ServiceJourney"
@@ -3600,8 +4083,38 @@ may be recorded.</a>
          </dl>
       </div>
    </div>
+   <div class="entity" id="specifying">
+      <h3>specifying<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#specifying</p>
+      <div class="comment">
+         <span class="markdown">The assignment of operational characteristics, expressed by DayType, to a particular OperatingDay within a ServiceCalendar</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DayTypeAssignment"
+                  title="https://w3id.org/transmodel/journeys#DayTypeAssignment">Day Type Assignment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#DayType" title="https://w3id.org/transmodel/journeys#DayType">Day Type</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="stopUse">
-      <h3>stop use<sup class="type-op" title="object property">op</sup>
+      <h3>stop Use<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -3614,9 +4127,7 @@ may be recorded.</a>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs">g o o d p r o p e r t i es</span>
-               <sup class="type-op" title="object property">op</sup>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3631,8 +4142,8 @@ may be recorded.</a>
                <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span>
                <sup class="type-op" title="object property">op</sup> 
                <span class="logic">value</span> 
-               <a href="#https://w3id.org/transmodel/kos/journeys/StopUseType"
-                  title="https://w3id.org/transmodel/kos/journeys/StopUseType">stop use type</a>)</dd>
+               <a href="#https://w3id.org/transmodel/kos/journeys/stop-use-type"
+                  title="https://w3id.org/transmodel/kos/journeys/stop-use-type">stop use type</a>)</dd>
          </dl>
       </div>
    </div>
@@ -3648,6 +4159,12 @@ may be recorded.</a>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#StopPlace" title="https://w3id.org/transmodel/journeys#StopPlace">StopPlace</a>
@@ -3671,6 +4188,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#stopsAt</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Vehicle" title="https://w3id.org/transmodel/journeys#Vehicle">Vehicle</a>
@@ -3698,9 +4221,7 @@ may be recorded.</a>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/journeys#GOOD_PROPERTIEs">g o o d p r o p e r t i es</span>
-               <sup class="type-op" title="object property">op</sup>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -3730,6 +4251,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#timeTabledPassingTime</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#ServiceJourney"
@@ -3754,6 +4281,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#JourneyPattern"
@@ -3767,7 +4300,9 @@ may be recorded.</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is also defined as</dt>
-            <dd>data property</dd>
+            <dd>
+               <a href="#timingLinkInJourneyPattern">data property</a>
+            </dd>
          </dl>
       </div>
    </div>
@@ -3780,6 +4315,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#timingLink</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#TimingLink" title="https://w3id.org/transmodel/journeys#TimingLink">A TimingLink is an ordered pair of TimingPoint for which run times
@@ -3807,6 +4348,12 @@ may be recorded.</a>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Trip" title="https://w3id.org/transmodel/journeys#Trip">Trip</a>
@@ -3830,10 +4377,47 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#typeOfFlexibleService</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#FlexibleLine"
                   title="https://w3id.org/transmodel/journeys#FlexibleLine">FlexibleLine</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="usedToDefine">
+      <h3>used To Define<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#usedToDefine</p>
+      <div class="comment">
+         <span class="markdown">This property sets the relation between a Time Band or an Operating Day with a Day Type Assignment</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#OperatingDay"
+                  title="https://w3id.org/transmodel/journeys#OperatingDay">Operating Day</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#DayTypeAssignment"
+                  title="https://w3id.org/transmodel/journeys#DayTypeAssignment">Day Type Assignment</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -3851,6 +4435,12 @@ may be recorded.</a>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Vehicle" title="https://w3id.org/transmodel/journeys#Vehicle">Vehicle</a>
@@ -3865,29 +4455,6 @@ may be recorded.</a>
          </dl>
       </div>
    </div>
-   <div class="entity" id="vehicleJourneyDayType">
-      <h3>vehicleJourneyDayType<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#vehicleJourneyDayType</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#VehicleJourney"
-                  title="https://w3id.org/transmodel/journeys#VehicleJourney">Vehicle Journey</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#DayType" title="https://w3id.org/transmodel/journeys#DayType">DayType</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="vehicleJourneyPart">
       <h3>vehicleJourneyPart<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -3897,6 +4464,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#vehicleJourneyPart</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Vehicle" title="https://w3id.org/transmodel/journeys#Vehicle">Vehicle</a>
@@ -3920,6 +4493,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#vehicleJourneyRoute</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#VehicleJourney"
@@ -3928,7 +4507,7 @@ may be recorded.</a>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Route" title="https://w3id.org/transmodel/journeys#Route">Route</a>
+               <a href="#Route-old" title="https://w3id.org/transmodel/journeys#Route-old">Route-old</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -3943,6 +4522,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#vehicleJourneyRunTimeOverrides</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#VehicleJourneyRunTime"
@@ -3985,6 +4570,12 @@ may be recorded.</a>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Vehicle" title="https://w3id.org/transmodel/journeys#Vehicle">Vehicle</a>
@@ -4008,6 +4599,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#vehiclePassingTime</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Vehicle" title="https://w3id.org/transmodel/journeys#Vehicle">Vehicle</a>
@@ -4031,6 +4628,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#vehicleTimeTabledPassingTime</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW">p r o p s t o r e v i e w</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Vehicle" title="https://w3id.org/transmodel/journeys#Vehicle">Vehicle</a>
@@ -4049,15 +4652,22 @@ may be recorded.</a>
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#arrivalTime" title="https://w3id.org/transmodel/journeys#arrivalTime">arrival Time</a>
+         <a href="#arrivalTime"
+            title="https://w3id.org/transmodel/journeys#arrivalTime">arrival Time</a>
       </li>
       <li>
          <a href="#changeOfDestinationDisplay"
-            title="https://w3id.org/transmodel/journeys#changeOfDestinationDisplay">change of destination display</a>
+            title="https://w3id.org/transmodel/journeys#changeOfDestinationDisplay">change Of Destination Display</a>
       </li>
       <li>
          <a href="#changeOfServiceRequirements"
-            title="https://w3id.org/transmodel/journeys#changeOfServiceRequirements">change of service requirements</a>
+            title="https://w3id.org/transmodel/journeys#changeOfServiceRequirements">change Of Service Requirements</a>
+      </li>
+      <li>
+         <a href="#date" title="https://w3id.org/transmodel/journeys#date">date</a>
+      </li>
+      <li>
+         <a href="#day" title="https://w3id.org/transmodel/journeys#day">day</a>
       </li>
       <li>
          <a href="#https://w3id.org/transmodel/authorities#departureTime"
@@ -4069,14 +4679,22 @@ may be recorded.</a>
       </li>
       <li>
          <a href="#forAlighting"
-            title="https://w3id.org/transmodel/journeys#forAlighting">for alighting</a>
+            title="https://w3id.org/transmodel/journeys#forAlighting">for Alighting</a>
       </li>
       <li>
          <a href="#forBoarding"
-            title="https://w3id.org/transmodel/journeys#forBoarding">for boarding</a>
+            title="https://w3id.org/transmodel/journeys#forBoarding">for Boarding</a>
       </li>
       <li>
          <a href="#headway" title="https://w3id.org/transmodel/journeys#headway">headway</a>
+      </li>
+      <li>
+         <a href="#holidayType"
+            title="https://w3id.org/transmodel/journeys#holidayType">holiday Type</a>
+      </li>
+      <li>
+         <a href="#isAvailable"
+            title="https://w3id.org/transmodel/journeys#isAvailable">is Available</a>
       </li>
       <li>
          <a href="#isWaitPoint"
@@ -4092,11 +4710,14 @@ may be recorded.</a>
          <a href="#lineNumber" title="https://w3id.org/transmodel/journeys#lineNumber">lineNumber</a>
       </li>
       <li>
+         <a href="#monitored" title="https://w3id.org/transmodel/journeys#monitored">monitored</a>
+      </li>
+      <li>
          <a href="#order" title="https://w3id.org/transmodel/journeys#order">order</a>
       </li>
       <li>
          <a href="#requestStop"
-            title="https://w3id.org/transmodel/journeys#requestStop">request stop</a>
+            title="https://w3id.org/transmodel/journeys#requestStop">request Stop</a>
       </li>
       <li>
          <a href="#runtime" title="https://w3id.org/transmodel/journeys#runtime">runtime</a>
@@ -4121,6 +4742,12 @@ may be recorded.</a>
          </a>
       </li>
       <li>
+         <a href="#timingLinkInJourneyPattern"
+            title="https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern">
+            <span>timingLinkInJourneyPattern</span>
+         </a>
+      </li>
+      <li>
          <a href="#waitTime" title="https://w3id.org/transmodel/journeys#waitTime">waitTime</a>
       </li>
    </ul>
@@ -4136,6 +4763,12 @@ may be recorded.</a>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW">d a t a p r o p e r t i e s t o r e v i e w</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#TimingPoint"
@@ -4150,7 +4783,7 @@ may be recorded.</a>
       </div>
    </div>
    <div class="entity" id="changeOfDestinationDisplay">
-      <h3>change of destination display<sup class="type-dp" title="data property">dp</sup>
+      <h3>change Of Destination Display<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
@@ -4163,9 +4796,7 @@ may be recorded.</a>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES">g o o d d a t a p r o p e r t i e s</span>
-               <sup class="type-dp" title="data property">dp</sup>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4181,7 +4812,7 @@ may be recorded.</a>
       </div>
    </div>
    <div class="entity" id="changeOfServiceRequirements">
-      <h3>change of service requirements<sup class="type-dp" title="data property">dp</sup>
+      <h3>change Of Service Requirements<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
@@ -4194,9 +4825,7 @@ may be recorded.</a>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES">g o o d d a t a p r o p e r t i e s</span>
-               <sup class="type-dp" title="data property">dp</sup>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4211,6 +4840,59 @@ may be recorded.</a>
          </dl>
       </div>
    </div>
+   <div class="entity" id="date">
+      <h3>date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#date</p>
+      <div class="comment">
+         <span class="markdown">This property sets up the date for the Day Type Assignment</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DayTypeAssignment"
+                  title="https://w3id.org/transmodel/journeys#DayTypeAssignment">Day Type Assignment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="day">
+      <h3>day<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#day</p>
+      <div class="comment">
+         <span class="markdown">TODO: The range of day will be one of the values of days-of-week skos:Concept</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DayOfWeek" title="https://w3id.org/transmodel/journeys#DayOfWeek">Day Of Week</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="https://w3id.org/transmodel/authorities#departureTime">
       <h3>departure Time<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -4220,6 +4902,16 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/authorities#departureTime</p>
       <div class="comment">
          <span class="markdown">arrival Time for a Service Journey in a Timing Point</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW">d a t a p r o p e r t i e s t o r e v i e w</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="https://w3id.org/transmodel/authorities#directionType">
@@ -4231,6 +4923,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/authorities#directionType</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW">d a t a p r o p e r t i e s t o r e v i e w</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#ServiceJourney"
@@ -4248,7 +4946,7 @@ may be recorded.</a>
       </div>
    </div>
    <div class="entity" id="forAlighting">
-      <h3>for alighting<sup class="type-dp" title="data property">dp</sup>
+      <h3>for Alighting<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
@@ -4261,9 +4959,7 @@ may be recorded.</a>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES">g o o d d a t a p r o p e r t i e s</span>
-               <sup class="type-dp" title="data property">dp</sup>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4279,7 +4975,7 @@ may be recorded.</a>
       </div>
    </div>
    <div class="entity" id="forBoarding">
-      <h3>for boarding<sup class="type-dp" title="data property">dp</sup>
+      <h3>for Boarding<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
@@ -4292,9 +4988,7 @@ may be recorded.</a>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES">g o o d d a t a p r o p e r t i e s</span>
-               <sup class="type-dp" title="data property">dp</sup>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4318,6 +5012,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#headway</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW">d a t a p r o p e r t i e s t o r e v i e w</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#JourneyPattern"
@@ -4332,6 +5032,60 @@ may be recorded.</a>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="holidayType">
+      <h3>holiday Type<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#holidayType</p>
+      <div class="comment">
+         <span class="markdown">TODO: In journeys/daytype-properties there is the top concept holiday-type which must be the skos:Concept range of this property</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#OperatingPeriod"
+                  title="https://w3id.org/transmodel/journeys#OperatingPeriod">Operating Period</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isAvailable">
+      <h3>is Available<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#isAvailable</p>
+      <div class="comment">
+         <span class="markdown">This property says if a Day Type Assignment is available or not</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DayTypeAssignment"
+                  title="https://w3id.org/transmodel/journeys#DayTypeAssignment">Day Type Assignment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
             </dd>
          </dl>
       </div>
@@ -4352,9 +5106,7 @@ may be recorded.</a>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES">g o o d d a t a p r o p e r t i e s</span>
-               <sup class="type-dp" title="data property">dp</sup>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4378,6 +5130,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#layover</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW">d a t a p r o p e r t i e s t o r e v i e w</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#JourneyPattern"
@@ -4405,9 +5163,15 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#lineName</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW">d a t a p r o p e r t i e s t o r e v i e w</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Line" title="https://w3id.org/transmodel/journeys#Line">Line</a>
+               <a href="#Line-old" title="https://w3id.org/transmodel/journeys#Line-old">Line-old</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -4426,15 +5190,49 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#lineNumber</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW">d a t a p r o p e r t i e s t o r e v i e w</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Line" title="https://w3id.org/transmodel/journeys#Line">Line</a>
+               <a href="#Line-old" title="https://w3id.org/transmodel/journeys#Line-old">Line-old</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted"
                      title="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">non negative integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="monitored">
+      <h3>monitored<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#monitored</p>
+      <div class="comment">
+         <span class="markdown">This property defines whether the journey is monitored or not</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Journey" title="https://w3id.org/transmodel/journeys#Journey">Journey</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
             </dd>
          </dl>
       </div>
@@ -4453,9 +5251,7 @@ may be recorded.</a>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES">g o o d d a t a p r o p e r t i e s</span>
-               <sup class="type-dp" title="data property">dp</sup>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4472,7 +5268,7 @@ may be recorded.</a>
       </div>
    </div>
    <div class="entity" id="requestStop">
-      <h3>request stop<sup class="type-dp" title="data property">dp</sup>
+      <h3>request Stop<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
@@ -4485,9 +5281,7 @@ may be recorded.</a>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted"
-                     title="https://w3id.org/transmodel/journeys#GOODDATAPROPERTIES">g o o d d a t a p r o p e r t i e s</span>
-               <sup class="type-dp" title="data property">dp</sup>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -4511,6 +5305,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#runtime</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW">d a t a p r o p e r t i e s t o r e v i e w</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#JourneyPattern"
@@ -4539,6 +5339,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#startTime</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW">d a t a p r o p e r t i e s t o r e v i e w</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#HeadingInterval"
@@ -4561,6 +5367,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#stopPlaceNumber</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW">d a t a p r o p e r t i e s t o r e v i e w</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#StopPlace" title="https://w3id.org/transmodel/journeys#StopPlace">StopPlace</a>
@@ -4582,6 +5394,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#time</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW">d a t a p r o p e r t i e s t o r e v i e w</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#JourneyPatternLayover"
@@ -4617,6 +5435,12 @@ may be recorded.</a>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW">d a t a p r o p e r t i e s t o r e v i e w</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#TimingPoint"
@@ -4640,6 +5464,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#timingLinkPointSequence</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW">d a t a p r o p e r t i e s t o r e v i e w</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#TimingPoint"
@@ -4654,6 +5484,28 @@ may be recorded.</a>
          </dl>
       </div>
    </div>
+   <div class="entity" id="timingLinkInJourneyPattern">
+      <h3>timingLinkInJourneyPattern<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW">d a t a p r o p e r t i e s t o r e v i e w</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#timingLinkInJourneyPattern">object property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="waitTime">
       <h3>waitTime<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -4663,6 +5515,12 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#waitTime</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW">d a t a p r o p e r t i e s t o r e v i e w</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#JourneyPattern"
@@ -4703,6 +5561,10 @@ may be recorded.</a>
             title="https://w3id.org/transmodel/journeys#CorridorService">CorridorService</a>
       </li>
       <li>
+         <a href="#https://w3id.org/transmodel/kos/journeys/day-type"
+            title="https://w3id.org/transmodel/kos/journeys/day-type">day type</a>
+      </li>
+      <li>
          <a href="#DefaultInterchangeStandard"
             title="https://w3id.org/transmodel/journeys#DefaultInterchangeStandard">DefaultInterchangeMaximum</a>
       </li>
@@ -4715,9 +5577,15 @@ may be recorded.</a>
             title="https://w3id.org/transmodel/journeys#DepartureTime">DepartureTime</a>
       </li>
       <li>
-         <a href="#https://w3id.org/transmodel/kos/journeys/DirectionType"
-            title="https://w3id.org/transmodel/kos/journeys/DirectionType">
+         <a href="#https://w3id.org/transmodel/kos/journeys/direction-type"
+            title="https://w3id.org/transmodel/kos/journeys/direction-type">
             <span>direction type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/journeys/entrance-type"
+            title="https://w3id.org/transmodel/kos/journeys/entrance-type">
+            <span>entrance type</span>
          </a>
       </li>
       <li>
@@ -4757,9 +5625,15 @@ may be recorded.</a>
          <a href="#Gondola" title="https://w3id.org/transmodel/journeys#Gondola">Gondola</a>
       </li>
       <li>
-         <a href="#https://w3id.org/transmodel/kos/journeys/JourneyType"
-            title="https://w3id.org/transmodel/kos/journeys/JourneyType">
-            <span>journey type</span>
+         <a href="#https://w3id.org/transmodel/kos/journeys/interchange-weighting-type"
+            title="https://w3id.org/transmodel/kos/journeys/interchange-weighting-type">
+            <span>interchange weighting type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/journeys/limited-use-type"
+            title="https://w3id.org/transmodel/kos/journeys/limited-use-type">
+            <span>limited use type</span>
          </a>
       </li>
       <li>
@@ -4795,6 +5669,12 @@ may be recorded.</a>
          </a>
       </li>
       <li>
+         <a href="#https://w3id.org/transmodel/kos/journeys/quay-type"
+            title="https://w3id.org/transmodel/kos/journeys/quay-type">
+            <span>quay type</span>
+         </a>
+      </li>
+      <li>
          <a href="#Rail" title="https://w3id.org/transmodel/journeys#Rail">Rail</a>
       </li>
       <li>
@@ -4808,8 +5688,14 @@ may be recorded.</a>
          <a href="#Saturday" title="https://w3id.org/transmodel/journeys#Saturday">Saturday</a>
       </li>
       <li>
-         <a href="#https://w3id.org/transmodel/kos/journeys/StopUseType"
-            title="https://w3id.org/transmodel/kos/journeys/StopUseType">
+         <a href="#https://w3id.org/transmodel/kos/journeys/stop-place-component-type"
+            title="https://w3id.org/transmodel/kos/journeys/stop-place-component-type">
+            <span>stop place component type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/journeys/stop-use-type"
+            title="https://w3id.org/transmodel/kos/journeys/stop-use-type">
             <span>stop use type</span>
          </a>
       </li>
@@ -4918,6 +5804,25 @@ may be recorded.</a>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#CorridorService</p>
    </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/journeys/day-type">
+      <h3>day type<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/journeys/day-type</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme where all the codelists for the types of datatype properties that are included in the Transmodel ontology</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="DefaultInterchangeStandard">
       <h3>DefaultInterchangeMaximum<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -4966,15 +5871,34 @@ may be recorded.</a>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://w3id.org/transmodel/kos/journeys/DirectionType">
+   <div class="entity" id="https://w3id.org/transmodel/kos/journeys/direction-type">
       <h3>direction type<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/kos/journeys/DirectionType</p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/journeys/direction-type</p>
       <div class="comment">
          <span class="markdown">Concept scheme for types of directions (inbound, outbound, clockwise, anticlockwise)</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/journeys/entrance-type">
+      <h3>entrance type<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/journeys/entrance-type</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme where all the codelists for the types of entrance types that are included in the Transmodel ontology</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -5032,13 +5956,6 @@ may be recorded.</a>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Friday</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#DayOfWeek" title="https://w3id.org/transmodel/journeys#DayOfWeek">DayOfWeek</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="FromOriginToSSP">
       <h3>from origin to s s p<sup class="type-ni" title="named individual">ni</sup>
@@ -5102,15 +6019,34 @@ may be recorded.</a>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://w3id.org/transmodel/kos/journeys/JourneyType">
-      <h3>journey type<sup class="type-ni" title="named individual">ni</sup>
+   <div class="entity" id="https://w3id.org/transmodel/kos/journeys/interchange-weighting-type">
+      <h3>interchange weighting type<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/kos/journeys/JourneyType</p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/journeys/interchange-weighting-type</p>
       <div class="comment">
-         <span class="markdown">Concept scheme where all the codelists for the types of journeys that are included in the Transmodel ontology</span>
+         <span class="markdown">Concept scheme where all the codelists for the types of interchange weighting types that are included in the Transmodel ontology</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/journeys/limited-use-type">
+      <h3>limited use type<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/journeys/limited-use-type</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme where all the codelists for the types of limited use that are included in the Transmodel ontology</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -5160,13 +6096,6 @@ may be recorded.</a>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Monday</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#DayOfWeek" title="https://w3id.org/transmodel/journeys#DayOfWeek">DayOfWeek</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="OneDirection">
       <h3>OneDirection<sup class="type-ni" title="named individual">ni</sup>
@@ -5223,6 +6152,25 @@ may be recorded.</a>
          </dd>
       </dl>
    </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/journeys/quay-type">
+      <h3>quay type<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/journeys/quay-type</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme where all the codelists for the types of quay types that are included in the Transmodel ontology</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Rail">
       <h3>Rail<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -5262,23 +6210,35 @@ may be recorded.</a>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Saturday</p>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/journeys/stop-place-component-type">
+      <h3>stop place component type<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/journeys/stop-place-component-type</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme where all the codelists for the types of stop place component types that are included in the Transmodel ontology</span>
+      </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#DayOfWeek" title="https://w3id.org/transmodel/journeys#DayOfWeek">DayOfWeek</a>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://w3id.org/transmodel/kos/journeys/StopUseType">
+   <div class="entity" id="https://w3id.org/transmodel/kos/journeys/stop-use-type">
       <h3>stop use type<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/kos/journeys/StopUseType</p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/journeys/stop-use-type</p>
       <div class="comment">
-         <span class="markdown">Concept scheme  for types of use of stops (e.g., access, interchange only, pass through)</span>
+         <span class="markdown">Concept scheme  for types of use of stops (e.g., access, interchange only, pass through or non boarding alighting)</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -5296,13 +6256,6 @@ may be recorded.</a>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Sunday</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#DayOfWeek" title="https://w3id.org/transmodel/journeys#DayOfWeek">DayOfWeek</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="Thursday">
       <h3>Thursday<sup class="type-ni" title="named individual">ni</sup>
@@ -5311,13 +6264,6 @@ may be recorded.</a>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Thursday</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#DayOfWeek" title="https://w3id.org/transmodel/journeys#DayOfWeek">DayOfWeek</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="Tram">
       <h3>Tram<sup class="type-ni" title="named individual">ni</sup>
@@ -5342,13 +6288,6 @@ may be recorded.</a>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Tuesday</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#DayOfWeek" title="https://w3id.org/transmodel/journeys#DayOfWeek">DayOfWeek</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="virtualLineService">
       <h3>VirtualLineService<sup class="type-ni" title="named individual">ni</sup>
@@ -5396,13 +6335,6 @@ may be recorded.</a>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Wednesday</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#DayOfWeek" title="https://w3id.org/transmodel/journeys#DayOfWeek">DayOfWeek</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="WeekdayInSchoolHolidays">
       <h3>WeekdayInSchoolHolidays<sup class="type-ni" title="named individual">ni</sup>
@@ -5411,13 +6343,6 @@ may be recorded.</a>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#WeekdayInSchoolHolidays</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#DayType" title="https://w3id.org/transmodel/journeys#DayType">DayType</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
