@@ -1,0 +1,36 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://w3id.org/transmodel/kos/journeys/mobility-limitation> a skos:ConceptScheme ;
+    skos:notation "mobility-limitation" ;
+    dcterms:creator "Adolfo Antón Bravo (OEG - Universidad Politécnica de Madrid)"@es ;
+    determs:date "2019-11-20"@es ;
+    dcterms:description "Enumeration of Mobility Limitation"@en ;
+    dcterms:title "Mobility Limitation Enumeration"@en ;
+    skos:definition "Mobility Limitation Type"@en ;
+    dc:title "Allowed values for Mobility Limitation"@en ;
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/mobility-limitation/wheelchair-access> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/mobility-limitation/step-free-access> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/mobility-limitation/escalator-free-access> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/mobility-limitation/lift-free-access> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/mobility-limitation/audible-signals-available> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/mobility-limitation/visual-signs-available> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/mobility-limitation/guide-dog-access> .
+
+<https://w3id.org/transmodel/kos/journeys/mobility-limitation/wheelchair-access> skos:inScheme <https://w3id.org/transmodel/kos/journeys/mobility-limitation> .
+
+<https://w3id.org/transmodel/kos/journeys/mobility-limitation/step-free-access> skos:inScheme <https://w3id.org/transmodel/kos/journeys/mobility-limitation> .
+
+<https://w3id.org/transmodel/kos/journeys/mobility-limitation/escalator-free-access> skos:inScheme <https://w3id.org/transmodel/kos/journeys/mobility-limitation> .
+
+<https://w3id.org/transmodel/kos/journeys/mobility-limitation/lift-free-access> skos:inScheme <https://w3id.org/transmodel/kos/journeys/mobility-limitation> .
+
+<https://w3id.org/transmodel/kos/journeys/mobility-limitation/audible-signals-available> skos:inScheme <https://w3id.org/transmodel/kos/journeys/mobility-limitation> .
+
+<https://w3id.org/transmodel/kos/journeys/mobility-limitation/visual-signs-available> skos:inScheme <https://w3id.org/transmodel/kos/journeys/mobility-limitation> .
+
+<https://w3id.org/transmodel/kos/journeys/mobility-limitation/guide-dog-access> skos:inScheme <https://w3id.org/transmodel/kos/journeys/mobility-limitation> .
