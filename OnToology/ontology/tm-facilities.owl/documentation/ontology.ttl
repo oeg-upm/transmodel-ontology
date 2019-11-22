@@ -105,6 +105,12 @@ xsd:string owl:equivalentClass xsd:duration .
 :OBJECTPROPERTIESTOREVIEW rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/transmodel/facilities#accessedBy
+:accessedBy rdf:type owl:ObjectProperty ;
+            rdfs:comment "This property sets the relationship between Site and Entrance"@en ;
+            rdfs:label "accessed by"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#accessibilityAssessment
 :accessibilityAssessment rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf owl:topObjectProperty ;
@@ -118,7 +124,6 @@ xsd:string owl:equivalentClass xsd:duration .
 :accessibilityLimitation rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                          rdfs:domain :Facility ;
-                         rdfs:range :AccessibilityLimitation ;
                          rdfs:label "accessibilityLimitation"@en .
 
 
@@ -221,6 +226,19 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
                    rdfs:label "comprises facility"@en .
 
 
+###  https://w3id.org/transmodel/facilities#concernedBy
+:concernedBy rdf:type owl:ObjectProperty ;
+             rdfs:range :FacilitySet ;
+             rdfs:comment "This property allows connecting any object with a Facility Set"@en ;
+             rdfs:label "concerned by"@en .
+
+
+###  https://w3id.org/transmodel/facilities#containing
+:containing rdf:type owl:ObjectProperty ;
+            rdfs:comment "This property allows specifying that a Stop contains Quays"@en ;
+            rdfs:label "containing"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#couchetteFacility
 :couchetteFacility rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :facilityType ;
@@ -247,6 +265,14 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
                     rdfs:label "destinationDisplay"@en .
 
 
+###  https://w3id.org/transmodel/facilities#determining
+:determining rdf:type owl:ObjectProperty ;
+             rdfs:domain :AccessibilityAssessment ;
+             rdfs:range :AccessibilityLimitation ;
+             rdfs:comment "This property sets the relationship between Accessibility Assessment and Accessibility Limitation"@en ;
+             rdfs:label "determining"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#displayAssignment
 :displayAssignment rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
@@ -269,7 +295,7 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
                             rdf:type owl:Class
                           ] ;
                rdfs:comment "This property is used to link an equipment with the types of equipments available in the SKOS concept scheme of types of equipments"@en ;
-               rdfs:label "equipment type"@en .
+               rdfs:label "equipment Type"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#equippedWith
@@ -278,7 +304,7 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
               rdfs:range :Equipment ;
               rdfs:comment "TODO: relate it to a more general property for containment and partOf"@en ,
                            "This property is used to define the equipments that are available in an equipment place"@en ;
-              rdfs:label "equippedWith"@en .
+              rdfs:label "equipped With"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#facilityRequirement
@@ -293,8 +319,6 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
 ###  https://w3id.org/transmodel/facilities#facilitySet
 :facilitySet rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
-             rdfs:domain :VehicleType ;
-             rdfs:range :Facility ;
              rdfs:comment "Set of Facilities available for a ServiceJourney or a JourneyPart. The set may be available only for a specific VehicleType within the service (e.g. carriage equipped with low floor)"@en ;
              rdfs:label "facilitySet"@en .
 
@@ -329,6 +353,12 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
            rdfs:comment "TODO: create the list of allowed values for fare classes, and check whether including it as a facility type, as included in the TransModel model"@en ,
                         "This property relates an Onboard Stay or an Accommodation, among others, with a class of fares, whose allowed values are defined in the TransModel Common Facility Values (Figure 290, page 454)"@en ;
            rdfs:label "fare class"@en .
+
+
+###  https://w3id.org/transmodel/facilities#in
+:in rdf:type owl:ObjectProperty ;
+    rdfs:comment "This property sets the relationship between something and other thing contained in the first (e.g., a Quay is in a Stop Place)"@en ;
+    rdfs:label "in"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#isUsedBy
@@ -408,7 +438,6 @@ In the TransModel UML model and in the Netex implementation this is expressed as
 ###  https://w3id.org/transmodel/facilities#stopPlaceComponent
 :stopPlaceComponent rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
-                    rdfs:domain :StopPlace ;
                     rdfs:range :StopPlaceComponent ;
                     rdfs:label "stopPlaceComponent"@en .
 
@@ -416,7 +445,6 @@ In the TransModel UML model and in the Netex implementation this is expressed as
 ###  https://w3id.org/transmodel/facilities#stopPlaceEntrance
 :stopPlaceEntrance rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
-                   rdfs:domain :StopPlace ;
                    rdfs:range :AccessEquipment ;
                    rdfs:comment "A physical entrance or exit to/from a StopPlace for a Passenger. May be a door, barrier, gate other recognizable point of access"@en ,
                                 "stopPlaceEntrance"@en .
@@ -562,6 +590,21 @@ In the TransModel UML model and in the Netex implementation this is expressed as
                           rdfs:label "validityConditionDefines"@en .
 
 
+###  https://w3id.org/transmodel/facilities#wheelchairAccess
+:wheelchairAccess rdf:type owl:ObjectProperty ;
+                  rdfs:domain :AccessibilityLimitation ;
+                  rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                      owl:hasValue <https://w3id.org/transmodel/kos/journeys/mobility-limitation>
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+                  rdfs:comment "This property sets the relationaship between Accessibility Limitation and the kos wheelchair-access"@en ;
+                  rdfs:label "wheelchair Access"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#hasAServiceJourneyPattern
 <https://w3id.org/transmodel/journeys#hasAServiceJourneyPattern> rdf:type owl:ObjectProperty ;
                                                                  rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
@@ -595,6 +638,14 @@ In the TransModel UML model and in the Netex implementation this is expressed as
                     rdfs:domain :Facility ;
                     rdfs:range xsd:boolean ;
                     rdfs:label "activatedEquipment"@en .
+
+
+###  https://w3id.org/transmodel/facilities#borderCrossingPoint
+:borderCrossingPoint rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :StopPlace ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:comment "This property allows establishing whether a Stop Place is a border crossing point or not."@en ;
+                     rdfs:label "border crossing point"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#constraintThroughput
@@ -635,22 +686,6 @@ In the TransModel UML model and in the Netex implementation this is expressed as
            rdfs:range xsd:boolean ;
            rdfs:comment "Characteristic of a Service that is free to use it"@en ;
            rdfs:label "freeToUse"@en .
-
-
-###  https://w3id.org/transmodel/facilities#latitude
-:latitude rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf :DATAPROPERTIESTOREVIEW ;
-          rdfs:domain <https://w3id.org/transmodel/journeys#Point> ;
-          rdfs:range rdfs:Literal ;
-          rdfs:label "latitude"@en .
-
-
-###  https://w3id.org/transmodel/facilities#longitude
-:longitude rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf :DATAPROPERTIESTOREVIEW ;
-           rdfs:domain <https://w3id.org/transmodel/journeys#Point> ;
-           rdfs:range rdfs:Literal ;
-           rdfs:label "longitude"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#outOfService
@@ -712,16 +747,19 @@ In the TransModel UML model and in the Netex implementation this is expressed as
 
 ###  https://w3id.org/transmodel/facilities#AccessibilityAssessment
 :AccessibilityAssessment rdf:type owl:Class ;
-                         rdfs:comment "TODO: Determine whether this concept should be moved to another module of the Transmodel ontology"@en ,
-                                      "The accessibility characteristics of an Entity (facility)  used by Passenger such as a Stop Place or a Stop Place Component. Described by AccessibilityLimitations and/or a set of Suitabilities"@en ;
-                         rdfs:label "AccessibilityAssessment"@en .
+                         rdfs:comment "The accessibility characteristics of an Entity (facility)  used by Passenger such as a Stop Place or a Stop Place Component. Described by AccessibilityLimitations and/or a set of Suitabilities"@en ;
+                         rdfs:label "Accessibility Assessment"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#AccessibilityLimitation
 :AccessibilityLimitation rdf:type owl:Class ;
-                         rdfs:subClassOf :THINGSTOREVIEW ;
-                         rdfs:comment "A categorisation of the accessibility characteristics of a site"@en ;
-                         rdfs:label "AccessibilityLimitation"@en .
+                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty :determining ;
+                                           owl:allValuesFrom :AccessibilityLimitation
+                                         ] ;
+                         rdfs:comment """A categorisation of the accessibility characteristics of a Site, e.g. a Stop Place or a Stop Place Component to indicate its usability by passengers with specific needs, for example, those needing wheelchair access, step-free access or wanting to avoid confined spaces such as lifts. 
+A small number of well-defined categories are used that are chosen to allow the consistent capture of data and the efficient computation of routes for different classes of user."""@en ;
+                         rdfs:label "Accessibility Limitation"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#Accommodation
@@ -975,6 +1013,12 @@ In the TransModel UML model and in the Netex implementation this is expressed as
                  rdfs:label "EncumbranceNeed"@en .
 
 
+###  https://w3id.org/transmodel/facilities#Entrance
+:Entrance rdf:type owl:Class ;
+          rdfs:comment "A physical entrance or exit to/from a Site. May be a door, barrier, gate or other recognizable Point of Access."@en ;
+          rdfs:label "Entrance"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#EntranceEquipment
 :EntranceEquipment rdf:type owl:Class ;
                    rdfs:subClassOf :AccessEquipment ;
@@ -1082,6 +1126,13 @@ The terms used for relating a facility set to the facilities and equipment are C
                           "TODO: Add a restriction in subclassof for :providedBy only org:Organization"@en ,
                           "TODO: Transmodel also identifies as a potential restriction the assignment of 0 to N validity conditions to the Facility Set, but this has not been yet modelled"@en ;
              rdfs:label "Facility Set"@en .
+
+
+###  https://w3id.org/transmodel/facilities#FlexibleStopPlace
+:FlexibleStopPlace rdf:type owl:Class ;
+                   rdfs:subClassOf :StopPlace ;
+                   rdfs:comment "A specialisation of the Stop Place describing a stop of a Flexible Service. It may be composed of Flexible Areas or Hail and Ride Areas identifying the catchment areas for flexible services (when they use areas or flexible quays). Some Flexible Places also use regular Stop Places for their stops. When assigned to a Scheduled Stop Point the corresponding Scheduled Stop Point is supposed to be a Zone (the centroid point of the Zone being the Scheduled Stop Point)."@en ;
+                   rdfs:label "Flexible Stop Place"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#FreeWifi
@@ -1402,6 +1453,22 @@ Accessible by Passenger but without direct access to Vehicles"""@en ;
                    rdfs:label "PostOfficeService"@en .
 
 
+###  https://w3id.org/transmodel/facilities#Quay
+:Quay rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :comprises ;
+                        owl:allValuesFrom :Quay
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :in ;
+                        owl:allValuesFrom :StopPlace
+                      ] ;
+      rdfs:comment """A place such as platform, stance, or quayside where passengers have access to public transport vehicles, taxi, cars or other means of transportation. A Quay may serve one or more Vehicle Stopping Places and be associated with one or more Scheduled Stop Points. 
+
+A Quay may contain other sub Quays"""@en ;
+      rdfs:label "Quay"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#QueuingEquipment
 :QueuingEquipment rdf:type owl:Class ;
                   rdfs:subClassOf :AccessEquipment ;
@@ -1512,8 +1579,11 @@ It can also include information about the accommodation on board, which can be r
 
 ###  https://w3id.org/transmodel/facilities#Site
 :Site rdf:type owl:Class ;
-      rdfs:comment "A well known Place to which Passengers may refer to indicate the origin or a destination of a Trip"@en ,
-                   "TODO: Check whether we should move this one to another module"@en ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :concernedBy ;
+                        owl:allValuesFrom :FacilitySet
+                      ] ;
+      rdfs:comment "A well known Place to which Passengers may refer to indicate the origin or a destination of a Trip"@en ;
       rdfs:label "Site"@en .
 
 
@@ -1577,9 +1647,24 @@ It can also include information about the accommodation on board, which can be r
 
 ###  https://w3id.org/transmodel/facilities#StopPlace
 :StopPlace rdf:type owl:Class ;
-           rdfs:subClassOf :THINGSTOREVIEW ;
-           rdfs:comment "A place comprising one or more locations where Vehicles may stop and where passengers may board or leave Vehicles or prepare their Trip. A StopPlace will usually have one or more wellknown names."@en ;
-           rdfs:label "StopPlace"@en .
+           rdfs:subClassOf :Site ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :accessedBy ;
+                             owl:allValuesFrom :StopPlaceEntrance
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :containing ;
+                             owl:allValuesFrom :Quay
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :borderCrossingPoint ;
+                             owl:allValuesFrom xsd:boolean
+                           ] ;
+           rdfs:comment "A place comprising one or more locations where Vehicles may stop and where passengers may board or leave Vehicles or prepare their Trip. A Stop Place will usually have one or more well-known names."@en ,
+                        "TODO: Add Stop Place Components to the Stop Place, if considered useful."@en ,
+                        "TODO: Add Stop Place Type as a SKOS Concept Scheme, and connect it to such concept scheme via an object property"@en ,
+                        "TODO: If considered relevant, add connections from this class to the classes Point of Interest (this stop place services such Point of Interest) and to the class StopPlaceVehicleEntrance (this stop place is entered through an entrance - typical in an interchange area)."@en ;
+           rdfs:label "Stop Place"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#StopPlaceComponent
@@ -1587,6 +1672,13 @@ It can also include information about the accommodation on board, which can be r
                     rdfs:subClassOf :THINGSTOREVIEW ;
                     rdfs:comment "An element of a StopPlace describing part of its structure. StopPlaceComponent share common properties for data management, accessibility and other features"@en ;
                     rdfs:label "StopPlaceComponent"@en .
+
+
+###  https://w3id.org/transmodel/facilities#StopPlaceEntrance
+:StopPlaceEntrance rdf:type owl:Class ;
+                   rdfs:subClassOf :Entrance ;
+                   rdfs:comment "A physical Entrance or Exit to/from a Stop Place for a Passenger. May be a door, barrier, gate or other recognizable point of access."@en ;
+                   rdfs:label "Stop Place Entrance"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#StopPlaceSpace
@@ -1730,6 +1822,17 @@ It can also include information about the accommodation on board, which can be r
              rdfs:label "VehicleModel"@en .
 
 
+###  https://w3id.org/transmodel/facilities#VehicleStoppingPlace
+:VehicleStoppingPlace rdf:type owl:Class ;
+                      rdfs:subClassOf :THINGSTOREVIEW ;
+                      rdfs:comment """A place on the vehicle track where vehicles stop in order for passengers to board or alight from a vehicle.
+
+A vehicle track is located on the respective infrastructure link for the mode (railway element of railway network, road element of road network, etc.).
+
+A vehicle stopping place may be served by one or more quays."""@en ;
+                      rdfs:label "Vehicle Stopping Place"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#VehicleType
 :VehicleType rdf:type owl:Class ;
              rdfs:subClassOf :THINGSTOREVIEW ;
@@ -1789,8 +1892,9 @@ It can also include information about the accommodation on board, which can be r
 ###  https://w3id.org/transmodel/journeys#Service
 <https://w3id.org/transmodel/journeys#Service> rdf:type owl:Class ;
                                                rdfs:subClassOf :THINGSTOREVIEW ;
-                                               rdfs:comment "A ServiceJourney is a Passenger carrying VehicleJourney for one specified DayType. The pattern of working is in principle defined by a ServiceJourneyPattern."@en ;
-                                               rdfs:label "ServiceJourney"@en .
+                                               rdfs:comment "A ServiceJourney is a Passenger carrying VehicleJourney for one specified DayType. The pattern of working is in principle defined by a ServiceJourneyPattern."@en ,
+                                                            "TODO: To remove once that we are sure that we are not breaking anything" ;
+                                               rdfs:label "Service"@en .
 
 
 #################################################################
@@ -1798,8 +1902,7 @@ It can also include information about the accommodation on board, which can be r
 #################################################################
 
 ###  https://w3id.org/transmodel/facilities#accessible
-:accessible rdf:type owl:NamedIndividual ,
-                     :AccessibilityLimitation .
+:accessible rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#audioNavigator
@@ -2001,8 +2104,7 @@ It can also include information about the accommodation on board, which can be r
 
 
 ###  https://w3id.org/transmodel/facilities#lift
-:lift rdf:type owl:NamedIndividual ,
-               :AccessibilityAssessment .
+:lift rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#lineName
@@ -2012,8 +2114,7 @@ It can also include information about the accommodation on board, which can be r
 
 
 ###  https://w3id.org/transmodel/facilities#lowFloor
-:lowFloor rdf:type owl:NamedIndividual ,
-                   :AccessibilityAssessment ;
+:lowFloor rdf:type owl:NamedIndividual ;
           rdfs:label "lowFloor"@en .
 
 
@@ -2038,8 +2139,7 @@ It can also include information about the accommodation on board, which can be r
 
 
 ###  https://w3id.org/transmodel/facilities#nonAccessible
-:nonAccessible rdf:type owl:NamedIndividual ,
-                        :AccessibilityLimitation .
+:nonAccessible rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#outgoingCustoms
@@ -2115,8 +2215,7 @@ It can also include information about the accommodation on board, which can be r
 
 
 ###  https://w3id.org/transmodel/facilities#stepFree
-:stepFree rdf:type owl:NamedIndividual ,
-                   :AccessibilityAssessment ;
+:stepFree rdf:type owl:NamedIndividual ;
           rdfs:label "stepFree"@en .
 
 
@@ -2158,8 +2257,7 @@ It can also include information about the accommodation on board, which can be r
 
 
 ###  https://w3id.org/transmodel/facilities#wheelchair
-:wheelchair rdf:type owl:NamedIndividual ,
-                     :AccessibilityAssessment .
+:wheelchair rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/transmodel/facilities#wheelchairAccessToilet
@@ -2184,7 +2282,12 @@ It can also include information about the accommodation on board, which can be r
                                                           rdfs:comment "Concept scheme where all the codelists for the types of facilities that are included in the Transmodel ontology"@en .
 
 
-_:genid104 :mbox "adolfo.anton.bravo@upm.es"@en ;
+###  https://w3id.org/transmodel/kos/journeys/mobility-limitation
+<https://w3id.org/transmodel/kos/journeys/mobility-limitation> rdf:type owl:NamedIndividual ;
+                                                               rdfs:comment "List of concepts regarding Mobility Limitation defined in kos/journeys/mobility-limitation"@en .
+
+
+_:genid115 :mbox "adolfo.anton.bravo@upm.es"@en ;
            :name "Adolfo Anton-Bravo"@en .
 
 #################################################################
