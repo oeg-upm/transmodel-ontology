@@ -1,47 +1,47 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/transmodel/authorities#"
      xml:base="https://w3id.org/transmodel/authorities"
+     xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
      xmlns:cc="http://creativecommons.org/ns#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:org="http://www.w3.org/ns/org#"
+     xmlns:tmauth="https://w3id.org/transmodel/authorities#"
+     xmlns:tmkosjourney="https://w3id.org/transmodel/kos/journeys/"
+     xmlns:tmkos="https://w3id.org/transmodel/kos/"
+     xmlns:tmfare="https://w3id.org/transmodel/fares#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:org="http://www.w3.org/ns/org#"
+     xmlns:tmcommons="https://w3id.org/transmodel/commons#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:tmkosauthority="https://w3id.org/transmodel/kos/authorities/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:tmkosfare="https://w3id.org/transmodel/kos/fares/"
+     xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/"
+     xmlns:tmfac="https://w3id.org/transmodel/facilities#"
      xmlns:time="http://www.w3.org/2006/time#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:tmfac="https://w3id.org/transmodel/facilities#"
-     xmlns:tmkos="https://w3id.org/transmodel/kos/"
-     xmlns:tmauth="https://w3id.org/transmodel/authorities#"
-     xmlns:tmfare="https://w3id.org/transmodel/fares#"
-     xmlns:tmcommons="https://w3id.org/transmodel/commons#"
-     xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
-     xmlns:tmkosfare="https://w3id.org/transmodel/kos/fares/"
-     xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/"
-     xmlns:tmkosjourney="https://w3id.org/transmodel/kos/journeys/"
-     xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/"
-     xmlns:tmkosauthority="https://w3id.org/transmodel/kos/authorities/">
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/transmodel/authorities#">
         <owl:versionIRI rdf:resource="https://w3id.org/transmodel/authorities/0.2"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
+        <dc:identifier>https://w3id.org/transmodel/authorities</dc:identifier>
+        <rdfs:comment xml:lang="en">TODO: Check whether this ontology should be better renamed to Organisations, as it refers to more things than authorities.</rdfs:comment>
         <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <dc:creator>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:description xml:lang="en">Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</dc:description>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/authorities#"/>
         <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:date>2019-10-06</dc:date>
-        <dc:description xml:lang="en">Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</dc:description>
-        <dc:identifier>https://w3id.org/transmodel/authorities</dc:identifier>
-        <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
-        <dc:title xml:lang="en">Transmodel Ontology - Authorities</dc:title>
-        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/facilities#"/>
-        <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
-        <rdfs:comment xml:lang="en">TODO: Check whether this ontology should be better renamed to Organisations, as it refers to more things than authorities.</rdfs:comment>
-        <rdfs:label xml:lang="en">Transmodel Ontology - Authorities</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://github.com/oeg-upm/transmodel-ontology</rdfs:seeAlso>
+        <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
+        <dc:creator>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <owl:versionInfo xml:lang="en">This is the initial version of the module on Authorities, after considering the UML models and XSD descriptions of Transmodel and NeTEx</owl:versionInfo>
+        <rdfs:label xml:lang="en">Transmodel Ontology - Authorities</rdfs:label>
+        <dc:title xml:lang="en">Transmodel Ontology - Authorities</dc:title>
+        <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
     </owl:Ontology>
     
 
@@ -175,12 +175,6 @@
     
 
 
-    <!-- https://w3id.org/transmodel/authorities#TOBECHECKED -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/authorities#TOBECHECKED"/>
-    
-
-
     <!-- https://w3id.org/transmodel/authorities#characterisedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/authorities#characterisedBy">
@@ -193,57 +187,12 @@
     
 
 
-    <!-- https://w3id.org/transmodel/authorities#describedThrough -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/authorities#describedThrough">
-        <rdfs:subPropertyOf rdf:resource="http://schema.org/contactPoint"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#ContactDetails"/>
-        <rdfs:comment xml:lang="en">TODO: add as domain :DistributionChannel if it makes sense</rdfs:comment>
-        <rdfs:comment xml:lang="en">This property relates a Distribution Channel with its corresponding Contact Details. It is a subproperty of schema:contactPoint, which relates anything to a ContactPoint</rdfs:comment>
-        <rdfs:label xml:lang="en">described through</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#distributionChannelType -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/authorities#distributionChannelType">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#DistributionChannel"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/transmodel/kos/authorities/DistributionChannelType"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:label xml:lang="en">This property assigns to a Distribution Channel one or several SKOS Concepts from the codelist on types of distribution channels</rdfs:label>
-        <rdfs:label xml:lang="en">distribution channel type</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#governedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/authorities#governedBy">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#DistributionChannel"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#Organisation"/>
-        <rdfs:comment xml:lang="en">This property relates a Distribution Channel to the Organisation that takes responsability over it</rdfs:comment>
-        <rdfs:label xml:lang="en">governed by</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/transmodel/authorities#operatesInAdministrativeZone -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/authorities#operatesInAdministrativeZone">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/authorities#TOBECHECKED"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#Operator"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#AdministrativeZone"/>
-        <rdfs:label xml:lang="en">operatesInAdministrativeZone</rdfs:label>
+        <rdfs:label xml:lang="en">operates in administrative zone</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -251,10 +200,8 @@
     <!-- https://w3id.org/transmodel/authorities#providesService -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/authorities#providesService">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/authorities#TOBECHECKED"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#Organisation"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#ServiceArea"/>
-        <rdfs:label xml:lang="en">providesService</rdfs:label>
+        <rdfs:label xml:lang="en">provides service</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -267,16 +214,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#TOBECHECKED_parkingCapacity -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/authorities#TOBECHECKED_parkingCapacity">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/authorities#Parking"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
-        <rdfs:label xml:lang="en">parkingCapacity</rdfs:label>
-    </owl:DatatypeProperty>
     
 
 
@@ -323,9 +260,9 @@
     <!-- https://w3id.org/transmodel/authorities#AdministrativeZone -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/authorities#AdministrativeZone">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#Zone"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#Zone"/>
         <rdfs:comment xml:lang="en">The area of a district, a region, a city, a municipality or other area with which an Organization has a responsability role.</rdfs:comment>
-        <rdfs:label xml:lang="en">AdministrativeZone</rdfs:label>
+        <rdfs:label xml:lang="en">Administrative Zone</rdfs:label>
     </owl:Class>
     
 
@@ -361,16 +298,6 @@
     
 
 
-    <!-- https://w3id.org/transmodel/authorities#CrewBase -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#CrewBase">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#TOBECHECKED"/>
-        <rdfs:comment xml:lang="en">A place where operating employees (e.g. drivers) report on and register their work</rdfs:comment>
-        <rdfs:label xml:lang="en">CrewBase</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/transmodel/authorities#Department -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Department">
@@ -381,58 +308,12 @@
     
 
 
-    <!-- https://w3id.org/transmodel/authorities#DistributionChannel -->
+    <!-- https://w3id.org/transmodel/authorities#ManagementAgent -->
 
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#DistributionChannel">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/transmodel/authorities#describedThrough"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/authorities#ContactDetails"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/transmodel/authorities#distributionChannelType"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-                                <owl:hasValue rdf:resource="https://w3id.org/transmodel/kos/authorities/DistributionChannelType"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/transmodel/authorities#governedBy"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/authorities#Organisation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A type of outlet for selling a product (definition coming from NeTEx)</rdfs:comment>
-        <rdfs:label xml:lang="en">Distribution Channel</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#Employee -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Employee">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#TOBECHECKED"/>
-        <rdfs:label xml:lang="en">Employee</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#GroupOfOperators -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#GroupOfOperators">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#TOBECHECKED"/>
-        <rdfs:comment xml:lang="en">A group of Operator having for instance common schemes for fare collection of passenger information</rdfs:comment>
-        <rdfs:label xml:lang="en">GroupOfOperators</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ManagementAgent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#Organisation"/>
+        <rdfs:comment xml:lang="en">Specialisation of Organisation for Management Agent</rdfs:comment>
+        <rdfs:label xml:lang="en">Management Agent</rdfs:label>
     </owl:Class>
     
 
@@ -520,82 +401,13 @@
     
 
 
-    <!-- https://w3id.org/transmodel/authorities#Parking -->
+    <!-- https://w3id.org/transmodel/authorities#RetailConsortium -->
 
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Parking">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#TOBECHECKED"/>
-        <rdfs:comment xml:lang="en">Designated locations for leaving vehicles such as cars, motorcycles and bicycles.</rdfs:comment>
-        <rdfs:label xml:lang="en">Parking</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#ParkingArea -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ParkingArea">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#ParkingComponent"/>
-        <rdfs:comment xml:lang="en">A marked zone within a Parking containing ParkingBays</rdfs:comment>
-        <rdfs:label xml:lang="en">ParkingArea</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#ParkingBay -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ParkingBay">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#ParkingComponent"/>
-        <rdfs:comment xml:lang="en">A place to park an individual vehicle</rdfs:comment>
-        <rdfs:label xml:lang="en">ParkingBay</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#ParkingComponent -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ParkingComponent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#TOBECHECKED"/>
-        <rdfs:comment xml:lang="en">Generic component of a parking</rdfs:comment>
-        <rdfs:label xml:lang="en">ParkingComponent</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#ParkingEntrance -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ParkingEntrance">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#TOBECHECKED"/>
-        <rdfs:comment xml:lang="en">An entrance to the Parking</rdfs:comment>
-        <rdfs:label xml:lang="en">ParkingEntrance</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#ParkingEntranceForPassengers -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ParkingEntranceForPassengers">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#ParkingEntrance"/>
-        <rdfs:comment xml:lang="en">An entrance to the Parking on foot of other out-of-vehicle mode such as a wheelchair</rdfs:comment>
-        <rdfs:label xml:lang="en">ParkingEntranceForPassengers</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#ParkingEntranceForVehicles -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ParkingEntranceForVehicles">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#ParkingEntrance"/>
-        <rdfs:comment xml:lang="en">An entrance from the road to the Parking for Vehicle</rdfs:comment>
-        <rdfs:label xml:lang="en">ParkingEntranceForVehicles</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#ServiceArea -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ServiceArea">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#TOBECHECKED"/>
-        <rdfs:comment xml:lang="en">Service Area is where the Public Transport Operator operates</rdfs:comment>
-        <rdfs:label xml:lang="en">ServiceArea</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#RetailConsortium">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#Organisation"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#GroupOfEntities"/>
+        <rdfs:comment xml:lang="en">A group of Organisations formally incorporated as a retailer of Fare Products.</rdfs:comment>
+        <rdfs:label xml:lang="en">Retail Consortium</rdfs:label>
     </owl:Class>
     
 
@@ -603,31 +415,32 @@
     <!-- https://w3id.org/transmodel/authorities#ServicedOrganisation -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ServicedOrganisation">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#Organisation"/>
         <rdfs:comment xml:lang="en">A public or private organisation for which public transport services are provided on specific days (DayType), e.g., a school, university or works</rdfs:comment>
         <rdfs:label xml:lang="en">Serviced Organisation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/transmodel/authorities#TOBECHECKED -->
+    <!-- https://w3id.org/transmodel/authorities#TravelAgent -->
 
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#TOBECHECKED"/>
+    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#TravelAgent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#Organisation"/>
+        <rdfs:comment xml:lang="en">Specialisation of Organisation for Travel Agent</rdfs:comment>
+        <rdfs:label xml:lang="en">Travel Agent</rdfs:label>
+    </owl:Class>
     
 
 
-    <!-- https://w3id.org/transmodel/authorities#Zone -->
+    <!-- https://w3id.org/transmodel/commons#GroupOfEntities -->
 
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Zone">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/authorities#TOBECHECKED"/>
-        <rdfs:comment xml:lang="en">A two dimmensional Place within the ServiceArea of an Operator or ServicedOperator. It can be:
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#GroupOfEntities"/>
+    
 
-- AdministrativeZone
-- TariffZone
-- AccessZone
-- ...</rdfs:comment>
-        <rdfs:label xml:lang="en">Zone</rdfs:label>
-    </owl:Class>
+
+    <!-- https://w3id.org/transmodel/commons#Zone -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Zone"/>
     
 
 
@@ -644,9 +457,7 @@
 
     <!-- https://w3id.org/transmodel/kos/authorities/DistributionChannelType -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/authorities/DistributionChannelType">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/authorities/DistributionChannelType"/>
     
 
 
@@ -661,9 +472,7 @@
 
     <!-- https://w3id.org/transmodel/kos/fares/DistributionChannelType -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/DistributionChannelType">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/DistributionChannelType"/>
     <rdf:Description>
         <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
         <name xml:lang="en">Adolfo Anton-Bravo</name>
@@ -672,5 +481,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
