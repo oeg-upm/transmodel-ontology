@@ -1,24 +1,13 @@
 {
   "@context" : {
-    "ParkingComponent" : {
-      "@id" : "https://w3id.org/transmodel/authorities#ParkingComponent"
-    },
-    "ParkingEntrance" : {
-      "@id" : "https://w3id.org/transmodel/authorities#ParkingEntrance"
-    },
-    "describedThrough" : {
-      "@id" : "https://w3id.org/transmodel/authorities#describedThrough",
-      "@type" : "@id"
-    },
-    "governedBy" : {
-      "@id" : "https://w3id.org/transmodel/authorities#governedBy",
-      "@type" : "@id"
-    },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
     "license" : {
       "@id" : "http://creativecommons.org/ns#license"
+    },
+    "GroupOfEntities" : {
+      "@id" : "https://w3id.org/transmodel/commons#GroupOfEntities"
     },
     "Organisation" : {
       "@id" : "https://w3id.org/transmodel/authorities#Organisation"
@@ -61,9 +50,6 @@
       "@id" : "http://www.w3.org/2006/time#timeZone",
       "@type" : "@id"
     },
-    "GroupOfOperators" : {
-      "@id" : "https://w3id.org/transmodel/authorities#GroupOfOperators"
-    },
     "providesService" : {
       "@id" : "https://w3id.org/transmodel/authorities#providesService",
       "@type" : "@id"
@@ -77,14 +63,11 @@
     "name" : {
       "@id" : "https://w3id.org/transmodel/authorities#name"
     },
-    "ParkingBay" : {
-      "@id" : "https://w3id.org/transmodel/authorities#ParkingBay"
-    },
     "ContactPoint" : {
       "@id" : "http://schema.org/ContactPoint"
     },
     "Zone" : {
-      "@id" : "https://w3id.org/transmodel/authorities#Zone"
+      "@id" : "https://w3id.org/transmodel/commons#Zone"
     },
     "rights" : {
       "@id" : "http://purl.org/dc/elements/1.1/rights"
@@ -92,14 +75,14 @@
     "ServicedOrganisation" : {
       "@id" : "https://w3id.org/transmodel/authorities#ServicedOrganisation"
     },
+    "ManagementAgent" : {
+      "@id" : "https://w3id.org/transmodel/authorities#ManagementAgent"
+    },
     "identifier" : {
       "@id" : "http://purl.org/dc/elements/1.1/identifier"
     },
     "AdministrativeZone" : {
       "@id" : "https://w3id.org/transmodel/authorities#AdministrativeZone"
-    },
-    "ParkingArea" : {
-      "@id" : "https://w3id.org/transmodel/authorities#ParkingArea"
     },
     "ConceptScheme" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
@@ -107,37 +90,21 @@
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
     },
-    "ParkingEntranceForPassengers" : {
-      "@id" : "https://w3id.org/transmodel/authorities#ParkingEntranceForPassengers"
-    },
-    "Parking" : {
-      "@id" : "https://w3id.org/transmodel/authorities#Parking"
-    },
     "Operator" : {
       "@id" : "https://w3id.org/transmodel/authorities#Operator"
-    },
-    "Employee" : {
-      "@id" : "https://w3id.org/transmodel/authorities#Employee"
-    },
-    "DistributionChannel" : {
-      "@id" : "https://w3id.org/transmodel/authorities#DistributionChannel"
     },
     "hasUnit" : {
       "@id" : "http://www.w3.org/ns/org#hasUnit",
       "@type" : "@id"
     },
-    "TOBECHECKED_parkingCapacity" : {
-      "@id" : "https://w3id.org/transmodel/authorities#TOBECHECKED_parkingCapacity",
-      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    "RetailConsortium" : {
+      "@id" : "https://w3id.org/transmodel/authorities#RetailConsortium"
     },
     "date" : {
       "@id" : "http://purl.org/dc/elements/1.1/date"
     },
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
-    },
-    "CrewBase" : {
-      "@id" : "https://w3id.org/transmodel/authorities#CrewBase"
     },
     "contactPoint" : {
       "@id" : "http://schema.org/contactPoint",
@@ -150,22 +117,12 @@
       "@id" : "https://w3id.org/transmodel/authorities#language",
       "@type" : "http://www.w3.org/2001/XMLSchema#language"
     },
-    "distributionChannelType" : {
-      "@id" : "https://w3id.org/transmodel/authorities#distributionChannelType",
-      "@type" : "@id"
-    },
-    "ParkingEntranceForVehicles" : {
-      "@id" : "https://w3id.org/transmodel/authorities#ParkingEntranceForVehicles"
-    },
     "characterisedBy" : {
       "@id" : "https://w3id.org/transmodel/authorities#characterisedBy",
       "@type" : "@id"
     },
     "OrganisationPart" : {
       "@id" : "https://w3id.org/transmodel/authorities#OrganisationPart"
-    },
-    "ServiceArea" : {
-      "@id" : "https://w3id.org/transmodel/authorities#ServiceArea"
     },
     "OrganizationalUnit" : {
       "@id" : "http://www.w3.org/ns/org#OrganizationalUnit"
@@ -180,9 +137,8 @@
     "preferredNamespaceUri" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
     },
-    "TOBECHECKED" : {
-      "@id" : "https://w3id.org/transmodel/authorities#TOBECHECKED",
-      "@type" : "@id"
+    "TravelAgent" : {
+      "@id" : "https://w3id.org/transmodel/authorities#TravelAgent"
     },
     "classification" : {
       "@id" : "http://www.w3.org/ns/org#classification",

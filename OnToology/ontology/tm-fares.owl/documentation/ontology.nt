@@ -68,13 +68,70 @@
 # 
 # #################################################################
 # #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/contactPoint
+<http://schema.org/contactPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/transmodel/fares#describedThrough
+<https://w3id.org/transmodel/fares#describedThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/fares#describedThrough> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/contactPoint> .
+<https://w3id.org/transmodel/fares#describedThrough> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/fares#DistributionChannel> .
+<https://w3id.org/transmodel/fares#describedThrough> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/authorities#ContactDetails> .
+<https://w3id.org/transmodel/fares#describedThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "This property relates a Distribution Channel with its corresponding Contact Details. It is a subproperty of schema:contactPoint, which relates anything to a ContactPoint"@en .
+<https://w3id.org/transmodel/fares#describedThrough> <http://www.w3.org/2000/01/rdf-schema#label> "described through"@en .
+# 
+# https://w3id.org/transmodel/fares#distributionChannelType
+<https://w3id.org/transmodel/fares#distributionChannelType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/fares#distributionChannelType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/fares#DistributionChannel> .
+<https://w3id.org/transmodel/fares#distributionChannelType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/fares/DistributionChannelType> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/fares#distributionChannelType> <http://www.w3.org/2000/01/rdf-schema#comment> "This property assigns to a Distribution Channel one or several SKOS Concepts from the codelist on types of distribution channels"@en .
+<https://w3id.org/transmodel/fares#distributionChannelType> <http://www.w3.org/2000/01/rdf-schema#label> "distribution channel type"@en .
+# 
+# https://w3id.org/transmodel/fares#governedBy
+<https://w3id.org/transmodel/fares#governedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/fares#governedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/fares#DistributionChannel> .
+<https://w3id.org/transmodel/fares#governedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/authorities#Organisation> .
+<https://w3id.org/transmodel/fares#governedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "This property relates a Distribution Channel to the Organisation that takes responsability over it"@en .
+<https://w3id.org/transmodel/fares#governedBy> <http://www.w3.org/2000/01/rdf-schema#label> "governed by"@en .
+# 
+# 
+# 
+# #################################################################
+# #
 # #    Classes
 # #
 # #################################################################
 # 
 # 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # http://www.w3.org/2004/02/skos/core#ConceptScheme
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/transmodel/authorities#ContactDetails
+<https://w3id.org/transmodel/authorities#ContactDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/transmodel/authorities#Organisation
+<https://w3id.org/transmodel/authorities#Organisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/transmodel/fares#BookingArrangements
 <https://w3id.org/transmodel/fares#BookingArrangements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -83,18 +140,43 @@
 # 
 # https://w3id.org/transmodel/fares#ClassOfUse
 <https://w3id.org/transmodel/fares#ClassOfUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/fares#ClassOfUse> <http://www.w3.org/2000/01/rdf-schema#comment> "A classification of fare and othe service classes by category of user entitled to use them"@en .
+<https://w3id.org/transmodel/fares#ClassOfUse> <http://www.w3.org/2000/01/rdf-schema#comment> "A classification of fare and other service classes by category of user entitled to use them"@en .
 <https://w3id.org/transmodel/fares#ClassOfUse> <http://www.w3.org/2000/01/rdf-schema#label> "ClassOfUse"@en .
+# 
+# https://w3id.org/transmodel/fares#DistributionChannel
+<https://w3id.org/transmodel/fares#DistributionChannel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/fares#DistributionChannel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#describedThrough> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/authorities#ContactDetails> .
+<https://w3id.org/transmodel/fares#DistributionChannel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#distributionChannelType> .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid9 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/fares/DistributionChannelType> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/fares#DistributionChannel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#governedBy> .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/authorities#Organisation> .
+<https://w3id.org/transmodel/fares#DistributionChannel> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of outlet for selling a Fare Product"@en .
+<https://w3id.org/transmodel/fares#DistributionChannel> <http://www.w3.org/2000/01/rdf-schema#label> "Distribution Channel"@en .
 # 
 # https://w3id.org/transmodel/journeys#FlexibleLine
 <https://w3id.org/transmodel/journeys#FlexibleLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#FlexibleLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Line> .
-<https://w3id.org/transmodel/journeys#FlexibleLine> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of Line for flexible service. As all the service on a Line may not ve flexible, flexibility itself is described at JourneyPattern level, meaning that a separate JourneyPattern is needed for each type of flexibility available for the line"@en .
-<https://w3id.org/transmodel/journeys#FlexibleLine> <http://www.w3.org/2000/01/rdf-schema#label> "FlexibleLine"@en .
 # 
 # https://w3id.org/transmodel/journeys#Line
 <https://w3id.org/transmodel/journeys#Line> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/journeys#Line> <http://www.w3.org/2000/01/rdf-schema#label> "Line"@en .
 # 
 # 
 # 
@@ -105,11 +187,15 @@
 # #################################################################
 # 
 # 
+# https://w3id.org/transmodel/kos/fares/DistributionChannelType
+<https://w3id.org/transmodel/kos/fares/DistributionChannelType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/fares/DistributionChannelType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# 
 # https://w3id.org/transmodel/kos/fares/FareType
 <https://w3id.org/transmodel/kos/fares/FareType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/transmodel/kos/fares/FareType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 <https://w3id.org/transmodel/kos/fares/FareType> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme where all the codelists for the types of fares that are included in the Transmodel ontology"@en .
 # 
-_:genid1 <https://w3id.org/transmodel/fares#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid1 <https://w3id.org/transmodel/fares#name> "Adolfo Anton-Bravo"@en .
+_:genid12 <https://w3id.org/transmodel/fares#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid12 <https://w3id.org/transmodel/fares#name> "Adolfo Anton-Bravo"@en .
 # Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

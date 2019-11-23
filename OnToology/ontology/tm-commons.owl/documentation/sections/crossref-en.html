@@ -19,6 +19,10 @@ may be recorded.</a>
          <a href="#https://w3id.org/transmodel/common#DayType" title="https://w3id.org/transmodel/common#DayType">DayType</a>
       </li>
       <li>
+         <a href="#GroupOfEntities"
+            title="https://w3id.org/transmodel/commons#GroupOfEntities">Group of Entities</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/transmodel/common#HeadingInterval"
             title="https://w3id.org/transmodel/common#HeadingInterval">HeadwayInterval</a>
       </li>
@@ -35,6 +39,9 @@ may be recorded.</a>
       </li>
       <li>
          <a href="#https://w3id.org/transmodel/common#Passenger" title="https://w3id.org/transmodel/common#Passenger">Passenger</a>
+      </li>
+      <li>
+         <a href="#Place" title="https://w3id.org/transmodel/commons#Place">Place</a>
       </li>
       <li>
          <a href="#https://w3id.org/transmodel/common#Point" title="https://w3id.org/transmodel/common#Point">Point</a>
@@ -73,6 +80,9 @@ may be recorded.</a>
       <li>
          <a href="#https://w3id.org/transmodel/common#VehicleJourneyLayover"
             title="https://w3id.org/transmodel/common#VehicleJourneyLayover">VehicleJourneyLayover</a>
+      </li>
+      <li>
+         <a href="#Zone" title="https://w3id.org/transmodel/commons#Zone">Zone</a>
       </li>
    </ul>
    <div class="entity" id="https://w3id.org/transmodel/common#TimingLink">
@@ -138,6 +148,17 @@ may be recorded.<sup class="type-c" title="class">c</sup>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
+   </div>
+   <div class="entity" id="GroupOfEntities">
+      <h3>Group of Entities<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/commons#GroupOfEntities</p>
+      <div class="comment">
+         <span class="markdown">A set of Entities grouped together according to a Purpose of Grouping, e.g. grouping of stops known to the public by a common name.</span>
+      </div>
    </div>
    <div class="entity" id="https://w3id.org/transmodel/common#HeadingInterval">
       <h3>HeadwayInterval<sup class="type-c" title="class">c</sup>
@@ -238,6 +259,24 @@ may be recorded.<sup class="type-c" title="class">c</sup>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/transmodel/common#makesAServiceJourney"
                title="https://w3id.org/transmodel/common#makesAServiceJourney">serviceJourney</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Place">
+      <h3>Place<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/commons#Place</p>
+      <div class="comment">
+         <span class="markdown">A geographic place of any type which may be specified as the origin or destination of a trip. A Place may be represented as a Point (dimension 0), a road section (dimension 1) or a Zone (dimension 2).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Zone" title="https://w3id.org/transmodel/commons#Zone">Zone</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -516,6 +555,28 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
          <dd>
             <a href="#https://w3id.org/transmodel/common#time" title="https://w3id.org/transmodel/common#time">time</a>
             <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Zone">
+      <h3>Zone<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/commons#Zone</p>
+      <div class="comment">
+         <span class="markdown">A two dimensional Place within the Service Area of an Operator or Serviced Operator. It can be:
+- AdministrativeZone
+- TariffZone
+- AccessZone
+- ...</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Place" title="https://w3id.org/transmodel/commons#Place">Place</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>

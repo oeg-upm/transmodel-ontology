@@ -375,6 +375,22 @@
 <https://w3id.org/transmodel/common#VehicleJourneyLayover> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/common#VehicleJourneyLayover> <http://www.w3.org/2000/01/rdf-schema#label> "VehicleJourneyLayover"@en .
 # 
+# https://w3id.org/transmodel/commons#GroupOfEntities
+<https://w3id.org/transmodel/commons#GroupOfEntities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/commons#GroupOfEntities> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of Entities grouped together according to a Purpose of Grouping, e.g. grouping of stops known to the public by a common name."@en .
+<https://w3id.org/transmodel/commons#GroupOfEntities> <http://www.w3.org/2000/01/rdf-schema#label> "Group of Entities"@en .
+# 
+# https://w3id.org/transmodel/commons#Place
+<https://w3id.org/transmodel/commons#Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/commons#Place> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/commons#Zone> .
+<https://w3id.org/transmodel/commons#Place> <http://www.w3.org/2000/01/rdf-schema#comment> "A geographic place of any type which may be specified as the origin or destination of a trip. A Place may be represented as a Point (dimension 0), a road section (dimension 1) or a Zone (dimension 2)."@en .
+<https://w3id.org/transmodel/commons#Place> <http://www.w3.org/2000/01/rdf-schema#label> "Place"@en .
+# 
+# https://w3id.org/transmodel/commons#Zone
+<https://w3id.org/transmodel/commons#Zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/commons#Zone> <http://www.w3.org/2000/01/rdf-schema#comment> "A two dimensional Place within the Service Area of an Operator or Serviced Operator. It can be:\n- AdministrativeZone\n- TariffZone\n- AccessZone\n- ..."@en .
+<https://w3id.org/transmodel/commons#Zone> <http://www.w3.org/2000/01/rdf-schema#label> "Zone"@en .
+# 
 # 
 # 
 # #################################################################

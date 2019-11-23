@@ -82,11 +82,67 @@
 
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  http://schema.org/contactPoint
+<http://schema.org/contactPoint> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/transmodel/fares#describedThrough
+:describedThrough rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://schema.org/contactPoint> ;
+                  rdfs:domain :DistributionChannel ;
+                  rdfs:range <https://w3id.org/transmodel/authorities#ContactDetails> ;
+                  rdfs:comment "This property relates a Distribution Channel with its corresponding Contact Details. It is a subproperty of schema:contactPoint, which relates anything to a ContactPoint"@en ;
+                  rdfs:label "described through"@en .
+
+
+###  https://w3id.org/transmodel/fares#distributionChannelType
+:distributionChannelType rdf:type owl:ObjectProperty ;
+                         rdfs:domain :DistributionChannel ;
+                         rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                             owl:hasValue <https://w3id.org/transmodel/kos/fares/DistributionChannelType>
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                         rdfs:comment "This property assigns to a Distribution Channel one or several SKOS Concepts from the codelist on types of distribution channels"@en ;
+                         rdfs:label "distribution channel type"@en .
+
+
+###  https://w3id.org/transmodel/fares#governedBy
+:governedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :DistributionChannel ;
+            rdfs:range <https://w3id.org/transmodel/authorities#Organisation> ;
+            rdfs:comment "This property relates a Distribution Channel to the Organisation that takes responsability over it"@en ;
+            rdfs:label "governed by"@en .
+
+
+#################################################################
 #    Classes
 #################################################################
 
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+###  https://w3id.org/transmodel/authorities#ContactDetails
+<https://w3id.org/transmodel/authorities#ContactDetails> rdf:type owl:Class .
+
+
+###  https://w3id.org/transmodel/authorities#Organisation
+<https://w3id.org/transmodel/authorities#Organisation> rdf:type owl:Class .
 
 
 ###  https://w3id.org/transmodel/fares#BookingArrangements
@@ -97,25 +153,52 @@
 
 ###  https://w3id.org/transmodel/fares#ClassOfUse
 :ClassOfUse rdf:type owl:Class ;
-            rdfs:comment "A classification of fare and othe service classes by category of user entitled to use them"@en ;
+            rdfs:comment "A classification of fare and other service classes by category of user entitled to use them"@en ;
             rdfs:label "ClassOfUse"@en .
+
+
+###  https://w3id.org/transmodel/fares#DistributionChannel
+:DistributionChannel rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty :describedThrough ;
+                                       owl:allValuesFrom <https://w3id.org/transmodel/authorities#ContactDetails>
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :distributionChannelType ;
+                                       owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                  owl:hasValue <https://w3id.org/transmodel/kos/fares/DistributionChannelType>
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ]
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :governedBy ;
+                                       owl:allValuesFrom <https://w3id.org/transmodel/authorities#Organisation>
+                                     ] ;
+                     rdfs:comment "A type of outlet for selling a Fare Product"@en ;
+                     rdfs:label "Distribution Channel"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#FlexibleLine
 <https://w3id.org/transmodel/journeys#FlexibleLine> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <https://w3id.org/transmodel/journeys#Line> ;
-                                                    rdfs:comment "Specialisation of Line for flexible service. As all the service on a Line may not ve flexible, flexibility itself is described at JourneyPattern level, meaning that a separate JourneyPattern is needed for each type of flexibility available for the line"@en ;
-                                                    rdfs:label "FlexibleLine"@en .
+                                                    rdfs:subClassOf <https://w3id.org/transmodel/journeys#Line> .
 
 
 ###  https://w3id.org/transmodel/journeys#Line
-<https://w3id.org/transmodel/journeys#Line> rdf:type owl:Class ;
-                                            rdfs:label "Line"@en .
+<https://w3id.org/transmodel/journeys#Line> rdf:type owl:Class .
 
 
 #################################################################
 #    Individuals
 #################################################################
+
+###  https://w3id.org/transmodel/kos/fares/DistributionChannelType
+<https://w3id.org/transmodel/kos/fares/DistributionChannelType> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
 
 ###  https://w3id.org/transmodel/kos/fares/FareType
 <https://w3id.org/transmodel/kos/fares/FareType> rdf:type owl:NamedIndividual ,
@@ -123,7 +206,7 @@
                                                  rdfs:comment "Concept scheme where all the codelists for the types of fares that are included in the Transmodel ontology"@en .
 
 
-_:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
-         :name "Adolfo Anton-Bravo"@en .
+_:genid12 :mbox "adolfo.anton.bravo@upm.es"@en ;
+          :name "Adolfo Anton-Bravo"@en .
 
 ###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

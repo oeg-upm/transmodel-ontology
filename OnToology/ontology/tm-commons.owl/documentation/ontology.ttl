@@ -435,6 +435,29 @@ recorded. It's the same as TimingPointInJourneyPattern"""@en ;
                                                            rdfs:label "VehicleJourneyLayover"@en .
 
 
+###  https://w3id.org/transmodel/commons#GroupOfEntities
+:GroupOfEntities rdf:type owl:Class ;
+                 rdfs:comment "A set of Entities grouped together according to a Purpose of Grouping, e.g. grouping of stops known to the public by a common name."@en ;
+                 rdfs:label "Group of Entities"@en .
+
+
+###  https://w3id.org/transmodel/commons#Place
+:Place rdf:type owl:Class ;
+       rdfs:subClassOf :Zone ;
+       rdfs:comment "A geographic place of any type which may be specified as the origin or destination of a trip. A Place may be represented as a Point (dimension 0), a road section (dimension 1) or a Zone (dimension 2)."@en ;
+       rdfs:label "Place"@en .
+
+
+###  https://w3id.org/transmodel/commons#Zone
+:Zone rdf:type owl:Class ;
+      rdfs:comment """A two dimensional Place within the Service Area of an Operator or Serviced Operator. It can be:
+- AdministrativeZone
+- TariffZone
+- AccessZone
+- ..."""@en ;
+      rdfs:label "Zone"@en .
+
+
 #################################################################
 #    Individuals
 #################################################################

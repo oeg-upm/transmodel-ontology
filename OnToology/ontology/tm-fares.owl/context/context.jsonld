@@ -1,5 +1,13 @@
 {
   "@context" : {
+    "describedThrough" : {
+      "@id" : "https://w3id.org/transmodel/fares#describedThrough",
+      "@type" : "@id"
+    },
+    "governedBy" : {
+      "@id" : "https://w3id.org/transmodel/fares#governedBy",
+      "@type" : "@id"
+    },
     "Line" : {
       "@id" : "https://w3id.org/transmodel/journeys#Line"
     },
@@ -9,6 +17,9 @@
     "license" : {
       "@id" : "http://creativecommons.org/ns#license"
     },
+    "Organisation" : {
+      "@id" : "https://w3id.org/transmodel/authorities#Organisation"
+    },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
@@ -17,6 +28,12 @@
     },
     "mbox" : {
       "@id" : "https://w3id.org/transmodel/fares#mbox"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "ContactDetails" : {
+      "@id" : "https://w3id.org/transmodel/authorities#ContactDetails"
     },
     "creator" : {
       "@id" : "http://purl.org/dc/elements/1.1/creator"
@@ -45,14 +62,29 @@
     "ClassOfUse" : {
       "@id" : "https://w3id.org/transmodel/fares#ClassOfUse"
     },
+    "DistributionChannel" : {
+      "@id" : "https://w3id.org/transmodel/fares#DistributionChannel"
+    },
     "date" : {
       "@id" : "http://purl.org/dc/elements/1.1/date"
     },
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
     },
+    "contactPoint" : {
+      "@id" : "http://schema.org/contactPoint",
+      "@type" : "@id"
+    },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "distributionChannelType" : {
+      "@id" : "https://w3id.org/transmodel/fares#distributionChannelType",
+      "@type" : "@id"
+    },
+    "inScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+      "@type" : "@id"
     },
     "description" : {
       "@id" : "http://purl.org/dc/elements/1.1/description"
