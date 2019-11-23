@@ -8,6 +8,7 @@ node [shape = rectangle, color="orange"]; "https://w3id.org/transmodel/common#Se
 	"https://w3id.org/transmodel/common#TimingPoint" -> "xsd:dateTimeStamp" [ label = "https://w3id.org/transmodel/common#arrivalTime" ];
 	"https://w3id.org/transmodel/common#JourneyPatternLayover" -> "xsd:dateTimeStamp" [ label = "https://w3id.org/transmodel/common#time" ];
 	"https://w3id.org/transmodel/common#VehicleJourney" -> "https://w3id.org/transmodel/common#Route" [ label = "https://w3id.org/transmodel/common#vehicleJourneyRoute" ];
+	"owl:Thing" -> "xsd:boolean" [ label = "tmcommons:borderCrossing" ];
 	"https://w3id.org/transmodel/common#Passenger" -> "https://w3id.org/transmodel/common#Service" [ label = "https://w3id.org/transmodel/common#makesAServiceJourney" ];
 	"https://w3id.org/transmodel/common#JourneyPattern" -> "https://w3id.org/transmodel/common#Point" [ label = "https://w3id.org/transmodel/common#journeyPatternPoint" ];
 	"https://w3id.org/transmodel/common#Vehicle" -> "https://w3id.org/transmodel/common#ScheduledStopPoint" [ label = "https://w3id.org/transmodel/common#stopsAt" ];
