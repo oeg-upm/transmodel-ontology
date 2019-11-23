@@ -147,7 +147,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#borderCrossingPoint"
+    "@id" : "https://w3id.org/transmodel/commons#borderCrossing"
   } ]
 }, {
   "@id" : "_:genid114",
@@ -797,6 +797,9 @@
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/commons#borderCrossing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
@@ -2900,23 +2903,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "bookingHall"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#borderCrossingPoint",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "This property allows establishing whether a Stop Place is a border crossing point or not."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#StopPlace"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "border crossing point"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#boundedOpenSpace",

@@ -5,7 +5,7 @@
    <key for="edge" id="d2" yfiles.type="edgegraphics" />
    <key attr.name="description" attr.type="string" for="edge" id="d3" />
    <key for="graphml" id="d4" yfiles.type="resources" />
-   <graph edgedefault="directed" id="G" parse.edges="33" parse.nodes="25" parse.order="free">
+   <graph edgedefault="directed" id="G" parse.edges="34" parse.nodes="26" parse.order="free">
       <node id="nid_tmcommons:">
          <data key="d0">
             <y:ShapeNode>
@@ -180,6 +180,41 @@
          </data>
          <data key="d3" />
       </edge>
+      <node id="nid_owl:Thing">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="90.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">owl:Thing</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+      <node id="nid_xsd:boolean">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="110.0" x="0.0" y="0.0" />
+               <y:Fill color="#FFFFFF" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">xsd:boolean</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_tmcommons:borderCrossing6" source="nid_owl:Thing" target="nid_xsd:boolean">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">tmcommons:borderCrossing</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
       <node id="nid_https://w3id.org/transmodel/common#Passenger">
          <data key="d0">
             <y:ShapeNode>
@@ -204,7 +239,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_https://w3id.org/transmodel/common#makesAServiceJourney6" source="nid_https://w3id.org/transmodel/common#Passenger" target="nid_https://w3id.org/transmodel/common#Service">
+    <edge id="eid_https://w3id.org/transmodel/common#makesAServiceJourney7" source="nid_https://w3id.org/transmodel/common#Passenger" target="nid_https://w3id.org/transmodel/common#Service">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -239,7 +274,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_https://w3id.org/transmodel/common#journeyPatternPoint7" source="nid_https://w3id.org/transmodel/common#JourneyPattern" target="nid_https://w3id.org/transmodel/common#Point">
+    <edge id="eid_https://w3id.org/transmodel/common#journeyPatternPoint8" source="nid_https://w3id.org/transmodel/common#JourneyPattern" target="nid_https://w3id.org/transmodel/common#Point">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -274,7 +309,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_https://w3id.org/transmodel/common#stopsAt8" source="nid_https://w3id.org/transmodel/common#Vehicle" target="nid_https://w3id.org/transmodel/common#ScheduledStopPoint">
+    <edge id="eid_https://w3id.org/transmodel/common#stopsAt9" source="nid_https://w3id.org/transmodel/common#Vehicle" target="nid_https://w3id.org/transmodel/common#ScheduledStopPoint">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -297,7 +332,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_https://w3id.org/transmodel/common#waitTime9" source="nid_https://w3id.org/transmodel/common#JourneyPattern" target="nid_xsd:string">
+    <edge id="eid_https://w3id.org/transmodel/common#waitTime10" source="nid_https://w3id.org/transmodel/common#JourneyPattern" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -308,7 +343,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_https://w3id.org/transmodel/common#canAlight10" source="nid_https://w3id.org/transmodel/common#Passenger" target="nid_https://w3id.org/transmodel/common#ScheduledStopPoint">
+    <edge id="eid_https://w3id.org/transmodel/common#canAlight11" source="nid_https://w3id.org/transmodel/common#Passenger" target="nid_https://w3id.org/transmodel/common#ScheduledStopPoint">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -319,7 +354,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_https://w3id.org/transmodel/common#headway11" source="nid_https://w3id.org/transmodel/common#JourneyPattern" target="nid_xsd:dateTimeStamp">
+    <edge id="eid_https://w3id.org/transmodel/common#headway12" source="nid_https://w3id.org/transmodel/common#JourneyPattern" target="nid_xsd:dateTimeStamp">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -342,7 +377,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_https://w3id.org/transmodel/common#timingLink12" source="nid_https://w3id.org/transmodel/common#TimingLink" target="nid_https://w3id.org/transmodel/common#TimingPoint">
+    <edge id="eid_https://w3id.org/transmodel/common#timingLink13" source="nid_https://w3id.org/transmodel/common#TimingLink" target="nid_https://w3id.org/transmodel/common#TimingPoint">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -353,19 +388,7 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_owl:Thing">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="90.0" x="0.0" y="0.0" />
-               <y:Fill color="#FFFFFF" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">owl:Thing</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_https://w3id.org/transmodel/common#route13" source="nid_owl:Thing" target="nid_https://w3id.org/transmodel/common#Route">
+    <edge id="eid_https://w3id.org/transmodel/common#route14" source="nid_owl:Thing" target="nid_https://w3id.org/transmodel/common#Route">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -388,7 +411,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_https://w3id.org/transmodel/common#runtime14" source="nid_https://w3id.org/transmodel/common#JourneyPattern" target="nid_xsd:nonNegativeInteger">
+    <edge id="eid_https://w3id.org/transmodel/common#runtime15" source="nid_https://w3id.org/transmodel/common#JourneyPattern" target="nid_xsd:nonNegativeInteger">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -399,7 +422,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_https://w3id.org/transmodel/common#scheduledStopPoint15" source="nid_https://w3id.org/transmodel/common#Route" target="nid_https://w3id.org/transmodel/common#ScheduledStopPoint">
+    <edge id="eid_https://w3id.org/transmodel/common#scheduledStopPoint16" source="nid_https://w3id.org/transmodel/common#Route" target="nid_https://w3id.org/transmodel/common#ScheduledStopPoint">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -422,7 +445,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_tmcommons:name16" source="nid_owl:Thing" target="nid_rdfs:Literal">
+    <edge id="eid_tmcommons:name17" source="nid_owl:Thing" target="nid_rdfs:Literal">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -445,7 +468,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_tmcommons:description17" source="nid_tmcommons:MeetingPointService" target="nid_rdfs:Literal">
+    <edge id="eid_tmcommons:description18" source="nid_tmcommons:MeetingPointService" target="nid_rdfs:Literal">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -456,7 +479,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_https://w3id.org/transmodel/common#layover18" source="nid_https://w3id.org/transmodel/common#JourneyPattern" target="nid_xsd:dateTimeStamp">
+    <edge id="eid_https://w3id.org/transmodel/common#layover19" source="nid_https://w3id.org/transmodel/common#JourneyPattern" target="nid_xsd:dateTimeStamp">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -467,7 +490,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_https://w3id.org/transmodel/common#destinationStop19" source="nid_owl:Thing" target="nid_https://w3id.org/transmodel/common#ScheduledStopPoint">
+    <edge id="eid_https://w3id.org/transmodel/common#destinationStop20" source="nid_owl:Thing" target="nid_https://w3id.org/transmodel/common#ScheduledStopPoint">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -478,7 +501,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_https://w3id.org/transmodel/common#vehicleJourney20" source="nid_https://w3id.org/transmodel/common#Vehicle" target="nid_https://w3id.org/transmodel/common#VehicleJourney">
+    <edge id="eid_https://w3id.org/transmodel/common#vehicleJourney21" source="nid_https://w3id.org/transmodel/common#Vehicle" target="nid_https://w3id.org/transmodel/common#VehicleJourney">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -489,7 +512,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_https://w3id.org/transmodel/common#timingLinkPointSequence21" source="nid_https://w3id.org/transmodel/common#TimingPoint" target="nid_xsd:nonNegativeInteger">
+    <edge id="eid_https://w3id.org/transmodel/common#timingLinkPointSequence22" source="nid_https://w3id.org/transmodel/common#TimingPoint" target="nid_xsd:nonNegativeInteger">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -500,7 +523,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_https://w3id.org/transmodel/common#longitude22" source="nid_https://w3id.org/transmodel/common#Point" target="nid_owl:Thing">
+    <edge id="eid_https://w3id.org/transmodel/common#longitude23" source="nid_https://w3id.org/transmodel/common#Point" target="nid_owl:Thing">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -523,7 +546,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_https://w3id.org/transmodel/common#timingLinkInJourneyPattern23" source="nid_https://w3id.org/transmodel/common#JourneyPattern" target="nid_https://w3id.org/transmodel/common#TimingLinkInJourneyPattern">
+    <edge id="eid_https://w3id.org/transmodel/common#timingLinkInJourneyPattern24" source="nid_https://w3id.org/transmodel/common#JourneyPattern" target="nid_https://w3id.org/transmodel/common#TimingLinkInJourneyPattern">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -534,7 +557,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_https://w3id.org/transmodel/common#latitude24" source="nid_https://w3id.org/transmodel/common#Point" target="nid_owl:Thing">
+    <edge id="eid_https://w3id.org/transmodel/common#latitude25" source="nid_https://w3id.org/transmodel/common#Point" target="nid_owl:Thing">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -557,7 +580,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_https://w3id.org/transmodel/common#hasAServiceJourneyPattern25" source="nid_https://w3id.org/transmodel/common#Service" target="nid_https://w3id.org/transmodel/common#ServiceJourneyPattern">
+    <edge id="eid_https://w3id.org/transmodel/common#hasAServiceJourneyPattern26" source="nid_https://w3id.org/transmodel/common#Service" target="nid_https://w3id.org/transmodel/common#ServiceJourneyPattern">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -580,7 +603,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_https://w3id.org/transmodel/common#startTime26" source="nid_https://w3id.org/transmodel/common#HeadingInterval" target="nid_xsd:string">
+    <edge id="eid_https://w3id.org/transmodel/common#startTime27" source="nid_https://w3id.org/transmodel/common#HeadingInterval" target="nid_xsd:string">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -603,7 +626,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_https://w3id.org/transmodel/common#vehicleJourneyDayType27" source="nid_https://w3id.org/transmodel/common#VehicleJourney" target="nid_https://w3id.org/transmodel/common#DayType">
+    <edge id="eid_https://w3id.org/transmodel/common#vehicleJourneyDayType28" source="nid_https://w3id.org/transmodel/common#VehicleJourney" target="nid_https://w3id.org/transmodel/common#DayType">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -614,7 +637,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_https://w3id.org/transmodel/common#followsJourneyPattern28" source="nid_https://w3id.org/transmodel/common#VehicleJourney" target="nid_https://w3id.org/transmodel/common#JourneyPattern">
+    <edge id="eid_https://w3id.org/transmodel/common#followsJourneyPattern29" source="nid_https://w3id.org/transmodel/common#VehicleJourney" target="nid_https://w3id.org/transmodel/common#JourneyPattern">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -625,7 +648,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_https://w3id.org/transmodel/common#originStop29" source="nid_owl:Thing" target="nid_https://w3id.org/transmodel/common#ScheduledStopPoint">
+    <edge id="eid_https://w3id.org/transmodel/common#originStop30" source="nid_owl:Thing" target="nid_https://w3id.org/transmodel/common#ScheduledStopPoint">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -636,7 +659,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_https://w3id.org/transmodel/common#canBoard30" source="nid_https://w3id.org/transmodel/common#Passenger" target="nid_https://w3id.org/transmodel/common#ScheduledStopPoint">
+    <edge id="eid_https://w3id.org/transmodel/common#canBoard31" source="nid_https://w3id.org/transmodel/common#Passenger" target="nid_https://w3id.org/transmodel/common#ScheduledStopPoint">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -647,7 +670,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_https://w3id.org/transmodel/common#pointSequence31" source="nid_https://w3id.org/transmodel/common#ScheduledStopPoint" target="nid_xsd:nonNegativeInteger">
+    <edge id="eid_https://w3id.org/transmodel/common#pointSequence32" source="nid_https://w3id.org/transmodel/common#ScheduledStopPoint" target="nid_xsd:nonNegativeInteger">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -658,7 +681,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_https://w3id.org/transmodel/common#timeLink32" source="nid_https://w3id.org/transmodel/common#TimingPoint" target="nid_xsd:nonNegativeInteger">
+    <edge id="eid_https://w3id.org/transmodel/common#timeLink33" source="nid_https://w3id.org/transmodel/common#TimingPoint" target="nid_xsd:nonNegativeInteger">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />

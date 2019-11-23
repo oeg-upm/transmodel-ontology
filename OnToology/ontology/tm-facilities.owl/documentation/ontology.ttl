@@ -621,6 +621,10 @@ In the TransModel UML model and in the Netex implementation this is expressed as
 #    Data properties
 #################################################################
 
+###  https://w3id.org/transmodel/commons#borderCrossing
+<https://w3id.org/transmodel/commons#borderCrossing> rdf:type owl:DatatypeProperty .
+
+
 ###  https://w3id.org/transmodel/facilities#DATAPROPERTIESTOREVIEW
 :DATAPROPERTIESTOREVIEW rdf:type owl:DatatypeProperty .
 
@@ -638,14 +642,6 @@ In the TransModel UML model and in the Netex implementation this is expressed as
                     rdfs:domain :Facility ;
                     rdfs:range xsd:boolean ;
                     rdfs:label "activatedEquipment"@en .
-
-
-###  https://w3id.org/transmodel/facilities#borderCrossingPoint
-:borderCrossingPoint rdf:type owl:DatatypeProperty ;
-                     rdfs:domain :StopPlace ;
-                     rdfs:range xsd:boolean ;
-                     rdfs:comment "This property allows establishing whether a Stop Place is a border crossing point or not."@en ;
-                     rdfs:label "border crossing point"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#constraintThroughput
@@ -1657,7 +1653,7 @@ It can also include information about the accommodation on board, which can be r
                              owl:allValuesFrom :Quay
                            ] ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty :borderCrossingPoint ;
+                             owl:onProperty <https://w3id.org/transmodel/commons#borderCrossing> ;
                              owl:allValuesFrom xsd:boolean
                            ] ;
            rdfs:comment "A place comprising one or more locations where Vehicles may stop and where passengers may board or leave Vehicles or prepare their Trip. A Stop Place will usually have one or more well-known names."@en ,

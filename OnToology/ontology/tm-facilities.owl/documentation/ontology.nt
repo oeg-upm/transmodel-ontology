@@ -595,6 +595,9 @@ _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
+# https://w3id.org/transmodel/commons#borderCrossing
+<https://w3id.org/transmodel/commons#borderCrossing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
 # https://w3id.org/transmodel/facilities#DATAPROPERTIESTOREVIEW
 <https://w3id.org/transmodel/facilities#DATAPROPERTIESTOREVIEW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
@@ -610,13 +613,6 @@ _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/transmodel/facilities#activatedEquipment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#Facility> .
 <https://w3id.org/transmodel/facilities#activatedEquipment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/transmodel/facilities#activatedEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "activatedEquipment"@en .
-# 
-# https://w3id.org/transmodel/facilities#borderCrossingPoint
-<https://w3id.org/transmodel/facilities#borderCrossingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/transmodel/facilities#borderCrossingPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#StopPlace> .
-<https://w3id.org/transmodel/facilities#borderCrossingPoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
-<https://w3id.org/transmodel/facilities#borderCrossingPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows establishing whether a Stop Place is a border crossing point or not."@en .
-<https://w3id.org/transmodel/facilities#borderCrossingPoint> <http://www.w3.org/2000/01/rdf-schema#label> "border crossing point"@en .
 # 
 # https://w3id.org/transmodel/facilities#constraintThroughput
 <https://w3id.org/transmodel/facilities#constraintThroughput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -1533,7 +1529,7 @@ _:genid112 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmod
 _:genid112 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/facilities#Quay> .
 <https://w3id.org/transmodel/facilities#StopPlace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid113 .
 _:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid113 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/facilities#borderCrossingPoint> .
+_:genid113 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/commons#borderCrossing> .
 _:genid113 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/transmodel/facilities#StopPlace> <http://www.w3.org/2000/01/rdf-schema#comment> "A place comprising one or more locations where Vehicles may stop and where passengers may board or leave Vehicles or prepare their Trip. A Stop Place will usually have one or more well-known names."@en .
 <https://w3id.org/transmodel/facilities#StopPlace> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: Add Stop Place Components to the Stop Place, if considered useful."@en .
