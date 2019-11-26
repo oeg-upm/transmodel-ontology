@@ -51,6 +51,9 @@
     "JourneyPart" : {
       "@id" : "https://w3id.org/transmodel/journeys#JourneyPart"
     },
+    "OrganisationDayType" : {
+      "@id" : "https://w3id.org/transmodel/journeys#OrganisationDayType"
+    },
     "timingLink" : {
       "@id" : "https://w3id.org/transmodel/journeys#timingLink",
       "@type" : "@id"
@@ -88,9 +91,6 @@
     },
     "HeadwayInterval" : {
       "@id" : "https://w3id.org/transmodel/journeys#HeadwayInterval"
-    },
-    "DayOfWeek" : {
-      "@id" : "https://w3id.org/transmodel/journeys#DayOfWeek"
     },
     "StopPlace" : {
       "@id" : "https://w3id.org/transmodel/facilities#StopPlace"
@@ -146,6 +146,9 @@
     "changeOfServiceRequirements" : {
       "@id" : "https://w3id.org/transmodel/journeys#changeOfServiceRequirements",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "FareDayType" : {
+      "@id" : "https://w3id.org/transmodel/journeys#FareDayType"
     },
     "CourseOfJourneys" : {
       "@id" : "https://w3id.org/transmodel/journeys#CourseOfJourneys"
@@ -217,6 +220,10 @@
     "endOfBlock" : {
       "@id" : "https://w3id.org/transmodel/journeys#endOfBlock",
       "@type" : "@id"
+    },
+    "isServiceDay" : {
+      "@id" : "https://w3id.org/transmodel/journeys#isServiceDay",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "TimingPoint" : {
       "@id" : "https://w3id.org/transmodel/journeys#TimingPoint"
@@ -483,6 +490,10 @@
     "time" : {
       "@id" : "https://w3id.org/transmodel/journeys#time",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+    },
+    "forServicedOrganisation" : {
+      "@id" : "https://w3id.org/transmodel/journeys#forServicedOrganisation",
+      "@type" : "@id"
     },
     "Place" : {
       "@id" : "https://w3id.org/transmodel/journeys#Place"
