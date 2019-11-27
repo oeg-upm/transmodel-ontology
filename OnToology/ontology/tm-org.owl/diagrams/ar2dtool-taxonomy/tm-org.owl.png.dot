@@ -1,0 +1,28 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "authorities:ControlCenter" "authorities:ManagementAgent" "authorities:Department" "http://schema.org/ContactPoint" "authorities:RetailConsortium" "authorities:Authority" "authorities:TravelAgent" "tmcommons:Zone" "tmcommons:GroupOfEntities" "authorities:Organisation" "authorities:ServicedOrganisation" "authorities:OrganisationUnit" "authorities:OrganisationPart" "skos:Concept" "foaf:Organization" "authorities:AdministrativeZone" "authorities:Operator" "org:OrganizationalUnit" "authorities:ContactDetails" "org:FormalOrganization" "org:OrganizationalCollaboration" "org:Organization" "org:Role" "org:ChangeEvent" ; /*classes style*/
+	"org:OrganizationalUnit" -> "org:Organization" [ label = "rdfs:subClassOf" ];
+	"authorities:Operator" -> "authorities:Organisation" [ label = "rdfs:subClassOf" ];
+	"org:Role" -> "skos:Concept" [ label = "rdfs:subClassOf" ];
+	"authorities:ServicedOrganisation" -> "authorities:Organisation" [ label = "rdfs:subClassOf" ];
+	"authorities:ContactDetails" -> "http://schema.org/ContactPoint" [ label = "rdfs:subClassOf" ];
+	"authorities:OrganisationUnit" -> "authorities:OrganisationPart" [ label = "rdfs:subClassOf" ];
+	"org:Organization" -> "foaf:Agent" [ label = "rdfs:subClassOf" ];
+	"authorities:Organisation" -> "foaf:Organization" [ label = "rdfs:subClassOf" ];
+	"authorities:ManagementAgent" -> "authorities:Organisation" [ label = "rdfs:subClassOf" ];
+	"org:ChangeEvent" -> "prov:Activity" [ label = "rdfs:subClassOf" ];
+	"authorities:AdministrativeZone" -> "tmcommons:Zone" [ label = "rdfs:subClassOf" ];
+	"authorities:RetailConsortium" -> "tmcommons:GroupOfEntities" [ label = "rdfs:subClassOf" ];
+	"authorities:RetailConsortium" -> "authorities:Organisation" [ label = "rdfs:subClassOf" ];
+	"authorities:Department" -> "authorities:OrganisationPart" [ label = "rdfs:subClassOf" ];
+	"authorities:TravelAgent" -> "authorities:Organisation" [ label = "rdfs:subClassOf" ];
+	"org:FormalOrganization" -> "org:Organization" [ label = "rdfs:subClassOf" ];
+	"org:FormalOrganization" -> "foaf:Organization" [ label = "rdfs:subClassOf" ];
+	"authorities:ControlCenter" -> "authorities:OrganisationPart" [ label = "rdfs:subClassOf" ];
+	"gr:BusinessEntity" -> "org:FormalOrganization" [ label = "rdfs:subClassOf" ];
+	"authorities:OrganisationPart" -> "org:OrganizationalUnit" [ label = "rdfs:subClassOf" ];
+	"authorities:Authority" -> "authorities:Organisation" [ label = "rdfs:subClassOf" ];
+	"org:OrganizationalCollaboration" -> "org:Organization" [ label = "rdfs:subClassOf" ];
+
+}
