@@ -639,6 +639,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#subplaceOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#subplaceOf">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#StopPlace"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#StopPlace"/>
+        <rdfs:comment xml:lang="en">A property connecting one Stop Place to another Stop Place to describe nested Stop Places (e.g. a metro station in a train station).</rdfs:comment>
+        <rdfs:label xml:lang="en">subplace of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#toiletFacility -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#toiletFacility">

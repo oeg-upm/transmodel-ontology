@@ -840,8 +840,7 @@
     <!-- https://w3id.org/transmodel/journeys#passesAt -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#passesAt">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#PointInJourneyPattern"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#TimetabledPassingTime"/>
+        <rdfs:comment xml:lang="en">TODO: Check which domain and range to use</rdfs:comment>
         <rdfs:comment xml:lang="en">This property sets the relationship between a Point In Journey Pattern or a Service Journey and a Timetabled Passing Time</rdfs:comment>
         <rdfs:label xml:lang="en">passes at</rdfs:label>
     </owl:ObjectProperty>
@@ -2925,6 +2924,12 @@
     <!-- https://w3id.org/transmodel/journeys#TimetabledPassingTime -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimetabledPassingTime">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#passesAt"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#PointInJourneyPattern"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#arrivalDayOffset"/>
