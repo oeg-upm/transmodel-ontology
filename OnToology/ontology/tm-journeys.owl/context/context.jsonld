@@ -22,6 +22,10 @@
     "BlockPart" : {
       "@id" : "https://w3id.org/transmodel/journeys#BlockPart"
     },
+    "arrivalDayOffset" : {
+      "@id" : "https://w3id.org/transmodel/journeys#arrivalDayOffset",
+      "@type" : "http://www.w3.org/2001/XMLSchema#time"
+    },
     "stopUse" : {
       "@id" : "https://w3id.org/transmodel/journeys#stopUse",
       "@type" : "@id"
@@ -58,10 +62,6 @@
       "@id" : "https://w3id.org/transmodel/journeys#timingLink",
       "@type" : "@id"
     },
-    "passedAt" : {
-      "@id" : "https://w3id.org/transmodel/journeys#passedAt",
-      "@type" : "@id"
-    },
     "madeUsing" : {
       "@id" : "https://w3id.org/transmodel/journeys#madeUsing",
       "@type" : "@id"
@@ -77,6 +77,9 @@
     "license" : {
       "@id" : "http://creativecommons.org/ns#license"
     },
+    "VehicleType" : {
+      "@id" : "https://w3id.org/transmodel/facilities#VehicleType"
+    },
     "holidayType-old" : {
       "@id" : "https://w3id.org/transmodel/journeys#holidayType-old"
     },
@@ -91,6 +94,10 @@
     },
     "HeadwayInterval" : {
       "@id" : "https://w3id.org/transmodel/journeys#HeadwayInterval"
+    },
+    "distanceFromStart" : {
+      "@id" : "https://w3id.org/transmodel/journeys#distanceFromStart",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
     "StopPlace" : {
       "@id" : "https://w3id.org/transmodel/facilities#StopPlace"
@@ -123,10 +130,14 @@
     },
     "arrivalTime" : {
       "@id" : "https://w3id.org/transmodel/journeys#arrivalTime",
-      "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+      "@type" : "http://www.w3.org/2001/XMLSchema#time"
     },
     "prescribing" : {
       "@id" : "https://w3id.org/transmodel/journeys#prescribing",
+      "@type" : "@id"
+    },
+    "operatingPeriod" : {
+      "@id" : "https://w3id.org/transmodel/journeys#operatingPeriod",
       "@type" : "@id"
     },
     "PointInJourneyPattern" : {
@@ -146,6 +157,10 @@
     "changeOfServiceRequirements" : {
       "@id" : "https://w3id.org/transmodel/journeys#changeOfServiceRequirements",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "presentedBy" : {
+      "@id" : "https://w3id.org/transmodel/journeys#presentedBy",
+      "@type" : "@id"
     },
     "FareDayType" : {
       "@id" : "https://w3id.org/transmodel/journeys#FareDayType"
@@ -174,6 +189,10 @@
     },
     "TopographicPlace" : {
       "@id" : "https://w3id.org/transmodel/journeys#TopographicPlace"
+    },
+    "departureDayOffset" : {
+      "@id" : "https://w3id.org/transmodel/journeys#departureDayOffset",
+      "@type" : "http://www.w3.org/2001/XMLSchema#time"
     },
     "runtime" : {
       "@id" : "https://w3id.org/transmodel/journeys#runtime",
@@ -272,6 +291,10 @@
     "RailwayJunction" : {
       "@id" : "https://w3id.org/transmodel/journeys#RailwayJunction"
     },
+    "operatedBy" : {
+      "@id" : "https://w3id.org/transmodel/journeys#operatedBy",
+      "@type" : "@id"
+    },
     "WireJunction" : {
       "@id" : "https://w3id.org/transmodel/journeys#WireJunction"
     },
@@ -331,6 +354,10 @@
     "JourneyPartCouple" : {
       "@id" : "https://w3id.org/transmodel/journeys#JourneyPartCouple"
     },
+    "vehicleModeId" : {
+      "@id" : "https://w3id.org/transmodel/journeys#vehicleModeId",
+      "@type" : "@id"
+    },
     "creator" : {
       "@id" : "http://purl.org/dc/elements/1.1/creator"
     },
@@ -343,6 +370,9 @@
     },
     "name" : {
       "@id" : "https://w3id.org/transmodel/journeys#name"
+    },
+    "DestinationDisplayVariant" : {
+      "@id" : "https://w3id.org/transmodel/journeys#DestinationDisplayVariant"
     },
     "headway" : {
       "@id" : "https://w3id.org/transmodel/journeys#headway",
@@ -405,9 +435,6 @@
     },
     "FlexibleRoute" : {
       "@id" : "https://w3id.org/transmodel/journeys#FlexibleRoute"
-    },
-    "DatedPassingTime" : {
-      "@id" : "https://w3id.org/transmodel/journeys#DatedPassingTime"
     },
     "rights" : {
       "@id" : "http://purl.org/dc/elements/1.1/rights"
@@ -475,6 +502,10 @@
       "@id" : "https://w3id.org/transmodel/journeys#on",
       "@type" : "@id"
     },
+    "startingAt" : {
+      "@id" : "https://w3id.org/transmodel/journeys#startingAt",
+      "@type" : "@id"
+    },
     "viaFlag" : {
       "@id" : "https://w3id.org/transmodel/journeys#viaFlag",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
@@ -485,6 +516,10 @@
     },
     "composedOf" : {
       "@id" : "https://w3id.org/transmodel/journeys#composedOf",
+      "@type" : "@id"
+    },
+    "passesAt" : {
+      "@id" : "https://w3id.org/transmodel/journeys#passesAt",
       "@type" : "@id"
     },
     "time" : {
@@ -518,9 +553,6 @@
     "GaragePoint" : {
       "@id" : "https://w3id.org/transmodel/journeys#GaragePoint"
     },
-    "PassingTime" : {
-      "@id" : "https://w3id.org/transmodel/journeys#PassingTime"
-    },
     "borderCrossing" : {
       "@id" : "https://w3id.org/transmodel/commons#borderCrossing"
     },
@@ -534,6 +566,10 @@
     "RoadAddress" : {
       "@id" : "https://w3id.org/transmodel/journeys#RoadAddress"
     },
+    "endingAt" : {
+      "@id" : "https://w3id.org/transmodel/journeys#endingAt",
+      "@type" : "@id"
+    },
     "accessMode" : {
       "@id" : "https://w3id.org/transmodel/journeys#accessMode",
       "@type" : "@id"
@@ -545,7 +581,7 @@
       "@id" : "https://w3id.org/transmodel/journeys#ServiceJourney"
     },
     "DestinationDisplay" : {
-      "@id" : "https://w3id.org/transmodel/facilities#DestinationDisplay"
+      "@id" : "https://w3id.org/transmodel/journeys#DestinationDisplay"
     },
     "TOREVIEWCLASSES" : {
       "@id" : "https://w3id.org/transmodel/journeys#TOREVIEWCLASSES"
@@ -606,6 +642,10 @@
     "RoadJunction" : {
       "@id" : "https://w3id.org/transmodel/journeys#RoadJunction"
     },
+    "belongingTo" : {
+      "@id" : "https://w3id.org/transmodel/journeys#belongingTo",
+      "@type" : "@id"
+    },
     "StopArea" : {
       "@id" : "https://w3id.org/transmodel/journeys#StopArea"
     },
@@ -648,6 +688,9 @@
     "modeOfTransport" : {
       "@id" : "https://w3id.org/transmodel/journeys#modeOfTransport",
       "@type" : "@id"
+    },
+    "Presentation" : {
+      "@id" : "https://w3id.org/transmodel/commons#Presentation"
     },
     "GroupOfTimingLinks" : {
       "@id" : "https://w3id.org/transmodel/journeys#GroupOfTimingLinks"
@@ -703,8 +746,16 @@
     "AccessibilityAssessment" : {
       "@id" : "https://w3id.org/transmodel/facilities#AccessibilityAssessment"
     },
+    "VehicleMode" : {
+      "@id" : "https://w3id.org/transmodel/journeys#VehicleMode"
+    },
+    "destinationDisplay" : {
+      "@id" : "https://w3id.org/transmodel/journeys#destinationDisplay",
+      "@type" : "@id"
+    },
     "departureTime" : {
-      "@id" : "https://w3id.org/transmodel/authorities#departureTime"
+      "@id" : "https://w3id.org/transmodel/journeys#departureTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#time"
     },
     "lastDayOffset" : {
       "@id" : "https://w3id.org/transmodel/journeys#lastDayOffset",
@@ -760,6 +811,14 @@
       "@id" : "https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor",
       "@type" : "@id"
     },
+    "at" : {
+      "@id" : "https://w3id.org/transmodel/commons#at",
+      "@type" : "@id"
+    },
+    "isFlexible" : {
+      "@id" : "https://w3id.org/transmodel/journeys#isFlexible",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "DayType" : {
       "@id" : "https://w3id.org/transmodel/journeys#DayType"
     },
@@ -787,6 +846,10 @@
     "ActivationPoint" : {
       "@id" : "https://w3id.org/transmodel/journeys#ActivationPoint"
     },
+    "classifiedBy" : {
+      "@id" : "https://w3id.org/transmodel/journeys#classifiedBy",
+      "@type" : "@id"
+    },
     "DefaultServiceJourneyRunTime" : {
       "@id" : "https://w3id.org/transmodel/journeys#DefaultServiceJourneyRunTime"
     },
@@ -794,7 +857,7 @@
       "@id" : "https://w3id.org/transmodel/journeys#TimingLink"
     },
     "in" : {
-      "@id" : "https://w3id.org/transmodel/facilities#in",
+      "@id" : "https://w3id.org/transmodel/commons#in",
       "@type" : "@id"
     }
   }

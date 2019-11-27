@@ -101,6 +101,10 @@ xsd:string owl:equivalentClass xsd:duration .
 <http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/transmodel/commons#in
+<https://w3id.org/transmodel/commons#in> rdf:type owl:ObjectProperty .
+
+
 ###  https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW
 :OBJECTPROPERTIESTOREVIEW rdf:type owl:ObjectProperty .
 
@@ -256,15 +260,6 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
                    rdfs:label "couchette facility"@en .
 
 
-###  https://w3id.org/transmodel/facilities#destinationDisplay
-:destinationDisplay rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
-                    rdfs:domain :DestinationDisplay ;
-                    rdfs:range :PassengerInformationEquipment ;
-                    rdfs:comment ""@en ;
-                    rdfs:label "destinationDisplay"@en .
-
-
 ###  https://w3id.org/transmodel/facilities#determining
 :determining rdf:type owl:ObjectProperty ;
              rdfs:domain :AccessibilityAssessment ;
@@ -277,7 +272,6 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
 :displayAssignment rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :OBJECTPROPERTIESTOREVIEW ;
                    rdfs:domain :JourneyPattern ;
-                   rdfs:range :DestinationDisplay ;
                    rdfs:comment "The assignment of one ScheduledStopPoint and one JourneyPattern to a PassengerInformationEquipment specifying that information on the ScheduledStopPoint and the JourneyPattern will be provided (e.g. displayed, printed)"@en ;
                    rdfs:label "displayAssignment"@en .
 
@@ -353,12 +347,6 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
            rdfs:comment "TODO: create the list of allowed values for fare classes, and check whether including it as a facility type, as included in the TransModel model"@en ,
                         "This property relates an Onboard Stay or an Accommodation, among others, with a class of fares, whose allowed values are defined in the TransModel Common Facility Values (Figure 290, page 454)"@en ;
            rdfs:label "fare class"@en .
-
-
-###  https://w3id.org/transmodel/facilities#in
-:in rdf:type owl:ObjectProperty ;
-    rdfs:comment "This property sets the relationship between something and other thing contained in the first (e.g., a Quay is in a Stop Place)"@en ;
-    rdfs:label "in"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#isUsedBy
@@ -981,20 +969,6 @@ A small number of well-defined categories are used that are chosen to allow the 
                          rdfs:label "CycleStorageEquipment"@en .
 
 
-###  https://w3id.org/transmodel/facilities#DestinationDisplay
-:DestinationDisplay rdf:type owl:Class ;
-                    rdfs:subClassOf :THINGSTOREVIEW ;
-                    rdfs:comment "An advertised destination of a specific JourneyPattern usually displayed on a headsign or other on-board locations"@en ;
-                    rdfs:label "DestinationDisplay"@en .
-
-
-###  https://w3id.org/transmodel/facilities#DestinationDisplayVariant
-:DestinationDisplayVariant rdf:type owl:Class ;
-                           rdfs:subClassOf :DestinationDisplay ;
-                           rdfs:comment "An advertised destination of a specific JourneyPattern, usually displayed on a headsign (HeadingSign) or at other on-board locations"@en ;
-                           rdfs:label "DestinationDisplayVariant"@en .
-
-
 ###  https://w3id.org/transmodel/facilities#EmergencyService
 :EmergencyService rdf:type owl:Class ;
                   rdfs:subClassOf :LocalService ;
@@ -1452,12 +1426,12 @@ Accessible by Passenger but without direct access to Vehicles"""@en ;
 ###  https://w3id.org/transmodel/facilities#Quay
 :Quay rdf:type owl:Class ;
       rdfs:subClassOf [ rdf:type owl:Restriction ;
-                        owl:onProperty :comprises ;
-                        owl:allValuesFrom :Quay
+                        owl:onProperty <https://w3id.org/transmodel/commons#in> ;
+                        owl:allValuesFrom :StopPlace
                       ] ,
                       [ rdf:type owl:Restriction ;
-                        owl:onProperty :in ;
-                        owl:allValuesFrom :StopPlace
+                        owl:onProperty :comprises ;
+                        owl:allValuesFrom :Quay
                       ] ;
       rdfs:comment """A place such as platform, stance, or quayside where passengers have access to public transport vehicles, taxi, cars or other means of transportation. A Quay may serve one or more Vehicle Stopping Places and be associated with one or more Scheduled Stop Points. 
 

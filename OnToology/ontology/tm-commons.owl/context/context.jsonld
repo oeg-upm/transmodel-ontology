@@ -1,13 +1,8 @@
 {
   "@context" : {
-    "Route" : {
-      "@id" : "https://w3id.org/transmodel/common#Route"
-    },
-    "ScheduledStopPoint" : {
-      "@id" : "https://w3id.org/transmodel/common#ScheduledStopPoint"
-    },
-    "Line" : {
-      "@id" : "https://w3id.org/transmodel/common#Line"
+    "colour" : {
+      "@id" : "https://w3id.org/transmodel/commons#colour",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
@@ -19,11 +14,8 @@
     "license" : {
       "@id" : "http://creativecommons.org/ns#license"
     },
-    "JourneyPattern" : {
-      "@id" : "https://w3id.org/transmodel/common#JourneyPattern"
-    },
-    "VehicleJourney" : {
-      "@id" : "https://w3id.org/transmodel/common#VehicleJourney"
+    "GroupOfEntities" : {
+      "@id" : "https://w3id.org/transmodel/commons#GroupOfEntities"
     },
     "arrivalTime" : {
       "@id" : "https://w3id.org/transmodel/common#arrivalTime",
@@ -50,9 +42,6 @@
     "mbox" : {
       "@id" : "https://w3id.org/transmodel/commons#mbox"
     },
-    "longitude" : {
-      "@id" : "https://w3id.org/transmodel/common#longitude"
-    },
     "VehicleJourneyLayover" : {
       "@id" : "https://w3id.org/transmodel/common#VehicleJourneyLayover"
     },
@@ -74,9 +63,6 @@
       "@id" : "https://w3id.org/transmodel/common#timeLink",
       "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
     },
-    "ServiceJourneyPattern" : {
-      "@id" : "https://w3id.org/transmodel/common#ServiceJourneyPattern"
-    },
     "TimingLinkInJourneyPattern" : {
       "@id" : "https://w3id.org/transmodel/common#TimingLinkInJourneyPattern"
     },
@@ -91,9 +77,6 @@
     "vehicleJourney" : {
       "@id" : "https://w3id.org/transmodel/common#vehicleJourney",
       "@type" : "@id"
-    },
-    "latitude" : {
-      "@id" : "https://w3id.org/transmodel/common#latitude"
     },
     "creator" : {
       "@id" : "http://purl.org/dc/elements/1.1/creator"
@@ -116,6 +99,9 @@
       "@id" : "https://w3id.org/transmodel/common#hasAServiceJourneyPattern",
       "@type" : "@id"
     },
+    "Zone" : {
+      "@id" : "https://w3id.org/transmodel/commons#Zone"
+    },
     "rights" : {
       "@id" : "http://purl.org/dc/elements/1.1/rights"
     },
@@ -125,6 +111,9 @@
     "time" : {
       "@id" : "https://w3id.org/transmodel/common#time",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+    },
+    "Place" : {
+      "@id" : "https://w3id.org/transmodel/commons#Place"
     },
     "Point" : {
       "@id" : "https://w3id.org/transmodel/common#Point"
@@ -142,6 +131,10 @@
     "ActivationLink" : {
       "@id" : "https://w3id.org/transmodel/common#ActivationLink"
     },
+    "textColour" : {
+      "@id" : "https://w3id.org/transmodel/commons#textColour",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "originStop" : {
       "@id" : "https://w3id.org/transmodel/common#originStop",
       "@type" : "@id"
@@ -158,6 +151,9 @@
     },
     "HeadingInterval" : {
       "@id" : "https://w3id.org/transmodel/common#HeadingInterval"
+    },
+    "Presentation" : {
+      "@id" : "https://w3id.org/transmodel/commons#Presentation"
     },
     "scheduledStopPoint" : {
       "@id" : "https://w3id.org/transmodel/common#scheduledStopPoint",
@@ -202,8 +198,9 @@
       "@id" : "https://w3id.org/transmodel/common#layover",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
     },
-    "DayType" : {
-      "@id" : "https://w3id.org/transmodel/common#DayType"
+    "at" : {
+      "@id" : "https://w3id.org/transmodel/commons#at",
+      "@type" : "@id"
     },
     "pointSequence" : {
       "@id" : "https://w3id.org/transmodel/common#pointSequence",
@@ -211,6 +208,9 @@
     },
     "description" : {
       "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "TOREVIEW" : {
+      "@id" : "https://w3id.org/transmodel/commons#TOREVIEW"
     },
     "preferredNamespaceUri" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
@@ -220,6 +220,10 @@
     },
     "TimingLink" : {
       "@id" : "https://w3id.org/transmodel/common#TimingLink"
+    },
+    "in" : {
+      "@id" : "https://w3id.org/transmodel/commons#in",
+      "@type" : "@id"
     }
   }
 }

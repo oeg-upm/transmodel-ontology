@@ -1,5 +1,23 @@
 [ {
   "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/commons#colour"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/commons#textColour"
+  } ]
+}, {
+  "@id" : "_:genid3",
   "https://w3id.org/transmodel/commons#mbox" : [ {
     "@language" : "en",
     "@value" : "adolfo.anton.bravo@upm.es"
@@ -45,6 +63,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "ActivationLink"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/commons#TOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#ActivationPoint",
@@ -60,17 +81,6 @@
     "@id" : "https://w3id.org/transmodel/common#Point"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/common#DayType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A DayType is a type of day characterised by one or more properties which affect public transport operation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "DayType"
-  } ]
-}, {
   "@id" : "https://w3id.org/transmodel/common#HeadingInterval",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -80,13 +90,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "HeadwayInterval"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/common#JourneyPattern",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "JourneyPattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/commons#TOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#JourneyPatternLayover",
@@ -98,17 +104,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "JourneyPatternLayover"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/common#Line",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A Line is a group of Route which is generally known to the public by a similar name or number."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Line"
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/commons#TOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#Passenger",
@@ -123,6 +121,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Passenger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/commons#TOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#Point",
@@ -134,31 +135,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Point"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/common#Route",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A Route is and ordered list of located Point defining one single path through the road (or rail) network."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Route"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/common#ScheduledStopPoint",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A ScheduledStopPoint is a Point where a Passenger can board or alight from a Vehicle."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "ScheduledStopPoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/common#Point"
+    "@id" : "https://w3id.org/transmodel/commons#TOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#Service",
@@ -170,16 +149,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "ServiceJourney"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/common#ServiceJourneyPattern",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "ServiceJourneyPattern"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/common#JourneyPattern"
+    "@id" : "https://w3id.org/transmodel/commons#TOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#TimingLink",
@@ -190,6 +162,9 @@
   }, {
     "@language" : "en",
     "@value" : "TimingLink"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/commons#TOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#TimingLinkInJourneyPattern",
@@ -201,6 +176,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "TimingLinkInJourneyPattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/commons#TOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#TimingPoint",
@@ -226,6 +204,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Trip"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/commons#TOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#Vehicle",
@@ -237,20 +218,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Vehicle"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/common#VehicleJourney",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "The Trip/Journey of a Vehicle is a VehicleJourney; a Trip for a Passenger"
-  }, {
-    "@language" : "en",
-    "@value" : "The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "VehicleJourney"
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/commons#TOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#VehicleJourneyLayover",
@@ -258,6 +228,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "VehicleJourneyLayover"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/commons#TOREVIEW"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#arrivalTime",
@@ -281,9 +254,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "canAlight"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/common#ScheduledStopPoint"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#canBoard",
@@ -294,9 +264,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "canBoard"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/common#ScheduledStopPoint"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#destinationStop",
@@ -304,22 +271,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "destinationStop"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/common#ScheduledStopPoint"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#followsJourneyPattern",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/common#VehicleJourney"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "followsJourneyPattern"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/common#JourneyPattern"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#hasAServiceJourneyPattern",
@@ -330,18 +288,10 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "serviceJourneyPattern"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/common#ServiceJourneyPattern"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#headway",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/common#JourneyPattern"
-  }, {
-    "@id" : "https://w3id.org/transmodel/common#VehicleJourney"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "headway"
@@ -352,9 +302,6 @@
 }, {
   "@id" : "https://w3id.org/transmodel/common#journeyPatternPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/common#JourneyPattern"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "journeyPatternPoint"
@@ -363,39 +310,14 @@
     "@id" : "https://w3id.org/transmodel/common#Point"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/common#latitude",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/common#Point"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "latitude"
-  } ]
-}, {
   "@id" : "https://w3id.org/transmodel/common#layover",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/common#JourneyPattern"
-  }, {
-    "@id" : "https://w3id.org/transmodel/common#VehicleJourney"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "layover"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/common#longitude",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/common#Point"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "longitude"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#makesAServiceJourney",
@@ -416,9 +338,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "originStop"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/common#ScheduledStopPoint"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#pointSequence",
@@ -426,9 +345,6 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Sequences of ScheduledStopPoint"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/common#ScheduledStopPoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -443,18 +359,10 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "route"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/common#Route"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#runtime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/common#JourneyPattern"
-  }, {
-    "@id" : "https://w3id.org/transmodel/common#VehicleJourney"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "runtime"
@@ -465,15 +373,9 @@
 }, {
   "@id" : "https://w3id.org/transmodel/common#scheduledStopPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/common#Route"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "scheduledStopPoint"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/common#ScheduledStopPoint"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#startTime",
@@ -497,9 +399,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "stopsAt"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/common#ScheduledStopPoint"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#time",
@@ -551,9 +450,6 @@
 }, {
   "@id" : "https://w3id.org/transmodel/common#timingLinkInJourneyPattern",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/common#JourneyPattern"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "timingLinkInJourneyPattern"
@@ -579,44 +475,24 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "vehicleJourney"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/common#VehicleJourney"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#vehicleJourneyDayType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/common#VehicleJourney"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "vehicleJourneyDayType"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/common#DayType"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#vehicleJourneyRoute",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/common#VehicleJourney"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "vehicleJourneyRoute"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/common#Route"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/common#waitTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/common#JourneyPattern"
-  }, {
-    "@id" : "https://w3id.org/transmodel/common#VehicleJourney"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "waitTime"
@@ -675,6 +551,72 @@
     "@value" : "This is the initial version of the module on Commons, after considering the UML models and XSD descriptions of Transmodel and NeTEx"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/commons#GroupOfEntities",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A set of Entities grouped together according to a Purpose of Grouping, e.g. grouping of stops known to the public by a common name."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Group of Entities"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/commons#Place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A geographic place of any type which may be specified as the origin or destination of a trip. A Place may be represented as a Point (dimension 0), a road section (dimension 1) or a Zone (dimension 2)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/commons#Zone"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/commons#Presentation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This class is used to represent a Line, or any other object, in a map"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Presentation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/commons#TOREVIEW",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/commons#Zone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A two dimensional Place within the Service Area of an Operator or Serviced Operator. It can be:\n- AdministrativeZone\n- TariffZone\n- AccessZone\n- ..."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Zone"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/commons#at",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property sets the relationship between something and other thing related to it. It is used in multiple situations and modules of this ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "at"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/commons#author",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -691,6 +633,20 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/commons#colour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The colour used to represent something with a Presentation (e.g., a Line)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "colour"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/commons#creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -703,6 +659,17 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/commons#in",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property sets the relationship between something and other thing contained in the first. It is used in multiple situations and modules of this ontology (e.g., Quay in Stop Place)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "in"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/commons#mbox",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -712,10 +679,43 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/commons#textColour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The colour used to represent the text associated to something with a Presentation (e.g., a Line)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "text colour"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/kos/commons/CommonsType",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Concept scheme where all the codelists for the types of journeys that are included in the Transmodel ontology"
   } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/commons/all-modes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/commons/continous-mode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/commons/road-vehicle-mode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "road-vehicle-mode"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/commons/sites-access-mode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/commons/vehicle-mode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ]
 } ]

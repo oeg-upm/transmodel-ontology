@@ -184,6 +184,13 @@
     
 
 
+    <!-- https://w3id.org/transmodel/commons#in -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/commons#in"/>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW -->
 
 
@@ -415,19 +422,6 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
     
 
 
-    <!-- https://w3id.org/transmodel/facilities#destinationDisplay -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#destinationDisplay">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"/>
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#DestinationDisplay"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#PassengerInformationEquipment"/>
-        <rdfs:comment xml:lang="en"></rdfs:comment>
-        <rdfs:label xml:lang="en">destinationDisplay</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/transmodel/facilities#determining -->
 
 
@@ -446,7 +440,6 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#displayAssignment">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#JourneyPattern"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#DestinationDisplay"/>
         <rdfs:comment xml:lang="en">The assignment of one ScheduledStopPoint and one JourneyPattern to a PassengerInformationEquipment specifying that information on the ScheduledStopPoint and the JourneyPattern will be provided (e.g. displayed, printed)</rdfs:comment>
         <rdfs:label xml:lang="en">displayAssignment</rdfs:label>
     </owl:ObjectProperty>
@@ -555,16 +548,6 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
         <rdfs:comment xml:lang="en">TODO: create the list of allowed values for fare classes, and check whether including it as a facility type, as included in the TransModel model</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates an Onboard Stay or an Accommodation, among others, with a class of fares, whose allowed values are defined in the TransModel Common Facility Values (Figure 290, page 454)</rdfs:comment>
         <rdfs:label xml:lang="en">fare class</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/transmodel/facilities#in -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#in">
-        <rdfs:comment xml:lang="en">This property sets the relationship between something and other thing contained in the first (e.g., a Quay is in a Stop Place)</rdfs:comment>
-        <rdfs:label xml:lang="en">in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1528,28 +1511,6 @@ A small number of well-defined categories are used that are chosen to allow the 
     
 
 
-    <!-- https://w3id.org/transmodel/facilities#DestinationDisplay -->
-
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#DestinationDisplay">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#THINGSTOREVIEW"/>
-        <rdfs:comment xml:lang="en">An advertised destination of a specific JourneyPattern usually displayed on a headsign or other on-board locations</rdfs:comment>
-        <rdfs:label xml:lang="en">DestinationDisplay</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/transmodel/facilities#DestinationDisplayVariant -->
-
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#DestinationDisplayVariant">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#DestinationDisplay"/>
-        <rdfs:comment xml:lang="en">An advertised destination of a specific JourneyPattern, usually displayed on a headsign (HeadingSign) or at other on-board locations</rdfs:comment>
-        <rdfs:label xml:lang="en">DestinationDisplayVariant</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/transmodel/facilities#EmergencyService -->
 
 
@@ -2236,14 +2197,14 @@ Accessible by Passenger but without direct access to Vehicles</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Quay">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#comprises"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/facilities#Quay"/>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/commons#in"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/facilities#StopPlace"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#in"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/facilities#StopPlace"/>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#comprises"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/facilities#Quay"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A place such as platform, stance, or quayside where passengers have access to public transport vehicles, taxi, cars or other means of transportation. A Quay may serve one or more Vehicle Stopping Places and be associated with one or more Scheduled Stop Points. 
