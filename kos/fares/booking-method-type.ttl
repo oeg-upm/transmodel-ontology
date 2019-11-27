@@ -1,0 +1,50 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://w3id.org/transmodel/kos/fares/booking-method-type> a skos:ConceptScheme ;
+    skos:notation "booking-method-type" ;
+    dcterms:creator "Adolfo Antón Bravo (OEG - Universidad Politécnica de Madrid)"@es ;
+    determs:date "2019-11-27"@es ;
+    dcterms:description "Allowed values for Booking Method Type."@en ;
+    dcterms:title "Booking Method Type"@en ;
+    skos:definition "Booking Method Type"@en ;
+    dc:title "Booking Method Type"@en ;
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/fares/booking-method-type/call-driver> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/fares/booking-method-type/call-office> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/fares/booking-method-type/none> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/fares/booking-method-type/online> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/fares/booking-method-type/other> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/fares/booking-method-type/phone-at-stop> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/fares/booking-method-type/text> .
+
+<https://w3id.org/transmodel/kos/fares/booking-method-type/call-driver> a skos:Concept ;
+    skos:notation "call-driver" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/booking-method-type> .
+
+<https://w3id.org/transmodel/kos/fares/booking-method-type/call-office> a skos:Concept ;
+    skos:notation "call-office" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/booking-method-type> .
+
+<https://w3id.org/transmodel/kos/fares/booking-method-type/none> a skos:Concept ;
+    skos:notation "none" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/booking-method-type> .
+
+<https://w3id.org/transmodel/kos/fares/booking-method-type/online> a skos:Concept ;
+    skos:notation "online" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/booking-method-type> .
+
+<https://w3id.org/transmodel/kos/fares/booking-method-type/other> a skos:Concept ;
+    skos:notation "other" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/booking-method-type> .
+
+<https://w3id.org/transmodel/kos/fares/booking-method-type/other> a skos:Concept ;
+    skos:notation "phone-at-stop" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/booking-method-type> .
+
+<https://w3id.org/transmodel/kos/fares/booking-method-type/other> a skos:Concept ;
+    skos:notation "text" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/booking-method-type> .

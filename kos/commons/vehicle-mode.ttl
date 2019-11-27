@@ -1,0 +1,93 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://w3id.org/transmodel/kos/commons/vehicle-mode> a skos:ConceptScheme ;
+    skos:notation "vehicle-mode" ;
+    dcterms:creator "Adolfo Antón Bravo (OEG - Universidad Politécnica de Madrid)"@es ;
+    determs:date "2019-11-27"@es ;
+    dcterms:description "Allowed values for modes of Public Transport applicable to timetabled public transport"@en ;
+    dcterms:title "Modes of Public Transport"@en ;
+    skos:definition "Modes of Public Transport"@en ;
+    dc:title "Modes of Public Transport"@en ;
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/vehicle-mode/air> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/vehicle-mode/air> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/vehicle-mode/bis> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/vehicle-mode/coach> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/vehicle-mode/ferry> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/vehicle-mode/metro> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/vehicle-mode/rail> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/vehicle-mode/trolley-bus> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/vehicle-mode/tram> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/vehicle-mode/water> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/vehicle-mode/cableway> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/vehicle-mode/funicular> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/vehicle-mode/lift> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/vehicle-mode/other> .
+
+<https://w3id.org/transmodel/kos/commons/vehicle-mode/air> a skos:Concept ;
+    skos:notation "air" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/commons/vehicle-mode> .
+
+<https://w3id.org/transmodel/kos/commons/vehicle-mode/bus> a skos:Concept ;
+    skos:notation "bus" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/commons/vehicle-mode> .
+
+
+<https://w3id.org/transmodel/kos/commons/vehicle-mode/coach> a skos:Concept ;
+    skos:notation "coach" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/commons/vehicle-mode> .
+
+
+<https://w3id.org/transmodel/kos/commons/vehicle-mode/ferry> a skos:Concept ;
+    skos:notation "ferry" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/commons/vehicle-mode> .
+
+
+<https://w3id.org/transmodel/kos/commons/vehicle-mode/metro> a skos:Concept ;
+    skos:notation "metro" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/commons/vehicle-mode> .
+
+
+<https://w3id.org/transmodel/kos/commons/vehicle-mode/rail> a skos:Concept ;
+    skos:notation "rail" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/commons/vehicle-mode> .
+
+
+<https://w3id.org/transmodel/kos/commons/vehicle-mode/trolley-bus> a skos:Concept ;
+    skos:notation "trolley-bus" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/commons/vehicle-mode> .
+
+
+<https://w3id.org/transmodel/kos/commons/vehicle-mode/tram> a skos:Concept ;
+    skos:notation "tram" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/commons/vehicle-mode> .
+
+
+<https://w3id.org/transmodel/kos/commons/vehicle-mode/water> a skos:Concept ;
+    skos:notation "cableway" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/commons/vehicle-mode> .
+
+
+<https://w3id.org/transmodel/kos/commons/vehicle-mode/funicular> a skos:Concept ;
+    skos:notation "funicular" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/commons/vehicle-mode> .
+
+
+<https://w3id.org/transmodel/kos/commons/vehicle-mode/lift> a skos:Concept ;
+    skos:notation "lift" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/commons/vehicle-mode> .
+
+
+<https://w3id.org/transmodel/kos/commons/vehicle-mode/other> a skos:Concept ;
+    skos:notation "other" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/commons/vehicle-mode> .
+
+
+<https://w3id.org/transmodel/kos/commons/vehicle-mode/water> a skos:Concept ;
+    skos:notation "water" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/commons/vehicle-mode> .
+

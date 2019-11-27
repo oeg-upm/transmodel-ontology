@@ -16,31 +16,51 @@
     dc:title "Allowed values for Quay Types"@en ;
     skos:hasTopConcept <https://w3id.org/transmodel/kos/journeys/entrance-type/door> ,
         <https://w3id.org/transmodel/kos/journeys/entrance-type/doorway> ,
-        <https://w3id.org/transmodel/kos/journeys/entrance-type/revolvingDoor> ,
-        <https://w3id.org/transmodel/kos/journeys/entrance-type/slidingDoors> ,
+        <https://w3id.org/transmodel/kos/journeys/entrance-type/revolving-door> ,
+        <https://w3id.org/transmodel/kos/journeys/entrance-type/sliding-doors> ,
         <https://w3id.org/transmodel/kos/journeys/entrance-type/barrier> ,
-        <https://w3id.org/transmodel/kos/journeys/entrance-type/ticketBarrier> ,
-        <https://w3id.org/transmodel/kos/journeys/entrance-type/idBarrier> ,
+        <https://w3id.org/transmodel/kos/journeys/entrance-type/ticket-barrier> ,
+        <https://w3id.org/transmodel/kos/journeys/entrance-type/id-barrier> ,
         <https://w3id.org/transmodel/kos/journeys/entrance-type/gate> ,
         <https://w3id.org/transmodel/kos/journeys/entrance-type/style> ,
         <https://w3id.org/transmodel/kos/journeys/entrance-type/other> .
-        
-<https://w3id.org/transmodel/kos/journeys/entrance-type/door> skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
 
-<https://w3id.org/transmodel/kos/journeys/entrance-type/doorway> skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
+<https://w3id.org/transmodel/kos/journeys/entrance-type/door> a skos:Concept ;
+    skos:notation "door" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
 
-<https://w3id.org/transmodel/kos/journeys/entrance-type/revolvingDoor> skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
+<https://w3id.org/transmodel/kos/journeys/entrance-type/doorway> a skos:Concept ;
+    skos:notation "doorway" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
 
-<https://w3id.org/transmodel/kos/journeys/entrance-type/slidingDoors> skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
+<https://w3id.org/transmodel/kos/journeys/entrance-type/revolving-door> a skos:Concept ;
+    skos:notation "revolving-door" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
 
-<https://w3id.org/transmodel/kos/journeys/entrance-type/barrier> skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
+<https://w3id.org/transmodel/kos/journeys/entrance-type/sliding-doors> a skos:Concept ;
+    skos:notation "sliding-doors" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
 
-<https://w3id.org/transmodel/kos/journeys/entrance-type/ticketBarrier> skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
+<https://w3id.org/transmodel/kos/journeys/entrance-type/barrier> a skos:Concept ;
+    skos:notation "barrier" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
 
-<https://w3id.org/transmodel/kos/journeys/entrance-type/idBarrier> skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
+<https://w3id.org/transmodel/kos/journeys/entrance-type/ticket-barrier> a skos:Concept ;
+    skos:notation "ticket-barrier" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
 
-<https://w3id.org/transmodel/kos/journeys/entrance-type/gate> skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
+<https://w3id.org/transmodel/kos/journeys/entrance-type/id-barrier> a skos:Concept ;
+    skos:notation "id-barrier" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
 
-<https://w3id.org/transmodel/kos/journeys/entrance-type/style> skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
+<https://w3id.org/transmodel/kos/journeys/entrance-type/gate> a skos:Concept ;
+    skos:notation "gate" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
 
-<https://w3id.org/transmodel/kos/journeys/entrance-type/other> skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
+<https://w3id.org/transmodel/kos/journeys/entrance-type/style> a skos:Concept ;
+    skos:notation "syle" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
+
+<https://w3id.org/transmodel/kos/journeys/entrance-type/other> a skos:Concept ;
+    skos:notation "other" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/journeys/entrance-type> .
