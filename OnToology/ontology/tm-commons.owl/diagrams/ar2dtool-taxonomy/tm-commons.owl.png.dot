@@ -1,10 +1,21 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "https://w3id.org/transmodel/common#ServiceJourneyPattern" "https://w3id.org/transmodel/common#Point" "https://w3id.org/transmodel/common#TimingPoint" "https://w3id.org/transmodel/common#JourneyPattern" "https://w3id.org/transmodel/common#ActivationPoint" "https://w3id.org/transmodel/common#ScheduledStopPoint" ; /*classes style*/
-	"https://w3id.org/transmodel/common#ScheduledStopPoint" -> "https://w3id.org/transmodel/common#Point" [ label = "rdfs:subClassOf" ];
-	"https://w3id.org/transmodel/common#ActivationPoint" -> "https://w3id.org/transmodel/common#Point" [ label = "rdfs:subClassOf" ];
-	"https://w3id.org/transmodel/common#ServiceJourneyPattern" -> "https://w3id.org/transmodel/common#JourneyPattern" [ label = "rdfs:subClassOf" ];
+node [shape = rectangle, color="black"]; "https://w3id.org/transmodel/common#Service" "https://w3id.org/transmodel/common#Trip" "https://w3id.org/transmodel/common#JourneyPatternLayover" "https://w3id.org/transmodel/common#TimingLink" "https://w3id.org/transmodel/common#Vehicle" "https://w3id.org/transmodel/common#Passenger" "https://w3id.org/transmodel/common#Point" "tmcommons:Zone" "https://w3id.org/transmodel/common#VehicleJourneyLayover" "https://w3id.org/transmodel/common#HeadingInterval" "https://w3id.org/transmodel/common#TimingPoint" "tmcommons:TOREVIEW" "tmcommons:Place" "https://w3id.org/transmodel/common#Route" "https://w3id.org/transmodel/common#ActivationLink" "https://w3id.org/transmodel/common#ActivationPoint" "https://w3id.org/transmodel/common#TimingLinkInJourneyPattern" ; /*classes style*/
 	"https://w3id.org/transmodel/common#TimingPoint" -> "https://w3id.org/transmodel/common#Point" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/transmodel/common#TimingLinkInJourneyPattern" -> "tmcommons:TOREVIEW" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/transmodel/common#JourneyPatternLayover" -> "tmcommons:TOREVIEW" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/transmodel/common#ActivationLink" -> "tmcommons:TOREVIEW" [ label = "rdfs:subClassOf" ];
+	"tmcommons:Place" -> "tmcommons:Zone" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/transmodel/common#TimingLink" -> "tmcommons:TOREVIEW" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/transmodel/common#Route" -> "tmcommons:TOREVIEW" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/transmodel/common#Vehicle" -> "tmcommons:TOREVIEW" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/transmodel/common#Point" -> "tmcommons:TOREVIEW" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/transmodel/common#Trip" -> "tmcommons:TOREVIEW" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/transmodel/common#VehicleJourneyLayover" -> "tmcommons:TOREVIEW" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/transmodel/common#Passenger" -> "tmcommons:TOREVIEW" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/transmodel/common#HeadingInterval" -> "tmcommons:TOREVIEW" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/transmodel/common#Service" -> "tmcommons:TOREVIEW" [ label = "rdfs:subClassOf" ];
+	"https://w3id.org/transmodel/common#ActivationPoint" -> "https://w3id.org/transmodel/common#Point" [ label = "rdfs:subClassOf" ];
 
 }

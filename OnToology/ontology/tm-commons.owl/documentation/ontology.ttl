@@ -88,40 +88,33 @@
 ###  https://w3id.org/transmodel/common#canAlight
 <https://w3id.org/transmodel/common#canAlight> rdf:type owl:ObjectProperty ;
                                                rdfs:domain <https://w3id.org/transmodel/common#Passenger> ;
-                                               rdfs:range <https://w3id.org/transmodel/common#ScheduledStopPoint> ;
                                                rdfs:label "canAlight"@en .
 
 
 ###  https://w3id.org/transmodel/common#canBoard
 <https://w3id.org/transmodel/common#canBoard> rdf:type owl:ObjectProperty ;
                                               rdfs:domain <https://w3id.org/transmodel/common#Passenger> ;
-                                              rdfs:range <https://w3id.org/transmodel/common#ScheduledStopPoint> ;
                                               rdfs:label "canBoard"@en .
 
 
 ###  https://w3id.org/transmodel/common#destinationStop
 <https://w3id.org/transmodel/common#destinationStop> rdf:type owl:ObjectProperty ;
-                                                     rdfs:range <https://w3id.org/transmodel/common#ScheduledStopPoint> ;
                                                      rdfs:label "destinationStop"@en .
 
 
 ###  https://w3id.org/transmodel/common#followsJourneyPattern
 <https://w3id.org/transmodel/common#followsJourneyPattern> rdf:type owl:ObjectProperty ;
-                                                           rdfs:domain <https://w3id.org/transmodel/common#VehicleJourney> ;
-                                                           rdfs:range <https://w3id.org/transmodel/common#JourneyPattern> ;
                                                            rdfs:label "followsJourneyPattern"@en .
 
 
 ###  https://w3id.org/transmodel/common#hasAServiceJourneyPattern
 <https://w3id.org/transmodel/common#hasAServiceJourneyPattern> rdf:type owl:ObjectProperty ;
                                                                rdfs:domain <https://w3id.org/transmodel/common#Service> ;
-                                                               rdfs:range <https://w3id.org/transmodel/common#ServiceJourneyPattern> ;
                                                                rdfs:label "serviceJourneyPattern"@en .
 
 
 ###  https://w3id.org/transmodel/common#journeyPatternPoint
 <https://w3id.org/transmodel/common#journeyPatternPoint> rdf:type owl:ObjectProperty ;
-                                                         rdfs:domain <https://w3id.org/transmodel/common#JourneyPattern> ;
                                                          rdfs:range <https://w3id.org/transmodel/common#Point> ;
                                                          rdfs:label "journeyPatternPoint"@en .
 
@@ -135,7 +128,6 @@
 
 ###  https://w3id.org/transmodel/common#originStop
 <https://w3id.org/transmodel/common#originStop> rdf:type owl:ObjectProperty ;
-                                                rdfs:range <https://w3id.org/transmodel/common#ScheduledStopPoint> ;
                                                 rdfs:label "originStop"@en .
 
 
@@ -148,14 +140,12 @@
 ###  https://w3id.org/transmodel/common#scheduledStopPoint
 <https://w3id.org/transmodel/common#scheduledStopPoint> rdf:type owl:ObjectProperty ;
                                                         rdfs:domain <https://w3id.org/transmodel/common#Route> ;
-                                                        rdfs:range <https://w3id.org/transmodel/common#ScheduledStopPoint> ;
                                                         rdfs:label "scheduledStopPoint"@en .
 
 
 ###  https://w3id.org/transmodel/common#stopsAt
 <https://w3id.org/transmodel/common#stopsAt> rdf:type owl:ObjectProperty ;
                                              rdfs:domain <https://w3id.org/transmodel/common#Vehicle> ;
-                                             rdfs:range <https://w3id.org/transmodel/common#ScheduledStopPoint> ;
                                              rdfs:label "stopsAt"@en .
 
 
@@ -168,27 +158,22 @@
 
 ###  https://w3id.org/transmodel/common#timingLinkInJourneyPattern
 <https://w3id.org/transmodel/common#timingLinkInJourneyPattern> rdf:type owl:ObjectProperty ;
-                                                                rdfs:domain <https://w3id.org/transmodel/common#JourneyPattern> ;
                                                                 rdfs:range <https://w3id.org/transmodel/common#TimingLinkInJourneyPattern> .
 
 
 ###  https://w3id.org/transmodel/common#vehicleJourney
 <https://w3id.org/transmodel/common#vehicleJourney> rdf:type owl:ObjectProperty ;
                                                     rdfs:domain <https://w3id.org/transmodel/common#Vehicle> ;
-                                                    rdfs:range <https://w3id.org/transmodel/common#VehicleJourney> ;
                                                     rdfs:label "vehicleJourney"@en .
 
 
 ###  https://w3id.org/transmodel/common#vehicleJourneyDayType
 <https://w3id.org/transmodel/common#vehicleJourneyDayType> rdf:type owl:ObjectProperty ;
-                                                           rdfs:domain <https://w3id.org/transmodel/common#VehicleJourney> ;
-                                                           rdfs:range <https://w3id.org/transmodel/common#DayType> ;
                                                            rdfs:label "vehicleJourneyDayType"@en .
 
 
 ###  https://w3id.org/transmodel/common#vehicleJourneyRoute
 <https://w3id.org/transmodel/common#vehicleJourneyRoute> rdf:type owl:ObjectProperty ;
-                                                         rdfs:domain <https://w3id.org/transmodel/common#VehicleJourney> ;
                                                          rdfs:range <https://w3id.org/transmodel/common#Route> ;
                                                          rdfs:label "vehicleJourneyRoute"@en .
 
@@ -206,8 +191,6 @@
 
 ###  https://w3id.org/transmodel/common#headway
 <https://w3id.org/transmodel/common#headway> rdf:type owl:DatatypeProperty ;
-                                             rdfs:domain <https://w3id.org/transmodel/common#JourneyPattern> ,
-                                                         <https://w3id.org/transmodel/common#VehicleJourney> ;
                                              rdfs:range xsd:dateTimeStamp ;
                                              rdfs:label "headway"@en .
 
@@ -220,8 +203,6 @@
 
 ###  https://w3id.org/transmodel/common#layover
 <https://w3id.org/transmodel/common#layover> rdf:type owl:DatatypeProperty ;
-                                             rdfs:domain <https://w3id.org/transmodel/common#JourneyPattern> ,
-                                                         <https://w3id.org/transmodel/common#VehicleJourney> ;
                                              rdfs:range xsd:dateTimeStamp ;
                                              rdfs:label "layover"@en .
 
@@ -234,7 +215,6 @@
 
 ###  https://w3id.org/transmodel/common#pointSequence
 <https://w3id.org/transmodel/common#pointSequence> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:domain <https://w3id.org/transmodel/common#ScheduledStopPoint> ;
                                                    rdfs:range xsd:nonNegativeInteger ;
                                                    rdfs:comment "Sequences of ScheduledStopPoint"@en ;
                                                    rdfs:label "stopSequence"@en .
@@ -242,8 +222,6 @@
 
 ###  https://w3id.org/transmodel/common#runtime
 <https://w3id.org/transmodel/common#runtime> rdf:type owl:DatatypeProperty ;
-                                             rdfs:domain <https://w3id.org/transmodel/common#JourneyPattern> ,
-                                                         <https://w3id.org/transmodel/common#VehicleJourney> ;
                                              rdfs:range xsd:nonNegativeInteger ;
                                              rdfs:label "runtime"@en .
 
@@ -284,8 +262,6 @@
 
 ###  https://w3id.org/transmodel/common#waitTime
 <https://w3id.org/transmodel/common#waitTime> rdf:type owl:DatatypeProperty ;
-                                              rdfs:domain <https://w3id.org/transmodel/common#JourneyPattern> ,
-                                                          <https://w3id.org/transmodel/common#VehicleJourney> ;
                                               rdfs:range xsd:string ;
                                               rdfs:label "waitTime"@en .
 
@@ -307,6 +283,7 @@
 
 ###  https://w3id.org/transmodel/common#ActivationLink
 <https://w3id.org/transmodel/common#ActivationLink> rdf:type owl:Class ;
+                                                    rdfs:subClassOf :TOREVIEW ;
                                                     rdfs:comment "A Link where a control process is activated when a vehicle passes it"@en ;
                                                     rdfs:label "ActivationLink"@en .
 
@@ -318,37 +295,23 @@
                                                      rdfs:label "ActivationPoint"@en .
 
 
-###  https://w3id.org/transmodel/common#DayType
-<https://w3id.org/transmodel/common#DayType> rdf:type owl:Class ;
-                                             rdfs:comment "A DayType is a type of day characterised by one or more properties which affect public transport operation"@en ;
-                                             rdfs:label "DayType"@en .
-
-
 ###  https://w3id.org/transmodel/common#HeadingInterval
 <https://w3id.org/transmodel/common#HeadingInterval> rdf:type owl:Class ;
+                                                     rdfs:subClassOf :TOREVIEW ;
                                                      rdfs:comment "A time interval or a duration defining a headway period and characterizing HeadwayJourneyGroup"@en ;
                                                      rdfs:label "HeadwayInterval"@en .
 
 
-###  https://w3id.org/transmodel/common#JourneyPattern
-<https://w3id.org/transmodel/common#JourneyPattern> rdf:type owl:Class ;
-                                                    rdfs:label "JourneyPattern"@en .
-
-
 ###  https://w3id.org/transmodel/common#JourneyPatternLayover
 <https://w3id.org/transmodel/common#JourneyPatternLayover> rdf:type owl:Class ;
+                                                           rdfs:subClassOf :TOREVIEW ;
                                                            rdfs:comment "A JourneyPatternLayover is the time allowance at the end of each journey on a specified JourneyPattern to allow for delays and for other purposes. This layover supersedes any global layover and may be superseded by a specific VehicleJourneyLayover"@en ;
                                                            rdfs:label "JourneyPatternLayover"@en .
 
 
-###  https://w3id.org/transmodel/common#Line
-<https://w3id.org/transmodel/common#Line> rdf:type owl:Class ;
-                                          rdfs:comment "A Line is a group of Route which is generally known to the public by a similar name or number."@en ;
-                                          rdfs:label "Line"@en .
-
-
 ###  https://w3id.org/transmodel/common#Passenger
 <https://w3id.org/transmodel/common#Passenger> rdf:type owl:Class ;
+                                               rdfs:subClassOf :TOREVIEW ;
                                                rdfs:comment "A Passenger is someone who makes a Trip"@en ,
                                                             "When a Passenger makes a Journey it is a Trip; when a Vehicle does it is a VehicleJourney"@en ;
                                                rdfs:label "Passenger"@en .
@@ -356,39 +319,30 @@
 
 ###  https://w3id.org/transmodel/common#Point
 <https://w3id.org/transmodel/common#Point> rdf:type owl:Class ;
+                                           rdfs:subClassOf :TOREVIEW ;
                                            rdfs:comment "A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location"@en ;
                                            rdfs:label "Point"@en .
 
 
 ###  https://w3id.org/transmodel/common#Route
 <https://w3id.org/transmodel/common#Route> rdf:type owl:Class ;
+                                           rdfs:subClassOf :TOREVIEW ;
                                            rdfs:comment "A Route is and ordered list of located Point defining one single path through the road (or rail) network."@en ;
                                            rdfs:label "Route"@en .
 
 
-###  https://w3id.org/transmodel/common#ScheduledStopPoint
-<https://w3id.org/transmodel/common#ScheduledStopPoint> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <https://w3id.org/transmodel/common#Point> ;
-                                                        rdfs:comment "A ScheduledStopPoint is a Point where a Passenger can board or alight from a Vehicle."@en ;
-                                                        rdfs:label "ScheduledStopPoint"@en .
-
-
 ###  https://w3id.org/transmodel/common#Service
 <https://w3id.org/transmodel/common#Service> rdf:type owl:Class ;
+                                             rdfs:subClassOf :TOREVIEW ;
                                              rdfs:comment """A ServiceJourney is a Passenger carrying VehicleJourney for one
 specified DayType. The pattern of working is in principle defined
 by a ServiceJourneyPattern."""@en ;
                                              rdfs:label "ServiceJourney"@en .
 
 
-###  https://w3id.org/transmodel/common#ServiceJourneyPattern
-<https://w3id.org/transmodel/common#ServiceJourneyPattern> rdf:type owl:Class ;
-                                                           rdfs:subClassOf <https://w3id.org/transmodel/common#JourneyPattern> ;
-                                                           rdfs:label "ServiceJourneyPattern"@en .
-
-
 ###  https://w3id.org/transmodel/common#TimingLink
 <https://w3id.org/transmodel/common#TimingLink> rdf:type owl:Class ;
+                                                rdfs:subClassOf :TOREVIEW ;
                                                 rdfs:label """A TimingLink is an ordered pair of TimingPoint for which run times
 may be recorded."""@en ,
                                                            "TimingLink"@en .
@@ -396,6 +350,7 @@ may be recorded."""@en ,
 
 ###  https://w3id.org/transmodel/common#TimingLinkInJourneyPattern
 <https://w3id.org/transmodel/common#TimingLinkInJourneyPattern> rdf:type owl:Class ;
+                                                                rdfs:subClassOf :TOREVIEW ;
                                                                 rdfs:comment """A TimingLinkInJourneyPattern is the position of a TimingLink in a
 JourneyPattern. This entity is needed if a TimingLink is repeated
 in the same JourneyPattern, and separate information is to be stored
@@ -413,26 +368,49 @@ recorded. It's the same as TimingPointInJourneyPattern"""@en ;
 
 ###  https://w3id.org/transmodel/common#Trip
 <https://w3id.org/transmodel/common#Trip> rdf:type owl:Class ;
+                                          rdfs:subClassOf :TOREVIEW ;
                                           rdfs:comment "The physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip."@en ;
                                           rdfs:label "Trip"@en .
 
 
 ###  https://w3id.org/transmodel/common#Vehicle
 <https://w3id.org/transmodel/common#Vehicle> rdf:type owl:Class ;
+                                             rdfs:subClassOf :TOREVIEW ;
                                              rdfs:comment "A PublicTransportVehicle used for carrying Passengers"@en ;
                                              rdfs:label "Vehicle"@en .
 
 
-###  https://w3id.org/transmodel/common#VehicleJourney
-<https://w3id.org/transmodel/common#VehicleJourney> rdf:type owl:Class ;
-                                                    rdfs:comment "The Trip/Journey of a Vehicle is a VehicleJourney; a Trip for a Passenger"@en ,
-                                                                 "The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route."@en ;
-                                                    rdfs:label "VehicleJourney"@en .
-
-
 ###  https://w3id.org/transmodel/common#VehicleJourneyLayover
 <https://w3id.org/transmodel/common#VehicleJourneyLayover> rdf:type owl:Class ;
+                                                           rdfs:subClassOf :TOREVIEW ;
                                                            rdfs:label "VehicleJourneyLayover"@en .
+
+
+###  https://w3id.org/transmodel/commons#GroupOfEntities
+:GroupOfEntities rdf:type owl:Class ;
+                 rdfs:comment "A set of Entities grouped together according to a Purpose of Grouping, e.g. grouping of stops known to the public by a common name."@en ;
+                 rdfs:label "Group of Entities"@en .
+
+
+###  https://w3id.org/transmodel/commons#Place
+:Place rdf:type owl:Class ;
+       rdfs:subClassOf :Zone ;
+       rdfs:comment "A geographic place of any type which may be specified as the origin or destination of a trip. A Place may be represented as a Point (dimension 0), a road section (dimension 1) or a Zone (dimension 2)."@en ;
+       rdfs:label "Place"@en .
+
+
+###  https://w3id.org/transmodel/commons#TOREVIEW
+:TOREVIEW rdf:type owl:Class .
+
+
+###  https://w3id.org/transmodel/commons#Zone
+:Zone rdf:type owl:Class ;
+      rdfs:comment """A two dimensional Place within the Service Area of an Operator or Serviced Operator. It can be:
+- AdministrativeZone
+- TariffZone
+- AccessZone
+- ..."""@en ;
+      rdfs:label "Zone"@en .
 
 
 #################################################################
@@ -443,6 +421,32 @@ recorded. It's the same as TimingPointInJourneyPattern"""@en ;
 <https://w3id.org/transmodel/kos/commons/CommonsType> rdf:type owl:NamedIndividual ,
                                                                <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                                                       rdfs:comment "Concept scheme where all the codelists for the types of journeys that are included in the Transmodel ontology"@en .
+
+
+###  https://w3id.org/transmodel/kos/commons/all-modes
+<https://w3id.org/transmodel/kos/commons/all-modes> rdf:type owl:NamedIndividual ,
+                                                             <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  https://w3id.org/transmodel/kos/commons/continous-mode
+<https://w3id.org/transmodel/kos/commons/continous-mode> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  https://w3id.org/transmodel/kos/commons/road-vehicle-mode
+<https://w3id.org/transmodel/kos/commons/road-vehicle-mode> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                            rdfs:label "road-vehicle-mode"@en .
+
+
+###  https://w3id.org/transmodel/kos/commons/sites-access-mode
+<https://w3id.org/transmodel/kos/commons/sites-access-mode> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  https://w3id.org/transmodel/kos/commons/vehicle-mode
+<https://w3id.org/transmodel/kos/commons/vehicle-mode> rdf:type owl:NamedIndividual ,
+                                                                <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 
 
 _:genid1 :mbox "adolfo.anton.bravo@upm.es"@en ;
