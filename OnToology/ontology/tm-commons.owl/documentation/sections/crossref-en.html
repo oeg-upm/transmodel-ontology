@@ -16,42 +16,31 @@ may be recorded.</a>
             title="https://w3id.org/transmodel/common#ActivationPoint">ActivationPoint</a>
       </li>
       <li>
-         <a href="#https://w3id.org/transmodel/common#DayType" title="https://w3id.org/transmodel/common#DayType">DayType</a>
+         <a href="#GroupOfEntities"
+            title="https://w3id.org/transmodel/commons#GroupOfEntities">Group of Entities</a>
       </li>
       <li>
          <a href="#https://w3id.org/transmodel/common#HeadingInterval"
             title="https://w3id.org/transmodel/common#HeadingInterval">HeadwayInterval</a>
       </li>
       <li>
-         <a href="#https://w3id.org/transmodel/common#JourneyPattern"
-            title="https://w3id.org/transmodel/common#JourneyPattern">JourneyPattern</a>
-      </li>
-      <li>
          <a href="#https://w3id.org/transmodel/common#JourneyPatternLayover"
             title="https://w3id.org/transmodel/common#JourneyPatternLayover">JourneyPatternLayover</a>
-      </li>
-      <li>
-         <a href="#https://w3id.org/transmodel/common#Line" title="https://w3id.org/transmodel/common#Line">Line</a>
       </li>
       <li>
          <a href="#https://w3id.org/transmodel/common#Passenger" title="https://w3id.org/transmodel/common#Passenger">Passenger</a>
       </li>
       <li>
+         <a href="#Place" title="https://w3id.org/transmodel/commons#Place">Place</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/transmodel/common#Point" title="https://w3id.org/transmodel/common#Point">Point</a>
       </li>
       <li>
-         <a href="#https://w3id.org/transmodel/common#Route" title="https://w3id.org/transmodel/common#Route">Route</a>
-      </li>
-      <li>
-         <a href="#https://w3id.org/transmodel/common#ScheduledStopPoint"
-            title="https://w3id.org/transmodel/common#ScheduledStopPoint">ScheduledStopPoint</a>
+         <a href="#Presentation" title="https://w3id.org/transmodel/commons#Presentation">Presentation</a>
       </li>
       <li>
          <a href="#https://w3id.org/transmodel/common#Service" title="https://w3id.org/transmodel/common#Service">ServiceJourney</a>
-      </li>
-      <li>
-         <a href="#https://w3id.org/transmodel/common#ServiceJourneyPattern"
-            title="https://w3id.org/transmodel/common#ServiceJourneyPattern">ServiceJourneyPattern</a>
       </li>
       <li>
          <a href="#https://w3id.org/transmodel/common#TimingLinkInJourneyPattern"
@@ -67,12 +56,11 @@ may be recorded.</a>
          <a href="#https://w3id.org/transmodel/common#Vehicle" title="https://w3id.org/transmodel/common#Vehicle">Vehicle</a>
       </li>
       <li>
-         <a href="#https://w3id.org/transmodel/common#VehicleJourney"
-            title="https://w3id.org/transmodel/common#VehicleJourney">VehicleJourney</a>
-      </li>
-      <li>
          <a href="#https://w3id.org/transmodel/common#VehicleJourneyLayover"
             title="https://w3id.org/transmodel/common#VehicleJourneyLayover">VehicleJourneyLayover</a>
+      </li>
+      <li>
+         <a href="#Zone" title="https://w3id.org/transmodel/commons#Zone">Zone</a>
       </li>
    </ul>
    <div class="entity" id="https://w3id.org/transmodel/common#TimingLink">
@@ -84,6 +72,11 @@ may be recorded.<sup class="type-c" title="class">c</sup>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/common#TimingLink</p>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="https://w3id.org/transmodel/commons#TOREVIEW">t o r e v i e w</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#https://w3id.org/transmodel/common#timingLink" title="https://w3id.org/transmodel/common#timingLink">timingLinkPoint</a>
@@ -101,6 +94,13 @@ may be recorded.<sup class="type-c" title="class">c</sup>
       <div class="comment">
          <span class="markdown">A Link where a control process is activated when a vehicle passes it</span>
       </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="https://w3id.org/transmodel/commons#TOREVIEW">t o r e v i e w</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="https://w3id.org/transmodel/common#ActivationPoint">
       <h3>ActivationPoint<sup class="type-c" title="class">c</sup>
@@ -120,24 +120,16 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://w3id.org/transmodel/common#DayType">
-      <h3>DayType<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="GroupOfEntities">
+      <h3>Group of Entities<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/common#DayType</p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/commons#GroupOfEntities</p>
       <div class="comment">
-         <span class="markdown">A DayType is a type of day characterised by one or more properties which affect public transport operation</span>
+         <span class="markdown">A set of Entities grouped together according to a Purpose of Grouping, e.g. grouping of stops known to the public by a common name.</span>
       </div>
-      <dl class="description">
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#https://w3id.org/transmodel/common#vehicleJourneyDayType"
-               title="https://w3id.org/transmodel/common#vehicleJourneyDayType">vehicleJourneyDayType</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="https://w3id.org/transmodel/common#HeadingInterval">
       <h3>HeadwayInterval<sup class="type-c" title="class">c</sup>
@@ -150,44 +142,15 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          <span class="markdown">A time interval or a duration defining a headway period and characterizing HeadwayJourneyGroup</span>
       </div>
       <dl class="description">
-         <dt>is in domain of</dt>
+         <dt>has super-classes</dt>
          <dd>
-            <a href="#https://w3id.org/transmodel/common#startTime" title="https://w3id.org/transmodel/common#startTime">startTime</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="https://w3id.org/transmodel/common#JourneyPattern">
-      <h3>JourneyPattern<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/common#JourneyPattern</p>
-      <dl class="description">
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#https://w3id.org/transmodel/common#ServiceJourneyPattern"
-               title="https://w3id.org/transmodel/common#ServiceJourneyPattern">ServiceJourneyPattern</a>
+            <span class="dotted" title="https://w3id.org/transmodel/commons#TOREVIEW">t o r e v i e w</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#https://w3id.org/transmodel/common#headway" title="https://w3id.org/transmodel/common#headway">headway</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/transmodel/common#journeyPatternPoint"
-               title="https://w3id.org/transmodel/common#journeyPatternPoint">journeyPatternPoint</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/transmodel/common#layover" title="https://w3id.org/transmodel/common#layover">layover</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/transmodel/common#runtime" title="https://w3id.org/transmodel/common#runtime">runtime</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/transmodel/common#timingLinkInJourneyPattern"
-               title="https://w3id.org/transmodel/common#timingLinkInJourneyPattern">timingLinkInJourneyPattern</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/transmodel/common#waitTime" title="https://w3id.org/transmodel/common#waitTime">waitTime</a>
+            <a href="#https://w3id.org/transmodel/common#startTime" title="https://w3id.org/transmodel/common#startTime">startTime</a>
             <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#https://w3id.org/transmodel/common#followsJourneyPattern"
-               title="https://w3id.org/transmodel/common#followsJourneyPattern">followsJourneyPattern</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -202,23 +165,17 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          <span class="markdown">A JourneyPatternLayover is the time allowance at the end of each journey on a specified JourneyPattern to allow for delays and for other purposes. This layover supersedes any global layover and may be superseded by a specific VehicleJourneyLayover</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="https://w3id.org/transmodel/commons#TOREVIEW">t o r e v i e w</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#https://w3id.org/transmodel/common#time" title="https://w3id.org/transmodel/common#time">time</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
-   </div>
-   <div class="entity" id="https://w3id.org/transmodel/common#Line">
-      <h3>Line<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/common#Line</p>
-      <div class="comment">
-         <span class="markdown">A Line is a group of Route which is generally known to the public by a similar name or number.</span>
-      </div>
    </div>
    <div class="entity" id="https://w3id.org/transmodel/common#Passenger">
       <h3>Passenger<sup class="type-c" title="class">c</sup>
@@ -231,6 +188,11 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          <span class="markdown">A Passenger is someone who makes a Trip</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="https://w3id.org/transmodel/commons#TOREVIEW">t o r e v i e w</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#https://w3id.org/transmodel/common#canAlight" title="https://w3id.org/transmodel/common#canAlight">canAlight</a>
@@ -238,6 +200,24 @@ may be recorded.<sup class="type-c" title="class">c</sup>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/transmodel/common#makesAServiceJourney"
                title="https://w3id.org/transmodel/common#makesAServiceJourney">serviceJourney</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Place">
+      <h3>Place<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/commons#Place</p>
+      <div class="comment">
+         <span class="markdown">A geographic place of any type which may be specified as the origin or destination of a trip. A Place may be represented as a Point (dimension 0), a road section (dimension 1) or a Zone (dimension 2).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Zone" title="https://w3id.org/transmodel/commons#Zone">Zone</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -252,20 +232,17 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          <span class="markdown">A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="https://w3id.org/transmodel/commons#TOREVIEW">t o r e v i e w</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#https://w3id.org/transmodel/common#ActivationPoint"
                title="https://w3id.org/transmodel/common#ActivationPoint">ActivationPoint</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/transmodel/common#ScheduledStopPoint"
-               title="https://w3id.org/transmodel/common#ScheduledStopPoint">ScheduledStopPoint</a>
             <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/transmodel/common#TimingPoint" title="https://w3id.org/transmodel/common#TimingPoint">TimingPoint</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#https://w3id.org/transmodel/common#latitude" title="https://w3id.org/transmodel/common#latitude">latitude</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/transmodel/common#longitude" title="https://w3id.org/transmodel/common#longitude">longitude</a>
-            <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -275,65 +252,19 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://w3id.org/transmodel/common#Route">
-      <h3>Route<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="Presentation">
+      <h3>Presentation<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/common#Route</p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/commons#Presentation</p>
       <div class="comment">
-         <span class="markdown">A Route is and ordered list of located Point defining one single path through the road (or rail) network.</span>
-      </div>
-      <dl class="description">
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#https://w3id.org/transmodel/common#scheduledStopPoint"
-               title="https://w3id.org/transmodel/common#scheduledStopPoint">scheduledStopPoint</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#https://w3id.org/transmodel/common#route" title="https://w3id.org/transmodel/common#route">route</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/transmodel/common#vehicleJourneyRoute"
-               title="https://w3id.org/transmodel/common#vehicleJourneyRoute">vehicleJourneyRoute</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="https://w3id.org/transmodel/common#ScheduledStopPoint">
-      <h3>ScheduledStopPoint<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/common#ScheduledStopPoint</p>
-      <div class="comment">
-         <span class="markdown">A ScheduledStopPoint is a Point where a Passenger can board or alight from a Vehicle.</span>
+         <span class="markdown">This class is used to represent a Line, or any other object, in a map</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd>
-            <a href="#https://w3id.org/transmodel/common#Point" title="https://w3id.org/transmodel/common#Point">Point</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#https://w3id.org/transmodel/common#pointSequence" title="https://w3id.org/transmodel/common#pointSequence">stopSequence</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#https://w3id.org/transmodel/common#canAlight" title="https://w3id.org/transmodel/common#canAlight">canAlight</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/transmodel/common#canBoard" title="https://w3id.org/transmodel/common#canBoard">canBoard</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/transmodel/common#destinationStop"
-               title="https://w3id.org/transmodel/common#destinationStop">destinationStop</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/transmodel/common#originStop" title="https://w3id.org/transmodel/common#originStop">originStop</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/transmodel/common#scheduledStopPoint"
-               title="https://w3id.org/transmodel/common#scheduledStopPoint">scheduledStopPoint</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/transmodel/common#stopsAt" title="https://w3id.org/transmodel/common#stopsAt">stopsAt</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
+         <dd/>
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/transmodel/common#Service">
@@ -349,6 +280,11 @@ specified DayType. The pattern of working is in principle defined
 by a ServiceJourneyPattern.</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="https://w3id.org/transmodel/commons#TOREVIEW">t o r e v i e w</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#https://w3id.org/transmodel/common#hasAServiceJourneyPattern"
@@ -359,28 +295,6 @@ by a ServiceJourneyPattern.</span>
          <dd>
             <a href="#https://w3id.org/transmodel/common#makesAServiceJourney"
                title="https://w3id.org/transmodel/common#makesAServiceJourney">serviceJourney</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="https://w3id.org/transmodel/common#ServiceJourneyPattern">
-      <h3>ServiceJourneyPattern<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/common#ServiceJourneyPattern</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#https://w3id.org/transmodel/common#JourneyPattern"
-               title="https://w3id.org/transmodel/common#JourneyPattern">JourneyPattern</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#https://w3id.org/transmodel/common#hasAServiceJourneyPattern"
-               title="https://w3id.org/transmodel/common#hasAServiceJourneyPattern">serviceJourneyPattern</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -399,6 +313,11 @@ in the same JourneyPattern, and separate information is to be stored
 about each iteration of the TimingLink</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="https://w3id.org/transmodel/commons#TOREVIEW">t o r e v i e w</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#https://w3id.org/transmodel/common#timingLinkInJourneyPattern"
@@ -450,6 +369,13 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
       <div class="comment">
          <span class="markdown">The physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip.</span>
       </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="https://w3id.org/transmodel/commons#TOREVIEW">t o r e v i e w</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
    <div class="entity" id="https://w3id.org/transmodel/common#Vehicle">
       <h3>Vehicle<sup class="type-c" title="class">c</sup>
@@ -462,43 +388,15 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
          <span class="markdown">A PublicTransportVehicle used for carrying Passengers</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="https://w3id.org/transmodel/commons#TOREVIEW">t o r e v i e w</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#https://w3id.org/transmodel/common#stopsAt" title="https://w3id.org/transmodel/common#stopsAt">stopsAt</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/transmodel/common#vehicleJourney"
-               title="https://w3id.org/transmodel/common#vehicleJourney">vehicleJourney</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="https://w3id.org/transmodel/common#VehicleJourney">
-      <h3>VehicleJourney<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/common#VehicleJourney</p>
-      <div class="comment">
-         <span class="markdown">The Trip/Journey of a Vehicle is a VehicleJourney; a Trip for a Passenger</span>
-      </div>
-      <dl class="description">
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#https://w3id.org/transmodel/common#followsJourneyPattern"
-               title="https://w3id.org/transmodel/common#followsJourneyPattern">followsJourneyPattern</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/transmodel/common#headway" title="https://w3id.org/transmodel/common#headway">headway</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/transmodel/common#layover" title="https://w3id.org/transmodel/common#layover">layover</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/transmodel/common#runtime" title="https://w3id.org/transmodel/common#runtime">runtime</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/transmodel/common#vehicleJourneyDayType"
-               title="https://w3id.org/transmodel/common#vehicleJourneyDayType">vehicleJourneyDayType</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/transmodel/common#vehicleJourneyRoute"
-               title="https://w3id.org/transmodel/common#vehicleJourneyRoute">vehicleJourneyRoute</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/transmodel/common#waitTime" title="https://w3id.org/transmodel/common#waitTime">waitTime</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#https://w3id.org/transmodel/common#vehicleJourney"
                title="https://w3id.org/transmodel/common#vehicleJourney">vehicleJourney</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -512,6 +410,11 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/common#VehicleJourneyLayover</p>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="https://w3id.org/transmodel/commons#TOREVIEW">t o r e v i e w</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#https://w3id.org/transmodel/common#time" title="https://w3id.org/transmodel/common#time">time</a>
@@ -519,9 +422,34 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Zone">
+      <h3>Zone<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/commons#Zone</p>
+      <div class="comment">
+         <span class="markdown">A two dimensional Place within the Service Area of an Operator or Serviced Operator. It can be:
+- AdministrativeZone
+- TariffZone
+- AccessZone
+- ...</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Place" title="https://w3id.org/transmodel/commons#Place">Place</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
 </div><div id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
+      <li>
+         <a href="#at" title="https://w3id.org/transmodel/commons#at">at</a>
+      </li>
       <li>
          <a href="#https://w3id.org/transmodel/common#canAlight" title="https://w3id.org/transmodel/common#canAlight">canAlight</a>
       </li>
@@ -535,6 +463,9 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
       <li>
          <a href="#https://w3id.org/transmodel/common#followsJourneyPattern"
             title="https://w3id.org/transmodel/common#followsJourneyPattern">followsJourneyPattern</a>
+      </li>
+      <li>
+         <a href="#in" title="https://w3id.org/transmodel/commons#in">in</a>
       </li>
       <li>
          <a href="#https://w3id.org/transmodel/common#journeyPatternPoint"
@@ -583,6 +514,17 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
             title="https://w3id.org/transmodel/common#vehicleJourneyRoute">vehicleJourneyRoute</a>
       </li>
    </ul>
+   <div class="entity" id="at">
+      <h3>at<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/commons#at</p>
+      <div class="comment">
+         <span class="markdown">This property sets the relationship between something and other thing related to it. It is used in multiple situations and modules of this ontology</span>
+      </div>
+   </div>
    <div class="entity" id="https://w3id.org/transmodel/common#canAlight">
       <h3>canAlight<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -595,12 +537,6 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
             <dt>has domain</dt>
             <dd>
                <a href="#https://w3id.org/transmodel/common#Passenger" title="https://w3id.org/transmodel/common#Passenger">Passenger</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#ScheduledStopPoint"
-                  title="https://w3id.org/transmodel/common#ScheduledStopPoint">ScheduledStopPoint</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -620,12 +556,6 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
                <a href="#https://w3id.org/transmodel/common#Passenger" title="https://w3id.org/transmodel/common#Passenger">Passenger</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#ScheduledStopPoint"
-                  title="https://w3id.org/transmodel/common#ScheduledStopPoint">ScheduledStopPoint</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
          </dl>
       </div>
    </div>
@@ -636,16 +566,6 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/common#destinationStop</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#ScheduledStopPoint"
-                  title="https://w3id.org/transmodel/common#ScheduledStopPoint">ScheduledStopPoint</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
    </div>
    <div class="entity" id="https://w3id.org/transmodel/common#followsJourneyPattern">
       <h3>followsJourneyPattern<sup class="type-op" title="object property">op</sup>
@@ -654,21 +574,16 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/common#followsJourneyPattern</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#VehicleJourney"
-                  title="https://w3id.org/transmodel/common#VehicleJourney">VehicleJourney</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#JourneyPattern"
-                  title="https://w3id.org/transmodel/common#JourneyPattern">JourneyPattern</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
+   </div>
+   <div class="entity" id="in">
+      <h3>in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/commons#in</p>
+      <div class="comment">
+         <span class="markdown">This property sets the relationship between something and other thing contained in the first. It is used in multiple situations and modules of this ontology (e.g., Quay in Stop Place)</span>
       </div>
    </div>
    <div class="entity" id="https://w3id.org/transmodel/common#journeyPatternPoint">
@@ -680,12 +595,6 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
          <strong>IRI:</strong> https://w3id.org/transmodel/common#journeyPatternPoint</p>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#JourneyPattern"
-                  title="https://w3id.org/transmodel/common#JourneyPattern">JourneyPattern</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#https://w3id.org/transmodel/common#Point" title="https://w3id.org/transmodel/common#Point">Point</a>
@@ -701,16 +610,6 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/common#originStop</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#ScheduledStopPoint"
-                  title="https://w3id.org/transmodel/common#ScheduledStopPoint">ScheduledStopPoint</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
    </div>
    <div class="entity" id="https://w3id.org/transmodel/common#route">
       <h3>route<sup class="type-op" title="object property">op</sup>
@@ -719,15 +618,6 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/common#route</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#Route" title="https://w3id.org/transmodel/common#Route">Route</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
    </div>
    <div class="entity" id="https://w3id.org/transmodel/common#scheduledStopPoint">
       <h3>scheduledStopPoint<sup class="type-op" title="object property">op</sup>
@@ -736,21 +626,6 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/common#scheduledStopPoint</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#Route" title="https://w3id.org/transmodel/common#Route">Route</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#ScheduledStopPoint"
-                  title="https://w3id.org/transmodel/common#ScheduledStopPoint">ScheduledStopPoint</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
    </div>
    <div class="entity" id="https://w3id.org/transmodel/common#makesAServiceJourney">
       <h3>serviceJourney<sup class="type-op" title="object property">op</sup>
@@ -788,12 +663,6 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
                <a href="#https://w3id.org/transmodel/common#Service" title="https://w3id.org/transmodel/common#Service">ServiceJourney</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#ServiceJourneyPattern"
-                  title="https://w3id.org/transmodel/common#ServiceJourneyPattern">ServiceJourneyPattern</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
          </dl>
       </div>
    </div>
@@ -811,12 +680,6 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
                <a href="#https://w3id.org/transmodel/common#Vehicle" title="https://w3id.org/transmodel/common#Vehicle">Vehicle</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#ScheduledStopPoint"
-                  title="https://w3id.org/transmodel/common#ScheduledStopPoint">ScheduledStopPoint</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
          </dl>
       </div>
    </div>
@@ -829,12 +692,6 @@ recorded. It's the same as TimingPointInJourneyPattern</span>
          <strong>IRI:</strong> https://w3id.org/transmodel/common#timingLinkInJourneyPattern</p>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#JourneyPattern"
-                  title="https://w3id.org/transmodel/common#JourneyPattern">JourneyPattern</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#https://w3id.org/transmodel/common#TimingLinkInJourneyPattern"
@@ -883,12 +740,6 @@ may be recorded.</a>
                <a href="#https://w3id.org/transmodel/common#Vehicle" title="https://w3id.org/transmodel/common#Vehicle">Vehicle</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#VehicleJourney"
-                  title="https://w3id.org/transmodel/common#VehicleJourney">VehicleJourney</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
          </dl>
       </div>
    </div>
@@ -899,21 +750,6 @@ may be recorded.</a>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/common#vehicleJourneyDayType</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#VehicleJourney"
-                  title="https://w3id.org/transmodel/common#VehicleJourney">VehicleJourney</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#DayType" title="https://w3id.org/transmodel/common#DayType">DayType</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
    </div>
    <div class="entity" id="https://w3id.org/transmodel/common#vehicleJourneyRoute">
       <h3>vehicleJourneyRoute<sup class="type-op" title="object property">op</sup>
@@ -922,21 +758,6 @@ may be recorded.</a>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/common#vehicleJourneyRoute</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#VehicleJourney"
-                  title="https://w3id.org/transmodel/common#VehicleJourney">VehicleJourney</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#Route" title="https://w3id.org/transmodel/common#Route">Route</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
    </div>
 </div><div id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
@@ -945,16 +766,13 @@ may be recorded.</a>
          <a href="#https://w3id.org/transmodel/common#arrivalTime" title="https://w3id.org/transmodel/common#arrivalTime">arrivalTime</a>
       </li>
       <li>
+         <a href="#colour" title="https://w3id.org/transmodel/commons#colour">colour</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/transmodel/common#headway" title="https://w3id.org/transmodel/common#headway">headway</a>
       </li>
       <li>
-         <a href="#https://w3id.org/transmodel/common#latitude" title="https://w3id.org/transmodel/common#latitude">latitude</a>
-      </li>
-      <li>
          <a href="#https://w3id.org/transmodel/common#layover" title="https://w3id.org/transmodel/common#layover">layover</a>
-      </li>
-      <li>
-         <a href="#https://w3id.org/transmodel/common#longitude" title="https://w3id.org/transmodel/common#longitude">longitude</a>
       </li>
       <li>
          <a href="#https://w3id.org/transmodel/common#runtime" title="https://w3id.org/transmodel/common#runtime">runtime</a>
@@ -964,6 +782,9 @@ may be recorded.</a>
       </li>
       <li>
          <a href="#https://w3id.org/transmodel/common#pointSequence" title="https://w3id.org/transmodel/common#pointSequence">stopSequence</a>
+      </li>
+      <li>
+         <a href="#textColour" title="https://w3id.org/transmodel/commons#textColour">text colour</a>
       </li>
       <li>
          <a href="#borderCrossing"
@@ -1006,6 +827,25 @@ may be recorded.</a>
          </dl>
       </div>
    </div>
+   <div class="entity" id="colour">
+      <h3>colour<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/commons#colour</p>
+      <div class="comment">
+         <span class="markdown">The colour used to represent something with a Presentation (e.g., a Line)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="https://w3id.org/transmodel/common#headway">
       <h3>headway<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1015,37 +855,9 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/common#headway</p>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#JourneyPattern"
-                  title="https://w3id.org/transmodel/common#JourneyPattern">JourneyPattern</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#VehicleJourney"
-                  title="https://w3id.org/transmodel/common#VehicleJourney">VehicleJourney</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="https://w3id.org/transmodel/common#latitude">
-      <h3>latitude<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/common#latitude</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#Point" title="https://w3id.org/transmodel/common#Point">Point</a>
-               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1059,37 +871,9 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/common#layover</p>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#JourneyPattern"
-                  title="https://w3id.org/transmodel/common#JourneyPattern">JourneyPattern</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#VehicleJourney"
-                  title="https://w3id.org/transmodel/common#VehicleJourney">VehicleJourney</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="https://w3id.org/transmodel/common#longitude">
-      <h3>longitude<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/common#longitude</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#Point" title="https://w3id.org/transmodel/common#Point">Point</a>
-               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1103,17 +887,6 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/common#runtime</p>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#JourneyPattern"
-                  title="https://w3id.org/transmodel/common#JourneyPattern">JourneyPattern</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#VehicleJourney"
-                  title="https://w3id.org/transmodel/common#VehicleJourney">VehicleJourney</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted"
@@ -1156,16 +929,29 @@ may be recorded.</a>
       </div>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#ScheduledStopPoint"
-                  title="https://w3id.org/transmodel/common#ScheduledStopPoint">ScheduledStopPoint</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted"
                      title="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">non negative integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="textColour">
+      <h3>text colour<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/commons#textColour</p>
+      <div class="comment">
+         <span class="markdown">The colour used to represent the text associated to something with a Presentation (e.g., a Line)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
       </div>
@@ -1273,17 +1059,6 @@ may be recorded.</a>
          <strong>IRI:</strong> https://w3id.org/transmodel/common#waitTime</p>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#JourneyPattern"
-                  title="https://w3id.org/transmodel/common#JourneyPattern">JourneyPattern</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <a href="#https://w3id.org/transmodel/common#VehicleJourney"
-                  title="https://w3id.org/transmodel/common#VehicleJourney">VehicleJourney</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
@@ -1295,12 +1070,56 @@ may be recorded.</a>
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
       <li>
+         <a href="#https://w3id.org/transmodel/kos/commons/all-modes"
+            title="https://w3id.org/transmodel/kos/commons/all-modes">
+            <span>all modes</span>
+         </a>
+      </li>
+      <li>
          <a href="#https://w3id.org/transmodel/kos/commons/CommonsType"
             title="https://w3id.org/transmodel/kos/commons/CommonsType">
             <span>commons type</span>
          </a>
       </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/commons/continous-mode"
+            title="https://w3id.org/transmodel/kos/commons/continous-mode">
+            <span>continous mode</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/commons/road-vehicle-mode"
+            title="https://w3id.org/transmodel/kos/commons/road-vehicle-mode">road-vehicle-mode</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/commons/sites-access-mode"
+            title="https://w3id.org/transmodel/kos/commons/sites-access-mode">
+            <span>sites access mode</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/commons/vehicle-mode"
+            title="https://w3id.org/transmodel/kos/commons/vehicle-mode">
+            <span>vehicle mode</span>
+         </a>
+      </li>
    </ul>
+   <div class="entity" id="https://w3id.org/transmodel/kos/commons/all-modes">
+      <h3>all modes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/commons/all-modes</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="https://w3id.org/transmodel/kos/commons/CommonsType">
       <h3>commons type<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -1311,6 +1130,70 @@ may be recorded.</a>
       <div class="comment">
          <span class="markdown">Concept scheme where all the codelists for the types of journeys that are included in the Transmodel ontology</span>
       </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/commons/continous-mode">
+      <h3>continous mode<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/commons/continous-mode</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/commons/road-vehicle-mode">
+      <h3>road-vehicle-mode<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/commons/road-vehicle-mode</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/commons/sites-access-mode">
+      <h3>sites access mode<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/commons/sites-access-mode</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/commons/vehicle-mode">
+      <h3>vehicle mode<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/commons/vehicle-mode</p>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>

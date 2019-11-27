@@ -91,6 +91,9 @@
 # http://www.w3.org/2004/02/skos/core#inScheme
 <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
+# https://w3id.org/transmodel/commons#in
+<https://w3id.org/transmodel/commons#in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
 # https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW
 <https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
@@ -239,14 +242,6 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/transmodel/facilities#couchetteFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "This property restricts the type of facility to one specific for couchette from the SKOS codelist for types of facilities, including, for example, values like T2, T3, C1, C2, etc."@en .
 <https://w3id.org/transmodel/facilities#couchetteFacility> <http://www.w3.org/2000/01/rdf-schema#label> "couchette facility"@en .
 # 
-# https://w3id.org/transmodel/facilities#destinationDisplay
-<https://w3id.org/transmodel/facilities#destinationDisplay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/facilities#destinationDisplay> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW> .
-<https://w3id.org/transmodel/facilities#destinationDisplay> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#DestinationDisplay> .
-<https://w3id.org/transmodel/facilities#destinationDisplay> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/facilities#PassengerInformationEquipment> .
-<https://w3id.org/transmodel/facilities#destinationDisplay> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
-<https://w3id.org/transmodel/facilities#destinationDisplay> <http://www.w3.org/2000/01/rdf-schema#label> "destinationDisplay"@en .
-# 
 # https://w3id.org/transmodel/facilities#determining
 <https://w3id.org/transmodel/facilities#determining> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/transmodel/facilities#determining> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#AccessibilityAssessment> .
@@ -258,7 +253,6 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/transmodel/facilities#displayAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/transmodel/facilities#displayAssignment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW> .
 <https://w3id.org/transmodel/facilities#displayAssignment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/facilities#JourneyPattern> .
-<https://w3id.org/transmodel/facilities#displayAssignment> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/facilities#DestinationDisplay> .
 <https://w3id.org/transmodel/facilities#displayAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "The assignment of one ScheduledStopPoint and one JourneyPattern to a PassengerInformationEquipment specifying that information on the ScheduledStopPoint and the JourneyPattern will be provided (e.g. displayed, printed)"@en .
 <https://w3id.org/transmodel/facilities#displayAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "displayAssignment"@en .
 # 
@@ -340,11 +334,6 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/transmodel/facilities#fareClass> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: create the list of allowed values for fare classes, and check whether including it as a facility type, as included in the TransModel model"@en .
 <https://w3id.org/transmodel/facilities#fareClass> <http://www.w3.org/2000/01/rdf-schema#comment> "This property relates an Onboard Stay or an Accommodation, among others, with a class of fares, whose allowed values are defined in the TransModel Common Facility Values (Figure 290, page 454)"@en .
 <https://w3id.org/transmodel/facilities#fareClass> <http://www.w3.org/2000/01/rdf-schema#label> "fare class"@en .
-# 
-# https://w3id.org/transmodel/facilities#in
-<https://w3id.org/transmodel/facilities#in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/facilities#in> <http://www.w3.org/2000/01/rdf-schema#comment> "This property sets the relationship between something and other thing contained in the first (e.g., a Quay is in a Stop Place)"@en .
-<https://w3id.org/transmodel/facilities#in> <http://www.w3.org/2000/01/rdf-schema#label> "in"@en .
 # 
 # https://w3id.org/transmodel/facilities#isUsedBy
 <https://w3id.org/transmodel/facilities#isUsedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -935,18 +924,6 @@ _:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/transmodel/facilities#CycleOperatingEquipment> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)"@en .
 <https://w3id.org/transmodel/facilities#CycleOperatingEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "CycleStorageEquipment"@en .
 # 
-# https://w3id.org/transmodel/facilities#DestinationDisplay
-<https://w3id.org/transmodel/facilities#DestinationDisplay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/facilities#DestinationDisplay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#THINGSTOREVIEW> .
-<https://w3id.org/transmodel/facilities#DestinationDisplay> <http://www.w3.org/2000/01/rdf-schema#comment> "An advertised destination of a specific JourneyPattern usually displayed on a headsign or other on-board locations"@en .
-<https://w3id.org/transmodel/facilities#DestinationDisplay> <http://www.w3.org/2000/01/rdf-schema#label> "DestinationDisplay"@en .
-# 
-# https://w3id.org/transmodel/facilities#DestinationDisplayVariant
-<https://w3id.org/transmodel/facilities#DestinationDisplayVariant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/facilities#DestinationDisplayVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#DestinationDisplay> .
-<https://w3id.org/transmodel/facilities#DestinationDisplayVariant> <http://www.w3.org/2000/01/rdf-schema#comment> "An advertised destination of a specific JourneyPattern, usually displayed on a headsign (HeadingSign) or at other on-board locations"@en .
-<https://w3id.org/transmodel/facilities#DestinationDisplayVariant> <http://www.w3.org/2000/01/rdf-schema#label> "DestinationDisplayVariant"@en .
-# 
 # https://w3id.org/transmodel/facilities#EmergencyService
 <https://w3id.org/transmodel/facilities#EmergencyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/facilities#EmergencyService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/facilities#LocalService> .
@@ -1359,12 +1336,12 @@ _:genid103 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2
 <https://w3id.org/transmodel/facilities#Quay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/facilities#Quay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid104 .
 _:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid104 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/facilities#comprises> .
-_:genid104 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/facilities#Quay> .
+_:genid104 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/commons#in> .
+_:genid104 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/facilities#StopPlace> .
 <https://w3id.org/transmodel/facilities#Quay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid105 .
 _:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid105 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/facilities#in> .
-_:genid105 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/facilities#StopPlace> .
+_:genid105 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/facilities#comprises> .
+_:genid105 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/facilities#Quay> .
 <https://w3id.org/transmodel/facilities#Quay> <http://www.w3.org/2000/01/rdf-schema#comment> "A place such as platform, stance, or quayside where passengers have access to public transport vehicles, taxi, cars or other means of transportation. A Quay may serve one or more Vehicle Stopping Places and be associated with one or more Scheduled Stop Points. \n\nA Quay may contain other sub Quays"@en .
 <https://w3id.org/transmodel/facilities#Quay> <http://www.w3.org/2000/01/rdf-schema#label> "Quay"@en .
 # 

@@ -44,19 +44,19 @@
   "@id" : "_:genid104",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#Quay"
+    "@id" : "https://w3id.org/transmodel/facilities#StopPlace"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#comprises"
+    "@id" : "https://w3id.org/transmodel/commons#in"
   } ]
 }, {
   "@id" : "_:genid105",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#StopPlace"
+    "@id" : "https://w3id.org/transmodel/facilities#Quay"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#in"
+    "@id" : "https://w3id.org/transmodel/facilities#comprises"
   } ]
 }, {
   "@id" : "_:genid106",
@@ -801,6 +801,9 @@
   "@id" : "https://w3id.org/transmodel/commons#borderCrossing",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
+  "@id" : "https://w3id.org/transmodel/commons#in",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
   "@id" : "https://w3id.org/transmodel/facilities#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://creativecommons.org/ns#license" : [ {
@@ -1248,34 +1251,6 @@
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#DATAPROPERTIESTOREVIEW",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#DestinationDisplay",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "An advertised destination of a specific JourneyPattern usually displayed on a headsign or other on-board locations"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "DestinationDisplay"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#THINGSTOREVIEW"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#DestinationDisplayVariant",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "An advertised destination of a specific JourneyPattern, usually displayed on a headsign (HeadingSign) or at other on-board locations"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "DestinationDisplayVariant"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#DestinationDisplay"
-  } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#EmergencyService",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -3102,26 +3077,6 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "https://w3id.org/transmodel/facilities#destinationDisplay",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : ""
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#DestinationDisplay"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "destinationDisplay"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#PassengerInformationEquipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
-  } ]
-}, {
   "@id" : "https://w3id.org/transmodel/facilities#determining",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3158,9 +3113,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "displayAssignment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#DestinationDisplay"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
@@ -3428,17 +3380,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "immigrationHall"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/facilities#in",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "This property sets the relationship between something and other thing contained in the first (e.g., a Quay is in a Stop Place)"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "in"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#incomingCustoms",

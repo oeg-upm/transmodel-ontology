@@ -131,18 +131,21 @@ xsd:time rdf:type rdfs:Datatype .
                                                rdfs:label "trip"@en .
 
 
-###  https://w3id.org/transmodel/facilities#in
-<https://w3id.org/transmodel/facilities#in> rdf:type owl:ObjectProperty ;
-                                            rdfs:range :Block ;
-                                            rdfs:comment "This property sets de relationship between something and other thing contained in the first"@en ;
-                                            rdfs:label "in"@en .
+###  https://w3id.org/transmodel/commons#at
+<https://w3id.org/transmodel/commons#at> rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://w3id.org/transmodel/commons#in
+<https://w3id.org/transmodel/commons#in> rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor
 <https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor> rdf:type owl:ObjectProperty ;
                                                                      rdfs:subPropertyOf :PROPS-TO-REVIEW ;
                                                                      rdfs:domain <https://w3id.org/transmodel/facilities#JourneyPattern> ;
-                                                                     rdfs:range <https://w3id.org/transmodel/facilities#DestinationDisplay> ;
+                                                                     rdfs:range :DestinationDisplay ;
                                                                      rdfs:comment "A Journey Pattern is advertised in a Destination Display"@en ,
                                                                                   "TODO: change to aViewOf"@en ;
                                                                      rdfs:label "journey Pattern Advertised For"@en .
@@ -195,6 +198,14 @@ xsd:time rdf:type rdfs:Datatype .
                   rdfs:label "beginsConnection"@en .
 
 
+###  https://w3id.org/transmodel/journeys#belongingTo
+:belongingTo rdf:type owl:ObjectProperty ;
+             rdfs:domain <https://w3id.org/transmodel/facilities#VehicleType> ;
+             rdfs:range :VehicleMode ;
+             rdfs:comment "This property sets the relationship between Vehicle Type and Vehicle Mode"@en ;
+             rdfs:label "belonging To"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#blockPart
 :blockPart rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :PROPS-TO-REVIEW ;
@@ -223,6 +234,21 @@ xsd:time rdf:type rdfs:Datatype .
                  rdfs:range <https://w3id.org/transmodel/facilities#AccessibilityAssessment> ;
                  rdfs:comment "This property is the relationship of a Journey and the Accessibility Assessment"@en ;
                  rdfs:label "characterised By"@en .
+
+
+###  https://w3id.org/transmodel/journeys#classifiedBy
+:classifiedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain :Line ;
+              rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                  owl:hasValue <https://w3id.org/transmodel/kos/commons/all-modes>
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ;
+              rdfs:comment "This property allows relating a Line with the transport modes which are used to operate it"@en ;
+              rdfs:label "classified by"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#composedOf
@@ -304,6 +330,12 @@ xsd:time rdf:type rdfs:Datatype .
              rdfs:label "described By"@en .
 
 
+###  https://w3id.org/transmodel/journeys#destinationDisplay
+:destinationDisplay rdf:type owl:ObjectProperty ;
+                    rdfs:range :DestinationDisplay ;
+                    rdfs:label "destination display"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#destinationStop
 :destinationStop rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :PROPS-TO-REVIEW ;
@@ -345,6 +377,14 @@ xsd:time rdf:type rdfs:Datatype .
             rdfs:range :Block ;
             rdfs:comment "Property to relate a Parking Point to the end of a Block"@en ;
             rdfs:label "end of block"@en .
+
+
+###  https://w3id.org/transmodel/journeys#endingAt
+:endingAt rdf:type owl:ObjectProperty ;
+          rdfs:domain :OperatingPeriod ;
+          rdfs:range :OperatingDay ;
+          rdfs:comment "Property to connect an Operating Period to the related Operating Days, indicating when it ends"@en ;
+          rdfs:label "ending at"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#endsConnection
@@ -504,6 +544,21 @@ xsd:time rdf:type rdfs:Datatype .
          rdfs:label "on Route"@en .
 
 
+###  https://w3id.org/transmodel/journeys#operatedBy
+:operatedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :VehicleJourney ;
+            rdfs:range <https://w3id.org/transmodel/facilities#VehicleType> ;
+            rdfs:comment "This property sets the relationship between a Vehicle Journey and a Vehicle Type"@en ;
+            rdfs:label "operated By"@en .
+
+
+###  https://w3id.org/transmodel/journeys#operatingPeriod
+:operatingPeriod rdf:type owl:ObjectProperty ;
+                 rdfs:range :OperatingPeriod ;
+                 rdfs:comment "operating period"@en ,
+                              "operating period assigned to a Day Type Assignment"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#originStop
 :originStop rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :PROPS-TO-REVIEW ;
@@ -519,14 +574,6 @@ xsd:time rdf:type rdfs:Datatype .
             rdfs:label "overriding"@en .
 
 
-###  https://w3id.org/transmodel/journeys#passedAt
-:passedAt rdf:type owl:ObjectProperty ;
-          rdfs:domain :PointInJourneyPattern ;
-          rdfs:range :TimetabledPassingTime ;
-          rdfs:comment "This property sets the relationship between a Point In Journey Pattern and a Timetabled Passing Time"@en ;
-          rdfs:label "passed At"@en .
-
-
 ###  https://w3id.org/transmodel/journeys#passengerConnection
 :passengerConnection rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :PROPS-TO-REVIEW ;
@@ -534,10 +581,17 @@ xsd:time rdf:type rdfs:Datatype .
                      rdfs:label "passengerConnection"@en .
 
 
+###  https://w3id.org/transmodel/journeys#passesAt
+:passesAt rdf:type owl:ObjectProperty ;
+          rdfs:domain :PointInJourneyPattern ;
+          rdfs:range :TimetabledPassingTime ;
+          rdfs:comment "This property sets the relationship between a Point In Journey Pattern or a Service Journey and a Timetabled Passing Time"@en ;
+          rdfs:label "passes at"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#passingTimeTimingPoint
 :passingTimeTimingPoint rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf :PROPS-TO-REVIEW ;
-                        rdfs:domain :PassingTime ;
                         rdfs:range :TimingPoint ;
                         rdfs:label "passingTimeTimingPoint" .
 
@@ -546,16 +600,24 @@ xsd:time rdf:type rdfs:Datatype .
 :prescribing rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf owl:topObjectProperty ;
              rdfs:domain :PointInJourneyPattern ;
-             rdfs:range <https://w3id.org/transmodel/facilities#DestinationDisplay> ;
+             rdfs:range :DestinationDisplay ;
              rdfs:comment "This property relates a Point in Journey Pattern with a Destination Display"@en ;
              rdfs:label "prescribing"@en .
+
+
+###  https://w3id.org/transmodel/journeys#presentedBy
+:presentedBy rdf:type owl:ObjectProperty ;
+             rdfs:domain :Line ;
+             rdfs:range <https://w3id.org/transmodel/commons#Presentation> ;
+             rdfs:comment "This property is used to connect a Line with its corresponding Presentation"@en ;
+             rdfs:label "presented by"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#primarilyAdvertisedWith
 :primarilyAdvertisedWith rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf owl:topObjectProperty ;
                          rdfs:domain :JourneyPattern ;
-                         rdfs:range <https://w3id.org/transmodel/facilities#DestinationDisplay> ;
+                         rdfs:range :DestinationDisplay ;
                          rdfs:comment "This property relates where is primarily advertised the Journey Pattern in a Destination Display"@en ;
                          rdfs:label "primarily Advertised With"@en .
 
@@ -640,6 +702,14 @@ xsd:time rdf:type rdfs:Datatype .
               rdfs:range :Block ;
               rdfs:label "Property to relate a Parking Point to the start of a Block"@en ,
                          "start of block"@en .
+
+
+###  https://w3id.org/transmodel/journeys#startingAt
+:startingAt rdf:type owl:ObjectProperty ;
+            rdfs:domain :OperatingPeriod ;
+            rdfs:range :OperatingDay ;
+            rdfs:label "Property to connect an Operating Period to the related Operating Days, indicating when it starts"@en ,
+                       "starting at"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#stopUse
@@ -741,11 +811,25 @@ xsd:time rdf:type rdfs:Datatype .
                  rdfs:label "vehicleJourneys"@en .
 
 
+###  https://w3id.org/transmodel/journeys#vehicleModeId
+:vehicleModeId rdf:type owl:ObjectProperty ;
+               rdfs:domain :VehicleMode ;
+               rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                   owl:hasValue <https://w3id.org/transmodel/kos/journeys/day-type>
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
+               rdfs:comment "This property sets the relationship between a Vehicle Mode and the type of Vehicle used defined in the kos/journeys/all-modes.ttl"@en ;
+               rdfs:label "vehicle Mode ID"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#vehiclePassingTime
 :vehiclePassingTime rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :PROPS-TO-REVIEW ;
                     rdfs:domain :Vehicle ;
-                    rdfs:range :PassingTime ;
                     rdfs:label "vehiclePassingTime"@en .
 
 
@@ -771,13 +855,6 @@ xsd:time rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
-###  https://w3id.org/transmodel/authorities#departureTime
-<https://w3id.org/transmodel/authorities#departureTime> rdf:type owl:DatatypeProperty ;
-                                                        rdfs:subPropertyOf :DATA-PROPERTIES-TO-REVIEW ;
-                                                        rdfs:comment "arrival Time for a Service Journey in a Timing Point"@en ;
-                                                        rdfs:label "departure Time"@en .
-
-
 ###  https://w3id.org/transmodel/commons#borderCrossing
 <https://w3id.org/transmodel/commons#borderCrossing> rdf:type owl:DatatypeProperty .
 
@@ -786,12 +863,17 @@ xsd:time rdf:type rdfs:Datatype .
 :DATA-PROPERTIES-TO-REVIEW rdf:type owl:DatatypeProperty .
 
 
+###  https://w3id.org/transmodel/journeys#arrivalDayOffset
+:arrivalDayOffset rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:time ;
+                  rdfs:comment "Arrival Day Offset (e.g., for a TimeTabledPassingTime)"@en ;
+                  rdfs:label "arrival day offset"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#arrivalTime
 :arrivalTime rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf :DATA-PROPERTIES-TO-REVIEW ;
-             rdfs:domain :TimingPoint ;
-             rdfs:range xsd:dateTimeStamp ;
-             rdfs:comment "departure Time for a Service Journey in a Timing Point"@en ;
+             rdfs:range xsd:time ;
+             rdfs:comment "Arrival time (e.g., for a Service Journey in a Timing Point)"@en ;
              rdfs:label "arrival Time"@en .
 
 
@@ -820,6 +902,27 @@ xsd:time rdf:type rdfs:Datatype .
       rdfs:range xsd:dateTimeStamp ;
       rdfs:comment "This property sets up the date for the Day Type Assignment"@en ;
       rdfs:label "date"@en .
+
+
+###  https://w3id.org/transmodel/journeys#departureDayOffset
+:departureDayOffset rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:time ;
+                    rdfs:comment "Departure Day Offset (e.g., for a TimeTabledPassingTime)"@en ;
+                    rdfs:label "departure day offset"@en .
+
+
+###  https://w3id.org/transmodel/journeys#departureTime
+:departureTime rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:time ;
+               rdfs:comment "Departure Time (e.g., for a Service Journey in a Timing Point)"@en ;
+               rdfs:label "departure Time"@en .
+
+
+###  https://w3id.org/transmodel/journeys#distanceFromStart
+:distanceFromStart rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:float ;
+                   rdfs:comment "For a Point in a Link Sequence (or alike), this property represents the distance from the start of the corresponding Journey Pattern or alike."@en ;
+                   rdfs:label "distance from start"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#firstDayOffset
@@ -882,6 +985,14 @@ xsd:time rdf:type rdfs:Datatype .
              rdfs:range xsd:boolean ;
              rdfs:comment "This property says if a Day Type Assignment is available or not"@en ;
              rdfs:label "is Available"@en .
+
+
+###  https://w3id.org/transmodel/journeys#isFlexible
+:isFlexible rdf:type owl:DatatypeProperty ;
+            rdfs:domain :StopPointInJourneyPattern ;
+            rdfs:range xsd:boolean ;
+            rdfs:comment "This property is associated to a Stop Point in Journey Pattern to represent whether it is a flexible stop or not"@en ;
+            rdfs:label "is flexible"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#isServiceDay
@@ -971,9 +1082,8 @@ xsd:time rdf:type rdfs:Datatype .
 ###  https://w3id.org/transmodel/journeys#order
 :order rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf owl:topDataProperty ;
-       rdfs:domain :PointInLinkSequence ;
        rdfs:range xsd:nonNegativeInteger ;
-       rdfs:comment "Order of a Point in Link Sequence or in a Point on Route within sequence"@en ;
+       rdfs:comment "Order of a Point in Link Sequence, or in a Point on Route within sequence, or in any other type of situation where the order or points are relevant"@en ;
        rdfs:label "order"@en .
 
 
@@ -1077,6 +1187,10 @@ xsd:time rdf:type rdfs:Datatype .
                                                    rdfs:label "Operator"@es .
 
 
+###  https://w3id.org/transmodel/commons#Presentation
+<https://w3id.org/transmodel/commons#Presentation> rdf:type owl:Class .
+
+
 ###  https://w3id.org/transmodel/facilities#AccessibilityAssessment
 <https://w3id.org/transmodel/facilities#AccessibilityAssessment> rdf:type owl:Class ;
                                                                  rdfs:label "Accessibility Assessment"@en .
@@ -1084,12 +1198,6 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/transmodel/facilities#BoardingPosition
 <https://w3id.org/transmodel/facilities#BoardingPosition> rdf:type owl:Class .
-
-
-###  https://w3id.org/transmodel/facilities#DestinationDisplay
-<https://w3id.org/transmodel/facilities#DestinationDisplay> rdf:type owl:Class ;
-                                                            rdfs:comment "An advertised destination of a specific JOURNEY PATTERN, usually displayed on a headsign or at other on-board locations."@en ;
-                                                            rdfs:label "Destination Display"@en .
 
 
 ###  https://w3id.org/transmodel/facilities#JourneyPattern
@@ -1112,6 +1220,12 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/transmodel/facilities#StopPlace
 <https://w3id.org/transmodel/facilities#StopPlace> rdf:type owl:Class .
+
+
+###  https://w3id.org/transmodel/facilities#VehicleType
+<https://w3id.org/transmodel/facilities#VehicleType> rdf:type owl:Class ;
+                                                     rdfs:comment "A classification of public transport vehicles according to the vehicle scheduling requirements in mode and capacity (e.g. standard bus, double-deck, ...)."@en ;
+                                                     rdfs:label "Vehicle Type"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#Access
@@ -1228,13 +1342,6 @@ xsd:time rdf:type rdfs:Datatype .
             rdfs:label "DatedBlock"@en .
 
 
-###  https://w3id.org/transmodel/journeys#DatedPassingTime
-:DatedPassingTime rdf:type owl:Class ;
-                  rdfs:subClassOf :PassingTime ;
-                  rdfs:comment "A PassingTime on a particular OperatingDay"@en ;
-                  rdfs:label "DatedPassingTime"@en .
-
-
 ###  https://w3id.org/transmodel/journeys#DatedVehicleJourney
 :DatedVehicleJourney rdf:type owl:Class ;
                      rdfs:subClassOf :VehicleJourney ;
@@ -1271,6 +1378,10 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/transmodel/journeys#DayTypeAssignment
 :DayTypeAssignment rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :operatingPeriod ;
+                                     owl:allValuesFrom :OperatingPeriod
+                                   ] ;
                    rdfs:comment "The assignment of operational characteristics, expressed by Day Type to particular Operating Day within a Service Calendar"@en ;
                    rdfs:label "Day Type Assignment"@en .
 
@@ -1314,6 +1425,19 @@ xsd:time rdf:type rdfs:Datatype .
                               rdfs:subClassOf :TOREVIEWCLASSES ;
                               rdfs:comment "The default time taken by a Vehicle to traverse a TimingLink during a ServiceJourney, for a specified TimeDemandType. This time may be superseded by the JourneyPatternRunTime or VehicleJourneyRunTime if these exist"@en ;
                               rdfs:label "DefaultServiceJourneyRunTime"@en .
+
+
+###  https://w3id.org/transmodel/journeys#DestinationDisplay
+:DestinationDisplay rdf:type owl:Class ;
+                    rdfs:comment "An advertised destination of a specific Journey Pattern usually displayed on a headsign or other on-board locations"@en ;
+                    rdfs:label "Destination Display"@en .
+
+
+###  https://w3id.org/transmodel/journeys#DestinationDisplayVariant
+:DestinationDisplayVariant rdf:type owl:Class ;
+                           rdfs:subClassOf :DestinationDisplay ;
+                           rdfs:comment "An advertised destination of a specific Journey Pattern, usually displayed on a headsign (Heading Sign) or at other on-board locations"@en ;
+                           rdfs:label "Destination Display Variant"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#DynamicStopAssignment
@@ -1471,7 +1595,7 @@ xsd:time rdf:type rdfs:Datatype .
                 rdfs:subClassOf :LinkSequence ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :primarilyAdvertisedWith ;
-                                  owl:allValuesFrom <https://w3id.org/transmodel/facilities#DestinationDisplay>
+                                  owl:allValuesFrom :DestinationDisplay
                                 ] ;
                 rdfs:comment "An ordered list of Scheduled Stop Points and Timing Points on a single Route, describing the pattern of working for public transport vehicles. A Journey Pattern may pass through the same Point more than once. The first Point of a Journey Pattern is the origin. The last Point is the destination."@en ;
                 rdfs:label "Journey Pattern"@en .
@@ -1493,7 +1617,11 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/transmodel/journeys#Line
 :Line rdf:type owl:Class ;
-      rdfs:comment "A Line is a group of Route which is generally known to the public by a similar name or number."@en ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :presentedBy ;
+                        owl:allValuesFrom <https://w3id.org/transmodel/commons#Presentation>
+                      ] ;
+      rdfs:comment "A Line is a group of Routes which is generally known to the public by a similar name or number."@en ;
       rdfs:label "Line"@en .
 
 
@@ -1538,6 +1666,14 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/transmodel/journeys#OperatingPeriod
 :OperatingPeriod rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty :endingAt ;
+                                   owl:allValuesFrom :OperatingDay
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :startingAt ;
+                                   owl:allValuesFrom :OperatingDay
+                                 ] ;
                  rdfs:comment "A continous interval of time between two Operating Day which will be used to define validities"@en ;
                  rdfs:label "Operating Period"@en .
 
@@ -1576,13 +1712,6 @@ xsd:time rdf:type rdfs:Datatype .
                          rdfs:label "Passenger Stop Assignment"@en .
 
 
-###  https://w3id.org/transmodel/journeys#PassingTime
-:PassingTime rdf:type owl:Class ;
-             rdfs:subClassOf :TOREVIEWCLASSES ;
-             rdfs:comment "Time data concerning public transport vehicles passing a particular Point, e.g. arrival time, departure time, waiting time"@en ;
-             rdfs:label "PassingTime"@en .
-
-
 ###  https://w3id.org/transmodel/journeys#Place
 :Place rdf:type owl:Class ;
        rdfs:subClassOf :TOREVIEWCLASSES ;
@@ -1606,8 +1735,12 @@ xsd:time rdf:type rdfs:Datatype .
 :PointInJourneyPattern rdf:type owl:Class ;
                        rdfs:subClassOf :PointInLinkSequence ,
                                        [ rdf:type owl:Restriction ;
+                                         owl:onProperty :passesAt ;
+                                         owl:allValuesFrom :TimetabledPassingTime
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty :prescribing ;
-                                         owl:allValuesFrom <https://w3id.org/transmodel/facilities#DestinationDisplay>
+                                         owl:allValuesFrom :DestinationDisplay
                                        ] ;
                        rdfs:comment "A Scheduled Stop Point OR Timing Point in a Journey Pattern with its order in that Journey Pattern"@en ;
                        rdfs:label "Point In Journey Pattern"@en .
@@ -1626,6 +1759,11 @@ xsd:time rdf:type rdfs:Datatype .
                                        owl:onClass :Point
                                      ] ,
                                      [ rdf:type owl:Restriction ;
+                                       owl:onProperty :distanceFromStart ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:float
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
                                        owl:onProperty :order ;
                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                        owl:onDataRange xsd:nonNegativeInteger
@@ -1638,6 +1776,10 @@ xsd:time rdf:type rdfs:Datatype .
 ###  https://w3id.org/transmodel/journeys#PointOnRoute
 :PointOnRoute rdf:type owl:Class ;
               rdfs:subClassOf :PointInLinkSequence ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <https://w3id.org/transmodel/commons#in> ;
+                                owl:allValuesFrom :Route
+                              ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :inLinkSequence ;
                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -1859,6 +2001,11 @@ xsd:time rdf:type rdfs:Datatype .
                                              owl:onDataRange xsd:boolean
                                            ] ,
                                            [ rdf:type owl:Restriction ;
+                                             owl:onProperty :isFlexible ;
+                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange xsd:boolean
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
                                              owl:onProperty :requestStop ;
                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                              owl:onDataRange xsd:boolean
@@ -1908,8 +2055,20 @@ xsd:time rdf:type rdfs:Datatype .
 ###  https://w3id.org/transmodel/journeys#TimetabledPassingTime
 :TimetabledPassingTime rdf:type owl:Class ;
                        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                         owl:onProperty :passedAt ;
-                                         owl:allValuesFrom :TimetabledPassingTime
+                                         owl:onProperty :arrivalDayOffset ;
+                                         owl:allValuesFrom xsd:time
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :arrivalTime ;
+                                         owl:allValuesFrom xsd:time
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :departureDayOffset ;
+                                         owl:allValuesFrom xsd:time
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :departureTime ;
+                                         owl:allValuesFrom xsd:time
                                        ] ;
                        rdfs:comment "Long-term planned time data concerning public transport Vehicles passing a particular POINT IN JOURNEY PATTERN on a specified VEHICLE JOURNEY for a certain DAY TYPE."@en ;
                        rdfs:label "Timetabled Passing Time"@en .
@@ -2003,8 +2162,12 @@ It's the same as Timing Point In Journey Pattern"""@en ;
 :VehicleJourney rdf:type owl:Class ;
                 rdfs:subClassOf :Journey ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty <https://w3id.org/transmodel/facilities#in> ;
+                                  owl:onProperty <https://w3id.org/transmodel/commons#in> ;
                                   owl:allValuesFrom :Block
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :passesAt ;
+                                  owl:allValuesFrom :TimetabledPassingTime
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :runsOn ;
@@ -2035,6 +2198,12 @@ Within VehicleJourney there are several types:
                        rdfs:label "VehicleJourneyRunTime"@en .
 
 
+###  https://w3id.org/transmodel/journeys#VehicleMode
+:VehicleMode rdf:type owl:Class ;
+             rdfs:comment "A characterisation of the public transport operation according to the means of transport (bus, tram, metro, train, ferry, ship)."@en ;
+             rdfs:label "Vehicle Mode"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#WireJunction
 :WireJunction rdf:type owl:Class ;
               rdfs:subClassOf :InfrastructurePoint ;
@@ -2045,12 +2214,6 @@ Within VehicleJourney there are several types:
 #################################################################
 #    Individuals
 #################################################################
-
-###  https://w3id.org/transmodel/journeys#ArrivalTime
-:ArrivalTime rdf:type owl:NamedIndividual ,
-                      :PassingTime ;
-             rdfs:label "ArrivalTime"@en .
-
 
 ###  https://w3id.org/transmodel/journeys#BothDirections
 :BothDirections rdf:type owl:NamedIndividual ,
@@ -2085,12 +2248,6 @@ Within VehicleJourney there are several types:
 :DefaultInterchangeStandard rdf:type owl:NamedIndividual ,
                                      :DefaultInterchange ;
                             rdfs:label "DefaultInterchangeMaximum"@en .
-
-
-###  https://w3id.org/transmodel/journeys#DepartureTime
-:DepartureTime rdf:type owl:NamedIndividual ,
-                        :PassingTime ;
-               rdfs:label "DepartureTime"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#Ferry
@@ -2226,12 +2383,6 @@ Within VehicleJourney there are several types:
          rdfs:label "Tuesday"@en .
 
 
-###  https://w3id.org/transmodel/journeys#WaitingTime
-:WaitingTime rdf:type owl:NamedIndividual ,
-                      :PassingTime ;
-             rdfs:label "WaitingTime"@en .
-
-
 ###  https://w3id.org/transmodel/journeys#Walking
 :Walking rdf:type owl:NamedIndividual ,
                   :AccessMode .
@@ -2250,6 +2401,11 @@ Within VehicleJourney there are several types:
 ###  https://w3id.org/transmodel/journeys#virtualLineService
 :virtualLineService rdf:type owl:NamedIndividual ;
                     rdfs:label "VirtualLineService"@en .
+
+
+###  https://w3id.org/transmodel/kos/commons/all-modes
+<https://w3id.org/transmodel/kos/commons/all-modes> rdf:type owl:NamedIndividual ,
+                                                             <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 
 
 ###  https://w3id.org/transmodel/kos/journeys/day-type
@@ -2284,10 +2440,24 @@ Within VehicleJourney there are several types:
                                                             rdfs:comment "Concept scheme where all the codelists for the types of limited use that are included in the Transmodel ontology"@en .
 
 
+###  https://w3id.org/transmodel/kos/journeys/mobility-limitation
+<https://w3id.org/transmodel/kos/journeys/mobility-limitation> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                               rdfs:comment "Concept scheme  for types of mobility limitations"@en ;
+                                                               rdfs:label "mobility-limitation"@en .
+
+
 ###  https://w3id.org/transmodel/kos/journeys/quay-type
 <https://w3id.org/transmodel/kos/journeys/quay-type> rdf:type owl:NamedIndividual ,
                                                               <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                                                      rdfs:comment "Concept scheme where all the codelists for the types of quay types that are included in the Transmodel ontology"@en .
+
+
+###  https://w3id.org/transmodel/kos/journeys/stop-place
+<https://w3id.org/transmodel/kos/journeys/stop-place> rdf:type owl:NamedIndividual ,
+                                                               <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                      rdfs:comment "Concept scheme  for types of stop place"@en ;
+                                                      rdfs:label "stop-place"@en .
 
 
 ###  https://w3id.org/transmodel/kos/journeys/stop-place-component-type
@@ -2299,11 +2469,12 @@ Within VehicleJourney there are several types:
 ###  https://w3id.org/transmodel/kos/journeys/stop-use-type
 <https://w3id.org/transmodel/kos/journeys/stop-use-type> rdf:type owl:NamedIndividual ,
                                                                   <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                                         rdfs:comment "Concept scheme  for types of use of stops (e.g., access, interchange only, pass through or non boarding alighting)"@en .
+                                                         rdfs:comment "Concept scheme  for types of use of stops (e.g., access, interchange only, pass through or non boarding alighting)"@en ;
+                                                         rdfs:label "stop-use-type"@en .
 
 
-_:genid95 :mbox "adolfo.anton.bravo@upm.es"@en ;
-          :name "Adolfo Anton-Bravo"@en .
+_:genid115 :mbox "adolfo.anton.bravo@upm.es"@en ;
+           :name "Adolfo Anton-Bravo"@en .
 
 #################################################################
 #    Annotations
