@@ -228,15 +228,14 @@ xsd:time rdf:type rdfs:Datatype .
 ###  https://w3id.org/transmodel/journeys#composedOf
 :composedOf rdf:type owl:ObjectProperty ;
             owl:inverseOf :runsOn ;
-            rdfs:domain :JourneyFrequencyGroup ;
-            rdfs:range :VehicleJourney ;
+            rdfs:domain :VehicleJourney ;
+            rdfs:range :JourneyFrequencyGroup ;
             rdfs:comment "This property relates a Journey Frequency Group with the Vehicle Journeys that it is composed of"@en ;
             rdfs:label "composed of"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#day
 :day rdf:type owl:ObjectProperty ;
-     rdfs:domain :DayOfWeek ;
      rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
@@ -275,8 +274,15 @@ xsd:time rdf:type rdfs:Datatype .
 ###  https://w3id.org/transmodel/journeys#definedAs
 :definedAs rdf:type owl:ObjectProperty ;
            rdfs:domain :PropertyOfDay ;
-           rdfs:range :DayOfWeek ;
-           rdfs:comment "This property sets the relationship between Property Of Day and Day Type"@en ;
+           rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                               owl:hasValue <https://w3id.org/transmodel/kos/journeys/day-type>
+                                             ]
+                                           ) ;
+                        rdf:type owl:Class
+                      ] ;
+           rdfs:comment "This property sets the relationship between Property Of Day and the SKOS Concept Scheme for days of the week"@en ;
            rdfs:label "defined As"@en .
 
 
@@ -379,6 +385,14 @@ xsd:time rdf:type rdfs:Datatype .
      rdfs:domain :StopAssignment ;
      rdfs:comment "A general property that allows associating a Stop Assignment to a Scheduled Stop Point, Quay, Boarding Position and/or Stop Place"@en ;
      rdfs:label "for"@en .
+
+
+###  https://w3id.org/transmodel/journeys#forServicedOrganisation
+:forServicedOrganisation rdf:type owl:ObjectProperty ;
+                         rdfs:domain :OrganisationDayType ;
+                         rdfs:comment "TODO: Add range tmauth:ServicedOrganisation"@en ,
+                                      "This property connects an Organisation Day Type to a Service Organisation, indicating that such Day Type is for providing service to the corresponding Organisation"@en ;
+                         rdfs:label "for serviced organisation"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#holidayType
@@ -573,8 +587,8 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/transmodel/journeys#runsOn
 :runsOn rdf:type owl:ObjectProperty ;
-        rdfs:domain :VehicleJourney ;
-        rdfs:range :JourneyFrequencyGroup ;
+        rdfs:domain :JourneyFrequencyGroup ;
+        rdfs:range :VehicleJourney ;
         rdfs:comment "This property relates a Vehicle Journey with the Journey Frequency Group(s) that it belongs to"@en ;
         rdfs:label "runs on"@en .
 
@@ -868,6 +882,14 @@ xsd:time rdf:type rdfs:Datatype .
              rdfs:range xsd:boolean ;
              rdfs:comment "This property says if a Day Type Assignment is available or not"@en ;
              rdfs:label "is Available"@en .
+
+
+###  https://w3id.org/transmodel/journeys#isServiceDay
+:isServiceDay rdf:type owl:DatatypeProperty ;
+              rdfs:domain :OrganisationDayType ;
+              rdfs:range xsd:boolean ;
+              rdfs:label "Property that indicates whether a Transport Service is required for an Organisation on this Day Type."@en ,
+                         "is service day"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#isWaitPoint
@@ -1220,41 +1242,11 @@ xsd:time rdf:type rdfs:Datatype .
                      rdfs:label "Dated Vehicle Journey"@en .
 
 
-###  https://w3id.org/transmodel/journeys#DayOfWeek
-:DayOfWeek rdf:type owl:Class ;
-           rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                    owl:onProperty :day ;
-                                                    owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
-                                                  ]
-                                                  [ rdf:type owl:Restriction ;
-                                                    owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                    owl:hasValue <https://w3id.org/transmodel/kos/journeys/day-type>
-                                                  ]
-                                                ) ;
-                             rdf:type owl:Class
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :definedAs ;
-                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                             owl:onClass :DayOfWeek
-                           ] ;
-           rdfs:comment "A particular week day, from Monday to Sunday"@en ;
-           rdfs:label "Day Of Week"@en .
-
-
 ###  https://w3id.org/transmodel/journeys#DayType
 :DayType rdf:type owl:Class ;
-         rdfs:subClassOf [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                  owl:hasValue <https://w3id.org/transmodel/kos/journeys/day-type>
-                                                ]
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty :describedBy ;
-                                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                  owl:onClass <http://www.w3.org/2004/02/skos/core#Concept>
-                                                ]
-                                              ) ;
-                           rdf:type owl:Class
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :describedBy ;
+                           owl:allValuesFrom :PropertyOfDay
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :specifying ;
@@ -1273,7 +1265,8 @@ xsd:time rdf:type rdfs:Datatype .
                                        ]
                          ] ;
          rdfs:comment "A Day Type is a type of day characterised by one or more properties which affect public transport operation"@en ;
-         rdfs:label "Day Type"@en .
+         rdfs:label "Day Type"@en ,
+                    "TODO: Check season and complete with other properties"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#DayTypeAssignment
@@ -1332,6 +1325,14 @@ xsd:time rdf:type rdfs:Datatype .
                                        ] ;
                        rdfs:comment "The dynamic association of a Scheduled Stop Point with the next available Stop Place, Quay or Boarding Position within a Stop Place."@en ;
                        rdfs:label "Dynamic Stop Assignment"@en .
+
+
+###  https://w3id.org/transmodel/journeys#FareDayType
+:FareDayType rdf:type owl:Class ;
+             rdfs:subClassOf :DayType ;
+             rdfs:comment "A type of day used in the fare collection domain, characterised by one or more properties which affect the definition of access rights and prices in the fare system."@en ,
+                          "TODO: Add information on the relationship with PricingParameterSet"@en ;
+             rdfs:label "Fare Day Type"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#FarePointInJourneyPattern
@@ -1541,6 +1542,18 @@ xsd:time rdf:type rdfs:Datatype .
                  rdfs:label "Operating Period"@en .
 
 
+###  https://w3id.org/transmodel/journeys#OrganisationDayType
+:OrganisationDayType rdf:type owl:Class ;
+                     rdfs:subClassOf :DayType ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :isServiceDay ;
+                                       owl:allValuesFrom xsd:boolean
+                                     ] ;
+                     rdfs:comment "Day Type that is defined in terms of operation or not operation of a referenced Serviced Organisation."@en ;
+                     rdfs:label "Organisation Day Type"@en ,
+                                "TODO: Add constraint: :forServicedOrganisation only tmauth:ServicedOrganisation"@en .
+
+
 ###  https://w3id.org/transmodel/journeys#ParkingPoint
 :ParkingPoint rdf:type owl:Class ;
               rdfs:subClassOf :ReliefPoint ,
@@ -1648,6 +1661,17 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/transmodel/journeys#PropertyOfDay
 :PropertyOfDay rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :definedAs ;
+                                 owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                            owl:hasValue <https://w3id.org/transmodel/kos/journeys/day-type>
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ]
+                               ] ;
                rdfs:comment "A property which a day may possess, such as school holiday, weekday, summer, winter, etc."@en ;
                rdfs:label "Property of day"@en .
 
@@ -1981,6 +2005,10 @@ It's the same as Timing Point In Journey Pattern"""@en ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty <https://w3id.org/transmodel/facilities#in> ;
                                   owl:allValuesFrom :Block
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :runsOn ;
+                                  owl:allValuesFrom :JourneyFrequencyGroup
                                 ] ;
                 rdfs:comment """A Vehicle Journey is the journey made by the Vehicle.
 
@@ -2274,7 +2302,7 @@ Within VehicleJourney there are several types:
                                                          rdfs:comment "Concept scheme  for types of use of stops (e.g., access, interchange only, pass through or non boarding alighting)"@en .
 
 
-_:genid94 :mbox "adolfo.anton.bravo@upm.es"@en ;
+_:genid95 :mbox "adolfo.anton.bravo@upm.es"@en ;
           :name "Adolfo Anton-Bravo"@en .
 
 #################################################################

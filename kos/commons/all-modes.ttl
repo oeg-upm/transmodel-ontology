@@ -1,0 +1,118 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes> a skos:ConceptScheme ;
+    skos:notation "all-modes" ;
+    dcterms:creator "Adolfo Antón Bravo (OEG - Universidad Politécnica de Madrid)"@es ;
+    determs:date "2019-11-27"@es ;
+    dcterms:description "Allowed values for r Modes."@en ;
+    dcterms:title "All modes"@en ;
+    skos:definition "All modes"@en ;
+    dc:title "All modes"@en ;
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/all> ,
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/unknown> ,
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/air> ,
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/bus> ,
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/trolley-bus> ,
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/tram> ,
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/coach> ,
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/rail> ,
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/intercity-rail> ,
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/urban-rail> ,
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/metro> ,
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/water> ,
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/cable-way> ,
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/funicular> ,
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/taxi> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/self-drive> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/foot> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/bicycle> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/motorcycle> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/car> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/all-modes/shuttle> .
+        
+
+<https://w3id.org/transmodel/kos/commons/all-modes/all> a skos:Concept ;
+    skos:notation "all" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/unknown> a skos:Concept ;
+    skos:notation "unknown" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/air> a skos:Concept ;
+    skos:notation "air" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/bus> a skos:Concept ;
+    skos:notation "bus" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/trolley-bus> a skos:Concept ;
+    skos:notation "trolley-bus" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/tram> a skos:Concept ;
+    skos:notation "tram" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/coach> a skos:Concept ;
+    skos:notation "coach" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/rail> a skos:Concept ;
+    skos:notation "rail" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/intercity-rail> a skos:Concept ;
+    skos:notation "intercity-rail" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/urban-rail> a skos:Concept ;
+    skos:notation "urban-rail" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/metro> a skos:Concept ;
+    skos:notation "water" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/cable-way> a skos:Concept ;
+    skos:notation "cable-way" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/funicular> a skos:Concept ;
+    skos:notation "funicular" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/taxi> a skos:Concept ;
+    skos:notation "taxi" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/self-drive> a skos:Concept ;
+    skos:notation "self-drive" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/foot> a skos:Concept ;
+    skos:notation "foot" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/bicycle> a skos:Concept ;
+    skos:notation "bicycle" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/motorcycle> a skos:Concept ;
+    skos:notation "motorcycle" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/car> a skos:Concept ;
+    skos:notation "car" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+
+<https://w3id.org/transmodel/kos/commons/all-modes/shuttle> a skos:Concept ;
+    skos:notation "shuttle" ;
+    skos:broader <https://w3id.org/transmodel/kos/commons/all-modes> .
+

@@ -1,0 +1,35 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://w3id.org/transmodel/kos/commons/road-vehicle-mode> a skos:ConceptScheme ;
+    skos:notation "road-vehicle-mode" ;
+    dcterms:creator "Adolfo Antón Bravo (OEG - Universidad Politécnica de Madrid)"@es ;
+    determs:date "2019-11-27"@es ;
+    dcterms:description "Allowed values for modes of Public Transport applicable to timetabled public transport in Road Vehicle Mode: a characterisation of the operation according to the means of transport (bus, tram, coach)."@en ;
+    dcterms:title "Modes of Road Vehicle"@en ;
+    skos:definition "Modes of Road Vehicle"@en ;
+    dc:title "Modes of Road Vehicle"@en ;
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/road-vehicle-mode/bus> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/road-vehicle-mode/coach> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/road-vehicle-mode/trolley-bus> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/commons/road-vehicle-mode/tram> .
+
+<https://w3id.org/transmodel/kos/commons/road-vehicle-mode/bus> a skos:Concept ;
+    skos:notation "bus" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/commons/road-vehicle-mode> .
+
+<https://w3id.org/transmodel/kos/commons/road-vehicle-mode/coach> a skos:Concept ;
+    skos:notation "coach" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/commons/road-vehicle-mode> .
+
+<https://w3id.org/transmodel/kos/commons/road-vehicle-mode/trolley-bus> a skos:Concept ;
+    skos:notation "trolley-bus" ; skos:inScheme
+    <https://w3id.org/transmodel/kos/commons/road-vehicle-mode> .
+
+<https://w3id.org/transmodel/kos/commons/road-vehicle-mode/tram> a skos:Concept ;
+    skos:notation "tram" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/commons/road-vehicle-mode> .

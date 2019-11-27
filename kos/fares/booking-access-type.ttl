@@ -1,0 +1,37 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://w3id.org/transmodel/kos/fares/booking-access-type> a skos:ConceptScheme ;
+    skos:notation "booking-access-type" ;
+    dcterms:creator "Adolfo Antón Bravo (OEG - Universidad Politécnica de Madrid)"@es ;
+    determs:date "2019-11-27"@es ;
+    dcterms:description "Allowed values for Booking Access Type."@en ;
+    dcterms:title "Booking Access Type"@en ;
+    skos:definition "Booking Access Type"@en ;
+    dc:title "Booking Access Type"@en ;
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/fares/booking-access-type/authorised-public> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/fares/booking-access-type/other> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/fares/booking-access-type/public> ,
+        skos:hasTopConcept <https://w3id.org/transmodel/kos/fares/booking-access-type/staff> .
+
+
+<https://w3id.org/transmodel/kos/fares/booking-access-type/authorised-public> a skos:Concept ;
+    skos:notation "authorised-public" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/booking-access-type> .
+
+<https://w3id.org/transmodel/kos/fares/booking-access-type/other> a skos:Concept ;
+    skos:notation "other" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/booking-access-type> .
+
+<https://w3id.org/transmodel/kos/fares/booking-access-type/public> a skos:Concept ;
+    skos:notation "public" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/booking-access-type> .
+
+<https://w3id.org/transmodel/kos/fares/booking-access-type/staff> a skos:Concept ;
+    skos:notation "staff" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/booking-access-type> .
+
