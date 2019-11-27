@@ -217,7 +217,6 @@
     <!-- https://w3id.org/transmodel/common#route -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#route">
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/common#Route"/>
         <rdfs:label xml:lang="en">route</rdfs:label>
     </owl:ObjectProperty>
     
@@ -226,7 +225,6 @@
     <!-- https://w3id.org/transmodel/common#scheduledStopPoint -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#scheduledStopPoint">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#Route"/>
         <rdfs:label xml:lang="en">scheduledStopPoint</rdfs:label>
     </owl:ObjectProperty>
     
@@ -279,8 +277,25 @@
     <!-- https://w3id.org/transmodel/common#vehicleJourneyRoute -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#vehicleJourneyRoute">
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/common#Route"/>
         <rdfs:label xml:lang="en">vehicleJourneyRoute</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#at -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/commons#at">
+        <rdfs:comment xml:lang="en">This property sets the relationship between something and other thing related to it. It is used in multiple situations and modules of this ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">at</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#in -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/commons#in">
+        <rdfs:comment xml:lang="en">This property sets the relationship between something and other thing contained in the first. It is used in multiple situations and modules of this ontology (e.g., Quay in Stop Place)</rdfs:comment>
+        <rdfs:label xml:lang="en">in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -315,29 +330,11 @@
     
 
 
-    <!-- https://w3id.org/transmodel/common#latitude -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/common#latitude">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#Point"/>
-        <rdfs:label xml:lang="en">latitude</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/transmodel/common#layover -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/common#layover">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
         <rdfs:label xml:lang="en">layover</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/transmodel/common#longitude -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/common#longitude">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#Point"/>
-        <rdfs:label xml:lang="en">longitude</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -428,6 +425,26 @@
     
 
 
+    <!-- https://w3id.org/transmodel/commons#colour -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/commons#colour">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The colour used to represent something with a Presentation (e.g., a Line)</rdfs:comment>
+        <rdfs:label xml:lang="en">colour</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#textColour -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/commons#textColour">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The colour used to represent the text associated to something with a Presentation (e.g., a Line)</rdfs:comment>
+        <rdfs:label xml:lang="en">text colour</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -502,16 +519,6 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#TOREVIEW"/>
         <rdfs:comment xml:lang="en">A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location</rdfs:comment>
         <rdfs:label xml:lang="en">Point</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/transmodel/common#Route -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/common#Route">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#TOREVIEW"/>
-        <rdfs:comment xml:lang="en">A Route is and ordered list of located Point defining one single path through the road (or rail) network.</rdfs:comment>
-        <rdfs:label xml:lang="en">Route</rdfs:label>
     </owl:Class>
     
 
@@ -607,6 +614,27 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#Zone"/>
         <rdfs:comment xml:lang="en">A geographic place of any type which may be specified as the origin or destination of a trip. A Place may be represented as a Point (dimension 0), a road section (dimension 1) or a Zone (dimension 2).</rdfs:comment>
         <rdfs:label xml:lang="en">Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#Presentation -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Presentation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/commons#colour"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/commons#textColour"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">This class is used to represent a Line, or any other object, in a map</rdfs:comment>
+        <rdfs:label xml:lang="en">Presentation</rdfs:label>
     </owl:Class>
     
 
