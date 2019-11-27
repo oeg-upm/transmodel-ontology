@@ -76,53 +76,31 @@
   } ]
 }, {
   "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid27"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/day-type"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid29",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#ServiceFacilitySet"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#madeUsing"
-  } ]
-}, {
-  "@id" : "_:genid26",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#PropertyOfDay"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#describedBy"
-  } ]
-}, {
-  "@id" : "_:genid27",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#DayType"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#specifying"
-  } ]
-}, {
-  "@id" : "_:genid28",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "_:genid29"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#season"
-  } ]
-}, {
-  "@id" : "_:genid29",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-    }, {
-      "@id" : "_:genid31"
-    } ]
   } ]
 }, {
   "@id" : "_:genid3",
@@ -134,7 +112,48 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#PropertyOfDay"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#describedBy"
+  } ]
+}, {
   "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#DayType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#specifying"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "_:genid33"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#season"
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    }, {
+      "@id" : "_:genid35"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid35",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/transmodel/kos/journeys/day-type"
@@ -143,7 +162,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid33",
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#PassengerStopAssignment"
@@ -152,7 +171,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#overriding"
   } ]
 }, {
-  "@id" : "_:genid34",
+  "@id" : "_:genid38",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -165,7 +184,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#maximumHeadwayInterval"
   } ]
 }, {
-  "@id" : "_:genid35",
+  "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -178,7 +197,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#minimumHeadwayInterval"
   } ]
 }, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid40",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -191,7 +210,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#scheduledHeadwayInterval"
   } ]
 }, {
-  "@id" : "_:genid37",
+  "@id" : "_:genid41",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#HeadwayInterval"
@@ -200,7 +219,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#determinedBy"
   } ]
 }, {
-  "@id" : "_:genid38",
+  "@id" : "_:genid42",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney"
@@ -209,7 +228,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#composedOf"
   } ]
 }, {
-  "@id" : "_:genid39",
+  "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#int"
@@ -218,7 +237,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#firstDayOffset"
   } ]
 }, {
-  "@id" : "_:genid40",
+  "@id" : "_:genid44",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#time"
@@ -227,7 +246,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#firstDepartureTime"
   } ]
 }, {
-  "@id" : "_:genid41",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#int"
@@ -236,7 +255,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#lastDayOffset"
   } ]
 }, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#time"
@@ -245,7 +264,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#lastDepartureTime"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#DestinationDisplay"
@@ -254,7 +273,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#primarilyAdvertisedWith"
   } ]
 }, {
-  "@id" : "_:genid44",
+  "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#PointInLinkSequence"
@@ -263,49 +282,13 @@
     "@id" : "https://w3id.org/transmodel/journeys#madeUpOf"
   } ]
 }, {
-  "@id" : "_:genid45",
+  "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#isServiceDay"
-  } ]
-}, {
-  "@id" : "_:genid46",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Block"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#endOfBlock"
-  } ]
-}, {
-  "@id" : "_:genid47",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Block"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#startOfBlock"
-  } ]
-}, {
-  "@id" : "_:genid48",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#PointInLinkSequence"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#aViewOf"
-  } ]
-}, {
-  "@id" : "_:genid49",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#DestinationDisplay"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#prescribing"
   } ]
 }, {
   "@id" : "_:genid5",
@@ -320,6 +303,42 @@
 }, {
   "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Block"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#endOfBlock"
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Block"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#startOfBlock"
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#PointInLinkSequence"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#aViewOf"
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#DestinationDisplay"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#prescribing"
+  } ]
+}, {
+  "@id" : "_:genid54",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#LinkSequence"
   } ],
@@ -331,7 +350,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid51",
+  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Point"
@@ -344,7 +363,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid56",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
@@ -357,7 +376,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid53",
+  "@id" : "_:genid57",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Route"
@@ -370,7 +389,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid54",
+  "@id" : "_:genid58",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#RoutePoint"
@@ -383,26 +402,26 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid55",
+  "@id" : "_:genid59",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid56"
+    "@id" : "_:genid60"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#definedAs"
   } ]
 }, {
-  "@id" : "_:genid56",
+  "@id" : "_:genid60",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "_:genid58"
+      "@id" : "_:genid62"
     } ]
   } ]
 }, {
-  "@id" : "_:genid58",
+  "@id" : "_:genid62",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/transmodel/kos/journeys/day-type"
@@ -411,7 +430,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid60",
+  "@id" : "_:genid64",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#TemplateVehicleJourney"
@@ -420,7 +439,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#defines"
   } ]
 }, {
-  "@id" : "_:genid61",
+  "@id" : "_:genid65",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -433,7 +452,7 @@
     "@id" : "https://w3id.org/transmodel/commons#borderCrossing"
   } ]
 }, {
-  "@id" : "_:genid62",
+  "@id" : "_:genid66",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -446,7 +465,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#viaFlag"
   } ]
 }, {
-  "@id" : "_:genid63",
+  "@id" : "_:genid67",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#StopPointInJourneyPattern"
@@ -455,41 +474,23 @@
     "@id" : "https://w3id.org/transmodel/journeys#aViewOf"
   } ]
 }, {
-  "@id" : "_:genid64",
+  "@id" : "_:genid68",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid65"
+    "@id" : "_:genid69"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#directionType_old"
   } ]
 }, {
-  "@id" : "_:genid65",
+  "@id" : "_:genid69",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "_:genid67"
+      "@id" : "_:genid71"
     } ]
-  } ]
-}, {
-  "@id" : "_:genid67",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/journeys/direction-type"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid69",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#ServiceFacilitySet"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#madeUsing"
   } ]
 }, {
   "@id" : "_:genid7",
@@ -501,16 +502,34 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid70",
+  "@id" : "_:genid71",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/journeys/direction-type"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid73",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid71"
+    "@id" : "https://w3id.org/transmodel/facilities#ServiceFacilitySet"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#madeUsing"
+  } ]
+}, {
+  "@id" : "_:genid74",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid75"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#for"
   } ]
 }, {
-  "@id" : "_:genid71",
+  "@id" : "_:genid75",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -524,7 +543,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid76",
+  "@id" : "_:genid80",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#JourneyPattern"
@@ -537,7 +556,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid77",
+  "@id" : "_:genid81",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#ScheduledStopPoint"
@@ -550,88 +569,36 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid78",
+  "@id" : "_:genid82",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "_:genid79"
+    "@id" : "_:genid83"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#stopUse"
   } ]
 }, {
-  "@id" : "_:genid79",
+  "@id" : "_:genid83",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
     }, {
-      "@id" : "_:genid81"
+      "@id" : "_:genid85"
     } ]
   } ]
 }, {
-  "@id" : "_:genid81",
+  "@id" : "_:genid85",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/transmodel/kos/journeys/stop-use-type"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid83",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#changeOfDestinationDisplay"
-  } ]
-}, {
-  "@id" : "_:genid84",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#changeOfServiceRequirements"
-  } ]
-}, {
-  "@id" : "_:genid85",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#forAlighting"
-  } ]
-}, {
-  "@id" : "_:genid86",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#forBoarding"
   } ]
 }, {
   "@id" : "_:genid87",
@@ -644,25 +611,33 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#requestStop"
+    "@id" : "https://w3id.org/transmodel/journeys#changeOfDestinationDisplay"
   } ]
 }, {
   "@id" : "_:genid88",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#RhythmicalJourneyGroup"
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#isDefinedBy"
+    "@id" : "https://w3id.org/transmodel/journeys#changeOfServiceRequirements"
   } ]
 }, {
   "@id" : "_:genid89",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#TimetabledPassingTime"
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#passedAt"
+    "@id" : "https://w3id.org/transmodel/journeys#forAlighting"
   } ]
 }, {
   "@id" : "_:genid9",
@@ -677,6 +652,50 @@
 }, {
   "@id" : "_:genid90",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#forBoarding"
+  } ]
+}, {
+  "@id" : "_:genid91",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#requestStop"
+  } ]
+}, {
+  "@id" : "_:genid92",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#RhythmicalJourneyGroup"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#isDefinedBy"
+  } ]
+}, {
+  "@id" : "_:genid93",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#TimetabledPassingTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#passedAt"
+  } ]
+}, {
+  "@id" : "_:genid94",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern"
   } ],
@@ -684,7 +703,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#aViewOf"
   } ]
 }, {
-  "@id" : "_:genid91",
+  "@id" : "_:genid95",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#TimingPoint"
@@ -697,7 +716,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid92",
+  "@id" : "_:genid96",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
@@ -706,7 +725,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#isWaitPoint"
   } ]
 }, {
-  "@id" : "_:genid93",
+  "@id" : "_:genid97",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Block"
@@ -715,7 +734,7 @@
     "@id" : "https://w3id.org/transmodel/facilities#in"
   } ]
 }, {
-  "@id" : "_:genid94",
+  "@id" : "_:genid98",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#JourneyFrequencyGroup"
@@ -724,7 +743,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#runsOn"
   } ]
 }, {
-  "@id" : "_:genid95",
+  "@id" : "_:genid99",
   "https://w3id.org/transmodel/journeys#mbox" : [ {
     "@language" : "en",
     "@value" : "adolfo.anton.bravo@upm.es"
@@ -901,11 +920,22 @@
     "@value" : "Service Facility Set"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid25"
+    "@id" : "_:genid29"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#StopPlace",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#VehicleType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A classification of public transport vehicles according to the vehicle scheduling requirements in mode and capacity (e.g. standard bus, double-deck, ...)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vehicle Type"
+  } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#in",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -1295,11 +1325,11 @@
     "@value" : "TODO: Check season and complete with other properties"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid26"
+    "@id" : "_:genid30"
   }, {
-    "@id" : "_:genid27"
+    "@id" : "_:genid31"
   }, {
-    "@id" : "_:genid28"
+    "@id" : "_:genid32"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#DayTypeAssignment",
@@ -1427,7 +1457,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#PassengerStopAssignment"
   }, {
-    "@id" : "_:genid33"
+    "@id" : "_:genid37"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#FareDayType",
@@ -1599,11 +1629,11 @@
     "@value" : "Headway Interval"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid34"
+    "@id" : "_:genid38"
   }, {
-    "@id" : "_:genid35"
+    "@id" : "_:genid39"
   }, {
-    "@id" : "_:genid36"
+    "@id" : "_:genid40"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#HeadwayJourneyGroup",
@@ -1625,7 +1655,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#JourneyFrequencyGroup"
   }, {
-    "@id" : "_:genid37"
+    "@id" : "_:genid41"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#InfrastructurePoint",
@@ -1667,15 +1697,15 @@
     "@value" : "Journey Frequency Group"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid38"
-  }, {
-    "@id" : "_:genid39"
-  }, {
-    "@id" : "_:genid40"
-  }, {
-    "@id" : "_:genid41"
-  }, {
     "@id" : "_:genid42"
+  }, {
+    "@id" : "_:genid43"
+  }, {
+    "@id" : "_:genid44"
+  }, {
+    "@id" : "_:genid45"
+  }, {
+    "@id" : "_:genid46"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#JourneyPart",
@@ -1719,7 +1749,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#LinkSequence"
   }, {
-    "@id" : "_:genid43"
+    "@id" : "_:genid47"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#JourneyPatternLayover",
@@ -1792,7 +1822,7 @@
     "@value" : "Link Sequence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid44"
+    "@id" : "_:genid48"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#MeanOfTransport",
@@ -1896,7 +1926,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#DayType"
   }, {
-    "@id" : "_:genid45"
+    "@id" : "_:genid49"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#OtherDirections",
@@ -1929,9 +1959,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#ReliefPoint"
   }, {
-    "@id" : "_:genid46"
+    "@id" : "_:genid50"
   }, {
-    "@id" : "_:genid47"
+    "@id" : "_:genid51"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#PassengerStopAssignment",
@@ -1993,7 +2023,7 @@
     "@value" : "Point"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid48"
+    "@id" : "_:genid52"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#PointInJourneyPattern",
@@ -2009,7 +2039,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#PointInLinkSequence"
   }, {
-    "@id" : "_:genid49"
+    "@id" : "_:genid53"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#PointInLinkSequence",
@@ -2026,11 +2056,11 @@
     "@value" : "Point In Link Sequence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid50"
+    "@id" : "_:genid54"
   }, {
-    "@id" : "_:genid51"
+    "@id" : "_:genid55"
   }, {
-    "@id" : "_:genid52"
+    "@id" : "_:genid56"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#PointOnRoute",
@@ -2046,9 +2076,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#PointInLinkSequence"
   }, {
-    "@id" : "_:genid53"
+    "@id" : "_:genid57"
   }, {
-    "@id" : "_:genid54"
+    "@id" : "_:genid58"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#PostalAddress",
@@ -2078,7 +2108,7 @@
     "@value" : "Property of day"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid55"
+    "@id" : "_:genid59"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#Rail",
@@ -2142,7 +2172,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#JourneyFrequencyGroup"
   }, {
-    "@id" : "_:genid60"
+    "@id" : "_:genid64"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#RoadAddress",
@@ -2207,9 +2237,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Point"
   }, {
-    "@id" : "_:genid61"
+    "@id" : "_:genid65"
   }, {
-    "@id" : "_:genid62"
+    "@id" : "_:genid66"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#Saturday",
@@ -2232,7 +2262,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Point"
   }, {
-    "@id" : "_:genid63"
+    "@id" : "_:genid67"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#ServiceCalendar",
@@ -2264,9 +2294,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney"
   }, {
-    "@id" : "_:genid64"
+    "@id" : "_:genid68"
   }, {
-    "@id" : "_:genid69"
+    "@id" : "_:genid73"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#ServiceJourneyPattern",
@@ -2311,7 +2341,7 @@
     "@value" : "Stop Assignment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid70"
+    "@id" : "_:genid74"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#StopPointInJourneyPattern",
@@ -2330,21 +2360,21 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#PointInJourneyPattern"
   }, {
-    "@id" : "_:genid76"
+    "@id" : "_:genid80"
   }, {
-    "@id" : "_:genid77"
+    "@id" : "_:genid81"
   }, {
-    "@id" : "_:genid78"
-  }, {
-    "@id" : "_:genid83"
-  }, {
-    "@id" : "_:genid84"
-  }, {
-    "@id" : "_:genid85"
-  }, {
-    "@id" : "_:genid86"
+    "@id" : "_:genid82"
   }, {
     "@id" : "_:genid87"
+  }, {
+    "@id" : "_:genid88"
+  }, {
+    "@id" : "_:genid89"
+  }, {
+    "@id" : "_:genid90"
+  }, {
+    "@id" : "_:genid91"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#Sunday",
@@ -2386,7 +2416,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney"
   }, {
-    "@id" : "_:genid88"
+    "@id" : "_:genid92"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#Thursday",
@@ -2435,7 +2465,7 @@
     "@value" : "Timetabled Passing Time"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid89"
+    "@id" : "_:genid93"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#TimetabledVehicleJourney",
@@ -2492,7 +2522,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Point"
   }, {
-    "@id" : "_:genid90"
+    "@id" : "_:genid94"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern",
@@ -2508,9 +2538,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#PointInJourneyPattern"
   }, {
-    "@id" : "_:genid91"
+    "@id" : "_:genid95"
   }, {
-    "@id" : "_:genid92"
+    "@id" : "_:genid96"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#TopographicPlace",
@@ -2602,9 +2632,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Journey"
   }, {
-    "@id" : "_:genid93"
+    "@id" : "_:genid97"
   }, {
-    "@id" : "_:genid94"
+    "@id" : "_:genid98"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#VehicleJourneyLayover",
@@ -2629,6 +2659,17 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#TOREVIEWCLASSES"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#VehicleMode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A characterisation of the public transport operation according to the means of transport (bus, tram, metro, train, ferry, ship)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vehicle Mode"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#WaitingTime",
@@ -2775,6 +2816,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#belongingTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property sets the relationship between Vehicle Type and Vehicle Mode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#VehicleType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "belonging To"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#VehicleMode"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#blockPart",
@@ -3652,6 +3710,17 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#duration"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#mobility-limitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Concept scheme  for types of mobility limitations"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "mobility-limitation"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#modeOfTransport",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -3742,6 +3811,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#on"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/journeys#operatedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property sets the relationship between a Vehicle Journey and a Vehicle Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "operated By"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#VehicleType"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#order",
@@ -4104,6 +4190,17 @@
     "@id" : "https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#stop-place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Concept scheme  for types of stop place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "stop-place"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#stopUse",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -4350,6 +4447,23 @@
     "@id" : "https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/journeys#vehicleModeId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property sets the relationship between a Vehicle Mode and the type of Vehicle used defined in the kos/journeys/all-modes.ttl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#VehicleMode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "vehicle Mode ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid25"
+  } ]
+}, {
   "@id" : "https://w3id.org/transmodel/journeys#vehiclePassingTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -4505,5 +4619,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Concept scheme  for types of use of stops (e.g., access, interchange only, pass through or non boarding alighting)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "stop-use-type"
   } ]
 } ]

@@ -373,6 +373,14 @@ may be recorded.</a>
             title="https://w3id.org/transmodel/journeys#VehicleJourney">Vehicle Journey</a>
       </li>
       <li>
+         <a href="#VehicleMode"
+            title="https://w3id.org/transmodel/journeys#VehicleMode">Vehicle Mode</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/facilities#VehicleType"
+            title="https://w3id.org/transmodel/facilities#VehicleType">Vehicle Type</a>
+      </li>
+      <li>
          <a href="#VehicleJourneyLayover"
             title="https://w3id.org/transmodel/journeys#VehicleJourneyLayover">VehicleJourneyLayover</a>
       </li>
@@ -1608,7 +1616,8 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          <dd>
             <a href="#lineName" title="https://w3id.org/transmodel/journeys#lineName">lineName</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#lineNumber" title="https://w3id.org/transmodel/journeys#lineNumber">lineNumber</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#routeOnLine" title="https://w3id.org/transmodel/journeys#routeOnLine">route On Line</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#routeOnLine"
+               title="https://w3id.org/transmodel/journeys#routeOnLine">route On Line</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -2212,7 +2221,8 @@ may be recorded.<sup class="type-c" title="class">c</sup>
          <dt>is in range of</dt>
          <dd>
             <a href="#onLine" title="https://w3id.org/transmodel/journeys#onLine">on Line</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#routeOnLine" title="https://w3id.org/transmodel/journeys#routeOnLine">route On Line</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#routeOnLine"
+               title="https://w3id.org/transmodel/journeys#routeOnLine">route On Line</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#vehicleJourneyRoute"
                title="https://w3id.org/transmodel/journeys#vehicleJourneyRoute">vehicleJourneyRoute</a>
             <sup class="type-op" title="object property">op</sup>
@@ -2879,7 +2889,8 @@ Within VehicleJourney there are several types:
                title="https://w3id.org/transmodel/journeys#followsJourneyPattern">followsJourneyPattern</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#headway" title="https://w3id.org/transmodel/journeys#headway">headway</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#layover" title="https://w3id.org/transmodel/journeys#layover">layover</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#runtime" title="https://w3id.org/transmodel/journeys#runtime">runtime</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#operatedBy" title="https://w3id.org/transmodel/journeys#operatedBy">operated By</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#runtime" title="https://w3id.org/transmodel/journeys#runtime">runtime</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#vehicleJourneyRoute"
                title="https://w3id.org/transmodel/journeys#vehicleJourneyRoute">vehicleJourneyRoute</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#waitTime" title="https://w3id.org/transmodel/journeys#waitTime">waitTime</a>
@@ -2895,6 +2906,53 @@ Within VehicleJourney there are several types:
                title="https://w3id.org/transmodel/journeys#vehicleJourney">vehicle Journey</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#vehicleJourneys"
                title="https://w3id.org/transmodel/journeys#vehicleJourneys">vehicleJourneys</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VehicleMode">
+      <h3>Vehicle Mode<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#VehicleMode</p>
+      <div class="comment">
+         <span class="markdown">A characterisation of the public transport operation according to the means of transport (bus, tram, metro, train, ferry, ship).</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#vehicleModeId"
+               title="https://w3id.org/transmodel/journeys#vehicleModeId">vehicle Mode ID</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#belongingTo" title="https://w3id.org/transmodel/journeys#belongingTo">belonging To</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/facilities#VehicleType">
+      <h3>Vehicle Type<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#VehicleType</p>
+      <div class="comment">
+         <span class="markdown">A classification of public transport vehicles according to the vehicle scheduling requirements in mode and capacity (e.g. standard bus, double-deck, ...).</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#belongingTo" title="https://w3id.org/transmodel/journeys#belongingTo">belonging To</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#operatedBy" title="https://w3id.org/transmodel/journeys#operatedBy">operated By</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -2983,6 +3041,9 @@ Within VehicleJourney there are several types:
       <li>
          <a href="#beginsConnection"
             title="https://w3id.org/transmodel/journeys#beginsConnection">beginsConnection</a>
+      </li>
+      <li>
+         <a href="#belongingTo" title="https://w3id.org/transmodel/journeys#belongingTo">belonging To</a>
       </li>
       <li>
          <a href="#blockPart" title="https://w3id.org/transmodel/journeys#blockPart">blockPart</a>
@@ -3120,6 +3181,9 @@ Within VehicleJourney there are several types:
          <a href="#onRoute" title="https://w3id.org/transmodel/journeys#onRoute">on Route</a>
       </li>
       <li>
+         <a href="#operatedBy" title="https://w3id.org/transmodel/journeys#operatedBy">operated By</a>
+      </li>
+      <li>
          <a href="#originStop" title="https://w3id.org/transmodel/journeys#originStop">originStop</a>
       </li>
       <li>
@@ -3152,7 +3216,8 @@ Within VehicleJourney there are several types:
             title="https://w3id.org/transmodel/journeys#startOfBlock">Property to relate a Parking Point to the start of a Block</a>
       </li>
       <li>
-         <a href="#routeOnLine" title="https://w3id.org/transmodel/journeys#routeOnLine">route On Line</a>
+         <a href="#routeOnLine"
+            title="https://w3id.org/transmodel/journeys#routeOnLine">route On Line</a>
       </li>
       <li>
          <a href="#runBy" title="https://w3id.org/transmodel/journeys#runBy">run By</a>
@@ -3213,6 +3278,10 @@ Within VehicleJourney there are several types:
       <li>
          <a href="#vehicleJourney"
             title="https://w3id.org/transmodel/journeys#vehicleJourney">vehicle Journey</a>
+      </li>
+      <li>
+         <a href="#vehicleModeId"
+            title="https://w3id.org/transmodel/journeys#vehicleModeId">vehicle Mode ID</a>
       </li>
       <li>
          <a href="#vehicleJourneyPart"
@@ -3377,6 +3446,33 @@ Within VehicleJourney there are several types:
             <dd>
                <a href="#ScheduledStopPoint"
                   title="https://w3id.org/transmodel/journeys#ScheduledStopPoint">Scheduled Stop Point</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="belongingTo">
+      <h3>belonging To<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#belongingTo</p>
+      <div class="comment">
+         <span class="markdown">This property sets the relationship between Vehicle Type and Vehicle Mode</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/transmodel/facilities#VehicleType"
+                  title="https://w3id.org/transmodel/facilities#VehicleType">Vehicle Type</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#VehicleMode"
+                  title="https://w3id.org/transmodel/journeys#VehicleMode">Vehicle Mode</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -4425,6 +4521,33 @@ may be recorded.</a>
          </dl>
       </div>
    </div>
+   <div class="entity" id="operatedBy">
+      <h3>operated By<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#operatedBy</p>
+      <div class="comment">
+         <span class="markdown">This property sets the relationship between a Vehicle Journey and a Vehicle Type</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#VehicleJourney"
+                  title="https://w3id.org/transmodel/journeys#VehicleJourney">Vehicle Journey</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/transmodel/facilities#VehicleType"
+                  title="https://w3id.org/transmodel/facilities#VehicleType">Vehicle Type</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="originStop">
       <h3>originStop<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -4936,7 +5059,7 @@ may be recorded.</a>
                <sup class="type-op" title="object property">op</sup> 
                <span class="logic">value</span> 
                <a href="#https://w3id.org/transmodel/kos/journeys/stop-use-type"
-                  title="https://w3id.org/transmodel/kos/journeys/stop-use-type">stop use type</a>)</dd>
+                  title="https://w3id.org/transmodel/kos/journeys/stop-use-type">stop-use-type</a>)</dd>
          </dl>
       </div>
    </div>
@@ -5212,6 +5335,36 @@ may be recorded.</a>
                   title="https://w3id.org/transmodel/journeys#VehicleJourney">Vehicle Journey</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="vehicleModeId">
+      <h3>vehicle Mode ID<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#vehicleModeId</p>
+      <div class="comment">
+         <span class="markdown">This property sets the relationship between a Vehicle Mode and the type of Vehicle used defined in the kos/journeys/all-modes.ttl</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#VehicleMode"
+                  title="https://w3id.org/transmodel/journeys#VehicleMode">Vehicle Mode</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">value</span> 
+               <a href="#https://w3id.org/transmodel/kos/journeys/day-type"
+                  title="https://w3id.org/transmodel/kos/journeys/day-type">day type</a>)</dd>
          </dl>
       </div>
    </div>
@@ -6557,6 +6710,10 @@ may be recorded.</a>
             title="https://w3id.org/transmodel/journeys#MixedTypesOfFlexibleService">MixedTypesOfFlexibleService</a>
       </li>
       <li>
+         <a href="#mobility-limitation"
+            title="https://w3id.org/transmodel/journeys#mobility-limitation">mobility-limitation</a>
+      </li>
+      <li>
          <a href="#Monday" title="https://w3id.org/transmodel/journeys#Monday">Monday</a>
       </li>
       <li>
@@ -6603,10 +6760,11 @@ may be recorded.</a>
          </a>
       </li>
       <li>
+         <a href="#stop-place" title="https://w3id.org/transmodel/journeys#stop-place">stop-place</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/transmodel/kos/journeys/stop-use-type"
-            title="https://w3id.org/transmodel/kos/journeys/stop-use-type">
-            <span>stop use type</span>
-         </a>
+            title="https://w3id.org/transmodel/kos/journeys/stop-use-type">stop-use-type</a>
       </li>
       <li>
          <a href="#Sunday" title="https://w3id.org/transmodel/journeys#Sunday">Sunday</a>
@@ -6998,6 +7156,25 @@ may be recorded.</a>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#MixedTypesOfFlexibleService</p>
    </div>
+   <div class="entity" id="mobility-limitation">
+      <h3>mobility-limitation<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#mobility-limitation</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme  for types of mobility limitations</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Monday">
       <h3>Monday<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -7139,8 +7316,27 @@ may be recorded.</a>
          </dd>
       </dl>
    </div>
+   <div class="entity" id="stop-place">
+      <h3>stop-place<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#stop-place</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme  for types of stop place</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="https://w3id.org/transmodel/kos/journeys/stop-use-type">
-      <h3>stop use type<sup class="type-ni" title="named individual">ni</sup>
+      <h3>stop-use-type<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>

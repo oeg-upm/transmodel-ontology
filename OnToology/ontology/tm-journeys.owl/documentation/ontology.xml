@@ -322,6 +322,18 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#belongingTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#belongingTo">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#VehicleType"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#VehicleMode"/>
+        <rdfs:comment xml:lang="en">This property sets the relationship between Vehicle Type and Vehicle Mode</rdfs:comment>
+        <rdfs:label xml:lang="en">belonging To</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#blockPart -->
 
 
@@ -783,6 +795,18 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#operatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#operatedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#VehicleType"/>
+        <rdfs:comment xml:lang="en">This property sets the relationship between a Vehicle Journey and a Vehicle Type</rdfs:comment>
+        <rdfs:label xml:lang="en">operated By</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#originStop -->
 
 
@@ -1130,6 +1154,28 @@
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
         <rdfs:comment xml:lang="en">The Journey of a Vehicle is a VehicleJourney</rdfs:comment>
         <rdfs:label xml:lang="en">vehicleJourneys</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#vehicleModeId -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#vehicleModeId">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#VehicleMode"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/transmodel/kos/journeys/day-type"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">This property sets the relationship between a Vehicle Mode and the type of Vehicle used defined in the kos/journeys/all-modes.ttl</rdfs:comment>
+        <rdfs:label xml:lang="en">vehicle Mode ID</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1707,6 +1753,16 @@
 
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#StopPlace"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#VehicleType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#VehicleType">
+        <rdfs:comment xml:lang="en">A classification of public transport vehicles according to the vehicle scheduling requirements in mode and capacity (e.g. standard bus, double-deck, ...).</rdfs:comment>
+        <rdfs:label xml:lang="en">Vehicle Type</rdfs:label>
+    </owl:Class>
     
 
 
@@ -3117,6 +3173,16 @@ Within VehicleJourney there are several types:
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#VehicleMode -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#VehicleMode">
+        <rdfs:comment xml:lang="en">A characterisation of the public transport operation according to the means of transport (bus, tram, metro, train, ferry, ship).</rdfs:comment>
+        <rdfs:label xml:lang="en">Vehicle Mode</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#WireJunction -->
 
 
@@ -3489,6 +3555,28 @@ Within VehicleJourney there are several types:
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#mobility-limitation -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#mobility-limitation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:comment xml:lang="en">Concept scheme  for types of mobility limitations</rdfs:comment>
+        <rdfs:label xml:lang="en">mobility-limitation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#stop-place -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/journeys#stop-place">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:comment xml:lang="en">Concept scheme  for types of stop place</rdfs:comment>
+        <rdfs:label xml:lang="en">stop-place</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#virtualLineService -->
 
 
@@ -3576,8 +3664,9 @@ Within VehicleJourney there are several types:
     <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/stop-use-type">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:comment xml:lang="en">Concept scheme  for types of use of stops (e.g., access, interchange only, pass through or non boarding alighting)</rdfs:comment>
+        <rdfs:label xml:lang="en">stop-use-type</rdfs:label>
     </owl:NamedIndividual>
-    <rdf:Description rdf:nodeID="genid95">
+    <rdf:Description rdf:nodeID="genid99">
         <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
         <name xml:lang="en">Adolfo Anton-Bravo</name>
     </rdf:Description>

@@ -675,6 +675,45 @@
     "@value" : "This is the initial version of the module on Commons, after considering the UML models and XSD descriptions of Transmodel and NeTEx"
   } ]
 }, {
+  "@id" : "https://w3id.org/transmodel/commons#GroupOfEntities",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A set of Entities grouped together according to a Purpose of Grouping, e.g. grouping of stops known to the public by a common name."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Group of Entities"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/commons#Place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A geographic place of any type which may be specified as the origin or destination of a trip. A Place may be represented as a Point (dimension 0), a road section (dimension 1) or a Zone (dimension 2)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/transmodel/commons#Zone"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/commons#Zone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A two dimensional Place within the Service Area of an Operator or Serviced Operator. It can be:\n- AdministrativeZone\n- TariffZone\n- AccessZone\n- ..."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Zone"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/commons#all-modes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ]
+}, {
   "@id" : "https://w3id.org/transmodel/commons#author",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -690,6 +729,9 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/commons#continous-mode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ]
 }, {
   "@id" : "https://w3id.org/transmodel/commons#creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -711,6 +753,19 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/commons#road-vehicle-mode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "road-vehicle-mode"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/commons#sites-access-mode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/commons#vehicle-mode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ]
 }, {
   "@id" : "https://w3id.org/transmodel/kos/commons/CommonsType",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],

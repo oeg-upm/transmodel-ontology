@@ -717,6 +717,41 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/transmodel/commons#GroupOfEntities -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#GroupOfEntities">
+        <rdfs:comment xml:lang="en">A set of Entities grouped together according to a Purpose of Grouping, e.g. grouping of stops known to the public by a common name.</rdfs:comment>
+        <rdfs:label xml:lang="en">Group of Entities</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#Place -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Place">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#Zone"/>
+        <rdfs:comment xml:lang="en">A geographic place of any type which may be specified as the origin or destination of a trip. A Place may be represented as a Point (dimension 0), a road section (dimension 1) or a Zone (dimension 2).</rdfs:comment>
+        <rdfs:label xml:lang="en">Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#Zone -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Zone">
+        <rdfs:comment xml:lang="en">A two dimensional Place within the Service Area of an Operator or Serviced Operator. It can be:
+- AdministrativeZone
+- TariffZone
+- AccessZone
+- ...</rdfs:comment>
+        <rdfs:label xml:lang="en">Zone</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -726,6 +761,52 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
      -->
 
 
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#all-modes -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/commons#all-modes">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#continous-mode -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/commons#continous-mode">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#road-vehicle-mode -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/commons#road-vehicle-mode">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:label xml:lang="en">road-vehicle-mode</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#sites-access-mode -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/commons#sites-access-mode">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#vehicle-mode -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/commons#vehicle-mode">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </owl:NamedIndividual>
     
 
 
