@@ -438,6 +438,14 @@ In the TransModel UML model and in the Netex implementation this is expressed as
                                 "stopPlaceEntrance"@en .
 
 
+###  https://w3id.org/transmodel/facilities#subplaceOf
+:subplaceOf rdf:type owl:ObjectProperty ;
+            rdfs:domain :StopPlace ;
+            rdfs:range :StopPlace ;
+            rdfs:comment "A property connecting one Stop Place to another Stop Place to describe nested Stop Places (e.g. a metro station in a train station)."@en ;
+            rdfs:label "subplace of"@en .
+
+
 ###  https://w3id.org/transmodel/facilities#toiletFacility
 :toiletFacility rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :facilityType ;

@@ -534,8 +534,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/transmodel/journeys#passesAt
 <https://w3id.org/transmodel/journeys#passesAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/journeys#passesAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#PointInJourneyPattern> .
-<https://w3id.org/transmodel/journeys#passesAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#TimetabledPassingTime> .
+<https://w3id.org/transmodel/journeys#passesAt> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: Check which domain and range to use"@en .
 <https://w3id.org/transmodel/journeys#passesAt> <http://www.w3.org/2000/01/rdf-schema#comment> "This property sets the relationship between a Point In Journey Pattern or a Service Journey and a Timetabled Passing Time"@en .
 <https://w3id.org/transmodel/journeys#passesAt> <http://www.w3.org/2000/01/rdf-schema#label> "passes at"@en .
 # 
@@ -1889,20 +1888,24 @@ _:genid104 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/trans
 <https://w3id.org/transmodel/journeys#TimetabledPassingTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#TimetabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid105 .
 _:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid105 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#arrivalDayOffset> .
-_:genid105 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#time> .
+_:genid105 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#passesAt> .
+_:genid105 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#PointInJourneyPattern> .
 <https://w3id.org/transmodel/journeys#TimetabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid106 .
 _:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid106 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#arrivalTime> .
+_:genid106 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#arrivalDayOffset> .
 _:genid106 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#time> .
 <https://w3id.org/transmodel/journeys#TimetabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid107 .
 _:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid107 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#departureDayOffset> .
+_:genid107 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#arrivalTime> .
 _:genid107 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#time> .
 <https://w3id.org/transmodel/journeys#TimetabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid108 .
 _:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid108 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#departureTime> .
+_:genid108 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#departureDayOffset> .
 _:genid108 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#time> .
+<https://w3id.org/transmodel/journeys#TimetabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid109 .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid109 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#departureTime> .
+_:genid109 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#time> .
 <https://w3id.org/transmodel/journeys#TimetabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Long-term planned time data concerning public transport Vehicles passing a particular POINT IN JOURNEY PATTERN on a specified VEHICLE JOURNEY for a certain DAY TYPE."@en .
 <https://w3id.org/transmodel/journeys#TimetabledPassingTime> <http://www.w3.org/2000/01/rdf-schema#label> "Timetabled Passing Time"@en .
 # 
@@ -1927,25 +1930,25 @@ _:genid108 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001
 # https://w3id.org/transmodel/journeys#TimingPoint
 <https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Point> .
-<https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid109 .
-_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid109 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#aViewOf> .
-_:genid109 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> .
+<https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid110 .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid110 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#aViewOf> .
+_:genid110 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> .
 <https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A Timing Point is a Point against which the timing information necessary to build schedules may be recorded.\n\nIt's the same as Timing Point In Journey Pattern"@en .
 <https://w3id.org/transmodel/journeys#TimingPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Timing Point"@en .
 # 
 # https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern
 <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#PointInJourneyPattern> .
-<https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid110 .
-_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid110 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#viewedAs> .
-_:genid110 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid110 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/journeys#TimingPoint> .
 <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid111 .
 _:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid111 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#isWaitPoint> .
-_:genid111 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid111 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#viewedAs> .
+_:genid111 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid111 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/journeys#TimingPoint> .
+<https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid112 .
+_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid112 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#isWaitPoint> .
+_:genid112 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "A Point in a Journey Pattern which is a Timing Point"@en .
 <https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Timing Point In Journey Pattern"@en .
 # 
@@ -1978,18 +1981,18 @@ _:genid111 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001
 # https://w3id.org/transmodel/journeys#VehicleJourney
 <https://w3id.org/transmodel/journeys#VehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#Journey> .
-<https://w3id.org/transmodel/journeys#VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid112 .
-_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid112 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/commons#in> .
-_:genid112 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#Block> .
 <https://w3id.org/transmodel/journeys#VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid113 .
 _:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid113 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#passesAt> .
-_:genid113 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#TimetabledPassingTime> .
+_:genid113 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/commons#in> .
+_:genid113 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#Block> .
 <https://w3id.org/transmodel/journeys#VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid114 .
 _:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid114 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#runsOn> .
-_:genid114 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#JourneyFrequencyGroup> .
+_:genid114 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#passesAt> .
+_:genid114 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#TimetabledPassingTime> .
+<https://w3id.org/transmodel/journeys#VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid115 .
+_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid115 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#runsOn> .
+_:genid115 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#JourneyFrequencyGroup> .
 <https://w3id.org/transmodel/journeys#VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "A Vehicle Journey is the journey made by the Vehicle.\n\nA Service Journey is made of Vehicle Journeys\n\nWithin VehicleJourney there are several types:\n- Timetabled Vehicle Journey in a general timetable that will run on a specific time on a Day Type throughout the period of applicability of the schedule.\n- Dated Vehicle Journey, a specific Vehicle Journey that runs on a spcific calendar date;\n- Monitored Vehicle Journey, a Vehicle Journey run under real-time tracking system and so for which real-time observations and predictions and other data are available.\n- Dead Run, a Vehicle Journey without service"@en .
 <https://w3id.org/transmodel/journeys#VehicleJourney> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle Journey"@en .
 # 
@@ -2236,8 +2239,8 @@ _:genid114 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/trans
 <https://w3id.org/transmodel/kos/journeys/stop-use-type> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme  for types of use of stops (e.g., access, interchange only, pass through or non boarding alighting)"@en .
 <https://w3id.org/transmodel/kos/journeys/stop-use-type> <http://www.w3.org/2000/01/rdf-schema#label> "stop-use-type"@en .
 # 
-_:genid115 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
-_:genid115 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
+_:genid116 <https://w3id.org/transmodel/journeys#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid116 <https://w3id.org/transmodel/journeys#name> "Adolfo Anton-Bravo"@en .
 # 
 # 
 # #################################################################

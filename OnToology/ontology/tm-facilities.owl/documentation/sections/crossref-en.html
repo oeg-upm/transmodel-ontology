@@ -2915,6 +2915,18 @@ It can also include information about the accommodation on board, which can be r
                title="https://w3id.org/transmodel/facilities#FlexibleStopPlace">Flexible Stop Place</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#subplaceOf"
+               title="https://w3id.org/transmodel/facilities#subplaceOf">subplace of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#subplaceOf"
+               title="https://w3id.org/transmodel/facilities#subplaceOf">subplace of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="StopPlaceEntrance">
@@ -3794,6 +3806,10 @@ A vehicle stopping place may be served by one or more quays.</span>
       <li>
          <a href="#stopPlaceComponent"
             title="https://w3id.org/transmodel/facilities#stopPlaceComponent">stopPlaceComponent</a>
+      </li>
+      <li>
+         <a href="#subplaceOf"
+            title="https://w3id.org/transmodel/facilities#subplaceOf">subplace of</a>
       </li>
       <li>
          <a href="#toiletFacility"
@@ -4834,6 +4850,33 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
             <dd>
                <a href="#StopPlaceComponent"
                   title="https://w3id.org/transmodel/facilities#StopPlaceComponent">StopPlaceComponent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="subplaceOf">
+      <h3>subplace of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/facilities#subplaceOf</p>
+      <div class="comment">
+         <span class="markdown">A property connecting one Stop Place to another Stop Place to describe nested Stop Places (e.g. a metro station in a train station).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StopPlace"
+                  title="https://w3id.org/transmodel/facilities#StopPlace">Stop Place</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#StopPlace"
+                  title="https://w3id.org/transmodel/facilities#StopPlace">Stop Place</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>

@@ -583,9 +583,8 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/transmodel/journeys#passesAt
 :passesAt rdf:type owl:ObjectProperty ;
-          rdfs:domain :PointInJourneyPattern ;
-          rdfs:range :TimetabledPassingTime ;
-          rdfs:comment "This property sets the relationship between a Point In Journey Pattern or a Service Journey and a Timetabled Passing Time"@en ;
+          rdfs:comment "TODO: Check which domain and range to use"@en ,
+                       "This property sets the relationship between a Point In Journey Pattern or a Service Journey and a Timetabled Passing Time"@en ;
           rdfs:label "passes at"@en .
 
 
@@ -2055,6 +2054,10 @@ xsd:time rdf:type rdfs:Datatype .
 ###  https://w3id.org/transmodel/journeys#TimetabledPassingTime
 :TimetabledPassingTime rdf:type owl:Class ;
                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty :passesAt ;
+                                         owl:allValuesFrom :PointInJourneyPattern
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty :arrivalDayOffset ;
                                          owl:allValuesFrom xsd:time
                                        ] ,
@@ -2473,7 +2476,7 @@ Within VehicleJourney there are several types:
                                                          rdfs:label "stop-use-type"@en .
 
 
-_:genid115 :mbox "adolfo.anton.bravo@upm.es"@en ;
+_:genid116 :mbox "adolfo.anton.bravo@upm.es"@en ;
            :name "Adolfo Anton-Bravo"@en .
 
 #################################################################
