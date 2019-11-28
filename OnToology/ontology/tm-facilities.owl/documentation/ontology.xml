@@ -203,7 +203,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#accessedBy">
         <rdfs:comment xml:lang="en">This property sets the relationship between Site and Entrance</rdfs:comment>
-        <rdfs:label xml:lang="en">accessed by</rdfs:label>
+        <rdfs:label xml:lang="en">accessed By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -216,7 +216,7 @@
         <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#AccessibilityAssessment"/>
         <rdfs:comment xml:lang="en">TODO: Determine whether this should be moved to another module if the concept AccessibilityAssessment is moved as well</rdfs:comment>
         <rdfs:comment xml:lang="en">This property is used to relate a site element, a facility, etc., with a specific accessibility assessment. In some of the UML models of Transmodel this property is name as characerisedBy</rdfs:comment>
-        <rdfs:label xml:lang="en">accessibility assessment</rdfs:label>
+        <rdfs:label xml:lang="en">accessibility Assessment</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -297,7 +297,7 @@
         <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#Site"/>
         <rdfs:comment xml:lang="en">TODO: Check whether this property is also applicable to other things beyond Site Facility Sets</rdfs:comment>
         <rdfs:comment xml:lang="en">This property relates a Site Facility Set with a Site</rdfs:comment>
-        <rdfs:label xml:lang="en">available at</rdfs:label>
+        <rdfs:label xml:lang="en">available At</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -383,7 +383,7 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#concernedBy">
         <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#FacilitySet"/>
         <rdfs:comment xml:lang="en">This property allows connecting any object with a Facility Set</rdfs:comment>
-        <rdfs:label xml:lang="en">concerned by</rdfs:label>
+        <rdfs:label xml:lang="en">concerned By</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -572,7 +572,7 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
         <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#EquipmentPlace"/>
         <rdfs:comment xml:lang="en">TODO: find a more general property (probably similar to contains/containedIn) and think about whether it should be replaced by this more general property, or at least created as a subProperty of that one.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property is used to relate an equipment with the equipment place where it is located</rdfs:comment>
-        <rdfs:label xml:lang="en">located in</rdfs:label>
+        <rdfs:label xml:lang="en">located In</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -679,6 +679,18 @@ In the TransModel UML model and in the Netex implementation this is expressed as
         <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#AccessEquipment"/>
         <rdfs:comment xml:lang="en">A physical entrance or exit to/from a StopPlace for a Passenger. May be a door, barrier, gate other recognizable point of access</rdfs:comment>
         <rdfs:comment xml:lang="en">stopPlaceEntrance</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#subplaceOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#subplaceOf">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#StopPlace"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#StopPlace"/>
+        <rdfs:comment xml:lang="en">A property connecting one Stop Place to another Stop Place to describe nested Stop Places (e.g. a metro station in a train station).</rdfs:comment>
+        <rdfs:label xml:lang="en">subplace of</rdfs:label>
     </owl:ObjectProperty>
     
 

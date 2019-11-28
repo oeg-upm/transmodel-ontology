@@ -11,11 +11,14 @@ This section provides details for each class and property defined by [Ontology N
          <a href="#ClassOfUse" title="https://w3id.org/transmodel/fares#ClassOfUse">ClassOfUse</a>
       </li>
       <li>
-         <a href="#https://w3id.org/transmodel/journeys#FlexibleLine"
-            title="https://w3id.org/transmodel/journeys#FlexibleLine">FlexibleLine</a>
+         <a href="#DistributionChannel"
+            title="https://w3id.org/transmodel/fares#DistributionChannel">Distribution Channel</a>
       </li>
       <li>
-         <a href="#https://w3id.org/transmodel/journeys#Line" title="https://w3id.org/transmodel/journeys#Line">Line</a>
+         <a href="#https://w3id.org/transmodel/journeys#FlexibleLine"
+            title="https://w3id.org/transmodel/journeys#FlexibleLine">
+            <span>flexible line</span>
+         </a>
       </li>
    </ul>
    <div class="entity" id="BookingArrangements">
@@ -37,52 +40,183 @@ This section provides details for each class and property defined by [Ontology N
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/fares#ClassOfUse</p>
       <div class="comment">
-         <span class="markdown">A classification of fare and othe service classes by category of user entitled to use them</span>
+         <span class="markdown">A classification of fare and other service classes by category of user entitled to use them</span>
       </div>
    </div>
+   <div class="entity" id="DistributionChannel">
+      <h3>Distribution Channel<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#DistributionChannel</p>
+      <div class="comment">
+         <span class="markdown">A type of outlet for selling a Fare Product</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#describedThrough"
+               title="https://w3id.org/transmodel/fares#describedThrough">described through</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#distributionChannelType"
+               title="https://w3id.org/transmodel/fares#distributionChannelType">distribution Channel Type</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#governedBy" title="https://w3id.org/transmodel/fares#governedBy">governed by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="https://w3id.org/transmodel/journeys#FlexibleLine">
-      <h3>FlexibleLine<sup class="type-c" title="class">c</sup>
+      <h3>flexible line<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/journeys#FlexibleLine</p>
-      <div class="comment">
-         <span class="markdown">Specialisation of Line for flexible service. As all the service on a Line may not ve flexible, flexibility itself is described at JourneyPattern level, meaning that a separate JourneyPattern is needed for each type of flexibility available for the line</span>
-      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://w3id.org/transmodel/journeys#Line" title="https://w3id.org/transmodel/journeys#Line">Line</a>
+            <span class="dotted" title="https://w3id.org/transmodel/journeys#Line">line</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://w3id.org/transmodel/journeys#Line">
-      <h3>Line<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#describedThrough"
+            title="https://w3id.org/transmodel/fares#describedThrough">described through</a>
+      </li>
+      <li>
+         <a href="#distributionChannelType"
+            title="https://w3id.org/transmodel/fares#distributionChannelType">distribution Channel Type</a>
+      </li>
+      <li>
+         <a href="#governedBy" title="https://w3id.org/transmodel/fares#governedBy">governed by</a>
+      </li>
+   </ul>
+   <div class="entity" id="describedThrough">
+      <h3>described through<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#Line</p>
-      <dl class="description">
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#https://w3id.org/transmodel/journeys#FlexibleLine"
-               title="https://w3id.org/transmodel/journeys#FlexibleLine">FlexibleLine</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#describedThrough</p>
+      <div class="comment">
+         <span class="markdown">This property relates a Distribution Channel with its corresponding Contact Details. It is a subproperty of schema:contactPoint, which relates anything to a ContactPoint</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://schema.org/contactPoint">contact point</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DistributionChannel"
+                  title="https://w3id.org/transmodel/fares#DistributionChannel">Distribution Channel</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/authorities#ContactDetails">contact details</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="distributionChannelType">
+      <h3>distribution Channel Type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#distributionChannelType</p>
+      <div class="comment">
+         <span class="markdown">This property assigns to a Distribution Channel one or several SKOS Concepts from the codelist on types of distribution channels</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DistributionChannel"
+                  title="https://w3id.org/transmodel/fares#DistributionChannel">Distribution Channel</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span>
+               <sup class="type-op" title="object property">op</sup> 
+               <span class="logic">value</span> 
+               <a href="#https://w3id.org/transmodel/kos/fares/DistributionChannelType"
+                  title="https://w3id.org/transmodel/kos/fares/DistributionChannelType">distribution channel type</a>)</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="governedBy">
+      <h3>governed by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#governedBy</p>
+      <div class="comment">
+         <span class="markdown">This property relates a Distribution Channel to the Organisation that takes responsability over it</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DistributionChannel"
+                  title="https://w3id.org/transmodel/fares#DistributionChannel">Distribution Channel</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/authorities#Organisation">organisation</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
 </div><div id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/fares/DistributionChannelType"
+            title="https://w3id.org/transmodel/kos/fares/DistributionChannelType">
+            <span>distribution channel type</span>
+         </a>
+      </li>
       <li>
          <a href="#https://w3id.org/transmodel/kos/fares/FareType" title="https://w3id.org/transmodel/kos/fares/FareType">
             <span>fare type</span>
          </a>
       </li>
    </ul>
+   <div class="entity" id="https://w3id.org/transmodel/kos/fares/DistributionChannelType">
+      <h3>distribution channel type<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/fares/DistributionChannelType</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="https://w3id.org/transmodel/kos/fares/FareType">
       <h3>fare type<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>

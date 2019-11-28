@@ -583,9 +583,8 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/transmodel/journeys#passesAt
 :passesAt rdf:type owl:ObjectProperty ;
-          rdfs:domain :PointInJourneyPattern ;
-          rdfs:range :TimetabledPassingTime ;
-          rdfs:comment "This property sets the relationship between a Point In Journey Pattern or a Service Journey and a Timetabled Passing Time"@en ;
+          rdfs:comment "TODO: Check which domain and range to use"@en ,
+                       "This property sets the relationship between a Point In Journey Pattern or a Service Journey and a Timetabled Passing Time"@en ;
           rdfs:label "passes at"@en .
 
 
@@ -652,7 +651,7 @@ xsd:time rdf:type rdfs:Datatype .
         rdfs:domain :JourneyFrequencyGroup ;
         rdfs:range :VehicleJourney ;
         rdfs:comment "This property relates a Vehicle Journey with the Journey Frequency Group(s) that it belongs to"@en ;
-        rdfs:label "runs on"@en .
+        rdfs:label "runs On"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#scheduledStopPoint
@@ -700,16 +699,16 @@ xsd:time rdf:type rdfs:Datatype .
 :startOfBlock rdf:type owl:ObjectProperty ;
               rdfs:domain :ParkingPoint ;
               rdfs:range :Block ;
-              rdfs:label "Property to relate a Parking Point to the start of a Block"@en ,
-                         "start of block"@en .
+              rdfs:comment "Property to relate a Parking Point to the start of a Block"@en ;
+              rdfs:label "start Of Block"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#startingAt
 :startingAt rdf:type owl:ObjectProperty ;
             rdfs:domain :OperatingPeriod ;
             rdfs:range :OperatingDay ;
-            rdfs:label "Property to connect an Operating Period to the related Operating Days, indicating when it starts"@en ,
-                       "starting at"@en .
+            rdfs:comment "Property to connect an Operating Period to the related Operating Days, indicating when it starts"@en ;
+            rdfs:label "starting At"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#stopUse
@@ -1674,7 +1673,7 @@ xsd:time rdf:type rdfs:Datatype .
                                    owl:onProperty :startingAt ;
                                    owl:allValuesFrom :OperatingDay
                                  ] ;
-                 rdfs:comment "A continous interval of time between two Operating Day which will be used to define validities"@en ;
+                 rdfs:comment "A continuous interval of time between two Operating Day which will be used to define validities"@en ;
                  rdfs:label "Operating Period"@en .
 
 
@@ -1815,7 +1814,7 @@ xsd:time rdf:type rdfs:Datatype .
                                                    ]
                                ] ;
                rdfs:comment "A property which a day may possess, such as school holiday, weekday, summer, winter, etc."@en ;
-               rdfs:label "Property of day"@en .
+               rdfs:label "Property Of Day"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#RailwayJunction
@@ -2055,6 +2054,10 @@ xsd:time rdf:type rdfs:Datatype .
 ###  https://w3id.org/transmodel/journeys#TimetabledPassingTime
 :TimetabledPassingTime rdf:type owl:Class ;
                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty :passesAt ;
+                                         owl:allValuesFrom :PointInJourneyPattern
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty :arrivalDayOffset ;
                                          owl:allValuesFrom xsd:time
                                        ] ,
@@ -2473,7 +2476,7 @@ Within VehicleJourney there are several types:
                                                          rdfs:label "stop-use-type"@en .
 
 
-_:genid115 :mbox "adolfo.anton.bravo@upm.es"@en ;
+_:genid116 :mbox "adolfo.anton.bravo@upm.es"@en ;
            :name "Adolfo Anton-Bravo"@en .
 
 #################################################################

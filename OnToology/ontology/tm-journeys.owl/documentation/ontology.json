@@ -73,10 +73,10 @@
   "@id" : "_:genid105",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#time"
+    "@id" : "https://w3id.org/transmodel/journeys#PointInJourneyPattern"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#arrivalDayOffset"
+    "@id" : "https://w3id.org/transmodel/journeys#passesAt"
   } ]
 }, {
   "@id" : "_:genid106",
@@ -85,7 +85,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#time"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#arrivalTime"
+    "@id" : "https://w3id.org/transmodel/journeys#arrivalDayOffset"
   } ]
 }, {
   "@id" : "_:genid107",
@@ -94,7 +94,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#time"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#departureDayOffset"
+    "@id" : "https://w3id.org/transmodel/journeys#arrivalTime"
   } ]
 }, {
   "@id" : "_:genid108",
@@ -103,16 +103,16 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#time"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#departureTime"
+    "@id" : "https://w3id.org/transmodel/journeys#departureDayOffset"
   } ]
 }, {
   "@id" : "_:genid109",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern"
+    "@id" : "http://www.w3.org/2001/XMLSchema#time"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#aViewOf"
+    "@id" : "https://w3id.org/transmodel/journeys#departureTime"
   } ]
 }, {
   "@id" : "_:genid11",
@@ -126,6 +126,15 @@
 }, {
   "@id" : "_:genid110",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#aViewOf"
+  } ]
+}, {
+  "@id" : "_:genid111",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#TimingPoint"
   } ],
@@ -137,7 +146,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid111",
+  "@id" : "_:genid112",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
@@ -146,7 +155,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#isWaitPoint"
   } ]
 }, {
-  "@id" : "_:genid112",
+  "@id" : "_:genid113",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Block"
@@ -155,7 +164,7 @@
     "@id" : "https://w3id.org/transmodel/commons#in"
   } ]
 }, {
-  "@id" : "_:genid113",
+  "@id" : "_:genid114",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#TimetabledPassingTime"
@@ -164,7 +173,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#passesAt"
   } ]
 }, {
-  "@id" : "_:genid114",
+  "@id" : "_:genid115",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#JourneyFrequencyGroup"
@@ -173,7 +182,7 @@
     "@id" : "https://w3id.org/transmodel/journeys#runsOn"
   } ]
 }, {
-  "@id" : "_:genid115",
+  "@id" : "_:genid116",
   "https://w3id.org/transmodel/journeys#mbox" : [ {
     "@language" : "en",
     "@value" : "adolfo.anton.bravo@upm.es"
@@ -2017,7 +2026,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A continous interval of time between two Operating Day which will be used to define validities"
+    "@value" : "A continuous interval of time between two Operating Day which will be used to define validities"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2216,7 +2225,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Property of day"
+    "@value" : "Property Of Day"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid70"
@@ -2585,6 +2594,8 @@
     "@id" : "_:genid107"
   }, {
     "@id" : "_:genid108"
+  }, {
+    "@id" : "_:genid109"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#TimetabledVehicleJourney",
@@ -2641,7 +2652,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Point"
   }, {
-    "@id" : "_:genid109"
+    "@id" : "_:genid110"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern",
@@ -2657,9 +2668,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#PointInJourneyPattern"
   }, {
-    "@id" : "_:genid110"
-  }, {
     "@id" : "_:genid111"
+  }, {
+    "@id" : "_:genid112"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#TopographicPlace",
@@ -2751,11 +2762,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Journey"
   }, {
-    "@id" : "_:genid112"
-  }, {
     "@id" : "_:genid113"
   }, {
     "@id" : "_:genid114"
+  }, {
+    "@id" : "_:genid115"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#VehicleJourneyLayover",
@@ -4121,17 +4132,14 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
+    "@value" : "TODO: Check which domain and range to use"
+  }, {
+    "@language" : "en",
     "@value" : "This property sets the relationship between a Point In Journey Pattern or a Service Journey and a Timetabled Passing Time"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#PointInJourneyPattern"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "passes at"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#TimetabledPassingTime"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#passingTimeTimingPoint",
@@ -4285,7 +4293,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "runs on"
+    "@value" : "runs On"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney"
@@ -4401,15 +4409,16 @@
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#startOfBlock",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property to relate a Parking Point to the start of a Block"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#ParkingPoint"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Property to relate a Parking Point to the start of a Block"
-  }, {
-    "@language" : "en",
-    "@value" : "start of block"
+    "@value" : "start Of Block"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#Block"
@@ -4430,15 +4439,16 @@
 }, {
   "@id" : "https://w3id.org/transmodel/journeys#startingAt",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property to connect an Operating Period to the related Operating Days, indicating when it starts"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#OperatingPeriod"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Property to connect an Operating Period to the related Operating Days, indicating when it starts"
-  }, {
-    "@language" : "en",
-    "@value" : "starting at"
+    "@value" : "starting At"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#OperatingDay"

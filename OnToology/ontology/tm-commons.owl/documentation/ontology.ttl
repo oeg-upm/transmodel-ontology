@@ -87,40 +87,47 @@
 
 ###  https://w3id.org/transmodel/common#canAlight
 <https://w3id.org/transmodel/common#canAlight> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
                                                rdfs:domain <https://w3id.org/transmodel/common#Passenger> ;
                                                rdfs:label "canAlight"@en .
 
 
 ###  https://w3id.org/transmodel/common#canBoard
 <https://w3id.org/transmodel/common#canBoard> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
                                               rdfs:domain <https://w3id.org/transmodel/common#Passenger> ;
                                               rdfs:label "canBoard"@en .
 
 
 ###  https://w3id.org/transmodel/common#destinationStop
 <https://w3id.org/transmodel/common#destinationStop> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
                                                      rdfs:label "destinationStop"@en .
 
 
 ###  https://w3id.org/transmodel/common#followsJourneyPattern
 <https://w3id.org/transmodel/common#followsJourneyPattern> rdf:type owl:ObjectProperty ;
+                                                           rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
                                                            rdfs:label "followsJourneyPattern"@en .
 
 
 ###  https://w3id.org/transmodel/common#hasAServiceJourneyPattern
 <https://w3id.org/transmodel/common#hasAServiceJourneyPattern> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
                                                                rdfs:domain <https://w3id.org/transmodel/common#Service> ;
                                                                rdfs:label "serviceJourneyPattern"@en .
 
 
 ###  https://w3id.org/transmodel/common#journeyPatternPoint
 <https://w3id.org/transmodel/common#journeyPatternPoint> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
                                                          rdfs:range <https://w3id.org/transmodel/common#Point> ;
                                                          rdfs:label "journeyPatternPoint"@en .
 
 
 ###  https://w3id.org/transmodel/common#makesAServiceJourney
 <https://w3id.org/transmodel/common#makesAServiceJourney> rdf:type owl:ObjectProperty ;
+                                                          rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
                                                           rdfs:domain <https://w3id.org/transmodel/common#Passenger> ;
                                                           rdfs:range <https://w3id.org/transmodel/common#Service> ;
                                                           rdfs:label "serviceJourney"@en .
@@ -128,27 +135,32 @@
 
 ###  https://w3id.org/transmodel/common#originStop
 <https://w3id.org/transmodel/common#originStop> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
                                                 rdfs:label "originStop"@en .
 
 
 ###  https://w3id.org/transmodel/common#route
 <https://w3id.org/transmodel/common#route> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
                                            rdfs:label "route"@en .
 
 
 ###  https://w3id.org/transmodel/common#scheduledStopPoint
 <https://w3id.org/transmodel/common#scheduledStopPoint> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
                                                         rdfs:label "scheduledStopPoint"@en .
 
 
 ###  https://w3id.org/transmodel/common#stopsAt
 <https://w3id.org/transmodel/common#stopsAt> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
                                              rdfs:domain <https://w3id.org/transmodel/common#Vehicle> ;
                                              rdfs:label "stopsAt"@en .
 
 
 ###  https://w3id.org/transmodel/common#timingLink
 <https://w3id.org/transmodel/common#timingLink> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
                                                 rdfs:domain <https://w3id.org/transmodel/common#TimingLink> ;
                                                 rdfs:range <https://w3id.org/transmodel/common#TimingPoint> ;
                                                 rdfs:label "timingLinkPoint"@en .
@@ -156,35 +168,45 @@
 
 ###  https://w3id.org/transmodel/common#timingLinkInJourneyPattern
 <https://w3id.org/transmodel/common#timingLinkInJourneyPattern> rdf:type owl:ObjectProperty ;
+                                                                rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
                                                                 rdfs:range <https://w3id.org/transmodel/common#TimingLinkInJourneyPattern> .
 
 
 ###  https://w3id.org/transmodel/common#vehicleJourney
 <https://w3id.org/transmodel/common#vehicleJourney> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
                                                     rdfs:domain <https://w3id.org/transmodel/common#Vehicle> ;
                                                     rdfs:label "vehicleJourney"@en .
 
 
 ###  https://w3id.org/transmodel/common#vehicleJourneyDayType
 <https://w3id.org/transmodel/common#vehicleJourneyDayType> rdf:type owl:ObjectProperty ;
+                                                           rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
                                                            rdfs:label "vehicleJourneyDayType"@en .
 
 
 ###  https://w3id.org/transmodel/common#vehicleJourneyRoute
 <https://w3id.org/transmodel/common#vehicleJourneyRoute> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
                                                          rdfs:label "vehicleJourneyRoute"@en .
 
 
 ###  https://w3id.org/transmodel/commons#at
 :at rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
     rdfs:comment "This property sets the relationship between something and other thing related to it. It is used in multiple situations and modules of this ontology"@en ;
     rdfs:label "at"@en .
 
 
 ###  https://w3id.org/transmodel/commons#in
 :in rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf <https://w3id.org/transmodel/journeys#TOREVIEW> ;
     rdfs:comment "This property sets the relationship between something and other thing contained in the first. It is used in multiple situations and modules of this ontology (e.g., Quay in Stop Place)"@en ;
     rdfs:label "in"@en .
+
+
+###  https://w3id.org/transmodel/journeys#TOREVIEW
+<https://w3id.org/transmodel/journeys#TOREVIEW> rdf:type owl:ObjectProperty .
 
 
 #################################################################
