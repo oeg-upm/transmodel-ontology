@@ -1,40 +1,40 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/transmodel/journeys#"
      xml:base="https://w3id.org/transmodel/journeys"
-     xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
      xmlns:cc="http://creativecommons.org/ns#"
-     xmlns:tmauth="https://w3id.org/transmodel/authorities#"
-     xmlns:tmkosjourney="https://w3id.org/transmodel/kos/journeys/"
-     xmlns:tmkos="https://w3id.org/transmodel/kos/"
-     xmlns:tmfare="https://w3id.org/transmodel/fares#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:tmcommons="https://w3id.org/transmodel/commons#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:tmkosauthority="https://w3id.org/transmodel/kos/authorities/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:tmkosfare="https://w3id.org/transmodel/kos/fares/"
-     xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/"
-     xmlns:tmfac="https://w3id.org/transmodel/facilities#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:tmfac="https://w3id.org/transmodel/facilities#"
+     xmlns:tmkos="https://w3id.org/transmodel/kos/"
+     xmlns:tmauth="https://w3id.org/transmodel/authorities#"
+     xmlns:tmfare="https://w3id.org/transmodel/fares#"
+     xmlns:tmcommons="https://w3id.org/transmodel/commons#"
+     xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
+     xmlns:tmkosfare="https://w3id.org/transmodel/kos/fares/"
+     xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/"
+     xmlns:tmkosjourney="https://w3id.org/transmodel/kos/journeys/"
+     xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/"
+     xmlns:tmkosauthority="https://w3id.org/transmodel/kos/authorities/">
     <owl:Ontology rdf:about="https://w3id.org/transmodel/journeys#">
         <owl:versionIRI rdf:resource="https://w3id.org/transmodel/journeys/0.3"/>
-        <rdfs:label xml:lang="en">Transmodel Ontology - Journeys</rdfs:label>
-        <dc:identifier>https://w3id.org/transmodel/journies</dc:identifier>
         <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
-        <dc:date>2019-11-22</dc:date>
-        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/facilities#"/>
-        <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
-        <dc:title xml:lang="en">Transmodel Ontology - Journeys</dc:title>
-        <rdfs:seeAlso xml:lang="en">https://github.com/oeg-upm/transmodel-ontology</rdfs:seeAlso>
-        <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
         <dc:creator>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
-        <owl:versionInfo xml:lang="en">This is the initial version of the module on Journeys, after considering the UML models and XSD descriptions of Transmodel and NeTEx</owl:versionInfo>
+        <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:date>2019-11-22</dc:date>
         <dc:description xml:lang="en">Module of the Transmodel Ontology focused on journeys. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</dc:description>
+        <dc:identifier>https://w3id.org/transmodel/journies</dc:identifier>
+        <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
+        <dc:title xml:lang="en">Transmodel Ontology - Journeys</dc:title>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/facilities#"/>
+        <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">Transmodel Ontology - Journeys</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://github.com/oeg-upm/transmodel-ontology</rdfs:seeAlso>
+        <owl:versionInfo xml:lang="en">This is the initial version of the module on Journeys, after considering the UML models and XSD descriptions of Transmodel and NeTEx</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -932,7 +932,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#JourneyFrequencyGroup"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
         <rdfs:comment xml:lang="en">This property relates a Vehicle Journey with the Journey Frequency Group(s) that it belongs to</rdfs:comment>
-        <rdfs:label xml:lang="en">runs on</rdfs:label>
+        <rdfs:label xml:lang="en">runs On</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -998,8 +998,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#startOfBlock">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#ParkingPoint"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Block"/>
-        <rdfs:label xml:lang="en">Property to relate a Parking Point to the start of a Block</rdfs:label>
-        <rdfs:label xml:lang="en">start of block</rdfs:label>
+        <rdfs:comment xml:lang="en">Property to relate a Parking Point to the start of a Block</rdfs:comment>
+        <rdfs:label xml:lang="en">start Of Block</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1009,8 +1009,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#startingAt">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#OperatingPeriod"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#OperatingDay"/>
-        <rdfs:label xml:lang="en">Property to connect an Operating Period to the related Operating Days, indicating when it starts</rdfs:label>
-        <rdfs:label xml:lang="en">starting at</rdfs:label>
+        <rdfs:comment xml:lang="en">Property to connect an Operating Period to the related Operating Days, indicating when it starts</rdfs:comment>
+        <rdfs:label xml:lang="en">starting At</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2381,7 +2381,7 @@
                 <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#OperatingDay"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A continous interval of time between two Operating Day which will be used to define validities</rdfs:comment>
+        <rdfs:comment xml:lang="en">A continuous interval of time between two Operating Day which will be used to define validities</rdfs:comment>
         <rdfs:label xml:lang="en">Operating Period</rdfs:label>
     </owl:Class>
     
@@ -2583,7 +2583,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A property which a day may possess, such as school holiday, weekday, summer, winter, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">Property of day</rdfs:label>
+        <rdfs:label xml:lang="en">Property Of Day</rdfs:label>
     </owl:Class>
     
 
@@ -3577,5 +3577,5 @@ Within VehicleJourney there are several types:
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 

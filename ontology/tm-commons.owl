@@ -1,40 +1,40 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/transmodel/commons#"
      xml:base="https://w3id.org/transmodel/commons"
-     xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
      xmlns:cc="http://creativecommons.org/ns#"
-     xmlns:tmauth="https://w3id.org/transmodel/authorities#"
-     xmlns:tmkosjourney="https://w3id.org/transmodel/kos/journeys/"
-     xmlns:tmkos="https://w3id.org/transmodel/kos/"
-     xmlns:tmfare="https://w3id.org/transmodel/fares#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:tmcommons="https://w3id.org/transmodel/commons#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:tmkosauthority="https://w3id.org/transmodel/kos/authorities/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:tmkosfare="https://w3id.org/transmodel/kos/fares/"
-     xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/"
-     xmlns:tmfac="https://w3id.org/transmodel/facilities#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:tmfac="https://w3id.org/transmodel/facilities#"
+     xmlns:tmkos="https://w3id.org/transmodel/kos/"
+     xmlns:tmauth="https://w3id.org/transmodel/authorities#"
+     xmlns:tmfare="https://w3id.org/transmodel/fares#"
+     xmlns:tmcommons="https://w3id.org/transmodel/commons#"
+     xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
+     xmlns:tmkosfare="https://w3id.org/transmodel/kos/fares/"
+     xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/"
+     xmlns:tmkosjourney="https://w3id.org/transmodel/kos/journeys/"
+     xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/"
+     xmlns:tmkosauthority="https://w3id.org/transmodel/kos/authorities/">
     <owl:Ontology rdf:about="https://w3id.org/transmodel/commons#">
         <owl:versionIRI rdf:resource="https://w3id.org/transmodel/commons/0.2"/>
-        <dc:identifier>https://w3id.org/transmodel/authorities</dc:identifier>
         <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/facilities#"/>
+        <dc:creator>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:date>2019-10-06</dc:date>
-        <rdfs:seeAlso xml:lang="en">https://github.com/oeg-upm/transmodel-ontology</rdfs:seeAlso>
-        <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
-        <dc:creator>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:description xml:lang="en">Module of the Transmodel Ontology focused on commons. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</dc:description>
-        <rdfs:label xml:lang="en">Transmodel Ontology - Commons</rdfs:label>
-        <owl:versionInfo xml:lang="en">This is the initial version of the module on Commons, after considering the UML models and XSD descriptions of Transmodel and NeTEx</owl:versionInfo>
-        <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on commons. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
+        <dc:identifier>https://w3id.org/transmodel/authorities</dc:identifier>
+        <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
         <dc:title xml:lang="en">Transmodel Ontology - Commons</dc:title>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/facilities#"/>
+        <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on commons. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">Transmodel Ontology - Commons</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://github.com/oeg-upm/transmodel-ontology</rdfs:seeAlso>
+        <owl:versionInfo xml:lang="en">This is the initial version of the module on Commons, after considering the UML models and XSD descriptions of Transmodel and NeTEx</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -147,6 +147,7 @@
     <!-- https://w3id.org/transmodel/common#canAlight -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#canAlight">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#Passenger"/>
         <rdfs:label xml:lang="en">canAlight</rdfs:label>
     </owl:ObjectProperty>
@@ -156,6 +157,7 @@
     <!-- https://w3id.org/transmodel/common#canBoard -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#canBoard">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#Passenger"/>
         <rdfs:label xml:lang="en">canBoard</rdfs:label>
     </owl:ObjectProperty>
@@ -165,6 +167,7 @@
     <!-- https://w3id.org/transmodel/common#destinationStop -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#destinationStop">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:label xml:lang="en">destinationStop</rdfs:label>
     </owl:ObjectProperty>
     
@@ -173,6 +176,7 @@
     <!-- https://w3id.org/transmodel/common#followsJourneyPattern -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#followsJourneyPattern">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:label xml:lang="en">followsJourneyPattern</rdfs:label>
     </owl:ObjectProperty>
     
@@ -181,6 +185,7 @@
     <!-- https://w3id.org/transmodel/common#hasAServiceJourneyPattern -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#hasAServiceJourneyPattern">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#Service"/>
         <rdfs:label xml:lang="en">serviceJourneyPattern</rdfs:label>
     </owl:ObjectProperty>
@@ -190,6 +195,7 @@
     <!-- https://w3id.org/transmodel/common#journeyPatternPoint -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#journeyPatternPoint">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/common#Point"/>
         <rdfs:label xml:lang="en">journeyPatternPoint</rdfs:label>
     </owl:ObjectProperty>
@@ -199,6 +205,7 @@
     <!-- https://w3id.org/transmodel/common#makesAServiceJourney -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#makesAServiceJourney">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#Passenger"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/common#Service"/>
         <rdfs:label xml:lang="en">serviceJourney</rdfs:label>
@@ -209,6 +216,7 @@
     <!-- https://w3id.org/transmodel/common#originStop -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#originStop">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:label xml:lang="en">originStop</rdfs:label>
     </owl:ObjectProperty>
     
@@ -217,6 +225,7 @@
     <!-- https://w3id.org/transmodel/common#route -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#route">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:label xml:lang="en">route</rdfs:label>
     </owl:ObjectProperty>
     
@@ -225,6 +234,7 @@
     <!-- https://w3id.org/transmodel/common#scheduledStopPoint -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#scheduledStopPoint">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:label xml:lang="en">scheduledStopPoint</rdfs:label>
     </owl:ObjectProperty>
     
@@ -233,6 +243,7 @@
     <!-- https://w3id.org/transmodel/common#stopsAt -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#stopsAt">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#Vehicle"/>
         <rdfs:label xml:lang="en">stopsAt</rdfs:label>
     </owl:ObjectProperty>
@@ -242,6 +253,7 @@
     <!-- https://w3id.org/transmodel/common#timingLink -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#timingLink">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#TimingLink"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/common#TimingPoint"/>
         <rdfs:label xml:lang="en">timingLinkPoint</rdfs:label>
@@ -252,6 +264,7 @@
     <!-- https://w3id.org/transmodel/common#timingLinkInJourneyPattern -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#timingLinkInJourneyPattern">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/common#TimingLinkInJourneyPattern"/>
     </owl:ObjectProperty>
     
@@ -260,6 +273,7 @@
     <!-- https://w3id.org/transmodel/common#vehicleJourney -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#vehicleJourney">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#Vehicle"/>
         <rdfs:label xml:lang="en">vehicleJourney</rdfs:label>
     </owl:ObjectProperty>
@@ -269,6 +283,7 @@
     <!-- https://w3id.org/transmodel/common#vehicleJourneyDayType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#vehicleJourneyDayType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:label xml:lang="en">vehicleJourneyDayType</rdfs:label>
     </owl:ObjectProperty>
     
@@ -277,6 +292,7 @@
     <!-- https://w3id.org/transmodel/common#vehicleJourneyRoute -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#vehicleJourneyRoute">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:label xml:lang="en">vehicleJourneyRoute</rdfs:label>
     </owl:ObjectProperty>
     
@@ -285,6 +301,7 @@
     <!-- https://w3id.org/transmodel/commons#at -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/commons#at">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:comment xml:lang="en">This property sets the relationship between something and other thing related to it. It is used in multiple situations and modules of this ontology</rdfs:comment>
         <rdfs:label xml:lang="en">at</rdfs:label>
     </owl:ObjectProperty>
@@ -294,9 +311,16 @@
     <!-- https://w3id.org/transmodel/commons#in -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/commons#in">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:comment xml:lang="en">This property sets the relationship between something and other thing contained in the first. It is used in multiple situations and modules of this ontology (e.g., Quay in Stop Place)</rdfs:comment>
         <rdfs:label xml:lang="en">in</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#TOREVIEW -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#TOREVIEW"/>
     
 
 
@@ -738,5 +762,5 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
