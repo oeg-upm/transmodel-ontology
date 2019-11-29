@@ -2687,7 +2687,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "accessed by"
+    "@value" : "accessed By"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#accessibilityAssessment",
@@ -2701,7 +2701,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "accessibility assessment"
+    "@value" : "accessibility Assessment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#AccessibilityAssessment"
@@ -2824,7 +2824,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "available at"
+    "@value" : "available At"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#Site"
@@ -2981,7 +2981,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "concerned by"
+    "@value" : "concerned By"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#FacilitySet"
@@ -3447,7 +3447,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "located in"
+    "@value" : "located In"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#EquipmentPlace"
@@ -3744,6 +3744,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/facilities#subplaceOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A property connecting one Stop Place to another Stop Place to describe nested Stop Places (e.g. a metro station in a train station)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#StopPlace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "subplace of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/facilities#StopPlace"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/facilities#taxRefunds",

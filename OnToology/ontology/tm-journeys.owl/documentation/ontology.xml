@@ -907,8 +907,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#passesAt">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#PointInJourneyPattern"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#TimetabledPassingTime"/>
+        <rdfs:comment xml:lang="en">TODO: Check which domain and range to use</rdfs:comment>
         <rdfs:comment xml:lang="en">This property sets the relationship between a Point In Journey Pattern or a Service Journey and a Timetabled Passing Time</rdfs:comment>
         <rdfs:label xml:lang="en">passes at</rdfs:label>
     </owl:ObjectProperty>
@@ -1008,7 +1007,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#JourneyFrequencyGroup"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
         <rdfs:comment xml:lang="en">This property relates a Vehicle Journey with the Journey Frequency Group(s) that it belongs to</rdfs:comment>
-        <rdfs:label xml:lang="en">runs on</rdfs:label>
+        <rdfs:label xml:lang="en">runs On</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1079,8 +1078,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#startOfBlock">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#ParkingPoint"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Block"/>
-        <rdfs:label xml:lang="en">Property to relate a Parking Point to the start of a Block</rdfs:label>
-        <rdfs:label xml:lang="en">start of block</rdfs:label>
+        <rdfs:comment xml:lang="en">Property to relate a Parking Point to the start of a Block</rdfs:comment>
+        <rdfs:label xml:lang="en">start Of Block</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1091,8 +1090,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#startingAt">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#OperatingPeriod"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#OperatingDay"/>
-        <rdfs:label xml:lang="en">Property to connect an Operating Period to the related Operating Days, indicating when it starts</rdfs:label>
-        <rdfs:label xml:lang="en">starting at</rdfs:label>
+        <rdfs:comment xml:lang="en">Property to connect an Operating Period to the related Operating Days, indicating when it starts</rdfs:comment>
+        <rdfs:label xml:lang="en">starting At</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2582,7 +2581,7 @@
                 <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#OperatingDay"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A continous interval of time between two Operating Day which will be used to define validities</rdfs:comment>
+        <rdfs:comment xml:lang="en">A continuous interval of time between two Operating Day which will be used to define validities</rdfs:comment>
         <rdfs:label xml:lang="en">Operating Period</rdfs:label>
     </owl:Class>
     
@@ -2794,7 +2793,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A property which a day may possess, such as school holiday, weekday, summer, winter, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">Property of day</rdfs:label>
+        <rdfs:label xml:lang="en">Property Of Day</rdfs:label>
     </owl:Class>
     
 
@@ -3155,6 +3154,12 @@
 
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimetabledPassingTime">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#passesAt"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#PointInJourneyPattern"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#arrivalDayOffset"/>
@@ -3841,7 +3846,7 @@ Within VehicleJourney there are several types:
         <rdfs:comment xml:lang="en">Concept scheme  for types of use of stops (e.g., access, interchange only, pass through or non boarding alighting)</rdfs:comment>
         <rdfs:label xml:lang="en">stop-use-type</rdfs:label>
     </owl:NamedIndividual>
-    <rdf:Description rdf:nodeID="genid115">
+    <rdf:Description rdf:nodeID="genid116">
         <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
         <name xml:lang="en">Adolfo Anton-Bravo</name>
     </rdf:Description>
