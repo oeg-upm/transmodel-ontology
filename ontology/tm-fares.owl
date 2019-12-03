@@ -11,7 +11,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:tmfac="https://w3id.org/transmodel/facilities#"
      xmlns:tmkos="https://w3id.org/transmodel/kos/"
-     xmlns:tmauth="https://w3id.org/transmodel/authorities#"
+     xmlns:tmorg="https://w3id.org/transmodel/organisations#"
      xmlns:tmfare="https://w3id.org/transmodel/fares#"
      xmlns:tmcommons="https://w3id.org/transmodel/commons#"
      xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
@@ -19,7 +19,7 @@
      xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/"
      xmlns:tmkosjourney="https://w3id.org/transmodel/kos/journeys/"
      xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/"
-     xmlns:tmkosauthority="https://w3id.org/transmodel/kos/authorities/">
+     xmlns:tmkosorg="https://w3id.org/transmodel/kos/organisations/">
     <owl:Ontology rdf:about="https://w3id.org/transmodel/fares#">
         <owl:versionIRI rdf:resource="https://w3id.org/transmodel/fares/0.2"/>
         <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
@@ -31,7 +31,7 @@
         <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
         <dc:title xml:lang="en">Transmodel Ontology - Fares</dc:title>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/facilities#"/>
-        <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
+        <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on fares. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
         <rdfs:label xml:lang="en">Transmodel Ontology - Fares</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://github.com/oeg-upm/transmodel-ontology</rdfs:seeAlso>
         <owl:versionInfo xml:lang="en">This is the initial version of the module on Fares, after considering the UML models and XSD descriptions of Transmodel and NeTEx</owl:versionInfo>
@@ -161,7 +161,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/fares#describedThrough">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/contactPoint"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/fares#DistributionChannel"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#ContactDetails"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/organisations#ContactDetails"/>
         <rdfs:comment xml:lang="en">This property relates a Distribution Channel with its corresponding Contact Details. It is a subproperty of schema:contactPoint, which relates anything to a ContactPoint</rdfs:comment>
         <rdfs:label xml:lang="en">described through</rdfs:label>
     </owl:ObjectProperty>
@@ -193,7 +193,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/fares#governedBy">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/fares#DistributionChannel"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#Organisation"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/organisations#Organisation"/>
         <rdfs:comment xml:lang="en">This property relates a Distribution Channel to the Organisation that takes responsability over it</rdfs:comment>
         <rdfs:label xml:lang="en">governed by</rdfs:label>
     </owl:ObjectProperty>
@@ -223,15 +223,15 @@
     
 
 
-    <!-- https://w3id.org/transmodel/authorities#ContactDetails -->
+    <!-- https://w3id.org/transmodel/organisations#ContactDetails -->
 
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ContactDetails"/>
+    <owl:Class rdf:about="https://w3id.org/transmodel/organisations#ContactDetails"/>
     
 
 
-    <!-- https://w3id.org/transmodel/authorities#Organisation -->
+    <!-- https://w3id.org/transmodel/organisations#Organisation -->
 
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Organisation"/>
+    <owl:Class rdf:about="https://w3id.org/transmodel/organisations#Organisation"/>
     
 
 
@@ -259,7 +259,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#describedThrough"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/authorities#ContactDetails"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/organisations#ContactDetails"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -281,7 +281,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#governedBy"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/authorities#Organisation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/organisations#Organisation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A type of outlet for selling a Fare Product</rdfs:comment>
