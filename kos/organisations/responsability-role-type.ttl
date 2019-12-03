@@ -1,0 +1,97 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://w3id.org/transmodel/kos/organisations/responsability-role-type> a skos:ConceptScheme ;
+    skos:notation "responsability-role-type" ;
+    dcterms:creator "Adolfo Antón Bravo (OEG - Universidad Politécnica de Madrid)"@es ;
+    determs:date "2019-12-03"@es ;
+    dcterms:description "Enumeration of Types of Responsability Type"@en ;
+    dcterms:title "Types of Responsability"@en ;
+    skos:definition "Enumeration of Types of Responsability"@en ;
+    dc:title "Allowed values for types of responsability"@en ;
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/organisations/responsability-role-type/control-centre> ,
+        <https://w3id.org/transmodel/kos/organisations/responsability-role-type/data-aggregation> ,
+        <https://w3id.org/transmodel/kos/organisations/responsability-role-type/data-augmentation> ,
+        <https://w3id.org/transmodel/kos/organisations/responsability-role-type/data-distribution> ,
+        <https://w3id.org/transmodel/kos/organisations/responsability-role-type/data-ipr-ownership> ,
+        <https://w3id.org/transmodel/kos/organisations/responsability-role-type/data-origination> ,
+        <https://w3id.org/transmodel/kos/organisations/responsability-role-type/entity-legal-ownership> ,
+        <https://w3id.org/transmodel/kos/organisations/responsability-role-type/monitor-centre> ,
+        <https://w3id.org/transmodel/kos/organisations/responsability-role-type/operation> ,
+        <https://w3id.org/transmodel/kos/organisations/responsability-role-type/other> ,
+        <https://w3id.org/transmodel/kos/organisations/responsability-role-type/planning> ,
+        <https://w3id.org/transmodel/kos/organisations/responsability-role-type/road-display-manager> ,
+        <https://w3id.org/transmodel/kos/organisations/responsability-role-type/road-manager> ,
+        <https://w3id.org/transmodel/kos/organisations/responsability-role-type/stop-point-manager> ,
+        <https://w3id.org/transmodel/kos/organisations/responsability-role-type/sub-contractor> ,
+        <https://w3id.org/transmodel/kos/organisations/responsability-role-type/travel-information-service-provider> .
+
+
+<https://w3id.org/transmodel/kos/organisations/responsability-type/control-centre> a skos:Concept ;
+    skos:notation "control-centre" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/responsability-type> .
+
+<https://w3id.org/transmodel/kos/organisations/responsability-type/data-aggregation> a skos:Concept ;
+    skos:notation "data-aggregation" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/responsability-type> .
+
+<https://w3id.org/transmodel/kos/organisations/responsability-type/data-augmentation> a skos:Concept ;
+    skos:notation "data-augmentation" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/responsability-type> .
+
+<https://w3id.org/transmodel/kos/organisations/responsability-type/data-distribution> a skos:Concept ;
+    skos:notation "data-distribution" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/responsability-type> .
+
+<https://w3id.org/transmodel/kos/organisations/responsability-type/data-ipr-ownership> a skos:Concept ;
+    skos:notation "data-ipr-ownership" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/responsability-type> .
+
+<https://w3id.org/transmodel/kos/organisations/responsability-type/data-origination> a skos:Concept ;
+    skos:notation "data-origination" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/responsability-type> .
+
+<https://w3id.org/transmodel/kos/organisations/responsability-type/entity-legal-ownership> a skos:Concept ;
+    skos:notation "entity-legal-ownership" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/responsability-type> .
+
+<https://w3id.org/transmodel/kos/organisations/responsability-type/monitor-centre> a skos:Concept ;
+    skos:notation "monitor-centre" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/responsability-type> .
+
+<https://w3id.org/transmodel/kos/organisations/responsability-type/operation> a skos:Concept ;
+    skos:notation "operation" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/responsability-type> .
+
+<https://w3id.org/transmodel/kos/organisations/responsability-type/other> a skos:Concept ;
+    skos:notation "other" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/responsability-type> .
+
+<https://w3id.org/transmodel/kos/organisations/responsability-type/planning> a skos:Concept ;
+    skos:notation "planning" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/responsability-type> .
+
+<https://w3id.org/transmodel/kos/organisations/responsability-type/road-display-manager> a skos:Concept ;
+    skos:notation "road-display-manager" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/responsability-type> .
+
+<https://w3id.org/transmodel/kos/organisations/responsability-type/road-manager> a skos:Concept ;
+    skos:notation "road-manager" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/responsability-type> .
+
+<https://w3id.org/transmodel/kos/organisations/responsability-type/stop-point-manager> a skos:Concept ;
+    skos:notation "stop-point-manager" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/responsability-type> .
+
+<https://w3id.org/transmodel/kos/organisations/responsability-type/sub-contractor> a skos:Concept ;
+    skos:notation "sub-contractor" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/responsability-type> .
+
+<https://w3id.org/transmodel/kos/organisations/responsability-type/travel-information-service-provider> a skos:Concept ;
+    skos:notation "travel-information-service-provider" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/responsability-type> .
+

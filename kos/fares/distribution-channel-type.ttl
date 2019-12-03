@@ -1,0 +1,65 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-channel-type> a skos:ConceptScheme ;
+    skos:notation "distribution-channel-type" ;
+    dcterms:creator "Adolfo Antón Bravo (OEG - Universidad Politécnica de Madrid)"@es ;
+    determs:date "2019-12-03"@es ;
+    dcterms:description "Allowed values for Distribution Channel Type."@en ;
+    dcterms:title "Distribution Channel Type"@en ;
+    skos:definition "Distribution Channel Type"@en ;
+    dc:title "Distribution Channel Type"@en ;
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/fares/distribution-channel-type/at-stop> ,
+        <https://w3id.org/transmodel/kos/fares/distribution-channel-type/on-board> ,
+        <https://w3id.org/transmodel/kos/fares/distribution-channel-type/online> ,
+        <https://w3id.org/transmodel/kos/fares/distribution-channel-type/telephone> ,
+        <https://w3id.org/transmodel/kos/fares/distribution-channel-type/electronic-pass> ,
+        <https://w3id.org/transmodel/kos/fares/distribution-channel-type/postal> ,
+        <https://w3id.org/transmodel/kos/fares/distribution-channel-type/mobile-device> ,
+        <https://w3id.org/transmodel/kos/fares/distribution-channel-type/agency> ,
+        <https://w3id.org/transmodel/kos/fares/distribution-channel-type/tour-operator> ,
+        <https://w3id.org/transmodel/kos/fares/distribution-channel-type/other> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-channel-type/at-stop> a skos:Concept ;
+    skos:notation "at-stop" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/distribution-channel-type> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-channel-type/on-board> a skos:Concept ;
+    skos:notation "on-board" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/distribution-channel-type> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-channel-type/online> a skos:Concept ;
+    skos:notation "online" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/distribution-channel-type> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-channel-type/telephone> a skos:Concept ;
+    skos:notation "telephone" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/distribution-channel-type> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-channel-type/electronic-pass> a skos:Concept ;
+    skos:notation "electronic-pass" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/distribution-channel-type> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-channel-type/postal> a skos:Concept ;
+    skos:notation "postal" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/distribution-channel-type> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-channel-type/mobile-device> a skos:Concept ;
+    skos:notation "mobile-device" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/distribution-channel-type> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-channel-type/agency> a skos:Concept ;
+    skos:notation "agency" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/distribution-channel-type> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-channel-type/tour-operator> a skos:Concept ;
+    skos:notation "tour-operator" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/distribution-channel-type> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-channel-type/other> a skos:Concept ;
+    skos:notation "other" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/distribution-channel-type> .

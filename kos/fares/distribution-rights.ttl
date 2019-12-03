@@ -1,0 +1,50 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-rights> a skos:ConceptScheme ;
+    skos:notation "distribution-rights" ;
+    dcterms:creator "Adolfo Antón Bravo (OEG - Universidad Politécnica de Madrid)"@es ;
+    determs:date "2019-12-03"@es ;
+    dcterms:description "Allowed values for Distribution Rights."@en ;
+    dcterms:title "Distribution Rights"@en ;
+    skos:definition "Distribution Rights"@en ;
+    dc:title "Distribution Rights"@en ;
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/fares/distribution-rights/none> ,
+        <https://w3id.org/transmodel/kos/fares/distribution-rights/sell> ,
+        <https://w3id.org/transmodel/kos/fares/distribution-rights/exchange> ,
+        <https://w3id.org/transmodel/kos/fares/distribution-rights/refund> ,
+        <https://w3id.org/transmodel/kos/fares/distribution-rights/inform> ,
+        <https://w3id.org/transmodel/kos/fares/distribution-rights/private> ,
+        <https://w3id.org/transmodel/kos/fares/distribution-rights/other> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-rights/none> a skos:Concept ;
+    skos:notation "none" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/distribution-rights> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-rights/sell> a skos:Concept ;
+    skos:notation "sell" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/distribution-rights> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-rights/exchange> a skos:Concept ;
+    skos:notation "exchange" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/distribution-rights> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-rights/refund> a skos:Concept ;
+    skos:notation "refund" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/distribution-rights> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-rights/inform> a skos:Concept ;
+    skos:notation "inform" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/distribution-rights> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-rights/private> a skos:Concept ;
+    skos:notation "private" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/distribution-rights> .
+
+<https://w3id.org/transmodel/kos/fares/distribution-rights/other> a skos:Concept ;
+    skos:notation "other" ;
+    skos:broader <https://w3id.org/transmodel/kos/fares/distribution-rights> .

@@ -178,7 +178,8 @@
                     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/transmodel/kos/fares/DistributionChannelType"/>
+                        <owl:hasValue
+			    rdf:resource="https://w3id.org/transmodel/kos/fares/distribution-channel-type"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -315,20 +316,45 @@
     
 
 
-    <!-- https://w3id.org/transmodel/kos/fares/DistributionChannelType -->
+    <!-- https://w3id.org/transmodel/kos/fares/booking-access-type -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/DistributionChannelType">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/booking-access-type">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+      <rdfs:comment xml:lang="en">Concept scheme where all the types of booking access</rdfs:comment>
+    </owl:NamedIndividual>
+    
+    <!-- https://w3id.org/transmodel/kos/fares/booking-method-type -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/booking-method-type">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+      <rdfs:comment xml:lang="en">Concept scheme where all the types of booking methods</rdfs:comment>
+    </owl:NamedIndividual>
+    
+    <!-- https://w3id.org/transmodel/kos/fares/distribution-channel-type -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/distribution-channel-type">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+      <rdfs:comment xml:lang="en">Concept scheme where all the types of distribution
+      channels</rdfs:comment>
+    </owl:NamedIndividual>
+    
+    <!-- https://w3id.org/transmodel/kos/fares/distribution-rights -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/distribution-rights">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+      <rdfs:comment xml:lang="en">Concept scheme where all the types of distribution rights</rdfs:comment>
+    </owl:NamedIndividual>
+    
+    <!-- https://w3id.org/transmodel/kos/fares/fulfilment-method-type -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/fulfilment-method-type">
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+      <rdfs:comment xml:lang="en">Concept scheme where all the types of fulfilment methods</rdfs:comment>
     </owl:NamedIndividual>
     
 
-
-    <!-- https://w3id.org/transmodel/kos/fares/FareType -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/FareType">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-        <rdfs:comment xml:lang="en">Concept scheme where all the codelists for the types of fares that are included in the Transmodel ontology</rdfs:comment>
-    </owl:NamedIndividual>
+    
+    
     <rdf:Description>
         <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
         <name xml:lang="en">Adolfo Anton-Bravo</name>

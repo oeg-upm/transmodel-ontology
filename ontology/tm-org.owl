@@ -366,7 +366,7 @@
                             <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-                                <owl:hasValue rdf:resource="https://w3id.org/transmodel/kos/organisations/OrganisationType"/>
+                                <owl:hasValue rdf:resource="https://w3id.org/transmodel/kos/organisations/organisation-type"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -473,25 +473,26 @@
     
 
 
-    <!-- https://w3id.org/transmodel/kos/organisations/DistributionChannelType -->
+    <!-- https://w3id.org/transmodel/kos/fares/distribution-channel-type -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/organisations/DistributionChannelType"/>
-    
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/distribution-channel-type"/>
 
 
-    <!-- https://w3id.org/transmodel/kos/organisations/OrganisationType -->
+    <!-- https://w3id.org/transmodel/kos/organisations/organisation-type -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/organisations/OrganisationType">
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/organisations/organisation-type">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:comment xml:lang="en">Concept scheme where all the codelists for the types of organisations that are included in the Transmodel ontology</rdfs:comment>
     </owl:NamedIndividual>
-    
 
-      
+        <!-- https://w3id.org/transmodel/kos/organisations/responsability-role-type -->
 
-    <!-- https://w3id.org/transmodel/kos/fares/DistributionChannelType -->
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/organisations/responsability-role-type">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:comment xml:lang="en">Concept scheme where all the codelists for the types
+	of responsability role for organisations that are included in the Transmodel ontology</rdfs:comment>
+    </owl:NamedIndividual>
 
-    <owlNamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/DistributionChannelType"/>
 
       <rdf:Description>
         <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>

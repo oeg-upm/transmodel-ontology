@@ -1,0 +1,62 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://w3id.org/transmodel/kos/organisations/organisation-type> a skos:ConceptScheme ;
+    skos:notation "organisation-type" ;
+    dcterms:creator "Adolfo Antón Bravo (OEG - Universidad Politécnica de Madrid)"@es ;
+    determs:date "2019-12-03"@es ;
+    dcterms:description "Enumeration of Types of Organisations"@en ;
+    dcterms:title "Types of Organisations"@en ;
+    skos:definition "Enumeration of Types of Organisations"@en ;
+    dc:title "Allowed values for day type"@en ;
+    skos:hasTopConcept <https://w3id.org/transmodel/kos/organisations/organisation-type/authority> ,
+        <https://w3id.org/transmodel/kos/organisations/organisation-type/facility-operator> ,
+        <https://w3id.org/transmodel/kos/organisations/organisation-type/statutory-body> ,
+        <https://w3id.org/transmodel/kos/organisations/organisation-type/travel-agency> ,
+        <https://w3id.org/transmodel/kos/organisations/organisation-type/other> ,
+        <https://w3id.org/transmodel/kos/organisations/organisation-type/rail-operator> ,
+        <https://w3id.org/transmodel/kos/organisations/organisation-type/retail-consortium> ,
+        <https://w3id.org/transmodel/kos/organisations/organisation-type/rail-freight-operator> ,
+        <https://w3id.org/transmodel/kos/organisations/organisation-type/serviced-organisation> .
+
+
+<https://w3id.org/transmodel/kos/organisations/organisation-type/authority> a skos:Concept ;
+    skos:notation "authority" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/organisation-type> .
+
+<https://w3id.org/transmodel/kos/organisations/organisation-type/facility-operator> a skos:Concept ;
+    skos:notation "facility-operator" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/organisation-type> .
+
+<https://w3id.org/transmodel/kos/organisations/organisation-type/statutory-body> a skos:Concept ;
+    skos:notation "statutory-body" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/organisation-type> .
+
+<https://w3id.org/transmodel/kos/organisations/organisation-type/travel-agency> a skos:Concept ;
+    skos:notation "travel-agency" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/organisation-type> .
+
+<https://w3id.org/transmodel/kos/organisations/organisation-type/other> a skos:Concept ;
+    skos:notation "other" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/organisation-type> .
+
+<https://w3id.org/transmodel/kos/organisations/organisation-type/rail-operator> a skos:Concept ;
+    skos:notation "rail-operator" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/organisation-type> .
+
+<https://w3id.org/transmodel/kos/organisations/organisation-type/retail-consortium> a skos:Concept ;
+    skos:notation "retail-consortium" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/organisation-type> .
+
+<https://w3id.org/transmodel/kos/organisations/organisation-type/rail-freight-opreator> a skos:Concept ;
+    skos:notation "rail-freight-operator" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/organisation-type> .
+
+<https://w3id.org/transmodel/kos/organisations/organisation-type/serviced-organisation> a skos:Concept ;
+    skos:notation "serviced-organisation" ;
+    skos:inScheme <https://w3id.org/transmodel/kos/organisations/organisation-type> .
+
