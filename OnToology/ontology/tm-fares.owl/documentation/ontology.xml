@@ -20,8 +20,8 @@
         <dc:identifier>https://w3id.org/transmodel/fares</dc:identifier>
         <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
         <dc:title xml:lang="en">Transmodel Ontology - Fares</dc:title>
-        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/facilities#"/>
-        <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/fares#"/>
+        <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on fares. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
         <rdfs:label xml:lang="en">Transmodel Ontology - Fares</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://github.com/oeg-upm/transmodel-ontology</rdfs:seeAlso>
         <owl:versionInfo xml:lang="en">This is the initial version of the module on Fares, after considering the UML models and XSD descriptions of Transmodel and NeTEx</owl:versionInfo>
@@ -169,7 +169,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/fares#describedThrough">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/contactPoint"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/fares#DistributionChannel"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#ContactDetails"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/organisations#ContactDetails"/>
         <rdfs:comment xml:lang="en">This property relates a Distribution Channel with its corresponding Contact Details. It is a subproperty of schema:contactPoint, which relates anything to a ContactPoint</rdfs:comment>
         <rdfs:label xml:lang="en">described through</rdfs:label>
     </owl:ObjectProperty>
@@ -187,7 +187,7 @@
                     <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-                        <owl:hasValue rdf:resource="https://w3id.org/transmodel/kos/fares/DistributionChannelType"/>
+                        <owl:hasValue rdf:resource="https://w3id.org/transmodel/kos/fares/distribution-channel-type"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -203,7 +203,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/fares#governedBy">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/fares#DistributionChannel"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/authorities#Organisation"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/organisations#Organisation"/>
         <rdfs:comment xml:lang="en">This property relates a Distribution Channel to the Organisation that takes responsability over it</rdfs:comment>
         <rdfs:label xml:lang="en">governed by</rdfs:label>
     </owl:ObjectProperty>
@@ -236,20 +236,6 @@
     
 
 
-    <!-- https://w3id.org/transmodel/authorities#ContactDetails -->
-
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#ContactDetails"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/authorities#Organisation -->
-
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/authorities#Organisation"/>
-    
-
-
     <!-- https://w3id.org/transmodel/fares#BookingArrangements -->
 
 
@@ -277,7 +263,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#describedThrough"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/authorities#ContactDetails"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/organisations#ContactDetails"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -299,7 +285,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#governedBy"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/authorities#Organisation"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/organisations#Organisation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A type of outlet for selling a Fare Product</rdfs:comment>
@@ -324,6 +310,20 @@
     
 
 
+    <!-- https://w3id.org/transmodel/organisations#ContactDetails -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/organisations#ContactDetails"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/organisations#Organisation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/organisations#Organisation"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -339,18 +339,57 @@
     <!-- https://w3id.org/transmodel/kos/fares/DistributionChannelType -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/DistributionChannelType">
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/DistributionChannelType"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/fares/booking-access-type -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/booking-access-type">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:comment xml:lang="en">Concept scheme where all the types of booking access</rdfs:comment>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/transmodel/kos/fares/FareType -->
+    <!-- https://w3id.org/transmodel/kos/fares/booking-method-type -->
 
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/FareType">
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/booking-method-type">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-        <rdfs:comment xml:lang="en">Concept scheme where all the codelists for the types of fares that are included in the Transmodel ontology</rdfs:comment>
+        <rdfs:comment xml:lang="en">Concept scheme where all the types of booking methods</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/fares/distribution-channel-type -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/distribution-channel-type">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:comment xml:lang="en">Concept scheme where all the types of distribution
+      channels</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/fares/distribution-rights -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/distribution-rights">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:comment xml:lang="en">Concept scheme where all the types of distribution rights</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/fares/fulfilment-method-type -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/fulfilment-method-type">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:comment xml:lang="en">Concept scheme where all the types of fulfilment methods</rdfs:comment>
     </owl:NamedIndividual>
     <rdf:Description rdf:nodeID="genid12">
         <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>

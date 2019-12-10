@@ -12,7 +12,7 @@
   "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#Organisation"
+    "@id" : "https://w3id.org/transmodel/organisations#Organisation"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/transmodel/fares#governedBy"
@@ -31,7 +31,7 @@
   "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://w3id.org/transmodel/kos/fares/DistributionChannelType"
+    "@id" : "https://w3id.org/transmodel/kos/fares/distribution-channel-type"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -40,7 +40,7 @@
   "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#ContactDetails"
+    "@id" : "https://w3id.org/transmodel/organisations#ContactDetails"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/transmodel/fares#describedThrough"
@@ -110,12 +110,6 @@
   "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#ContactDetails",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/transmodel/authorities#Organisation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "https://w3id.org/transmodel/fares#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://creativecommons.org/ns#license" : [ {
@@ -144,11 +138,11 @@
     "@value" : "Transmodel Ontology - Fares"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#"
+    "@id" : "https://w3id.org/transmodel/fares#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Module of the Transmodel Ontology focused on authorities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
+    "@value" : "Module of the Transmodel Ontology focused on fares. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -226,7 +220,7 @@
     "@value" : "described through"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#ContactDetails"
+    "@id" : "https://w3id.org/transmodel/organisations#ContactDetails"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://schema.org/contactPoint"
@@ -272,7 +266,7 @@
     "@value" : "governed by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#Organisation"
+    "@id" : "https://w3id.org/transmodel/organisations#Organisation"
   } ]
 }, {
   "@id" : "https://w3id.org/transmodel/fares#mbox",
@@ -294,12 +288,46 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/transmodel/kos/fares/DistributionChannelType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
-  "@id" : "https://w3id.org/transmodel/kos/fares/FareType",
+  "@id" : "https://w3id.org/transmodel/kos/fares/booking-access-type",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Concept scheme where all the codelists for the types of fares that are included in the Transmodel ontology"
+    "@value" : "Concept scheme where all the types of booking access"
   } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/booking-method-type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Concept scheme where all the types of booking methods"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/distribution-channel-type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Concept scheme where all the types of distribution\n      channels"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/distribution-rights",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Concept scheme where all the types of distribution rights"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/fulfilment-method-type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Concept scheme where all the types of fulfilment methods"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/organisations#ContactDetails",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/organisations#Organisation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 } ]

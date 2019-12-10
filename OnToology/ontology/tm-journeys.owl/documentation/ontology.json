@@ -939,77 +939,6 @@
   "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "https://w3id.org/transmodel/authorities#Operator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A company providing Public Transport Services. In GTFS, this is represented as a TransitAgency"
-  }, {
-    "@language" : "en",
-    "@value" : "The class comes from tm-authorities.owl"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Operator"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/authorities#passengerJourney",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A Passenger makes (journey) a Trip"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "passengerJourney"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Trip"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A Service Journey is served by Vehicle Journeys"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#ServiceJourney"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "service Journey Served By Vehicle Journey"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"
-  } ]
-}, {
-  "@id" : "https://w3id.org/transmodel/authorities#trip",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A Trip is made of ServiceJourneys"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#Trip"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "trip"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#ServiceJourney"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"
-  } ]
-}, {
   "@id" : "https://w3id.org/transmodel/commons#Presentation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -1112,7 +1041,7 @@
     "@value" : "Module of the Transmodel Ontology focused on journeys. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
   } ],
   "http://purl.org/dc/elements/1.1/identifier" : [ {
-    "@value" : "https://w3id.org/transmodel/journies"
+    "@value" : "https://w3id.org/transmodel/journeys"
   } ],
   "http://purl.org/dc/elements/1.1/rights" : [ {
     "@value" : "Creative Commons Attribution 4.0 International (CC BY 4.0)"
@@ -1122,7 +1051,7 @@
     "@value" : "Transmodel Ontology - Journeys"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@id" : "https://w3id.org/transmodel/facilities#"
+    "@id" : "https://w3id.org/transmodel/journeys#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -2049,7 +1978,7 @@
     "@value" : "Organisation Day Type"
   }, {
     "@language" : "en",
-    "@value" : "TODO: Add constraint: :forServicedOrganisation only tmauth:ServicedOrganisation"
+    "@value" : "TODO: Add constraint: :forServicedOrganisation only tmorg:ServicedOrganisation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/transmodel/journeys#DayType"
@@ -3549,7 +3478,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "TODO: Add range tmauth:ServicedOrganisation"
+    "@value" : "TODO: Add range tmorg:ServicedOrganisation"
   }, {
     "@language" : "en",
     "@value" : "This property connects an Organisation Day Type to a Service Organisation, indicating that such Day Type is for providing service to the corresponding Organisation"
@@ -4261,7 +4190,7 @@
     "@value" : "run By"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/transmodel/authorities#Operator"
+    "@id" : "https://w3id.org/transmodel/organisations#Operator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
@@ -4898,5 +4827,76 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "stop-use-type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/organisations#Operator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A company providing Public Transport Services. In GTFS, this is represented as a TransitAgency"
+  }, {
+    "@language" : "en",
+    "@value" : "The class comes from tm-organisations.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Operator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/organisations#passengerJourney",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Passenger makes (journey) a Trip"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "passengerJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Trip"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/organisations#serviceJourneyServedByVehicleJourney",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Service Journey is served by Vehicle Journeys"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#ServiceJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "service Journey Served By Vehicle Journey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/organisations#trip",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Trip is made of ServiceJourneys"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#Trip"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "trip"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#ServiceJourney"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"
   } ]
 } ]

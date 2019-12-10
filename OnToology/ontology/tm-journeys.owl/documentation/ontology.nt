@@ -5,10 +5,10 @@
 <https://w3id.org/transmodel/journeys#> <http://purl.org/dc/elements/1.1/creator> "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
 <https://w3id.org/transmodel/journeys#> <http://purl.org/dc/elements/1.1/date> "2019-11-22" .
 <https://w3id.org/transmodel/journeys#> <http://purl.org/dc/elements/1.1/description> "Module of the Transmodel Ontology focused on journeys. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en .
-<https://w3id.org/transmodel/journeys#> <http://purl.org/dc/elements/1.1/identifier> "https://w3id.org/transmodel/journies" .
+<https://w3id.org/transmodel/journeys#> <http://purl.org/dc/elements/1.1/identifier> "https://w3id.org/transmodel/journeys" .
 <https://w3id.org/transmodel/journeys#> <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)" .
 <https://w3id.org/transmodel/journeys#> <http://purl.org/dc/elements/1.1/title> "Transmodel Ontology - Journeys"@en .
-<https://w3id.org/transmodel/journeys#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/transmodel/facilities#> .
+<https://w3id.org/transmodel/journeys#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/transmodel/journeys#> .
 <https://w3id.org/transmodel/journeys#> <http://www.w3.org/2000/01/rdf-schema#comment> "Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en .
 <https://w3id.org/transmodel/journeys#> <http://www.w3.org/2000/01/rdf-schema#label> "Transmodel Ontology - Journeys"@en .
 <https://w3id.org/transmodel/journeys#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://github.com/oeg-upm/transmodel-ontology"@en .
@@ -93,29 +93,6 @@
 # 
 # http://www.w3.org/2004/02/skos/core#inScheme
 <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-# 
-# https://w3id.org/transmodel/authorities#passengerJourney
-<https://w3id.org/transmodel/authorities#passengerJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/authorities#passengerJourney> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
-<https://w3id.org/transmodel/authorities#passengerJourney> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Trip> .
-<https://w3id.org/transmodel/authorities#passengerJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "A Passenger makes (journey) a Trip"@en .
-<https://w3id.org/transmodel/authorities#passengerJourney> <http://www.w3.org/2000/01/rdf-schema#label> "passengerJourney"@en .
-# 
-# https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney
-<https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
-<https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#ServiceJourney> .
-<https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#VehicleJourney> .
-<https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "A Service Journey is served by Vehicle Journeys"@en .
-<https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#label> "service Journey Served By Vehicle Journey"@en .
-# 
-# https://w3id.org/transmodel/authorities#trip
-<https://w3id.org/transmodel/authorities#trip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/transmodel/authorities#trip> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
-<https://w3id.org/transmodel/authorities#trip> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Trip> .
-<https://w3id.org/transmodel/authorities#trip> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ServiceJourney> .
-<https://w3id.org/transmodel/authorities#trip> <http://www.w3.org/2000/01/rdf-schema#comment> "A Trip is made of ServiceJourneys"@en .
-<https://w3id.org/transmodel/authorities#trip> <http://www.w3.org/2000/01/rdf-schema#label> "trip"@en .
 # 
 # https://w3id.org/transmodel/commons#at
 <https://w3id.org/transmodel/commons#at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -395,7 +372,7 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/transmodel/journeys#forServicedOrganisation
 <https://w3id.org/transmodel/journeys#forServicedOrganisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/transmodel/journeys#forServicedOrganisation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#OrganisationDayType> .
-<https://w3id.org/transmodel/journeys#forServicedOrganisation> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: Add range tmauth:ServicedOrganisation"@en .
+<https://w3id.org/transmodel/journeys#forServicedOrganisation> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: Add range tmorg:ServicedOrganisation"@en .
 <https://w3id.org/transmodel/journeys#forServicedOrganisation> <http://www.w3.org/2000/01/rdf-schema#comment> "This property connects an Organisation Day Type to a Service Organisation, indicating that such Day Type is for providing service to the corresponding Organisation"@en .
 <https://w3id.org/transmodel/journeys#forServicedOrganisation> <http://www.w3.org/2000/01/rdf-schema#label> "for serviced organisation"@en .
 # 
@@ -578,7 +555,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Line> .
-<https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/authorities#Operator> .
+<https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/organisations#Operator> .
 <https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A Line is run by an Operator"@en .
 <https://w3id.org/transmodel/journeys#runBy> <http://www.w3.org/2000/01/rdf-schema#label> "run By"@en .
 # 
@@ -782,6 +759,29 @@ _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/transmodel/journeys#workedOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#DayType> .
 <https://w3id.org/transmodel/journeys#workedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "This property sets the relationship between Vehicle Journey and Day Type."@en .
 <https://w3id.org/transmodel/journeys#workedOn> <http://www.w3.org/2000/01/rdf-schema#label> "worked On"@en .
+# 
+# https://w3id.org/transmodel/organisations#passengerJourney
+<https://w3id.org/transmodel/organisations#passengerJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/organisations#passengerJourney> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
+<https://w3id.org/transmodel/organisations#passengerJourney> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Trip> .
+<https://w3id.org/transmodel/organisations#passengerJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "A Passenger makes (journey) a Trip"@en .
+<https://w3id.org/transmodel/organisations#passengerJourney> <http://www.w3.org/2000/01/rdf-schema#label> "passengerJourney"@en .
+# 
+# https://w3id.org/transmodel/organisations#serviceJourneyServedByVehicleJourney
+<https://w3id.org/transmodel/organisations#serviceJourneyServedByVehicleJourney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/organisations#serviceJourneyServedByVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
+<https://w3id.org/transmodel/organisations#serviceJourneyServedByVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#ServiceJourney> .
+<https://w3id.org/transmodel/organisations#serviceJourneyServedByVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#VehicleJourney> .
+<https://w3id.org/transmodel/organisations#serviceJourneyServedByVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#comment> "A Service Journey is served by Vehicle Journeys"@en .
+<https://w3id.org/transmodel/organisations#serviceJourneyServedByVehicleJourney> <http://www.w3.org/2000/01/rdf-schema#label> "service Journey Served By Vehicle Journey"@en .
+# 
+# https://w3id.org/transmodel/organisations#trip
+<https://w3id.org/transmodel/organisations#trip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/organisations#trip> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
+<https://w3id.org/transmodel/organisations#trip> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Trip> .
+<https://w3id.org/transmodel/organisations#trip> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ServiceJourney> .
+<https://w3id.org/transmodel/organisations#trip> <http://www.w3.org/2000/01/rdf-schema#comment> "A Trip is made of ServiceJourneys"@en .
+<https://w3id.org/transmodel/organisations#trip> <http://www.w3.org/2000/01/rdf-schema#label> "trip"@en .
 # 
 # 
 # 
@@ -1080,12 +1080,6 @@ _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://www.w3.org/2004/02/skos/core#ConceptScheme
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# https://w3id.org/transmodel/authorities#Operator
-<https://w3id.org/transmodel/authorities#Operator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/authorities#Operator> <http://www.w3.org/2000/01/rdf-schema#comment> "A company providing Public Transport Services. In GTFS, this is represented as a TransitAgency"@en .
-<https://w3id.org/transmodel/authorities#Operator> <http://www.w3.org/2000/01/rdf-schema#comment> "The class comes from tm-authorities.owl"@en .
-<https://w3id.org/transmodel/authorities#Operator> <http://www.w3.org/2000/01/rdf-schema#label> "Operator"@es .
 # 
 # https://w3id.org/transmodel/commons#Presentation
 <https://w3id.org/transmodel/commons#Presentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1528,7 +1522,7 @@ _:genid57 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmode
 _:genid57 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/transmodel/journeys#OrganisationDayType> <http://www.w3.org/2000/01/rdf-schema#comment> "Day Type that is defined in terms of operation or not operation of a referenced Serviced Organisation."@en .
 <https://w3id.org/transmodel/journeys#OrganisationDayType> <http://www.w3.org/2000/01/rdf-schema#label> "Organisation Day Type"@en .
-<https://w3id.org/transmodel/journeys#OrganisationDayType> <http://www.w3.org/2000/01/rdf-schema#label> "TODO: Add constraint: :forServicedOrganisation only tmauth:ServicedOrganisation"@en .
+<https://w3id.org/transmodel/journeys#OrganisationDayType> <http://www.w3.org/2000/01/rdf-schema#label> "TODO: Add constraint: :forServicedOrganisation only tmorg:ServicedOrganisation"@en .
 # 
 # https://w3id.org/transmodel/journeys#ParkingPoint
 <https://w3id.org/transmodel/journeys#ParkingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -2017,6 +2011,12 @@ _:genid115 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/trans
 <https://w3id.org/transmodel/journeys#WireJunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#InfrastructurePoint> .
 <https://w3id.org/transmodel/journeys#WireJunction> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: Complete with all relevant properties"@en .
 <https://w3id.org/transmodel/journeys#WireJunction> <http://www.w3.org/2000/01/rdf-schema#label> "Wire Junction"@en .
+# 
+# https://w3id.org/transmodel/organisations#Operator
+<https://w3id.org/transmodel/organisations#Operator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/organisations#Operator> <http://www.w3.org/2000/01/rdf-schema#comment> "A company providing Public Transport Services. In GTFS, this is represented as a TransitAgency"@en .
+<https://w3id.org/transmodel/organisations#Operator> <http://www.w3.org/2000/01/rdf-schema#comment> "The class comes from tm-organisations.owl"@en .
+<https://w3id.org/transmodel/organisations#Operator> <http://www.w3.org/2000/01/rdf-schema#label> "Operator"@es .
 # 
 # 
 # 
