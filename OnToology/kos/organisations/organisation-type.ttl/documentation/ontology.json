@@ -1,0 +1,163 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#notation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@language" : "es",
+    "@value" : "Adolfo Antón Bravo (OEG - Universidad Politécnica de Madrid)"
+  } ],
+  "http://purl.org/dc/terms/date" : [ {
+    "@language" : "es",
+    "@value" : "2019-12-03"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Enumeration of Types of Organisations"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Allowed values for day type"
+  }, {
+    "@language" : "en",
+    "@value" : "Types of Organisations"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Enumeration of Types of Organisations"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/authority"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/facility-operator"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/other"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/rail-freight-operator"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/rail-operator"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/retail-consortium"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/serviced-organisation"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/statutory-body"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/travel-agency"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "organisation-type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/authority",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "authority"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/facility-operator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "facility-operator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/other",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "other"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/rail-freight-opreator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "rail-freight-operator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/rail-operator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "rail-operator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/retail-consortium",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "retail-consortium"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/serviced-organisation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "serviced-organisation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/statutory-body",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "statutory-body"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type/travel-agency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/organisations/organisation-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "travel-agency"
+  } ]
+} ]

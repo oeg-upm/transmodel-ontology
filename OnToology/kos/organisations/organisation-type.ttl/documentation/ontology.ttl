@@ -1,0 +1,147 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/transmodel/kos/organisations/organisation-type
+<https://w3id.org/transmodel/kos/organisations/organisation-type> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                  <http://purl.org/dc/terms/creator> "Adolfo Antón Bravo (OEG - Universidad Politécnica de Madrid)"@es ;
+                                                                  <http://purl.org/dc/terms/date> "2019-12-03"@es ;
+                                                                  <http://purl.org/dc/terms/description> "Enumeration of Types of Organisations"@en ;
+                                                                  <http://purl.org/dc/terms/title> "Allowed values for day type"@en ,
+                                                                                                   "Types of Organisations"@en ;
+                                                                  <http://www.w3.org/2004/02/skos/core#definition> "Enumeration of Types of Organisations"@en ;
+                                                                  <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/organisations/organisation-type/authority> ,
+                                                                                                                      <https://w3id.org/transmodel/kos/organisations/organisation-type/facility-operator> ,
+                                                                                                                      <https://w3id.org/transmodel/kos/organisations/organisation-type/other> ,
+                                                                                                                      <https://w3id.org/transmodel/kos/organisations/organisation-type/rail-freight-operator> ,
+                                                                                                                      <https://w3id.org/transmodel/kos/organisations/organisation-type/rail-operator> ,
+                                                                                                                      <https://w3id.org/transmodel/kos/organisations/organisation-type/retail-consortium> ,
+                                                                                                                      <https://w3id.org/transmodel/kos/organisations/organisation-type/serviced-organisation> ,
+                                                                                                                      <https://w3id.org/transmodel/kos/organisations/organisation-type/statutory-body> ,
+                                                                                                                      <https://w3id.org/transmodel/kos/organisations/organisation-type/travel-agency> ;
+                                                                  <http://www.w3.org/2004/02/skos/core#notation> "organisation-type" .
+
+
+###  https://w3id.org/transmodel/kos/organisations/organisation-type/authority
+<https://w3id.org/transmodel/kos/organisations/organisation-type/authority> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/organisations/organisation-type> ;
+                                                                            <http://www.w3.org/2004/02/skos/core#notation> "authority" .
+
+
+###  https://w3id.org/transmodel/kos/organisations/organisation-type/facility-operator
+<https://w3id.org/transmodel/kos/organisations/organisation-type/facility-operator> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                    <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/organisations/organisation-type> ;
+                                                                                    <http://www.w3.org/2004/02/skos/core#notation> "facility-operator" .
+
+
+###  https://w3id.org/transmodel/kos/organisations/organisation-type/other
+<https://w3id.org/transmodel/kos/organisations/organisation-type/other> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/organisations/organisation-type> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#notation> "other" .
+
+
+###  https://w3id.org/transmodel/kos/organisations/organisation-type/rail-freight-opreator
+<https://w3id.org/transmodel/kos/organisations/organisation-type/rail-freight-opreator> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/organisations/organisation-type> ;
+                                                                                        <http://www.w3.org/2004/02/skos/core#notation> "rail-freight-operator" .
+
+
+###  https://w3id.org/transmodel/kos/organisations/organisation-type/rail-operator
+<https://w3id.org/transmodel/kos/organisations/organisation-type/rail-operator> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/organisations/organisation-type> ;
+                                                                                <http://www.w3.org/2004/02/skos/core#notation> "rail-operator" .
+
+
+###  https://w3id.org/transmodel/kos/organisations/organisation-type/retail-consortium
+<https://w3id.org/transmodel/kos/organisations/organisation-type/retail-consortium> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                    <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/organisations/organisation-type> ;
+                                                                                    <http://www.w3.org/2004/02/skos/core#notation> "retail-consortium" .
+
+
+###  https://w3id.org/transmodel/kos/organisations/organisation-type/serviced-organisation
+<https://w3id.org/transmodel/kos/organisations/organisation-type/serviced-organisation> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/organisations/organisation-type> ;
+                                                                                        <http://www.w3.org/2004/02/skos/core#notation> "serviced-organisation" .
+
+
+###  https://w3id.org/transmodel/kos/organisations/organisation-type/statutory-body
+<https://w3id.org/transmodel/kos/organisations/organisation-type/statutory-body> rdf:type owl:NamedIndividual ,
+                                                                                          <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                 <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/organisations/organisation-type> ;
+                                                                                 <http://www.w3.org/2004/02/skos/core#notation> "statutory-body" .
+
+
+###  https://w3id.org/transmodel/kos/organisations/organisation-type/travel-agency
+<https://w3id.org/transmodel/kos/organisations/organisation-type/travel-agency> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                                <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/organisations/organisation-type> ;
+                                                                                <http://www.w3.org/2004/02/skos/core#notation> "travel-agency" .
+
+
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
