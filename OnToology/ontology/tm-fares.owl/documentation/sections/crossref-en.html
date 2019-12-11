@@ -123,7 +123,7 @@ This section provides details for each class and property defined by [Ontology N
             <dt>has range</dt>
             <dd>
                <span class="dotted"
-                     title="https://w3id.org/transmodel/authorities#ContactDetails">contact details</span>
+                     title="https://w3id.org/transmodel/organisations#ContactDetails">contact details</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -154,8 +154,8 @@ This section provides details for each class and property defined by [Ontology N
                <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span>
                <sup class="type-op" title="object property">op</sup> 
                <span class="logic">value</span> 
-               <a href="#https://w3id.org/transmodel/kos/fares/DistributionChannelType"
-                  title="https://w3id.org/transmodel/kos/fares/DistributionChannelType">distribution channel type</a>)</dd>
+               <a href="#https://w3id.org/transmodel/kos/fares/distribution-channel-type"
+                  title="https://w3id.org/transmodel/kos/fares/distribution-channel-type">distribution channel type</a>)</dd>
          </dl>
       </div>
    </div>
@@ -180,7 +180,7 @@ This section provides details for each class and property defined by [Ontology N
             <dt>has range</dt>
             <dd>
                <span class="dotted"
-                     title="https://w3id.org/transmodel/authorities#Organisation">organisation</span>
+                     title="https://w3id.org/transmodel/organisations#Organisation">organisation</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -190,24 +190,46 @@ This section provides details for each class and property defined by [Ontology N
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
       <li>
-         <a href="#https://w3id.org/transmodel/kos/fares/DistributionChannelType"
-            title="https://w3id.org/transmodel/kos/fares/DistributionChannelType">
+         <a href="#https://w3id.org/transmodel/kos/fares/booking-access-type"
+            title="https://w3id.org/transmodel/kos/fares/booking-access-type">
+            <span>booking access type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/fares/booking-method-type"
+            title="https://w3id.org/transmodel/kos/fares/booking-method-type">
+            <span>booking method type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/fares/distribution-channel-type"
+            title="https://w3id.org/transmodel/kos/fares/distribution-channel-type">
             <span>distribution channel type</span>
          </a>
       </li>
       <li>
-         <a href="#https://w3id.org/transmodel/kos/fares/FareType" title="https://w3id.org/transmodel/kos/fares/FareType">
-            <span>fare type</span>
+         <a href="#https://w3id.org/transmodel/kos/fares/distribution-rights"
+            title="https://w3id.org/transmodel/kos/fares/distribution-rights">
+            <span>distribution rights</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/fares/fulfilment-method-type"
+            title="https://w3id.org/transmodel/kos/fares/fulfilment-method-type">
+            <span>fulfilment method type</span>
          </a>
       </li>
    </ul>
-   <div class="entity" id="https://w3id.org/transmodel/kos/fares/DistributionChannelType">
-      <h3>distribution channel type<sup class="type-ni" title="named individual">ni</sup>
+   <div class="entity" id="https://w3id.org/transmodel/kos/fares/booking-access-type">
+      <h3>booking access type<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/kos/fares/DistributionChannelType</p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/fares/booking-access-type</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme where all the types of booking access</span>
+      </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
@@ -217,15 +239,73 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://w3id.org/transmodel/kos/fares/FareType">
-      <h3>fare type<sup class="type-ni" title="named individual">ni</sup>
+   <div class="entity" id="https://w3id.org/transmodel/kos/fares/booking-method-type">
+      <h3>booking method type<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/transmodel/kos/fares/FareType</p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/fares/booking-method-type</p>
       <div class="comment">
-         <span class="markdown">Concept scheme where all the codelists for the types of fares that are included in the Transmodel ontology</span>
+         <span class="markdown">Concept scheme where all the types of booking methods</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/fares/distribution-channel-type">
+      <h3>distribution channel type<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/fares/distribution-channel-type</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme where all the types of distribution
+      channels</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/fares/distribution-rights">
+      <h3>distribution rights<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/fares/distribution-rights</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme where all the types of distribution rights</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/fares/fulfilment-method-type">
+      <h3>fulfilment method type<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/fares/fulfilment-method-type</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme where all the types of fulfilment methods</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>

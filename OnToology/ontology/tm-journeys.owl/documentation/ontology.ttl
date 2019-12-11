@@ -13,10 +13,10 @@
                                                                                    "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
                                          <http://purl.org/dc/elements/1.1/date> "2019-11-22" ;
                                          <http://purl.org/dc/elements/1.1/description> "Module of the Transmodel Ontology focused on journeys. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en ;
-                                         <http://purl.org/dc/elements/1.1/identifier> "https://w3id.org/transmodel/journies" ;
+                                         <http://purl.org/dc/elements/1.1/identifier> "https://w3id.org/transmodel/journeys" ;
                                          <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)" ;
                                          <http://purl.org/dc/elements/1.1/title> "Transmodel Ontology - Journeys"@en ;
-                                         <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/transmodel/facilities#> ;
+                                         <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/transmodel/journeys#> ;
                                          rdfs:comment "Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en ;
                                          rdfs:label "Transmodel Ontology - Journeys"@en ;
                                          rdfs:seeAlso "https://github.com/oeg-upm/transmodel-ontology"@en ;
@@ -103,32 +103,6 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  http://www.w3.org/2004/02/skos/core#inScheme
 <http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/transmodel/authorities#passengerJourney
-<https://w3id.org/transmodel/authorities#passengerJourney> rdf:type owl:ObjectProperty ;
-                                                           rdfs:subPropertyOf :PROPS-TO-REVIEW ;
-                                                           rdfs:range :Trip ;
-                                                           rdfs:comment "A Passenger makes (journey) a Trip"@en ;
-                                                           rdfs:label "passengerJourney"@en .
-
-
-###  https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney
-<https://w3id.org/transmodel/authorities#serviceJourneyServedByVehicleJourney> rdf:type owl:ObjectProperty ;
-                                                                               rdfs:subPropertyOf :PROPS-TO-REVIEW ;
-                                                                               rdfs:domain :ServiceJourney ;
-                                                                               rdfs:range :VehicleJourney ;
-                                                                               rdfs:comment "A Service Journey is served by Vehicle Journeys"@en ;
-                                                                               rdfs:label "service Journey Served By Vehicle Journey"@en .
-
-
-###  https://w3id.org/transmodel/authorities#trip
-<https://w3id.org/transmodel/authorities#trip> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf :PROPS-TO-REVIEW ;
-                                               rdfs:domain :Trip ;
-                                               rdfs:range :ServiceJourney ;
-                                               rdfs:comment "A Trip is made of ServiceJourneys"@en ;
-                                               rdfs:label "trip"@en .
 
 
 ###  https://w3id.org/transmodel/commons#at
@@ -430,7 +404,7 @@ xsd:time rdf:type rdfs:Datatype .
 ###  https://w3id.org/transmodel/journeys#forServicedOrganisation
 :forServicedOrganisation rdf:type owl:ObjectProperty ;
                          rdfs:domain :OrganisationDayType ;
-                         rdfs:comment "TODO: Add range tmauth:ServicedOrganisation"@en ,
+                         rdfs:comment "TODO: Add range tmorg:ServicedOrganisation"@en ,
                                       "This property connects an Organisation Day Type to a Service Organisation, indicating that such Day Type is for providing service to the corresponding Organisation"@en ;
                          rdfs:label "for serviced organisation"@en .
 
@@ -633,7 +607,7 @@ xsd:time rdf:type rdfs:Datatype .
 :runBy rdf:type owl:ObjectProperty ;
        rdfs:subPropertyOf owl:topObjectProperty ;
        rdfs:domain :Line ;
-       rdfs:range <https://w3id.org/transmodel/authorities#Operator> ;
+       rdfs:range <https://w3id.org/transmodel/organisations#Operator> ;
        rdfs:comment "A Line is run by an Operator"@en ;
        rdfs:label "run By"@en .
 
@@ -848,6 +822,32 @@ xsd:time rdf:type rdfs:Datatype .
           rdfs:range :DayType ;
           rdfs:comment "This property sets the relationship between Vehicle Journey and Day Type."@en ;
           rdfs:label "worked On"@en .
+
+
+###  https://w3id.org/transmodel/organisations#passengerJourney
+<https://w3id.org/transmodel/organisations#passengerJourney> rdf:type owl:ObjectProperty ;
+                                                             rdfs:subPropertyOf :PROPS-TO-REVIEW ;
+                                                             rdfs:range :Trip ;
+                                                             rdfs:comment "A Passenger makes (journey) a Trip"@en ;
+                                                             rdfs:label "passengerJourney"@en .
+
+
+###  https://w3id.org/transmodel/organisations#serviceJourneyServedByVehicleJourney
+<https://w3id.org/transmodel/organisations#serviceJourneyServedByVehicleJourney> rdf:type owl:ObjectProperty ;
+                                                                                 rdfs:subPropertyOf :PROPS-TO-REVIEW ;
+                                                                                 rdfs:domain :ServiceJourney ;
+                                                                                 rdfs:range :VehicleJourney ;
+                                                                                 rdfs:comment "A Service Journey is served by Vehicle Journeys"@en ;
+                                                                                 rdfs:label "service Journey Served By Vehicle Journey"@en .
+
+
+###  https://w3id.org/transmodel/organisations#trip
+<https://w3id.org/transmodel/organisations#trip> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf :PROPS-TO-REVIEW ;
+                                                 rdfs:domain :Trip ;
+                                                 rdfs:range :ServiceJourney ;
+                                                 rdfs:comment "A Trip is made of ServiceJourneys"@en ;
+                                                 rdfs:label "trip"@en .
 
 
 #################################################################
@@ -1177,13 +1177,6 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
-
-
-###  https://w3id.org/transmodel/authorities#Operator
-<https://w3id.org/transmodel/authorities#Operator> rdf:type owl:Class ;
-                                                   rdfs:comment "A company providing Public Transport Services. In GTFS, this is represented as a TransitAgency"@en ,
-                                                                "The class comes from tm-authorities.owl"@en ;
-                                                   rdfs:label "Operator"@es .
 
 
 ###  https://w3id.org/transmodel/commons#Presentation
@@ -1686,7 +1679,7 @@ xsd:time rdf:type rdfs:Datatype .
                                      ] ;
                      rdfs:comment "Day Type that is defined in terms of operation or not operation of a referenced Serviced Organisation."@en ;
                      rdfs:label "Organisation Day Type"@en ,
-                                "TODO: Add constraint: :forServicedOrganisation only tmauth:ServicedOrganisation"@en .
+                                "TODO: Add constraint: :forServicedOrganisation only tmorg:ServicedOrganisation"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#ParkingPoint
@@ -2212,6 +2205,13 @@ Within VehicleJourney there are several types:
               rdfs:subClassOf :InfrastructurePoint ;
               rdfs:comment "TODO: Complete with all relevant properties"@en ;
               rdfs:label "Wire Junction"@en .
+
+
+###  https://w3id.org/transmodel/organisations#Operator
+<https://w3id.org/transmodel/organisations#Operator> rdf:type owl:Class ;
+                                                     rdfs:comment "A company providing Public Transport Services. In GTFS, this is represented as a TransitAgency"@en ,
+                                                                  "The class comes from tm-organisations.owl"@en ;
+                                                     rdfs:label "Operator"@es .
 
 
 #################################################################
