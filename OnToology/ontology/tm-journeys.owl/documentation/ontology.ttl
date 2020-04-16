@@ -291,8 +291,8 @@ xsd:time rdf:type rdfs:Datatype .
          owl:inverseOf :isDefinedBy ;
          rdfs:domain :RhythmicalJourneyGroup ;
          rdfs:range :TemplateVehicleJourney ;
-         rdfs:label "This property relates a Rhythmical Journey Group with a Template Vehicle Journey"@en ,
-                    "defines"@en .
+         rdfs:comment "This property relates a Rhythmical Journey Group with a Template Vehicle Journey"@en ;
+         rdfs:label "defines"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#describedBy
@@ -366,8 +366,8 @@ xsd:time rdf:type rdfs:Datatype .
                 rdfs:subPropertyOf :PROPS-TO-REVIEW ;
                 rdfs:domain :Connection ;
                 rdfs:range :ScheduledStopPoint ;
-                rdfs:label "Connection End, one end of a connection in Transmodel v6.0"@en ,
-                           "endsConnection"@en .
+                rdfs:comment "Connection End, one end of a connection in Transmodel v6.0"@en ;
+                rdfs:label "endsConnection"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#endsConnectionDefault
@@ -812,8 +812,8 @@ xsd:time rdf:type rdfs:Datatype .
           rdf:type owl:FunctionalProperty ;
           rdfs:domain :PointInLinkSequence ;
           rdfs:range :Point ;
-          rdfs:label "This property allows connecting a Point in Link Sequence with the corresponding Point"@en ,
-                     "viewed As"@en .
+          rdfs:comment "This property allows connecting a Point in Link Sequence with the corresponding Point"@en ;
+          rdfs:label "viewed As"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#workedOn
@@ -1832,9 +1832,9 @@ xsd:time rdf:type rdfs:Datatype .
                                           owl:onProperty :defines ;
                                           owl:allValuesFrom :TemplateVehicleJourney
                                         ] ;
-                        rdfs:comment "TODO Define the TimeBand class that is describing the time band for this type of journey group, and hence can be related to this class or to its superclass."@en ;
-                        rdfs:label "A group of Vehicle Journeys following  the same Journey Pattern having the same \"rhythm\" every hour (for example runs at xxh10, xxh25 and xxh45... ) between a specified start and end time."@en ,
-                                   "Rhythmical Journey Group"@en .
+                        rdfs:comment "A group of Vehicle Journeys following  the same Journey Pattern having the same \"rhythm\" every hour (for example runs at xxh10, xxh25 and xxh45... ) between a specified start and end time."@en ,
+                                     "TODO Define the TimeBand class that is describing the time band for this type of journey group, and hence can be related to this class or to its superclass."@en ;
+                        rdfs:label "Rhythmical Journey Group"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#RoadAddress
@@ -2080,9 +2080,9 @@ xsd:time rdf:type rdfs:Datatype .
 ###  https://w3id.org/transmodel/journeys#TimingLink
 :TimingLink rdf:type owl:Class ;
             rdfs:subClassOf :TOREVIEWCLASSES ;
-            rdfs:label """A TimingLink is an ordered pair of TimingPoint for which run times
-may be recorded."""@en ,
-                       "TimingLink"@en .
+            rdfs:comment """A TimingLink is an ordered pair of TimingPoint for which run times
+may be recorded."""@en ;
+            rdfs:label "TimingLink"@en .
 
 
 ###  https://w3id.org/transmodel/journeys#TimingLinkInJourneyPattern

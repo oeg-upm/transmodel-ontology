@@ -269,7 +269,7 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/transmodel/journeys#defines> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/transmodel/journeys#isDefinedBy> .
 <https://w3id.org/transmodel/journeys#defines> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#RhythmicalJourneyGroup> .
 <https://w3id.org/transmodel/journeys#defines> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#TemplateVehicleJourney> .
-<https://w3id.org/transmodel/journeys#defines> <http://www.w3.org/2000/01/rdf-schema#label> "This property relates a Rhythmical Journey Group with a Template Vehicle Journey"@en .
+<https://w3id.org/transmodel/journeys#defines> <http://www.w3.org/2000/01/rdf-schema#comment> "This property relates a Rhythmical Journey Group with a Template Vehicle Journey"@en .
 <https://w3id.org/transmodel/journeys#defines> <http://www.w3.org/2000/01/rdf-schema#label> "defines"@en .
 # 
 # https://w3id.org/transmodel/journeys#describedBy
@@ -339,7 +339,7 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/transmodel/journeys#endsConnection> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW> .
 <https://w3id.org/transmodel/journeys#endsConnection> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#Connection> .
 <https://w3id.org/transmodel/journeys#endsConnection> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#ScheduledStopPoint> .
-<https://w3id.org/transmodel/journeys#endsConnection> <http://www.w3.org/2000/01/rdf-schema#label> "Connection End, one end of a connection in Transmodel v6.0"@en .
+<https://w3id.org/transmodel/journeys#endsConnection> <http://www.w3.org/2000/01/rdf-schema#comment> "Connection End, one end of a connection in Transmodel v6.0"@en .
 <https://w3id.org/transmodel/journeys#endsConnection> <http://www.w3.org/2000/01/rdf-schema#label> "endsConnection"@en .
 # 
 # https://w3id.org/transmodel/journeys#endsConnectionDefault
@@ -750,7 +750,7 @@ _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/transmodel/journeys#viewedAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/transmodel/journeys#viewedAs> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/journeys#PointInLinkSequence> .
 <https://w3id.org/transmodel/journeys#viewedAs> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/transmodel/journeys#Point> .
-<https://w3id.org/transmodel/journeys#viewedAs> <http://www.w3.org/2000/01/rdf-schema#label> "This property allows connecting a Point in Link Sequence with the corresponding Point"@en .
+<https://w3id.org/transmodel/journeys#viewedAs> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows connecting a Point in Link Sequence with the corresponding Point"@en .
 <https://w3id.org/transmodel/journeys#viewedAs> <http://www.w3.org/2000/01/rdf-schema#label> "viewed As"@en .
 # 
 # https://w3id.org/transmodel/journeys#workedOn
@@ -1667,8 +1667,8 @@ _:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid75 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#defines> .
 _:genid75 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#TemplateVehicleJourney> .
+<https://w3id.org/transmodel/journeys#RhythmicalJourneyGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A group of Vehicle Journeys following  the same Journey Pattern having the same \"rhythm\" every hour (for example runs at xxh10, xxh25 and xxh45... ) between a specified start and end time."@en .
 <https://w3id.org/transmodel/journeys#RhythmicalJourneyGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO Define the TimeBand class that is describing the time band for this type of journey group, and hence can be related to this class or to its superclass."@en .
-<https://w3id.org/transmodel/journeys#RhythmicalJourneyGroup> <http://www.w3.org/2000/01/rdf-schema#label> "A group of Vehicle Journeys following  the same Journey Pattern having the same \"rhythm\" every hour (for example runs at xxh10, xxh25 and xxh45... ) between a specified start and end time."@en .
 <https://w3id.org/transmodel/journeys#RhythmicalJourneyGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Rhythmical Journey Group"@en .
 # 
 # https://w3id.org/transmodel/journeys#RoadAddress
@@ -1912,7 +1912,7 @@ _:genid109 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001
 # https://w3id.org/transmodel/journeys#TimingLink
 <https://w3id.org/transmodel/journeys#TimingLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/journeys#TimingLink> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/journeys#TOREVIEWCLASSES> .
-<https://w3id.org/transmodel/journeys#TimingLink> <http://www.w3.org/2000/01/rdf-schema#label> "A TimingLink is an ordered pair of TimingPoint for which run times\nmay be recorded."@en .
+<https://w3id.org/transmodel/journeys#TimingLink> <http://www.w3.org/2000/01/rdf-schema#comment> "A TimingLink is an ordered pair of TimingPoint for which run times\nmay be recorded."@en .
 <https://w3id.org/transmodel/journeys#TimingLink> <http://www.w3.org/2000/01/rdf-schema#label> "TimingLink"@en .
 # 
 # https://w3id.org/transmodel/journeys#TimingLinkInJourneyPattern
