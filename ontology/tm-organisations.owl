@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/transmodel/org#"
-     xml:base="https://w3id.org/transmodel/org"
+<rdf:RDF xmlns="https://w3id.org/transmodel/organisations#"
+     xml:base="https://w3id.org/transmodel/organisations"
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:org="http://www.w3.org/ns/org#"
@@ -16,7 +16,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:tmfac="https://w3id.org/transmodel/facilities#"
      xmlns:tmkos="https://w3id.org/transmodel/kos/"
-     xmlns:tmorg="https://w3id.org/transmodel/org#"
+     xmlns:tmorg="https://w3id.org/transmodel/organisations#"
      xmlns:tmfare="https://w3id.org/transmodel/fares#"
      xmlns:tmkosorg="https://w3id.org/transmodel/kos/org/"
      xmlns:tmcommons="https://w3id.org/transmodel/commons#"
@@ -27,17 +27,18 @@
      xmlns:organisations="https://w3id.org/transmodel/organisations#"
      xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/">
     <owl:Ontology rdf:about="http://www.w3.org/ns/org#">
-        <owl:versionIRI rdf:resource="https://w3id.org/transmodel/org/0.2"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/transmodel/organisations/0.2"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
         <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <dc:creator>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+	<dc:creator>Mario Scrocca (CEFRIEL)</dc:creator>
         <dc:date>2019-10-06</dc:date>
         <dc:description xml:lang="en">Module of the Transmodel Ontology focused on organisations. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</dc:description>
-        <dc:identifier>https://w3id.org/transmodel/org</dc:identifier>
+        <dc:identifier>https://w3id.org/transmodel/organisations</dc:identifier>
         <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
         <dc:title xml:lang="en">Transmodel Ontology - Organisations</dc:title>
-        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/org#"/>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/organisations#"/>
         <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on organisations. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
         <rdfs:label xml:lang="en">Transmodel Ontology - Organisations</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://github.com/oeg-upm/transmodel-ontology</rdfs:seeAlso>
@@ -105,15 +106,15 @@
     
 
 
-    <!-- https://w3id.org/transmodel/org#mbox -->
+    <!-- https://w3id.org/transmodel/organisations#mbox -->
 
-    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/org#mbox"/>
+    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/organisations#mbox"/>
     
 
 
-    <!-- https://w3id.org/transmodel/org#name -->
+    <!-- https://w3id.org/transmodel/organisations#name -->
 
-    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/org#name"/>
+    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/organisations#name"/>
     
 
 
