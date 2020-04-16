@@ -1,47 +1,47 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/transmodel/org#"
      xml:base="https://w3id.org/transmodel/org"
-     xmlns:tmkosjourney="https://w3id.org/transmodel/kos/journeys/"
-     xmlns:tmfare="https://w3id.org/transmodel/fares#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:tmcommons="https://w3id.org/transmodel/commons#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:tmkosorg="https://w3id.org/transmodel/kos/org/"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:tmorg="https://w3id.org/transmodel/org#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:cc="http://creativecommons.org/ns#"
-     xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
-     xmlns:tmkos="https://w3id.org/transmodel/kos/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:org="http://www.w3.org/ns/org#"
-     xmlns:organisations="https://w3id.org/transmodel/organisations#"
-     xmlns:tmkosfare="https://w3id.org/transmodel/kos/fares/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/"
-     xmlns:tmfac="https://w3id.org/transmodel/facilities#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:time="http://www.w3.org/2006/time#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:tmfac="https://w3id.org/transmodel/facilities#"
+     xmlns:tmkos="https://w3id.org/transmodel/kos/"
+     xmlns:tmorg="https://w3id.org/transmodel/org#"
+     xmlns:tmfare="https://w3id.org/transmodel/fares#"
+     xmlns:tmkosorg="https://w3id.org/transmodel/kos/org/"
+     xmlns:tmcommons="https://w3id.org/transmodel/commons#"
+     xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
+     xmlns:tmkosfare="https://w3id.org/transmodel/kos/fares/"
+     xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/"
+     xmlns:tmkosjourney="https://w3id.org/transmodel/kos/journeys/"
+     xmlns:organisations="https://w3id.org/transmodel/organisations#"
+     xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/">
     <owl:Ontology rdf:about="http://www.w3.org/ns/org#">
         <owl:versionIRI rdf:resource="https://w3id.org/transmodel/org/0.2"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
-        <owl:versionInfo xml:lang="en">This is the initial version of the module on Organisations, after considering the UML models and XSD descriptions of Transmodel and NeTEx</owl:versionInfo>
-        <dc:description xml:lang="en">Module of the Transmodel Ontology focused on organisations. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</dc:description>
-        <dc:title xml:lang="en">Transmodel Ontology - Organisations</dc:title>
         <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/org#"/>
+        <dc:creator>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:date>2019-10-06</dc:date>
-        <rdfs:seeAlso xml:lang="en">https://github.com/oeg-upm/transmodel-ontology</rdfs:seeAlso>
-        <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
-        <dc:creator>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
-        <rdfs:label xml:lang="en">Transmodel Ontology - Organisations</rdfs:label>
-        <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on organisations. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
+        <dc:description xml:lang="en">Module of the Transmodel Ontology focused on organisations. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</dc:description>
         <dc:identifier>https://w3id.org/transmodel/org</dc:identifier>
+        <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
+        <dc:title xml:lang="en">Transmodel Ontology - Organisations</dc:title>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/org#"/>
+        <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on organisations. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">Transmodel Ontology - Organisations</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://github.com/oeg-upm/transmodel-ontology</rdfs:seeAlso>
+        <owl:versionInfo xml:lang="en">This is the initial version of the module on Organisations, after considering the UML models and XSD descriptions of Transmodel and NeTEx</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -102,6 +102,18 @@
     <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/org#mbox -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/org#mbox"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/org#name -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/org#name"/>
     
 
 
@@ -275,6 +287,18 @@
     
 
 
+    <!-- https://w3id.org/transmodel/commons#GroupOfEntities -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#GroupOfEntities"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#Zone -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Zone"/>
+    
+
+
     <!-- https://w3id.org/transmodel/organisations#AdministrativeZone -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/organisations#AdministrativeZone">
@@ -409,9 +433,9 @@
     
 
 
-    <!-- https://w3id.org/transmodel/organisations#OrganisationUnit -->
+    <!-- https://w3id.org/transmodel/organisations#OrganisationalUnit -->
 
-    <owl:Class rdf:about="https://w3id.org/transmodel/organisations#OrganisationUnit">
+    <owl:Class rdf:about="https://w3id.org/transmodel/organisations#OrganisationalUnit">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/organisations#OrganisationPart"/>
         <rdfs:comment xml:lang="en">An OrganisationPart to which a set of responsabilities in an organisation for planning and control is assigned</rdfs:comment>
         <rdfs:label xml:lang="en">OrganisationalUnit</rdfs:label>
@@ -422,8 +446,8 @@
     <!-- https://w3id.org/transmodel/organisations#RetailConsortium -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/organisations#RetailConsortium">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/organisations#Organisation"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#GroupOfEntities"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/organisations#Organisation"/>
         <rdfs:comment xml:lang="en">A group of Organisations formally incorporated as a retailer of Fare Products.</rdfs:comment>
         <rdfs:label xml:lang="en">Retail Consortium</rdfs:label>
     </owl:Class>
@@ -450,18 +474,6 @@
     
 
 
-    <!-- https://w3id.org/transmodel/commons#GroupOfEntities -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/commons#GroupOfEntities"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/commons#Zone -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Zone"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -476,6 +488,7 @@
     <!-- https://w3id.org/transmodel/kos/fares/distribution-channel-type -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/distribution-channel-type"/>
+    
 
 
     <!-- https://w3id.org/transmodel/kos/organisations/organisation-type -->
@@ -484,26 +497,23 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:comment xml:lang="en">Concept scheme where all the codelists for the types of organisations that are included in the Transmodel ontology</rdfs:comment>
     </owl:NamedIndividual>
+    
 
-        <!-- https://w3id.org/transmodel/kos/organisations/responsability-role-type -->
+
+    <!-- https://w3id.org/transmodel/kos/organisations/responsability-role-type -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/organisations/responsability-role-type">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:comment xml:lang="en">Concept scheme where all the codelists for the types
 	of responsability role for organisations that are included in the Transmodel ontology</rdfs:comment>
     </owl:NamedIndividual>
-
-
-      <rdf:Description>
+    <rdf:Description>
         <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
         <name xml:lang="en">Adolfo Anton-Bravo</name>
     </rdf:Description>
-
-
-  </rdf:RDF>
-
+</rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
