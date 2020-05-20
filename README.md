@@ -21,5 +21,5 @@ To manage those incidents or suggested improvements with respect to the vocabula
 
 # Examples
 
-There will be some [queries](#) will be performed in a SPARQL endpoint to test and exemplify its operability.
+There will be some [queries](#) will be performed in a SPARQL endpoint to test and exemplify its operability. That's awesome!
 
