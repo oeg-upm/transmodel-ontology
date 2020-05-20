@@ -1,26 +1,27 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/transmodel/journeys#"
-     xml:base="https://w3id.org/transmodel/journeys"
-     xmlns:cc="http://creativecommons.org/ns#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:geo="https://www.w3.org/2003/01/geo/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:tmfac="https://w3id.org/transmodel/facilities#"
-     xmlns:tmkos="https://w3id.org/transmodel/kos/"
-     xmlns:tmorg="https://w3id.org/transmodel/organisations#"
-     xmlns:tmfare="https://w3id.org/transmodel/fares#"
-     xmlns:tmkosorg="https://w3id.org/transmodel/kos/organisations/"
-     xmlns:tmcommons="https://w3id.org/transmodel/commons#"
-     xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
-     xmlns:tmkosfare="https://w3id.org/transmodel/kos/fares/"
-     xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/"
-     xmlns:tmkosjourney="https://w3id.org/transmodel/kos/journeys/"
-     xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/">
+	 xml:base="https://w3id.org/transmodel/journeys"
+	 xmlns:cc="http://creativecommons.org/ns#"
+	 xmlns:dc="http://purl.org/dc/elements/1.1/"
+	 xmlns:dcterms="http://purl.org/dc/terms/"
+	 xmlns:geo="https://www.w3.org/2003/01/geo/"
+	 xmlns:owl="http://www.w3.org/2002/07/owl#"
+	 xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	 xmlns:tmcommons="https://w3id.org/transmodel/commons#"
+	 xmlns:tmfac="https://w3id.org/transmodel/facilities#"
+	 xmlns:tmfare="https://w3id.org/transmodel/fares#"
+	 xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
+	 xmlns:tmkos="https://w3id.org/transmodel/kos/"
+	 xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/"
+	 xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/"
+	 xmlns:tmkosfare="https://w3id.org/transmodel/kos/fares/"
+	 xmlns:tmkosjourney="https://w3id.org/transmodel/kos/journeys/"
+	 xmlns:tmkosorg="https://w3id.org/transmodel/kos/organisations/"
+	 xmlns:tmorg="https://w3id.org/transmodel/organisations#"
+	 xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	 xmlns:vann="http://purl.org/vocab/vann/">
     <owl:Ontology rdf:about="https://w3id.org/transmodel/journeys#">
         <owl:versionIRI rdf:resource="https://w3id.org/transmodel/journeys/0.3"/>
         <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
@@ -28,25 +29,47 @@
         <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:date>2019-11-22</dc:date>
         <dc:description xml:lang="en">Module of the Transmodel Ontology focused on journeys. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</dc:description>
+	<dc:abstract xml:lang="en"></dc:abstract>
         <dc:identifier>https://w3id.org/transmodel/journeys</dc:identifier>
         <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
         <dc:title xml:lang="en">Transmodel Ontology - Journeys</dc:title>
+	<dcterms:bibliographicCitation xml:lang="en">Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid),Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid). Transmodel Ontology - Journeys. Revision: https://w3id.org/transmodel/journeys/0.2</dcterms:bibliographicCitation>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/journeys#"/>
         <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
         <rdfs:label xml:lang="en">Transmodel Ontology - Journeys</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://github.com/oeg-upm/transmodel-ontology</rdfs:seeAlso>
         <owl:versionInfo xml:lang="en">This is the initial version of the module on Journeys, after considering the UML models and XSD descriptions of Transmodel and NeTEx</owl:versionInfo>
     </owl:Ontology>
-    
 
+    <!--
+	 /////
+	 REVISANDO WIDOCO
+	 /////
+
+
+	 dc:abstract
+
+	 owl:versinInfo
+
+	 dcterms:created
+
+	 dcterms:modified
+
+	 dcterms:issued
+
+	 dc:publisher
+
+	 dcterms:bibliographicCitation
+
+    -->
 
     <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+	 ///////////////////////////////////////////////////////////////////////////////////////
+	 //
+	 // Annotation properties
+	 //
+	 ///////////////////////////////////////////////////////////////////////////////////////
+    -->
 
     
 
@@ -135,12 +158,12 @@
 
 
     <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+	 ///////////////////////////////////////////////////////////////////////////////////////
+	 //
+	 // Datatypes
+	 //
+	 ///////////////////////////////////////////////////////////////////////////////////////
+    -->
 
     
 
@@ -734,6 +757,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Line"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#Route"/>
         <rdfs:comment xml:lang="en">This property allows relating a Route with a Line where it appears</rdfs:comment>
+	<rdfs:comment xml:lang="es">CHECK La relación está al revés, habrá que poner otro nombre que exprese mejor la relación.</rdfs:comment>
         <rdfs:label xml:lang="en">on Line</rdfs:label>
     </owl:ObjectProperty>
     
@@ -746,6 +770,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Route"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#ServiceJourneyPattern"/>
         <rdfs:comment xml:lang="en">This property allows relating a Journey Pattern with a Route where it appears</rdfs:comment>
+	<rdfs:comment xml:lang="es">CHECK La relación está al revés, habrá que poner otro nombre que exprese mejor la relación.</rdfs:comment>
         <rdfs:label xml:lang="en">on Route</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1012,7 +1037,12 @@
         <rdfs:label xml:lang="en">stopsAt</rdfs:label>
     </owl:ObjectProperty>
     
+<!-- https://w3id.org/transmodel/journeys#timedFrom -->
 
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#timedFrom">
+      <rdfs:comment xml:lang="en">The relationship between a sort of Journey and a sort of Timing Point</rdfs:comment>
+    <rdfs:label xml:lang="en">timedFrom</rdfs:label>
+    </owl:ObjectPropert
 
     <!-- https://w3id.org/transmodel/journeys#timingLink -->
 
@@ -1347,8 +1377,6 @@
         <rdfs:label xml:lang="en">for Alighting</rdfs:label>
     </owl:DatatypeProperty>
     
-
-
     <!-- https://w3id.org/transmodel/journeys#forBoarding -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#forBoarding">
@@ -1359,8 +1387,6 @@
         <rdfs:label xml:lang="en">for Boarding</rdfs:label>
     </owl:DatatypeProperty>
     
-
-
     <!-- https://w3id.org/transmodel/journeys#headway -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#headway">
@@ -1370,8 +1396,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
         <rdfs:label xml:lang="en">headway</rdfs:label>
     </owl:DatatypeProperty>
-    
-
 
     <!-- https://w3id.org/transmodel/journeys#holidayType-old -->
 
@@ -1383,8 +1407,6 @@
         <rdfs:comment xml:lang="en">This propery defines the type of holiday of the Operating Period</rdfs:comment>
         <rdfs:label xml:lang="en">holiday Type</rdfs:label>
     </owl:DatatypeProperty>
-    
-
 
     <!-- https://w3id.org/transmodel/journeys#isAvailable -->
 
@@ -1395,8 +1417,6 @@
         <rdfs:comment xml:lang="en">This property says if a Day Type Assignment is available or not</rdfs:comment>
         <rdfs:label xml:lang="en">is Available</rdfs:label>
     </owl:DatatypeProperty>
-    
-
 
     <!-- https://w3id.org/transmodel/journeys#isFlexible -->
 
@@ -1426,34 +1446,29 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
         <rdfs:comment xml:lang="en">This property allows describing whether a Timing Point is a wait point</rdfs:comment>
+	<rdfs:comment xml:lang="es">Se describe si un Punto de Control es un Punto de Espera</rdfs:comment>
         <rdfs:label xml:lang="en">is Wait Point</rdfs:label>
     </owl:DatatypeProperty>
     
-
-
-    <!-- https://w3id.org/transmodel/journeys#lastDayOffset -->
+    <!-- https://w3id.org/transmodel/journeys#lastDayOffset     -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#lastDayOffset">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#JourneyFrequencyGroup"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:comment xml:lang="en">Offset of end time date from start time. In TransModel, there is only a day offset specified.</rdfs:comment>
-        <rdfs:label xml:lang="en">last day offset</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/transmodel/journeys#lastDepartureTime -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#lastDepartureTime">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#JourneyFrequencyGroup"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#HeadwayJourneyGroup"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
         <rdfs:comment xml:lang="en">Time of the last departure in a Journey Frequency Group</rdfs:comment>
         <rdfs:label xml:lang="en">last departure time</rdfs:label>
     </owl:DatatypeProperty>
-    
 
+    <!-- https://w3id.org/transmodel/journeys#lastDepartureTime -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#lastDepartureTime">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#HeadwayJourneyGroup"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+        <rdfs:comment xml:lang="en">Time of the last departure in a Journey Frequency Group</rdfs:comment>
+        <rdfs:label xml:lang="en">last departure time</rdfs:label>
+    </owl:DatatypeProperty>
 
     <!-- https://w3id.org/transmodel/journeys#layover -->
 
@@ -1751,8 +1766,6 @@
         <rdfs:comment xml:lang="en">A characterisation of the passenger movement according to the means of transport different from public transport: walking, own bike,</rdfs:comment>
         <rdfs:label xml:lang="en">AccessMode</rdfs:label>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/transmodel/journeys#AccessZone -->
 
@@ -1761,8 +1774,6 @@
         <rdfs:comment xml:lang="en">A Zone for which the duration to cover any Access link to a particular ScheduledStopPoint is the same</rdfs:comment>
         <rdfs:label xml:lang="en">AccessZone</rdfs:label>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/transmodel/journeys#ActivationPoint -->
 
@@ -1773,8 +1784,6 @@
         <rdfs:label xml:lang="en">Activation Point</rdfs:label>
     </owl:Class>
     
-
-
     <!-- https://w3id.org/transmodel/journeys#Address -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Address">
@@ -1782,8 +1791,6 @@
         <rdfs:comment xml:lang="en">The descriptive data associated with a Place that can be used to describe the unique geographical context of a Place for the purposes of identifying. May be refined as either a Road Address, a Postal Address or both.</rdfs:comment>
         <rdfs:label xml:lang="en">Address</rdfs:label>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/transmodel/journeys#AddressablePlace -->
 
@@ -1792,8 +1799,6 @@
         <rdfs:comment xml:lang="en">A type of Place to which Passengers may refer to indicate the origin or a destination of a trip and that is so specific that it has an Address.</rdfs:comment>
         <rdfs:label xml:lang="en">AddressablePlace</rdfs:label>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/transmodel/journeys#AllowedLineDirections -->
 
@@ -2668,8 +2673,6 @@
         <rdfs:comment xml:lang="en">A Point used to define the shape of a Route through the network.</rdfs:comment>
         <rdfs:label xml:lang="en">Route Point</rdfs:label>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/transmodel/journeys#ScheduledStopPoint -->
 

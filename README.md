@@ -17,9 +17,9 @@ The material generated in the different activities carried out during the develo
 
 # Project maintenance
 
-To manage those incidents or suggested improvements with respect to the vocabulary, we recommend you to follow the guides provided in [Issues Management](https://github.com/nombre-repositorio/wiki/issues-management) to generate an issue (work in progress never ends)
+To manage those incidents or suggested improvements with respect to the vocabulary, we recommend you to follow the guides provided in [Issues Management](https://github.com/oeg-upm/transmodel-ontology/wiki/issues-management) to generate an issue (work in progress never ends)
 
 # Examples
 
-Some [queries](#) will be performed in a SPARQL endpoint to test and exemplify its operability.
+There will be some [queries](#) will be performed in a SPARQL endpoint to test and exemplify its operability.
 
